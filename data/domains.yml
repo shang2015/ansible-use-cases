@@ -1,0 +1,143 @@
+# Domain taxonomy. Each domain is one folder under docs/use-cases/<path>/.
+# `match` assigns catalog collections to a domain: fnmatch patterns on the FQCN,
+# checked in order; first domain that matches wins. `categories` is a fallback
+# on the catalog's own category labels.
+- id: platform
+  path: platform
+  title: Automation Platform
+  icon: material/cog-play
+  summary: Install, configure as code, upgrade, scale and operate Ansible Automation Platform itself.
+  match: [ansible.platform, ansible.controller, ansible.hub, ansible.eda_controller, ansible.aap_snapshot, infra.aap_*, infra.controller_configuration, infra.ah_configuration, infra.eda_configuration, infra.ee_utilities, infra.ansible_rekey_variables, infra.support_assist, infra.automation_development_office, ansible.receptor, ansible.tower]
+- id: developer
+  path: developer
+  title: Content Development & CI/CD
+  icon: material/code-braces
+  summary: Write, test, lint, package and ship automation content through pipelines.
+  match: [ansible.scm, infra.ansible_*, ansible.content_*]
+- id: linux
+  path: linux
+  title: Linux (RHEL & Satellite)
+  icon: material/linux
+  summary: Build, provision, patch, standardise, convert and upgrade Linux estates.
+  match: [redhat.rhel_system_roles, redhat.satellite*, infra.satellite_configuration, redhat.insights, redhat.leapp, infra.leapp, infra.convert2rhel, infra.osbuild, infra.lvm_snapshots, ansible.posix, microsoft.wsl, opensvc.*, theforeman.*]
+- id: windows
+  path: windows
+  title: Windows
+  icon: material/microsoft-windows
+  summary: Patch, configure and manage Windows Server, Active Directory and Windows applications.
+  match: [ansible.windows, microsoft.ad, microsoft.iis, microsoft.mecm, microsoft.scom, microsoft.wsl, chocolatey.*, infra.windows_*, infra.mecm_ops]
+- id: network
+  path: network
+  title: Network
+  icon: material/lan
+  summary: Back up, configure, validate, upgrade and report on multi-vendor networks.
+  match: [network.*, ansible.netcommon, ansible.network, ansible.utils, cisco.ios, cisco.iosxr, cisco.nxos, cisco.aci, cisco.mso, cisco.nd, cisco.dcnm, cisco.meraki, cisco.dnac, cisco.catalystcenter, cisco.radkit, arista.*, junipernetworks.*, juniper.*, dellemc.os*, dellemc.enterprise_sonic, nvidia.*, arubanetworks.*, extreme.*, frr.*, vyos.*, infoblox.*, netscaler.*, citrix.*, f5networks.*, radware.*, gluware_inc.*, openvswitch.*, ansible.snmp, ansible.yang, nokia.*, h3c_open.*, lantronix.*, opengear.*, seiko.*, netbox.*, networktocode.*, kentik.*, juniper.*]
+  categories: [Networking]
+- id: security
+  path: security
+  title: Security
+  icon: material/shield-lock
+  summary: Harden, scan, remediate, orchestrate security tools, and manage secrets and identity.
+  match: [ansible.security, redhat.rhel_hardening_roles, redhat.artifact_signer, redhat.trusted_profile_analyzer, infra.rhacs_configuration, akeyless.*, onepassword.*, delinea.*, thalesgroup.*, entrust.*, zscaler.*, ibm.isam, virsec.*, styra.*, paloaltonetworks.*, fortinet.*, checkpoint.*, cisco.asa, cisco.ise, cisco.fmcansible, cisco.ftd*, crowdstrike.*, trendmicro.*, splunk.es, ibm.qradar, cyberark.*, hashicorp.vault, venafi.*, redhat.rhel_idm, ansible.freeipa, freeipa.*, okta.*, sentinelone.*]
+  categories: [Security]
+- id: cloud-aws
+  path: cloud/aws
+  title: AWS
+  icon: fontawesome/brands/aws
+  summary: Provision and operate Amazon Web Services resources.
+  match: [amazon.*, cloud.aws_*, community.aws]
+- id: cloud-azure
+  path: cloud/azure
+  title: Microsoft Azure
+  icon: material/microsoft-azure
+  summary: Provision and operate Microsoft Azure resources.
+  match: [azure.*, cloud.azure_*]
+- id: cloud-gcp
+  path: cloud/gcp
+  title: Google Cloud
+  icon: material/google-cloud
+  summary: Provision and operate Google Cloud resources.
+  match: [google.*, cloud.gcp_*]
+- id: cloud-others
+  path: cloud/others
+  title: Other clouds (IBM, Oracle, OpenStack...)
+  icon: material/cloud
+  summary: IBM Cloud, Oracle Cloud, OpenStack and other cloud platforms.
+  match: [ansible.oci, ibm.cloudcollection, ibm.cloud*, oracle.oci, openstack.*, os_migrate.os_migrate, alibaba.*, hetzner.*, digitalocean.*]
+- id: cloud-multi
+  path: cloud/multi-cloud
+  title: Multi-cloud & Terraform
+  icon: material/cloud-sync
+  summary: Hybrid and multi-cloud provisioning, Terraform integration and cloud governance.
+  match: [cloud.terraform*, hashicorp.terraform, cloud.common]
+  categories: [Cloud]
+- id: virtualization
+  path: virtualization
+  title: Virtualization
+  icon: material/server-network
+  summary: VMware, OpenShift Virtualization, Nutanix and VM lifecycle and migration.
+  match: [vmware.*, cloud.vmware_ops, infra.vmware_*, redhat.openshift_virtualization, infra.openshift_virtualization_*, os_migrate.vmware_migration_kit, nutanix.*, redhat.rhv, ovirt.*, kubevirt.*, microsoft.hyperv, microsoft.scvmm, scale_computing.*]
+- id: kubernetes
+  path: kubernetes
+  title: Kubernetes & OpenShift
+  icon: material/kubernetes
+  summary: Day 2 automation for OpenShift and Kubernetes clusters and applications.
+  match: [kubernetes.*, redhat.openshift, trilio.*, network.offline_migration_sdn_to_ovnk]
+- id: infrastructure
+  path: infrastructure
+  title: Servers, Mainframe & Power
+  icon: material/server
+  summary: Bare-metal servers and their controllers, IBM Z mainframe and IBM Power systems.
+  match: [dellemc.openmanage, hpe.*, cisco.intersight, cisco.cvd_compute, inspur.*, wti.*, ibm.ibm_z*, ibm.ibm_zos_*, ibm.ibm_eda_zos, ibm.power_*, enfence.*]
+- id: storage
+  path: storage
+  title: Storage
+  icon: material/database
+  summary: Provision, operate, protect and decommission storage.
+  match: [netapp.*, netapp_eseries.*, dellemc.powerstore, dellemc.powermax, dellemc.powerflex, dellemc.powerscale, dellemc.unity, dellemc.vplex, purestorage.*, everpure.*, ibm.storage_virtualize, ibm.spectrum*, ibm.storage*, hitachivantara.*, hitachi.*, infinidat.*, brocade.*, cohesity.*, commvault.*, veeam.*, rubrik.*]
+  categories: [Storage]
+- id: itsm
+  path: itsm
+  title: ITSM & CMDB
+  icon: material/ticket-confirmation
+  summary: Ticket-driven automation, change management and CMDB synchronisation.
+  match: [servicenow.*, manageengine.*, bmc.*, atlassian.*, jira.*]
+- id: event-driven
+  path: event-driven
+  title: Event-Driven & Observability
+  icon: material/lightning-bolt
+  summary: React automatically to events from monitoring, observability and messaging systems.
+  match: [ansible.eda, dynatrace.*, redhat.insights_eda, ibm.instana*, datadog.*, newrelic.*, grafana.*, elastic.*, splunk.*, signalfx.*, zabbix.*, checkmk.*, pagerduty.*, bigpanda.*, sciencelogic.*, solarwinds.*, logicmonitor.*, moogsoft.*, ibm.turbonomic_eda, sensu.*, cisco.splunk_otel_collector]
+  categories: [Observability]
+- id: applications
+  path: applications
+  title: Applications, Middleware & Databases
+  icon: material/application-cog
+  summary: Day 2 operations for applications, middleware, databases and SAP.
+  match: [redhat.sap_*, sap.*, avantra.*, community.sap_*, middleware_automation.*, redhat.runtimes_*, redhat.eap, redhat.jws, redhat.jbcs, redhat.amq_*, redhat.data_grid, redhat.quarkus, redhat.rhbk, redhat.sso, redhat.redhat_csp_download, confluent.*, edb.*, ansible.mysql, ansible.mariadb, microsoft.sql, infra.middleware_ocpv, ibm.mas*, mongodb.*]
+  categories: [App dev, App modernization, Data management]
+- id: edge
+  path: edge
+  title: Edge
+  icon: material/access-point-network
+  summary: Fleet management for edge devices and remote sites.
+  match: [redhat.edge*, edge.*, infra.edge*]
+- id: ai
+  path: ai
+  title: AI & Lightspeed
+  icon: material/brain
+  summary: AI-assisted automation and automation for AI infrastructure.
+  match: [redhat.ai, infra.ai, ansible.mcp, ansible.mcp_builder, neubird.*, automatics_ai.*, amazon.ai]
+  categories: [AI]
+- id: reporting
+  path: reporting
+  title: Reporting & Analytics
+  icon: material/chart-box
+  summary: Measure automation value and report on the state of managed estates.
+  match: []
+- id: other
+  path: other
+  title: Other integrations
+  icon: material/puzzle
+  summary: Collections that do not fit a single domain.
+  match: ["*"]

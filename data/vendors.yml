@@ -1,0 +1,1753 @@
+# Security and observability vendor collections from every source (catalog, Galaxy, vendor GitHub).
+# Certified/validated versions and dates come from the Red Hat Ecosystem Catalog; galaxy_* from Ansible Galaxy.
+# Researched 2026-10-20. Edit by hand; see docs/about/methodology.md.
+- vendor: Palo Alto Networks
+  domain: security
+  subcategory: Firewall (PAN-OS / Panorama)
+  fqcn: paloaltonetworks.panos
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 3.4.1
+  catalog_updated: '2026-07-24'
+  catalog_url: https://catalog.redhat.com/en/software/collection/paloaltonetworks/panos
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/paloaltonetworks/panos/
+  galaxy_version: 3.4.2
+  galaxy_updated: '2026-08-31'
+  last_commit: '2026-08-31'
+  repository: https://github.com/PaloAltoNetworks/pan-os-ansible
+  module_count: 118
+  eda_event_source: true
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Palo Alto Networks", published 3 months ago. Also published on Ansible Galaxy (3.4.2). Repo owner
+    PaloAltoNetworks. Red Hat KB 3642632 EDA table lists it with an event source plugin, maintained and supported by Palo Alto Networks. EDA: 1 file(s) under extensions/eda/plugins/event_source
+    in repo.'
+- vendor: Palo Alto Networks
+  domain: security
+  subcategory: Firewall policy automation roles
+  fqcn: paloaltonetworks.panos_policy_automation
+  support_level: Red Hat Validated
+  maintainer: unknown
+  certified_version: 1.4.6
+  catalog_updated: '2026-02-03'
+  catalog_url: https://catalog.redhat.com/en/software/collection/paloaltonetworks/panos_policy_automation
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/paloaltonetworks/panos_policy_automation/
+  galaxy_version: 1.4.6
+  galaxy_updated: '2026-02-03'
+  status: active
+  notes: Listed in Red Hat KB 3642632 validated content (roles for security policy creation/management on Panorama). Not in the certified catalog lists. Repository not located; maintainer
+    not stated in KB. Also on Galaxy under vendor namespace.
+- vendor: Palo Alto Networks
+  domain: security
+  subcategory: Strata Cloud Manager (SCM)
+  fqcn: paloaltonetworks.scm
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/paloaltonetworks/scm/
+  galaxy_version: 0.0.1-beta.1
+  galaxy_updated: '2026-08-20'
+  last_commit: '2026-08-21'
+  repository: https://github.com/PaloAltoNetworks/scm-ansible
+  module_count: 258
+  eda_event_source: false
+  status: active
+  notes: Vendor-published pre-release (Galaxy 0.0.1-beta.1, created 2026-08-19; repo tag v0.0.1-beta.2). Repo PaloAltoNetworks/scm-ansible. Not certified or validated.
+- vendor: Palo Alto Networks
+  domain: security
+  subcategory: Strata Cloud Manager (SCM), community
+  fqcn: cdot65.scm
+  support_level: Vendor GitHub only
+  third_party: true
+  maintainer: community
+  latest_version: 0.2.0
+  last_commit: '2025-03-28'
+  repository: https://github.com/cdot65/pan-scm-ansible
+  module_count: 70
+  eda_event_source: false
+  status: unknown
+  notes: Individual-maintained collection (cdot65/pan-scm-ansible, 70 modules in repo). Galaxy listing not verified. Superseded in intent by the vendor repo PaloAltoNetworks/scm-ansible.
+    latest_version taken from repo galaxy.yml (collection not on Galaxy; published version unverified).
+- vendor: Palo Alto Networks
+  domain: security
+  subcategory: Prisma Access (SASE), community
+  fqcn: cdot65.prisma_access
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cdot65/prisma_access/
+  galaxy_version: 0.1.8
+  galaxy_updated: '2023-05-08'
+  status: unknown
+  notes: Individual namespace cdot65; Prisma Access tenant configuration. Not vendor published.
+- vendor: Palo Alto Networks
+  domain: security
+  subcategory: Cortex XSOAR, third party
+  fqcn: cortex.xsoar
+  support_level: Vendor GitHub only
+  third_party: true
+  maintainer: community
+  latest_version: 1.1.8
+  last_commit: '2025-08-05'
+  repository: https://github.com/NVISOsecurity/cortex.xsoar
+  module_count: 8
+  eda_event_source: false
+  status: unknown
+  notes: Repo NVISOsecurity/cortex.xsoar; NVISO is a third-party security consultancy, not Palo Alto Networks. Not on Galaxy per keyword search "xsoar" (0 results). No Palo Alto-published
+    XSOAR collection found. latest_version taken from repo galaxy.yml (collection not on Galaxy; published version unverified).
+- vendor: Palo Alto Networks
+  domain: security
+  subcategory: Prisma Cloud
+  notes: no Ansible collection found. Galaxy keyword search "prisma" returned only the individual-maintained cdot65.prisma_access (Prisma Access); not found in Red Hat catalog certified
+    lists.
+  search_complete: true
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiOS firewall
+  fqcn: fortinet.fortios
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.6.0
+  catalog_updated: '2026-08-15'
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortios
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fortios/
+  galaxy_version: 2.6.0
+  galaxy_updated: '2026-08-17'
+  last_commit: '2026-08-17'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortios-collection
+  module_count: 729
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Fortinet", published 2 months ago. Also published on Ansible Galaxy (2.6.0). Repo under fortinet-ansible-dev
+    org (Fortinet developer org).'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiManager
+  fqcn: fortinet.fortimanager
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.15.0
+  catalog_updated: '2026-08-11'
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortimanager
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fortimanager/
+  galaxy_version: 2.15.0
+  galaxy_updated: '2026-08-11'
+  last_commit: '2026-08-11'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortimanager-collection
+  module_count: 1335
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Fortinet", published 2 months ago. Also published on Ansible Galaxy (2.15.0). Repo under fortinet-ansible-dev
+    org (Fortinet developer org).'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiManager (device-level, fmgdevice)
+  fqcn: fortinet.fmgdevice
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.2.0
+  catalog_updated: '2026-08-18'
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fmgdevice
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fmgdevice/
+  galaxy_version: 1.2.0
+  galaxy_updated: '2026-08-18'
+  last_commit: '2026-08-18'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fmgdevice-collection
+  module_count: 1410
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Fortinet", published 2 months ago. Also published on Ansible Galaxy (1.2.0). Repo under fortinet-ansible-dev
+    org (Fortinet developer org).'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiAnalyzer (logging/analytics)
+  fqcn: fortinet.fortianalyzer
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.10.0
+  catalog_updated: '2025-10-22'
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortianalyzer
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fortianalyzer/
+  galaxy_version: 1.10.0
+  galaxy_updated: '2025-10-22'
+  last_commit: '2025-10-22'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortianalyzer-collection
+  module_count: 239
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Fortinet", published last year. Also published on Ansible Galaxy (1.10.0). Repo under fortinet-ansible-dev
+    org (Fortinet developer org).'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiSASE
+  fqcn: fortinet.fortisase
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.1.0
+  catalog_updated: '2025-10-10'
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortisase
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fortisase/
+  galaxy_version: 1.1.0
+  galaxy_updated: '2025-10-10'
+  last_commit: '2025-10-10'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortisase-collection
+  module_count: 72
+  eda_event_source: false
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Fortinet", published last year. Also published on Ansible Galaxy (1.1.0). Repo under fortinet-ansible-dev
+    org (Fortinet developer org).'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiSwitch
+  fqcn: fortinet.fortiswitch
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.4.0
+  catalog_updated: '2026-10-09'
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortiswitch
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fortiswitch/
+  galaxy_version: 1.4.0
+  galaxy_updated: '2026-10-10'
+  last_commit: '2026-10-09'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortiswitch-collection
+  module_count: 200
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Fortinet", published 11 days ago. Also published on Ansible Galaxy (1.4.0). Repo under fortinet-ansible-dev
+    org (Fortinet developer org).'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiFlex VM licensing
+  fqcn: fortinet.fortiflexvm
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.3.3
+  catalog_updated: '2026-08-27'
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortiflexvm
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fortiflexvm/
+  galaxy_version: 2.3.3
+  galaxy_updated: '2026-08-27'
+  last_commit: '2026-08-27'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortiflexvm-collection
+  module_count: 14
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Fortinet", published 2 months ago. Also published on Ansible Galaxy (2.3.3). Repo under fortinet-ansible-dev
+    org (Fortinet developer org).'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiWeb WAF
+  fqcn: fortinet.fortiweb
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fortiweb/
+  galaxy_version: 1.3.3
+  galaxy_updated: '2026-09-15'
+  last_commit: '2026-09-15'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortiweb-collection
+  module_count: 146
+  eda_event_source: false
+  status: active
+  notes: 'Repo under fortinet-ansible-dev org (Fortinet developer org). Not seen in the catalog certified lists (pages 1-10 of 11 plus Security and Observability filters). Version mismatch:
+    Galaxy 1.3.3 vs repo galaxy.yml 1.3.0 (git tag 1.3.3); Galaxy value used.'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiADC
+  fqcn: fortinet.fortiadc
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/fortiadc/
+  galaxy_version: 1.3.1
+  galaxy_updated: '2026-04-01'
+  last_commit: '2026-04-01'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortiadc-collection
+  module_count: 82
+  eda_event_source: false
+  status: active
+  notes: 'Repo under fortinet-ansible-dev org (Fortinet developer org). Not seen in the catalog certified lists (pages 1-10 of 11 plus Security and Observability filters). Version mismatch:
+    Galaxy 1.3.1 vs repo galaxy.yml 1.3.0 (git tag 1.3.1); Galaxy value used.'
+- vendor: Fortinet
+  domain: security
+  subcategory: FortiGate console access
+  fqcn: fortinet.console
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/fortinet/console/
+  galaxy_version: 0.2.2
+  galaxy_updated: '2023-09-29'
+  status: unknown
+  notes: Galaxy only (vendor namespace); last Galaxy update 2023-09-29. Repository not located.
+- vendor: Check Point
+  domain: security
+  subcategory: Management / firewall policy (SmartConsole API)
+  fqcn: check_point.mgmt
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 7.0.1
+  catalog_updated: '2026-09-02'
+  catalog_url: https://catalog.redhat.com/en/software/collection/check_point/mgmt
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/check_point/mgmt/
+  galaxy_version: 7.0.1
+  galaxy_updated: '2026-09-02'
+  last_commit: '2026-09-02'
+  repository: https://github.com/CheckPointSW/CheckPointAnsibleMgmtCollection
+  module_count: 445
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Check Point", published 2 months ago. Also published on Ansible Galaxy (7.0.1). Repo CheckPointSW.
+    README notes the checkpoint_* modules will be deprecated; cp_mgmt_* are current.'
+- vendor: Check Point
+  domain: security
+  subcategory: Gaia OS
+  fqcn: check_point.gaia
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 7.0.0
+  catalog_updated: '2025-02-06'
+  catalog_url: https://catalog.redhat.com/en/software/collection/check_point/gaia
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/check_point/gaia/
+  galaxy_version: 7.0.0
+  galaxy_updated: '2025-02-06'
+  last_commit: '2026-10-20'
+  repository: https://github.com/CheckPointSW/CheckPointAnsibleGAIACollection
+  module_count: 114
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Check Point", published 2 years ago. Also published on Ansible Galaxy (7.0.0). Repo CheckPointSW.
+    Galaxy release 7.0.0 is dated 2025-02-06 but the repo has a commit on 2026-10-20.'
+- vendor: Cisco
+  domain: security
+  subcategory: ASA firewall
+  fqcn: cisco.asa
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 6.1.0
+  catalog_updated: '2025-01-17'
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/asa
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cisco/asa/
+  galaxy_version: 7.0.0
+  galaxy_updated: '2026-09-09'
+  last_commit: '2026-09-08'
+  repository: https://github.com/ansible-collections/cisco.asa
+  module_count: 7
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Cisco", published 2 years ago. Also published on Ansible Galaxy (7.0.0). Repo ansible-collections/cisco.asa.
+    Catalog provider label is Cisco. Maintainer set by repo-org rule (ansible-collections org hosts both community and partner/Red Hat content); verify support owner with Red Hat before
+    quoting.'
+- vendor: Cisco
+  domain: security
+  subcategory: ISE (Identity Services Engine)
+  fqcn: cisco.ise
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 3.3.0
+  catalog_updated: '2026-10-16'
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/ise
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cisco/ise/
+  galaxy_version: 3.3.0
+  galaxy_updated: '2026-10-14'
+  last_commit: '2026-10-14'
+  repository: https://github.com/CiscoISE/ansible-ise
+  module_count: 252
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Cloud", provider label "Cisco", published 4 days ago. Also published on Ansible Galaxy (3.3.0). Repo CiscoISE/ansible-ise (vendor
+    org). Includes 2 roles.'
+- vendor: Cisco
+  domain: security
+  subcategory: Secure Firewall Management Center (FMC/FTD)
+  fqcn: cisco.fmcansible
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cisco/fmcansible/
+  galaxy_version: 1.1.1
+  galaxy_updated: '2026-08-13'
+  last_commit: '2026-08-27'
+  repository: https://github.com/CiscoDevNet/fmcansible
+  module_count: 3
+  eda_event_source: false
+  status: active
+  notes: Vendor namespace cisco; repo CiscoDevNet/fmcansible. Not seen in catalog certified lists. Module count is plugins/modules only (collection also ships 6 roles and httpapi content).
+- vendor: Cisco
+  domain: security
+  subcategory: Security Cloud Control Firewall Manager (SCC-FM)
+  fqcn: cisco.sccfm
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cisco/sccfm/
+  galaxy_version: 0.40.0
+  galaxy_updated: '2026-09-01'
+  status: active
+  notes: Vendor namespace cisco. Repository not located (GitHub URL not confirmed). Not seen in catalog certified lists.
+- vendor: Cisco
+  domain: security
+  subcategory: Cisco Defense Orchestrator (CDO)
+  fqcn: cisco.cdo
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cisco/cdo/
+  galaxy_version: 1.1.7
+  galaxy_updated: '2023-11-21'
+  status: unknown
+  notes: Vendor namespace cisco. Last Galaxy release 2023-11-21. Repository not located.
+- vendor: Cisco
+  domain: security
+  subcategory: Secure Firewall FTD (cisco.ftd)
+  notes: no Ansible collection found. No cisco.ftd collection on Galaxy. The legacy repo CiscoDevNet/FTDAnsible (last commit 2022-06-02, tag v0.3.1) has no galaxy.yml. Use cisco.fmcansible
+    or cisco.sccfm above.
+  search_complete: true
+- vendor: Cisco
+  domain: security
+  subcategory: Duo MFA, third party
+  fqcn: trippsc2.duo
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/trippsc2/duo/
+  galaxy_version: 1.1.0
+  galaxy_updated: '2026-06-02'
+  status: active
+  notes: No Cisco-published Duo collection found. Individual namespace trippsc2 (modules and roles to configure Duo). Other individual hits (markciecior.duo, philip860.duo_mfa) ignored.
+- vendor: Cisco
+  domain: security
+  subcategory: Umbrella
+  notes: no Ansible collection found. Galaxy keyword "umbrella" returned only unrelated cisco.catalystcenter and cisco.meraki hits; no entry in catalog certified lists.
+  search_complete: true
+- vendor: Juniper Networks
+  domain: security
+  subcategory: Junos OS (incl. SRX) - junos network collection
+  fqcn: junipernetworks.junos
+  support_level: Red Hat Certified
+  maintainer: unknown
+  certified_version: 11.1.1
+  catalog_updated: '2026-03-09'
+  catalog_url: https://catalog.redhat.com/en/software/collection/junipernetworks/junos
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/junipernetworks/junos/
+  galaxy_version: 11.1.1
+  galaxy_updated: '2026-03-09'
+  last_commit: '2026-10-14'
+  repository: https://github.com/Juniper/ansible-junos-stdlib
+  eda_event_source: false
+  status: active
+  notes: 'The ansible-collections/junipernetworks.junos repository is archived; development continues in Juniper/ansible-junos-stdlib. Catalog: Certified by Red Hat, category label "Networking",
+    provider label "Red Hat", published 8 months ago. Also published on Ansible Galaxy (11.1.1). Catalog provider label is Red Hat; the original repo ansible-collections/junipernetworks.junos
+    is archived (last commit 2026-03-09, v11.0.0, 38 modules) and the release 11.1.1 tag lives in Juniper/ansible-junos-stdlib. Maintainer therefore unclear: unknown. Module count left
+    empty because the Juniper-repo copy was not counted reliably.'
+- vendor: Juniper Networks
+  domain: security
+  subcategory: Junos devices (incl. SRX, srx_cluster module) - juniper.device
+  fqcn: juniper.device
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.0.1
+  catalog_updated: '2025-11-19'
+  catalog_url: https://catalog.redhat.com/en/software/collection/juniper/device
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/juniper/device/
+  galaxy_version: 2.0.7
+  galaxy_updated: '2026-10-14'
+  last_commit: '2026-10-14'
+  repository: https://github.com/Juniper/ansible-junos-stdlib
+  module_count: 53
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Juniper Networks", published 11 months ago. Also published on Ansible Galaxy (2.0.7). Repo Juniper/ansible-junos-stdlib.
+    Catalog category label Networking, provider Juniper Networks. SRX coverage inferred from srx_cluster module presence in repo; other SRX modules not enumerated.'
+- vendor: Juniper Networks
+  domain: security
+  subcategory: EDA event source for Junos devices
+  fqcn: juniper.eda
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.4.4
+  catalog_updated: '2025-07-24'
+  catalog_url: https://catalog.redhat.com/en/software/collection/juniper/eda
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/juniper/eda/
+  galaxy_version: 1.4.4
+  galaxy_updated: '2025-02-14'
+  eda_event_source: true
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Cloud", provider label "Juniper Networks", published last year. Also published on Ansible Galaxy (1.4.4). Red Hat KB 3642632
+    EDA table: event source plugins and rulebooks for Juniper devices, maintained and supported by Juniper Networks. Repository not located.'
+- vendor: F5
+  domain: security
+  subcategory: BIG-IP modules (ADC / WAF / AFM family)
+  fqcn: f5networks.f5_modules
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.44.0
+  catalog_updated: '2026-09-08'
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5_modules
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/f5networks/f5_modules/
+  galaxy_version: 1.44.0
+  galaxy_updated: '2026-09-08'
+  last_commit: '2026-10-14'
+  repository: https://github.com/F5Networks/f5-ansible
+  module_count: 179
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "F5 Networks", published last month. Also published on Ansible Galaxy (1.44.0). Repo F5Networks/f5-ansible.
+    Per-module WAF/AFM coverage not enumerated. Collection is in maintenance posture relative to f5_bigip (not verified). Version mismatch: Galaxy 1.44.0 vs repo galaxy.yml 1.43.0-devel
+    (git tag None); Galaxy value used.'
+- vendor: F5
+  domain: security
+  subcategory: BIG-IP declarative (AS3/DO, incl. security profiles)
+  fqcn: f5networks.f5_bigip
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 3.14.0
+  catalog_updated: '2025-07-03'
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5_bigip
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/f5networks/f5_bigip/
+  galaxy_version: 3.15.0
+  galaxy_updated: '2026-09-29'
+  last_commit: '2026-09-29'
+  repository: https://github.com/F5Networks/f5-ansible-bigip
+  module_count: 58
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "F5 Networks", published last year. Also published on Ansible Galaxy (3.15.0). Repo F5Networks/f5-ansible-bigip.
+    WAF/AFM coverage not enumerated.'
+- vendor: F5
+  domain: security
+  subcategory: F5OS platform
+  fqcn: f5networks.f5os
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.20.0
+  catalog_updated: '2025-08-14'
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5os
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/f5networks/f5os/
+  galaxy_version: 1.23.0
+  galaxy_updated: '2026-08-25'
+  last_commit: '2026-08-25'
+  repository: https://github.com/F5Networks/f5-ansible-f5os
+  module_count: 50
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "F5 Networks", published last year. Also published on Ansible Galaxy (1.23.0). Repo F5Networks/f5-ansible-f5os.'
+- vendor: F5
+  domain: security
+  subcategory: NGINX Next / BIG-IP Next
+  fqcn: f5networks.next
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.5.0
+  catalog_updated: '2024-12-05'
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/next
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/f5networks/next/
+  galaxy_version: 1.5.0
+  galaxy_updated: '2024-12-04'
+  status: unknown
+  notes: Repository not located. Galaxy last release 2024-12-04.
+- vendor: F5
+  domain: security
+  subcategory: EDA security roles (Elastic / Dynatrace driven)
+  fqcn: f5networks.f5_eda_security
+  support_level: Red Hat Validated
+  maintainer: unknown
+  certified_version: 1.0.1
+  catalog_updated: '2024-12-05'
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5_eda_security
+  status: unknown
+  notes: 'Red Hat KB 3642632 validated content: roles for event-driven automation with F5 using Elasticsearch or Dynatrace. Not in certified lists; Galaxy and repo not checked.'
+- vendor: F5
+  domain: security
+  subcategory: BIG-IP platform modernization roles
+  fqcn: f5networks.f5_platform_modernization
+  support_level: Red Hat Validated
+  maintainer: unknown
+  certified_version: 1.0.0
+  catalog_updated: '2026-01-26'
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5_platform_modernization
+  status: unknown
+  notes: Listed as validated content in Red Hat KB 3642632 but also returned by the catalog "Certified by Red Hat" filter (category Developer tools, published 10 months ago). Conflict
+    between sources; recorded as Validated per the KB. Galaxy and repo not checked.
+- vendor: CrowdStrike
+  domain: security
+  subcategory: Falcon endpoint security
+  fqcn: crowdstrike.falcon
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 4.14.1
+  catalog_updated: '2026-10-08'
+  catalog_url: https://catalog.redhat.com/en/software/collection/crowdstrike/falcon
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/crowdstrike/falcon/
+  galaxy_version: 4.14.1
+  galaxy_updated: '2026-10-08'
+  last_commit: '2026-10-12'
+  repository: https://github.com/CrowdStrike/ansible_collection_falcon
+  module_count: 27
+  eda_event_source: true
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "CrowdStrike", published 12 days ago. Also published on Ansible Galaxy (4.14.1). Repo CrowdStrike/ansible_collection_falcon.
+    Red Hat KB 3642632 EDA table lists the Falcon Event Stream source plugin, maintained and supported by CrowdStrike. Roles: 3. EDA: 1 file(s) under extensions/eda/plugins/event_source
+    in repo.'
+- vendor: SentinelOne
+  domain: security
+  subcategory: Agent lifecycle
+  fqcn: sentinelone.s1agents
+  support_level: Vendor GitHub only
+  maintainer: vendor
+  latest_version: 0.3.0
+  last_commit: '2026-10-20'
+  repository: https://github.com/Sentinel-One/ansible_collection_s1agents
+  module_count: 0
+  eda_event_source: false
+  status: active
+  notes: Vendor org Sentinel-One; not on Galaxy (namespace sentinelone has 0 collections) and not in catalog lists. Installable from GitHub only. Role-based (9 roles). latest_version
+    taken from git tag (collection not on Galaxy; published version unverified). module_count counts plugins/modules files only; collection is role/plugin-based (9 roles).
+- vendor: SentinelOne
+  domain: security
+  subcategory: Agent management, third party
+  fqcn: sva.sentinelone
+  support_level: Galaxy (community)
+  maintainer: community
+  latest_version: 2.3.0
+  last_commit: '2026-08-24'
+  repository: https://github.com/svalabs/sva.sentinelone
+  module_count: 9
+  eda_event_source: false
+  status: active
+  notes: Namespace sva = SVA System Vertrieb Alexander GmbH (svalabs); third party, not SentinelOne. Legacy role sentinelone_client_legacy flagged deprecated in its README. latest_version
+    taken from git tag (collection not on Galaxy; published version unverified).
+- vendor: Microsoft
+  domain: security
+  subcategory: Defender / Sentinel
+  notes: no Ansible collection found. No dedicated Defender or Sentinel collection identified. azure.azcollection is the general Azure collection (certified, Microsoft provider label);
+    whether it covers Sentinel/Defender resources was not verified.
+  search_complete: true
+- vendor: Trend Micro
+  domain: security
+  subcategory: Deep Security
+  fqcn: trendmicro.deepsec
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 4.0.0
+  catalog_updated: '2024-06-12'
+  catalog_url: https://catalog.redhat.com/en/software/collection/trendmicro/deepsec
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/trendmicro/deepsec/
+  galaxy_version: 4.0.0
+  galaxy_updated: '2024-06-12'
+  last_commit: '2024-09-23'
+  repository: https://github.com/ansible-collections/trendmicro.deepsec
+  module_count: 14
+  eda_event_source: false
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Red Hat", published 2 years ago. Also published on Ansible Galaxy (4.0.0). Repo ansible-collections/trendmicro.deepsec;
+    catalog provider label is Red Hat. runtime.yml contains deprecation routing entries (not whole-collection deprecation). Last Galaxy release 2024-06-12, last commit 2024-09-23. Maintainer
+    set by repo-org rule (ansible-collections org hosts both community and partner/Red Hat content); verify support owner with Red Hat before quoting.'
+- vendor: Trellix / McAfee
+  domain: security
+  subcategory: Endpoint / network security
+  notes: no Ansible collection found. Not found in Red Hat catalog certified lists (pages 1-10 of 11) or in any cloned source. Galaxy keyword probe was not run before Firecrawl credits
+    were exhausted.
+  search_complete: false
+- vendor: Splunk
+  domain: security
+  subcategory: Enterprise Security (ES)
+  fqcn: splunk.es
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 6.0.1
+  catalog_updated: '2026-07-13'
+  catalog_url: https://catalog.redhat.com/en/software/collection/splunk/es
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/splunk/es/
+  galaxy_version: 6.0.1
+  galaxy_updated: '2026-07-14'
+  last_commit: '2026-08-26'
+  repository: https://github.com/ansible-collections/splunk.es
+  module_count: 17
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Red Hat", published 3 months ago. Also published on Ansible Galaxy (6.0.1). Repo ansible-collections/splunk.es;
+    catalog provider label is Red Hat. Maintainer set by repo-org rule (ansible-collections org hosts both community and partner/Red Hat content); verify support owner with Red Hat before
+    quoting.'
+- vendor: Splunk
+  domain: security
+  subcategory: SOAR
+  notes: no Ansible collection found. No separate Splunk SOAR collection found in the Galaxy namespace index or catalog certified lists. splunk.es covers Enterprise Security.
+  search_complete: true
+- vendor: IBM
+  domain: security
+  subcategory: QRadar SIEM
+  fqcn: ibm.qradar
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 4.0.0
+  catalog_updated: '2024-06-12'
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/qradar
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/ibm/qradar/
+  galaxy_version: 4.0.0
+  galaxy_updated: '2024-06-12'
+  last_commit: '2025-08-08'
+  repository: https://github.com/ansible-collections/ibm.qradar
+  module_count: 16
+  eda_event_source: false
+  status: deprecated
+  notes: 'Deprecated upstream; end of life December 2026 (announced in the collection README). Still listed as Certified in the catalog. Catalog: Certified by Red Hat, category label
+    "Security", provider label "IBM", published 2 years ago. Also published on Ansible Galaxy (4.0.0). README states the collection is deprecated (forum announcement link) while the
+    Galaxy deprecated flag is false and the catalog still lists it as certified (provider IBM). Status set to deprecated on README evidence. Repo ansible-collections/ibm.qradar; last
+    commit 2025-08-08. Maintainer set by repo-org rule (ansible-collections org hosts both community and partner/Red Hat content); verify support owner with Red Hat before quoting.'
+- vendor: IBM
+  domain: security
+  subcategory: Security Access Manager (ISAM)
+  fqcn: ibm.isam
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 3.6.0
+  catalog_updated: '2026-04-28'
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/isam
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/ibm/isam/
+  galaxy_version: 3.5.0
+  galaxy_updated: '2025-10-22'
+  last_commit: '2026-05-05'
+  repository: https://github.com/ibm-security/isam-ansible-collection
+  module_count: 3
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "IBM", published 6 months ago. Also published on Ansible Galaxy (3.5.0). Repo ibm-security/isam-ansible-collection.
+    Role-heavy (131 roles). Version mismatch: Galaxy 3.5.0 vs repo galaxy.yml 3.6.1 (git tag v3.4.0); Galaxy value used.'
+- vendor: IBM
+  domain: security
+  subcategory: zSecure alert response (EDA rulebooks)
+  fqcn: ibm.ibm_eda_zos
+  support_level: Red Hat Validated
+  maintainer: vendor
+  certified_version: 1.1.0
+  catalog_updated: '2026-10-02'
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/ibm_eda_zos
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/ibm/ibm_eda_zos/
+  galaxy_version: 1.1.0
+  galaxy_updated: '2026-10-02'
+  eda_event_source: true
+  status: active
+  notes: 'Red Hat KB 3642632: validated content, EDA rulebooks and playbooks for IBM Z; rulebooks monitor zSecure alerts. KB lists IBM as maintainer/supporter. Also on Galaxy (created
+    2026-06-24). Repository not located.'
+- vendor: IBM
+  domain: security
+  subcategory: Guardium
+  notes: no Ansible collection found. No Guardium collection in the ibm Galaxy namespace (46 collections listed) or catalog certified lists.
+  search_complete: true
+- vendor: Elastic
+  domain: security
+  subcategory: Elastic Security
+  notes: no Ansible collection found. Galaxy namespace elastic has 0 collections. community.elastic (see Observability) targets Elasticsearch, not Elastic Security; per-module coverage
+    not verified.
+  search_complete: true
+- vendor: CyberArk
+  domain: security
+  subcategory: Privileged Access Security (PAS)
+  fqcn: cyberark.pas
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.40
+  catalog_updated: '2026-04-28'
+  catalog_url: https://catalog.redhat.com/en/software/collection/cyberark/pas
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cyberark/pas/
+  galaxy_version: 1.0.40
+  galaxy_updated: '2026-04-28'
+  last_commit: '2026-04-28'
+  repository: https://github.com/cyberark/ansible-security-automation-collection
+  module_count: 4
+  eda_event_source: true
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "CyberArk", published 6 months ago. Also published on Ansible Galaxy (1.0.40). Repo cyberark org. Repo
+    contains 2 EDA-related files under extensions/eda; not listed in KB 3642632 EDA table. EDA: 2 file(s) under extensions/eda/plugins/event_source in repo.'
+- vendor: CyberArk
+  domain: security
+  subcategory: Conjur secrets
+  fqcn: cyberark.conjur
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.3.14
+  catalog_updated: '2026-08-05'
+  catalog_url: https://catalog.redhat.com/en/software/collection/cyberark/conjur
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cyberark/conjur/
+  galaxy_version: 1.3.14
+  galaxy_updated: '2026-08-05'
+  last_commit: '2026-08-05'
+  repository: https://github.com/cyberark/ansible-conjur-collection
+  module_count: 0
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "CyberArk", published 3 months ago. Also published on Ansible Galaxy (1.3.14). Repo cyberark/ansible-conjur-collection.
+    Lookup/role based. module_count counts plugins/modules files only; collection is role/plugin-based (1 roles).'
+- vendor: CyberArk
+  domain: security
+  subcategory: Identity Security Platform (ISP)
+  fqcn: cyberark.isp
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.8
+  catalog_updated: '2026-04-28'
+  catalog_url: https://catalog.redhat.com/en/software/collection/cyberark/isp
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/cyberark/isp/
+  galaxy_version: 1.0.8
+  galaxy_updated: '2026-04-28'
+  last_commit: '2026-04-28'
+  repository: https://github.com/cyberark/ansible-isp-collection
+  module_count: 8
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "CyberArk", published 6 months ago. Also published on Ansible Galaxy (1.0.8). Repo cyberark/ansible-isp-collection.'
+- vendor: HashiCorp
+  domain: security
+  subcategory: Vault (certified)
+  fqcn: hashicorp.vault
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 1.3.0
+  catalog_updated: '2026-07-09'
+  catalog_url: https://catalog.redhat.com/en/software/collection/hashicorp/vault
+  last_commit: '2026-10-15'
+  repository: https://github.com/ansible-collections/hashicorp.vault
+  module_count: 22
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "HashiCorp | An IBM Company", published 3 months ago. Hub-only: HashiCorp Galaxy namespace has 0 collections.
+    Catalog provider label is "HashiCorp | An IBM Company", but source repo is ansible-collections/hashicorp.vault, galaxy.yml author "Ansible" and issues URL points to Red Hat support,
+    so maintainer recorded as Red Hat. Version is the git tag 1.3.0 (galaxy.yml on main is 2.0.0-dev); the Automation Hub published version was not verified.'
+- vendor: HashiCorp
+  domain: security
+  subcategory: Vault (community)
+  fqcn: community.hashi_vault
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/community/hashi_vault/
+  galaxy_version: 7.1.0
+  galaxy_updated: '2025-10-25'
+  last_commit: '2026-07-11'
+  repository: https://github.com/ansible-collections/community.hashi_vault
+  module_count: 25
+  eda_event_source: false
+  status: active
+  notes: 'Community collection in ansible-collections org. Galaxy 7.1.0; repo main galaxy.yml shows 7.2.0 (tag 7.1.0). Version mismatch: Galaxy 7.1.0 vs repo galaxy.yml 7.2.0 (git tag
+    7.1.0); Galaxy value used.'
+- vendor: Delinea (Thycotic)
+  domain: security
+  subcategory: Privileged Access (PAS)
+  fqcn: delinea.pas
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.4
+  catalog_updated: '2024-09-23'
+  catalog_url: https://catalog.redhat.com/en/software/collection/delinea/pas
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/delinea/pas/
+  galaxy_version: 1.0.0
+  galaxy_updated: '2024-08-01'
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Delinea", published 2 years ago. Also published on Ansible Galaxy (1.0.0). Vendor namespace. Repository
+    not located. Last Galaxy release 2024-08-01.'
+- vendor: Delinea (Thycotic)
+  domain: security
+  subcategory: Secret Server (ss)
+  fqcn: delinea.ss
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.1.0
+  catalog_updated: '2023-09-14'
+  catalog_url: https://catalog.redhat.com/en/software/collection/delinea/ss
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/delinea/ss/
+  galaxy_version: 1.1.0
+  galaxy_updated: '2023-09-29'
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Cloud", provider label "Delinea", published 3 years ago. Also published on Ansible Galaxy (1.1.0). Catalog category label Cloud,
+    published 3 years ago. A fork (delinea-sagar/ansible-ss-collection, last commit 2023-09-27) was found but is not confirmed as canonical, so repository left empty.'
+- vendor: Delinea (Thycotic)
+  domain: security
+  subcategory: Platform / Secret Server (new)
+  fqcn: delinea.platform_secretserver
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/delinea/platform_secretserver/
+  galaxy_version: 1.1.0
+  galaxy_updated: '2025-12-19'
+  status: active
+  notes: Vendor namespace; Galaxy created 2025-11-03. Not seen in catalog certified lists. Repository not located.
+- vendor: Delinea (Thycotic)
+  domain: security
+  subcategory: Core lookup collection
+  fqcn: delinea.core
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/delinea/core/
+  galaxy_version: 1.1.0
+  galaxy_updated: '2023-10-18'
+  last_commit: '2025-01-17'
+  repository: https://github.com/DelineaXPM/ansible-core-collection
+  module_count: 0
+  eda_event_source: false
+  status: unknown
+  notes: 'Repo DelineaXPM/ansible-core-collection (last commit 2025-01-17). Version mismatch: Galaxy 1.1.0 vs repo galaxy.yml 1.1.1 (git tag None); Galaxy value used.'
+- vendor: BeyondTrust
+  domain: security
+  subcategory: Secrets Safe
+  fqcn: beyondtrust.secrets_safe
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/beyondtrust/secrets_safe/
+  galaxy_version: 1.3.3
+  galaxy_updated: '2026-09-04'
+  status: active
+  notes: Vendor namespace. Repository not located. Not seen in catalog certified lists.
+- vendor: BeyondTrust
+  domain: security
+  subcategory: Password Safe
+  fqcn: beyondtrust.password_safe
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/beyondtrust/password_safe/
+  galaxy_version: 1.0.4
+  galaxy_updated: '2026-09-04'
+  status: active
+  notes: Vendor namespace. Repository not located. Not seen in catalog certified lists.
+- vendor: 1Password
+  domain: security
+  subcategory: Secrets (Connect)
+  fqcn: onepassword.connect
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.4.0
+  catalog_updated: '2026-05-04'
+  catalog_url: https://catalog.redhat.com/en/software/collection/onepassword/connect
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/onepassword/connect/
+  galaxy_version: 2.4.0
+  galaxy_updated: '2026-05-04'
+  last_commit: '2026-10-14'
+  repository: https://github.com/1Password/ansible-onepasswordconnect-collection
+  module_count: 3
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "1Password", published 6 months ago. Also published on Ansible Galaxy (2.4.0). Repo 1Password/ansible-onepasswordconnect-collection.'
+- vendor: Akeyless
+  domain: security
+  subcategory: Secrets management
+  fqcn: akeyless.secrets_management
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.2.2
+  catalog_updated: '2026-07-31'
+  catalog_url: https://catalog.redhat.com/en/software/collection/akeyless/secrets_management
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "akeyless", published 3 months ago. Vendor-named catalog namespace. Galaxy presence and repository
+    not checked (probe not completed).'
+- vendor: Okta
+  domain: security
+  subcategory: Identity
+  notes: no Ansible collection found. Galaxy namespace okta has 0 collections; not in catalog lists.
+  search_complete: true
+- vendor: Ping Identity
+  domain: security
+  subcategory: Identity
+  notes: no Ansible collection found. Galaxy keyword "pingidentity" returned 0 results; not in catalog lists.
+  search_complete: true
+- vendor: Tenable
+  domain: security
+  subcategory: Nessus Agent API, third party
+  fqcn: valkiriaaquatica.tenable
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/valkiriaaquatica/tenable/
+  galaxy_version: 0.0.2
+  galaxy_updated: '2024-08-24'
+  status: unknown
+  notes: No vendor-published collection found (Galaxy namespace tenable has 0). Individual namespace, last release 2024-08-24.
+- vendor: Qualys
+  domain: security
+  subcategory: Vulnerability management
+  notes: no Ansible collection found. Galaxy keyword "qualys" returned 0 results; not in catalog lists.
+  search_complete: true
+- vendor: Rapid7
+  domain: security
+  subcategory: InsightVM, third party
+  fqcn: mlowcher61.rapid7_vulnerability
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/mlowcher61/rapid7_vulnerability/
+  galaxy_version: 0.1.1
+  galaxy_updated: '2026-06-29'
+  status: active
+  notes: No Rapid7-published collection found. Individual namespace (InsightVM scan/remediate on AAP).
+- vendor: Zscaler
+  domain: security
+  subcategory: ZIA (internet access)
+  fqcn: zscaler.ziacloud
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.2.4
+  catalog_updated: '2026-06-02'
+  catalog_url: https://catalog.redhat.com/en/software/collection/zscaler/ziacloud
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/zscaler/ziacloud/
+  galaxy_version: 2.2.4
+  galaxy_updated: '2026-06-02'
+  last_commit: '2026-06-02'
+  repository: https://github.com/zscaler/ziacloud-ansible
+  module_count: 156
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Zscaler", published 5 months ago. Also published on Ansible Galaxy (2.2.4). Repo zscaler org.'
+- vendor: Zscaler
+  domain: security
+  subcategory: ZPA (private access)
+  fqcn: zscaler.zpacloud
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.2.12
+  catalog_updated: '2026-08-27'
+  catalog_url: https://catalog.redhat.com/en/software/collection/zscaler/zpacloud
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/zscaler/zpacloud/
+  galaxy_version: 2.2.12
+  galaxy_updated: '2026-08-27'
+  last_commit: '2026-08-27'
+  repository: https://github.com/zscaler/zpacloud-ansible
+  module_count: 105
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Zscaler", published 2 months ago. Also published on Ansible Galaxy (2.2.12). Repo zscaler org.'
+- vendor: Netskope
+  domain: security
+  subcategory: SSE REST API, third party
+  fqcn: mlowcher61.netskope
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/mlowcher61/netskope/
+  galaxy_version: 0.3.1
+  galaxy_updated: '2026-07-09'
+  status: active
+  notes: No Netskope-published collection found. Individual namespace (Netskope SSE API v2 info modules).
+- vendor: Venafi (CyberArk)
+  domain: security
+  subcategory: Machine identity / certificates
+  fqcn: venafi.machine_identity
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.1.1
+  catalog_updated: '2025-09-12'
+  catalog_url: https://catalog.redhat.com/en/software/collection/venafi/machine_identity
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/venafi/machine_identity/
+  galaxy_version: 1.4.0
+  galaxy_updated: '2026-09-30'
+  last_commit: '2026-09-30'
+  repository: https://github.com/Venafi/ansible-collection-venafi
+  module_count: 5
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Venafi", published last year. Also published on Ansible Galaxy (1.4.0). Repo Venafi/ansible-collection-venafi.
+    README text references CyberArk.'
+- vendor: Infoblox
+  domain: security
+  subcategory: DDI / DNS (NIOS)
+  fqcn: infoblox.nios_modules
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.8.0
+  catalog_updated: '2025-01-29'
+  catalog_url: https://catalog.redhat.com/en/software/collection/infoblox/nios_modules
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/infoblox/nios_modules/
+  galaxy_version: 1.10.0
+  galaxy_updated: '2026-07-16'
+  last_commit: '2026-07-16'
+  repository: https://github.com/infobloxopen/infoblox-ansible
+  module_count: 35
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Cloud", provider label "Infoblox", published 2 years ago. Also published on Ansible Galaxy (1.10.0). Repo infobloxopen/infoblox-ansible.
+    Catalog category label Cloud.'
+- vendor: Infoblox
+  domain: security
+  subcategory: DDI / DNS (Universal DDI)
+  fqcn: infoblox.universal_ddi
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.1.0
+  catalog_updated: '2025-12-03'
+  catalog_url: https://catalog.redhat.com/en/software/collection/infoblox/universal_ddi
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/infoblox/universal_ddi/
+  galaxy_version: 1.2.0
+  galaxy_updated: '2026-07-17'
+  last_commit: '2026-08-18'
+  repository: https://github.com/infobloxopen/universal-ddi-ansible
+  module_count: 87
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Infoblox", published 11 months ago. Also published on Ansible Galaxy (1.2.0). Repo infobloxopen/universal-ddi-ansible.
+    README recommends migrating from legacy B1DDI collection.'
+- vendor: Infoblox
+  domain: security
+  subcategory: DDI (legacy BloxOne)
+  fqcn: infoblox.b1ddi_modules
+  support_level: Vendor GitHub only
+  maintainer: vendor
+  latest_version: 1.0.1
+  last_commit: '2024-01-30'
+  repository: https://github.com/infobloxopen/bloxone-ansible
+  module_count: 27
+  eda_event_source: false
+  status: unknown
+  notes: Legacy collection in infobloxopen/bloxone-ansible (last commit 2024-01-30); Universal DDI README says it will be deprecated in the near future. Galaxy presence not checked.
+    latest_version taken from git tag (collection not on Galaxy; published version unverified).
+- vendor: Wiz
+  domain: security
+  subcategory: Cloud security
+  notes: no Ansible collection found. Galaxy keyword "wiz" returned 0 results; not in catalog lists.
+  search_complete: true
+- vendor: Sysdig
+  domain: security
+  subcategory: Agent install (monitoring + security)
+  fqcn: sysdig.agent
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/sysdig/agent/
+  galaxy_version: 0.4.3
+  galaxy_updated: '2024-03-27'
+  status: unknown
+  notes: Vendor namespace; installs Sysdig agent. Repository not located. Last release 2024-03-27.
+- vendor: Aqua Security
+  domain: security
+  subcategory: Cloud native security
+  notes: no Ansible collection found. Galaxy keyword "aqua" returned 0 results; not in catalog lists.
+  search_complete: true
+- vendor: Snyk
+  domain: security
+  subcategory: Code security
+  notes: no Ansible collection found. Galaxy keyword "snyk" returned 0 results; not in catalog lists.
+  search_complete: true
+- vendor: Styra
+  domain: security
+  subcategory: Open Policy Agent
+  fqcn: styra.opa
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.1.1
+  catalog_updated: '2024-04-18'
+  catalog_url: https://catalog.redhat.com/en/software/collection/styra/opa
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Styra", published 3 years ago. Catalog only (published 3 years ago). Galaxy and repo not checked.'
+- vendor: Entrust
+  domain: security
+  subcategory: Crypto / HSM
+  fqcn: entrust.crypto
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.1
+  catalog_updated: '2023-12-20'
+  catalog_url: https://catalog.redhat.com/en/software/collection/entrust/crypto
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Entrust", published 3 years ago. Catalog Security filter only (published 3 years ago). Galaxy and
+    repo not checked. Catalog page 11 was not scraped, so the full all-certified row was not seen.'
+- vendor: Virsec
+  domain: security
+  subcategory: Runtime application protection
+  fqcn: virsec.vsp
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.2
+  catalog_updated: '2022-11-11'
+  catalog_url: https://catalog.redhat.com/en/software/collection/virsec/vsp
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Virsec Systems", published 4 years ago. Catalog Security filter only (published 4 years ago). Galaxy
+    and repo not checked.'
+- vendor: Red Hat
+  domain: security
+  subcategory: Security automation (firewall/IDS/SIEM abstraction)
+  fqcn: ansible.security
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 5.0.0
+  catalog_updated: '2025-09-05'
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/security
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/ansible/security/
+  galaxy_version: 5.0.0
+  galaxy_updated: '2025-09-05'
+  last_commit: '2025-09-05'
+  repository: https://github.com/ansible-collections/ansible.security
+  module_count: 0
+  eda_event_source: false
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Red Hat", published last year. Also published on Ansible Galaxy (5.0.0). Red Hat-owned collection
+    (ansible-collections). Catalog category label Networking.'
+- vendor: Red Hat
+  domain: security
+  subcategory: Trusted Artifact Signer
+  fqcn: redhat.artifact_signer
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 1.4.4
+  catalog_updated: '2026-10-16'
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/artifact_signer
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Red Hat", published 5 days ago. Red Hat-owned. Catalog Security filter only; Galaxy and repo not checked.'
+- vendor: Red Hat
+  domain: security
+  subcategory: Trusted Profile Analyzer
+  fqcn: redhat.trusted_profile_analyzer
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 3.1.1
+  catalog_updated: '2026-10-13'
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/trusted_profile_analyzer
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Red Hat", published 7 days ago. Red Hat-owned. Catalog Security filter only; Galaxy and repo not checked.'
+- vendor: Red Hat
+  domain: security
+  subcategory: RHEL hardening
+  fqcn: redhat.rhel_hardening_roles
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 1.1.82
+  catalog_updated: '2026-10-12'
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/rhel_hardening_roles
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Security", provider label "Red Hat", published 8 days ago. Red Hat-owned. Catalog Security filter only; Galaxy and repo not checked.'
+- vendor: Dynatrace
+  domain: observability
+  subcategory: OneAgent deployment
+  fqcn: dynatrace.oneagent
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.3.1
+  catalog_updated: '2026-08-28'
+  catalog_url: https://catalog.redhat.com/en/software/collection/dynatrace/oneagent
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/dynatrace/oneagent/
+  galaxy_version: 1.3.1
+  galaxy_updated: '2026-08-28'
+  last_commit: '2026-10-06'
+  repository: https://github.com/Dynatrace/Dynatrace-OneAgent-Ansible
+  module_count: 0
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Dynatrace", published 2 months ago. Also published on Ansible Galaxy (1.3.1). Repo Dynatrace/Dynatrace-OneAgent-Ansible.
+    module_count counts plugins/modules files only; collection is role/plugin-based (1 roles).'
+- vendor: Dynatrace
+  domain: observability
+  subcategory: EDA event source (problems)
+  fqcn: dynatrace.event_driven_ansible
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.2.3
+  catalog_updated: '2025-08-25'
+  catalog_url: https://catalog.redhat.com/en/software/collection/dynatrace/event_driven_ansible
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/dynatrace/event_driven_ansible/
+  galaxy_version: 1.2.3
+  galaxy_updated: '2025-08-28'
+  last_commit: '2026-10-06'
+  repository: https://github.com/Dynatrace/Dynatrace-EventDrivenAnsible
+  module_count: 0
+  eda_event_source: true
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Dynatrace", published last year. Also published on Ansible Galaxy (1.2.3). Repo Dynatrace/Dynatrace-EventDrivenAnsible.
+    Red Hat KB 3642632 EDA table: maintained and supported by Dynatrace. EDA: 2 file(s) under extensions/eda/plugins/event_source in repo.'
+- vendor: Dynatrace
+  domain: observability
+  subcategory: OneAgent deploy (legacy)
+  fqcn: dynatrace.oneagent_deploy
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/dynatrace/oneagent_deploy/
+  galaxy_version: 1.0.6
+  galaxy_updated: '2023-09-29'
+  status: deprecated
+  notes: Galaxy deprecated flag is true; superseded by dynatrace.oneagent. Repository not located.
+- vendor: Datadog
+  domain: observability
+  subcategory: Agent install and config
+  fqcn: datadog.dd
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 6.5.0
+  catalog_updated: '2026-02-11'
+  catalog_url: https://catalog.redhat.com/en/software/collection/datadog/dd
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/datadog/dd/
+  galaxy_version: 6.5.0
+  galaxy_updated: '2026-02-11'
+  last_commit: '2026-08-31'
+  repository: https://github.com/DataDog/ansible-datadog
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Datadog", published 8 months ago. Also published on Ansible Galaxy (6.5.0). Repo DataDog/ansible-datadog
+    is role-based and has no galaxy.yml at HEAD (latest git tag 5.6.0); Galaxy shows 6.5.0 (2026-02-11). Mismatch unresolved; Galaxy value used.'
+- vendor: New Relic
+  domain: observability
+  subcategory: Agent install
+  fqcn: newrelic.newrelic_agents
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/newrelic/newrelic_agents/
+  galaxy_version: 1.0.4
+  galaxy_updated: '2023-09-29'
+  status: unknown
+  notes: Vendor namespace; last Galaxy release 2023-09-29. Repository not located. Not in catalog lists.
+- vendor: Splunk
+  domain: observability
+  subcategory: Observability - OpenTelemetry Collector (SignalFx namespace)
+  fqcn: signalfx.splunk_otel_collector
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/signalfx/splunk_otel_collector/
+  galaxy_version: 1.3.0
+  galaxy_updated: '2026-09-10'
+  last_commit: '2026-10-20'
+  repository: https://github.com/signalfx/splunk-otel-collector
+  module_count: 0
+  eda_event_source: false
+  status: active
+  notes: Repo signalfx/splunk-otel-collector (deployments/ansible_collections). Role-based. Not in catalog certified lists. module_count counts plugins/modules files only; collection
+    is role/plugin-based (1 roles).
+- vendor: Splunk (Cisco)
+  domain: observability
+  subcategory: Observability - OpenTelemetry Collector (validated roles)
+  fqcn: cisco.splunk_otel_collector
+  support_level: Red Hat Validated
+  maintainer: unknown
+  certified_version: 1.0.0
+  catalog_updated: '2026-03-03'
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/splunk_otel_collector
+  status: unknown
+  notes: 'Red Hat KB 3642632 validated content: roles for deploying the Splunk Distribution of OpenTelemetry Collector. Galaxy and repo not checked; namespace is cisco but maintainer
+    not stated.'
+- vendor: Splunk
+  domain: observability
+  subcategory: Enterprise
+  fqcn: splunk.enterprise
+  support_level: Red Hat Certified
+  maintainer: Red Hat
+  certified_version: 1.0.0
+  catalog_updated: '2026-01-27'
+  catalog_url: https://catalog.redhat.com/en/software/collection/splunk/enterprise
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/splunk/enterprise/
+  galaxy_version: 1.0.0
+  galaxy_updated: '2026-02-02'
+  last_commit: '2026-08-27'
+  repository: https://github.com/ansible-collections/splunk.enterprise
+  module_count: 4
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Red Hat", published 9 months ago. Also published on Ansible Galaxy (1.0.0). Repo ansible-collections/splunk.enterprise;
+    catalog provider label Red Hat; Galaxy first release 2026-02-02. Separate repo splunk/splunk-ansible (roles/playbooks, not a collection, tag 10.6.1.1, commit 2026-10-19) is the vendor
+    deploy tooling. Maintainer set by repo-org rule (ansible-collections org hosts both community and partner/Red Hat content); verify support owner with Red Hat before quoting.'
+- vendor: Splunk
+  domain: observability
+  subcategory: IT Service Intelligence (ITSI)
+  fqcn: splunk.itsi
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.0.0
+  catalog_updated: '2026-04-16'
+  catalog_url: https://catalog.redhat.com/en/software/collection/splunk/itsi
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/splunk/itsi/
+  galaxy_version: 2.0.0
+  galaxy_updated: '2026-04-16'
+  last_commit: '2026-08-26'
+  repository: https://github.com/ansible-collections/splunk.itsi
+  module_count: 11
+  eda_event_source: true
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Red Hat", published 6 months ago. Also published on Ansible Galaxy (2.0.0). Red Hat KB 3642632
+    EDA table lists it as maintained and supported by Splunk, though the repo is under ansible-collections and the catalog provider label is Red Hat; KB value used. Includes an EDA event
+    source plugin. EDA: 1 file(s) under extensions/eda/plugins/event_source in repo.'
+- vendor: Elastic
+  domain: observability
+  subcategory: Elasticsearch / Kibana (community)
+  fqcn: community.elastic
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/community/elastic/
+  galaxy_version: 1.4.1
+  galaxy_updated: '2026-09-10'
+  last_commit: '2026-09-10'
+  repository: https://github.com/ansible-collections/community.elastic
+  module_count: 17
+  eda_event_source: false
+  status: active
+  notes: Community collection (ansible-collections). Elastic itself has no Galaxy namespace collections.
+- vendor: Elastic
+  domain: observability
+  subcategory: Elastic Stack roles, third party
+  fqcn: netways.elasticstack
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/netways/elasticstack/
+  galaxy_version: 0.1.0
+  galaxy_updated: '2026-09-17'
+  status: active
+  notes: NETWAYS namespace (third party); first release 2026-09-17. Repository not located.
+- vendor: Grafana Labs
+  domain: observability
+  subcategory: Grafana, Loki, Alloy, Mimir roles
+  fqcn: grafana.grafana
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/grafana/grafana/
+  galaxy_version: 6.1.0
+  galaxy_updated: '2026-04-27'
+  last_commit: '2026-10-19'
+  repository: https://github.com/grafana/grafana-ansible-collection
+  module_count: 9
+  eda_event_source: false
+  status: active
+  notes: Repo grafana/grafana-ansible-collection. Not in catalog certified lists.
+- vendor: Grafana Labs
+  domain: observability
+  subcategory: Grafana (community)
+  fqcn: community.grafana
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/community/grafana/
+  galaxy_version: 2.3.0
+  galaxy_updated: '2025-07-21'
+  last_commit: '2026-07-06'
+  repository: https://github.com/ansible-collections/community.grafana
+  module_count: 10
+  eda_event_source: false
+  status: active
+  notes: Community collection (ansible-collections). Galaxy last release 2025-07-21.
+- vendor: Prometheus
+  domain: observability
+  subcategory: Prometheus exporters and server roles
+  fqcn: prometheus.prometheus
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/prometheus/prometheus/
+  galaxy_version: 0.30.2
+  galaxy_updated: '2026-10-07'
+  last_commit: '2026-10-20'
+  repository: https://github.com/prometheus-community/ansible
+  module_count: 0
+  eda_event_source: false
+  status: active
+  notes: 'Repo prometheus-community/ansible (community org, not a vendor). Role-based. Version mismatch: Galaxy 0.30.2 vs repo galaxy.yml 0.30.3 (git tag 0.30.2); Galaxy value used.
+    module_count counts plugins/modules files only; collection is role/plugin-based (26 roles).'
+- vendor: Zabbix
+  domain: observability
+  subcategory: Zabbix (vendor)
+  fqcn: zabbix.zabbix
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.4.2
+  catalog_updated: '2025-07-10'
+  catalog_url: https://catalog.redhat.com/en/software/collection/zabbix/zabbix
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/zabbix/zabbix/
+  galaxy_version: 1.5.0
+  galaxy_updated: '2026-07-17'
+  last_commit: '2026-07-14'
+  repository: https://github.com/zabbix/ansible-collection
+  module_count: 5
+  eda_event_source: false
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Zabbix", published last year. Also published on Ansible Galaxy (1.5.0). Repo zabbix/ansible-collection.'
+- vendor: Zabbix
+  domain: observability
+  subcategory: Zabbix (community)
+  fqcn: community.zabbix
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/community/zabbix/
+  galaxy_version: 4.2.0
+  galaxy_updated: '2026-04-15'
+  last_commit: '2026-09-29'
+  repository: https://github.com/ansible-collections/community.zabbix
+  module_count: 48
+  eda_event_source: false
+  status: active
+  notes: Community collection (ansible-collections).
+- vendor: IBM
+  domain: observability
+  subcategory: Instana (EDA)
+  fqcn: ibm.instana
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.32
+  catalog_updated: '2024-04-15'
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/instana
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/ibm/instana/
+  galaxy_version: 1.0.24
+  galaxy_updated: '2024-04-15'
+  last_commit: '2024-04-15'
+  repository: https://github.com/instana/ibm-instana-ansible
+  module_count: 0
+  eda_event_source: true
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "IBM", published 3 years ago. Also published on Ansible Galaxy (1.0.24). Repo instana/ibm-instana-ansible
+    (last commit 2024-04-15). Red Hat KB 3642632 EDA table: IBM-maintained Instana event source. Version mismatch: Galaxy 1.0.24 vs repo galaxy.yml 1.0.32 (git tag None); Galaxy value
+    used. EDA: 2 file(s) under extensions/eda/plugins/event_source in repo.'
+- vendor: IBM
+  domain: observability
+  subcategory: Turbonomic (EDA)
+  fqcn: ibm.turbonomic_eda
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.2
+  catalog_updated: '2024-05-29'
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/turbonomic_eda
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/ibm/turbonomic_eda/
+  galaxy_version: 1.0.2
+  galaxy_updated: '2024-05-28'
+  eda_event_source: true
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "App dev", provider label "IBM", published 2 years ago. Also published on Ansible Galaxy (1.0.2). Red Hat KB 3642632 EDA table:
+    IBM-maintained examples for Turbonomic scaling decisions with EDA. Catalog category label App dev. Repository not located.'
+- vendor: Cisco
+  domain: observability
+  subcategory: AppDynamics agents
+  fqcn: appdynamics.agents
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/appdynamics/agents/
+  galaxy_version: 23.7.0
+  galaxy_updated: '2023-07-23'
+  status: unknown
+  notes: Vendor namespace; last release 2023-07-23. Repository not located. Not in catalog lists.
+- vendor: Cisco
+  domain: observability
+  subcategory: AppDynamics agent installer
+  fqcn: appdynamics.agent_installer
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/appdynamics/agent_installer/
+  galaxy_version: 21.10.2
+  galaxy_updated: '2023-05-08'
+  status: unknown
+  notes: Vendor namespace; last release 2021-era (Galaxy created 2023-05-08). Repository not located.
+- vendor: Cisco
+  domain: observability
+  subcategory: ThousandEyes
+  notes: no Ansible collection found. Galaxy keyword "thousandeyes" returned 0 results; not in catalog lists.
+  search_complete: true
+- vendor: SolarWinds
+  domain: observability
+  subcategory: Monitoring
+  notes: no Ansible collection found. Not found in Red Hat catalog certified lists (pages 1-10 of 11). Galaxy probe not run before Firecrawl credits were exhausted.
+  search_complete: false
+- vendor: ScienceLogic
+  domain: observability
+  subcategory: Monitoring
+  notes: no Ansible collection found. Not found in Red Hat catalog certified lists (pages 1-10 of 11). Galaxy probe not run before Firecrawl credits were exhausted.
+  search_complete: false
+- vendor: BigPanda
+  domain: observability
+  subcategory: Incident management (event correlation)
+  fqcn: bigpanda.incident
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.3.1
+  catalog_updated: '2026-06-15'
+  catalog_url: https://catalog.redhat.com/en/software/collection/bigpanda/incident
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/bigpanda/incident/
+  galaxy_version: 1.3.1
+  galaxy_updated: '2026-06-15'
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Cloud", provider label "BigPanda", published 4 months ago. Also published on Ansible Galaxy (1.3.1). Catalog category label Cloud.
+    Repository not located.'
+- vendor: Moogsoft
+  domain: observability
+  subcategory: AIOps
+  notes: no Ansible collection found. Not found in Red Hat catalog certified lists (pages 1-10 of 11). Galaxy probe not run before Firecrawl credits were exhausted.
+  search_complete: false
+- vendor: PagerDuty
+  domain: observability
+  subcategory: Incident response, third party
+  fqcn: stevefulme1.pagerduty
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/stevefulme1/pagerduty/
+  galaxy_version: 0.3.0
+  galaxy_updated: '2026-07-27'
+  status: active
+  notes: No PagerDuty-published collection found. Individual namespace.
+- vendor: PagerDuty
+  domain: observability
+  subcategory: Incident response (community.general modules)
+  fqcn: community.general
+  support_level: Galaxy (community)
+  maintainer: community
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/community/general/
+  galaxy_version: 13.5.0
+  galaxy_updated: '2026-10-05'
+  last_commit: '2026-10-20'
+  repository: https://github.com/ansible-collections/community.general
+  eda_event_source: false
+  status: active
+  notes: 'community.general contains pagerduty, pagerduty_alert, pagerduty_change and pagerduty_user modules (verified in repo clone). module_count intentionally empty: the 545 modules
+    are not PagerDuty-specific. Version mismatch: Galaxy 13.5.0 vs repo galaxy.yml 14.0.0 (git tag 13.5.0); Galaxy value used.'
+- vendor: Sumo Logic
+  domain: observability
+  subcategory: Logs
+  notes: no Ansible collection found. Not found in Red Hat catalog certified lists (pages 1-10 of 11). Galaxy probe not run before Firecrawl credits were exhausted.
+  search_complete: false
+- vendor: LogicMonitor
+  domain: observability
+  subcategory: Edwin AI
+  fqcn: logicmonitor.edwin_ai
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.1
+  catalog_updated: '2026-04-02'
+  catalog_url: https://catalog.redhat.com/en/software/collection/logicmonitor/edwin_ai
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/logicmonitor/edwin_ai/
+  galaxy_version: 1.2.0
+  galaxy_updated: '2026-07-21'
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "LogicMonitor", published 3 months ago. Also published on Ansible Galaxy (1.2.0). Catalog Observability
+    category. Repository not located.'
+- vendor: LogicMonitor
+  domain: observability
+  subcategory: Alert integration (EDA)
+  fqcn: logicmonitor.integration
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.0.3
+  catalog_updated: '2023-10-27'
+  catalog_url: https://catalog.redhat.com/en/software/collection/logicmonitor/integration
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/logicmonitor/integration/
+  galaxy_version: 2.0.3
+  galaxy_updated: '2023-10-27'
+  eda_event_source: true
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "LogicMonitor", published 3 years ago. Also published on Ansible Galaxy (2.0.3). Red Hat KB 3642632
+    EDA table: maintained and supported by LogicMonitor. Last Galaxy release 2023-10-27. Repository not located.'
+- vendor: Checkmk
+  domain: observability
+  subcategory: Checkmk
+  fqcn: checkmk.general
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/checkmk/general/
+  galaxy_version: 8.6.0
+  galaxy_updated: '2026-10-20'
+  last_commit: '2026-10-20'
+  repository: https://github.com/Checkmk/ansible-collection-checkmk.general
+  module_count: 20
+  eda_event_source: false
+  status: active
+  notes: Repo Checkmk/ansible-collection-checkmk.general. Not in catalog certified lists.
+- vendor: Icinga
+  domain: observability
+  subcategory: Icinga (netways.icinga)
+  fqcn: netways.icinga
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/netways/icinga/
+  galaxy_version: 0.4.11
+  galaxy_updated: '2026-10-14'
+  last_commit: '2026-10-19'
+  repository: https://github.com/Icinga/ansible-collection-icinga
+  module_count: 40
+  eda_event_source: false
+  status: active
+  notes: 'Repo Icinga/ansible-collection-icinga (Icinga org); NETWAYS namespace. Successor to icinga.icinga. Version mismatch: Galaxy 0.4.11 vs repo galaxy.yml 0.4.10 (git tag 0.4.11);
+    Galaxy value used.'
+- vendor: Icinga
+  domain: observability
+  subcategory: Icinga (legacy icinga.icinga)
+  fqcn: icinga.icinga
+  support_level: Galaxy (community)
+  maintainer: vendor
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/icinga/icinga/
+  galaxy_version: 0.4.0
+  galaxy_updated: '2025-05-15'
+  status: deprecated
+  notes: Galaxy deprecated flag is true (last release 2025-05-15).
+- vendor: Nagios
+  domain: observability
+  subcategory: Monitoring
+  notes: no Ansible collection found. Not found in Red Hat catalog certified lists (pages 1-10 of 11). Galaxy probe not run before Firecrawl credits were exhausted.
+  search_complete: false
+- vendor: OpenTelemetry
+  domain: observability
+  subcategory: Collector deployment
+  notes: no Ansible collection found. Not found in Red Hat catalog certified lists. Galaxy probe not run before Firecrawl credits were exhausted. See Splunk OTel Collector collections
+    above for a vendor distribution.
+  search_complete: false
+- vendor: Microsoft
+  domain: observability
+  subcategory: System Center Operations Manager (SCOM)
+  fqcn: microsoft.scom
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 2.0.0
+  catalog_updated: '2026-10-07'
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/scom
+  galaxy_url: https://galaxy.ansible.com/ui/repo/published/microsoft/scom/
+  galaxy_version: 2.0.0
+  galaxy_updated: '2026-10-08'
+  last_commit: '2026-10-08'
+  repository: https://github.com/ansible-collections/microsoft.scom
+  module_count: 0
+  eda_event_source: true
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Red Hat", published 13 days ago. Also published on Ansible Galaxy (2.0.0). Repo ansible-collections/microsoft.scom.
+    Red Hat KB 3642632 EDA table lists it as maintained and supported by Microsoft (event source for SCOM alerts); catalog provider label Red Hat. KB value used. EDA: 2 file(s) under
+    extensions/eda/plugins/event_source in repo.'
+- vendor: Avantra
+  domain: observability
+  subcategory: SAP / enterprise monitoring
+  fqcn: avantra.core
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 25.3.3
+  catalog_updated: '2026-03-11'
+  catalog_url: https://catalog.redhat.com/en/software/collection/avantra/core
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Avantra", published 7 months ago. Catalog only (published 7 months ago). Galaxy and repo not
+    checked.'
+- vendor: Sensu
+  domain: observability
+  subcategory: Sensu Go
+  fqcn: sensu.sensu_go
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.14.0
+  catalog_updated: '2023-09-01'
+  catalog_url: https://catalog.redhat.com/en/software/collection/sensu/sensu_go
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "Sensu", published 3 years ago. Catalog Observability filter only (published 3 years ago). Galaxy
+    and repo not checked.'
+- vendor: NeuBird AI
+  domain: observability
+  subcategory: AI SRE (AAP integration)
+  fqcn: neubird.aap
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.1.0
+  catalog_updated: '2026-06-08'
+  catalog_url: https://catalog.redhat.com/en/software/collection/neubird/aap
+  status: active
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "NeuBird AI", published 4 months ago. Catalog only (published 4 months ago). Galaxy and repo not
+    checked.'
+- vendor: WTI
+  domain: observability
+  subcategory: Remote power/console management
+  fqcn: wti.remote
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.10
+  catalog_updated: '2024-09-12'
+  catalog_url: https://catalog.redhat.com/en/software/collection/wti/remote
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Observability", provider label "WTI", published 2 years ago. Catalog labels it Observability; product is remote power/console
+    management. Catalog only (published 2 years ago).'
+- vendor: Kentik
+  domain: observability
+  subcategory: Network observability (EDA)
+  fqcn: kentik.ansible_eda
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.7
+  catalog_updated: '2024-03-25'
+  catalog_url: https://catalog.redhat.com/en/software/collection/kentik/ansible_eda
+  last_commit: '2024-04-10'
+  repository: https://github.com/kentik/ansible-eda
+  module_count: 0
+  eda_event_source: true
+  status: unknown
+  notes: 'Catalog: Certified by Red Hat, category label "Networking", provider label "Kentik", published 3 years ago. Repo kentik/ansible-eda (last commit 2024-04-10). Red Hat KB 3642632
+    EDA table: maintained and supported by Kentik. Catalog category label Networking. Galaxy presence not checked. latest_version taken from repo galaxy.yml (collection not on Galaxy;
+    published version unverified). EDA: 1 file(s) under extensions/eda/plugins/event_source in repo.'
+- vendor: Thales
+  domain: security
+  subcategory: encryption
+  fqcn: thalesgroup.ciphertrust
+  support_level: Red Hat Certified
+  maintainer: vendor
+  certified_version: 1.0.1
+  catalog_updated: '2024-10-22'
+  catalog_url: https://catalog.redhat.com/en/software/collection/thalesgroup/ciphertrust
+  repository: https://github.com/ThalesGroup/CDSP-Orchestration-Ansible
+  status: unknown
+  notes: Added from the catalog during review; Galaxy not checked.

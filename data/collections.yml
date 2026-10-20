@@ -1,0 +1,2643 @@
+# Red Hat Certified and Validated collections, from the Red Hat Ecosystem Catalog.
+# Regenerated from a catalog snapshot; manual fixes live in collection_overrides.yml.
+- fqcn: akeyless.secrets_management
+  catalog_url: https://catalog.redhat.com/en/software/collection/akeyless/secrets_management
+  description: Akeyless plugins collection
+  provider: akeyless
+  content_type: Certified
+  latest_version: 1.2.2
+  last_updated: '2026-07-31'
+  categories:
+  - Security
+  repository: https://github.com/akeylesslabs/ansible_collections
+- fqcn: amazon.ai
+  catalog_url: https://catalog.redhat.com/en/software/collection/amazon/ai
+  description: Ansible Collection for Amazon AI and ML Resources
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.0.1
+  last_updated: '2026-05-08'
+  repository: https://github.com/ansible-collections/amazon.ai
+- fqcn: amazon.aws
+  catalog_url: https://catalog.redhat.com/en/software/collection/amazon/aws
+  description: A variety of Ansible content to help automate the management of AWS services.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 12.0.0
+  last_updated: '2026-10-13'
+  categories:
+  - Cloud
+  repository: https://github.com/ansible-collections/amazon.aws
+  documentation: https://ansible-collections.github.io/amazon.aws/branch/main/collections/amazon/aws/index.html
+- fqcn: ansible.aap_snapshot
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/aap_snapshot
+  description: A collection for migrating AAP clusters between installation platforms
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.1.2
+  last_updated: '2026-10-14'
+  categories:
+  - Developer tools
+  repository: https://github.com/ansible-collections/aap-snapshot-collection
+  documentation: https://github.com/ansible-collections/aap-snapshot-collection
+- fqcn: ansible.controller
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/controller
+  description: Ansible content that interacts with the AWX or Automation Platform Controller API.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 4.8.11
+  last_updated: '2026-09-30'
+  repository: https://github.com/ansible/awx
+  documentation: https://github.com/ansible/awx/blob/devel/awx_collection/README.md
+- fqcn: ansible.eda
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/eda
+  description: Event-Driven Ansible
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.13.0
+  last_updated: '2026-07-07'
+  repository: https://github.com/ansible/event-driven-ansible
+  documentation: https://galaxy.ansible.com/ui/repo/published/ansible/eda/docs/
+- fqcn: ansible.hub
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/hub
+  description: Ansible content that interacts with the Ansible Automation Hub
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.1.2
+  last_updated: '2026-10-01'
+  repository: https://github.com/ansible-collections/ansible_hub
+- fqcn: ansible.mariadb
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/mariadb
+  description: MariaDB collection for Ansible
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 6.0.2
+  last_updated: '2026-07-13'
+  categories:
+  - Data management
+  repository: https://github.com/ansible-collections/ansible.mariadb
+  documentation: https://github.com/ansible-collections/ansible.mariadb
+- fqcn: ansible.mcp
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/mcp
+  description: An Ansible collection for interacting with MCP servers. **Technology Preview**
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2026-05-07'
+  categories:
+  - App dev
+  repository: https://github.com/ansible-collections/ansible.mcp
+  documentation: https://github.com/ansible-collections/ansible.mcp
+- fqcn: ansible.mcp_builder
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/mcp_builder
+  description: Ansible collection for installing MCP (Model Context Protocol) servers into execution environments. **Technology Preview**
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.0.3
+  last_updated: '2026-01-16'
+  categories:
+  - Developer tools
+  repository: https://github.com/redhat-cop/ansible.mcp_builder
+- fqcn: ansible.mysql
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/mysql
+  description: MySQL and MariaDB collection for Ansible
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 5.0.0
+  last_updated: '2026-05-11'
+  categories:
+  - Data management
+  repository: https://github.com/ansible-collections/ansible.mysql
+  documentation: https://github.com/ansible-collections/ansible.mysql
+- fqcn: ansible.netcommon
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/netcommon
+  description: Ansible Collection with common content to help automate the management of network, security, and cloud devices.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 8.7.1
+  last_updated: '2026-09-22'
+  repository: https://github.com/ansible-collections/ansible.netcommon
+- fqcn: ansible.network
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/network
+  description: Ansible Network meta Collection to install all network supported content.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 5.0.0
+  last_updated: '2025-08-20'
+  repository: https://github.com/ansible-collections/ansible.network
+- fqcn: ansible.oci
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/oci
+  description: Oracle Cloud Infrastructure collection for Ansible
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2026-10-06'
+  repository: https://github.com/ansible-collections/ansible.oci
+  documentation: https://github.com/ansible-collections/ansible.oci
+- fqcn: ansible.platform
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/platform
+  description: A collection of roles to manage Ansible automation platform gateway
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.7.20260930
+  last_updated: '2026-09-30'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ansible/ansible.platform
+- fqcn: ansible.posix
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/posix
+  description: Ansible Collection targeting POSIX and POSIX-ish platforms.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.2.2
+  last_updated: '2026-07-13'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-collections/ansible.posix
+  documentation: https://docs.ansible.com/ansible/latest/collections/ansible/posix/
+- fqcn: ansible.receptor
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/receptor
+  description: Receptor installer
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.0.9
+  last_updated: '2026-05-15'
+  repository: https://github.com/ansible/receptor-collection
+- fqcn: ansible.scm
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/scm
+  description: A collection of scm utilities
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 3.2.1
+  last_updated: '2026-03-31'
+  repository: https://github.com/ansible-collections/ansible.scm
+- fqcn: ansible.security
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/security
+  description: Ansible Security meta Collection to install all security supported content.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 5.0.0
+  last_updated: '2025-09-05'
+  repository: https://github.com/ansible-collections/ansible.security
+- fqcn: ansible.snmp
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/snmp
+  description: The Ansible ansible.snmp collection includes a variety of plugins for using SNMP on the control node to make SNMP connections to a device.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 3.1.0
+  last_updated: '2026-03-31'
+  repository: https://github.com/ansible-collections/ansible.snmp
+- fqcn: ansible.tower
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/tower
+  description: Ansible content that interacts with the AWX or Ansible Tower API.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 3.8.6
+  last_updated: '2022-05-04'
+  repository: https://github.com/ansible/awx
+  documentation: https://github.com/ansible/awx/blob/devel/awx_collection/README.md
+  extract: false
+  note: Legacy collection for Ansible Tower 3.8 (last updated 2022). Use ansible.controller for Automation Platform 2.x.
+- fqcn: ansible.utils
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/utils
+  description: Ansible Collection with utilities to ease the management, manipulation, and validation of data within a playbook
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 6.1.1
+  last_updated: '2026-09-17'
+  repository: https://github.com/ansible-collections/ansible.utils
+- fqcn: ansible.windows
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/windows
+  description: Ansible collection for core Windows plugins.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 3.8.0
+  last_updated: '2026-08-26'
+  repository: https://github.com/ansible-collections/ansible.windows
+  documentation: https://docs.ansible.com/ansible/devel/collections/ansible/windows
+- fqcn: ansible.yang
+  catalog_url: https://catalog.redhat.com/en/software/collection/ansible/yang
+  description: Ansible yang collection for yang based operation
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 3.1.0
+  last_updated: '2026-03-31'
+  repository: https://github.com/ansible-collections/ansible.yang
+- fqcn: arista.avd
+  catalog_url: https://catalog.redhat.com/en/software/collection/arista/avd
+  description: Ansible Roles & Modules to support Arista AVD
+  provider: Arista
+  content_type: Certified
+  latest_version: 6.4.0
+  last_updated: '2026-09-18'
+  categories:
+  - Networking
+  repository: https://github.com/aristanetworks/avd
+  documentation: https://avd.arista.com/
+- fqcn: arista.cvp
+  catalog_url: https://catalog.redhat.com/en/software/collection/arista/cvp
+  description: Ansible Modules for CloudVision Platform (CVP)
+  provider: Arista
+  content_type: Certified
+  latest_version: 3.12.0
+  last_updated: '2024-11-19'
+  categories:
+  - Networking
+  repository: https://github.com/aristanetworks/ansible-cvp
+  documentation: https://cvp.avd.sh/
+- fqcn: arista.dmf
+  catalog_url: https://catalog.redhat.com/en/software/collection/arista/dmf
+  description: Ansible Modules to Manage DANZ Monitoring Fabric
+  provider: Arista
+  content_type: Certified
+  latest_version: 1.3.0
+  last_updated: '2024-05-22'
+  categories:
+  - Networking
+  repository: https://github.com/aristanetworks/ansible-dmf
+  documentation: https://github.com/aristanetworks/ansible-dmf/README.md
+- fqcn: arista.eos
+  catalog_url: https://catalog.redhat.com/en/software/collection/arista/eos
+  description: Ansible Network Collection for Arista EOS devices.
+  provider: Arista
+  content_type: Certified
+  latest_version: 12.3.0
+  last_updated: '2026-09-17'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-collections/arista.eos
+- fqcn: arubanetworks.aoscx
+  catalog_url: https://catalog.redhat.com/en/software/collection/arubanetworks/aoscx
+  provider: Aruba
+  content_type: Certified
+  latest_version: 4.4.0
+  last_updated: '2024-04-30'
+  categories:
+  - Networking
+  repository: https://github.com/aruba/aoscx-ansible-collection
+- fqcn: automatics_ai.automatics
+  catalog_url: https://catalog.redhat.com/en/software/collection/automatics_ai/automatics
+  description: Ansible Collection to interact with the automatics software
+  provider: automatics.AI
+  content_type: Certified
+  latest_version: 2.2.0
+  last_updated: '2026-10-02'
+  repository: https://gitlab.automatics.ai/automatics-public/ansible/automatics-ansible-collection
+  documentation: https://ansible.automatics.ai/
+- fqcn: avantra.core
+  catalog_url: https://catalog.redhat.com/en/software/collection/avantra/core
+  description: Core functions to work with Avantra.
+  provider: Avantra
+  content_type: Certified
+  latest_version: 25.3.3
+  last_updated: '2026-03-11'
+  repository: https://github.com/Avantra-Hub/avantra-ansible-core
+  documentation: https://avantra-hub.github.io/avantra-ansible-core
+- fqcn: azure.azcollection
+  catalog_url: https://catalog.redhat.com/en/software/collection/azure/azcollection
+  description: The Azure collection.
+  provider: Microsoft
+  content_type: Certified
+  latest_version: 4.1.0
+  last_updated: '2026-10-02'
+  repository: https://github.com/ansible-collections/azure
+- fqcn: bigpanda.incident
+  catalog_url: https://catalog.redhat.com/en/software/collection/bigpanda/incident
+  description: Collection of Action Modules to automate events in the BigPanda Platform
+  provider: BigPanda
+  content_type: Certified
+  latest_version: 1.3.1
+  last_updated: '2026-06-15'
+  repository: https://github.com/bigpandaio/bigpanda-ansible
+  documentation: https://docs.bigpanda.io/
+- fqcn: check_point.gaia
+  catalog_url: https://catalog.redhat.com/en/software/collection/check_point/gaia
+  description: Check Point collection for managing a Check Point machine configurations.
+  provider: Check Point
+  content_type: Certified
+  latest_version: 7.0.0
+  last_updated: '2025-02-06'
+  categories:
+  - Security
+  repository: https://github.com/CheckPointSW/CheckPointAnsibleGAIACollection
+  documentation: https://galaxy.ansible.com/ui/repo/published/check_point/gaia/docs/
+- fqcn: check_point.mgmt
+  catalog_url: https://catalog.redhat.com/en/software/collection/check_point/mgmt
+  description: Check Point collection for the Management Server
+  provider: Check Point
+  content_type: Certified
+  latest_version: 7.0.1
+  last_updated: '2026-09-02'
+  categories:
+  - Security
+  repository: https://github.com/CheckPointSW/CheckPointAnsibleMgmtCollection
+  documentation: https://docs.ansible.com/ansible/latest/collections/check_point/mgmt/index.html
+- fqcn: chocolatey.chocolatey
+  catalog_url: https://catalog.redhat.com/en/software/collection/chocolatey/chocolatey
+  description: Manage packages using Chocolatey.
+  provider: Chocolatey
+  content_type: Certified
+  latest_version: 1.6.0
+  last_updated: '2026-03-25'
+  repository: https://github.com/chocolatey/chocolatey-ansible
+  documentation: https://github.com/chocolatey/chocolatey-ansible
+- fqcn: cisco.aci
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/aci
+  description: Ansible Modules for Cisco ACI
+  provider: Cisco
+  content_type: Certified
+  latest_version: 2.13.0
+  last_updated: '2025-12-09'
+  repository: https://github.com/CiscoDevNet/ansible-aci
+  documentation: https://docs.ansible.com/ansible/latest/scenario_guides/guide_aci.html
+- fqcn: cisco.asa
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/asa
+  description: Ansible Security Collection for Cisco ASA devices.
+  provider: Cisco
+  content_type: Certified
+  latest_version: 6.1.0
+  last_updated: '2025-01-17'
+  repository: https://github.com/ansible-collections/cisco.asa
+- fqcn: cisco.catalyst_center_iac
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/catalyst_center_iac
+  description: Cisco-validated Ansible playbooks for Infrastructure as Code (IaC) automation of Cisco Catalyst Center configurations. Covers Day 0, Day 1, Day 2, and Day N operations including site hierarchy,
+    device provisioning, SD-Access fabric, SWIM, assurance, and more.
+  provider: Cisco
+  content_type: Certified
+  latest_version: 1.0.0
+  last_updated: '2026-07-22'
+  categories:
+  - Networking
+  repository: https://github.com/cisco-en-programmability/catalyst-center-ansible-iac
+- fqcn: cisco.catalystcenter
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/catalystcenter
+  description: Ansible Modules, Roles, and Cisco Validated Playbooks (CVP) for Cisco CATALYST Center automation
+  provider: Cisco
+  content_type: Certified
+  latest_version: 2.10.2
+  last_updated: '2026-08-11'
+  repository: https://github.com/cisco-en-programmability/catalystcenter-ansible
+  documentation: https://cisco-en-programmability.github.io/catalystcenter-ansible/
+- fqcn: cisco.cvd_compute
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/cvd_compute
+  description: Day 2 use cases for use with the Cisco UCS system
+  provider: Cisco
+  content_type: Validated
+  latest_version: 1.1.0
+  last_updated: '2025-07-03'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ucs-compute-solutions/cisco.cvd_compute
+  documentation: https://github.com/ucs-compute-solutions/cisco.cvd_compute
+- fqcn: cisco.dcnm
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/dcnm
+  description: Ansible collection for the Cisco Nexus® Dashboard Fabric Controller (NDFC) - formerly DCNM
+  provider: Cisco
+  content_type: Certified
+  latest_version: 3.11.0
+  last_updated: '2026-04-13'
+  categories:
+  - Networking
+  repository: https://github.com/CiscoDevNet/ansible-dcnm
+- fqcn: cisco.dnac
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/dnac
+  description: Ansible Modules for Cisco DNA Center
+  provider: Cisco
+  content_type: Certified
+  latest_version: 6.48.0
+  last_updated: '2026-02-19'
+  repository: https://github.com/cisco-en-programmability/dnacenter-ansible
+  documentation: https://cisco-en-programmability.github.io/dnacenter-ansible/
+- fqcn: cisco.intersight
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/intersight
+  description: modules for Cisco Intersight
+  provider: Cisco
+  content_type: Certified
+  latest_version: 2.23.0
+  last_updated: '2026-10-12'
+  categories:
+  - Infrastructure
+  repository: https://github.com/CiscoDevNet/intersight-ansible
+  documentation: https://intersight.com/apidocs
+- fqcn: cisco.ios
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/ios
+  description: Ansible Network Collection for Cisco IOS devices.
+  provider: Cisco
+  content_type: Certified
+  latest_version: 11.6.0
+  last_updated: '2026-09-17'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-collections/cisco.ios
+- fqcn: cisco.iosxr
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/iosxr
+  description: Ansible Network Collection for Cisco IOSXR devices.
+  provider: Cisco
+  content_type: Certified
+  latest_version: 13.0.0
+  last_updated: '2026-10-06'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-collections/cisco.iosxr
+- fqcn: cisco.ise
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/ise
+  description: Ansible Modules for Cisco ISE
+  provider: Cisco
+  content_type: Certified
+  latest_version: 3.3.0
+  last_updated: '2026-10-16'
+  repository: https://github.com/CiscoISE/ansible-ise
+  documentation: https://ciscoise.github.io/ansible-ise/
+- fqcn: cisco.meraki
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/meraki
+  description: Ansible Modules for Meraki
+  provider: Cisco
+  content_type: Certified
+  latest_version: 2.23.2
+  last_updated: '2026-04-07'
+  repository: https://github.com/meraki/dashboard-api-ansible
+  documentation: https://meraki.github.io/dashboard-api-ansible/
+- fqcn: cisco.mso
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/mso
+  description: An Ansible collection for managing Cisco ACI Multi-Site
+  provider: Cisco
+  content_type: Certified
+  latest_version: 2.13.0
+  last_updated: '2026-03-16'
+  repository: https://github.com/CiscoDevNet/ansible-mso
+  documentation: https://docs.ansible.com/ansible/latest/scenario_guides/guide_aci.html
+- fqcn: cisco.nd
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/nd
+  description: An Ansible collection for managing Cisco Nexus Dashboard
+  provider: Cisco
+  content_type: Certified
+  latest_version: 1.5.0
+  last_updated: '2026-03-15'
+  repository: https://github.com/CiscoDevNet/ansible-nd
+- fqcn: cisco.nxos
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/nxos
+  description: Ansible Network Collection for Cisco NXOS devices.
+  provider: Cisco
+  content_type: Certified
+  latest_version: 13.0.0
+  last_updated: '2026-09-17'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-collections/cisco.nxos
+- fqcn: cisco.splunk_otel_collector
+  catalog_url: https://catalog.redhat.com/en/software/collection/cisco/splunk_otel_collector
+  description: Ansible collection for Splunk OpenTelemetry Collector
+  provider: Cisco
+  content_type: Validated
+  latest_version: 1.0.0
+  last_updated: '2026-03-03'
+  categories:
+  - Observability
+  repository: https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/ansible_collections/signalfx/splunk_otel_collector
+- fqcn: citrix.adc
+  catalog_url: https://catalog.redhat.com/en/software/collection/citrix/adc
+  description: Citrix ADC modules for Ansible
+  provider: Citrix
+  content_type: Certified
+  latest_version: 1.3.0
+  last_updated: '2024-03-05'
+  categories:
+  - Networking
+  repository: https://github.com/citrix/citrix-adc-ansible-modules
+  documentation: https://github.com/citrix/citrix-adc-ansible-modules/tree/master/docs
+  extract: false
+  note: Superseded by netscaler.adc; the repository now hosts the new collection.
+- fqcn: cloud.aws_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/cloud/aws_ops
+  description: Amazon AWS roles and playbooks for Ansible.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 4.0.0
+  last_updated: '2025-09-04'
+  repository: https://github.com/ansible-collections/cloud.aws_ops
+- fqcn: cloud.aws_troubleshooting
+  catalog_url: https://catalog.redhat.com/en/software/collection/cloud/aws_troubleshooting
+  description: Amazon AWS roles and playbooks for Ansible.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 4.0.0
+  last_updated: '2025-09-02'
+  repository: https://github.com/redhat-cop/cloud.aws_troubleshooting
+- fqcn: cloud.azure_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/cloud/azure_ops
+  description: A collection of content (roles, playbooks, etc) for Ansible Automation Platform on Azure.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 6.2.0
+  last_updated: '2026-09-30'
+  repository: https://github.com/redhat-cop/cloud.azure_ops
+- fqcn: cloud.common
+  catalog_url: https://catalog.redhat.com/en/software/collection/cloud/common
+  description: Set of common files for the cloud collections
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 5.0.0
+  last_updated: '2025-06-25'
+  categories:
+  - Cloud
+  repository: https://github.com/ansible-collections/cloud.common
+- fqcn: cloud.gcp_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/cloud/gcp_ops
+  description: GCP roles and playbooks for Ansible.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.0.0
+  last_updated: '2024-08-01'
+  repository: https://github.com/redhat-cop/cloud.gcp_ops
+- fqcn: cloud.terraform
+  catalog_url: https://catalog.redhat.com/en/software/collection/cloud/terraform
+  description: Terraform collection for Ansible.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 4.0.0
+  last_updated: '2025-07-11'
+  repository: https://github.com/ansible-collections/cloud.terraform
+- fqcn: cloud.terraform_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/cloud/terraform_ops
+  description: A set of Roles and Playbooks used to create/configure Cloud providers' resources as part of AAP Terraform integration.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.0.0
+  last_updated: '2024-05-28'
+  repository: https://github.com/ansible-collections/cloud.terraform_ops
+- fqcn: cloud.vmware_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/cloud/vmware_ops
+  description: Collection to manage VMware
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.9.0
+  last_updated: '2025-02-20'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/cloud.vmware_ops
+- fqcn: cohesity.dataprotect
+  catalog_url: https://catalog.redhat.com/en/software/collection/cohesity/dataprotect
+  description: Cohesity Ansible Collections
+  provider: Cohesity
+  content_type: Certified
+  latest_version: 1.4.5
+  last_updated: '2026-07-23'
+  repository: https://github.com/cohesity/ansible-collection
+- fqcn: confluent.platform
+  catalog_url: https://catalog.redhat.com/en/software/collection/confluent/platform
+  description: Confluent Platform Ansible Collection (https://github.com/confluentinc/cp-ansible)
+  provider: Confluent
+  content_type: Certified
+  latest_version: 8.3.2
+  last_updated: '2026-09-21'
+  categories:
+  - App dev
+  repository: https://github.com/confluentinc/cp-ansible
+  documentation: https://docs.confluent.io/ansible/current/overview.html
+- fqcn: crowdstrike.falcon
+  catalog_url: https://catalog.redhat.com/en/software/collection/crowdstrike/falcon
+  description: The Falcon Ansible Collection serves as a comprehensive toolkit for streamlining your interactions with the CrowdStrike Falcon platform.
+  provider: CrowdStrike
+  content_type: Certified
+  latest_version: 4.14.1
+  last_updated: '2026-10-08'
+  categories:
+  - Security
+  repository: https://github.com/CrowdStrike/ansible_collection_crowdstrike
+  documentation: https://github.com/CrowdStrike/ansible_collection_crowdstrike
+- fqcn: cyberark.conjur
+  catalog_url: https://catalog.redhat.com/en/software/collection/cyberark/conjur
+  description: This is a Collection of the CyberArk Secrets Manager toolkit.
+  provider: CyberArk
+  content_type: Certified
+  latest_version: 1.3.14
+  last_updated: '2026-08-05'
+  categories:
+  - Security
+  repository: https://github.com/cyberark/ansible-conjur-collection
+- fqcn: cyberark.isp
+  catalog_url: https://catalog.redhat.com/en/software/collection/cyberark/isp
+  description: This is a Collection of the CyberArk ISP Ansible Security Automation toolkit.
+  provider: CyberArk
+  content_type: Certified
+  latest_version: 1.0.8
+  last_updated: '2026-04-28'
+  categories:
+  - Security
+  repository: https://github.com/cyberark/ansible-isp-collection
+  documentation: https://github.com/cyberark/ansible-isp-collection/blob/main/README.md
+- fqcn: cyberark.pas
+  catalog_url: https://catalog.redhat.com/en/software/collection/cyberark/pas
+  description: This is a Collection of the CyberArk Ansible Security Automation toolkit.
+  provider: CyberArk
+  content_type: Certified
+  latest_version: 1.0.40
+  last_updated: '2026-04-28'
+  categories:
+  - Security
+  repository: https://github.com/cyberark/ansible-security-automation-collection
+  documentation: https://github.com/cyberark/ansible-security-automation-collection/blob/main/README.md
+- fqcn: datadog.dd
+  catalog_url: https://catalog.redhat.com/en/software/collection/datadog/dd
+  description: Install the datadog agent
+  provider: Datadog
+  content_type: Certified
+  latest_version: 6.5.0
+  last_updated: '2026-02-11'
+  repository: https://github.com/ansible-collections/Datadog
+  documentation: https://github.com/ansible-collections/Datadog/blob/main/README.md
+- fqcn: delinea.pas
+  catalog_url: https://catalog.redhat.com/en/software/collection/delinea/pas
+  description: Delinea Privileged Access Service Collection for Ansible.
+  provider: Delinea
+  content_type: Certified
+  latest_version: 1.0.4
+  last_updated: '2024-09-23'
+  categories:
+  - Security
+  repository: https://github.com/DelineaXPM/ansible-pas-collection
+  documentation: https://docs.delinea.com/online-help/cloud-suite/integrations/ansible/index.htm
+- fqcn: delinea.ss
+  catalog_url: https://catalog.redhat.com/en/software/collection/delinea/ss
+  description: Delinea Secret Server Collection for Ansible.
+  provider: Delinea
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2023-09-14'
+  repository: https://github.com/DelineaXPM/ansible-ss-collection
+  documentation: https://github.com/DelineaXPM/ansible-ss-collection
+  extract: false
+  note: The repository now hosts delinea.platform_secretserver.
+- fqcn: dellemc.enterprise_sonic
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/enterprise_sonic
+  description: Ansible Network Collection for Enterprise SONiC Distribution by Dell Technologies
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 4.1.0
+  last_updated: '2026-01-27'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-collections/dellemc.enterprise_sonic
+- fqcn: dellemc.openmanage
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/openmanage
+  description: Dell OpenManage Ansible Modules allows data center and IT administrators to use RedHat Ansible to automate and orchestrate the configuration, deployment, and update of Dell PowerEdge Servers
+    and modular infrastructure by leveraging the management automation capabilities in-built into the Integrated Dell Remote Access Controller (iDRAC), OpenManage Enterprise, OpenManage Enterprise Modular
+    and OpenManage Enterprise Integration for VMWare vCenter Plug-in.
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 11.0.0
+  last_updated: '2026-10-05'
+  categories:
+  - Infrastructure
+  repository: https://github.com/dell/dellemc-openmanage-ansible-modules/tree/collections
+  documentation: https://github.com/dell/dellemc-openmanage-ansible-modules/tree/collections/docs
+- fqcn: dellemc.os10
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/os10
+  description: Ansible Network Collection for Dell EMC SmartFabric OS10
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 1.2.7
+  last_updated: '2025-01-09'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-collections/dellemc.os10
+  documentation: https://github.com/ansible-collections/dellemc.os10/tree/master/docs
+- fqcn: dellemc.powerflex
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/powerflex
+  description: Ansible modules for PowerFlex
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 3.2.0
+  last_updated: '2026-10-07'
+  categories:
+  - Storage
+  repository: https://github.com/dell/ansible-powerflex
+  documentation: https://github.com/dell/ansible-powerflex/tree/main/docs
+- fqcn: dellemc.powermax
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/powermax
+  description: Ansible modules for PowerMax
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 4.1.0
+  last_updated: '2026-07-28'
+  categories:
+  - Storage
+  repository: https://github.com/dell/ansible-powermax
+  documentation: https://github.com/dell/ansible-powermax/tree/main/docs
+- fqcn: dellemc.powerscale
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/powerscale
+  description: Ansible modules for PowerScale
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 3.11.0
+  last_updated: '2026-10-07'
+  categories:
+  - Storage
+  repository: https://github.com/dell/ansible-powerscale/tree/main
+  documentation: https://github.com/dell/ansible-powerscale/tree/main/docs
+- fqcn: dellemc.powerstore
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/powerstore
+  description: Ansible modules for Powerstore
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 3.8.1
+  last_updated: '2026-03-17'
+  categories:
+  - Storage
+  repository: https://github.com/dell/ansible-powerstore/tree/main
+  documentation: https://github.com/dell/ansible-powerstore/tree/main/docs
+- fqcn: dellemc.unity
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/unity
+  description: Ansible modules for Unity
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 2.1.0
+  last_updated: '2025-08-08'
+  categories:
+  - Storage
+  repository: https://github.com/dell/ansible-unity/tree/2.1.0
+  documentation: https://github.com/dell/ansible-unity/tree/2.1.0/docs
+- fqcn: dellemc.vplex
+  catalog_url: https://catalog.redhat.com/en/software/collection/dellemc/vplex
+  description: Ansible Modules for Dell EMC VPLEX
+  provider: Dell Technologies
+  content_type: Certified
+  latest_version: 1.3.0
+  last_updated: '2025-07-11'
+  categories:
+  - Storage
+  repository: https://github.com/dell/ansible-vplex/tree/1.3.0
+  documentation: https://github.com/dell/ansible-vplex/tree/1.3.0
+- fqcn: dynatrace.event_driven_ansible
+  catalog_url: https://catalog.redhat.com/en/software/collection/dynatrace/event_driven_ansible
+  description: This collection contains two event source plugins from Dynatrace. The dt_esa_api plugin captures all problems from your Dynatrace tenant and in conjunction with Ansible EDA rulebooks helps
+    to enable auto-remediation in your environment. The dt_webhook plugin listens for events sent by the Red Hat Ansible for workflows integration from Dynatrace.
+  provider: Dynatrace
+  content_type: Certified
+  latest_version: 1.2.3
+  last_updated: '2025-08-25'
+  repository: https://github.com/Dynatrace/Dynatrace-EventDrivenAnsible
+  documentation: https://github.com/Dynatrace/Dynatrace-EventDrivenAnsible/blob/main/README.md
+- fqcn: dynatrace.oneagent
+  catalog_url: https://catalog.redhat.com/en/software/collection/dynatrace/oneagent
+  description: Module to install and configure Dynatrace OneAgent deployment
+  provider: Dynatrace
+  content_type: Certified
+  latest_version: 1.3.1
+  last_updated: '2026-08-28'
+  repository: https://github.com/Dynatrace/Dynatrace-OneAgent-Ansible
+  documentation: https://docs.dynatrace.com/docs/setup-and-configuration/dynatrace-oneagent/deployment-orchestration/ansible
+- fqcn: edb.epas_postgresql
+  catalog_url: https://catalog.redhat.com/en/software/collection/edb/epas_postgresql
+  description: A collection of modules for managing EDB Postgres Advanced Server (EPAS)
+  provider: EnterpriseDB
+  content_type: Certified
+  latest_version: 4.2.2
+  last_updated: '2026-07-21'
+  categories:
+  - Data management
+  repository: https://github.com/EnterpriseDB/edb.epas_postgresql
+  documentation: https://github.com/EnterpriseDB/edb.epas_postgresql
+- fqcn: edge.microshift
+  catalog_url: https://catalog.redhat.com/en/software/collection/edge/microshift
+  description: Collection for management and automation of microshift
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.0.3
+  last_updated: '2023-08-03'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/edge.microshift
+  documentation: https://github.com/redhat-cop/edge.microshift/blob/main/README.md
+- fqcn: enfence.powerha_aix
+  catalog_url: https://catalog.redhat.com/en/software/collection/enfence/powerha_aix
+  description: IBM PowerHA SystemMirror 7.2.X cluster management
+  provider: eNFence
+  content_type: Certified
+  latest_version: 1.3.3
+  last_updated: '2024-06-24'
+  repository: http://github.com/power-devops/powerha_aix
+  documentation: https://power-devops.github.io/powerha_aix/
+- fqcn: entrust.crypto
+  catalog_url: https://catalog.redhat.com/en/software/collection/entrust/crypto
+  description: An ansible collection from Entrust Corporation to work with different certificate authorities from Entrust as well as third party supported certificate authority via common interface
+  provider: Entrust
+  content_type: Certified
+  latest_version: 1.0.1
+  last_updated: '2023-12-20'
+  categories:
+  - Security
+  repository: https://github.com/EntrustCorporation/entrust-ansible-collection
+  documentation: https://entrustcorporation.github.io/entrust-ansible-collection/
+- fqcn: everpure.flasharray
+  catalog_url: https://catalog.redhat.com/en/software/collection/everpure/flasharray
+  description: Collection of modules to manage Everpure FlashArrays (including Cloud Block Store)
+  provider: Everpure
+  content_type: Certified
+  latest_version: 1.45.1
+  last_updated: '2026-09-17'
+  categories:
+  - Storage
+  repository: https://github.com/Everpure-Ansible/FlashArray-Collection
+  documentation: https://github.com/Everpure-Ansible/FlashArray-Collection
+- fqcn: everpure.flashblade
+  catalog_url: https://catalog.redhat.com/en/software/collection/everpure/flashblade
+  description: Collection of modules to manage Everpure FlashBlade
+  provider: Everpure
+  content_type: Certified
+  latest_version: 1.28.0
+  last_updated: '2026-09-17'
+  categories:
+  - Storage
+  repository: https://github.com/Everpure-Ansible/FlashBlade-Collection
+  documentation: https://docs.ansible.com/ansible/latest/collections/everpure/flashblade/index.html#plugins-in-everpure-flashblade
+- fqcn: everpure.pure1
+  catalog_url: https://catalog.redhat.com/en/software/collection/everpure/pure1
+  description: Collection of modules to manage Everpure Pure1
+  provider: Everpure
+  content_type: Certified
+  latest_version: 1.5.0
+  last_updated: '2026-06-29'
+  categories:
+  - Storage
+  repository: https://github.com/Everpure-Ansible/Pure1-Collection
+  documentation: https://github.com/Everpure-Ansible/Pure1-Collection
+- fqcn: f5networks.f5_bigip
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5_bigip
+  description: F5 BIG-IP Declarative Collection for Ansible
+  provider: F5 Networks
+  content_type: Certified
+  latest_version: 3.14.0
+  last_updated: '2025-07-03'
+  categories:
+  - Networking
+  repository: https://github.com/F5Networks/f5-ansible-bigip
+  documentation: https://clouddocs.f5.com/products/orchestration/ansible/devel/f5_bigip/modules_2_0/module_index.html
+- fqcn: f5networks.f5_eda_security
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5_eda_security
+  description: Event-Driven Security with F5 BIG-IP and BIG-IP Next using Event Driven Ansible and Ansible Automation Platform Controller
+  provider: F5 Networks
+  content_type: Validated
+  latest_version: 1.0.1
+  last_updated: '2024-12-05'
+  repository: https://github.com/f5devcentral/f5-bd-ansible-eda
+  documentation: https://github.com/f5devcentral/f5-bd-ansible-eda
+- fqcn: f5networks.f5_modules
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5_modules
+  description: F5 BIG-IP Imperative Collection for Ansible
+  provider: F5 Networks
+  content_type: Certified
+  latest_version: 1.44.0
+  last_updated: '2026-09-08'
+  categories:
+  - Networking
+  repository: https://github.com/F5Networks/f5-ansible-f5modules
+  documentation: https://clouddocs.f5.com/products/orchestration/ansible/devel/modules/module_index.html
+- fqcn: f5networks.f5_platform_modernization
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5_platform_modernization
+  description: Modernization from Legacy F5 BIG-IP Platforms to Next-Gen using Ansible Automation Platform
+  provider: F5 Networks
+  content_type: Validated
+  latest_version: 1.0.0
+  last_updated: '2026-01-26'
+  repository: https://github.com/f5devcentral/f5-bd-ansible-platform-modernization
+  documentation: https://github.com/f5devcentral/f5-bd-ansible-platform-modernization/blob/main/README.md
+- fqcn: f5networks.f5os
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/f5os
+  description: F5OS based Collection for Ansible
+  provider: F5 Networks
+  content_type: Certified
+  latest_version: 1.20.0
+  last_updated: '2025-08-14'
+  categories:
+  - Networking
+  repository: https://github.com/F5Networks/f5-ansible-f5os
+  documentation: https://clouddocs.f5.com/products/orchestration/ansible/devel/f5os/modules_3_0/module_index.html
+- fqcn: f5networks.next
+  catalog_url: https://catalog.redhat.com/en/software/collection/f5networks/next
+  description: BIG-IP Next collection to manage Next instances with BIG-IP Next Central Manager
+  provider: F5 Networks
+  content_type: Certified
+  latest_version: 1.5.0
+  last_updated: '2024-12-05'
+  categories:
+  - Networking
+  repository: https://github.com/F5Networks/f5-ansible-next
+  documentation: https://clouddocs.f5.com/products/orchestration/ansible/devel/next/modules_4_0/module_index.html
+- fqcn: fortinet.fmgdevice
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fmgdevice
+  description: The FortiManager Device Ansible Collection.
+  provider: Fortinet
+  content_type: Certified
+  latest_version: 1.2.0
+  last_updated: '2026-08-18'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fmgdevice-collection
+  documentation: https://ansible-galaxy-fmgdevice-docs.readthedocs.io/en/latest
+- fqcn: fortinet.fortianalyzer
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortianalyzer
+  description: The FortiAnalyzer Ansible Collection.
+  provider: Fortinet
+  content_type: Certified
+  latest_version: 1.10.0
+  last_updated: '2025-10-22'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortianalyzer-collection
+  documentation: https://ansible-galaxy-fortianalyzer-docs.readthedocs.io/en/latest
+- fqcn: fortinet.fortiflexvm
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortiflexvm
+  description: A collection of Ansible Modules for FortiFlexVM
+  provider: Fortinet
+  content_type: Certified
+  latest_version: 2.3.3
+  last_updated: '2026-08-27'
+  categories:
+  - Networking
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortiflexvm-collection
+  documentation: https://ansible-galaxy-fortiflexvm-docs.readthedocs.io/en/latest
+- fqcn: fortinet.fortimanager
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortimanager
+  description: The FortiManager Ansible Collection.
+  provider: Fortinet
+  content_type: Certified
+  latest_version: 2.15.0
+  last_updated: '2026-08-11'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortimanager-collection
+  documentation: https://ansible-galaxy-fortimanager-docs.readthedocs.io/en/latest
+- fqcn: fortinet.fortios
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortios
+  description: A collection of Ansible Modules for FortiOS v6
+  provider: Fortinet
+  content_type: Certified
+  latest_version: 2.6.0
+  last_updated: '2026-08-15'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortios-collection
+  documentation: https://ansible-galaxy-fortios-docs.readthedocs.io/en/latest
+- fqcn: fortinet.fortisase
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortisase
+  description: The FortiSASE Ansible Collection.
+  provider: Fortinet
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2025-10-10'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortisase-collection
+  documentation: https://ansible-galaxy-fortisase-docs.readthedocs.io/en/latest
+- fqcn: fortinet.fortiswitch
+  catalog_url: https://catalog.redhat.com/en/software/collection/fortinet/fortiswitch
+  description: A collection of Ansible Modules for FortiSwitch v7
+  provider: Fortinet
+  content_type: Certified
+  latest_version: 1.4.0
+  last_updated: '2026-10-09'
+  repository: https://github.com/fortinet-ansible-dev/ansible-galaxy-fortiswitch-collection
+  documentation: https://ansible-galaxy-fortiswitch-docs.readthedocs.io/en/latest
+- fqcn: frr.frr
+  catalog_url: https://catalog.redhat.com/en/software/collection/frr/frr
+  description: Ansible Collection for Free Range Routing (FRR).
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.0.2
+  last_updated: '2023-04-14'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-collections/frr.frr
+- fqcn: gluware_inc.control
+  catalog_url: https://catalog.redhat.com/en/software/collection/gluware_inc/control
+  description: Ansible collection of modules and inventory plugin to interact with Gluware Control.
+  provider: Gluware
+  content_type: Certified
+  latest_version: 2.0.3
+  last_updated: '2026-01-15'
+  repository: https://github.com/gluware/gluware_ansible_collection
+  documentation: https://github.com/gluware/gluware_ansible_collection/blob/main/README.md
+- fqcn: google.cloud
+  catalog_url: https://catalog.redhat.com/en/software/collection/google/cloud
+  description: The Google Cloud Platform collection.
+  provider: Google Cloud
+  content_type: Certified
+  latest_version: 1.15.0
+  last_updated: '2026-10-01'
+  repository: https://github.com/ansible-collections/google.cloud
+- fqcn: h3c_open.comware
+  catalog_url: https://catalog.redhat.com/en/software/collection/h3c_open/comware
+  description: Ansible Network Collection for H3C comware devices.
+  provider: H3C
+  content_type: Certified
+  latest_version: 1.0.2
+  last_updated: '2024-01-11'
+  categories:
+  - Networking
+  repository: https://github.com/H3C/h3c_open.comware
+  documentation: https://github.com/H3C/h3c_open.comware/blob/main/README.md
+- fqcn: hashicorp.terraform
+  catalog_url: https://catalog.redhat.com/en/software/collection/hashicorp/terraform
+  description: An Ansible Collection for managing Terraform Cloud/Enterprise.
+  provider: HashiCorp | An IBM Company
+  content_type: Certified
+  latest_version: 2.2.1
+  last_updated: '2026-09-04'
+  repository: https://github.com/hashicorp/terraform-ansible-collection
+  documentation: https://github.com/hashicorp/terraform-ansible-collection/blob/main/docs/docsite/rst/README.md
+- fqcn: hashicorp.vault
+  catalog_url: https://catalog.redhat.com/en/software/collection/hashicorp/vault
+  description: An Ansible Collection for managing HashiCorp Vault.
+  provider: HashiCorp | An IBM Company
+  content_type: Certified
+  latest_version: 1.3.0
+  last_updated: '2026-07-09'
+  repository: https://github.com/ansible-collections/hashicorp.vault
+- fqcn: hitachivantara.vspone_block
+  catalog_url: https://catalog.redhat.com/en/software/collection/hitachivantara/vspone_block
+  description: Ansible modules to manage VSP block storage systems (VSP One Block, VSP 5000 series, VSP E series, VSP F series, and VSP G series) and VSP One SDS Block and Cloud systems.
+  provider: Hitachi Vantara
+  content_type: Certified
+  latest_version: 4.8.3
+  last_updated: '2026-10-14'
+  categories:
+  - Storage
+  repository: https://github.com/hitachi-vantara/vspone-block-ansible
+  documentation: https://docs.ansible.com/ansible/devel/collections/hitachivantara/vspone_block/
+- fqcn: hitachivantara.vspone_object
+  catalog_url: https://catalog.redhat.com/en/software/collection/hitachivantara/vspone_object
+  description: Ansible modules to manage Hitachi Virtual Storage Platform One Object Storage systems using the VSP One platform.
+  provider: Hitachi Vantara
+  content_type: Certified
+  latest_version: 1.2.0
+  last_updated: '2026-05-28'
+  categories:
+  - Storage
+  repository: https://github.com/hitachi-vantara/vspone-object-ansible
+  documentation: https://github.com/hitachi-vantara/vspone-object-ansible
+- fqcn: hpe.ilo
+  catalog_url: https://catalog.redhat.com/en/software/collection/hpe/ilo
+  description: Ansible Modules for HPE iLO
+  provider: HPE
+  content_type: Certified
+  latest_version: 1.0.41
+  last_updated: '2024-05-24'
+  repository: https://github.com/HewlettPackard/iLO-ansible-collection
+- fqcn: hpe.oneview
+  catalog_url: https://catalog.redhat.com/en/software/collection/hpe/oneview
+  description: Ansible Modules for HPE Oneview SDK
+  provider: HPE
+  content_type: Certified
+  latest_version: 11.4.0
+  last_updated: '2026-08-13'
+  categories:
+  - Storage
+  repository: https://github.com/HewlettPackard/oneview-ansible-collection
+  documentation: https://www.hpe.com/psnow/product-documentation?oid=5410258&cc=ae&lc=en
+- fqcn: ibm.ibm_eda_zos
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/ibm_eda_zos
+  description: Ansible Collection containing Event Driven Ansible solutions for IBM Z products.
+  provider: IBM
+  content_type: Validated
+  latest_version: 1.1.0
+  last_updated: '2026-10-02'
+  repository: https://github.com/ansible-collections/ibm_eda_zos
+  documentation: https://ibm.github.io/z_ansible_collections_doc/index.html
+- fqcn: ibm.ibm_zhmc
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/ibm_zhmc
+  description: This collection supports automation tasks on the IBM Z HMC such as creating, updating or deleting partitions, accesssing operating system messages, configuring adapters, managing HMC users,
+    upgrading the SE and HMC firmware, and many more. It supports CPCs in classic mode and in DPM mode.
+  provider: IBM
+  content_type: Certified
+  latest_version: 1.11.1
+  last_updated: '2026-08-18'
+  categories:
+  - Infrastructure
+  repository: https://github.com/zhmcclient/zhmc-ansible-modules
+  documentation: https://zhmcclient.github.io/zhmc-ansible-modules/
+- fqcn: ibm.ibm_zos_cics
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/ibm_zos_cics
+  description: The Red Hat Ansible Certified Content for IBM Z CICS collection includes connection plugins, action plugins, modules and sample playbooks to automate tasks for CICS
+  provider: IBM
+  content_type: Certified
+  latest_version: 2.2.1
+  last_updated: '2025-09-05'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ansible-collections/ibm_zos_cics
+  documentation: https://ibm.github.io/z_ansible_collections_doc
+- fqcn: ibm.ibm_zos_core
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/ibm_zos_core
+  description: The IBM z/OS core collection includes connection plugins, action plugins, modules, filters and ansible-doc to automate tasks on z/OS.
+  provider: IBM
+  content_type: Certified
+  latest_version: 2.1.0
+  last_updated: '2026-09-30'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ansible-collections/ibm_zos_core
+  documentation: https://ibm.github.io/z_ansible_collections_doc/index.html
+- fqcn: ibm.ibm_zos_ims
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/ibm_zos_ims
+  description: The IBM z/OS IMS collection includes modules and sample playbooks to automate tasks for IBM IMS.
+  provider: IBM
+  content_type: Certified
+  latest_version: 1.4.0
+  last_updated: '2026-05-15'
+  repository: https://github.com/ansible-collections/ibm_zos_ims
+  documentation: https://ibm.github.io/z_ansible_collections_doc/index.html
+- fqcn: ibm.ibm_zos_sysauto
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/ibm_zos_sysauto
+  description: The IBM Z System Automation collection includes roles and sample playbooks to access the IBM Z System Automation Operations REST server.
+  provider: IBM
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2023-10-02'
+  repository: https://github.com/ansible-collections/ibm_zos_sysauto
+  documentation: https://ibm.github.io/z_ansible_collections_doc/index.html
+- fqcn: ibm.ibm_zosmf
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/ibm_zosmf
+  description: Ansible collection consisting of modules and roles to work with z/OS based on z/OS Management Facility(z/OSMF).
+  provider: IBM
+  content_type: Certified
+  latest_version: 1.6.0
+  last_updated: '2026-02-18'
+  categories:
+  - Security
+  repository: https://github.com/IBM/ibm_zosmf
+  documentation: https://ibm.github.io/z_ansible_collections_doc/index.html
+- fqcn: ibm.instana
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/instana
+  description: The IBM Instana collection provides the ability for Instana event data to be consumed by Event Driven Ansible (EDA).
+  provider: IBM
+  content_type: Certified
+  latest_version: 1.0.32
+  last_updated: '2024-04-15'
+  repository: https://github.com/instana/ibm-instana-ansible
+  documentation: https://github.com/instana/ibm-instana-ansible/blob/main/README.md
+- fqcn: ibm.isam
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/isam
+  description: IBM Security Access Manager Ansible Collection
+  provider: IBM
+  content_type: Certified
+  latest_version: 3.6.0
+  last_updated: '2026-04-28'
+  categories:
+  - Security
+  repository: https://github.com/IBM-Security/isam-ansible-collection
+  documentation: https://github.com/IBM-Security/isam-ansible-collection/blob/master/README.md
+- fqcn: ibm.power_aix
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/power_aix
+  description: Ansible Content for IBM Power Systems - AIX provides a collection of content used to manage and deploy Power Systems AIX.
+  provider: IBM
+  content_type: Certified
+  latest_version: 2.3.1
+  last_updated: '2026-06-17'
+  categories:
+  - Infrastructure
+  repository: https://github.com/IBM/ansible-power-aix
+  documentation: https://ibm.github.io/ansible-power-aix/index.html
+- fqcn: ibm.power_hmc
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/power_hmc
+  description: Ansible Content for IBM Power HMCs - to manage configurations of Power HMC and Power systems managed by the HMC.
+  provider: IBM
+  content_type: Certified
+  latest_version: 1.17.0
+  last_updated: '2026-10-01'
+  categories:
+  - Infrastructure
+  repository: https://github.com/IBM/ansible-power-hmc
+  documentation: https://ibm.github.io/ansible-power-hmc/index.html
+- fqcn: ibm.power_ibmi
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/power_ibmi
+  description: Ansible Content for IBM Power Systems - IBM i provides Ansible action plugins, modules, roles and sample playbooks to automate tasks on IBM i systems.
+  provider: IBM
+  content_type: Certified
+  latest_version: 3.5.1
+  last_updated: '2026-09-14'
+  categories:
+  - Infrastructure
+  repository: https://github.com/IBM/ansible-for-i/tree/devel
+  documentation: https://ibm.github.io/ansible-for-i/index.html
+- fqcn: ibm.power_vios
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/power_vios
+  description: Ansible Content for IBM Power Systems - VIOS provides a collection of content used to manage and deploy Power Systems VIOS.
+  provider: IBM
+  content_type: Certified
+  latest_version: 1.3.0
+  last_updated: '2023-11-24'
+  categories:
+  - Infrastructure
+  repository: https://github.com/IBM/ansible-power-vios
+  documentation: https://ibm.github.io/ansible-power-vios/index.html
+- fqcn: ibm.qradar
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/qradar
+  description: Ansible Security Collection for IBM Qradar SIEM
+  provider: IBM
+  content_type: Certified
+  latest_version: 4.0.0
+  last_updated: '2024-06-12'
+  categories:
+  - Security
+  repository: https://github.com/ansible-collections/ibm.qradar
+  documentation: https://github.com/ansible-collections/ibm.qradar
+- fqcn: ibm.spectrum_virtualize
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/spectrum_virtualize
+  description: Ansible Collections for IBM Spectrum Virtualize
+  provider: IBM
+  content_type: Certified
+  latest_version: 2.0.0
+  last_updated: '2023-06-30'
+  categories:
+  - Storage
+  repository: https://github.com/ansible-collections/ibm.spectrum_virtualize
+  documentation: https://github.com/ansible-collections/ibm.spectrum_virtualize
+  extract: false
+  note: Renamed to ibm.storage_virtualize.
+- fqcn: ibm.storage_virtualize
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/storage_virtualize
+  description: Ansible Collections for IBM Storage Virtualize
+  provider: IBM
+  content_type: Certified
+  latest_version: 3.4.0
+  last_updated: '2026-07-18'
+  categories:
+  - Storage
+  repository: https://github.com/ansible-collections/ibm.storage_virtualize
+- fqcn: ibm.turbonomic_eda
+  catalog_url: https://catalog.redhat.com/en/software/collection/ibm/turbonomic_eda
+  description: This IBM Turbonomic Ansible Collection provides examples that can be used to automate Turbonomic cloud scaling decisions using Event Driven Ansible (EDA).
+  provider: IBM
+  content_type: Certified
+  latest_version: 1.0.2
+  last_updated: '2024-05-29'
+  repository: https://github.com/IBM/turbonomic_ansible_eda
+  documentation: https://github.com/IBM/turbonomic_ansible_eda
+- fqcn: infinidat.infinibox
+  catalog_url: https://catalog.redhat.com/en/software/collection/infinidat/infinibox
+  description: A set of Ansible modules that allow simple, but powerful, idempotent interactions with Infinidat Infiniboxes.
+  provider: Infinidat
+  content_type: Certified
+  latest_version: 1.8.4
+  last_updated: '2026-08-05'
+  repository: https://github.com/infinidat/ansible-infinidat-collection
+- fqcn: infoblox.nios_modules
+  catalog_url: https://catalog.redhat.com/en/software/collection/infoblox/nios_modules
+  description: Infoblox Ansible Collection for vNIOS allows managing your NIOS objects through APIs.
+  provider: Infoblox
+  content_type: Certified
+  latest_version: 1.8.0
+  last_updated: '2025-01-29'
+  repository: https://github.com/infobloxopen/infoblox-ansible/tree/master
+  documentation: https://github.com/infobloxopen/infoblox-ansible/blob/master/README.md
+- fqcn: infoblox.universal_ddi
+  catalog_url: https://catalog.redhat.com/en/software/collection/infoblox/universal_ddi
+  description: Infoblox Universal DDI Ansible Collection
+  provider: Infoblox
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2025-12-03'
+  categories:
+  - Networking
+  repository: https://github.com/infobloxopen/universal-ddi-ansible
+- fqcn: infra.aap_configuration
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/aap_configuration
+  description: A collection of roles to manage Ansible Controller
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 4.10.0
+  last_updated: '2026-09-15'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/aap_configuration/
+- fqcn: infra.aap_configuration_extended
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/aap_configuration_extended
+  description: A collection of roles to extend functionality of aap_configuration collection
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 4.12.1
+  last_updated: '2026-10-15'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/aap_configuration_extended/
+- fqcn: infra.aap_utilities
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/aap_utilities
+  description: A collection of utility roles for usage with Ansible Automation Platform
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 4.0.0
+  last_updated: '2026-09-11'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/aap_utilities/
+- fqcn: infra.ah_configuration
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/ah_configuration
+  description: Ansible content that interacts with the Ansible Automation Hub or Galaxy NG API.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.1.0
+  last_updated: '2024-10-10'
+  repository: https://github.com/ansible/galaxy_collection
+  documentation: https://github.com/redhat-cop/ah_configuration/blob/master/README.md
+- fqcn: infra.ai
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/ai
+  description: AI orchestration for infrastructure operations
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.2.0
+  last_updated: '2025-09-05'
+  repository: https://github.com/ansible-collections/infra.ai
+- fqcn: infra.ansible_rekey_variables
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/ansible_rekey_variables
+  description: A collection to manage vaulted variables. It helps you to rekey all encrypted variables in the inventory repository.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.1.4
+  last_updated: '2024-05-06'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/ansible_rekey_variables
+  documentation: https://github.com/redhat-cop/ansible_rekey_variables/blob/main/README.md
+- fqcn: infra.automation_development_office
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/automation_development_office
+  description: Automation Development Office roles for AAP, OpenShift, RHEL, Satellite, IdM, RHBK, and platform bootstrap workflows.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.0.0
+  last_updated: '2026-10-06'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/infra.automation-development-office
+  documentation: https://github.com/redhat-cop/infra.automation-development-office/blob/main/README.md
+- fqcn: infra.controller_configuration
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/controller_configuration
+  description: A collection of roles to manage Ansible Controller
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 3.4.3
+  last_updated: '2026-10-01'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/infra.controller_configuration/
+- fqcn: infra.convert2rhel
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/convert2rhel
+  description: Ansible collection for running the convert2rhel tool
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.2.1
+  last_updated: '2024-07-03'
+  repository: https://github.com/redhat-cop/infra.convert2rhel
+  documentation: https://github.com/redhat-cop/infra.convert2rhel/tree/main/docs
+- fqcn: infra.eda_configuration
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/eda_configuration
+  description: Ansible content that interacts with the Ansible EDA Controller.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.1.0
+  last_updated: '2024-05-07'
+  repository: https://github.com/redhat-cop/eda_configuration
+  documentation: https://github.com/redhat-cop/eda_configuration/blob/devel/README.md
+- fqcn: infra.ee_utilities
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/ee_utilities
+  description: A collection of utility roles for usage with Ansible Execution Enviroments
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 4.6.0
+  last_updated: '2026-09-17'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/ee_utilities
+- fqcn: infra.leapp
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/leapp
+  description: Ansible collection for running the leapp tool
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.7.3
+  last_updated: '2026-05-05'
+  repository: https://github.com/redhat-cop/infra.leapp
+- fqcn: infra.lvm_snapshots
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/lvm_snapshots
+  description: Ansible role for creating and rolling back LVM snapshots
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.2.1
+  last_updated: '2026-07-21'
+  categories:
+  - Storage
+  repository: https://github.com/redhat-cop/infra.lvm_snapshots
+  documentation: https://github.com/redhat-cop/infra.lvm_snapshots
+- fqcn: infra.mecm_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/mecm_ops
+  description: Ansible collection for Microsoft System Center Configuration Manager (MECM/SCCM/ConfigMgr) infrastructure operations and management
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.0.2
+  last_updated: '2026-01-22'
+  repository: https://github.com/redhat-cop/infra.mecm_ops
+- fqcn: infra.middleware_ocpv
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/middleware_ocpv
+  description: Using OpenShift Virtualization as an environment for hosting Virtual Machines that are provisioned, configured and maintained using Ansible and tooling from the Ansible Middleware project.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.0.0
+  last_updated: '2024-02-26'
+  categories:
+  - App dev
+  repository: https://github.com/redhat-cop/middleware_ocpv
+- fqcn: infra.openshift_virtualization_migration
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/openshift_virtualization_migration
+  description: This collection enables the migration journey of Virtual Machine (VM) workloads from existing hypervisors to Red Hat OpenShift Virtualization using Ansible Automation Platform. Additionally
+    it provides content for the management and maintenance of VM workloads within Red Hat OpenShift Virtualization.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.25.0
+  last_updated: '2026-05-06'
+  categories:
+  - Developer tools
+  repository: https://github.com/redhat-cop/openshift_virtualization_migration
+- fqcn: infra.openshift_virtualization_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/openshift_virtualization_ops
+  description: This collection provides content for the management and maintenance of VM workloads within Red Hat OpenShift Virtualization.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.0.1
+  last_updated: '2025-06-27'
+  categories:
+  - Developer tools
+  repository: https://gitlab.consulting.redhat.com/redhat-cop/openshift-virtualization-migration/openshift_virtualization_ops
+- fqcn: infra.osbuild
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/osbuild
+  description: Collection for management of osbuild composer
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.3.0
+  last_updated: '2023-10-10'
+  categories:
+  - Infrastructure
+  repository: https://github.com/redhat-cop/infra.osbuild
+  documentation: https://github.com/redhat-cop/infra.osbuild/blob/main/README.md
+- fqcn: infra.rhacs_configuration
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/rhacs_configuration
+  description: Ansible modules to configure Red Hat Advanced Cluster Security for Kubernetes (RHACS) and StackRox installations.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.0.1
+  last_updated: '2026-07-16'
+  repository: https://github.com/redhat-cop/infra.rhacs_configuration
+  documentation: https://github.com/redhat-cop/infra.rhacs_configuration
+- fqcn: infra.satellite_configuration
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/satellite_configuration
+  description: Export and Import Satellite configuration using Configuration as Code
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.4.0
+  last_updated: '2026-10-01'
+  repository: https://github.com/redhat-cop/infra.satellite_configuration.git
+- fqcn: infra.support_assist
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/support_assist
+  description: Ansible Collection that will gather various reports/outputs that are commonly asked for in Red Hat Support Cases
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.1.0
+  last_updated: '2026-10-18'
+  repository: https://github.com/redhat-cop/infra.support_assist
+  documentation: https://github.com/redhat-cop/infra.support_assist/blob/devel/README.md
+- fqcn: infra.windows_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/infra/windows_ops
+  description: A collection of content (roles, playbooks, etc) for Ansible Automation Platform on Windows. Includes infrastructure management, IIS web server management, service management, Windows updates,
+    and security compliance automation (CIS benchmarks and DISA STIG).
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.1.0
+  last_updated: '2026-09-10'
+  repository: https://github.com/redhat-cop/infra.windows_ops
+- fqcn: inspur.ispim
+  catalog_url: https://catalog.redhat.com/en/software/collection/inspur/ispim
+  description: Inspur server supports ansible management device.
+  provider: Inspur
+  content_type: Certified
+  latest_version: 2.2.3
+  last_updated: '2024-06-14'
+  categories:
+  - Developer tools
+  repository: https://github.com/ispim/inspur.ispim
+  documentation: https://ispim.github.io/inspur.ispim-docs/index.html
+- fqcn: juniper.apstra
+  catalog_url: https://catalog.redhat.com/en/software/collection/juniper/apstra
+  description: This collection provides modules to interact with Apstra.
+  provider: Juniper Networks
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2026-07-31'
+  categories:
+  - Networking
+  repository: https://github.com/Juniper/apstra-ansible-collection
+- fqcn: juniper.device
+  catalog_url: https://catalog.redhat.com/en/software/collection/juniper/device
+  description: set of Ansible modules that perform specific operational and configuration tasks on devices running Junos OS.
+  provider: Juniper Networks
+  content_type: Certified
+  latest_version: 2.0.1
+  last_updated: '2025-11-19'
+  categories:
+  - Networking
+  repository: https://github.com/Juniper/ansible-junos-stdlib
+  documentation: https://ansible-juniper-collection.readthedocs.io/
+- fqcn: juniper.eda
+  catalog_url: https://catalog.redhat.com/en/software/collection/juniper/eda
+  description: Ansible Event Driven Automation
+  provider: Juniper Networks
+  content_type: Certified
+  latest_version: 1.4.4
+  last_updated: '2025-07-24'
+  repository: https://github.com/Juniper/k8s.eda
+  documentation: https://github.com/Juniper/k8s.eda
+- fqcn: junipernetworks.junos
+  catalog_url: https://catalog.redhat.com/en/software/collection/junipernetworks/junos
+  description: Ansible Network Collection for Junipernetworks Junos devices.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 11.1.1
+  last_updated: '2026-03-09'
+  repository: https://github.com/ansible-collections/junipernetworks.junos
+- fqcn: kentik.ansible_eda
+  catalog_url: https://catalog.redhat.com/en/software/collection/kentik/ansible_eda
+  description: Ansible Collection for collect Kentik alering notification JSON webhooks for Event Driven Ansible (EDA)
+  provider: Kentik
+  content_type: Certified
+  latest_version: 1.0.7
+  last_updated: '2024-03-25'
+  categories:
+  - Networking
+  repository: https://github.com/kentik/ansible_eda
+  documentation: https://github.com/kentik/ansible_eda/blob/main/README.md
+- fqcn: kubernetes.core
+  catalog_url: https://catalog.redhat.com/en/software/collection/kubernetes/core
+  description: Kubernetes Collection for Ansible.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 6.6.0
+  last_updated: '2026-09-17'
+  repository: https://github.com/ansible-collections/kubernetes.core
+- fqcn: lantronix.lmos
+  catalog_url: https://catalog.redhat.com/en/software/collection/lantronix/lmos
+  description: Ansible collection for Lantronix LMOS (Local Manager OS) devices
+  provider: lantronix
+  content_type: Certified
+  latest_version: 1.0.4
+  last_updated: '2026-08-31'
+  categories:
+  - Networking
+  repository: https://github.com/Lantronix/ansible-collection-lmos
+  documentation: https://github.com/Lantronix/ansible-collection-lmos#readme
+- fqcn: lantronix.oob
+  catalog_url: https://catalog.redhat.com/en/software/collection/lantronix/oob
+  description: Ansible collection for Lantronix Out-of-Band infrastructure (SLC9000 + Percepxion)
+  provider: lantronix
+  content_type: Certified
+  latest_version: 1.2.0
+  last_updated: '2026-08-31'
+  categories:
+  - Networking
+  repository: https://github.com/Lantronix/ansible-collection-oob
+  documentation: https://github.com/Lantronix/ansible-collection-oob/tree/main/docs
+- fqcn: logicmonitor.edwin_ai
+  catalog_url: https://catalog.redhat.com/en/software/collection/logicmonitor/edwin_ai
+  description: EDA for LogicMonitor's Edwin AI
+  provider: LogicMonitor
+  content_type: Certified
+  latest_version: 1.0.1
+  last_updated: '2026-04-02'
+  categories:
+  - Observability
+  repository: https://github.com/logicmonitor/logicmonitor.edwin_ai
+- fqcn: logicmonitor.integration
+  catalog_url: https://catalog.redhat.com/en/software/collection/logicmonitor/integration
+  description: Collection for LogicMonitor Ansible integration
+  provider: LogicMonitor
+  content_type: Certified
+  latest_version: 2.0.3
+  last_updated: '2023-10-27'
+  categories:
+  - Observability
+  repository: https://github.com/ansible-collections/logicmonitor
+- fqcn: manageengine.sdp_cloud
+  catalog_url: https://catalog.redhat.com/en/software/collection/manageengine/sdp_cloud
+  description: Ansible Collection for interacting with ManageEngine ServiceDeskPlus Cloud ITSM
+  provider: ManageEngine
+  content_type: Certified
+  latest_version: 1.0.0
+  last_updated: '2026-02-17'
+  categories:
+  - Cloud
+  repository: https://github.com/ManageEngine/manageengine.sdpcloud
+- fqcn: microsoft.ad
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/ad
+  description: Ansible collection for Active Directory management
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.12.1
+  last_updated: '2026-08-26'
+  repository: https://github.com/ansible-collections/microsoft.ad
+  documentation: https://docs.ansible.com/ansible/devel/collections/microsoft/ad
+- fqcn: microsoft.hyperv
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/hyperv
+  description: Ansible collection for managing Microsoft Hyper-V virtualization infrastructure
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2026-05-19'
+  repository: https://github.com/ansible-collections/microsoft.hyperv
+- fqcn: microsoft.iis
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/iis
+  description: Ansible collection for Microsoft Internet Information Services (IIS)
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.3.0
+  last_updated: '2026-08-26'
+  repository: https://github.com/ansible-collections/microsoft.iis
+  documentation: https://docs.ansible.com/ansible/devel/collections/microsoft/iis
+- fqcn: microsoft.mecm
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/mecm
+  description: Ansible collection for managing Microsoft System Center Configuration Manager (MECM/SCCM/ConfigMgr)
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.1.0
+  last_updated: '2026-09-02'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ansible-collections/microsoft.mecm
+- fqcn: microsoft.scom
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/scom
+  description: Ansible Collection for managing Microsoft System Center Operations Manager (SCOM). Includes PowerShell-based Ansible modules for alert management, maintenance mode, and management group operations,
+    as well as an Event Driven Ansible (EDA) source plugin for real-time alert monitoring.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.0.0
+  last_updated: '2026-10-07'
+  categories:
+  - Observability
+  repository: https://github.com/ansible-collections/microsoft.scom
+- fqcn: microsoft.scvmm
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/scvmm
+  description: Ansible collection for System Center Virtual Machine Manager (SCVMM) 2022. Certified for Red Hat Automation Hub.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.2.1
+  last_updated: '2026-08-27'
+  repository: https://github.com/ansible-collections/microsoft.scvmm
+- fqcn: microsoft.sql
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/sql
+  description: Ansible collection for Microsoft SQL Server management
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.5.2
+  last_updated: '2024-12-18'
+  categories:
+  - Data management
+  repository: https://github.com/linux-system-roles/mssql
+  role_repos:
+    base: https://github.com/linux-system-roles/
+    roles:
+    - mssql
+    rename:
+      mssql: server
+- fqcn: microsoft.wsl
+  catalog_url: https://catalog.redhat.com/en/software/collection/microsoft/wsl
+  description: A collection enabling the management of Windows Subsystem for Linux (WSL) using Ansible.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.0.0
+  last_updated: '2026-07-29'
+  repository: https://github.com/ansible-collections/microsoft.wsl
+  documentation: https://github.com/ansible-collection-migration/microsoft.wsl/tree/main/README.md
+- fqcn: netapp.aws
+  catalog_url: https://catalog.redhat.com/en/software/collection/netapp/aws
+  description: Cloud Volumes Service (CVS) for AWS
+  provider: NetApp
+  content_type: Certified
+  latest_version: 21.8.0
+  last_updated: '2024-01-29'
+  repository: https://github.com/ansible-collections/netapp.aws
+- fqcn: netapp.azure
+  catalog_url: https://catalog.redhat.com/en/software/collection/netapp/azure
+  description: Azure NetApp Files (ANF)
+  provider: NetApp
+  content_type: Certified
+  latest_version: 21.11.0
+  last_updated: '2024-01-29'
+  repository: https://github.com/ansible-collections/netapp.azure
+- fqcn: netapp.cloudmanager
+  catalog_url: https://catalog.redhat.com/en/software/collection/netapp/cloudmanager
+  description: Ansible collection to create CloudManager connectors, CVO instances, CVO aggregates, CVO volumes, and more.
+  provider: NetApp
+  content_type: Certified
+  latest_version: 21.24.0
+  last_updated: '2024-01-29'
+  repository: https://github.com/ansible-collections/netapp.cloudmanager
+  documentation: https://docs.ansible.com/ansible/latest/collections/netapp/
+- fqcn: netapp.ontap
+  catalog_url: https://catalog.redhat.com/en/software/collection/netapp/ontap
+  description: NetApp ONTAP Collection
+  provider: NetApp
+  content_type: Certified
+  latest_version: 23.3.0
+  last_updated: '2025-12-15'
+  categories:
+  - Storage
+  repository: https://github.com/ansible-collections/netapp.ontap
+- fqcn: netapp.storagegrid
+  catalog_url: https://catalog.redhat.com/en/software/collection/netapp/storagegrid
+  description: NetApp StorageGRID Collection
+  provider: NetApp
+  content_type: Certified
+  latest_version: 21.16.0
+  last_updated: '2025-12-15'
+  categories:
+  - Storage
+  repository: https://github.com/ansible-collections/netapp.storagegrid
+- fqcn: netapp.um_info
+  catalog_url: https://catalog.redhat.com/en/software/collection/netapp/um_info
+  description: NetApp Unified Manager(AIQUM 9.7) Collection
+  provider: NetApp
+  content_type: Certified
+  latest_version: 21.9.0
+  last_updated: '2024-01-29'
+  categories:
+  - Storage
+  repository: https://github.com/ansible-collections/netapp.um_info
+- fqcn: netbox.netbox
+  catalog_url: https://catalog.redhat.com/en/software/collection/netbox/netbox
+  description: This is a collection of NetBox Ansible modules
+  provider: Netbox Labs Inc.
+  content_type: Certified
+  latest_version: 3.21.0
+  last_updated: '2025-03-12'
+  categories:
+  - Networking
+  repository: https://github.com/netbox-community/ansible_modules
+  documentation: https://netbox-ansible-collection.readthedocs.io/en/latest/
+- fqcn: netscaler.adc
+  catalog_url: https://catalog.redhat.com/en/software/collection/netscaler/adc
+  description: Ansible Collection Modules for NetScaler ADC
+  provider: NetScaler
+  content_type: Certified
+  latest_version: 2.17.0
+  last_updated: '2026-07-15'
+  categories:
+  - Networking
+  repository: https://github.com/netscaler/ansible-collection-netscaleradc
+  documentation: https://netscaler.github.io/ansible-collection-netscaleradc
+- fqcn: netscaler.console
+  catalog_url: https://catalog.redhat.com/en/software/collection/netscaler/console
+  description: Ansible collection modules for NetScaler Console
+  provider: NetScaler
+  content_type: Certified
+  latest_version: 1.0.0
+  last_updated: '2024-12-09'
+  categories:
+  - Networking
+  repository: https://github.com/netscaler/ansible-collection-netscalerconsole
+- fqcn: network.acls
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/acls
+  description: Ansible Network Acls enables user to manage the Acls resources independent of platforms and perform acls health checks.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 4.0.0
+  last_updated: '2025-01-17'
+  categories:
+  - Networking
+  repository: https://github.com/redhat-cop/network.acls
+- fqcn: network.backup
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/backup
+  description: Ansible Network Backup collection platform-agnostic single entry point management for network backup.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 5.1.0
+  last_updated: '2026-01-16'
+  categories:
+  - Networking
+  repository: https://github.com/redhat-cop/network.backup
+- fqcn: network.base
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/base
+  description: Ansible Network Collection provides platform-agnostic resource management for given network OS.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 8.0.0
+  last_updated: '2025-09-03'
+  categories:
+  - Networking
+  repository: https://github.com/redhat-cop/network.base
+- fqcn: network.bgp
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/bgp
+  description: Ansible Network BGP enables users to manage the BGP resources independently of platforms and perform BGP health checks.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 8.0.0
+  last_updated: '2025-09-03'
+  categories:
+  - Networking
+  repository: https://github.com/redhat-cop/network.bgp
+- fqcn: network.healthchecks
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/healthchecks
+  description: Ansible Network Healthchecks collection enable users to perform various network health checks and monitor tasks across different network platforms.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.0.0
+  last_updated: '2025-08-26'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-automation-platform/network.healthchecks
+- fqcn: network.interfaces
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/interfaces
+  description: Ansible Network Interfaces enables user to manage the Interfaces resources independent of platforms and perform Interfaces health checks.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 7.0.0
+  last_updated: '2025-09-03'
+  categories:
+  - Networking
+  repository: https://github.com/redhat-cop/network.interfaces
+- fqcn: network.inventory_reports
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/inventory_reports
+  description: Ansible Network Inventory Reports enables users to generate comprehensive network inventory reports.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 2.0.0
+  last_updated: '2025-08-26'
+  categories:
+  - Networking
+  repository: https://github.com/ansible-automation-platform/network.inventory_reports
+- fqcn: network.meraki_ops
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/meraki_ops
+  description: Meraki validated content for Ansible.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.0.0
+  last_updated: '2025-06-06'
+  categories:
+  - Cloud
+  repository: https://github.com/ansible-collections/network.meraki_ops
+- fqcn: network.offline_migration_sdn_to_ovnk
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/offline_migration_sdn_to_ovnk
+  description: Offline migration helper that switches an OpenShift cluster from OpenShiftSDN to OVNKubernetes and back.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 1.0.3
+  last_updated: '2025-07-10'
+  categories:
+  - Networking
+  repository: https://github.com/openshift/network.offline_migration_sdn_to_ovnk
+- fqcn: network.ospf
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/ospf
+  description: Ansible Network OSPF enables user to manage the OSPF resources independent of platforms and perform OSPF health checks.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 7.0.0
+  last_updated: '2025-09-03'
+  categories:
+  - Networking
+  repository: https://github.com/redhat-cop/network.ospf
+- fqcn: network.telemetry
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/telemetry
+  description: An Ansible Collection for managing telemetry configuration on network devices and integrate with Event-Driven Ansible (EDA).
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 3.0.0
+  last_updated: '2024-06-13'
+  categories:
+  - Networking
+  repository: https://github.com/redhat-cop/network.telemetry
+- fqcn: network.vpn
+  catalog_url: https://catalog.redhat.com/en/software/collection/network/vpn
+  description: Ansible Collection to build, maintain and validate VPN tunnels across cloud providers and network appliances.
+  provider: Red Hat
+  content_type: Validated
+  latest_version: 6.0.0
+  last_updated: '2025-09-03'
+  repository: https://github.com/redhat-cop/network.vpn
+- fqcn: networktocode.nautobot
+  catalog_url: https://catalog.redhat.com/en/software/collection/networktocode/nautobot
+  description: This is a collection of Nautobot Ansible modules
+  content_type: Certified
+  latest_version: 6.3.0
+  last_updated: '2026-09-17'
+  categories:
+  - Networking
+  repository: https://github.com/nautobot/nautobot-ansible
+  documentation: https://nautobot-ansible.readthedocs.io/en/latest/
+- fqcn: neubird.aap
+  catalog_url: https://catalog.redhat.com/en/software/collection/neubird/aap
+  description: Intelligence gateway between Ansible Automation Platform and NeuBird AI. Makes any AAP job template AI-aware with reporting, safety tagging, context injection, pre-flight gating, and audit
+    logging.
+  provider: NeuBird AI
+  content_type: Certified
+  latest_version: 1.1.0
+  last_updated: '2026-06-08'
+  categories:
+  - Observability
+  repository: https://github.com/neubird-ai/ansible-collection
+  documentation: https://github.com/neubird-ai/ansible-collection/blob/main/README.md
+- fqcn: nokia.srlinux
+  catalog_url: https://catalog.redhat.com/en/software/collection/nokia/srlinux
+  description: Ansible collection for Nokia SR Linux Network OS.
+  provider: Nokia
+  content_type: Certified
+  latest_version: 1.1.1
+  last_updated: '2026-08-12'
+  categories:
+  - Networking
+  repository: https://github.com/nokia/srlinux-ansible-collection
+  documentation: https://learn.srlinux.dev/ansible/collection/
+- fqcn: nutanix.ncp
+  catalog_url: https://catalog.redhat.com/en/software/collection/nutanix/ncp
+  description: Nutanix Ansible Collection
+  provider: Nutanix
+  content_type: Certified
+  latest_version: 2.6.0
+  last_updated: '2026-10-15'
+  repository: https://github.com/nutanix/nutanix.ansible
+  documentation: https://github.com/nutanix/nutanix.ansible/blob/main/README.md
+- fqcn: nvidia.nvue
+  catalog_url: https://catalog.redhat.com/en/software/collection/nvidia/nvue
+  description: Modules to interact with NVIDIA devices managed by NVUE
+  provider: Nvidia
+  content_type: Certified
+  latest_version: 1.2.3
+  last_updated: '2024-06-21'
+  repository: https://gitlab.com/nvidia-networking/systems-engineering/nvue
+  documentation: https://gitlab.com/nvidia-networking/systems-engineering/nvue/-/blob/main/README.md
+- fqcn: onepassword.connect
+  catalog_url: https://catalog.redhat.com/en/software/collection/onepassword/connect
+  description: Modules for managing and reading 1Password Vaults with 1Password Connect.
+  provider: 1Password
+  content_type: Certified
+  latest_version: 2.4.0
+  last_updated: '2026-05-04'
+  categories:
+  - Security
+  repository: https://github.com/1Password/ansible-onepasswordconnect-collection
+  documentation: https://github.com/1Password/ansible-onepasswordconnect-collection
+- fqcn: opengear.om
+  catalog_url: https://catalog.redhat.com/en/software/collection/opengear/om
+  description: Ansible Network Collection for Opengear OM & CM8100 devices.
+  provider: Opengear
+  content_type: Certified
+  latest_version: 1.0.4
+  last_updated: '2024-04-23'
+  categories:
+  - Networking
+  repository: https://github.com/opengear/opengear.om
+  extract: false
+  note: The repository now hosts opengear.ng.
+- fqcn: opensvc.cluster
+  catalog_url: https://catalog.redhat.com/en/software/collection/opensvc/cluster
+  description: Ansible facilities for OpenSVC v2 Cluster management, including high availability, orchestrator configuration, and container management support.
+  provider: OpenSVC
+  content_type: Certified
+  latest_version: 2.1.1
+  last_updated: '2026-10-12'
+  repository: https://github.com/opensvc/ansible-collection-osvc
+  documentation: https://github.com/opensvc/ansible-collection-osvc/blob/master/ansible_collections/opensvc/cluster/README.md
+- fqcn: opensvc.cluster_v3
+  catalog_url: https://catalog.redhat.com/en/software/collection/opensvc/cluster_v3
+  description: Ansible facilities for OpenSVC v3 Cluster management, including high availability, orchestrator configuration, and container management support.
+  provider: OpenSVC
+  content_type: Certified
+  latest_version: 1.3.1
+  last_updated: '2026-10-12'
+  repository: https://github.com/opensvc/ansible-collection-osvc
+  documentation: https://github.com/opensvc/ansible-collection-osvc/blob/master/ansible_collections/opensvc/cluster_v3/README.md
+- fqcn: openvswitch.openvswitch
+  catalog_url: https://catalog.redhat.com/en/software/collection/openvswitch/openvswitch
+  description: Ansible Network Collection for Open vSwitch (OVS).
+  repository: https://github.com/ansible-collections/openvswitch.openvswitch
+  note: The catalog page for this collection shows no metadata.
+- fqcn: os_migrate.os_migrate
+  catalog_url: https://catalog.redhat.com/en/software/collection/os_migrate/os_migrate
+  description: OpenStack tenant migration tooling
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.0.5
+  last_updated: '2026-06-08'
+  categories:
+  - Cloud
+  repository: https://github.com/os-migrate/os-migrate
+- fqcn: os_migrate.vmware_migration_kit
+  catalog_url: https://catalog.redhat.com/en/software/collection/os_migrate/vmware_migration_kit
+  description: VMWare to Openstack / Openshift migration kit
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.2.7
+  last_updated: '2026-06-30'
+  repository: https://github.com/os-migrate/vmware-migration-kit
+- fqcn: paloaltonetworks.panos
+  catalog_url: https://catalog.redhat.com/en/software/collection/paloaltonetworks/panos
+  description: Collection for Palo Alto Networks PAN-OS
+  provider: Palo Alto Networks
+  content_type: Certified
+  latest_version: 3.4.1
+  last_updated: '2026-07-24'
+  repository: https://github.com/PaloAltoNetworks/pan-os-ansible
+  documentation: https://galaxy.ansible.com/ui/repo/published/paloaltonetworks/panos/docs
+- fqcn: paloaltonetworks.panos_policy_automation
+  catalog_url: https://catalog.redhat.com/en/software/collection/paloaltonetworks/panos_policy_automation
+  description: Automated policy creation based on preset object groups.
+  provider: Palo Alto Networks
+  content_type: Validated
+  latest_version: 1.4.6
+  last_updated: '2026-02-03'
+  categories:
+  - Networking
+  repository: https://github.com/PaloAltoNetworks/ansible_panos_policy_orchestration
+  documentation: https://paloaltonetworks.github.io/ansible_panos_policy_orchestration/
+- fqcn: purestorage.flasharray
+  catalog_url: https://catalog.redhat.com/en/software/collection/purestorage/flasharray
+  description: Deprecated namespace shim. This collection has been renamed to everpure.flasharray. It contains redirects only and pulls in the new collection as a dependency. Please update playbooks to
+    the everpure.flasharray namespace.
+  provider: Pure Storage
+  content_type: Certified
+  latest_version: 1.45.0
+  last_updated: '2026-07-21'
+  categories:
+  - Storage
+  repository: https://github.com/Everpure-Ansible/FlashArray-Collection
+  extract: false
+  note: Deprecated namespace shim that redirects to everpure.flasharray.
+- fqcn: purestorage.flashblade
+  catalog_url: https://catalog.redhat.com/en/software/collection/purestorage/flashblade
+  description: Collection of modules to manage Everpure FlashBlade
+  provider: Pure Storage
+  content_type: Certified
+  latest_version: 1.26.0
+  last_updated: '2026-06-19'
+  categories:
+  - Storage
+  repository: https://github.com/Everpure-Ansible/FlashBlade-Collection
+  documentation: https://docs.ansible.com/ansible/latest/collections/purestorage/flashblade/index.html#plugins-in-purestorage-flashblade
+  extract: false
+  note: Deprecated namespace; content now published as everpure.flashblade.
+- fqcn: purestorage.pure1
+  catalog_url: https://catalog.redhat.com/en/software/collection/purestorage/pure1
+  description: Collection of modules to manage Everpure Pure1
+  provider: Pure Storage
+  content_type: Certified
+  latest_version: 1.5.0
+  last_updated: '2026-06-23'
+  categories:
+  - Storage
+  repository: https://github.com/Everpure-Ansible/Pure1-Collection
+  documentation: https://github.com/Everpure-Ansible/Pure1-Collection
+  extract: false
+  note: Deprecated namespace; content now published as everpure.pure1.
+- fqcn: radware.alteon
+  catalog_url: https://catalog.redhat.com/en/software/collection/radware/alteon
+  description: A collection of Ansible Modules for Radware devices
+  provider: Radware
+  content_type: Certified
+  latest_version: 1.0.0
+  last_updated: '2023-07-26'
+  repository: https://github.com/Radware/alteon_modules
+- fqcn: radware.radware_alteon
+  catalog_url: https://catalog.redhat.com/en/software/collection/radware/radware_alteon
+  description: A collection of Ansible Modules for Radware devices
+  provider: Radware
+  content_type: Certified
+  latest_version: 1.0.2
+  last_updated: '2023-09-13'
+  repository: https://github.com/Radware/radware_alteon_modules
+- fqcn: redhat.ai
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/ai
+  description: Manage Red Hat AI
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.0.0
+  last_updated: '2025-04-23'
+  categories:
+  - App dev
+  repository: https://github.com/ansible-collections/redhat.ai
+- fqcn: redhat.amq_broker
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/amq_broker
+  description: Install and configure activemq / AMQ broker services.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.3.6
+  last_updated: '2026-06-11'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ansible-middleware/amq
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_amq_broker
+- fqcn: redhat.amq_streams
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/amq_streams
+  description: Install and configure Red Hat AMQ Streams (kafka) deployments
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.0.3
+  last_updated: '2026-10-09'
+  categories:
+  - App dev
+  repository: https://github.com/ansible-middleware/amq_streams
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_amq_streams
+- fqcn: redhat.artifact_signer
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/artifact_signer
+  description: Install and configure RHTAS, a downstream redistribution of the Sigstore project.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.4.4
+  last_updated: '2026-10-16'
+  categories:
+  - Security
+  repository: https://github.com/securesign/artifact-signer-ansible/
+  documentation: https://docs.redhat.com/en/documentation/red_hat_trusted_artifact_signer
+- fqcn: redhat.data_grid
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/data_grid
+  description: Install and configure an Infinispan or DataGrid service.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.3.4
+  last_updated: '2026-06-04'
+  repository: https://github.com/ansible-middleware/infinispan
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_data_grid
+- fqcn: redhat.eap
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/eap
+  description: Enable Ansible to provisioning JBoss EAP or WildFly instances.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.6.0
+  last_updated: '2026-09-30'
+  categories:
+  - App dev
+  repository: https://github.com/ansible-middleware/wildfly
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform
+- fqcn: redhat.edge_manager
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/edge_manager
+  description: Collection for management of Red Hat Edge Manager resources
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.7.0
+  last_updated: '2026-09-07'
+  repository: https://github.com/flightctl/flightctl-ansible
+  documentation: https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/managing_device_fleets_with_the_red_hat_edge_manager/index
+- fqcn: redhat.insights
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/insights
+  description: Ansible Collection for Red Hat insights
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.3.1
+  last_updated: '2026-03-12'
+  repository: https://github.com/redhatinsights/ansible-collections-insights
+- fqcn: redhat.insights_eda
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/insights_eda
+  description: Event-Driven Ansible for Red Hat Insights
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.2.6
+  last_updated: '2026-08-14'
+  repository: https://github.com/RedHatInsights/ansible-collections-eda
+  documentation: https://github.com/RedHatInsights/ansible-collections-eda
+- fqcn: redhat.jbcs
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/jbcs
+  description: Install and configure a JBoss Core Services server.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.1.6
+  last_updated: '2026-06-16'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ansible-middleware/jbcs
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_jboss_core_services
+- fqcn: redhat.jws
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/jws
+  description: This collection contains the ansible playbook to setup JWS.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.1.4
+  last_updated: '2026-06-04'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ansible-middleware/jws
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_jboss_web_server
+- fqcn: redhat.leapp
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/leapp
+  description: Ansible collection for running the leapp tool
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.7.4
+  last_updated: '2026-07-20'
+  repository: https://github.com/redhat-cop/infra.leapp
+- fqcn: redhat.openshift
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/openshift
+  description: OpenShift Collection for Ansible.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 6.0.0
+  last_updated: '2026-08-17'
+  repository: https://github.com/openshift/community.okd
+- fqcn: redhat.openshift_virtualization
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/openshift_virtualization
+  description: Lean Ansible bindings for OpenShift Virtualization
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.3.0
+  last_updated: '2026-06-10'
+  repository: https://github.com/kubevirt/kubevirt.core
+  documentation: https://docs.openshift.com/container-platform/latest/virt/about_virt/about-virt.html
+- fqcn: redhat.quarkus
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/quarkus
+  description: Build and deploy a Quarkus based app from the Git repository URL
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.0.4
+  last_updated: '2026-06-04'
+  repository: https://github.com/ansible-middleware/quarkus
+  documentation: https://ansible-middleware.github.io/quarkus
+- fqcn: redhat.redhat_csp_download
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/redhat_csp_download
+  description: Downloads resources from the Red Hat Customer Portal.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.2.2
+  last_updated: '2022-05-17'
+  repository: https://github.com/ansible-middleware/redhat-csp-download
+  documentation: https://github.com/ansible-middleware/redhat-csp-download
+- fqcn: redhat.rhbk
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/rhbk
+  description: Install and configure a keycloak, or Red Hat Single Sign-on, service.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 3.0.2
+  last_updated: '2026-06-25'
+  repository: https://github.com/ansible-middleware/keycloak
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_build_of_keycloak/
+- fqcn: redhat.rhel_hardening_roles
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/rhel_hardening_roles
+  description: Ansible collection providing hardening roles for Red Hat Enterprise Linux.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.1.82
+  last_updated: '2026-10-12'
+  categories:
+  - Security
+  repository: https://github.com/ComplianceAsCode/content
+  documentation: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/security_hardening/scanning-the-system-for-configuration-compliance#remediating-the-system-to-align-with-a-specific-baseline-using-an-ssg-ansible-playbook
+  extract: false
+- fqcn: redhat.rhel_idm
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/rhel_idm
+  description: Ansible roles and modules for FreeIPA
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.16.0
+  last_updated: '2026-02-10'
+  repository: https://github.com/freeipa/ansible-freeipa
+- fqcn: redhat.rhel_system_roles
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/rhel_system_roles
+  description: Red Hat Enterprise Linux System Roles Ansible Collection
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.4.2
+  last_updated: '2026-10-06'
+  repository: https://github.com/linux-system-roles
+  documentation: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/automating_system_administration_by_using_rhel_system_roles/index
+  role_repos:
+    base: https://github.com/linux-system-roles/
+    roles:
+    - ad_integration
+    - aide
+    - auditd
+    - bootloader
+    - certificate
+    - cockpit
+    - crypto_policies
+    - fapolicyd
+    - firewall
+    - gfs2
+    - ha_cluster
+    - journald
+    - kdump
+    - kernel_settings
+    - keylime_server
+    - logging
+    - mainid
+    - metrics
+    - nbde_client
+    - nbde_server
+    - network
+    - podman
+    - postfix
+    - postgresql
+    - rhc
+    - selinux
+    - snapshot
+    - ssh
+    - sshd
+    - storage
+    - sudo
+    - systemd
+    - timesync
+    - tlog
+    - trustee_client
+    - trustee_server
+    - vpn
+- fqcn: redhat.rhv
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/rhv
+  description: The oVirt Ansible Collection.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.4.2
+  last_updated: '2023-02-14'
+  repository: https://github.com/ovirt/ovirt-ansible-collection
+- fqcn: redhat.runtimes_common
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/runtimes_common
+  description: Common utilities to support Ansible Middleware automation.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.2.5
+  last_updated: '2026-06-04'
+  categories:
+  - Developer tools
+  repository: https://github.com/ansible-middleware/common
+  documentation: https://ansible-middleware.github.io/common
+- fqcn: redhat.sap_infrastructure
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/sap_infrastructure
+  description: Collection of Ansible Roles for SAP Infrastructure related tasks
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.3.1
+  last_updated: '2026-03-02'
+  repository: https://github.com/sap-linuxlab/community.sap_infrastructure
+  documentation: https://github.com/sap-linuxlab/sap-linuxlab.github.io/blob/master/README.md
+- fqcn: redhat.sap_install
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/sap_install
+  description: Collection of Ansible Roles for SAP software installation in various deployment configurations
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.9.2
+  last_updated: '2026-05-28'
+  repository: https://github.com/sap-linuxlab/community.sap_install
+  documentation: https://github.com/sap-linuxlab/community.sap_install/blob/main/README.md
+- fqcn: redhat.satellite
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/satellite
+  description: Ansible Modules to manage Satellite installations
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 5.11.0
+  last_updated: '2026-04-17'
+  categories:
+  - Infrastructure
+  repository: https://github.com/RedHatSatellite/satellite-ansible-collection
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_satellite/
+- fqcn: redhat.satellite_operations
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/satellite_operations
+  description: Satellite operations tasks such as install and maintenance
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 4.0.0
+  last_updated: '2026-03-24'
+  categories:
+  - Infrastructure
+  repository: https://github.com/RedHatSatellite/satellite-operations-collection
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_satellite/
+- fqcn: redhat.sso
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/sso
+  description: Install and configure a keycloak, or Red Hat Single Sign-on, service.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.0.2
+  last_updated: '2026-06-25'
+  repository: https://github.com/ansible-middleware/keycloak
+  documentation: https://access.redhat.com/documentation/en-us/red_hat_single_sign-on
+- fqcn: redhat.trusted_profile_analyzer
+  catalog_url: https://catalog.redhat.com/en/software/collection/redhat/trusted_profile_analyzer
+  description: Install and configure RHTPA V3, a downstream redistribution of the Trustification project.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 3.1.1
+  last_updated: '2026-10-13'
+  repository: https://github.com/trustification/trustify-ansible
+  documentation: https://docs.redhat.com/en/documentation/red_hat_trusted_profile_analyzer/
+- fqcn: sap.sap_operations
+  catalog_url: https://catalog.redhat.com/en/software/collection/sap/sap_operations
+  description: Ansible collection to handle day 2 operational SAP administration tasks.
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.2.0
+  last_updated: '2025-05-08'
+  repository: https://github.com/redhat-sap/rh_operations
+- fqcn: scale_computing.hypercore
+  catalog_url: https://catalog.redhat.com/en/software/collection/scale_computing/hypercore
+  description: Manage Scale Computing HyperCore cluster
+  provider: Scale Computing
+  content_type: Certified
+  latest_version: 1.6.1
+  last_updated: '2025-03-17'
+  categories:
+  - Infrastructure
+  repository: https://github.com/ScaleComputing/HyperCoreAnsibleCollection
+  documentation: https://scalecomputing.github.io/HyperCoreAnsibleCollection
+- fqcn: seiko.smartcs
+  catalog_url: https://catalog.redhat.com/en/software/collection/seiko/smartcs
+  description: Ansible Network Collection for Seiko SmartCS devices
+  provider: Seiko Solutions Inc.
+  content_type: Certified
+  latest_version: 1.8.0
+  last_updated: '2026-05-25'
+  categories:
+  - Networking
+  repository: https://github.com/ssol-smartcs/ansible-collections
+  documentation: https://github.com/ssol-smartcs/ansible-collections/tree/main/seiko.smartcs/docs
+- fqcn: sensu.sensu_go
+  catalog_url: https://catalog.redhat.com/en/software/collection/sensu/sensu_go
+  description: Roles and modules for installing and using Sensu Go
+  provider: Sensu
+  content_type: Certified
+  latest_version: 1.14.0
+  last_updated: '2023-09-01'
+  categories:
+  - Observability
+  repository: https://github.com/sensu/sensu-go-ansible
+  documentation: https://sensu.github.io/sensu-go-ansible/
+- fqcn: servicenow.itsm
+  catalog_url: https://catalog.redhat.com/en/software/collection/servicenow/itsm
+  description: Ansible Collection for interacting with ServiceNow ITSM
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.16.0
+  last_updated: '2026-08-24'
+  repository: https://github.com/ansible-collections/servicenow.itsm
+- fqcn: splunk.enterprise
+  catalog_url: https://catalog.redhat.com/en/software/collection/splunk/enterprise
+  description: Ansible Collection for Splunk Enterprise
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 1.0.0
+  last_updated: '2026-01-27'
+  categories:
+  - Observability
+  repository: https://github.com/ansible-collections/splunk.enterprise
+  documentation: https://github.com/ansible-collections/splunk.enterprise
+- fqcn: splunk.es
+  catalog_url: https://catalog.redhat.com/en/software/collection/splunk/es
+  description: Ansible Security Collection for Splunk Enterprise Security SIEM
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 6.0.1
+  last_updated: '2026-07-13'
+  categories:
+  - Security
+  repository: https://github.com/ansible-collections/splunk.es
+  documentation: https://github.com/ansible-collections/splunk.es
+- fqcn: splunk.itsi
+  catalog_url: https://catalog.redhat.com/en/software/collection/splunk/itsi
+  description: Ansible Collection for Splunk IT Service Intelligence
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 2.0.0
+  last_updated: '2026-04-16'
+  categories:
+  - Observability
+  repository: https://github.com/ansible-collections/splunk.itsi
+  documentation: https://github.com/ansible-collections/splunk.itsi
+- fqcn: styra.opa
+  catalog_url: https://catalog.redhat.com/en/software/collection/styra/opa
+  description: Installer for Open Policy Agent, courtesy of Styra, Inc.
+  provider: Styra
+  content_type: Certified
+  latest_version: 1.1.1
+  last_updated: '2024-04-18'
+  repository: https://github.com/StyraInc/styra-ansible-collection
+  documentation: https://github.com/StyraInc/styra-ansible-collection/blob/main/README.md
+- fqcn: thalesgroup.ciphertrust
+  catalog_url: https://catalog.redhat.com/en/software/collection/thalesgroup/ciphertrust
+  description: ThalesGroup CipherTrust Data Security Platform Ansible collection to configure various CipherTrust connectors as well as apply policy driven data protection at the time of application orchestration
+    using Ansible.
+  content_type: Certified
+  latest_version: 1.0.1
+  last_updated: '2024-10-22'
+  categories:
+  - Security
+  repository: https://github.com/ThalesGroup/CDSP-Orchestration-Ansible
+  documentation: https://thalesgroup.github.io/CDSP-Orchestration-Ansible/branch/main
+- fqcn: trendmicro.deepsec
+  catalog_url: https://catalog.redhat.com/en/software/collection/trendmicro/deepsec
+  description: Ansible Security Collection for Trend Micro Deep Security
+  provider: Red Hat
+  content_type: Certified
+  latest_version: 4.0.0
+  last_updated: '2024-06-12'
+  categories:
+  - Security
+  repository: https://github.com/ansible-collections/trendmicro.deepsec
+  documentation: https://github.com/ansible-collections/trendmicro.deepsec
+- fqcn: trilio.trilio_kubernetes
+  catalog_url: https://catalog.redhat.com/en/software/collection/trilio/trilio_kubernetes
+  description: Collection for using Ansible to orchestrate backup, recovery and migration of Kubernetes applications and data
+  provider: Trilio
+  content_type: Certified
+  latest_version: 1.5.0
+  last_updated: '2026-02-24'
+  repository: https://github.com/trilioData/trilio-ansible
+  documentation: https://docs.trilio.io/kubernetes
+- fqcn: venafi.machine_identity
+  catalog_url: https://catalog.redhat.com/en/software/collection/venafi/machine_identity
+  description: Machine Identity Management (certificates, policies, etc.) using Venafi solutions.
+  provider: Venafi
+  content_type: Certified
+  latest_version: 1.1.1
+  last_updated: '2025-09-12'
+  categories:
+  - Security
+  repository: https://github.com/Venafi/ansible-collection-venafi
+  documentation: https://github.com/Venafi/ansible-collection-venafi
+- fqcn: verticetech.qingteng_host
+  catalog_url: https://catalog.redhat.com/en/software/collection/verticetech/qingteng_host
+  description: A collection containing the qingteng module.
+  provider: Vertice Technology
+  content_type: Certified
+  latest_version: 1.0.2
+  last_updated: '2025-03-04'
+  categories:
+  - Networking
+  repository: https://github.com/verticetech/qingteng
+- fqcn: virsec.vsp
+  catalog_url: https://catalog.redhat.com/en/software/collection/virsec/vsp
+  description: A Collection of Roles Developed by Virsec Systems for VSP probe Installation
+  provider: Virsec Systems
+  content_type: Certified
+  latest_version: 1.0.2
+  last_updated: '2022-11-11'
+  repository: https://github.com/achinnapurkar/ansible_virsec_vsp
+  documentation: https://github.com/achinnapurkar/ansible_virsec_vsp
+- fqcn: vmware.alb
+  catalog_url: https://catalog.redhat.com/en/software/collection/vmware/alb
+  description: VMware Advanced Load Balancer (formerly Avi) Ansible Collection
+  provider: VMware
+  content_type: Certified
+  latest_version: 32.1.4
+  last_updated: '2026-10-14'
+  categories:
+  - Networking
+  repository: https://github.com/vmware/ansible-collection-alb
+- fqcn: vmware.vmware
+  catalog_url: https://catalog.redhat.com/en/software/collection/vmware/vmware
+  description: Collection to manage VMware
+  provider: VMware
+  content_type: Certified
+  latest_version: 2.12.0
+  last_updated: '2026-10-13'
+  categories:
+  - Cloud
+  repository: https://github.com/ansible-collections/vmware.vmware
+  documentation: https://github.com/ansible-collections/vmware.vmware/blob/main/README.md
+- fqcn: vmware.vmware_rest
+  catalog_url: https://catalog.redhat.com/en/software/collection/vmware/vmware_rest
+  description: VMware collection for Ansible
+  provider: VMware
+  content_type: Certified
+  latest_version: 5.0.0
+  last_updated: '2026-09-30'
+  categories:
+  - Cloud
+  repository: https://github.com/ansible-collections/vmware.vmware_rest
+- fqcn: vyos.vyos
+  catalog_url: https://catalog.redhat.com/en/software/collection/vyos/vyos
+  description: Ansible Network Collection for VYOS devices.
+  provider: VyOS Networks
+  content_type: Certified
+  latest_version: 6.0.0
+  last_updated: '2025-06-25'
+  categories:
+  - Networking
+  repository: https://github.com/vyos/vyos.vyos
+- fqcn: wti.remote
+  catalog_url: https://catalog.redhat.com/en/software/collection/wti/remote
+  description: Modules for interacting with  WTI remote OOB and PDU devices
+  provider: WTI
+  content_type: Certified
+  latest_version: 1.0.10
+  last_updated: '2024-09-12'
+  repository: https://github.com/wtinetworkgear/wti-collection
+  documentation: https://github.com/wtinetworkgear/wti-collection/tree/master/wti/remote/docs
+- fqcn: zabbix.zabbix
+  catalog_url: https://catalog.redhat.com/en/software/collection/zabbix/zabbix
+  description: deploy Zabbix agents and manage hosts on scale
+  provider: Zabbix
+  content_type: Certified
+  latest_version: 1.4.2
+  last_updated: '2025-07-10'
+  categories:
+  - Observability
+  repository: https://github.com/zabbix/ansible-collection.git
+  documentation: https://github.com/zabbix/ansible-collection
+- fqcn: zscaler.ziacloud
+  catalog_url: https://catalog.redhat.com/en/software/collection/zscaler/ziacloud
+  description: Collection for Zscaler Internet Access (ZIA)
+  provider: Zscaler
+  content_type: Certified
+  latest_version: 2.2.4
+  last_updated: '2026-06-02'
+  categories:
+  - Security
+  repository: https://github.com/zscaler/ziacloud-ansible
+  documentation: https://galaxy.ansible.com/ui/repo/published/zscaler/ziacloud/docs/
+- fqcn: zscaler.zpacloud
+  catalog_url: https://catalog.redhat.com/en/software/collection/zscaler/zpacloud
+  description: Collection for Zscaler Private Access (ZPA)
+  provider: Zscaler
+  content_type: Certified
+  latest_version: 2.2.12
+  last_updated: '2026-08-27'
+  categories:
+  - Security
+  repository: https://github.com/zscaler/zpacloud-ansible
+  documentation: https://galaxy.ansible.com/ui/repo/published/zscaler/zpacloud/docs/

@@ -1,0 +1,30 @@
+name: Refresh module data
+
+# Re-clones every collection repository and re-extracts modules, roles and
+# plugins, then opens a pull request if anything changed.
+on:
+  schedule:
+    - cron: "17 3 * * 1"   # Mondays 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: make data
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: refresh/module-data
+          title: "Refresh module data from collection sources"
+          commit-message: "Refresh module data from collection sources"
+          body: Automated weekly re-extraction of modules, roles and plugins from each collection's source repository.
+          add-paths: data/content.json

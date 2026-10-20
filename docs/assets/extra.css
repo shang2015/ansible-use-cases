@@ -1,0 +1,81 @@
+:root {
+  --uc-certified: #0066cc;
+  --uc-validated: #3e8635;
+  --uc-galaxy: #8a6d00;
+  --uc-github: #6a6e73;
+  --uc-deprecated: #c9190b;
+}
+[data-md-color-scheme="slate"] {
+  --uc-certified: #73bcf7;
+  --uc-validated: #95d58e;
+  --uc-galaxy: #f4c145;
+  --uc-github: #b8bbbe;
+  --uc-deprecated: #f9a8a0;
+}
+.uc-badge {
+  display: inline-block;
+  padding: 0 .5em;
+  border: 1px solid currentColor;
+  border-radius: 1em;
+  font-size: .72rem;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.uc-certified { color: var(--uc-certified); }
+.uc-validated { color: var(--uc-validated); }
+.uc-galaxy { color: var(--uc-galaxy); }
+.uc-github { color: var(--uc-github); }
+.uc-deprecated { color: var(--uc-deprecated); }
+
+/* Use case section headings follow the original 5-part format */
+.md-typeset h2[id^="description"],
+.md-typeset h2[id^="prerequisites"],
+.md-typeset h2[id^="steps"],
+.md-typeset h2[id^="success-criteria"],
+.md-typeset h2[id^="notes"] {
+  border-left: .2rem solid var(--md-primary-fg-color);
+  padding-left: .5rem;
+}
+
+.md-typeset table.uc-items { display: table; width: 100%; font-size: .72rem; }
+.md-typeset table.uc-items td:first-child { white-space: nowrap; }
+.md-typeset table.uc-items tr:target { background: var(--md-accent-fg-color--transparent); }
+.uc-table-wrap { overflow-x: auto; }
+
+.uc-filters { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: 1rem 0 .5rem; }
+.uc-filters input[type="search"], .uc-filters select {
+  font: inherit; font-size: .75rem; padding: .35rem .5rem;
+  border: 1px solid var(--md-default-fg-color--lighter); border-radius: .2rem;
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+}
+.uc-filters input[type="search"] { flex: 1 1 16rem; min-width: 0; }
+.uc-filters label { font-size: .75rem; }
+.uc-count { font-size: .72rem; color: var(--md-default-fg-color--light); margin: 0; }
+
+.uc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: .8rem; margin: 1rem 0; }
+.uc-grid a.uc-card {
+  display: block; padding: .8rem 1rem; border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .3rem; color: inherit;
+}
+.uc-grid a.uc-card:hover { border-color: var(--md-accent-fg-color); }
+.uc-card strong { display: block; margin-bottom: .2rem; }
+.uc-card span { font-size: .7rem; color: var(--md-default-fg-color--light); }
+
+/* Markdown wraps the card links in one <p>; let the cards be grid items */
+.uc-grid > p { display: contents; }
+
+/* Generated HTML tables (module lists, metadata) */
+.md-typeset table.uc-items, .md-typeset table.uc-meta {
+  border-collapse: collapse; border: 1px solid var(--md-typeset-table-color, rgba(0,0,0,.12));
+  border-radius: .1rem; margin: .8em 0;
+}
+.md-typeset table.uc-items th, .md-typeset table.uc-items td,
+.md-typeset table.uc-meta th, .md-typeset table.uc-meta td {
+  padding: .45em .9em; border-top: 1px solid var(--md-typeset-table-color, rgba(0,0,0,.12)); vertical-align: top; text-align: left;
+}
+.md-typeset table.uc-items thead th { background: var(--md-default-fg-color--lightest); font-weight: 700; }
+.md-typeset table.uc-items td:last-child { white-space: nowrap; }
+.md-typeset table.uc-meta { font-size: .72rem; }
+.md-typeset table.uc-meta th { font-weight: 600; white-space: nowrap; color: var(--md-default-fg-color--light); }
+.md-typeset table:not([class]) code { white-space: nowrap; }

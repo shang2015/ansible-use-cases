@@ -1,0 +1,51 @@
+# Manual corrections applied on top of catalog data (scripts merge step).
+# The catalog lists only the GitHub org for these; point at the real source.
+infra.ai:
+  repository: https://github.com/ansible-collections/infra.ai
+redhat.ai:
+  repository: https://github.com/ansible-collections/redhat.ai
+junipernetworks.junos:
+  repository: https://github.com/ansible-collections/junipernetworks.junos   # archived repo with the collection layout; current releases are built from Juniper/ansible-junos-stdlib
+  note: The original repository is archived; current releases are published from Juniper/ansible-junos-stdlib. Module list read from the archived repository (v11.0.0).
+redhat.rhel_hardening_roles:
+  extract: false   # source is the whole ComplianceAsCode/content repo; roles are generated at build time
+openvswitch.openvswitch:
+  description: Ansible Network Collection for Open vSwitch (OVS).
+  repository: https://github.com/ansible-collections/openvswitch.openvswitch
+  note: The catalog page for this collection shows no metadata.
+redhat.rhel_system_roles:
+  repository: https://github.com/linux-system-roles
+  # Built from one repository per role (list from linux-system-roles/auto-maintenance collection_release.yml)
+  role_repos:
+    base: https://github.com/linux-system-roles/
+    roles: [ad_integration, aide, auditd, bootloader, certificate, cockpit, crypto_policies, fapolicyd, firewall, gfs2, ha_cluster, journald, kdump, kernel_settings, keylime_server, logging, mainid, metrics, nbde_client, nbde_server, network, podman, postfix, postgresql, rhc, selinux, snapshot, ssh, sshd, storage, sudo, systemd, timesync, tlog, trustee_client, trustee_server, vpn]
+# Repositories that now hold a renamed or successor collection with different content:
+citrix.adc:
+  extract: false
+  note: Superseded by netscaler.adc; the repository now hosts the new collection.
+purestorage.flasharray:
+  extract: false
+  note: Deprecated namespace shim that redirects to everpure.flasharray.
+purestorage.flashblade:
+  extract: false
+  note: Deprecated namespace; content now published as everpure.flashblade.
+purestorage.pure1:
+  extract: false
+  note: Deprecated namespace; content now published as everpure.pure1.
+delinea.ss:
+  extract: false
+  note: The repository now hosts delinea.platform_secretserver.
+opengear.om:
+  extract: false
+  note: The repository now hosts opengear.ng.
+ibm.spectrum_virtualize:
+  extract: false
+  note: Renamed to ibm.storage_virtualize.
+microsoft.sql:
+  role_repos:
+    base: https://github.com/linux-system-roles/
+    roles: [mssql]
+    rename: {mssql: server}
+ansible.tower:
+  extract: false
+  note: Legacy collection for Ansible Tower 3.8 (last updated 2022). Use ansible.controller for Automation Platform 2.x.
