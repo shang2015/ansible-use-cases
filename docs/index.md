@@ -12,6 +12,7 @@ hide: [navigation, toc]
 <a class="uc-card" href="vendors/"><strong>:material-shield-account: Vendor collections</strong><span>Security and observability vendors: support level, maintainer and last update for each collection.</span></a>
 <a class="uc-card" href="collections/"><strong>:material-package-variant: All collections</strong><span>Every Certified and Validated collection with its modules, roles and plugins.</span></a>
 <a class="uc-card" href="explorer/"><strong>:material-magnify: Module Explorer</strong><span>Search thousands of modules by what you want to automate.</span></a>
+<a class="uc-card" href="downloads/"><strong>:material-file-pdf-box: PDF downloads</strong><span>1,519 use cases in the original document format, one PDF per domain.</span></a>
 </div>
 
 ## How a use case is written

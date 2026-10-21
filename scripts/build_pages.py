@@ -408,6 +408,7 @@ def main():
         {"Use cases": uc_nav},
         {"Vendors": vendor_nav},
         {"Collections": [{"All collections": "collections/index.md"}, {"Module Explorer": "explorer.md"}]},
+        {"Downloads": "downloads/index.md"},
         {"About": ["about/how-to-use.md", "about/contributing.md", "about/methodology.md"]},
     ]
     base = (ROOT / "mkdocs.base.yml").read_text()
