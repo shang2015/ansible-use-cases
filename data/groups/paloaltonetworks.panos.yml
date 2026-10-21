@@ -1,0 +1,150 @@
+fqcn: paloaltonetworks.panos
+product: Palo Alto Networks PAN-OS and Panorama
+notes:
+- Module names have the panos_ prefix omitted.
+use_cases:
+- title: Manage security policy rules
+  description: Create and order security, NAT, policy-based forwarding and decryption rules, and test
+    traffic against the rule base.
+  components:
+    security_rule: Security rules
+    nat_rule2: NAT rules
+    pbf_rule: Policy-based forwarding rules
+    decryption_rule: Decryption rules
+    match_rule: Security rule match tests
+    pg: Security profile groups
+- title: Manage policy objects
+  description: Maintain addresses, services, applications, URL categories, tags, schedules, regions and
+    dynamic lists used by rules.
+  components:
+    address_object: Address objects
+    address_group: Address groups
+    service_object: Service objects
+    service_group: Service groups
+    application_object: Application objects
+    application_filter: Application filters
+    application_group: Application groups
+    custom_url_category: Custom URL categories
+    edl: External dynamic lists
+    tag_object: Tags
+    schedule_object: Schedules
+    region: Regions
+    dynamic_user_group: Dynamic user groups
+    registered_ip: Registered IP addresses
+    userid: User-ID mappings
+- title: Configure zones, interfaces and Layer 2 switching
+  description: Set up security zones, data-port, aggregate, loopback, tunnel and VLAN interfaces, subinterfaces,
+    virtual wires and DHCP.
+  components:
+    zone: Security zones
+    interface: Ethernet interfaces
+    aggregate_interface: Aggregate interfaces
+    loopback_interface: Loopback interfaces
+    tunnel: Tunnel interfaces
+    vlan: VLANs
+    vlan_interface: VLAN interfaces
+    l2_subinterface: Layer 2 subinterfaces
+    l3_subinterface: Layer 3 subinterfaces
+    virtual_wire: Virtual wires
+    ipv6_address: IPv6 interface addresses
+    dhcp: DHCP
+    dhcp_relay: DHCP relay
+    dhcp_relay_ipv6_address: DHCP IPv6 relay addresses
+    management_profile: Interface management profiles
+- title: 'Configure routing: virtual routers, BGP and OSPF'
+  description: Manage virtual routers and logical routers with static routes, BGP peers and policies,
+    OSPF areas and redistribution.
+  components:
+    virtual_router: Virtual routers
+    static_route: Static routes
+    redistribution: Redistribution profiles
+    bgp: BGP
+    bgp_peer_group: BGP peer groups
+    bgp_peer: BGP peers
+    bgp_auth: BGP authentication profiles
+    bgp_dampening: BGP dampening profiles
+    bgp_aggregate: BGP aggregation
+    bgp_conditional_advertisement: BGP conditional advertisement
+    bgp_policy_filter: BGP policy filters
+    bgp_policy_rule: BGP policy rules
+    bgp_redistribute: BGP redistribution rules
+    logical_router: Logical routers
+    logical_router_vrf: Logical router VRFs
+    logical_router_vrf_static_route: Logical router static routes
+    logical_router_vrf_ospf_area: OSPF areas
+    logical_router_vrf_ospf_area_interface: OSPF area interfaces
+- title: Build VPN and tunnels
+  description: Configure IKE gateways, IKE and IPsec crypto profiles, IPsec tunnels, proxy IDs and GRE
+    tunnels.
+  components:
+    ike_crypto_profile: IKE crypto profiles
+    ike_gateway: IKE gateways
+    ipsec_profile: IPsec crypto profiles
+    ipsec_tunnel: IPsec tunnels
+    ipsec_ipv4_proxyid: IPsec proxy IDs
+    gre_tunnel: GRE tunnels
+- title: Forward logs and send alerts
+  description: Define syslog, HTTP, email and SNMP server profiles and log forwarding profiles with their
+    match lists.
+  components:
+    syslog_profile: Syslog profiles
+    syslog_server: Syslog servers
+    http_profile: HTTP server profiles
+    http_server: HTTP servers
+    http_profile_header: HTTP profile headers
+    http_profile_param: HTTP profile parameters
+    email_profile: Email profiles
+    email_server: Email servers
+    snmp_profile: SNMP profiles
+    snmp_v2c_server: SNMP v2c servers
+    snmp_v3_server: SNMP v3 servers
+    log_forwarding_profile: Log forwarding profiles
+    log_forwarding_profile_match: Log forwarding match lists
+    log_forwarding_profile_match_list_action: Log forwarding match actions
+    eda_event_source:logs: PAN-OS log events (Event-Driven Ansible)
+- title: Manage Panorama device groups and templates
+  description: Organise managed firewalls with device groups, templates, template stacks and template
+    variables.
+  components:
+    device_group: Device groups
+    template: Templates
+    template_stack: Template stacks
+    template_variable: Template variables
+- title: Commit and push configuration
+  description: Commit candidate configuration on firewalls and Panorama, push to managed devices, and
+    load, import, export or edit configuration.
+  components:
+    commit_firewall: Firewall commit
+    commit_panorama: Panorama commit
+    commit_push: Push to managed devices
+    config_element: Configuration elements
+    loadcfg: Configuration load
+    import: File import
+    export: File export
+- title: 'Administer devices: access, certificates, licences and upgrades'
+  description: Manage administrators, API keys, SSH-based admin and certificate tasks, licences, content
+    updates, software versions, HA, restarts and VM-Series bootstrapping.
+  components:
+    administrator: Administrators
+    admpwd: Admin password change
+    api_key: API keys
+    cert_gen_ssh: Self-signed certificates
+    mgtconfig: Device management settings
+    lic: Licence authcodes
+    dynamic_updates: Dynamic updates
+    software: Software versions
+    ha: High availability
+    restart: Device restart
+    vm_auth_key: VM-Series auth keys
+- title: Check device state and run operational commands
+  description: Verify readiness and HA role, collect facts, take and compare state snapshots, and run
+    operational or type commands.
+  components:
+    check: Device readiness check
+    active_in_ha: Active HA node check
+    readiness_checks: Readiness checks
+    facts: Facts
+    state_snapshot: State snapshots
+    snapshot_report: Snapshot comparison reports
+    op: Operational commands
+    type_cmd: Type commands

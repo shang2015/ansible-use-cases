@@ -1,0 +1,31 @@
+fqcn: infra.osbuild
+product: RHEL image builder (osbuild)
+use_cases:
+- title: Compose images from blueprints
+  description: Create and push blueprints, add custom package repositories, start composes, wait for completion,
+    export images and inject Kickstart files.
+  components:
+    create_blueprint: Blueprints
+    push_blueprint: Blueprint push
+    list_blueprints: Blueprint list
+    repository: Custom source repositories
+    rhsm_repo: RHSM repositories
+    start_compose: Composes
+    wait_compose: Compose completion
+    export_compose: Compose export
+    get_all_finished_images: Finished images
+    inject_ks: Kickstart injection
+    role:builder: Image builder
+    playbook:osbuild_builder: Run builder role
+- title: Set up build servers and update edge systems
+  description: Set up the osbuild compose server, populate AAP with content, gather rpm-ostree system
+    information and update systems.
+  components:
+    role:setup_server: Compose server
+    role:populate_aap: AAP content population
+    role:system_info: rpm-ostree system information
+    role:update_system: rpm-ostree updates
+    playbook:osbuild_setup_server: Set up server
+    playbook:osbuild_populate_aap: Populate AAP
+    playbook:osbuild_system_info: System information
+    playbook:osbuild_update_system: Update systems

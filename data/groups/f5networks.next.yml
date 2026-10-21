@@ -1,0 +1,31 @@
+fqcn: f5networks.next
+product: F5 BIG-IP Next
+use_cases:
+- title: Deploy and onboard BIG-IP Next instances
+  description: Deploy instances on F5OS and VMware, discover them in Central Manager, manage providers
+    and licenses.
+  components:
+    next_deploy_f5os: F5OS deployments
+    next_deploy_vmware: VMware deployments
+    next_discover: Instance discovery
+    next_provider: Providers
+    next_license: Licenses
+    device: Device information
+- title: Configure applications, certificates and high availability
+  description: Deploy AS3 declarations, manage certificates, files, high availability, failover and global
+    resiliency groups.
+  components:
+    next_as3_deploy: AS3 declarations
+    ssl_certificate_create: Certificate creation
+    ssl_certificate_import: Certificate import
+    next_files: Instance files
+    files: Central Manager files
+    next_ha: High availability
+    next_ha_failover: HA failover
+    next_global_resiliency_group: Global resiliency groups
+- title: Upgrade and back up
+  description: Upgrade instances and back up and restore Central Manager and instance configuration.
+  components:
+    next_upgrade: Instance upgrades
+    backup_restore: Central Manager backup and restore
+    next_backup_restore: Instance backup and restore

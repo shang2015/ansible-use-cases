@@ -1,0 +1,12 @@
+fqcn: infra.convert2rhel
+product: "Red Hat convert2rhel"
+use_cases:
+- title: "Analyse and convert systems to RHEL"
+  description: "Run the convert2rhel pre-conversion analysis, collect and parse its reports and convert supported systems to Red Hat Enterprise Linux."
+  components:
+    "playbook:analysis": "Analysis playbook"
+    "role:analysis": "Analysis"
+    "role:handle_c2r_report": "Report handling"
+    "playbook:convert": "Conversion playbook"
+    "role:convert": "Conversion"
+    "role:common": "Shared tasks"

@@ -1,0 +1,39 @@
+fqcn: microsoft.mecm
+product: Microsoft Configuration Manager (MECM/SCCM)
+use_cases:
+- title: Deploy applications and task sequences
+  description: Create applications, deployment types and deployments, and manage task sequences.
+  components:
+    application: Applications
+    application_deployment_type: Deployment types
+    application_deployments: Application deployments
+    task_sequence: Task sequences
+- title: Manage software updates
+  description: Manage software update groups, memberships, automatic deployment rules and deployments,
+    install updates on clients, and inspect update and WSUS status.
+  components:
+    software_update: Software updates
+    software_update_group: Software update groups
+    software_update_group_membership: Update group membership
+    software_update_adr: Automatic deployment rules
+    software_update_deployment: Update deployments
+    install_updates: Client update installation
+    wsus_server_config: WSUS server configuration
+    wsus_sync_status: WSUS sync status
+- title: Organize devices and client settings
+  description: Manage device collections, maintenance windows, client settings and client actions.
+  components:
+    device_collection: Device collections
+    maintenance_windows: Maintenance windows
+    client_settings: Client settings
+    client_action: Client actions
+- title: Configure sites and content distribution
+  description: Manage boundaries and distribution point groups, the site PowerShell drive, and check backup,
+    distribution point and site status.
+  components:
+    boundaries: Site boundaries
+    distribution_point_group: Distribution point groups
+    site_ps_drive: Site PowerShell drive
+    dp_status: Distribution point status
+    backups_status: Backup status
+    site_status_message: Site status messages

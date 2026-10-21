@@ -1,0 +1,243 @@
+fqcn: netapp.ontap
+product: NetApp ONTAP
+notes:
+- Most modules are idempotent create/modify/delete operations; a few (info, rest, command) are read-only
+  or run arbitrary commands.
+use_cases:
+- title: Provision volumes, qtrees and quotas
+  description: Create, resize, clone and delete FlexVol volumes, with qtrees, quotas, storage efficiency,
+    SnapLock retention and QoS limits.
+  components:
+    volume: Volumes
+    volume_autosize: Volume autosize
+    volume_clone: Volume clones
+    volume_efficiency: Volume efficiency
+    volume_snaplock: Volume SnapLock retention
+    efficiency_policy: Efficiency policies
+    snaplock_clock: SnapLock compliance clock
+    qtree: Qtrees
+    quota_policy: Quota policies
+    quotas: Quotas
+    flexcache: FlexCache relationships
+    qos_policy_group: QoS policy groups
+    qos_adaptive_policy_group: Adaptive QoS policy groups
+- title: Protect data with snapshots and replication
+  description: Take and schedule snapshots, replicate with SnapMirror, manage consistency groups and set
+    up MetroCluster, cluster and SVM peering.
+  components:
+    snapshot: Snapshots
+    snapshot_policy: Snapshot policies
+    snapmirror: SnapMirror relationships
+    snapmirror_policy: SnapMirror policies
+    cg: Consistency groups
+    cg_snapshot: Consistency group snapshots
+    cluster_peer: Cluster peers
+    vserver_peer: SVM peers
+    vserver_peer_permissions: SVM peer permissions
+    metrocluster: MetroCluster
+    metrocluster_dr_group: MetroCluster DR groups
+    mcc_mediator: MetroCluster Mediator
+    support_config_backup: Configuration backup
+    ndmp: NDMP services
+- title: Share files over NFS and SMB
+  description: Configure NFS and CIFS servers and shares, export policies and rules, and the file-level
+    access settings behind them.
+  components:
+    nfs: NFS service
+    export_policy: Export policies
+    export_policy_rule: Export policy rules
+    cifs: CIFS shares
+    cifs_acl: CIFS share ACLs
+    cifs_server: CIFS servers
+    cifs_unix_symlink_mapping: UNIX symlink mappings
+    vserver_cifs_security: CIFS security settings
+    domain_tunnel: Domain tunnel
+    active_directory: Active Directory accounts
+    active_directory_domain_controllers: Preferred domain controllers
+- title: Control file access, auditing and virus scanning
+  description: Set NTFS permissions and file-directory security policies, configure FPolicy and audit
+    logging, and enable Vscan.
+  components:
+    fdsd: File directory security descriptors
+    fdsp: File directory security policies
+    fdspt: Security policy tasks
+    fdss: File directory security apply
+    file_directory_policy: File-directory policies
+    file_security_permissions: NTFS file permissions
+    file_security_permissions_acl: NTFS permission ACLs
+    ntfs_dacl: NTFS DACLs
+    ntfs_sd: NTFS security descriptors
+    fpolicy: FPolicy enable and disable
+    fpolicy_event: FPolicy events
+    fpolicy_ext_engine: FPolicy external engines
+    fpolicy_policy: FPolicy policies
+    fpolicy_scope: FPolicy scopes
+    vserver_audit: SVM audit configuration
+    vscan: Vscan service
+    vscan_on_access_policy: Vscan on-access policies
+    vscan_on_demand_task: Vscan on-demand tasks
+    vscan_scanner_pool: Vscan scanner pools
+- title: Provision block storage (iSCSI, FC and NVMe)
+  description: Create LUNs and ASA r2 storage units, map them to initiators with igroups and portsets,
+    and configure iSCSI, FC and NVMe services.
+  components:
+    lun: LUNs
+    lun_copy: LUN copies
+    lun_map: LUN maps
+    lun_map_reporting_nodes: LUN map reporting nodes
+    igroup: Initiator groups
+    igroup_initiator: Initiators
+    portset: Portsets
+    iscsi: iSCSI service
+    iscsi_security: iSCSI security
+    fcp: FCP service
+    wwpn_alias: WWPN aliases
+    ucadapter: Unified connect adapters
+    nvme: NVMe service
+    nvme_namespace: NVMe namespaces
+    nvme_subsystem: NVMe subsystems
+    storage_unit: ASA r2 storage units
+    storage_unit_snapshot: ASA r2 storage unit snapshots
+- title: Provide S3 object storage
+  description: Enable the S3 service, create buckets, users, groups and policies, and configure object
+    store targets.
+  components:
+    s3_services: S3 services
+    s3_buckets: S3 buckets
+    s3_users: S3 users
+    s3_groups: S3 groups
+    s3_policies: S3 policies
+    object_store: Object stores
+- title: Manage SVMs and identity services
+  description: Create storage virtual machines and set their options, and configure LDAP, Kerberos, name
+    services, UNIX and local CIFS users and name mappings.
+  components:
+    svm: SVMs
+    svm_options: SVM options
+    ldap: LDAP configuration
+    ldap_client: LDAP clients
+    kerberos_realm: Kerberos realms
+    kerberos_interface: Kerberos interfaces
+    name_mappings: Name mappings
+    name_service_switch: Name service switch
+    local_hosts: Local hosts
+    unix_group: UNIX groups
+    unix_user: UNIX users
+    cifs_local_group: CIFS local groups
+    cifs_local_group_member: CIFS local group members
+    cifs_local_user: CIFS local users
+    cifs_local_user_modify: CIFS local user changes
+    cifs_local_user_set_password: CIFS local user passwords
+    cifs_privileges: CIFS privileges
+- title: Configure cluster networking
+  description: Manage IPspaces, broadcast domains, ports, VLANs, interface groups, subnets, LIFs, routes,
+    BGP and service policies.
+  components:
+    ipspace: IPspaces
+    broadcast_domain: Broadcast domains
+    broadcast_domain_ports: Broadcast domain ports
+    net_port: Network ports
+    net_ifgrp: Interface groups
+    net_vlan: VLANs
+    net_subnet: Subnets
+    net_routes: Routes
+    ports: Ports
+    interface: Logical interfaces (LIFs)
+    service_policy: Service policies
+    service_processor_network: Service processor network
+    bgp_config: BGP configuration
+    bgp_peer_group: BGP peer groups
+    firewall_policy: Firewall policies
+- title: Build and maintain the cluster
+  description: Create clusters and add nodes, assign disks and partitions, manage aggregates, HA and failover,
+    licenses, and upgrade software and firmware.
+  components:
+    cluster: Clusters and nodes
+    node: Nodes
+    cluster_ha: Cluster HA
+    aggregate: Aggregates
+    disks: Disk assignment
+    partitions: Partition assignment
+    disk_options: Disk options
+    storage_failover: Storage failover
+    storage_auto_giveback: Storage auto giveback
+    license: Licenses
+    software_update: Software updates
+    firmware_upgrade: Firmware upgrades
+    autoupdate_config: Automatic update configuration
+    autoupdate_support: Automatic update status
+    playbook:examples.na_ontap_pb_upgrade_firmware: Firmware upgrade playbook
+    playbook:examples.na_ontap_pb_upgrade_firmware_with_extra_vars: Firmware upgrade playbook (extra vars)
+    playbook:examples.na_ontap_pb_upgrade_firmware_with_vars_file: Firmware upgrade playbook (vars file)
+- title: Secure the cluster and control administrator access
+  description: Manage administrator accounts and roles, certificates, SSL, IPsec, SSH, key managers and
+    multi-admin verification.
+  components:
+    user: Administrator accounts
+    user_role: Roles
+    user_role_config: Account restrictions
+    publickey: SSH public keys
+    security_certificates: Certificates
+    security_config: SSL security configuration
+    security_ssh: SSH security
+    security_key_manager: Key managers
+    security_ipsec_config: IPsec configuration
+    security_ipsec_ca_certificate: IPsec CA certificates
+    security_ipsec_policy: IPsec policies
+    mav_config: Multi-admin verification settings
+    mav_rule: Multi-admin verification rules
+    mav_approval_group: Multi-admin approval groups
+    playbook:examples.na_ontap_pb_install_SSL_certificate: SSL certificate installation playbook
+    playbook:examples.na_ontap_pb_install_SSL_certificate_REST: SSL certificate installation playbook
+      (REST)
+- title: Configure cluster services, monitoring and support
+  description: Set DNS, NTP, schedules and login banners, and configure AutoSupport, EMS, SNMP and log
+    forwarding.
+  components:
+    dns: DNS
+    ntp: NTP servers
+    ntp_key: NTP keys
+    job_schedule: Job schedules
+    cli_timeout: CLI timeout
+    login_messages: Login banner
+    motd: Message of the day
+    autosupport: AutoSupport
+    autosupport_invoke: AutoSupport messages
+    ems_config: EMS configuration
+    ems_destination: EMS destinations
+    ems_filter: EMS filters
+    log_forward: Log forwarding
+    snmp: SNMP users
+    snmp_config: SNMP configuration
+    snmp_traphosts: SNMP trap hosts
+- title: Gather facts, run commands and call APIs
+  description: Collect cluster information, wait for conditions, and run CLI, REST or ZAPI calls when
+    no dedicated module exists.
+  components:
+    info: Cluster information (ZAPI)
+    rest: Cluster information (REST)
+    command: CLI commands
+    rest_cli: CLI over REST
+    ssh_command: CLI over SSH
+    restit: Generic REST API calls
+    zapit: Generic ZAPI calls
+    debug: Connection debugging
+    wait_for_condition: Wait for condition
+    filter:iso8601_duration_from_seconds: Seconds to ISO 8601 duration filter
+    filter:iso8601_duration_to_seconds: ISO 8601 duration to seconds filter
+    playbook:examples.filter.test_na_filter_iso8601: ISO 8601 filter test playbook
+    playbook:examples.json_query.na_ontap_pb_get_online_volumes: Online volumes query playbook
+    playbook:examples.json_query.na_ontap_pb_get_online_volumes_loop: Online volumes query playbook (loop)
+    playbook:examples.rest_apis.list_aggregates: List aggregates playbook
+    playbook:examples.rest_apis.volumes: Volumes REST API playbook
+    playbook:examples.support.debug_connectivity: Connectivity debug playbook
+- title: Deploy standard ONTAP configurations with roles
+  description: Use ready-made roles to configure a cluster, create SVMs, NAS shares, LUNs and SnapMirror
+    relationships, or delete an SVM with its data.
+  components:
+    role:na_ontap_cluster_config: Cluster configuration
+    role:na_ontap_vserver_create: SVM creation
+    role:na_ontap_nas_create: NFS and CIFS shares
+    role:na_ontap_san_create: LUN creation
+    role:na_ontap_snapmirror_create: SnapMirror relationship
+    role:na_ontap_vserver_delete: SVM deletion

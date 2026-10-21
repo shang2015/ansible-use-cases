@@ -1,0 +1,62 @@
+fqcn: confluent.platform
+product: Confluent Platform
+use_cases:
+- title: Deploy Kafka brokers and controllers
+  description: Install and configure Kafka brokers and KRaft controllers, including common prerequisites,
+    variables, and the static-to-dynamic quorum migration.
+  components:
+    role:common: Common prerequisites
+    role:variables: Shared variables
+    role:kafka_broker: Kafka brokers
+    role:kafka_controller: Kafka controllers
+    playbook:all: Host prerequisites
+    playbook:kafka_broker: Kafka broker status
+    playbook:kafka_controller: Kafka controller playbook
+    playbook:StaticToDynamicQuorumMigration: KRaft quorum migration precheck
+    playbook:validations.validate_dynamic_quorum_configs: KRaft dynamic quorum validation
+- title: Deploy Connect, Schema Registry, ksqlDB and REST services
+  description: Set up Kafka Connect, Replicator, Schema Registry with exporter and importer, ksqlDB, REST
+    Proxy and Control Center.
+  components:
+    role:kafka_connect: Kafka Connect clusters
+    role:kafka_connect_replicator: Connect Replicator
+    role:schema_registry: Schema Registry
+    role:schema_exporter: Schema Exporter
+    role:schema_importer: Schema Importer
+    role:ksql: ksqlDB clusters
+    role:kafka_rest: Kafka REST Proxy
+    role:control_center_next_gen: Control Center
+    playbook:kafka_connect: Kafka Connect status
+    playbook:kafka_connect_replicator: Replicator status
+    playbook:schema_registry: Schema Registry provisioning
+    playbook:ksql: ksqlDB status
+    playbook:kafka_rest: REST Proxy status
+    playbook:control_center_next_gen: Control Center status
+    playbook:primary_sr_switchover_cp_to_cc: Schema Registry switchover to Confluent Cloud
+    playbook:validations.primary_sr_switchover_validations: Schema Registry switchover validations
+    kafka_connectors: Kafka connectors
+- title: Secure Confluent Platform
+  description: Configure TLS certificates and keys, Kerberos, and rootless installation.
+  components:
+    role:ssl: TLS certificates and keys
+    role:kerberos: Kerberos configuration
+    playbook:rootless_bootstrap: Rootless bootstrap
+- title: Monitor, validate and collect diagnostics
+  description: Validate hosts, run health checks, restart components, collect logs and support bundles,
+    manage the USM agent and log4j2 policies, and retire bundled monitoring.
+  components:
+    playbook:validate_hosts: Host validation
+    playbook:health_check: Health checks
+    playbook:restart: Component restarts
+    playbook:fetch_logs: Log collection
+    playbook:support_bundle: Support bundle setup
+    callback:support_bundle_on_failure: Support bundle on failure
+    role:usm_agent: USM agent
+    playbook:usm_agent: USM agent playbook
+    playbook:validations.validate_usm_agent_configs: USM agent validation
+    playbook:external_prometheus_teardown_bundled_monitoring: Bundled Prometheus teardown
+    update_log4j2: log4j2 and log redaction
+- title: Generate configuration from Ansible input
+  description: Use custom filters to turn Ansible variables into Confluent Platform configuration.
+  components:
+    filter:filters: Configuration filters

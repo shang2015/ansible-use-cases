@@ -1,0 +1,126 @@
+fqcn: radware.radware_alteon
+product: Radware Alteon
+notes:
+- Module names have the alteon_ prefix omitted.
+use_cases:
+- title: Publish applications with virtual servers and services
+  description: Define virtual servers and services, AppShape++ scripts, content rules, sideband and secure
+    path policies.
+  components:
+    config_virtual_server: Virtual servers
+    config_virtual_service: Virtual services
+    config_appshape: AppShape++ scripts
+    config_content_rule: Content rules
+    config_sideband_policy: Sideband policies
+    config_secure_path_policy: Secure path policies
+    config_slb_port: SLB port settings
+    config_slb_pip: SLB proxy IPs
+    config_slb_pip6: SLB IPv6 proxy IPs
+- title: Manage real servers, groups and health checks
+  description: Add real servers and server groups, check their health over HTTP, TCP or logical expressions,
+    and set operational state.
+  components:
+    config_server: Real servers
+    config_server_group: Server groups
+    config_group_real_server: Group real servers
+    config_fqdn_server: FQDN servers
+    config_health_check_http: HTTP health checks
+    config_health_check_tcp: TCP health checks
+    config_health_check_logexp: Logical expression health checks
+    oper_server: Real server operational state
+- title: Route traffic on Layer 7 content
+  description: Match requests on cookies, headers, host names, paths, file names and types with Layer
+    7 content classes.
+  components:
+    config_l7_content_class: Content classes
+    config_l7_content_class_cookie: Cookie classes
+    config_l7_content_class_header: Header classes
+    config_l7_content_class_hostname: Host name classes
+    config_l7_content_class_path: URL path classes
+    config_l7_content_class_filename: URL file name classes
+    config_l7_content_class_filetype: URL file type classes
+- title: Distribute traffic across sites with GSLB
+  description: Configure GSLB rules and network preferences, DNS responders, global redirection and network
+    classes.
+  components:
+    config_gslb_rule: GSLB rules
+    config_gslb_network: GSLB network preferences
+    config_dns_responders: DNS responders
+    config_global_redirection: Global traffic redirection
+    config_network_class_ip: IP network classes
+    config_network_class_region: Region network classes
+    config_gel: GEL parameters
+- title: Terminate and inspect SSL/TLS
+  description: Manage SSL certificates, certificate groups, keys, SSL policies, and client and server
+    authentication policies.
+  components:
+    config_ssl_cert: SSL certificates
+    config_ssl_cert_group: Certificate groups
+    config_ssl_key: SSL keys
+    config_ssl_policy: SSL policies
+    config_ssl_client_auth_policy: Client authentication policies
+    config_ssl_server_auth_policy: Server authentication policies
+    config_security_global: Global security settings
+- title: Configure Layer 2 and Layer 3 networking
+  description: Set up physical ports, VLANs, LACP, spanning tree, LLDP, interfaces, gateways, static routes,
+    BOOTP relay and BGP.
+  components:
+    config_physical_port: Physical ports
+    config_l2_vlan: VLANs
+    config_lacp_aggregation: LACP aggregation
+    config_spanning_tree: Spanning tree
+    config_l2_lldp: LLDP
+    config_l3_interface: Interfaces
+    config_l3_gateway: Gateways
+    config_static_routes: Static routes
+    config_l3_bootp_relay: BOOTP relay
+    config_bgp_global: BGP global
+    config_bgp_peer: BGP peers
+    config_bgp_aggregations: BGP aggregations
+- title: Configure high availability
+  description: Set up HA, floating IPs, HA services, configuration sync, VX peer sync, and force an HA
+    backup state.
+  components:
+    config_high_availability: High availability
+    config_ha_floating_ip: Floating IPs
+    config_ha_service: HA services
+    config_ha_config_sync: Configuration sync
+    config_system_vx_peer_sync: VX peer sync
+    oper_ha_backup: HA backup state
+- title: Administer access, SNMP and system services
+  description: Manage local users, RADIUS and TACACS+, management access, DNS client, time, logging, alerts,
+    and SNMP and SNMPv3.
+  components:
+    config_system_local_user: Local users
+    config_system_predefined_local_users: Predefined local users
+    config_system_radius_auth: RADIUS authentication
+    config_system_tacacs_auth: TACACS+ authentication
+    config_system_management_access: Management access
+    config_system_dns_client: DNS client
+    config_system_time_date: Time and date
+    config_system_logging: Logging
+    config_system_alerts: System alerts
+    config_system_snmp: SNMP
+    config_snmp_general: SNMP general
+    config_snmpv3_access: SNMPv3 access
+    config_snmpv3_community: SNMPv3 communities
+    config_snmpv3_group: SNMPv3 groups
+    config_snmpv3_notify: SNMPv3 notify
+    config_snmpv3_target_addr_new_cfg: SNMPv3 target addresses
+    config_snmpv3_target_params: SNMPv3 target parameters
+    config_snmpv3_usm_user: SNMPv3 USM users
+    config_snmpv3_view_tree_family: SNMPv3 view tree families
+- title: Manage devices, configuration and software
+  description: Collect device facts, back up or restore configuration, run CLI commands, reboot, create
+    vADCs and install software images.
+  components:
+    device: Device facts
+    device_configuration: Configuration download and upload
+    mng_config: Configuration management
+    config_alteon_cli_command: CLI commands
+    mng_device_reboot: Reboot
+    config_vadc_instance: vADC instances
+    software_image_upload: Image upload
+    software_install: Software install
+    software_install_vadc: vADC software install
+    software_vadc_default: vADC default version

@@ -1,0 +1,53 @@
+fqcn: cisco.iosxr
+product: Cisco IOS-XR
+use_cases:
+- title: Configure interfaces and link aggregation
+  description: Manage interfaces, Layer 2 and Layer 3 settings, LAGs, LACP and LLDP.
+  components:
+    interfaces: Interfaces
+    l2_interfaces: Layer 2 interfaces
+    l3_interfaces: Layer 3 interfaces
+    lag_interfaces: LAG interfaces
+    lacp: LACP
+    lacp_interfaces: LACP interfaces
+    lldp_global: LLDP
+    lldp_interfaces: LLDP interfaces
+- title: Configure routing and VRFs
+  description: Manage BGP, OSPFv2 and OSPFv3, static routes, prefix lists, route maps and VRFs.
+  components:
+    bgp_global: BGP
+    bgp_address_family: BGP address families
+    bgp_neighbor_address_family: BGP neighbor address families
+    bgp_templates: BGP templates
+    ospfv2: OSPFv2
+    ospfv3: OSPFv3
+    ospf_interfaces: OSPF interfaces
+    static_routes: Static routes
+    prefix_lists: Prefix lists
+    route_maps: Route maps
+    vrf_global: VRFs
+    vrf_address_family: VRF address families
+    vrf_interfaces: VRF interfaces
+- title: Manage access control lists
+  description: Configure ACLs and apply them to interfaces.
+  components:
+    acls: ACLs
+    acl_interfaces: ACLs on interfaces
+- title: Administer the device
+  description: Manage hostname, banners, system attributes, local users, NTP, logging, SNMP and NETCONF.
+  components:
+    system: System attributes
+    hostname: Hostname
+    banner: Banners
+    user: Local users
+    ntp_global: NTP
+    logging_global: Logging
+    snmp_server: SNMP
+    netconf: NETCONF service
+- title: Run commands, push configuration and gather facts
+  description: Run CLI commands, manage configuration sections, test reachability and collect device facts.
+  components:
+    config: Configuration
+    command: CLI commands
+    ping: Reachability tests
+    facts: Device facts

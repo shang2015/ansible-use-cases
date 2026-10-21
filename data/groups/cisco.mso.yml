@@ -1,0 +1,156 @@
+fqcn: cisco.mso
+product: Cisco Nexus Dashboard Orchestrator (ACI Multi-Site)
+notes:
+- Modules are prefixed mso_ (legacy schema-based API) and ndo_ (template-based API of newer Nexus Dashboard
+  Orchestrator releases).
+use_cases:
+- title: Manage multi-site schemas and templates
+  description: Create, clone, validate and migrate schemas and templates, and track the orchestrator version
+    or call its REST API directly.
+  components:
+    mso_rest: Direct REST API access
+    mso_version: Orchestrator version
+    mso_schema: Schemas
+    mso_schema_clone: Schema cloning
+    mso_schema_template: Schema templates
+    mso_schema_template_clone: Template cloning
+    mso_schema_template_migrate: BD and EPG migration between templates
+    mso_schema_validate: Schema validation
+    ndo_template: Templates
+- title: Deploy templates to sites
+  description: Push templates to ACI sites and check the objects affected before deployment.
+  components:
+    mso_schema_template_deploy: Pre-deployment checks
+    ndo_template_deploy: Template deployment
+    mso_schema_site: Sites in schemas
+- title: 'Manage tenant networking: VRFs, bridge domains and subnets'
+  description: Define VRFs, bridge domains, their subnets and DHCP policies in schema templates and at
+    the site level.
+  components:
+    mso_schema_template_vrf: Template VRFs
+    mso_schema_template_vrf_rp: VRF rendezvous points
+    mso_schema_template_bd: Template bridge domains
+    mso_schema_template_bd_subnet: Template BD subnets
+    ndo_schema_template_bd_dhcp_policy: BD DHCP policies
+    mso_schema_site_vrf: Site-local VRFs
+    mso_schema_site_bd: Site-local bridge domains
+    mso_schema_site_bd_subnet: Site-local BD subnets
+    mso_schema_site_bd_l3out: Site-local BD L3Outs
+- title: Manage application profiles and endpoint groups
+  description: Create application network profiles and EPGs with their subnets, uSeg attributes, annotations,
+    domains and static bindings.
+  components:
+    mso_schema_template_anp: Template application profiles
+    mso_schema_template_anp_epg: Template EPGs
+    mso_schema_template_anp_epg_subnet: Template EPG subnets
+    mso_schema_template_anp_epg_useg_attribute: Template EPG uSeg attributes
+    mso_schema_template_anp_epg_annotation: EPG annotations
+    mso_schema_site_anp: Site-local application profiles
+    mso_schema_site_anp_epg: Site-local EPGs
+    mso_schema_site_anp_epg_domain: Site EPG domains
+    mso_schema_site_anp_epg_staticleaf: Site EPG static leafs
+    mso_schema_site_anp_epg_staticport: Site EPG static ports
+    mso_schema_site_anp_epg_subnet: Site EPG subnets
+    mso_schema_site_anp_epg_useg_attribute: Site EPG uSeg attributes
+- title: Manage contracts, filters and service chaining
+  description: Define contracts and filters between EPGs, external EPGs and VRFs, and insert L4-L7 service
+    graphs and device clusters.
+  components:
+    mso_schema_template_anp_epg_contract: EPG contracts
+    mso_schema_template_anp_epg_intra_epg_contract: Intra-EPG contracts
+    mso_schema_template_contract_filter: Contract filters
+    mso_schema_template_filter_entry: Filter entries
+    mso_schema_template_vrf_contract: VRF contracts
+    mso_schema_template_external_epg_contract: External EPG contracts
+    mso_schema_template_service_graph: Template service graphs
+    mso_schema_template_contract_service_graph: Template contract service graphs
+    mso_schema_site_service_graph: Site service graphs
+    mso_schema_site_contract_service_graph: Site contract service graphs
+    ndo_schema_template_contract_service_chain: Contract service chaining
+    ndo_service_device_cluster: Service device clusters
+- title: Connect to external networks with L3Outs and external EPGs
+  description: Define external EPGs and L3Outs in schemas and L3Out templates, including interfaces, SVIs,
+    BGP peers and static routes.
+  components:
+    mso_schema_template_external_epg: Template external EPGs
+    mso_schema_template_externalepg: External EPGs (legacy)
+    mso_schema_template_external_epg_subnet: External EPG subnets
+    mso_schema_site_external_epg: Site external EPGs
+    mso_schema_template_l3out: Template L3Outs
+    mso_schema_site_l3out: Site L3Outs
+    ndo_l3out_template: L3Out templates
+    ndo_l3out_annotation: L3Out annotations
+    ndo_l3_domain: L3 domains
+    ndo_l3out_routed_interface: Routed interfaces
+    ndo_l3out_routed_sub_interface: Routed sub-interfaces
+    ndo_l3out_svi_interface: SVI interfaces
+    ndo_l3out_floating_svi_interface: Floating SVI interfaces
+    ndo_l3out_floating_svi_interface_path_attributes: Floating SVI path attributes
+    ndo_l3out_secondary_ip: Secondary IP addresses
+    ndo_l3out_bgp_peer: BGP peers
+    ndo_l3out_node_static_route: Node static routes
+    ndo_l3out_node_static_route_next_hop: Static route next hops
+    ndo_l3out_node_group_policy: Node group policies
+    ndo_l3out_node_routing_policy: Node routing policies
+    ndo_l3out_interface_group_policy: Interface group policies
+    ndo_l3out_interface_routing_policy: Interface routing policies
+- title: Control routing with route maps and match rules
+  description: Manage route map policies, match rules and set rules, BGP peer prefix policies and multicast
+    route maps.
+  components:
+    ndo_route_map_policy_route_control: Route control route maps
+    ndo_route_map_policy_route_control_context: Route map contexts
+    ndo_route_map_policy_multicast: Multicast route maps
+    ndo_match_rule_policy: Match rule policies
+    ndo_match_rule_prefix: Match prefix lists
+    ndo_match_rule_community_term: Match community terms
+    ndo_set_rule_policy: Set rule policies
+    ndo_tenant_bgp_peer_prefix_policy: BGP peer prefix policies
+- title: Define tenant protocol, QoS and telemetry policies
+  description: Manage tenant policy templates for IGMP and MLD snooping, custom QoS, NetFlow and SPAN,
+    plus endpoint tag policies.
+  components:
+    ndo_tenant_igmp_interface_policy: IGMP interface policies
+    ndo_tenant_igmp_snooping_policy: IGMP snooping policies
+    ndo_tenant_mld_snooping_policy: MLD snooping policies
+    ndo_tenant_custom_qos_policy: Custom QoS policies
+    ndo_tenant_netflow_exporter: NetFlow exporters
+    ndo_tenant_netflow_monitor: NetFlow monitors
+    ndo_tenant_netflow_record: NetFlow records
+    ndo_tenant_span_session: Tenant SPAN sessions
+    ndo_endpoint_ip_tag_policy: Endpoint IP tag policies
+    ndo_endpoint_mac_tag_policy: Endpoint MAC tag policies
+    ndo_ipsla_monitoring_policy: IPSLA monitoring policies
+    ndo_ipsla_track: IPSLA track lists
+- title: 'Configure fabric access: domains, VLAN pools and interfaces'
+  description: Manage physical domains, VLAN pools, and physical, port-channel and vPC interfaces and
+    FEX devices in fabric policy templates.
+  components:
+    ndo_physical_domain: Physical domains
+    ndo_vlan_pool: VLAN pools
+    ndo_physical_interface: Physical interfaces
+    ndo_port_channel_interface: Port channel interfaces
+    ndo_virtual_port_channel_interface: Virtual port channel interfaces
+    ndo_interface_setting: Interface policy groups
+    ndo_fex_device: FEX devices
+    ndo_macsec_policy: MACsec policies
+    ndo_synce_interface_policy: SyncE interface policies
+- title: 'Configure fabric-wide policies: pods, nodes, time, QoS and monitoring'
+  description: Manage pod and node profiles and settings, NTP and PTP, MCP, QoS class policies and fabric
+    SPAN sessions.
+  components:
+    ndo_pod_profile: Pod profiles
+    ndo_pod_settings: Pod settings
+    ndo_node_profile: Node profiles
+    ndo_node_setting: Node settings
+    ndo_ntp_policy: NTP policies
+    ndo_ptp_policy: PTP policies
+    ndo_ptp_policy_profiles: PTP policy profiles
+    ndo_mcp_global_policy: MCP global policy
+    ndo_qos_class_policy: QoS class policies
+    ndo_qos_dscp_cos_translation_policy: QoS DSCP-CoS translation policies
+    ndo_fabric_span_session: Fabric SPAN sessions
+    ndo_fabric_span_session_source: Fabric SPAN sources
+    ndo_fabric_span_session_source_filter: Fabric SPAN source filters
+    ndo_dhcp_option_policy: DHCP option policies
+    ndo_dhcp_relay_policy: DHCP relay policies

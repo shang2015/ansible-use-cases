@@ -1,0 +1,59 @@
+fqcn: junipernetworks.junos
+product: Juniper Junos
+use_cases:
+- title: Configure interfaces, VLANs and link aggregation
+  description: Manage interfaces, Layer 2 and Layer 3 settings, VLANs, LAGs, LACP and LLDP.
+  components:
+    interfaces: Interfaces
+    l2_interfaces: Layer 2 interfaces
+    l3_interfaces: Layer 3 interfaces
+    vlans: VLANs
+    lag_interfaces: LAG interfaces
+    lacp: LACP
+    lacp_interfaces: LACP interfaces
+    lldp_global: LLDP
+    lldp_interfaces: LLDP interfaces
+- title: Configure routing
+  description: Manage BGP, OSPFv2 and OSPFv3, static routes, routing options, routing instances, VRFs
+    and prefix lists.
+  components:
+    bgp_global: BGP
+    bgp_address_family: BGP address families
+    ospfv2: OSPFv2
+    ospfv3: OSPFv3
+    ospf_interfaces: OSPF interfaces
+    static_routes: Static routes
+    routing_options: Routing options
+    routing_instances: Routing instances
+    vrf: VRFs
+    prefix_lists: Prefix lists
+- title: Manage security policies and ACLs
+  description: Configure firewall filters, ACLs, security zones and security policies.
+  components:
+    acls: ACLs
+    acl_interfaces: ACLs on interfaces
+    security_zones: Security zones
+    security_policies: Security policies
+    security_policies_global: Global security policy settings
+- title: Administer the device
+  description: Manage hostname, banners, system settings, local users, NTP, logging, SNMP, NETCONF and
+    packages.
+  components:
+    system: System attributes
+    hostname: Hostname
+    banner: Banners
+    user: Local users
+    ntp_global: NTP
+    logging_global: Logging
+    snmp_server: SNMP
+    netconf: NETCONF service
+    package: Packages
+- title: Run commands, push configuration and gather facts
+  description: Run CLI commands and NETCONF RPCs, load configuration, test reachability and collect device
+    facts.
+  components:
+    config: Configuration
+    command: CLI commands
+    rpc: NETCONF RPCs
+    ping: Reachability tests
+    facts: Device facts

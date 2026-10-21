@@ -1,0 +1,150 @@
+fqcn: os_migrate.os_migrate
+product: OpenStack (workload migration)
+notes:
+- Most resources have an export module, an import module, a playbook and a role of the same name.
+use_cases:
+- title: Migrate projects, users and role assignments
+  description: Export projects, users and their role assignments from a source OpenStack cloud and import
+    them into a destination cloud.
+  components:
+    export_project: Export project
+    export_user: Export user
+    export_user_project_role_assignment: Export user project role assignment
+    import_project: Import project
+    import_user: Import user
+    import_user_project_role_assignment: Import user project role assignment
+    os_role_assignments: Role assignments information
+    playbook:export_projects: Export projects playbook
+    playbook:export_user_project_role_assignments: Export user project role assignments playbook
+    playbook:export_users: Export users playbook
+    playbook:import_projects: Import projects playbook
+    playbook:import_user_project_role_assignments: Import user project role assignments playbook
+    playbook:import_users: Import users playbook
+    role:export_projects: Export projects role
+    role:export_user_project_role_assignments: Export user project role assignments role
+    role:export_users: Export users role
+    role:import_projects: Import projects role
+    role:import_user_project_role_assignments: Import user project role assignments role
+    role:import_users: Import users role
+- title: Migrate networks and security groups
+  description: Export and import networks, subnets, routers and router interfaces, and security groups
+    with their rules, and query routers and security groups.
+  components:
+    export_network: Export network
+    export_router: Export router
+    export_router_interfaces: Export router interfaces
+    export_security_group: Export security group
+    export_security_group_rules: Export security group rules
+    export_subnet: Export subnet
+    import_network: Import network
+    import_router: Import router
+    import_router_interface: Import router interface
+    import_security_group: Import security group
+    import_security_group_rule: Import security group rule
+    import_subnet: Import subnet
+    os_routers: Routers information
+    os_security_groups: Security groups information
+    playbook:export_networks: Export networks playbook
+    playbook:export_router_interfaces: Export router interfaces playbook
+    playbook:export_routers: Export routers playbook
+    playbook:export_security_group_rules: Export security group rules playbook
+    playbook:export_security_groups: Export security groups playbook
+    playbook:export_subnets: Export subnets playbook
+    playbook:import_networks: Import networks playbook
+    playbook:import_router_interfaces: Import router interfaces playbook
+    playbook:import_routers: Import routers playbook
+    playbook:import_security_group_rules: Import security group rules playbook
+    playbook:import_security_groups: Import security groups playbook
+    playbook:import_subnets: Import subnets playbook
+    role:export_networks: Export networks role
+    role:export_router_interfaces: Export router interfaces role
+    role:export_routers: Export routers role
+    role:export_security_group_rules: Export security group rules role
+    role:export_security_groups: Export security groups role
+    role:export_subnets: Export subnets role
+    role:import_networks: Import networks role
+    role:import_router_interfaces: Import router interfaces role
+    role:import_routers: Import routers role
+    role:import_security_group_rules: Import security group rules role
+    role:import_security_groups: Import security groups role
+    role:import_subnets: Import subnets role
+- title: Migrate flavors, images and keypairs
+  description: Export and import Nova flavors, Glance images and keypairs, including users' keypairs.
+  components:
+    export_flavor: Export flavor
+    export_image_blob: Export image blob
+    export_image_meta: Export image meta
+    export_keypair: Export keypair
+    import_flavor: Import flavor
+    import_image: Import image
+    import_keypair: Import keypair
+    os_keypairs: Keypairs information
+    playbook:export_flavors: Export flavors playbook
+    playbook:export_images: Export images playbook
+    playbook:export_keypairs: Export keypairs playbook
+    playbook:export_users_keypairs: Export users keypairs playbook
+    playbook:import_flavors: Import flavors playbook
+    playbook:import_images: Import images playbook
+    playbook:import_keypairs: Import keypairs playbook
+    playbook:import_users_keypairs: Import users keypairs playbook
+    role:export_flavors: Export flavors role
+    role:export_images: Export images role
+    role:export_keypairs: Export keypairs role
+    role:export_users_keypairs: Export users keypairs role
+    role:import_flavors: Import flavors role
+    role:import_images: Import images role
+    role:import_keypairs: Import keypairs role
+    role:import_users_keypairs: Import users keypairs role
+- title: Migrate workloads and volumes
+  description: Export instances and detached volumes, then copy their data to the destination with NBD
+    exports and volume transfers, cleaning up temporary volumes afterwards.
+  components:
+    export_detached_volume: Export detached volume
+    export_workload: Export workload
+    import_volumes_export: Import volumes export
+    import_volumes_src_cleanup: Import volumes src cleanup
+    import_volumes_transfer: Import volumes transfer
+    import_workload_create_instance: Import workload create instance
+    import_workload_dst_check: Import workload dst check
+    import_workload_dst_failure_cleanup: Import workload dst failure cleanup
+    import_workload_export_volume_map: Import workload export volume map
+    import_workload_export_volumes: Import workload export volumes
+    import_workload_prelim: Import workload prelim
+    import_workload_src_check: Import workload src check
+    import_workload_src_cleanup: Import workload src cleanup
+    import_workload_transfer_volumes: Import workload transfer volumes
+    update_workload_nbdkit_uris: Update workload nbdkit uris
+    playbook:export_detached_volumes: Export detached volumes playbook
+    playbook:export_workloads: Export workloads playbook
+    playbook:import_detached_volumes: Import detached volumes playbook
+    playbook:import_from_hypervisor: Import from hypervisor playbook
+    playbook:import_workloads: Import workloads playbook
+    role:export_detached_volumes: Export detached volumes role
+    role:export_workloads: Export workloads role
+    role:import_detached_volumes: Import detached volumes role
+    role:import_from_hypervisor: Import from hypervisor role
+    role:import_workloads: Import workloads role
+- title: Deploy conversion hosts and gather migration facts
+  description: Deploy and delete the conversion hosts that move data, prepare the source and destination
+    clouds, check the authenticated user and conversion host, and filter data in playbooks.
+  components:
+    auth: Authenticated user and project information
+    os_conversion_host: Conversion host information
+    filter:json_query: JMESPath query filter
+    filter:stringfilter: String match filter
+    playbook:delete_conversion_hosts: Delete conversion hosts playbook
+    playbook:deploy_conversion_hosts: Deploy conversion hosts playbook
+    role:conversion_host: Conversion host role
+    role:conversion_host_content: Conversion host content role
+    role:prelude_common: Prelude common role
+    role:prelude_dst: Prelude dst role
+    role:prelude_src: Prelude src role
+- title: Validate migration data
+  description: Read exported resource files and validate the data directory and resource files before
+    import.
+  components:
+    read_resources: Resource file reading
+    validate_resource_files: Validate resource files
+    playbook:validate_data_dir: Validate data dir playbook
+    role:validate_data_dir: Validate data dir role
+    role:validate_resource_files: Validate resource files role

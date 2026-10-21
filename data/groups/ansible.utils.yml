@@ -1,0 +1,91 @@
+fqcn: ansible.utils
+product: Ansible utilities
+use_cases:
+- title: Parse, compare and validate data
+  description: Parse CLI output into structured data, validate data against criteria, and compare or update
+    facts.
+  components:
+    cli_parse: CLI parsing
+    validate: Data validation
+    fact_diff: Fact comparison
+    update_fact: Fact updates
+    filter:validate: Validate filter
+    lookup:validate: Validate lookup
+    test:validate: Validate test
+    filter:fact_diff: Fact diff filter
+- title: Navigate and reshape data structures
+  description: Find values and indices in nested data, flatten it to paths, consolidate facts, add, keep,
+    remove or rename keys, and convert between XML and JSON.
+  components:
+    filter:get_path: Get path filter
+    lookup:get_path: Get path lookup
+    filter:index_of: Index-of filter
+    lookup:index_of: Index-of lookup
+    filter:to_paths: To-paths filter
+    lookup:to_paths: To-paths lookup
+    filter:consolidate: Consolidate facts
+    filter:keep_keys: Keep keys
+    filter:remove_keys: Remove keys
+    filter:replace_keys: Replace keys
+    filter:param_list_compare: Parameter list comparison
+    filter:from_xml: XML to dictionary
+    filter:to_xml: JSON to XML
+- title: Manipulate IP addresses and subnets
+  description: Query, filter and convert IP addresses, subnets and ranges, merge CIDRs, and do host and
+    subnet arithmetic.
+  components:
+    filter:ipaddr: IP address query
+    filter:ipv4: IPv4 filter
+    filter:ipv6: IPv6 filter
+    filter:ipv6form: IPv6 formatting
+    filter:ipwrap: IPv6 bracket wrapping
+    filter:ip4_hex: IPv4 to hex
+    filter:ipcut: IP bit cutting
+    filter:ipmath: IP arithmetic
+    filter:ipsubnet: Subnet manipulation
+    filter:cidr_merge: CIDR merge
+    filter:nthhost: Nth host
+    filter:next_nth_usable: Next usable address
+    filter:previous_nth_usable: Previous usable address
+    filter:usable_range: Usable range
+    filter:network_in_network: Network in network
+    filter:network_in_usable: Address usable in network
+    filter:reduce_on_network: Reduce on network
+    filter:slaac: SLAAC address
+- title: Handle MAC addresses
+  description: Filter and format hardware (MAC) addresses.
+  components:
+    filter:hwaddr: Hardware address filter
+    filter:macaddr: MAC address filter
+    test:mac: MAC address test
+- title: Test network membership and address type
+  description: Test whether an IP or network is a subnet, supernet or member of one or more networks,
+    and whether it is private, public, loopback, multicast or reserved.
+  components:
+    test:in_network: In network
+    test:in_any_network: In any network
+    test:in_one_network: In exactly one network
+    test:subnet_of: Subnet of
+    test:supernet_of: Supernet of
+    test:ip: IP or network
+    test:ip_address: IP address
+    test:private: Private address
+    test:public: Public address
+    test:loopback: Loopback address
+    test:multicast: Multicast address
+    test:reserved: Reserved address
+    test:unspecified: Unspecified address
+    test:resolvable: Resolvable name or address
+- title: Test IPv4 and IPv6 address formats
+  description: Test whether a value is a valid IPv4 or IPv6 address, netmask, hostmask or special IPv6
+    form such as 6to4, Teredo or IPv4-mapped.
+  components:
+    test:ipv4: IPv4
+    test:ipv4_address: IPv4 address
+    test:ipv4_hostmask: IPv4 hostmask
+    test:ipv4_netmask: IPv4 netmask
+    test:ipv6: IPv6
+    test:ipv6_address: IPv6 address
+    test:ipv6_ipv4_mapped: IPv4-mapped IPv6
+    test:ipv6_sixtofour: 6to4 address
+    test:ipv6_teredo: Teredo address

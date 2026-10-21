@@ -1,0 +1,1295 @@
+fqcn: cisco.dnac
+product: Cisco Catalyst Center (DNA Center)
+use_cases:
+- title: Design the site hierarchy and network settings
+  description: Create areas, buildings and floors, assign devices to sites, and set site-level network
+    settings such as AAA, DHCP, DNS, NTP, banner, time zone, telemetry and image distribution.
+  components:
+    areas: Areas
+    assign_device_to_site: Assign device to site
+    assign_to_site_apply: Assign to site apply
+    buildings: Buildings
+    floors: Floors
+    floors_settings: Floors settings
+    floors_upload_image: Floors upload image
+    network: Network
+    network_create: Network create
+    network_settings_intent: Network settings intent
+    network_settings_playbook_config_generator: Network settings playbook config generator
+    network_settings_workflow_manager: Network settings workflow manager
+    network_update: Network update
+    network_v2: Network v2
+    provisioning_settings: Provisioning settings
+    site: Site
+    site_count: Site count
+    site_count_v2: Site count v2
+    site_delete: Site delete
+    site_intent: Site intent
+    site_membership: Site membership
+    site_playbook_config_generator: Site playbook config generator
+    site_update: Site update
+    site_v2: Site v2
+    site_workflow_manager: Site workflow manager
+    sites: Sites
+    sites_aaa_settings: Sites AAA settings
+    sites_banner_settings: Sites banner settings
+    sites_bulk: Sites bulk
+    sites_count: Sites count
+    sites_dhcp_settings: Sites DHCP settings
+    sites_dns_settings: Sites DNS settings
+    sites_image_distribution_settings: Sites image distribution settings
+    sites_ntp_settings: Sites NTP settings
+    sites_telemetry_settings: Sites telemetry settings
+    sites_time_zone_settings: Sites time zone settings
+    snmp_properties: SNMP properties
+    telemetry_settings_apply: Telemetry settings apply
+    playbook:network_settings_intent: 'Playbook: Network settings intent'
+    playbook:network_settings_playbook_config_generator: 'Playbook: Network settings playbook config generator'
+    playbook:network_settings_workflow_manager: 'Playbook: Network settings workflow manager'
+    playbook:site_intent: 'Playbook: Site intent'
+    playbook:site_playbook_config_generator: 'Playbook: Site playbook config generator'
+    playbook:site_workflow_manager: 'Playbook: Site workflow manager'
+- title: Manage maps and access point placement
+  description: Import and export maps, and place, plan and bulk-update access point positions on floors.
+  components:
+    buildings_planned_access_points: Buildings planned access points
+    floors_floor_id_access_point_positions: Floors floor ID access point positions
+    floors_floor_id_access_point_positions_bulk_change: Floors floor ID access point positions bulk change
+    floors_floor_id_access_point_positions_count: Floors floor ID access point positions count
+    floors_floor_id_planned_access_point_positions: Floors floor ID planned access point positions
+    floors_floor_id_planned_access_point_positions_assign_access_point_positions: Floors floor ID planned
+      access point positions assign access point positions
+    floors_floor_id_planned_access_point_positions_bulk: Floors floor ID planned access point positions
+      bulk
+    floors_floor_id_planned_access_point_positions_bulk_change: Floors floor ID planned access point positions
+      bulk change
+    floors_floor_id_planned_access_point_positions_count: Floors floor ID planned access point positions
+      count
+    floors_floor_id_planned_access_point_positions_id: Floors floor ID planned access point positions
+      ID
+    maps_export: Maps export
+    maps_import: Maps import
+    maps_import_perform: Maps import perform
+    maps_import_start: Maps import start
+    maps_import_status: Maps import status
+    maps_supported_access_points: Maps supported access points
+    planned_access_points: Planned access points
+- title: Manage device credentials and certificates
+  description: Create and assign CLI, SNMP, HTTP and NETCONF credentials globally and per site, export
+    credentials, and import trusted and authentication certificates.
+  components:
+    auth_token_create: Auth token create
+    authentication_import_certificate: Authentication import certificate
+    authentication_import_certificate_p12: Authentication import certificate p12
+    cli_credential: CLI credential
+    credential_to_site_by_siteid_create_v2: Credential to site by siteid create v2
+    device_credential: Device credential
+    device_credential_intent: Device credential intent
+    device_credential_playbook_config_generator: Device credential playbook config generator
+    device_credential_workflow_manager: Device credential workflow manager
+    global_credential: Global credential
+    global_credential_delete: Global credential delete
+    global_credential_update: Global credential update
+    global_credential_v2: Global credential v2
+    global_credentials: Global credentials
+    global_credentials_count: Global credentials count
+    http_read_credential: HTTP read credential
+    http_write_credential: HTTP write credential
+    netconf_credential: Netconf credential
+    network_devices_export_credentials_create: Network devices export credentials create
+    site_assign_credential: Site assign credential
+    sites_device_credentials: Sites device credentials
+    sites_device_credentials_apply: Sites device credentials apply
+    sites_device_credentials_status: Sites device credentials status
+    snmpv2_read_community_credential: Snmpv2 read community credential
+    snmpv2_write_community_credential: Snmpv2 write community credential
+    snmpv3_credential: Snmpv3 credential
+    trusted_certificates_import: Trusted certificates import
+    playbook:authentication_import: 'Playbook: Authentication import'
+    playbook:device_credential_intent: 'Playbook: Device credential intent'
+    playbook:device_credential_playbook_config_generator: 'Playbook: Device credential playbook config
+      generator'
+    playbook:device_credential_workflow_manager: 'Playbook: Device credential workflow manager'
+    playbook:global_credentials: 'Playbook: Global credentials'
+    playbook:global_credentials_info: 'Playbook: Global credentials info'
+- title: Manage IP address pools
+  description: Create global and site IP address pools and subpools, reserve IP subpools and configure
+    the IPAM server settings.
+  components:
+    global_pool: Global pool
+    ipam_global_ip_address_pools: Ipam global IP address pools
+    ipam_global_ip_address_pools_count: Ipam global IP address pools count
+    ipam_global_ip_address_pools_global_ip_address_pool_id_subpools: Ipam global IP address pools global
+      IP address pool ID subpools
+    ipam_global_ip_address_pools_global_ip_address_pool_id_subpools_count: Ipam global IP address pools
+      global IP address pool ID subpools count
+    ipam_server_setting: Ipam server setting
+    ipam_site_ip_address_pools: Ipam site IP address pools
+    ipam_site_ip_address_pools_count: Ipam site IP address pools count
+    reserve_ip_subpool: Reserve IP subpool
+    playbook:global_pool: 'Playbook: Global pool'
+    playbook:reserve_ip_subpool: 'Playbook: Reserve IP subpool'
+- title: Discover network devices
+  description: Define and run discovery jobs by IP range, CDP or LLDP, and review discovered devices and
+    job results.
+  components:
+    discovery: Discovery
+    discovery_count: Discovery count
+    discovery_device: Discovery device
+    discovery_device_count: Discovery device count
+    discovery_device_range: Discovery device range
+    discovery_intent: Discovery intent
+    discovery_job: Discovery job
+    discovery_playbook_config_generator: Discovery playbook config generator
+    discovery_range: Discovery range
+    discovery_range_delete: Discovery range delete
+    discovery_summary: Discovery summary
+    discovery_workflow_manager: Discovery workflow manager
+    discoverys: Discoverys
+    discoverys_count: Discoverys count
+    discoverys_jobs: Discoverys jobs
+    discoverys_jobs_count: Discoverys jobs count
+    discoverys_jobs_discovered_network_devices: Discoverys jobs discovered network devices
+    discoverys_jobs_discovered_network_devices_count: Discoverys jobs discovered network devices count
+    discoverys_jobs_stop_create: Discoverys jobs stop create
+    discoverys_jobs_summarys: Discoverys jobs summarys
+    playbook:discovery: 'Playbook: Discovery'
+    playbook:discovery_intent: 'Playbook: Discovery intent'
+    playbook:discovery_playbook_config_generator: 'Playbook: Discovery playbook config generator'
+    playbook:discovery_workflow_manager: 'Playbook: Discovery workflow manager'
+- title: Manage device inventory and provision devices
+  description: Query, add, update, sync and delete inventory devices, manage interfaces, roles, polling
+    and user-defined fields, provision devices to sites and handle device replacement (RMA).
+  components:
+    device_interface: Device interface
+    device_interface_by_ip: Device interface by IP
+    device_interface_count: Device interface count
+    device_interface_isis: Device interface isis
+    device_interface_ospf: Device interface OSPF
+    device_replacement: Device replacement
+    device_replacement_count: Device replacement count
+    device_replacement_deploy: Device replacement deploy
+    intent_network_devices_query: Intent network devices query
+    intent_network_devices_query_count: Intent network devices query count
+    interface: Interface
+    interface_network_device: Interface network device
+    interface_network_device_detail: Interface network device detail
+    interface_network_device_range: Interface network device range
+    interface_operation_create: Interface operation create
+    interface_update: Interface update
+    inventory_intent: Inventory intent
+    inventory_playbook_config_generator: Inventory playbook config generator
+    inventory_workflow_manager: Inventory workflow manager
+    network_device: Network device
+    network_device_by_ip: Network device by IP
+    network_device_by_serial_number: Network device by serial number
+    network_device_chassis_details: Network device chassis details
+    network_device_count: Network device count
+    network_device_custom_prompt: Network device custom prompt
+    network_device_equipment: Network device equipment
+    network_device_functional_capability: Network device functional capability
+    network_device_global_polling_interval: Network device global polling interval
+    network_device_interface_neighbor: Network device interface neighbor
+    network_device_interface_poe: Network device interface poe
+    network_device_inventory_insight_link_mismatch: Network device inventory insight link mismatch
+    network_device_lexicographically_sorted: Network device lexicographically sorted
+    network_device_linecard_details: Network device linecard details
+    network_device_maintenance_schedules: Network device maintenance schedules
+    network_device_maintenance_schedules_count: Network device maintenance schedules count
+    network_device_management_address_update: Network device management address update
+    network_device_meraki_organization: Network device meraki organization
+    network_device_module: Network device module
+    network_device_module_count: Network device module count
+    network_device_poe: Network device poe
+    network_device_polling_interval: Network device polling interval
+    network_device_range: Network device range
+    network_device_register_for_wsa: Network device register for wsa
+    network_device_replacements: Network device replacements
+    network_device_stack_details: Network device stack details
+    network_device_summary: Network device summary
+    network_device_supervisor_card_details: Network device supervisor card details
+    network_device_sync: Network device sync
+    network_device_update_role: Network device update role
+    network_device_user_defined_field: Network device user defined field
+    network_device_user_defined_field_delete: Network device user defined field delete
+    network_device_user_defined_field_update: Network device user defined field update
+    network_device_vlan: Network device VLAN
+    network_devices: Network devices
+    network_devices_assigned_to_site: Network devices assigned to site
+    network_devices_assigned_to_site_count: Network devices assigned to site count
+    network_devices_assigned_to_site_id: Network devices assigned to site ID
+    network_devices_count: Network devices count
+    network_devices_create: Network devices create
+    network_devices_delete_with_cleanup: Network devices delete with cleanup
+    network_devices_delete_without_cleanup: Network devices delete without cleanup
+    network_devices_device_controllability_settings: Network devices device controllability settings
+    network_devices_info_workflow_manager: Network devices info workflow manager
+    network_devices_intent: Network devices intent
+    network_devices_intent_count: Network devices intent count
+    network_devices_interfaces_query: Network devices interfaces query
+    network_devices_not_assigned_to_site: Network devices not assigned to site
+    network_devices_not_assigned_to_site_count: Network devices not assigned to site count
+    network_devices_query: Network devices query
+    network_devices_query_count: Network devices query count
+    network_devices_resync_interval_settings: Network devices resync interval settings
+    network_devices_resync_interval_settings_id: Network devices resync interval settings ID
+    network_devices_resync_interval_settings_override: Network devices resync interval settings override
+    network_devices_unassign_from_site_apply: Network devices unassign from site apply
+    network_devices_update: Network devices update
+    network_devices_update_create: Network devices update create
+    network_devices_validate_device_create: Network devices validate device create
+    provision_intent: Provision intent
+    provision_playbook_config_generator: Provision playbook config generator
+    provision_workflow_manager: Provision workflow manager
+    rma_playbook_config_generator: RMA playbook config generator
+    rma_workflow_manager: RMA workflow manager
+    playbook:device_provision: 'Playbook: Device provision'
+    playbook:device_provision_workflow: 'Playbook: Device provision workflow'
+    playbook:inventory_device: 'Playbook: Inventory device'
+    playbook:inventory_playbook_config_generator: 'Playbook: Inventory playbook config generator'
+    playbook:inventory_workflow_manager: 'Playbook: Inventory workflow manager'
+    playbook:network_device_custom_prompt_info: 'Playbook: Network device custom prompt info'
+    playbook:network_device_info: 'Playbook: Network device info'
+    playbook:network_device_update_role: 'Playbook: Network device update role'
+    playbook:network_devices_info_workflow_manager: 'Playbook: Network devices info workflow manager'
+    playbook:provision_playbook_config_generator: 'Playbook: Provision playbook config generator'
+    playbook:provision_workflow_manager: 'Playbook: Provision workflow manager'
+    playbook:rma_playbook_config_generator: 'Playbook: RMA playbook config generator'
+    playbook:rma_workflow_manager: 'Playbook: RMA workflow manager'
+- title: Onboard devices with Plug and Play
+  description: Import, claim, authorize, reset and unclaim PnP devices, manage PnP workflows, server profiles
+    and smart or virtual accounts, and preview device configuration.
+  components:
+    pnp_device: PnP device
+    pnp_device_authorize: PnP device authorize
+    pnp_device_claim: PnP device claim
+    pnp_device_claim_to_site: PnP device claim to site
+    pnp_device_config_preview: PnP device config preview
+    pnp_device_count: PnP device count
+    pnp_device_history: PnP device history
+    pnp_device_import: PnP device import
+    pnp_device_reset: PnP device reset
+    pnp_device_unclaim: PnP device unclaim
+    pnp_global_settings: PnP global settings
+    pnp_intent: PnP intent
+    pnp_playbook_config_generator: PnP playbook config generator
+    pnp_server_profile_update: PnP server profile update
+    pnp_smart_account_domains: PnP smart account domains
+    pnp_virtual_account_add: PnP virtual account add
+    pnp_virtual_account_deregister: PnP virtual account deregister
+    pnp_virtual_account_devices_sync: PnP virtual account devices sync
+    pnp_virtual_account_sync_result: PnP virtual account sync result
+    pnp_virtual_accounts: PnP virtual accounts
+    pnp_workflow: PnP workflow
+    pnp_workflow_count: PnP workflow count
+    pnp_workflow_manager: PnP workflow manager
+    system_settings_ap_pnp_location: System settings AP PnP location
+    playbook:PnP: 'Playbook: PnP'
+    playbook:pnp_device: 'Playbook: PnP device'
+    playbook:pnp_playbook_config_generator: 'Playbook: PnP playbook config generator'
+    playbook:pnp_workflow_manager: 'Playbook: PnP workflow manager'
+    playbook:template_pnp_intent: 'Playbook: Template PnP intent'
+- title: Author configuration templates and manage device configuration
+  description: Create template projects and templates, version, deploy, import and export them, and back
+    up, export and download device configuration files.
+  components:
+    configuration_template: Configuration template
+    configuration_template_clone: Configuration template clone
+    configuration_template_create: Configuration template create
+    configuration_template_deploy: Configuration template deploy
+    configuration_template_deploy_status: Configuration template deploy status
+    configuration_template_deploy_v2: Configuration template deploy v2
+    configuration_template_export_project: Configuration template export project
+    configuration_template_export_template: Configuration template export template
+    configuration_template_import_project: Configuration template import project
+    configuration_template_import_template: Configuration template import template
+    configuration_template_project: Configuration template project
+    configuration_template_version: Configuration template version
+    configuration_template_version_create: Configuration template version create
+    device_configs_backup_workflow_manager: Device configs backup workflow manager
+    device_configurations_export: Device configurations export
+    network_device_config: Network device config
+    network_device_config_archive: Network device config archive
+    network_device_config_count: Network device config count
+    network_device_config_files: Network device config files
+    network_device_config_files_count: Network device config files count
+    network_device_config_files_id_download_masked: Network device config files ID download masked
+    network_device_config_files_id_download_unmasked: Network device config files ID download unmasked
+    network_device_config_task: Network device config task
+    network_device_config_write_memory: Network device config write memory
+    network_device_export: Network device export
+    projects: Projects
+    projects_count: Projects count
+    projects_details: Projects details
+    template_intent: Template intent
+    template_playbook_config_generator: Template playbook config generator
+    template_preview: Template preview
+    template_workflow_manager: Template workflow manager
+    templates_details: Templates details
+    templates_template_id_versions: Templates template ID versions
+    templates_template_id_versions_commit: Templates template ID versions commit
+    templates_template_id_versions_count: Templates template ID versions count
+    playbook:configuration_template_version_create: 'Playbook: Configuration template version create'
+    playbook:device_configs_backup_workflow_manager: 'Playbook: Device configs backup workflow manager'
+    playbook:template: 'Playbook: Template'
+    playbook:template_playbook_config_generator: 'Playbook: Template playbook config generator'
+    playbook:template_workflow_manager: 'Playbook: Template workflow manager'
+    playbook:configs_backup: 'Playbook: Configs backup'
+- title: Manage network profiles and site assignments
+  description: Create wireless and switching network profiles and associate them and their templates with
+    sites.
+  components:
+    associate_site_to_network_profile: Associate site to network profile
+    disassociate_site_to_network_profile: Disassociate site to network profile
+    network_devices_network_profiles_for_sites: Network devices network profiles for sites
+    network_devices_network_profiles_for_sites_count: Network devices network profiles for sites count
+    network_devices_network_profiles_for_sites_delete: Network devices network profiles for sites delete
+    network_profile_switching_playbook_config_generator: Network profile switching playbook config generator
+    network_profile_switching_workflow_manager: Network profile switching workflow manager
+    network_profile_wireless_playbook_config_generator: Network profile wireless playbook config generator
+    network_profile_wireless_workflow_manager: Network profile wireless workflow manager
+    network_profiles_for_sites_profile_id_templates: Network profiles for sites profile ID templates
+    network_profiles_for_sites_profile_id_templates_count: Network profiles for sites profile ID templates
+      count
+    network_profiles_for_sites_site_assignments: Network profiles for sites site assignments
+    network_profiles_for_sites_site_assignments_bulk_create: Network profiles for sites site assignments
+      bulk create
+    network_profiles_for_sites_site_assignments_bulk_delete: Network profiles for sites site assignments
+      bulk delete
+    network_profiles_for_sites_site_assignments_count: Network profiles for sites site assignments count
+    sites_profile_assignments: Sites profile assignments
+    sites_profile_assignments_count: Sites profile assignments count
+    templates_template_id_network_profiles_for_sites: Templates template ID network profiles for sites
+    templates_template_id_network_profiles_for_sites_bulk_create: Templates template ID network profiles
+      for sites bulk create
+    templates_template_id_network_profiles_for_sites_bulk_delete: Templates template ID network profiles
+      for sites bulk delete
+    templates_template_id_network_profiles_for_sites_count: Templates template ID network profiles for
+      sites count
+    playbook:network_profile_switching_playbook_config_generator: 'Playbook: Network profile switching
+      playbook config generator'
+    playbook:network_profile_switching_workflow_manager: 'Playbook: Network profile switching workflow
+      manager'
+    playbook:network_profile_wireless_playbook_config_generator: 'Playbook: Network profile wireless playbook
+      config generator'
+    playbook:network_profile_wireless_workflow_manager: 'Playbook: Network profile wireless workflow manager'
+- title: Manage software images and upgrades
+  description: Import and distribute software images, tag golden images, activate upgrades and optional
+    packages, and review image and release information per site.
+  components:
+    download_software_release_create: Download software release create
+    download_software_release_delete: Download software release delete
+    download_software_release_update: Download software release update
+    golden_image_create: Golden image create
+    golden_tag_image_delete: Golden tag image delete
+    golden_tag_image_details: Golden tag image details
+    images: Images
+    images_addon_images: Images addon images
+    images_addon_images_count: Images addon images count
+    images_cco_sync: Images cco sync
+    images_count: Images count
+    images_delete: Images delete
+    images_distribution_server_settings: Images distribution server settings
+    images_download: Images download
+    images_id_sites_site_id_tag_golden: Images ID sites site ID tag golden
+    images_id_sites_site_id_untag_golden: Images ID sites site ID untag golden
+    images_site_wise_product_names: Images site wise product names
+    images_site_wise_product_names_count: Images site wise product names count
+    install_optional_packages_create: Install optional packages create
+    installed_release: Installed release
+    network_device_image_updates: Network device image updates
+    network_device_image_updates_count: Network device image updates count
+    network_device_images: Network device images
+    network_device_images_activate_bulk: Network device images activate bulk
+    network_device_images_count: Network device images count
+    network_device_images_distribute_bulk: Network device images distribute bulk
+    network_device_images_id_activate: Network device images ID activate
+    network_device_images_id_distribute: Network device images ID distribute
+    network_device_images_id_readiness_checks: Network device images ID readiness checks
+    network_device_images_validation_results: Network device images validation results
+    network_device_images_validation_results_count: Network device images validation results count
+    network_device_images_validations: Network device images validations
+    network_device_images_validations_count: Network device images validations count
+    product_names: Product names
+    product_names_count: Product names count
+    product_series: Product series
+    product_series_count: Product series count
+    releases: Releases
+    releases_release_summary: Releases release summary
+    site_wise_images_summary: Site wise images summary
+    site_wise_product_names: Site wise product names
+    site_wise_product_names_count: Site wise product names count
+    software_management_executions: Software management executions
+    swim_image_details: Swim image details
+    swim_import_local: Swim import local
+    swim_import_via_url: Swim import via URL
+    swim_intent: Swim intent
+    swim_trigger_activation: Swim trigger activation
+    swim_trigger_distribution: Swim trigger distribution
+    swim_workflow_manager: Swim workflow manager
+    uninstall_optional_packages_create: Uninstall optional packages create
+    upgrade_software_release_create: Upgrade software release create
+    playbook:import_image_file: 'Playbook: Import image file'
+    playbook:swim_import_local: 'Playbook: Swim import local'
+    playbook:swim_intent: 'Playbook: Swim intent'
+    playbook:swim_workflow_manager: 'Playbook: Swim workflow manager'
+- title: Manage Smart Licensing
+  description: Register and deregister devices, change virtual accounts and review license usage, status,
+    terms and device license details.
+  components:
+    license_deregister: License deregister
+    license_device_count: License device count
+    license_device_deregistration: License device deregistration
+    license_device_license_details: License device license details
+    license_device_license_summary: License device license summary
+    license_device_registration: License device registration
+    license_last_operation_status: License last operation status
+    license_register: License register
+    license_renew: License renew
+    license_setting: License setting
+    license_smart_account_details: License smart account details
+    license_status: License status
+    license_term_details: License term details
+    license_usage_details: License usage details
+    license_virtual_account_change: License virtual account change
+    license_virtual_account_details: License virtual account details
+    network_device_licenses_network_device_id_port_channels: Network device licenses network device ID
+      port channels
+    network_device_licenses_network_device_id_port_channels_count: Network device licenses network device
+      ID port channels count
+    network_device_licenses_summary: Network device licenses summary
+- title: Check configuration compliance
+  description: Define compliance policies, rules and conditions, assign them to sites, and review device
+    compliance status and violations.
+  components:
+    compliance_device: Compliance device
+    compliance_device_by_id: Compliance device by ID
+    compliance_device_details: Compliance device details
+    compliance_device_details_count: Compliance device details count
+    compliance_device_id: Compliance device ID
+    compliance_device_status_count: Compliance device status count
+    compliance_network_devices_detail_policys: Compliance network devices detail policys
+    compliance_network_devices_detail_policys_violations: Compliance network devices detail policys violations
+    compliance_policys: Compliance policys
+    compliance_policys_count: Compliance policys count
+    compliance_policys_rules: Compliance policys rules
+    compliance_policys_rules_conditions: Compliance policys rules conditions
+    compliance_policys_rules_conditions_count: Compliance policys rules conditions count
+    compliance_policys_rules_count: Compliance policys rules count
+    compliance_policys_rules_variables: Compliance policys rules variables
+    compliance_policys_rules_variables_count: Compliance policys rules variables count
+    compliance_policys_site_assignments: Compliance policys site assignments
+    compliance_policys_sites_rules_variables: Compliance policys sites rules variables
+    network_compliance_workflow_manager: Network compliance workflow manager
+    playbook:network_compliance_workflow_manager: 'Playbook: Network compliance workflow manager'
+- title: Track security advisories, bugs, field notices and end of life
+  description: Run scans and review security advisories, software bugs, field notices and end-of-support
+    (EoX) status for network devices.
+  components:
+    eox_status_device: EoX status device
+    eox_status_summary: EoX status summary
+    field_notices_results_network_devices: Field notices results network devices
+    field_notices_results_network_devices_count: Field notices results network devices count
+    field_notices_results_network_devices_network_device_id_notices: Field notices results network devices
+      network device ID notices
+    field_notices_results_network_devices_network_device_id_notices_count: Field notices results network
+      devices network device ID notices count
+    field_notices_results_notices: Field notices results notices
+    field_notices_results_notices_count: Field notices results notices count
+    field_notices_results_notices_id_network_devices: Field notices results notices ID network devices
+    field_notices_results_notices_id_network_devices_count: Field notices results notices ID network devices
+      count
+    field_notices_results_trend: Field notices results trend
+    field_notices_results_trend_count: Field notices results trend count
+    field_notices_trials: Field notices trials
+    field_notices_trigger_scan: Field notices trigger scan
+    network_bugs_results_bugs: Network bugs results bugs
+    network_bugs_results_bugs_count: Network bugs results bugs count
+    network_bugs_results_bugs_id_network_devices: Network bugs results bugs ID network devices
+    network_bugs_results_bugs_id_network_devices_count: Network bugs results bugs ID network devices count
+    network_bugs_results_network_devices: Network bugs results network devices
+    network_bugs_results_network_devices_count: Network bugs results network devices count
+    network_bugs_results_network_devices_network_device_id_bugs: Network bugs results network devices
+      network device ID bugs
+    network_bugs_results_network_devices_network_device_id_bugs_count: Network bugs results network devices
+      network device ID bugs count
+    network_bugs_results_trend: Network bugs results trend
+    network_bugs_results_trend_count: Network bugs results trend count
+    network_bugs_trials: Network bugs trials
+    network_bugs_trigger_scan: Network bugs trigger scan
+    security_advisories: Security advisories
+    security_advisories_devices: Security advisories devices
+    security_advisories_ids_per_device: Security advisories IDs per device
+    security_advisories_per_device: Security advisories per device
+    security_advisories_results_advisories: Security advisories results advisories
+    security_advisories_results_advisories_count: Security advisories results advisories count
+    security_advisories_results_advisories_id_network_devices: Security advisories results advisories
+      ID network devices
+    security_advisories_results_advisories_id_network_devices_count: Security advisories results advisories
+      ID network devices count
+    security_advisories_results_network_devices: Security advisories results network devices
+    security_advisories_results_network_devices_count: Security advisories results network devices count
+    security_advisories_results_network_devices_network_device_id_advisories: Security advisories results
+      network devices network device ID advisories
+    security_advisories_results_network_devices_network_device_id_advisories_count: Security advisories
+      results network devices network device ID advisories count
+    security_advisories_results_trend: Security advisories results trend
+    security_advisories_results_trend_count: Security advisories results trend count
+    security_advisories_summary: Security advisories summary
+    security_advisories_trials: Security advisories trials
+    security_advisories_trigger_scan: Security advisories trigger scan
+- title: Detect rogue devices and security threats
+  description: Review rogue and threat details, manage allowed rogue lists and start or stop rogue wireless
+    containment.
+  components:
+    security_rogue_additional_details: Security rogue additional details
+    security_rogue_additional_details_count: Security rogue additional details count
+    security_rogue_wireless_containment_start: Security rogue wireless containment start
+    security_rogue_wireless_containment_status: Security rogue wireless containment status
+    security_rogue_wireless_containment_stop: Security rogue wireless containment stop
+    security_threats_details: Security threats details
+    security_threats_details_count: Security threats details count
+    security_threats_level: Security threats level
+    security_threats_rogue_allowed: Security threats rogue allowed
+    security_threats_rogue_allowed_list: Security threats rogue allowed list
+    security_threats_rogue_allowed_list_count: Security threats rogue allowed list count
+    security_threats_summary: Security threats summary
+    security_threats_type: Security threats type
+- title: Automate LAN and wired campus configuration
+  description: Run LAN automation sessions and port channels, and manage Layer 2 wired features, configuration
+    models and deployments on wired devices.
+  components:
+    create_wired_network_devices_id_config_features_intended_layer2: Create wired network devices ID config
+      features intended layer2
+    lan_automation_count: LAN automation count
+    lan_automation_create: LAN automation create
+    lan_automation_delete: LAN automation delete
+    lan_automation_log: LAN automation log
+    lan_automation_log_by_serial_number: LAN automation log by serial number
+    lan_automation_port_channels: LAN automation port channels
+    lan_automation_port_channels_id_add_link: LAN automation port channels ID add link
+    lan_automation_port_channels_id_remove_link: LAN automation port channels ID remove link
+    lan_automation_sessions: LAN automation sessions
+    lan_automation_status: LAN automation status
+    lan_automation_update: LAN automation update
+    lan_automation_update_device: LAN automation update device
+    lan_automation_update_v2: LAN automation update v2
+    lan_automation_v2: LAN automation v2
+    lan_automation_workflow_manager: LAN automation workflow manager
+    update_wired_network_devices_id_config_features_intended_layer2: Update wired network devices ID config
+      features intended layer2
+    wired_campus_automation_playbook_config_generator: Wired campus automation playbook config generator
+    wired_campus_automation_workflow_manager: Wired campus automation workflow manager
+    wired_network_devices_id_config_features_deployed_layer2_feature: Wired network devices ID config
+      features deployed layer2 feature
+    wired_network_devices_id_config_features_deployed_layer2_feature_count: Wired network devices ID config
+      features deployed layer2 feature count
+    wired_network_devices_id_config_features_intended_layer2: Wired network devices ID config features
+      intended layer2
+    wired_network_devices_id_config_features_intended_layer2_feature: Wired network devices ID config
+      features intended layer2 feature
+    wired_network_devices_id_config_features_intended_layer2_feature_count: Wired network devices ID config
+      features intended layer2 feature count
+    wired_network_devices_id_config_features_supported_layer2: Wired network devices ID config features
+      supported layer2
+    wired_network_devices_network_device_id_config_features_intended_configuration_models: Wired network
+      devices network device ID config features intended configuration models
+    wired_network_devices_network_device_id_config_features_intended_configuration_models_preview_activity_id: Wired
+      network devices network device ID config features intended configuration models preview activity
+      ID
+    wired_network_devices_network_device_id_config_features_intended_configuration_models_preview_activity_id_config: Wired
+      network devices network device ID config features intended configuration models preview activity
+      ID config
+    wired_network_devices_network_device_id_config_features_intended_configuration_models_preview_activity_id_deploy: Wired
+      network devices network device ID config features intended configuration models preview activity
+      ID deploy
+    wired_network_devices_network_device_id_config_features_intended_deploy: Wired network devices network
+      device ID config features intended deploy
+    wired_network_devices_network_device_id_config_features_intended_device_deployments: Wired network
+      devices network device ID config features intended device deployments
+    wired_network_devices_network_device_id_config_features_intended_service_deployments: Wired network
+      devices network device ID config features intended service deployments
+    playbook:lan_automation_workflow_manager: 'Playbook: LAN automation workflow manager'
+    playbook:wired_campus_automation_playbook_config_generator: 'Playbook: Wired campus automation playbook
+      config generator'
+    playbook:wired_campus_automation_workflow_manager: 'Playbook: Wired campus automation workflow manager'
+- title: Design SD-Access fabrics, transits and virtual networks
+  description: Create fabric sites and zones, transits, Layer 2 and Layer 3 virtual networks, anycast
+    gateways, multicast, extranet policies and authentication profiles.
+  components:
+    business_sda_hostonboarding_ssid_ippool: Business SDA hostonboarding SSID ippool
+    business_sda_virtual_network_summary: Business SDA virtual network summary
+    fabric_summary: Fabric summary
+    sda_anycast_gateways: SDA anycast gateways
+    sda_anycast_gateways_count: SDA anycast gateways count
+    sda_authentication_profiles: SDA authentication profiles
+    sda_extranet_policies: SDA extranet policies
+    sda_extranet_policies_count: SDA extranet policies count
+    sda_extranet_policies_playbook_config_generator: SDA extranet policies playbook config generator
+    sda_extranet_policies_workflow_manager: SDA extranet policies workflow manager
+    sda_fabric_authentication_profile: SDA fabric authentication profile
+    sda_fabric_multicast_playbook_config_generator: SDA fabric multicast playbook config generator
+    sda_fabric_multicast_workflow_manager: SDA fabric multicast workflow manager
+    sda_fabric_site: SDA fabric site
+    sda_fabric_sites: SDA fabric sites
+    sda_fabric_sites_count: SDA fabric sites count
+    sda_fabric_sites_zones_playbook_config_generator: SDA fabric sites zones playbook config generator
+    sda_fabric_sites_zones_workflow_manager: SDA fabric sites zones workflow manager
+    sda_fabric_transits_playbook_config_generator: SDA fabric transits playbook config generator
+    sda_fabric_transits_workflow_manager: SDA fabric transits workflow manager
+    sda_fabric_virtual_networks_playbook_config_generator: SDA fabric virtual networks playbook config
+      generator
+    sda_fabric_virtual_networks_workflow_manager: SDA fabric virtual networks workflow manager
+    sda_fabric_zones: SDA fabric zones
+    sda_fabric_zones_count: SDA fabric zones count
+    sda_fabrics_vlan_to_ssids: SDA fabrics VLAN to SSIDs
+    sda_fabrics_vlan_to_ssids_count: SDA fabrics VLAN to SSIDs count
+    sda_fabrics_vlan_to_ssids_fabric_id: SDA fabrics VLAN to SSIDs fabric ID
+    sda_fabrics_vlan_to_ssids_fabric_id_count: SDA fabrics VLAN to SSIDs fabric ID count
+    sda_layer2_virtual_networks: SDA layer2 virtual networks
+    sda_layer2_virtual_networks_count: SDA layer2 virtual networks count
+    sda_layer3_virtual_networks: SDA layer3 virtual networks
+    sda_layer3_virtual_networks_count: SDA layer3 virtual networks count
+    sda_layer3_virtual_networks_delete: SDA layer3 virtual networks delete
+    sda_multicast: SDA multicast
+    sda_multicast_v1: SDA multicast v1
+    sda_multicast_virtual_networks: SDA multicast virtual networks
+    sda_multicast_virtual_networks_count: SDA multicast virtual networks count
+    sda_transit_networks: SDA transit networks
+    sda_transit_networks_count: SDA transit networks count
+    sda_transit_networks_delete: SDA transit networks delete
+    sda_virtual_network: SDA virtual network
+    sda_virtual_network_ip_pool: SDA virtual network IP pool
+    sda_virtual_network_v2: SDA virtual network v2
+    transit_peer_network: Transit peer network
+    playbook:sda_anycast_gateways: 'Playbook: SDA anycast gateways'
+    playbook:sda_extranet_policies_playbook_config_generator: 'Playbook: SDA extranet policies playbook
+      config generator'
+    playbook:sda_extranet_policies_workflow_manager: 'Playbook: SDA extranet policies workflow manager'
+    playbook:sda_fabric: 'Playbook: SDA fabric'
+    playbook:sda_fabric_multicast_playbook_config_generator: 'Playbook: SDA fabric multicast playbook
+      config generator'
+    playbook:sda_fabric_multicast_workflow_manager: 'Playbook: SDA fabric multicast workflow manager'
+    playbook:sda_fabric_site: 'Playbook: SDA fabric site'
+    playbook:sda_fabric_sites_zones_playbook_config_generator: 'Playbook: SDA fabric sites zones playbook
+      config generator'
+    playbook:sda_fabric_sites_zones_workflow_manager: 'Playbook: SDA fabric sites zones workflow manager'
+    playbook:sda_fabric_transits_playbook_config_generator: 'Playbook: SDA fabric transits playbook config
+      generator'
+    playbook:sda_fabric_transits_workflow_manager: 'Playbook: SDA fabric transits workflow manager'
+    playbook:sda_fabric_virtual_networks_playbook_config_generator: 'Playbook: SDA fabric virtual networks
+      playbook config generator'
+    playbook:sda_fabric_virtual_networks_workflow_manager: 'Playbook: SDA fabric virtual networks workflow
+      manager'
+    playbook:sda_layer3_virtual_networks: 'Playbook: SDA layer3 virtual networks'
+    playbook:sda_virtual_network_v2: 'Playbook: SDA virtual network v2'
+- title: Provision SD-Access fabric devices and onboard hosts
+  description: Add devices to fabrics with border, control plane and edge roles, configure Layer 2 handoffs,
+    port assignments and port channels, and provision devices and wireless controllers.
+  components:
+    business_sda_wireless_controller_create: Business SDA wireless controller create
+    business_sda_wireless_controller_delete: Business SDA wireless controller delete
+    fabric_devices_info_workflow_manager: Fabric devices info workflow manager
+    fabrics_fabric_id_switch_wireless_setting: Fabrics fabric ID switch wireless setting
+    fabrics_fabric_id_switch_wireless_setting_reload: Fabrics fabric ID switch wireless setting reload
+    fabrics_fabric_id_wireless_multicast: Fabrics fabric ID wireless multicast
+    sda_device: SDA device
+    sda_device_role: SDA device role
+    sda_fabric_border_device: SDA fabric border device
+    sda_fabric_control_plane_device: SDA fabric control plane device
+    sda_fabric_devices: SDA fabric devices
+    sda_fabric_devices_count: SDA fabric devices count
+    sda_fabric_devices_layer2_handoffs: SDA fabric devices layer2 handoffs
+    sda_fabric_devices_layer2_handoffs_count: SDA fabric devices layer2 handoffs count
+    sda_fabric_devices_layer2_handoffs_ip_transits: SDA fabric devices layer2 handoffs IP transits
+    sda_fabric_devices_layer2_handoffs_ip_transits_count: SDA fabric devices layer2 handoffs IP transits
+      count
+    sda_fabric_devices_layer2_handoffs_sda_transits: SDA fabric devices layer2 handoffs SDA transits
+    sda_fabric_devices_layer2_handoffs_sda_transits_count: SDA fabric devices layer2 handoffs SDA transits
+      count
+    sda_fabric_devices_playbook_config_generator: SDA fabric devices playbook config generator
+    sda_fabric_devices_workflow_manager: SDA fabric devices workflow manager
+    sda_fabric_edge_device: SDA fabric edge device
+    sda_host_port_onboarding_playbook_config_generator: SDA host port onboarding playbook config generator
+    sda_host_port_onboarding_workflow_manager: SDA host port onboarding workflow manager
+    sda_pending_fabric_events: SDA pending fabric events
+    sda_pending_fabric_events_apply: SDA pending fabric events apply
+    sda_port_assignment_for_access_point: SDA port assignment for access point
+    sda_port_assignment_for_user_device: SDA port assignment for user device
+    sda_port_assignments: SDA port assignments
+    sda_port_assignments_count: SDA port assignments count
+    sda_port_channels: SDA port channels
+    sda_port_channels_count: SDA port channels count
+    sda_provision_device: SDA provision device
+    sda_provision_devices: SDA provision devices
+    sda_provision_devices_count: SDA provision devices count
+    sda_site_member_member: SDA site member member
+    playbook:fabric_devices_info_workflow_manager: 'Playbook: Fabric devices info workflow manager'
+    playbook:sda_fabric_devices_playbook_config_generator: 'Playbook: SDA fabric devices playbook config
+      generator'
+    playbook:sda_fabric_devices_workflow_manager: 'Playbook: SDA fabric devices workflow manager'
+    playbook:sda_host_port_onboarding_playbook_config_generator: 'Playbook: SDA host port onboarding playbook
+      config generator'
+    playbook:sda_host_port_onboarding_workflow_manager: 'Playbook: SDA host port onboarding workflow manager'
+- title: Design wireless profiles, SSIDs and RF settings
+  description: Create wireless profiles, SSIDs, interfaces, RF, AP, power and 802.11be profiles, anchor
+    groups and policy tags, and wireless feature templates.
+  components:
+    feature_templates_wireless_aaa_radius_attributes_configurations: Feature templates wireless AAA RADIUS
+      attributes configurations
+    feature_templates_wireless_advanced_ssid_configurations: Feature templates wireless advanced SSID
+      configurations
+    feature_templates_wireless_clean_air_configurations: Feature templates wireless clean air configurations
+    feature_templates_wireless_dot11ax_configurations: Feature templates wireless dot11ax configurations
+    feature_templates_wireless_dot11be_status_configurations: Feature templates wireless dot11be status
+      configurations
+    feature_templates_wireless_event_driven_rrm_configurations: Feature templates wireless event driven
+      RRM configurations
+    feature_templates_wireless_flex_connect_configurations: Feature templates wireless flex connect configurations
+    feature_templates_wireless_multicast_configurations: Feature templates wireless multicast configurations
+    feature_templates_wireless_rrm_fra_configurations: Feature templates wireless RRM fra configurations
+    feature_templates_wireless_rrm_general_configurations: Feature templates wireless RRM general configurations
+    feature_templates_wireless_summary: Feature templates wireless summary
+    sites_site_id_wireless_settings_flex_connect_aaa_override: Sites site ID wireless settings flex connect
+      AAA override
+    sites_site_id_wireless_settings_flex_connect_native_vlan: Sites site ID wireless settings flex connect
+      native VLAN
+    sites_site_id_wireless_settings_ssids_id_update: Sites site ID wireless settings SSIDs ID update
+    sites_wireless_settings_ssids: Sites wireless settings SSIDs
+    sites_wireless_settings_ssids_count: Sites wireless settings SSIDs count
+    wireless_design_playbook_config_generator: Wireless design playbook config generator
+    wireless_design_workflow_manager: Wireless design workflow manager
+    wireless_dynamic_interface: Wireless dynamic interface
+    wireless_enterprise_ssid: Wireless enterprise SSID
+    wireless_profile: Wireless profile
+    wireless_profiles: Wireless profiles
+    wireless_profiles_count: Wireless profiles count
+    wireless_profiles_id_policy_tags_bulk: Wireless profiles ID policy tags bulk
+    wireless_profiles_id_policy_tags_count: Wireless profiles ID policy tags count
+    wireless_profiles_id_policy_tags_policy_tag_id: Wireless profiles ID policy tags policy tag ID
+    wireless_profiles_id_site_tags: Wireless profiles ID site tags
+    wireless_profiles_id_site_tags_bulk: Wireless profiles ID site tags bulk
+    wireless_profiles_id_site_tags_count: Wireless profiles ID site tags count
+    wireless_profiles_policy_tags: Wireless profiles policy tags
+    wireless_psk_override: Wireless PSK override
+    wireless_rf_profile: Wireless RF profile
+    wireless_settings_anchor_groups: Wireless settings anchor groups
+    wireless_settings_anchor_groups_count: Wireless settings anchor groups count
+    wireless_settings_ap_authorization_lists: Wireless settings AP authorization lists
+    wireless_settings_ap_authorization_lists_count: Wireless settings AP authorization lists count
+    wireless_settings_ap_profiles: Wireless settings AP profiles
+    wireless_settings_ap_profiles_count: Wireless settings AP profiles count
+    wireless_settings_certificate_renewal_profiles: Wireless settings certificate renewal profiles
+    wireless_settings_certificate_renewal_profiles_count: Wireless settings certificate renewal profiles
+      count
+    wireless_settings_dot11be_profiles: Wireless settings dot11be profiles
+    wireless_settings_dot11be_profiles_count: Wireless settings dot11be profiles count
+    wireless_settings_interfaces: Wireless settings interfaces
+    wireless_settings_interfaces_count: Wireless settings interfaces count
+    wireless_settings_network_device_id_assign_anchor_managed_ap_locations: Wireless settings network
+      device ID assign anchor managed AP locations
+    wireless_settings_power_profiles: Wireless settings power profiles
+    wireless_settings_power_profiles_count: Wireless settings power profiles count
+    wireless_settings_rf_profiles: Wireless settings RF profiles
+    wireless_settings_rf_profiles_count: Wireless settings RF profiles count
+    wireless_settings_ssids_override_at_sites: Wireless settings SSIDs override at sites
+    playbook:wireless_design_playbook_config_generator: 'Playbook: Wireless design playbook config generator'
+    playbook:wireless_design_workflow_manager: 'Playbook: Wireless design workflow manager'
+    playbook:wireless_enterprise_ssid: 'Playbook: Wireless enterprise SSID'
+- title: Provision wireless controllers and access points
+  description: Provision controllers, access points and SSIDs, assign AP locations, configure mobility
+    groups and AP authorization lists, and review access point configuration.
+  components:
+    accesspoint_configuration_details_by_task_id: Accesspoint configuration details by task ID
+    accesspoint_location_playbook_config_generator: Accesspoint location playbook config generator
+    accesspoint_location_workflow_manager: Accesspoint location workflow manager
+    accesspoint_playbook_config_generator: Accesspoint playbook config generator
+    accesspoint_workflow_manager: Accesspoint workflow manager
+    device_reboot_apreboot: Device reboot apreboot
+    network_device_wireless_lan: Network device wireless LAN
+    wireless_accespoint_configuration: Wireless accespoint configuration
+    wireless_access_points_factory_reset_request_provision: Wireless access points factory reset request
+      provision
+    wireless_access_points_factory_reset_request_status: Wireless access points factory reset request
+      status
+    wireless_access_points_provision: Wireless access points provision
+    wireless_accesspoint_configuration_count: Wireless accesspoint configuration count
+    wireless_accesspoint_configuration_create: Wireless accesspoint configuration create
+    wireless_accesspoint_configuration_summary: Wireless accesspoint configuration summary
+    wireless_controllers_anchor_capable_devices: Wireless controllers anchor capable devices
+    wireless_controllers_anchor_managed_ap_locations: Wireless controllers anchor managed AP locations
+    wireless_controllers_assign_managed_ap_locations: Wireless controllers assign managed AP locations
+    wireless_controllers_certificate_renewal_create: Wireless controllers certificate renewal create
+    wireless_controllers_managed_ap_locations_count: Wireless controllers managed AP locations count
+    wireless_controllers_mesh_ap_neighbours: Wireless controllers mesh AP neighbours
+    wireless_controllers_mesh_ap_neighbours_count: Wireless controllers mesh AP neighbours count
+    wireless_controllers_network_device_id_ap_authorization_lists: Wireless controllers network device
+      ID AP authorization lists
+    wireless_controllers_network_device_id_provision_status: Wireless controllers network device ID provision
+      status
+    wireless_controllers_primary_managed_ap_locations: Wireless controllers primary managed AP locations
+    wireless_controllers_provision: Wireless controllers provision
+    wireless_controllers_secondary_managed_ap_locations: Wireless controllers secondary managed AP locations
+    wireless_controllers_site_tags: Wireless controllers site tags
+    wireless_controllers_ssid_details: Wireless controllers SSID details
+    wireless_controllers_ssid_details_count: Wireless controllers SSID details count
+    wireless_controllers_wireless_mobility_groups: Wireless controllers wireless mobility groups
+    wireless_controllers_wireless_mobility_groups_count: Wireless controllers wireless mobility groups
+      count
+    wireless_controllers_wireless_mobility_groups_mobility_provision: Wireless controllers wireless mobility
+      groups mobility provision
+    wireless_controllers_wireless_mobility_groups_mobility_reset: Wireless controllers wireless mobility
+      groups mobility reset
+    wireless_provision_access_point: Wireless provision access point
+    wireless_provision_device_create: Wireless provision device create
+    wireless_provision_device_update: Wireless provision device update
+    wireless_provision_ssid_create_provision: Wireless provision SSID create provision
+    wireless_provision_ssid_delete_reprovision: Wireless provision SSID delete reprovision
+    playbook:accesspoint_location_playbook_config_generator: 'Playbook: Accesspoint location playbook
+      config generator'
+    playbook:accesspoint_location_workflow_manager: 'Playbook: Accesspoint location workflow manager'
+    playbook:accesspoint_playbook_config_generator: 'Playbook: Accesspoint playbook config generator'
+    playbook:accesspoint_workflow_manager: 'Playbook: Accesspoint workflow manager'
+- title: Troubleshoot and test the network
+  description: Run path trace, CLI commands and diagnostic validations, and create sensor and ThousandEyes
+    tests and review their results.
+  components:
+    command_runner_run_command: Command runner run command
+    diagnostic_tasks_id: Diagnostic tasks ID
+    diagnostic_tasks_id_detail: Diagnostic tasks ID detail
+    diagnostic_validation_sets: Diagnostic validation sets
+    diagnostic_validation_workflows: Diagnostic validation workflows
+    diagnostic_validation_workflows_count: Diagnostic validation workflows count
+    dna_command_runner_keywords: Dna command runner keywords
+    execute_suggested_actions_commands: Execute suggested actions commands
+    path_trace: Path trace
+    path_trace_workflow_manager: Path trace workflow manager
+    sensor: Sensor
+    sensor_test_run: Sensor test run
+    sensor_test_template_duplicate: Sensor test template duplicate
+    sensor_test_template_edit: Sensor test template edit
+    thousand_eyes_test_results: Thousand eyes test results
+    thousand_eyes_test_results_count: Thousand eyes test results count
+    thousand_eyes_test_results_trend_analytics: Thousand eyes test results trend analytics
+    wireless_sensor_test_results: Wireless sensor test results
+    playbook:command_runner_run_command: 'Playbook: Command runner run command'
+    playbook:download_device_cmd_runner_output: 'Playbook: Download device cmd runner output'
+    playbook:path_trace_workflow_manager: 'Playbook: Path trace workflow manager'
+- title: Capture RF and packet data with Intelligent Capture
+  description: Configure Intelligent Capture settings and deployments, and retrieve capture files, client
+    and radio data and spectrum interference reports.
+  components:
+    assurance_icap_settings_workflow_manager: Assurance icap settings workflow manager
+    icap_capture_files: Icap capture files
+    icap_capture_files_count: Icap capture files count
+    icap_capture_files_id_download: Icap capture files ID download
+    icap_clients_id: Icap clients ID
+    icap_radios_id: Icap radios ID
+    icap_settings: Icap settings
+    icap_settings_configuration_models: Icap settings configuration models
+    icap_settings_configuration_models_id_delete_deploy: Icap settings configuration models ID delete
+      deploy
+    icap_settings_configuration_models_preview_activity_id: Icap settings configuration models preview
+      activity ID
+    icap_settings_configuration_models_preview_activity_id_deploy: Icap settings configuration models
+      preview activity ID deploy
+    icap_settings_configuration_models_preview_activity_id_network_device_status_details: Icap settings
+      configuration models preview activity ID network device status details
+    icap_settings_configuration_models_preview_activity_id_network_devices_network_device_id_config: Icap
+      settings configuration models preview activity ID network devices network device ID config
+    icap_settings_count: Icap settings count
+    icap_settings_deploy: Icap settings deploy
+    icap_settings_deploy_id_delete_deploy: Icap settings deploy ID delete deploy
+    icap_settings_device_deployments: Icap settings device deployments
+    icap_settings_device_deployments_count: Icap settings device deployments count
+    icap_spectrum_interference_device_reports: Icap spectrum interference device reports
+    icap_spectrum_sensor_reports: Icap spectrum sensor reports
+    playbook:assurance_icap_settings_workflow_manager: 'Playbook: Assurance icap settings workflow manager'
+- title: Manage assurance issues, events and health score settings
+  description: Query, resolve and ignore assurance issues and events, define custom issue definitions,
+    and adjust health score definitions.
+  components:
+    assurance_device_health_score_settings_playbook_config_generator: Assurance device health score settings
+      playbook config generator
+    assurance_device_health_score_settings_workflow_manager: Assurance device health score settings workflow
+      manager
+    assurance_events: Assurance events
+    assurance_events_child_events: Assurance events child events
+    assurance_events_count: Assurance events count
+    assurance_events_query: Assurance events query
+    assurance_events_query_count: Assurance events query count
+    assurance_issue_playbook_config_generator: Assurance issue playbook config generator
+    assurance_issue_workflow_manager: Assurance issue workflow manager
+    assurance_issues: Assurance issues
+    assurance_issues_count: Assurance issues count
+    assurance_issues_ignore: Assurance issues ignore
+    assurance_issues_query: Assurance issues query
+    assurance_issues_query_count: Assurance issues query count
+    assurance_issues_resolve: Assurance issues resolve
+    assurance_issues_summary_analytics: Assurance issues summary analytics
+    assurance_issues_top_n_analytics: Assurance issues top n analytics
+    assurance_issues_trend_analytics: Assurance issues trend analytics
+    assurance_issues_update: Assurance issues update
+    assurance_tasks: Assurance tasks
+    assurance_tasks_count: Assurance tasks count
+    custom_issue_definitions: Custom issue definitions
+    custom_issue_definitions_count: Custom issue definitions count
+    dna_health_score_definitions_count: Dna health score definitions count
+    health_score_definitions: Health score definitions
+    health_score_definitions_bulk_update: Health score definitions bulk update
+    health_score_definitions_count: Health score definitions count
+    issue_enrichment_details: Issue enrichment details
+    issues: Issues
+    issues_enrichment_details: Issues enrichment details
+    network_devices_issues_remediation_provision: Network devices issues remediation provision
+    system_issue_definitions: System issue definitions
+    system_issue_definitions_count: System issue definitions count
+    playbook:assurance_device_health_score_settings_playbook_config_generator: 'Playbook: Assurance device
+      health score settings playbook config generator'
+    playbook:assurance_device_health_score_settings_workflow_manager: 'Playbook: Assurance device health
+      score settings workflow manager'
+    playbook:assurance_issue_playbook_config_generator: 'Playbook: Assurance issue playbook config generator'
+    playbook:assurance_issue_workflow_manager: 'Playbook: Assurance issue workflow manager'
+- title: Monitor site, device and fabric health
+  description: Query site, device, interface, fabric and transit health, site KPIs, trends and network
+    topology.
+  components:
+    device_details: Device details
+    device_enrichment_details: Device enrichment details
+    device_enrichment_details_v2: Device enrichment details v2
+    device_family_identifiers_details: Device family identifiers details
+    device_health: Device health
+    fabric_site_health_summaries: Fabric site health summaries
+    fabric_site_health_summaries_count: Fabric site health summaries count
+    fabric_site_health_summaries_id_trend_analytics: Fabric site health summaries ID trend analytics
+    interfaces: Interfaces
+    interfaces_count: Interfaces count
+    interfaces_id_trend_analytics: Interfaces ID trend analytics
+    interfaces_query: Interfaces query
+    interfaces_query_count: Interfaces query count
+    network_devices_summary_analytics: Network devices summary analytics
+    network_devices_top_n_analytics: Network devices top n analytics
+    network_devices_trend_analytics: Network devices trend analytics
+    network_devices_trend_analytics_id: Network devices trend analytics ID
+    site_health: Site health
+    site_health_summaries: Site health summaries
+    site_health_summaries_count: Site health summaries count
+    site_health_summaries_id_trend_analytics: Site health summaries ID trend analytics
+    site_health_summaries_summary_analytics: Site health summaries summary analytics
+    site_health_summaries_trend_analytics: Site health summaries trend analytics
+    site_kpi_summaries: Site kpi summaries
+    site_kpi_summaries_count: Site kpi summaries count
+    site_kpi_summaries_query: Site kpi summaries query
+    site_kpi_summaries_query_count: Site kpi summaries query count
+    site_kpi_summaries_summary_analytics: Site kpi summaries summary analytics
+    site_kpi_summaries_top_n_analytics: Site kpi summaries top n analytics
+    site_kpi_summaries_trend_analytics: Site kpi summaries trend analytics
+    topology_layer_2: Topology layer 2
+    topology_layer_3: Topology layer 3
+    topology_network_health: Topology network health
+    topology_physical: Topology physical
+    topology_site: Topology site
+    topology_vlan_details: Topology VLAN details
+    transit_network_health_summaries: Transit network health summaries
+    transit_network_health_summaries_count: Transit network health summaries count
+    transit_network_health_summaries_id_trend_analytics: Transit network health summaries ID trend analytics
+    virtual_network_health_summaries: Virtual network health summaries
+    virtual_network_health_summaries_count: Virtual network health summaries count
+    virtual_network_health_summaries_id_trend_analytics: Virtual network health summaries ID trend analytics
+- title: Monitor clients and energy usage
+  description: Query client details, health and trends, user enrichment data, and energy use by client,
+    device and site.
+  components:
+    client_detail: Client detail
+    client_enrichment_details: Client enrichment details
+    client_enrichment_details_v2: Client enrichment details v2
+    client_health: Client health
+    client_proximity: Client proximity
+    clients: Clients
+    clients_count: Clients count
+    clients_query: Clients query
+    clients_query_count: Clients query count
+    clients_summary_analytics: Clients summary analytics
+    clients_top_n_analytics: Clients top n analytics
+    clients_trend_analytics: Clients trend analytics
+    clients_trend_analytics_id: Clients trend analytics ID
+    energy_clients: Energy clients
+    energy_clients_count: Energy clients count
+    energy_clients_query: Energy clients query
+    energy_clients_query_count: Energy clients query count
+    energy_network_devices: Energy network devices
+    energy_network_devices_count: Energy network devices count
+    energy_network_devices_query: Energy network devices query
+    energy_network_devices_query_count: Energy network devices query count
+    energy_sites: Energy sites
+    energy_sites_count: Energy sites count
+    energy_sites_query: Energy sites query
+    energy_sites_query_count: Energy sites query count
+    energy_summary_analytics: Energy summary analytics
+    energy_trend_analytics: Energy trend analytics
+    user_enrichment_details: User enrichment details
+    user_enrichment_details_v2: User enrichment details v2
+- title: Monitor applications and network services
+  description: Query application health and AAA, DHCP and DNS service performance, including summaries,
+    top-N lists and trends.
+  components:
+    aaa_services: AAA services
+    aaa_services_count: AAA services count
+    aaa_services_id_trend_analytics: AAA services ID trend analytics
+    aaa_services_query: AAA services query
+    aaa_services_query_count: AAA services query count
+    aaa_services_summary_analytics: AAA services summary analytics
+    aaa_services_top_n_analytics: AAA services top n analytics
+    aaa_services_trend_analytics: AAA services trend analytics
+    applications_health: Applications health
+    dhcp_services: DHCP services
+    dhcp_services_count: DHCP services count
+    dhcp_services_id_trend_analytics: DHCP services ID trend analytics
+    dhcp_services_query: DHCP services query
+    dhcp_services_query_count: DHCP services query count
+    dhcp_services_summary_analytics: DHCP services summary analytics
+    dhcp_services_top_n_analytics: DHCP services top n analytics
+    dhcp_services_trend_analytics: DHCP services trend analytics
+    dns_services: DNS services
+    dns_services_count: DNS services count
+    dns_services_id_trend_analytics: DNS services ID trend analytics
+    dns_services_query: DNS services query
+    dns_services_query_count: DNS services query count
+    dns_services_summary_analytics: DNS services summary analytics
+    dns_services_top_n_analytics: DNS services top n analytics
+    dns_services_trend_analytics: DNS services trend analytics
+    network_applications: Network applications
+    network_applications_count: Network applications count
+    network_applications_id_trend_analytics: Network applications ID trend analytics
+    network_applications_summary_analytics: Network applications summary analytics
+    network_applications_trend_analytics: Network applications trend analytics
+- title: Manage application policy, QoS and application visibility
+  description: Define applications, application sets and application policies, queuing profiles and QoS
+    settings, enable application telemetry and CBAR on devices, and manage service provider profiles.
+  components:
+    app_policy: App policy
+    app_policy_default: App policy default
+    app_policy_intent_create: App policy intent create
+    app_policy_queuing_profile: App policy queuing profile
+    app_policy_queuing_profile_count: App policy queuing profile count
+    application_policy_application_set: Application policy application set
+    application_policy_application_set_count: Application policy application set count
+    application_policy_playbook_config_generator: Application policy playbook config generator
+    application_policy_workflow_manager: Application policy workflow manager
+    application_sets: Application sets
+    application_sets_count: Application sets count
+    application_visibility_network_devices: Application visibility network devices
+    application_visibility_network_devices_count: Application visibility network devices count
+    application_visibility_network_devices_disable_app_telemetry: Application visibility network devices
+      disable app telemetry
+    application_visibility_network_devices_disable_cbar: Application visibility network devices disable
+      cbar
+    application_visibility_network_devices_enable_app_telemetry: Application visibility network devices
+      enable app telemetry
+    application_visibility_network_devices_enable_cbar: Application visibility network devices enable
+      cbar
+    applications: Applications
+    applications_count: Applications count
+    applications_count_v2: Applications count v2
+    applications_v2: Applications v2
+    qos_device_interface: QoS device interface
+    qos_device_interface_info_count: QoS device interface info count
+    qos_policy_setting: QoS policy setting
+    service_provider: Service provider
+    service_provider_profile_delete: Service provider profile delete
+    service_provider_v2: Service provider v2
+    sp_profile_delete_v2: Sp profile delete v2
+    playbook:application_policy_playbook_config_generator: 'Playbook: Application policy playbook config
+      generator'
+    playbook:application_policy_workflow_manager: 'Playbook: Application policy workflow manager'
+    playbook:application_set_info: 'Playbook: Application set info'
+    playbook:application_sets: 'Playbook: Application sets'
+    playbook:applications: 'Playbook: Applications'
+- title: Configure events, notifications and webhooks
+  description: Manage event subscriptions, email, REST, syslog and SNMP destinations and webhooks, and
+    query events and audit logs.
+  components:
+    dna_event_snmp_config: Dna event SNMP config
+    event: Event
+    event_api_status: Event API status
+    event_artifact: Event artifact
+    event_artifact_count: Event artifact count
+    event_config_connector_types: Event config connector types
+    event_count: Event count
+    event_email_config: Event email config
+    event_series: Event series
+    event_series_audit_logs: Event series audit logs
+    event_series_audit_logs_parent_records: Event series audit logs parent records
+    event_series_audit_logs_summary: Event series audit logs summary
+    event_series_count: Event series count
+    event_snmp_config_create: Event SNMP config create
+    event_snmp_config_update: Event SNMP config update
+    event_subscription: Event subscription
+    event_subscription_count: Event subscription count
+    event_subscription_details_email: Event subscription details email
+    event_subscription_details_rest: Event subscription details rest
+    event_subscription_details_syslog: Event subscription details syslog
+    event_subscription_email: Event subscription email
+    event_subscription_rest: Event subscription rest
+    event_subscription_syslog: Event subscription syslog
+    event_syslog_config: Event syslog config
+    event_webhook: Event webhook
+    events_and_notifications_playbook_config_generator: Events and notifications playbook config generator
+    events_and_notifications_workflow_manager: Events and notifications workflow manager
+    playbook:event_webhook_create: 'Playbook: Event webhook create'
+    playbook:events_and_notifications_playbook_config_generator: 'Playbook: Events and notifications playbook
+      config generator'
+    playbook:events_and_notifications_workflow_manager: 'Playbook: Events and notifications workflow manager'
+- title: Integrate with ISE and ITSM
+  description: Integrate Cisco ISE and RADIUS authentication servers, configure ITSM integration instances
+    and review CMDB sync status.
+  components:
+    authentication_policy_servers: Authentication policy servers
+    integrate_ise: Integrate ISE
+    integration_settings_instances_itsm: Integration settings instances itsm
+    integration_settings_itsm_instances: Integration settings itsm instances
+    integration_settings_status: Integration settings status
+    ise_integration_status: ISE integration status
+    ise_radius_integration_playbook_config_generator: ISE RADIUS integration playbook config generator
+    ise_radius_integration_workflow_manager: ISE RADIUS integration workflow manager
+    itsm_cmdb_sync_status: Itsm cmdb sync status
+    itsm_integration_events_failed: Itsm integration events failed
+    playbook:ise_radius_integration_playbook_config_generator: 'Playbook: ISE RADIUS integration playbook
+      config generator'
+    playbook:ise_radius_integration_workflow_manager: 'Playbook: ISE RADIUS integration workflow manager'
+- title: Manage users, roles and external authentication
+  description: Create users and roles with permissions, and configure external authentication servers
+    and AAA attributes.
+  components:
+    role_permissions: Role permissions
+    roles: Roles
+    roles_permissions: Roles permissions
+    roles_v2: Roles v2
+    user: User
+    user_role_playbook_config_generator: User role playbook config generator
+    user_role_workflow_manager: User role workflow manager
+    users_external_authentication: Users external authentication
+    users_external_servers: Users external servers
+    users_external_servers_aaa_attribute: Users external servers AAA attribute
+    playbook:user_info: 'Playbook: User info'
+    playbook:user_role_playbook_config_generator: 'Playbook: User role playbook config generator'
+    playbook:user_role_workflow_manager: 'Playbook: User role workflow manager'
+- title: Track tasks and generate reports
+  description: Query tasks, activities and execution status, and create, schedule and run flexible reports.
+  components:
+    activities: Activities
+    activities_activity_id_triggered_jobs: Activities activity ID triggered jobs
+    activities_activity_id_triggered_jobs_count: Activities activity ID triggered jobs count
+    activities_count: Activities count
+    activities_id: Activities ID
+    dnacaap_management_execution_status: Dnacaap management execution status
+    flexible_report_content: Flexible report content
+    flexible_report_executions: Flexible report executions
+    flexible_report_schedule: Flexible report schedule
+    flexible_report_schedules: Flexible report schedules
+    reports: Reports
+    reports_executions: Reports executions
+    reports_view_group: Reports view group
+    reports_view_group_view: Reports view group view
+    reports_workflow_manager: Reports workflow manager
+    task: Task
+    task_count: Task count
+    task_operation: Task operation
+    task_tree: Task tree
+    tasks: Tasks
+    tasks_count: Tasks count
+    tasks_detail: Tasks detail
+    playbook:reports_executions_info: 'Playbook: Reports executions info'
+    playbook:reports_workflow_manager: 'Playbook: Reports workflow manager'
+- title: Tag network resources
+  description: Create tags and manage tag membership for devices and interfaces.
+  components:
+    interfaces_members_associations: Interfaces members associations
+    interfaces_members_associations_count: Interfaces members associations count
+    interfaces_members_associations_query: Interfaces members associations query
+    network_devices_members_associations: Network devices members associations
+    network_devices_members_associations_count: Network devices members associations count
+    network_devices_members_associations_query: Network devices members associations query
+    tag: Tag
+    tag_count: Tag count
+    tag_member: Tag member
+    tag_member_count: Tag member count
+    tag_member_type: Tag member type
+    tag_membership: Tag membership
+    tags_interfaces_members_associations: Tags interfaces members associations
+    tags_interfaces_members_associations_bulk: Tags interfaces members associations bulk
+    tags_interfaces_members_associations_count: Tags interfaces members associations count
+    tags_interfaces_members_associations_query: Tags interfaces members associations query
+    tags_network_devices_members_associations: Tags network devices members associations
+    tags_network_devices_members_associations_bulk: Tags network devices members associations bulk
+    tags_network_devices_members_associations_count: Tags network devices members associations count
+    tags_network_devices_members_associations_query: Tags network devices members associations query
+    tags_playbook_config_generator: Tags playbook config generator
+    tags_workflow_manager: Tags workflow manager
+    playbook:get_tag_members_by_id: 'Playbook: Get tag members by ID'
+    playbook:tag: 'Playbook: Tag'
+    playbook:tags_playbook_config_generator: 'Playbook: Tags playbook config generator'
+    playbook:tags_workflow_manager: 'Playbook: Tags workflow manager'
+- title: Manage IoT rings and endpoint analytics
+  description: Manage REP and MRP ring information, endpoint analytics profiling rules, endpoints, dictionaries
+    and ANC policies.
+  components:
+    endpoint_analytics_anc_policies: Endpoint analytics anc policies
+    endpoint_analytics_cmdb_endpoints: Endpoint analytics cmdb endpoints
+    endpoint_analytics_dictionaries: Endpoint analytics dictionaries
+    endpoint_analytics_endpoints: Endpoint analytics endpoints
+    endpoint_analytics_endpoints_anc_policy_delete: Endpoint analytics endpoints anc policy delete
+    endpoint_analytics_endpoints_anc_policy_update: Endpoint analytics endpoints anc policy update
+    endpoint_analytics_endpoints_count: Endpoint analytics endpoints count
+    endpoint_analytics_profiling_rules: Endpoint analytics profiling rules
+    endpoint_analytics_profiling_rules_bulk: Endpoint analytics profiling rules bulk
+    endpoint_analytics_profiling_rules_count: Endpoint analytics profiling rules count
+    endpoint_analytics_tasks: Endpoint analytics tasks
+    iot_fabric_rep_rings: IoT fabric rep rings
+    iot_fabric_rep_rings_delete: IoT fabric rep rings delete
+    iot_network_devices_network_device_id_mrp_rings: IoT network devices network device ID mrp rings
+    iot_network_devices_network_device_id_mrp_rings_count: IoT network devices network device ID mrp rings
+      count
+    iot_network_devices_network_device_id_mrp_rings_id_members: IoT network devices network device ID
+      mrp rings ID members
+    iot_network_devices_network_device_id_mrp_rings_id_members_count: IoT network devices network device
+      ID mrp rings ID members count
+    iot_non_fabric_rep_rings: IoT non fabric rep rings
+    iot_non_fabric_rep_rings_delete: IoT non fabric rep rings delete
+    iot_rep_rings_id: IoT rep rings ID
+    iot_rep_rings_query: IoT rep rings query
+    iot_rep_rings_query_count: IoT rep rings query count
+- title: Administer the Catalyst Center platform
+  description: Back up and restore Catalyst Center, review system health, performance and disaster recovery
+    status, and manage packages, files, access groups and filter groups.
+  components:
+    access_groups: Access groups
+    access_groups_count: Access groups count
+    backup_and_restore_playbook_config_generator: Backup and restore playbook config generator
+    backup_and_restore_workflow_manager: Backup and restore workflow manager
+    backup_configuration: Backup configuration
+    backup_nfs_configurations: Backup nfs configurations
+    backup_restore_executions: Backup restore executions
+    backup_storages: Backup storages
+    backups: Backups
+    backups_id_restore: Backups ID restore
+    cisco_imcs: Cisco imcs
+    connection_mode_setting: Connection mode setting
+    disasterrecovery_system_operationstatus: Disasterrecovery system operationstatus
+    disasterrecovery_system_status: Disasterrecovery system status
+    dnac_packages: Dnac packages
+    file: File
+    file_import: File import
+    file_namespaces: File namespaces
+    filter_group_aassociations_delete: Filter group aassociations delete
+    filter_group_associations: Filter group associations
+    filter_groups: Filter groups
+    platform_nodes_configuration_summary: Platform nodes configuration summary
+    platform_release_summary: Platform release summary
+    system_health: System health
+    system_health_count: System health count
+    system_performance: System performance
+    system_performance_historical: System performance historical
+    playbook:backup_and_restore_playbook_config_generator: 'Playbook: Backup and restore playbook config
+      generator'
+    playbook:backup_and_restore_workflow_manager: 'Playbook: Backup and restore workflow manager'

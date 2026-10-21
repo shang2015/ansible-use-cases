@@ -1,0 +1,87 @@
+fqcn: cisco.ios
+product: Cisco IOS and IOS XE
+prerequisites:
+- Network devices reachable over SSH (ansible.netcommon.network_cli) with credentials that have privileged
+  EXEC access, stored as an Automation Platform machine credential.
+- The ansible.netcommon collection available in the execution environment.
+notes:
+- Resource modules support states such as merged, replaced, overridden, deleted, gathered, rendered and
+  parsed, which allow configuration to be gathered and reconciled.
+use_cases:
+- title: Configure interfaces and Layer 2
+  description: Configure physical and logical interfaces, VLANs, switchport settings, link aggregation
+    and LLDP.
+  success: Interface, VLAN and link aggregation settings match the declared configuration, and re-running
+    the job makes no changes.
+  components:
+    interfaces: Interfaces
+    l2_interfaces: Layer 2 interfaces
+    l3_interfaces: Layer 3 interfaces
+    vlans: VLANs
+    lag_interfaces: Link aggregation (LAG) interfaces
+    lacp: LACP global settings
+    lacp_interfaces: LACP interfaces
+    lldp_global: LLDP global settings
+    lldp_interfaces: LLDP interfaces
+- title: Configure routing protocols
+  description: Configure BGP, OSPFv2, OSPFv3 and static routes, with prefix lists and route maps to control
+    route exchange.
+  success: Routing protocol and route policy configuration matches the declared definition.
+  components:
+    bgp_global: BGP global settings
+    bgp_address_family: BGP address families
+    ospfv2: OSPFv2
+    ospfv3: OSPFv3
+    ospf_interfaces: OSPF interfaces
+    static_routes: Static routes
+    prefix_lists: Prefix lists
+    route_maps: Route maps
+- title: Configure first-hop redundancy and fast failure detection
+  description: Configure HSRP on interfaces and BFD on interfaces and templates.
+  success: HSRP and BFD settings match the declared configuration.
+  components:
+    hsrp_interfaces: HSRP interfaces
+    bfd_interfaces: BFD interfaces
+    bfd_templates: BFD templates
+- title: Configure VRFs and data center overlays
+  description: Configure VRF definitions, their address families and interface membership, VXLAN VTEP
+    interfaces and L2VPN EVPN.
+  success: VRF and overlay configuration matches the declared definition.
+  components:
+    vrf: VRF definitions
+    vrf_global: Global VRF settings
+    vrf_address_family: VRF address families
+    vrf_interfaces: VRF interfaces
+    vxlan_vtep: VXLAN VTEP interfaces
+    evpn_global: EVPN global settings
+    evpn_evi: EVPN EVIs
+    evpn_ethernet: EVPN Ethernet segments
+- title: Control traffic with ACLs
+  description: Configure access control lists and apply them to interfaces.
+  success: ACLs are defined and bound to interfaces as declared.
+  components:
+    acls: ACLs
+    acl_interfaces: ACL interfaces
+- title: Configure device management services
+  description: Configure hostname, system attributes, banners, local users, logging, NTP, SNMP and service
+    settings.
+  success: Management plane settings match the declared configuration across the device fleet.
+  components:
+    hostname: Hostname
+    system: System attributes
+    banner: Banners
+    user: Local users
+    logging_global: Logging
+    ntp_global: NTP
+    snmp_server: SNMP server
+    service: Services
+- title: Run commands, push configuration and gather facts
+  description: Run show or exec commands, push or back up configuration sections, collect device facts
+    and test reachability with ping.
+  success: Commands and configuration changes are applied, and facts and command output are returned for
+    use in later tasks.
+  components:
+    command: Commands
+    config: Configuration sections
+    facts: Device facts
+    ping: Ping

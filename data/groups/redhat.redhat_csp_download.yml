@@ -1,0 +1,8 @@
+fqcn: redhat.redhat_csp_download
+product: "Red Hat Customer Portal"
+use_cases:
+- title: "Download content from the Red Hat customer portal"
+  description: "Download resources from the customer portal and install the dependencies the module needs."
+  components:
+    "redhat_csp_download": "Portal downloads"
+    "role:redhat_csp_download": "Module dependencies"

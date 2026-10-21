@@ -1,0 +1,72 @@
+fqcn: thalesgroup.ciphertrust
+product: Thales CipherTrust Manager
+use_cases:
+- title: Manage encryption keys and cloud key management
+  description: Create and update keys in the CipherTrust vault, run key operations, and try cloud key
+    management for Azure and GCP.
+  components:
+    vault_keys2_save: Keys
+    vault_keys2_op: Key operations
+    playbook:keyMgmtSample: Key management sample
+    playbook:keyOpsSample: Key operations sample
+    playbook:cckm_az: Azure key management sample
+    playbook:cckm_gcp: GCP key management sample
+- title: Protect files and volumes with Transparent Encryption
+  description: Configure CTE clients and client groups, CSI storage groups, policies and the process,
+    resource, signature and user sets that govern encryption and access, and deploy CTE agents.
+  components:
+    cte_client: CTE clients
+    cte_client_group: CTE client groups
+    cte_csi_storage_group: CSI storage groups
+    cte_policy_save: CTE policies
+    cte_process_set: Process sets
+    cte_resource_set: Resource sets
+    cte_signature_set: Signature sets
+    cte_user_set: User sets
+    role:cte4u: CTE for Linux and Unix role
+    role:cte4k8s: CTE for Kubernetes role
+    playbook:setupCTESample: CTE setup sample
+- title: Protect application data with Data Protection Gateway and CRDP
+  description: Configure DPG access, protection and execution policies, character sets, masking formats,
+    client profiles and user sets, and deploy DPG and CipherTrust RDP.
+  components:
+    dpg_access_policy_save: DPG access policies
+    dpg_character_set_save: Character sets
+    dpg_client_profile_save: Client profiles
+    dpg_masking_format_save: Masking formats
+    dpg_policy_save: DPG policies
+    dpg_protection_policy_save: Protection policies
+    dpg_user_set_save: DPG user sets
+    role:dpg: DPG role
+    role:crdp: CRDP role
+    playbook:setupDPGSample: DPG setup sample
+    playbook:deleteDPGSample: DPG removal sample
+- title: Administer domains, users and groups
+  description: Create domains, users and groups, change group membership, and look up or delete resources
+    by name or ID.
+  components:
+    domain_save: Domains
+    usermgmt_users_save: Users
+    group_save: Groups
+    group_add_remove_object: Group membership
+    cm_resource_get_id_from_name: Resource ID lookup
+    cm_resource_delete: Resource deletion
+    playbook:userMgmtSample: User management sample
+    playbook:groupMgmtSample: Group management sample
+- title: Deploy and operate CipherTrust Manager
+  description: Create and join node clusters, local certificate authorities and registration tokens, manage
+    services, interfaces and licences, including trial licences.
+  components:
+    cm_cluster: Node clusters
+    cm_certificate_authority: Local certificate authorities
+    cm_regtoken: Registration tokens
+    cm_services: Services
+    interface_save: Interfaces
+    interface_actions: Interface actions
+    license_create: Licences
+    license_trial: Trial licence info
+    license_trial_action: Trial licence activation
+    licensing_lockdata: Licence lock data
+    playbook:cluster: Cluster role playbook
+    playbook:interfaceMgmtSample: Interface management sample
+    playbook:licenseMgmtSample: Licence management sample

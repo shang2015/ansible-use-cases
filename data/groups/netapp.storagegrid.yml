@@ -1,0 +1,77 @@
+fqcn: netapp.storagegrid
+product: NetApp StorageGRID
+use_cases:
+- title: Manage tenants, buckets and S3 access
+  description: Create tenant accounts, buckets, users, groups and S3 keys, platform service endpoints
+    and cloud mirror replication.
+  components:
+    grid_tenant: Tenant accounts
+    grid_account: Accounts
+    org: Tenant information
+    org_bucket: Buckets
+    org_container: Containers
+    org_user: Tenant users
+    org_group: Tenant groups
+    org_user_s3_key: User S3 keys
+    org_identity_federation: Tenant identity federation
+    org_endpoints: Platform service endpoints
+    org_cloud_mirror_replication: Cloud mirror replication
+- title: Manage data placement and protection
+  description: Define ILM pools, rules, policies and policy tags, erasure-coding profiles, regions and
+    traffic classification policies.
+  components:
+    grid_ilm_pool: ILM pools
+    grid_ilm_rule: ILM rules
+    grid_ilm_policy: ILM policies
+    grid_ilm_policy_tag: ILM policy tags
+    grid_ec_profile: Erasure-coding profiles
+    grid_regions: Regions
+    grid_traffic_classes: Traffic classification policies
+- title: Manage grid administrators, identity and certificates
+  description: Manage grid users, groups, identity federation and single sign-on, and certificates, client
+    certificates and SSH security.
+  components:
+    grid_user: Grid users
+    grid_group: Grid groups
+    grid_identity_federation: Grid identity federation
+    grid_sso: Single sign-on
+    grid_certificate: Grid and API certificates
+    grid_self_signed_certificate: Self-signed certificates
+    grid_client_certificate: Client certificates
+    grid_ssh_security: SSH security
+- title: Configure grid networking and load balancing
+  description: Configure DNS, NTP, proxy, domain names, firewall, VLAN interfaces, untrusted client networks,
+    load balancer endpoints and HA groups.
+  components:
+    grid_dns: DNS servers
+    grid_ntp: NTP servers
+    grid_proxy_settings: Proxy settings
+    grid_domain_name: Endpoint domain names
+    grid_firewall: Node firewall
+    grid_vlan_interface: VLAN interfaces
+    grid_untrusted_client_network: Untrusted client network
+    grid_gateway: Load balancer endpoints
+    grid_ha_group: HA groups
+- title: Monitor the grid and support operations
+  description: Log in, gather grid information and metrics, send alerts, configure audit destinations,
+    autosupport and SNMP, and retrieve the recovery package.
+  components:
+    grid: Grid information
+    grid_login: Login
+    grid_metrics: Metrics
+    grid_alert_receiver: Alert receivers
+    grid_audit_destination: Audit log destinations
+    grid_autosupport: AutoSupport
+    grid_snmp: SNMP agent
+    grid_recovery_package: Recovery package
+- title: Install and upgrade grid nodes
+  description: Configure the cluster through the install API, apply hotfixes, and set up, install and
+    reset appliance nodes.
+  components:
+    grid_cluster_config: Cluster configuration
+    grid_hotfix: Hotfixes
+    pge: Appliance node information
+    pge_config: Appliance node configuration
+    pge_install: Appliance node install
+    pge_setup: Appliance initial setup
+    reset_node_to_pge: Primary admin node reset

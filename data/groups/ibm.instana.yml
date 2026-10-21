@@ -1,0 +1,7 @@
+fqcn: ibm.instana
+product: "IBM Instana"
+use_cases:
+- title: "Respond to Instana events"
+  description: "Receive Instana webhook events in Event-Driven Ansible."
+  components:
+    "eda_event_source:instana_webhook": "Webhook event source"

@@ -1,0 +1,19 @@
+fqcn: netapp.um_info
+product: NetApp Unified Manager
+use_cases:
+- title: List clusters, nodes and SVMs
+  description: Retrieve information about clusters, nodes and storage virtual machines.
+  components:
+    clusters: Clusters
+    list_clusters: Cluster list
+    nodes: Nodes
+    list_nodes: Node list
+    svms: SVMs
+    list_svms: SVM list
+- title: List aggregates and volumes
+  description: Retrieve information about aggregates and volumes.
+  components:
+    aggregates: Aggregates
+    list_aggregates: Aggregate list
+    volumes: Volumes
+    list_volumes: Volume list

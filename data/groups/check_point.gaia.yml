@@ -1,0 +1,111 @@
+fqcn: check_point.gaia
+product: Check Point Gaia
+use_cases:
+- title: Configure network interfaces
+  description: Configure physical, VLAN, bond, bridge, alias and loopback interfaces, and query interface
+    state.
+  components:
+    physical_interface: Physical interface
+    physical_interfaces: Physical interface info
+    vlan_interface: VLAN interfaces
+    bond_interface: Bond interfaces
+    bridge_interface: Bridge interfaces
+    alias_interface: Alias interfaces
+    loopback_interface: Loopback interfaces
+    ipv6: IPv6 support
+    dhcp_server: DHCP server
+- title: Configure routing
+  description: Configure static routes and view active routes learned by direct, kernel, static, BGP,
+    OSPF, RIP and aggregate routing.
+  components:
+    static_route: Static routes
+    routes: Active routes
+    routes_aggregate: Aggregate routes
+    routes_bgp: BGP routes
+    routes_direct: Interface routes
+    routes_kernel: Kernel routes
+    routes_ospf: OSPF routes
+    routes_rip: RIP routes
+    routes_static: Static routes (active)
+- title: Manage administrators, roles and authentication
+  description: Manage Gaia users, roles, system groups, password policy and expert and GRUB passwords,
+    and external RADIUS and TACACS authentication.
+  components:
+    user: Users
+    role: Roles
+    system_group: System groups
+    password_policy: Password policy
+    expert_password: Expert password
+    grub_password: GRUB password
+    radius_server: RADIUS servers
+    tacacs_server: TACACS servers
+- title: Harden access to the gateway
+  description: Control allowed management clients, SSH server settings and login messages.
+  components:
+    allowed_clients: Allowed clients
+    ssh_server_settings: SSH server settings
+    banner: Banner message
+    message_of_the_day: Message of the day
+    hostname_on_login_page: Hostname on login page
+- title: Configure basic system settings
+  description: Set hostname, DNS, NTP, time zone and date, proxy and run the first-time wizard.
+  components:
+    hostname: Hostname
+    dns: DNS
+    ntp: NTP
+    time_and_date: Time and date
+    timezones: Time zones
+    proxy: Proxy
+    initial_setup: First-time wizard
+- title: Monitor with SNMP and syslog
+  description: Configure the SNMP agent, traps, receivers and SNMPv3 users, and local and remote system
+    logging.
+  components:
+    snmp: SNMP agent
+    snmp_custom_trap: Custom SNMP traps
+    snmp_pre_defined_traps: Predefined SNMP traps
+    snmp_trap_receiver: SNMP trap receivers
+    snmp_user: SNMPv3 users
+    syslog: System logging
+    remote_syslog: Remote syslog servers
+- title: Schedule jobs and snapshots
+  description: Create scheduled jobs with mail notification and scheduled snapshots, and check task status.
+  components:
+    scheduled_job: Scheduled jobs
+    scheduled_job_mail: Job mail notifications
+    scheduled_snapshot: Scheduled snapshots
+    task: Tasks
+- title: Manage Maestro security groups and virtual systems
+  description: Manage Maestro security groups, gateways, ports and sites with pending changes, and virtual
+    gateways, switches and virtual systems.
+  components:
+    maestro_changes: Pending changes
+    maestro_gateways: Security group members
+    maestro_ports: Ports
+    maestro_security_groups: Security groups
+    maestro_sites: Sites
+    virtual_gateway: Virtual gateways
+    virtual_switch: Virtual switches
+    virtual_systems: Virtual systems
+    vsnext_state: VSNext state
+- title: Install policy and run commands
+  description: Install dynamic content layers, simulate packets, run scripts, upload files and reboot
+    the machine.
+  components:
+    dynamic_content: Dynamic content
+    dynamic_content_layer: Dynamic content layer
+    dynamic_content_layers: Dynamic content layers
+    simulate_packet: Packet simulation
+    run_script: Run scripts
+    put_file: File upload
+    run_reboot: Reboot
+- title: Inspect version, features and diagnostics
+  description: Query Gaia version, API versions, features, extended commands, asset details and diagnostics.
+  components:
+    version: Gaia version
+    api_versions: API versions
+    features: Features
+    extended_commands: Extended commands
+    asset: Asset
+    diagnostics: Diagnostics
+    diagnostics_topics: Diagnostics topics

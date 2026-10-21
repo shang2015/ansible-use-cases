@@ -1,0 +1,14 @@
+fqcn: everpure.pure1
+product: "Pure Storage Pure1"
+use_cases:
+- title: "Monitor Pure Storage arrays through Pure1"
+  description: "Collect alerts, drives, NICs, ports, pods and volumes information for arrays from Pure1, and manage array tags."
+  components:
+    "info": "Pure1 information"
+    "alerts": "Array alerts"
+    "array_tags": "Array tags"
+    "drives": "Array drives"
+    "nics": "Network interfaces"
+    "pods": "FlashArray pods"
+    "ports": "FlashArray ports"
+    "volumes": "Volumes"

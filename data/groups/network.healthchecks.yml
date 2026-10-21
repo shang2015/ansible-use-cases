@@ -1,0 +1,28 @@
+fqcn: network.healthchecks
+product: Network device health checks
+use_cases:
+- title: Check device resources and hardware health
+  description: Monitor CPU, memory, filesystem usage, uptime, environmental conditions and crash files
+    on network devices.
+  components:
+    role:cpu: CPU usage
+    role:memory: Memory usage
+    role:filesystem: Filesystem usage
+    role:uptime: System uptime
+    role:environment: Environmental conditions
+    role:crashfiles: Crash files
+- title: Check interfaces, routing and reachability
+  description: Check interface health, BGP neighbor sessions, OSPF resources and IP reachability by ping.
+  components:
+    role:interfaces: Interfaces
+    role:bgp: BGP neighbors
+    role:ospf: OSPF
+    role:ip_reachability: IP reachability
+- title: Filter health check results
+  description: Filter health check data by target for reporting.
+  components:
+    filter:health_check_view: Health check view
+    filter:filesystem_health_check_view: Filesystem health check view
+    filter:interfaces_health_check_view: Interfaces health check view
+    filter:ospf_health_check_view: OSPF health check view
+    filter:main: Main filter

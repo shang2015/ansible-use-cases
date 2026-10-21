@@ -1,0 +1,26 @@
+fqcn: netapp.cloudmanager
+product: NetApp Cloud Manager
+use_cases:
+- title: Deploy Cloud Manager connectors and accounts
+  description: Deploy connectors in AWS, Azure and GCP, manage NSS accounts and gather information.
+  components:
+    connector_aws: AWS connectors
+    connector_azure: Azure connectors
+    connector_gcp: GCP connectors
+    nss_account: NSS accounts
+    info: Cloud Manager information
+- title: Create Cloud Volumes ONTAP and FSx systems
+  description: Create Cloud Volumes ONTAP working environments in AWS, Azure and GCP and ONTAP file systems
+    on FSx.
+  components:
+    cvo_aws: CVO in AWS
+    cvo_azure: CVO in Azure
+    cvo_gcp: CVO in GCP
+    aws_fsx: FSx for ONTAP
+- title: Provision storage and replication
+  description: Manage aggregates, volumes, CIFS servers and SnapMirror relationships.
+  components:
+    aggregate: Aggregates
+    volume: Volumes
+    cifs_server: CIFS servers
+    snapmirror: SnapMirror

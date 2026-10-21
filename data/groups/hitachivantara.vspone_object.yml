@@ -1,0 +1,79 @@
+fqcn: hitachivantara.vspone_object
+product: Hitachi Vantara VSP One Object
+use_cases:
+- title: Manage certificates and encryption
+  description: Manage certificates, KMIP key servers and S3 encryption settings, fetch CSRF tokens, and
+    upload certificates or update KMIP ciphers with ready-made workflows.
+  components:
+    certificates: Certificates
+    csrf: CSRF tokens
+    kmip: KMIP servers
+    kmip_server: KMIP server list
+    s3_encryption: S3 encryption
+    role:hv_vspone_object_certificate_upload_role: Certificate upload role
+    role:hv_vspone_object_kmip_server_role: KMIP cipher update role
+    playbook:role_playbooks.hv_vspone_object_certificate_upload_role: Certificate upload workflow
+    playbook:role_playbooks.hv_vspone_object_kmip_server_role: KMIP cipher update workflow
+    playbook:oneobject_node.certificate: Certificate playbook
+    playbook:oneobject_node.certificate_facts: Certificate facts playbook
+    playbook:oneobject_node.csrf: CSRF token playbook
+    playbook:oneobject_node.kmip_server: KMIP server playbook
+    playbook:oneobject_node.kmip_server_facts: KMIP server facts playbook
+    playbook:oneobject_node.s3_encryption: S3 encryption playbook
+    playbook:oneobject_node.s3_encryption_facts: S3 encryption facts playbook
+- title: Manage licenses and system identity
+  description: Set the serial number, upload and query licenses, read region and galaxy information, and
+    run the licensing workflow.
+  components:
+    license: License
+    licenses: Licenses list
+    serial_number: Serial number
+    region: Region information
+    galaxy: Galaxy information
+    role:hv_vspone_object_license_role: License role
+    playbook:role_playbooks.hv_vspone_object_license_role: License workflow
+    playbook:oneobject_node.license: License playbook
+    playbook:oneobject_node.license_facts: License facts playbook
+    playbook:oneobject_node.serial_number: Serial number playbook
+    playbook:oneobject_node.serial_number_facts: Serial number facts playbook
+    playbook:oneobject_node.region_facts: Region facts playbook
+    playbook:oneobject_node.galaxy_facts: Galaxy facts playbook
+- title: Manage storage components, classes and fault domains
+  description: Create storage components, classes and fault domains, update component state, and activate
+    components while checking capacity thresholds.
+  components:
+    storage_component: Storage components
+    storage_component_state_update: Component state
+    storage_components: Storage component list
+    storage_class: Storage classes
+    storage_fault_domain: Fault domains
+    role:hv_vspone_object_storage_component_role: Component activation role
+    playbook:role_playbooks.hv_vspone_object_storage_component_role: Component activation workflow
+    playbook:oneobject_node.storage_component: Storage component playbook
+    playbook:oneobject_node.storage_component_facts: Storage component facts playbook
+    playbook:oneobject_node.storage_class: Storage class playbook
+    playbook:oneobject_node.storage_class_facts: Storage class facts playbook
+    playbook:oneobject_node.storage_fault_domain: Fault domain playbook
+    playbook:oneobject_node.storage_fault_domain_facts: Fault domain facts playbook
+- title: Manage S3 users and buckets
+  description: Generate S3 user credentials and list users, user IDs and user buckets.
+  components:
+    s3_user_credentials: S3 user credentials
+    users: Users
+    user_id: User IDs
+    user_buckets: User buckets
+    playbook:oneobject_node.s3_user_credentials: S3 credentials playbook
+    playbook:oneobject_node.user_facts: User facts playbook
+    playbook:oneobject_node.user_buckets_facts: User bucket facts playbook
+- title: Monitor jobs and events and collect diagnostics
+  description: Track and manage jobs, read system events, create log bundles for troubleshooting, and
+    record user consent for data collection.
+  components:
+    job: Jobs
+    jobs: Job list
+    events: Events
+    troubleshooting: Troubleshooting log bundle
+    playbook:accept_user_consent: User consent playbook
+    playbook:oneobject_node.job: Job playbook
+    playbook:oneobject_node.jobs_facts: Job facts playbook
+    playbook:oneobject_node.events_facts: Event facts playbook

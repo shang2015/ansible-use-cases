@@ -1,0 +1,77 @@
+fqcn: infra.controller_configuration
+product: Ansible Automation Platform (controller configuration as code)
+use_cases:
+- title: Set up organizations, teams, users and permissions
+  description: Create organizations, teams, users and role assignments, OAuth applications and labels
+    on the automation controller.
+  components:
+    role:organizations: Organizations role
+    role:teams: Teams role
+    role:users: Users role
+    role:roles: Role assignments role
+    role:applications: OAuth applications role
+    role:labels: Labels role
+- title: Manage credentials and execution environments
+  description: Create credential types, credentials and external credential input sources, and register
+    execution environments.
+  components:
+    role:credential_types: Credential types role
+    role:credentials: Credentials role
+    role:credential_input_sources: Credential input sources role
+    role:execution_environments: Execution environments role
+- title: Manage inventories, hosts and instances
+  description: Create inventories, groups, hosts and inventory sources, update sources, bulk-create hosts,
+    and register instances and instance groups.
+  components:
+    role:inventories: Inventories role
+    role:groups: Groups role
+    role:hosts: Hosts role
+    role:bulk_host_create: Bulk host creation role
+    role:inventory_sources: Inventory sources role
+    role:inventory_source_update: Inventory source update role
+    role:instances: Instances role
+    role:instance_groups: Instance groups role
+- title: Define projects, job templates and workflows
+  description: Create projects, job templates, workflow job templates, schedules and notification templates,
+    and refresh projects.
+  components:
+    role:projects: Projects role
+    role:project_update: Project update role
+    role:job_templates: Job templates role
+    role:workflow_job_templates: Workflow job templates role
+    role:schedules: Schedules role
+    role:notification_templates: Notification templates role
+- title: Launch and control automation
+  description: Launch jobs, workflows and bulk jobs, run or cancel ad hoc commands and jobs, and collect
+    asynchronous task status.
+  components:
+    role:job_launch: Job launch role
+    role:workflow_launch: Workflow launch role
+    role:bulk_job_launch: Bulk job launch role
+    role:jobs_cancel: Job cancellation role
+    role:ad_hoc_command: Ad hoc command role
+    role:ad_hoc_command_cancel: Ad hoc command cancellation role
+    role:collect_async_status: Async status role
+- title: Configure the controller platform
+  description: Configure settings and licences after installation, dispatch object creation across roles,
+    share global variables, check dependencies, and gather statistics.
+  components:
+    role:settings: Settings role
+    role:license: Licence role
+    role:dispatch: Dispatch role
+    role:global_vars: Global variables role
+    role:meta_dependency_check: Dependency check role
+    playbook:configure_controller: Post-installation configuration
+    playbook:get_stats: Controller statistics
+- title: Export, compare and refactor configuration as code
+  description: Export controller objects to a file tree and recreate them from it, compare controller
+    state with code, and bulk-rename objects or set their organization.
+  components:
+    role:filetree_create: File tree export role
+    role:filetree_read: File tree import role
+    role:object_diff: Object diff role
+    controller_export_diff: Export diff
+    lookup:controller_object_diff: Object diff lookup
+    playbook:flatten_filetree_create_output: Flatten file tree output
+    playbook:rename_objects: Rename objects
+    playbook:set_organization: Set organization

@@ -1,0 +1,12 @@
+fqcn: infra.lvm_snapshots
+product: "Linux LVM"
+use_cases:
+- title: "Snapshot, revert and resize LVM volumes"
+  description: "Create, remove and revert LVM snapshots, shrink logical volumes and enlarge the boot partition."
+  components:
+    "role:snapshot_create": "Create snapshots"
+    "role:snapshot_remove": "Remove snapshots"
+    "role:snapshot_revert": "Revert snapshots"
+    "role:shrink_lv": "Shrink logical volumes"
+    "role:bigboot": "Grow boot partition"
+    "role:initramfs": "Temporary initramfs"

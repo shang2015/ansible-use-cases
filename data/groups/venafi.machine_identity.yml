@@ -1,0 +1,19 @@
+fqcn: venafi.machine_identity
+product: CyberArk Certificate Manager (Venafi)
+use_cases:
+- title: Manage TLS certificates and policies
+  description: Request, retrieve and revoke certificates and create or delete policies and certificate
+    issuing templates.
+  components:
+    certificate: Certificates
+    certificate_revoke: Certificate revocation
+    policy: Policies
+    role:certificate: Certificate management
+    role:policy: Policy management
+- title: Manage SSH certificates
+  description: Request SSH certificates and retrieve SSH certificate authority public keys and principals.
+  components:
+    ssh_certificate: SSH certificates
+    ssh_ca: SSH certificate authorities
+    role:ssh_certificate: SSH certificate management
+    role:ssh_ca: SSH CA configuration

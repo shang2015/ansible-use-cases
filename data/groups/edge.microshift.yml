@@ -1,0 +1,12 @@
+fqcn: edge.microshift
+product: "Red Hat Device Edge (MicroShift)"
+use_cases:
+- title: "Install MicroShift and deploy applications"
+  description: "Install MicroShift from RPMs, build OS images with MicroShift using image builder and deploy applications onto it."
+  components:
+    "role:rpm_install": "Install from RPM"
+    "playbook:microshift_rpm_install": "RPM install playbook"
+    "role:image_builder": "Image builder"
+    "playbook:microshift_image_build": "Image build playbook"
+    "role:app": "Application deployment"
+    "playbook:microshift_app": "Application deployment playbook"

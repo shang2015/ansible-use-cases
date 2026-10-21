@@ -1,0 +1,10 @@
+fqcn: avantra.core
+product: "Avantra"
+use_cases:
+- title: "Manage Avantra servers, SAP systems and workflows"
+  description: "Authenticate to Avantra, manage servers and SAP systems, and run workflows."
+  components:
+    "login": "Authentication"
+    "server": "Servers"
+    "sapsystem": "SAP systems"
+    "workflow_execution": "Workflow execution"

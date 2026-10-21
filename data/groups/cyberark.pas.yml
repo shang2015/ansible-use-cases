@@ -1,0 +1,15 @@
+fqcn: cyberark.pas
+product: "CyberArk Privileged Access Security"
+use_cases:
+- title: "Manage privileged accounts and credentials"
+  description: "Authenticate, manage accounts and users and retrieve credentials through PAS Web Services and the Central Credential Provider, or install the AIM provider."
+  components:
+    "authentication": "Authentication"
+    "account": "Accounts"
+    "user": "Users"
+    "credential": "Credentials"
+    "role:aimprovider": "Credential Provider (AIM)"
+- title: "Receive CyberArk events"
+  description: "Receive CyberArk syslog events in Event-Driven Ansible."
+  components:
+    "eda_event_source:syslog": "Syslog event source"

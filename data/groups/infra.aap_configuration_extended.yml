@@ -1,0 +1,41 @@
+fqcn: infra.aap_configuration_extended
+product: Ansible Automation Platform
+use_cases:
+- title: Export controller configuration to code
+  description: Create a file tree of existing controller objects, export job templates and workflows with
+    related objects, and flatten the output.
+  components:
+    role:filetree_create: File tree export
+    playbook:export_job_template_related: Export job template and related objects
+    playbook:export_workflow_job_template_related: Export workflow template and related objects
+    playbook:flatten_filetree_create_output: Flatten export output
+    lookup:workflow_related_graph: Workflow related objects
+    filter:filetree_as_var: Export field variable reference
+    filter:filetree_var_name: Export field variable name
+    filter:filetree_surveys_cleanup: Survey cleanup
+- title: Apply configuration as code
+  description: Read a file tree or variables and create objects in the controller, configure it after
+    installation and sync collections offline.
+  components:
+    role:filetree_read: File tree import
+    aap_config_vars: Configuration variables
+    playbook:import_filetree: Import file tree
+    playbook:configure_controller: Post-install controller configuration
+    role:offline_sync: Offline collection sync
+- title: Detect drift and validate configuration
+  description: Compare controller objects with code and audit declared configuration against rules.
+  components:
+    role:object_diff: Object diff
+    controller_export_diff: Controller diff
+    lookup:controller_object_diff: Controller object diff lookup
+    role:aap_rules_validation: Configuration rule validation
+- title: Refactor and upgrade configuration
+  description: Rename objects, set organizations, upgrade configuration from AAP 2.4 to 2.5 format, report
+    stats and format YAML.
+  components:
+    playbook:rename_objects: Rename objects
+    playbook:set_organization: Set organization
+    playbook:upgrade_config: Upgrade configuration
+    role:upgrade_config: Configuration upgrade
+    playbook:get_stats: Statistics
+    format_yaml: YAML formatting

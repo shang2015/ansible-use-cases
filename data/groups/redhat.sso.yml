@@ -1,0 +1,72 @@
+fqcn: redhat.sso
+product: Red Hat Single Sign-On (Keycloak)
+use_cases:
+- title: Manage realms, keys and organizations
+  description: Create and configure realms, organizations, realm keys, localization overrides and components,
+    and create realms and clients with the realm role and playbooks.
+  components:
+    realm: Realms
+    realm_key: Realm keys
+    realm_keys_metadata: Realm key metadata
+    realm_localization: Localization overrides
+    organization: Organizations
+    component: Components
+    role:keycloak_realm: Realm and client role
+    playbook:keycloak_realm: Realm playbook
+    playbook:keycloak_realm_client: Realm and client playbook
+- title: Manage clients and client scopes
+  description: Create and configure clients, client templates and scopes, scope role mappings, and client
+    secrets.
+  components:
+    client: Clients
+    clienttemplate: Client templates
+    client_scope: Client scopes
+    client_scope_type: Client scope types
+    client_scope_rolemappings: Client scope role mappings
+    client_rolescope: Client role scope
+    clientsecret: Client secrets
+    clientsecret_regenerate: Client secret regeneration
+    playbook:keycloak_client_scope: Client scope playbook
+- title: Configure fine-grained authorization
+  description: Define client authorization scopes, custom policies and permissions.
+  components:
+    authz_authorization_scope: Authorization scopes
+    authz_custom_policy: Custom policies
+    authz_permission: Permissions
+- title: Manage users, groups and roles
+  description: Manage users, user profiles, groups and roles, assign realm, client and user role mappings,
+    send required-action emails and list realm users.
+  components:
+    user: Users
+    userprofile: User profiles
+    user_execute_actions_email: Required-action emails
+    realm_users: Realm users
+    group: Groups
+    role: Roles
+    realm_rolemapping: Realm role mappings
+    client_rolemapping: Client role mappings
+    user_rolemapping: User role mappings
+- title: Configure authentication flows
+  description: Configure authentication flows and required actions.
+  components:
+    authentication: Authentication
+    authentication_v2: Authentication (v2)
+    authentication_flow: Authentication flows
+    authentication_required_actions: Required actions
+    playbook:keycloak_authentication_flow: Authentication flow playbook
+- title: Federate identities
+  description: Integrate external identity providers and user federation sources such as LDAP.
+  components:
+    identity_provider: Identity providers
+    user_federation: User federation
+    playbook:keycloak_federation: Federation playbook
+- title: Install and run the Keycloak server
+  description: Install Keycloak or Red Hat Single Sign-On on hosts, including the Quarkus distribution
+    with HTTPS or in development mode.
+  components:
+    role:keycloak: Keycloak server role
+    role:keycloak_quarkus: Keycloak Quarkus role
+    playbook:keycloak: Keycloak hosts playbook
+    playbook:rhsso: Red Hat SSO hosts playbook
+    playbook:keycloak_quarkus: Quarkus with HTTPS playbook
+    playbook:keycloak_quarkus_dev: Quarkus development playbook

@@ -1,0 +1,22 @@
+fqcn: splunk.es
+product: Splunk Enterprise Security
+use_cases:
+- title: Manage detection content and data inputs
+  description: Manage correlation searches, adaptive response notable events and monitor, TCP and UDP
+    data inputs.
+  components:
+    correlation_searches: Correlation searches
+    correlation_search: Correlation search information
+    adaptive_response_notable_events: Adaptive response notable events
+    data_inputs_monitor: Monitor data inputs
+    data_inputs_network: TCP and UDP data inputs
+- title: Investigate and respond to findings
+  description: Manage findings, investigations and investigation types, notes, response plans and their
+    execution.
+  components:
+    finding: Findings
+    investigation: Investigations
+    investigation_type: Investigation types
+    notes: Notes
+    response_plan: Response plans
+    response_plan_execution: Response plan execution

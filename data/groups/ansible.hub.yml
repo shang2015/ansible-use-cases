@@ -1,0 +1,37 @@
+fqcn: ansible.hub
+product: Ansible Automation Hub
+use_cases:
+- title: Build, upload and approve collections
+  description: Build collection tarballs, upload artifacts, approve and update or remove collections.
+  components:
+    ah_build: Collection builds
+    ah_collection_upload: Collection uploads
+    ah_approval: Collection approvals
+    ah_collection: Collections
+    ah_namespace: Namespaces
+- title: Configure collection repositories
+  description: Create repositories and remotes and sync collection repositories.
+  components:
+    collection_repository: Collection repositories
+    collection_remote: Collection remotes
+    collection_repository_sync: Collection repository syncs
+- title: Manage execution environment images
+  description: Manage execution environment registries, repositories and images and run registry indexing
+    and sync.
+  components:
+    ah_ee_registry: EE registries
+    ah_ee_registry_index: EE registry indexing
+    ah_ee_registry_sync: EE registry syncs
+    ah_ee_repository: EE repositories
+    ah_ee_repository_sync: EE repository syncs
+    ah_ee_image: EE images
+- title: Manage users, teams and access
+  description: Manage users, groups, teams, roles, role assignments and tokens.
+  components:
+    ah_user: Users
+    ah_group: Groups
+    ah_team: Teams
+    ah_role: Roles
+    group_roles: Group roles
+    team_roles: Team roles
+    ah_token: Tokens

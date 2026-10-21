@@ -1,0 +1,176 @@
+fqcn: google.cloud
+product: Google Cloud Platform
+notes:
+- Most resource modules cover both create/update/delete and read-only info queries, and are named gcp_<resource>.
+use_cases:
+- title: Manage Compute Engine instances and fleets
+  description: Create VM instances from templates and images, group and autoscale them, reserve capacity,
+    use sole-tenant nodes and TPUs, and build inventory or reach hosts through IAP.
+  components:
+    compute_instance: VM instances
+    compute_instance_template: Instance templates
+    compute_image: Images
+    compute_instance_group: Instance groups
+    compute_instance_group_manager: Managed instance groups
+    compute_region_instance_group_manager: Regional managed instance groups
+    compute_autoscaler: Autoscalers
+    compute_region_autoscaler: Regional autoscalers
+    compute_reservation: Reservations
+    compute_resource_policy: Resource policies
+    compute_node_template: Node templates
+    compute_node_group: Node groups
+    tpu_node: TPU nodes
+    inventory:gcp_compute: Compute Engine inventory
+    connection:iap: SSH through Identity-Aware Proxy
+    role:gcloud: Google Cloud SDK installation
+    role:gcsfuse: gcsfuse installation
+- title: Manage disks, file shares and object storage
+  description: Create persistent disks and snapshots, Filestore instances, Cloud Storage buckets with
+    access controls, and upload or download objects.
+  components:
+    compute_disk: Disks
+    compute_region_disk: Regional disks
+    compute_snapshot: Snapshots
+    filestore_instance: Filestore instances
+    storage_bucket: Storage buckets
+    storage_bucket_access_control: Bucket access controls
+    storage_default_object_acl: Default object ACLs
+    storage_object: Storage objects
+- title: Manage VPC networks, firewalls and DNS
+  description: Create VPC networks, subnetworks, routes, Cloud Routers, static addresses, network endpoint
+    groups, firewall rules and Cloud DNS zones and records.
+  components:
+    compute_network: VPC networks
+    compute_subnetwork: Subnetworks
+    compute_route: Routes
+    compute_router: Cloud Routers
+    compute_address: Addresses
+    compute_global_address: Global addresses
+    compute_network_endpoint_group: Network endpoint groups
+    compute_firewall: Firewall rules
+    appengine_firewall_rule: App Engine firewall rules
+    dns_managed_zone: DNS managed zones
+    dns_resource_record_set: DNS record sets
+- title: Connect to on-premises networks
+  description: Set up Cloud VPN gateways and tunnels and Interconnect attachments.
+  components:
+    compute_external_vpn_gateway: External VPN gateways
+    compute_target_vpn_gateway: Target VPN gateways
+    compute_vpn_tunnel: VPN tunnels
+    compute_interconnect_attachment: Interconnect attachments
+- title: Configure load balancing
+  description: Build HTTP(S), SSL, TCP and network load balancers from backend services, health checks,
+    forwarding rules, proxies, URL maps and certificates.
+  components:
+    compute_backend_service: Backend services
+    compute_region_backend_service: Regional backend services
+    compute_backend_bucket: Backend buckets
+    compute_health_check: Health checks
+    compute_region_health_check: Regional health checks
+    compute_http_health_check: HTTP health checks
+    compute_https_health_check: HTTPS health checks
+    compute_forwarding_rule: Forwarding rules
+    compute_global_forwarding_rule: Global forwarding rules
+    compute_target_http_proxy: Target HTTP proxies
+    compute_target_https_proxy: Target HTTPS proxies
+    compute_region_target_http_proxy: Regional target HTTP proxies
+    compute_region_target_https_proxy: Regional target HTTPS proxies
+    compute_target_ssl_proxy: Target SSL proxies
+    compute_target_tcp_proxy: Target TCP proxies
+    compute_target_pool: Target pools
+    compute_target_instance: Target instances
+    compute_url_map: URL maps
+    compute_region_url_map: Regional URL maps
+    compute_ssl_certificate: SSL certificates
+    compute_ssl_policy: SSL policies
+    role:gcp_http_lb: HTTP load balancer role
+- title: Run Kubernetes clusters
+  description: Create Google Kubernetes Engine clusters and node pools.
+  components:
+    container_cluster: GKE clusters
+    container_node_pool: Node pools
+- title: Build and secure container delivery
+  description: Define Cloud Build triggers and repository connections, Binary Authorization attestors
+    and policies, and Container Analysis notes.
+  components:
+    cloudbuild_trigger: Cloud Build triggers
+    cloudbuildv2_connection: Cloud Build connections
+    cloudbuildv2_repository: Cloud Build repositories
+    binaryauthorization_attestor: Binary Authorization attestors
+    binaryauthorization_policy: Binary Authorization policies
+    containeranalysis_note: Container Analysis notes
+- title: Run serverless functions and messaging
+  description: Deploy Cloud Functions, schedule jobs, queue tasks and manage Pub/Sub topics and subscriptions.
+  components:
+    cloudfunctions_cloud_function: Cloud Functions
+    cloudscheduler_job: Scheduler jobs
+    cloudtasks_queue: Task queues
+    pubsub_topic: Pub/Sub topics
+    pubsub_subscription: Pub/Sub subscriptions
+- title: Manage databases, caches and analytics
+  description: Create Cloud SQL, AlloyDB, Spanner, Bigtable and Memorystore for Redis instances, their
+    databases, users and backups, and BigQuery datasets and tables.
+  components:
+    sql_instance: Cloud SQL instances
+    sql_database: Cloud SQL databases
+    sql_user: Cloud SQL users
+    sql_ssl_cert: Cloud SQL SSL certificates
+    alloydb_cluster: AlloyDB clusters
+    alloydb_instance: AlloyDB instances
+    alloydb_user: AlloyDB users
+    alloydb_backup: AlloyDB backups
+    spanner_instance: Spanner instances
+    spanner_database: Spanner databases
+    bigtable_instance: Bigtable instances
+    redis_instance: Redis instances
+    bigquery_dataset: BigQuery datasets
+    bigquery_table: BigQuery tables
+- title: Manage projects, service accounts and APIs
+  description: Create projects, enable APIs, define IAM roles and service accounts with keys, and create
+    log-based metrics.
+  components:
+    resourcemanager_project: Projects
+    serviceusage_service: Enabled APIs
+    iam_role: IAM roles
+    iam_service_account: Service accounts
+    iam_service_account_key: Service account keys
+    logging_metric: Log-based metrics
+- title: Protect secrets, parameters and encryption keys
+  description: Create KMS key rings and keys, read and update Secret Manager secrets and Parameter Manager
+    parameters, store runtime configuration, and retrieve them in playbooks.
+  components:
+    kms_key_ring: KMS key rings
+    kms_crypto_key: KMS crypto keys
+    secret_manager: Secret Manager secrets
+    parameter_manager: Parameter Manager parameters
+    runtimeconfig_config: Runtime configs
+    runtimeconfig_variable: Runtime config variables
+    lookup:gcp_secret_manager: Secret Manager lookup
+    lookup:gcp_parameter_manager: Parameter Manager lookup
+    filter:gcp_kms_filters: KMS auth token filter
+- title: Build machine learning on Vertex AI and Colab
+  description: Manage Vertex AI datasets, endpoints, feature stores, vector indexes, metadata, TensorBoard
+    and reasoning engines, and Colab runtimes, schedules and notebook executions.
+  components:
+    vertexai_dataset: Datasets
+    vertexai_endpoint: Endpoints
+    vertexai_endpoint_with_model_garden_deployment: Model Garden endpoints
+    vertexai_deployment_resource_pool: Deployment resource pools
+    vertexai_featurestore: Feature stores
+    vertexai_featurestore_entitytype: Feature store entity types
+    vertexai_featurestore_entitytype_feature: Feature store entity type features
+    vertexai_feature_group: Feature groups
+    vertexai_feature_group_feature: Feature group features
+    vertexai_feature_online_store: Online feature stores
+    vertexai_feature_online_store_featureview: Online feature views
+    vertexai_index: Vector indexes
+    vertexai_index_endpoint: Index endpoints
+    vertexai_index_endpoint_deployed_index: Deployed indexes
+    vertexai_metadata_store: Metadata stores
+    vertexai_rag_engine_config: RAG engine configuration
+    vertexai_reasoning_engine: Reasoning engines
+    vertexai_tensorboard: TensorBoards
+    colab_runtime: Colab runtimes
+    colab_runtime_template: Colab runtime templates
+    colab_schedule: Colab schedules
+    colab_notebook_execution: Colab notebook executions

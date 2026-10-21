@@ -1,0 +1,53 @@
+fqcn: vyos.vyos
+product: VyOS
+use_cases:
+- title: Configure interfaces, VLANs and link aggregation
+  description: Manage interfaces, Layer 3 settings, LAGs, VLANs and LLDP.
+  components:
+    interfaces: Interfaces
+    l3_interfaces: Layer 3 interfaces
+    lag_interfaces: LAG interfaces
+    vlan: VLANs
+    lldp_global: LLDP
+    lldp_interfaces: LLDP interfaces
+- title: Configure routing and VRFs
+  description: Manage BGP, OSPFv2 and OSPFv3, static routes, prefix lists, route maps and VRFs.
+  components:
+    bgp_global: BGP
+    bgp_address_family: BGP address families
+    ospfv2: OSPFv2
+    ospfv3: OSPFv3
+    ospf_interfaces: OSPF interfaces
+    static_routes: Static routes
+    prefix_lists: Prefix lists
+    route_maps: Route maps
+    vrf: VRFs
+- title: Configure firewall, NAT and VPN
+  description: Manage firewall global settings, rules and interface bindings, NAT, IPsec VPN and site-to-site
+    peers.
+  components:
+    firewall_global: Firewall global settings
+    firewall_rules: Firewall rules
+    firewall_interfaces: Firewall interfaces
+    nat: NAT
+    vpn_ipsec: IPsec VPN
+    vpn_ipsec_s2s: IPsec site-to-site peers
+    ha: VRRP and load balancing
+- title: Administer the device
+  description: Manage hostname, banners, system attributes, local users, NTP, logging, SNMP and files.
+  components:
+    system: System attributes
+    hostname: Hostname
+    banner: Banners
+    user: Local users
+    ntp_global: NTP
+    logging_global: Logging
+    snmp_server: SNMP
+    file: Files and directories
+- title: Run commands, push configuration and gather facts
+  description: Run commands, manage configuration, test reachability and collect device facts.
+  components:
+    config: Configuration
+    command: Commands
+    ping: Reachability tests
+    facts: Device facts

@@ -1,0 +1,108 @@
+fqcn: fortinet.fortisase
+product: Fortinet FortiSASE
+use_cases:
+- title: Manage security policies
+  description: Define outbound, internal, reverse and endpoint-to-endpoint policies and group security
+    profiles for traffic enforcement.
+  components:
+    security_outbound_policies: Outbound policies
+    security_internal_policies: Internal policies
+    security_internal_reverse_policies: Internal reverse policies
+    security_endpoint_to_endpoint_policies: Endpoint-to-endpoint policies
+    security_profile_group: Profile groups
+    security_profile_group_clone: Profile group clones
+- title: Configure threat protection profiles
+  description: Configure antivirus, IPS, application control, web, DNS, file and video filtering, and
+    SSL inspection profiles.
+  components:
+    security_antivirus_profile: Antivirus profiles
+    security_ips_profile: IPS profiles
+    security_ips_custom_signatures: IPS custom signatures
+    security_application_control_profile: Application control profiles
+    security_app_custom_signatures: Custom application signatures
+    security_web_filter_profile: Web filter profiles
+    security_dns_filter_profile: DNS filter profiles
+    security_file_filter_profile: File filter profiles
+    security_video_filter_profile: Video filter profiles
+    security_video_filter_youtube_key: YouTube API keys
+    security_ssl_ssh_profile: SSL inspection profiles
+    security_fortiguard_local_categories: FortiGuard local categories
+- title: Prevent data loss and block threats with feeds
+  description: Configure DLP dictionaries, patterns, fingerprints, sensors and profiles, and domain, IP
+    and URL threat feeds.
+  components:
+    security_dlp_dictionaries: DLP dictionaries
+    security_dlp_exact_data_matches: DLP exact data matches
+    security_dlp_file_patterns: DLP file patterns
+    security_dlp_fingerprint_databases: DLP fingerprint databases
+    security_dlp_sensors: DLP sensors
+    security_dlp_profile: DLP profiles
+    security_domain_threat_feeds: Domain threat feeds
+    security_ip_threat_feeds: IP threat feeds
+    security_url_threat_feeds: URL threat feeds
+- title: Define services, schedules and certificates
+  description: Maintain reusable policy objects for services, schedules, certificates and PKI users.
+  components:
+    security_services: Services
+    security_service_groups: Service groups
+    security_onetime_schedules: One-time schedules
+    security_recurring_schedules: Recurring schedules
+    security_schedule_groups: Schedule groups
+    security_cert_local_certs: Local certificates
+    security_cert_remote_ca_certs: Remote CA certificates
+    security_pki_users: PKI users
+- title: Define network objects, DNS and wireless
+  description: Define hosts, host groups, internet services, DNS rules and FortiAP SSIDs used by policy.
+  components:
+    network_hosts: Hosts
+    network_host_groups: Host groups
+    network_internet_services: Internet services
+    network_dns_rules: DNS rules
+    network_implicit_dns_rules: Implicit DNS rules
+    infra_ssids: FortiAP SSIDs
+- title: Manage users and authentication
+  description: Manage users and user groups, and integrate LDAP, RADIUS, FSSO and SAML single sign-on,
+    and end user session sign-out.
+  components:
+    auth_users: Users
+    auth_user_groups: User groups
+    auth_ldap_servers: LDAP servers
+    auth_radius_servers: RADIUS servers
+    auth_fsso_agents: FSSO agents
+    auth_swg_saml_server: SWG SAML SSO
+    auth_vpn_saml_server: VPN SAML SSO
+    user_swg_sessions_deauth: SWG session sign-out
+    user_vpn_sessions_deauth: VPN session sign-out
+- title: Manage endpoints and zero trust access
+  description: Configure FortiClient endpoint profiles, policies and invitation codes, ZTNA tags, rules
+    and profiles, and enable, disable or disconnect endpoints.
+  components:
+    endpoint_connection_profiles: Connection profiles
+    endpoint_fsso_profiles: FSSO profiles
+    endpoint_group_ad_user_profiles: Group and AD user profiles
+    endpoint_group_invitation_codes: Group invitation codes
+    endpoint_policies: Endpoint policies
+    endpoint_policies_clone: Endpoint policy clones
+    endpoint_protection_profiles: Protection profiles
+    endpoint_sandbox_profiles: Sandbox profiles
+    endpoint_setting_profiles: Settings profiles
+    endpoint_ztna_profiles: ZTNA profiles
+    endpoint_ztna_rules: ZTNA rules
+    endpoint_ztna_tags: ZTNA tags
+    endpoints_access_proxy_authorize: Access proxy authorize
+    endpoints_access_proxy_disconnect: Access proxy disconnect
+    endpoints_enable_management: Enable endpoint management
+    endpoints_disable_management: Disable endpoint management
+- title: Provide secure private access and monitor digital experience
+  description: Configure secure private access networks and service connections, and digital experience
+    monitoring for SaaS and SPA applications.
+  components:
+    private_access_network_configuration: Private access network configuration
+    private_access_service_connections: Private access service connections
+    dem_custom_saas_apps: Custom SaaS applications
+    dem_spa_applications: SPA applications
+- title: Gather facts and call the API directly
+  description: Gather FortiSASE facts and send generic API requests.
+  components:
+    fortisase: Facts
+    fortisase_generic: Generic API requests

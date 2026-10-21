@@ -1,0 +1,58 @@
+fqcn: network.offline_migration_sdn_to_ovnk
+product: Red Hat OpenShift (SDN to OVN-Kubernetes migration)
+use_cases:
+- title: Check migration prerequisites
+  description: Verify cluster access, client and version, node and operator health, CIDR ranges, network
+    provider and policy mode before migrating.
+  components:
+    check_kubeconfig: Kubeconfig
+    check_oc_client: oc client
+    check_whoami: Cluster-admin rights
+    get_ocp_version: OpenShift version
+    check_cidr_ranges: CIDR range conflicts
+    check_nodes_ready: Node readiness
+    check_network_policy_mode: NetworkPolicy isolation mode
+    check_network_provider: CNI network provider
+    check_network_migration: Migration state
+    verify_cluster_operators_health: Cluster operator health
+    role:prechecks: Pre-checks role
+    playbook:prechecks-playbook: Prechecks
+    playbook:playbook-migration: Pre-migration checks
+    playbook:playbook-rollback: Pre-rollback checks
+- title: Migrate the cluster network from SDN to OVN-Kubernetes
+  description: Switch the default network type, configure MTU, ports and subnets, and run the offline
+    migration end to end.
+  components:
+    change_network_type: Network type change
+    trigger_network_type: Network type trigger
+    configure_network_settings: Network settings
+    disable_automatic_migration: Automatic migration of egress IP, firewall and multicast
+    delete_primary_nncp: Primary NNCP
+    clean_migration_field: Migration field cleanup
+    manage_network_config: Old network configuration cleanup
+    role:migration: Migration role
+    playbook:migration-playbook: Migration
+- title: Control machine config updates and reboots
+  description: Pause and resume machine config pools, wait for MCO and the network operator, and reboot
+    nodes.
+  components:
+    patch_mcp_paused: Machine config pool pause
+    resume_mcp: Machine config pool resume
+    wait_for_mco: MCO update start
+    wait_for_mco_completion: MCO completion
+    wait_for_network_co: Network operator progress
+    wait_multus_restart: Multus restart
+    verify_machine_config: Machine config status
+    reboot_nodes: Node reboot
+    role:reboot_nodes: Node reboot role
+    playbook:reboot-playbook: Node reboot
+- title: Validate after migration and roll back
+  description: Run post-migration and post-rollback checks and roll the cluster back to the previous network
+    provider.
+  components:
+    role:post_migration: Post-migration role
+    role:post_rollback: Post-rollback role
+    role:rollback: Rollback role
+    playbook:post_migration-playbook: Post-migration
+    playbook:post_rollback-playbook: Post-rollback
+    playbook:rollback-playbook: Rollback

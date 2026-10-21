@@ -1,0 +1,16 @@
+fqcn: cisco.asa
+product: "Cisco ASA"
+use_cases:
+- title: "Manage Cisco ASA firewall policy and objects"
+  description: "Configure access lists, objects and object groups on Cisco ASA devices."
+  components:
+    "acls": "Access lists"
+    "objects": "Objects"
+    "ogs": "Object groups"
+- title: "Configure and administer Cisco ASA devices"
+  description: "Run commands, manage configuration sections and banners, and collect facts from ASA devices."
+  components:
+    "config": "Configuration sections"
+    "banner": "Banners"
+    "command": "Commands"
+    "facts": "Facts"

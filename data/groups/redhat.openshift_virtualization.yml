@@ -1,0 +1,9 @@
+fqcn: redhat.openshift_virtualization
+product: Red Hat OpenShift Virtualization
+use_cases:
+- title: Manage virtual machines and inventory
+  description: Manage KubeVirt virtual machines, describe running instances and build inventory from them.
+  components:
+    vm: Virtual machines
+    vmi: Virtual machine instances
+    inventory:kubevirt: KubeVirt inventory

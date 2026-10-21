@@ -1,0 +1,764 @@
+fqcn: cisco.meraki
+product: Cisco Meraki
+use_cases:
+- title: Manage organizations, administrators and API access
+  description: Create and clone organizations, manage administrators, SAML single sign-on and login security,
+    API keys and requests, branding and integrations, and review early access features.
+  components:
+    administered_identities_me: Administered identities me
+    administered_identities_me_api_keys: Administered identities me API keys
+    administered_identities_me_api_keys_generate: Administered identities me API keys generate
+    administered_identities_me_api_keys_revoke: Administered identities me API keys revoke
+    organizations: Organizations
+    organizations_action_batches: Action batches (org)
+    organizations_admins: Admins (org)
+    organizations_api_requests: API requests (org)
+    organizations_api_requests_overview: API requests overview (org)
+    organizations_api_requests_overview_response_codes_by_interval: API requests overview response codes
+      by interval (org)
+    organizations_api_rest_provisioning_pipelines_jobs: API rest provisioning pipelines jobs (org)
+    organizations_api_rest_provisioning_pipelines_jobs_overviews_by_pipeline: API rest provisioning pipelines
+      jobs overviews by pipeline (org)
+    organizations_branding_policies: Branding policies (org)
+    organizations_branding_policies_priorities: Branding policies priorities (org)
+    organizations_claim: Claim (org)
+    organizations_clone: Clone (org)
+    organizations_early_access_features: Early access features (org)
+    organizations_early_access_features_opt_ins: Early access features opt ins (org)
+    organizations_integrations_deployable: Integrations deployable (org)
+    organizations_integrations_deployed: Integrations deployed (org)
+    organizations_login_security: Login security (org)
+    organizations_openapi_spec: Openapi spec (org)
+    organizations_saml: SAML (org)
+    organizations_saml_idps: SAML IdPs (org)
+    organizations_saml_roles: SAML roles (org)
+    organizations_spaces_integrate_status: Spaces integrate status (org)
+    organizations_spaces_integration_remove: Spaces integration remove (org)
+    playbook:What_Org: 'Playbook: What Org'
+    playbook:Who_Am_I: 'Playbook: Who Am I'
+    playbook:administered_identities_me_info: 'Playbook: Administered identities me info'
+    playbook:administrerd_identities_me_api_keys_generate: 'Playbook: Administrerd identities me API keys
+      generate'
+    playbook:organization: 'Playbook: Organization'
+    playbook:organization_info: 'Playbook: Organization info'
+    playbook:organization_summary: 'Playbook: Organization summary'
+    playbook:organizations_admin: 'Playbook: Organizations admin'
+    playbook:organizations_admin copy: 'Playbook: Organizations admin copy'
+    playbook:organizations_admin_info: 'Playbook: Organizations admin info'
+    playbook:organizations_login_security: 'Playbook: Organizations login security'
+    playbook:organizations_saml_idps: 'Playbook: Organizations SAML IdPs'
+    playbook:test: 'Playbook: Test'
+    playbook:who_am_i: 'Playbook: Who am i'
+- title: Configure networks, templates and monitoring settings
+  description: Create, bind, split and combine networks, apply configuration templates, and set network-level
+    SNMP, NetFlow, syslog and MQTT broker settings.
+  components:
+    networks: Networks
+    networks_bind: Bind
+    networks_campus_gateway_clusters: Campus gateway clusters
+    networks_devices_syslog_servers: Devices syslog servers
+    networks_mqtt_brokers: MQTT brokers
+    networks_netflow: Netflow
+    networks_settings: Settings
+    networks_snmp: SNMP
+    networks_split: Split
+    networks_syslog_servers: Syslog servers
+    networks_unbind: Unbind
+    organizations_campus_gateway_clusters: Campus gateway clusters (org)
+    organizations_campus_gateway_devices_uplinks_local_overrides_by_device: Campus gateway devices uplinks
+      local overrides by device (org)
+    organizations_config_templates: Config templates (org)
+    organizations_devices_syslog_servers_by_network: Devices syslog servers by network (org)
+    organizations_devices_syslog_servers_roles_by_network: Devices syslog servers roles by network (org)
+    organizations_networks_combine: Networks combine (org)
+    organizations_networks_moves: Networks moves (org)
+    organizations_snmp: SNMP (org)
+    playbook:Create_a_Network: 'Playbook: Create a Network'
+    playbook:networks: 'Playbook: Networks'
+    playbook:networks_syslog_servers: 'Playbook: Networks syslog servers'
+    playbook:organizations_config_templates: 'Playbook: Organizations config templates'
+    playbook:organizations_config_templates_info: 'Playbook: Organizations config templates info'
+- title: Claim, inventory and manage devices
+  description: Claim devices into organizations and networks, update device details and management interfaces,
+    release or remove devices, and build dynamic inventory from Meraki.
+  components:
+    devices: Devices
+    devices_blink_leds: Blink LEDs (device)
+    devices_lldp_cdp: LLDP CDP (device)
+    devices_management_interface: Management interface (device)
+    networks_devices_claim: Devices claim
+    networks_devices_claim_vmx: Devices claim vMX
+    networks_devices_remove: Devices remove
+    organizations_devices: Devices (org)
+    organizations_devices_controller_migrations: Devices controller migrations (org)
+    organizations_devices_details_bulk_update: Devices details bulk update (org)
+    organizations_inventory_claim: Inventory claim (org)
+    organizations_inventory_devices: Inventory devices (org)
+    organizations_inventory_devices_eox_overview: Inventory devices EoX overview (org)
+    organizations_inventory_onboarding_cloud_monitoring_export_events: Inventory onboarding cloud monitoring
+      export events (org)
+    organizations_inventory_onboarding_cloud_monitoring_imports: Inventory onboarding cloud monitoring
+      imports (org)
+    organizations_inventory_onboarding_cloud_monitoring_networks: Inventory onboarding cloud monitoring
+      networks (org)
+    organizations_inventory_onboarding_cloud_monitoring_prepare: Inventory onboarding cloud monitoring
+      prepare (org)
+    organizations_inventory_orders_claim: Inventory orders claim (org)
+    organizations_inventory_orders_preview: Inventory orders preview (org)
+    organizations_inventory_release: Inventory release (org)
+    inventory:meraki: Meraki dynamic inventory
+    playbook:Bulk_change_DNS_from_file: 'Playbook: Bulk change DNS from file'
+    playbook:Get_AP_Serials: 'Playbook: Get AP Serials'
+    playbook:Get_All_Devices: 'Playbook: Get All Devices'
+    playbook:Get_IP_MGNT_info: 'Playbook: Get IP MGNT info'
+    playbook:Get_IP_MGNT_info_from_file: 'Playbook: Get IP MGNT info from file'
+    playbook:Set_IP_MGNT_info: 'Playbook: Set IP MGNT info'
+    playbook:device_blink_leds: 'Playbook: Device blink LEDs'
+    playbook:device_lldp_cdp: 'Playbook: Device LLDP CDP'
+    playbook:devices: 'Playbook: Devices'
+    playbook:devices_info: 'Playbook: Devices info'
+    playbook:network_devices_claim: 'Playbook: Network devices claim'
+    playbook:networks_devices_claim_2: 'Playbook: Networks devices claim 2'
+    playbook:networks_devices_remove: 'Playbook: Networks devices remove'
+    playbook:organizations_devices_info: 'Playbook: Organizations devices info'
+- title: Manage floor plans and device placement
+  description: Create floor plans, place devices on them and run auto-locate jobs.
+  components:
+    networks_floor_plans: Floor plans
+    networks_floor_plans_auto_locate_jobs_batch: Floor plans auto locate jobs batch
+    networks_floor_plans_auto_locate_jobs_cancel: Floor plans auto locate jobs cancel
+    networks_floor_plans_auto_locate_jobs_publish: Floor plans auto locate jobs publish
+    networks_floor_plans_auto_locate_jobs_recalculate: Floor plans auto locate jobs recalculate
+    networks_floor_plans_devices_batch_update: Floor plans devices batch update
+    organizations_floor_plans_auto_locate_devices: Floor plans auto locate devices (org)
+    organizations_floor_plans_auto_locate_statuses: Floor plans auto locate statuses (org)
+- title: Troubleshoot devices with live tools and packet capture
+  description: Run on-demand ping, cable test, throughput, ARP, MAC and routing table lookups and port
+    cycling on devices, and schedule or download packet captures.
+  components:
+    devices_live_tools_arp_table: Live tools ARP table (device)
+    devices_live_tools_cable_test: Live tools cable test (device)
+    devices_live_tools_leds_blink: Live tools LEDs blink (device)
+    devices_live_tools_mac_table: Live tools MAC table (device)
+    devices_live_tools_multicast_routing: Live tools multicast routing (device)
+    devices_live_tools_ping: Live tools ping (device)
+    devices_live_tools_ping_device: Live tools ping device (device)
+    devices_live_tools_ports: Live tools ports (device)
+    devices_live_tools_ports_cycle: Live tools ports cycle (device)
+    devices_live_tools_ports_status: Live tools ports status (device)
+    devices_live_tools_power_usage: Live tools power usage (device)
+    devices_live_tools_routing_table_lookups: Live tools routing table lookups (device)
+    devices_live_tools_routing_table_summaries: Live tools routing table summaries (device)
+    devices_live_tools_throughput_test: Live tools throughput test (device)
+    devices_live_tools_wake_on_lan: Live tools wake on LAN (device)
+    organizations_devices_packet_capture_captures: Devices packet capture captures (org)
+    organizations_devices_packet_capture_captures_bulk_create: Devices packet capture captures bulk create
+      (org)
+    organizations_devices_packet_capture_captures_bulk_delete: Devices packet capture captures bulk delete
+      (org)
+    organizations_devices_packet_capture_captures_download_url_generate: Devices packet capture captures
+      download URL generate (org)
+    organizations_devices_packet_capture_captures_stop: Devices packet capture captures stop (org)
+    organizations_devices_packet_capture_schedules: Devices packet capture schedules (org)
+    organizations_devices_packet_capture_schedules_reorder: Devices packet capture schedules reorder (org)
+    playbook:devices_live_tools_ping: 'Playbook: Devices live tools ping'
+- title: Manage licensing and subscriptions
+  description: Claim, bind, assign, move and renew licenses and subscriptions, and review license and
+    entitlement status.
+  components:
+    administered_licensing_subscription_entitlements: Administered licensing subscription entitlements
+    administered_licensing_subscription_subscriptions: Administered licensing subscription subscriptions
+    administered_licensing_subscription_subscriptions_bind: Administered licensing subscription subscriptions
+      bind
+    administered_licensing_subscription_subscriptions_claim: Administered licensing subscription subscriptions
+      claim
+    administered_licensing_subscription_subscriptions_claim_key_validate: Administered licensing subscription
+      subscriptions claim key validate
+    administered_licensing_subscription_subscriptions_compliance_statuses: Administered licensing subscription
+      subscriptions compliance statuses
+    organizations_licenses: Licenses (org)
+    organizations_licenses_assign_seats: Licenses assign seats (org)
+    organizations_licenses_move: Licenses move (org)
+    organizations_licenses_move_seats: Licenses move seats (org)
+    organizations_licenses_overview: Licenses overview (org)
+    organizations_licenses_renew_seats: Licenses renew seats (org)
+    organizations_licensing_coterm_licenses: Licensing coterm licenses (org)
+    organizations_licensing_coterm_licenses_move: Licensing coterm licenses move (org)
+- title: Manage firmware upgrades
+  description: Schedule, stage, defer and roll back firmware upgrades for networks and devices.
+  components:
+    networks_firmware_upgrades: Firmware upgrades
+    networks_firmware_upgrades_rollbacks: Firmware upgrades rollbacks
+    networks_firmware_upgrades_staged_events: Firmware upgrades staged events
+    networks_firmware_upgrades_staged_events_defer: Firmware upgrades staged events defer
+    networks_firmware_upgrades_staged_events_rollbacks: Firmware upgrades staged events rollbacks
+    networks_firmware_upgrades_staged_groups: Firmware upgrades staged groups
+    networks_firmware_upgrades_staged_stages: Firmware upgrades staged stages
+    organizations_firmware_upgrades: Firmware upgrades (org)
+    organizations_firmware_upgrades_by_device: Firmware upgrades by device (org)
+- title: Manage group policies, policy objects and adaptive policy
+  description: Define group policies, policy objects and global firewall rulesets, assign policies to
+    clients and VLANs, and configure adaptive policy groups, ACLs and settings.
+  components:
+    networks_clients_policy: Clients policy
+    networks_group_policies: Group policies
+    networks_policies_by_client: Policies by client
+    organizations_adaptive_policy_acls: Adaptive policy ACLs (org)
+    organizations_adaptive_policy_groups: Adaptive policy groups (org)
+    organizations_adaptive_policy_overview: Adaptive policy overview (org)
+    organizations_adaptive_policy_policies: Adaptive policy policies (org)
+    organizations_adaptive_policy_settings: Adaptive policy settings (org)
+    organizations_policies_assignments_by_client: Policies assignments by client (org)
+    organizations_policies_global_firewall_application_categories: Policies global firewall application
+      categories (org)
+    organizations_policies_global_firewall_rulesets: Policies global firewall rulesets (org)
+    organizations_policies_global_firewall_rulesets_rules: Policies global firewall rulesets rules (org)
+    organizations_policies_global_group_policies: Policies global group policies (org)
+    organizations_policies_global_group_policies_adaptive_policy_groups_assign: Policies global group
+      policies adaptive policy groups assign (org)
+    organizations_policies_global_group_policies_adaptive_policy_groups_assignments: Policies global group
+      policies adaptive policy groups assignments (org)
+    organizations_policies_global_group_policies_adaptive_policy_groups_remove: Policies global group
+      policies adaptive policy groups remove (org)
+    organizations_policies_global_group_policies_appliance_vlans_assign: Policies global group policies
+      appliance VLANs assign (org)
+    organizations_policies_global_group_policies_appliance_vlans_assignments: Policies global group policies
+      appliance VLANs assignments (org)
+    organizations_policies_global_group_policies_appliance_vlans_assignments_by_vlan: Policies global
+      group policies appliance VLANs assignments by VLAN (org)
+    organizations_policies_global_group_policies_appliance_vlans_remove: Policies global group policies
+      appliance VLANs remove (org)
+    organizations_policies_global_group_policies_firewall_rulesets_assignments: Policies global group
+      policies firewall rulesets assignments (org)
+    organizations_policy_objects: Policy objects (org)
+    organizations_policy_objects_groups: Policy objects groups (org)
+    playbook:organizations_adaptivePolicy_acls: 'Playbook: Organizations adaptivePolicy ACLs'
+    playbook:organizations_adaptive_policy_groups: 'Playbook: Organizations adaptive policy groups'
+- title: Configure appliance firewall and content security
+  description: Manage MX firewall rules, NAT and port forwarding, content filtering and intrusion and
+    malware protection.
+  components:
+    networks_appliance_content_filtering: Appliance content filtering
+    networks_appliance_content_filtering_categories: Appliance content filtering categories
+    networks_appliance_firewall_cellular_firewall_rules: Appliance firewall cellular firewall rules
+    networks_appliance_firewall_firewalled_services: Appliance firewall firewalled services
+    networks_appliance_firewall_inbound_firewall_rules: Appliance firewall inbound firewall rules
+    networks_appliance_firewall_l3_firewall_rules: Appliance firewall L3 firewall rules
+    networks_appliance_firewall_l7_firewall_rules: Appliance firewall L7 firewall rules
+    networks_appliance_firewall_l7_firewall_rules_application_categories: Appliance firewall L7 firewall
+      rules application categories
+    networks_appliance_firewall_multicast_forwarding: Appliance firewall multicast forwarding
+    networks_appliance_firewall_one_to_many_nat_rules: Appliance firewall one to many NAT rules
+    networks_appliance_firewall_one_to_one_nat_rules: Appliance firewall one to one NAT rules
+    networks_appliance_firewall_port_forwarding_rules: Appliance firewall port forwarding rules
+    networks_appliance_firewall_settings: Appliance firewall settings
+    networks_appliance_security_intrusion: Appliance security intrusion
+    networks_appliance_security_malware: Appliance security malware
+    organizations_appliance_firewall_multicast_forwarding_by_network: Appliance firewall multicast forwarding
+      by network (org)
+    organizations_appliance_security_intrusion: Appliance security intrusion (org)
+    playbook:networks_appliance_firewall_l7_firewall_rules: 'Playbook: Networks appliance firewall L7
+      firewall rules'
+- title: Configure appliance VLANs, ports, routing and uplinks
+  description: Configure MX VLANs, LAN and L3 interfaces, ports, static routes, uplink settings, NAT,
+    warm spare redundancy, DNS profiles and records, and VRF settings.
+  components:
+    devices_appliance_interfaces_ports_update: Appliance interfaces ports update (device)
+    devices_appliance_radio_settings: Appliance radio settings (device)
+    devices_appliance_uplinks_settings: Appliance uplinks settings (device)
+    devices_appliance_vmx_authentication_token: Appliance vMX authentication token (device)
+    networks_appliance_connectivity_monitoring_destinations: Appliance connectivity monitoring destinations
+    networks_appliance_devices_redundancy: Appliance devices redundancy
+    networks_appliance_devices_redundancy_swap: Appliance devices redundancy swap
+    networks_appliance_interfaces_l3: Appliance interfaces L3
+    networks_appliance_ports: Appliance ports
+    networks_appliance_prefixes_delegated_statics: Appliance prefixes delegated statics
+    networks_appliance_rf_profiles: Appliance RF profiles
+    networks_appliance_settings: Appliance settings
+    networks_appliance_single_lan: Appliance single LAN
+    networks_appliance_ssids: Appliance SSIDs
+    networks_appliance_static_routes: Appliance static routes
+    networks_appliance_uplinks_nat: Appliance uplinks NAT
+    networks_appliance_vlans: Appliance VLANs
+    networks_appliance_vlans_settings: Appliance VLANs settings
+    networks_appliance_warm_spare: Appliance warm spare
+    networks_appliance_warm_spare_swap: Appliance warm spare swap
+    organizations_appliance_devices_interfaces_l3: Appliance devices interfaces L3 (org)
+    organizations_appliance_devices_interfaces_ports_by_device: Appliance devices interfaces ports by
+      device (org)
+    organizations_appliance_devices_redundancy_by_network: Appliance devices redundancy by network (org)
+    organizations_appliance_dns_local_profiles: Appliance DNS local profiles (org)
+    organizations_appliance_dns_local_profiles_assignments: Appliance DNS local profiles assignments (org)
+    organizations_appliance_dns_local_profiles_assignments_bulk_create: Appliance DNS local profiles assignments
+      bulk create (org)
+    organizations_appliance_dns_local_profiles_assignments_bulk_delete: Appliance DNS local profiles assignments
+      bulk delete (org)
+    organizations_appliance_dns_local_records: Appliance DNS local records (org)
+    organizations_appliance_dns_split_profiles: Appliance DNS split profiles (org)
+    organizations_appliance_dns_split_profiles_assignments: Appliance DNS split profiles assignments (org)
+    organizations_appliance_dns_split_profiles_assignments_bulk_create: Appliance DNS split profiles assignments
+      bulk create (org)
+    organizations_appliance_dns_split_profiles_assignments_bulk_delete: Appliance DNS split profiles assignments
+      bulk delete (org)
+    organizations_appliance_routing_vrfs_settings: Appliance routing VRFs settings (org)
+    organizations_appliance_uplinks_nat_by_network: Appliance uplinks NAT by network (org)
+    playbook:devices_appliance_uplinks_settings: 'Playbook: Devices appliance uplinks settings'
+    playbook:mx_deployment: 'Playbook: Mx deployment'
+    playbook:networks_appliance_static_routes: 'Playbook: Networks appliance static routes'
+    playbook:networks_appliance_vlans: 'Playbook: Networks appliance VLANs'
+- title: Configure site-to-site VPN, SD-WAN and traffic shaping
+  description: Configure auto VPN, BGP, third-party VPN peers, SD-WAN internet policies, traffic shaping
+    rules and uplink selection, and VPN firewall rules.
+  components:
+    networks_appliance_sdwan_internet_policies: Appliance SD-WAN internet policies
+    networks_appliance_traffic_shaping: Appliance traffic shaping
+    networks_appliance_traffic_shaping_custom_performance_classes: Appliance traffic shaping custom performance
+      classes
+    networks_appliance_traffic_shaping_rules: Appliance traffic shaping rules
+    networks_appliance_traffic_shaping_uplink_bandwidth: Appliance traffic shaping uplink bandwidth
+    networks_appliance_traffic_shaping_uplink_selection: Appliance traffic shaping uplink selection
+    networks_appliance_traffic_shaping_vpn_exclusions: Appliance traffic shaping VPN exclusions
+    networks_appliance_vpn_bgp: Appliance VPN BGP
+    networks_appliance_vpn_site_to_site_vpn: Appliance VPN site to site VPN
+    networks_traffic_shaping_application_categories: Traffic shaping application categories
+    networks_traffic_shaping_dscp_tagging_options: Traffic shaping DSCP tagging options
+    organizations_appliance_traffic_shaping_vpn_exclusions_by_network: Appliance traffic shaping VPN exclusions
+      by network (org)
+    organizations_appliance_vpn_site_to_site_ipsec_peers_slas: Appliance VPN site to site IPsec peers
+      SLAs (org)
+    organizations_appliance_vpn_third_party_vpn_peers: Appliance VPN third party VPN peers (org)
+    organizations_appliance_vpn_vpn_firewall_rules: Appliance VPN VPN firewall rules (org)
+    playbook:networks_appliance_traffic_shaping_rules: 'Playbook: Networks appliance traffic shaping rules'
+    playbook:organizations_appliance_vpn_third_party_vpnpeers: 'Playbook: Organizations appliance VPN
+      third party vpnpeers'
+- title: Integrate with SASE, Umbrella and XDR
+  description: Connect sites to SASE regions and connectors, attach or detach SASE sites, manage Cisco
+    Umbrella integration, and enable XDR integrations.
+  components:
+    networks_appliance_umbrella_account_connect: Appliance umbrella account connect
+    networks_appliance_umbrella_account_disconnect: Appliance umbrella account disconnect
+    networks_appliance_umbrella_domains_exclusions: Appliance umbrella domains exclusions
+    networks_appliance_umbrella_policies_add: Appliance umbrella policies add
+    networks_appliance_umbrella_policies_remove: Appliance umbrella policies remove
+    networks_appliance_umbrella_protection: Appliance umbrella protection
+    organizations_integrations_xdr_networks: Integrations XDR networks (org)
+    organizations_integrations_xdr_networks_disable: Integrations XDR networks disable (org)
+    organizations_integrations_xdr_networks_enable: Integrations XDR networks enable (org)
+    organizations_sase_connectors: SASE connectors (org)
+    organizations_sase_connectors_batch_create: SASE connectors batch create (org)
+    organizations_sase_connectors_batch_delete: SASE connectors batch delete (org)
+    organizations_sase_integrations: SASE integrations (org)
+    organizations_sase_networks_eligible: SASE networks eligible (org)
+    organizations_sase_regions: SASE regions (org)
+    organizations_sase_sites: SASE sites (org)
+    organizations_sase_sites_attach: SASE sites attach (org)
+    organizations_sase_sites_connectivity_history_by_site: SASE sites connectivity history by site (org)
+    organizations_sase_sites_connectivity_overview: SASE sites connectivity overview (org)
+    organizations_sase_sites_detach: SASE sites detach (org)
+- title: Configure wireless SSIDs and radio settings
+  description: Configure SSIDs and their security, firewall, VPN, schedule and traffic-shaping options,
+    RF profiles, Air Marshal, Bluetooth, Zigbee, location scanning and wireless ethernet port profiles.
+  components:
+    devices_wireless_alternate_management_interface_ipv6: Wireless alternate management interface IPv6
+      (device)
+    devices_wireless_bluetooth_settings: Wireless bluetooth settings (device)
+    devices_wireless_electronic_shelf_label: Wireless electronic shelf label (device)
+    devices_wireless_radio_settings: Wireless radio settings (device)
+    devices_wireless_zigbee_enrollments: Wireless zigbee enrollments (device)
+    networks_wireless_air_marshal_rules: Wireless air marshal rules
+    networks_wireless_air_marshal_settings: Wireless air marshal settings
+    networks_wireless_alternate_management_interface: Wireless alternate management interface
+    networks_wireless_billing: Wireless billing
+    networks_wireless_bluetooth_settings: Wireless bluetooth settings
+    networks_wireless_electronic_shelf_label: Wireless electronic shelf label
+    networks_wireless_electronic_shelf_label_configured_devices: Wireless electronic shelf label configured
+      devices
+    networks_wireless_ethernet_ports_profiles: Wireless ethernet ports profiles
+    networks_wireless_ethernet_ports_profiles_assign: Wireless ethernet ports profiles assign
+    networks_wireless_ethernet_ports_profiles_set_default: Wireless ethernet ports profiles set default
+    networks_wireless_location_scanning: Wireless location scanning
+    networks_wireless_radio_rrm: Wireless radio RRM
+    networks_wireless_rf_profiles: Wireless RF profiles
+    networks_wireless_settings: Wireless settings
+    networks_wireless_ssids: Wireless SSIDs
+    networks_wireless_ssids_bonjour_forwarding: Wireless SSIDs bonjour forwarding
+    networks_wireless_ssids_device_type_group_policies: Wireless SSIDs device type group policies
+    networks_wireless_ssids_eap_override: Wireless SSIDs EAP override
+    networks_wireless_ssids_firewall_l3_firewall_rules: Wireless SSIDs firewall L3 firewall rules
+    networks_wireless_ssids_firewall_l7_firewall_rules: Wireless SSIDs firewall L7 firewall rules
+    networks_wireless_ssids_hotspot20: Wireless SSIDs hotspot20
+    networks_wireless_ssids_identity_psks: Wireless SSIDs identity PSKs
+    networks_wireless_ssids_open_roaming: Wireless SSIDs open roaming
+    networks_wireless_ssids_schedules: Wireless SSIDs schedules
+    networks_wireless_ssids_traffic_shaping_rules: Wireless SSIDs traffic shaping rules
+    networks_wireless_ssids_vpn: Wireless SSIDs VPN
+    networks_wireless_zigbee: Wireless zigbee
+    organizations_wireless_air_marshal_rules: Wireless air marshal rules (org)
+    organizations_wireless_air_marshal_settings_by_network: Wireless air marshal settings by network (org)
+    organizations_wireless_devices_provisioning_deployments: Wireless devices provisioning deployments
+      (org)
+    organizations_wireless_devices_radsec_certificates_authorities: Wireless devices RadSec certificates
+      authorities (org)
+    organizations_wireless_devices_radsec_certificates_authorities_crls: Wireless devices RadSec certificates
+      authorities CRLs (org)
+    organizations_wireless_devices_radsec_certificates_authorities_crls_deltas: Wireless devices RadSec
+      certificates authorities CRLs deltas (org)
+    organizations_wireless_location_scanning_by_network: Wireless location scanning by network (org)
+    organizations_wireless_location_scanning_receivers: Wireless location scanning receivers (org)
+    organizations_wireless_mqtt_settings: Wireless MQTT settings (org)
+    organizations_wireless_radio_auto_rf_channels_recalculate: Wireless radio auto RF channels recalculate
+      (org)
+    organizations_wireless_radio_rrm_by_network: Wireless radio RRM by network (org)
+    organizations_wireless_rf_profiles_assignments_by_device: Wireless RF profiles assignments by device
+      (org)
+    organizations_wireless_ssids_firewall_isolation_allowlist_entries: Wireless SSIDs firewall isolation
+      allowlist entries (org)
+    organizations_wireless_ssids_open_roaming_by_network: Wireless SSIDs open roaming by network (org)
+    organizations_wireless_zigbee_by_network: Wireless zigbee by network (org)
+    organizations_wireless_zigbee_devices: Wireless zigbee devices (org)
+    organizations_wireless_zigbee_disenrollments: Wireless zigbee disenrollments (org)
+    organizations_wireless_zigbee_door_locks: Wireless zigbee door locks (org)
+    playbook:networks_wireless_ssids_identityPsks: 'Playbook: Networks wireless SSIDs identityPsks'
+    playbook:wifi_deploy_one: 'Playbook: Wifi deploy one'
+    playbook:wifi_deployment: 'Playbook: Wifi deployment'
+    playbook:wireless_ssids: 'Playbook: Wireless SSIDs'
+- title: Monitor wireless performance and controllers
+  description: Query wireless connection, latency, channel utilization, signal quality and usage statistics,
+    access point and controller status, and packet loss.
+  components:
+    devices_wireless_connection_stats: Wireless connection stats (device)
+    devices_wireless_latency_stats: Wireless latency stats (device)
+    devices_wireless_status: Wireless status (device)
+    networks_wireless_channel_utilization_history: Wireless channel utilization history
+    networks_wireless_client_count_history: Wireless client count history
+    networks_wireless_clients_connection_stats: Wireless clients connection stats
+    networks_wireless_clients_latency_stats: Wireless clients latency stats
+    networks_wireless_connection_stats: Wireless connection stats
+    networks_wireless_data_rate_history: Wireless data rate history
+    networks_wireless_devices_connection_stats: Wireless devices connection stats
+    networks_wireless_failed_connections: Wireless failed connections
+    networks_wireless_latency_history: Wireless latency history
+    networks_wireless_latency_stats: Wireless latency stats
+    networks_wireless_mesh_statuses: Wireless mesh statuses
+    networks_wireless_signal_quality_history: Wireless signal quality history
+    networks_wireless_usage_history: Wireless usage history
+    organizations_wireless_clients_overview_by_device: Wireless clients overview by device (org)
+    organizations_wireless_controller_availabilities_change_history: Wireless controller availabilities
+      change history (org)
+    organizations_wireless_controller_clients_overview_history_by_device_by_interval: Wireless controller
+      clients overview history by device by interval (org)
+    organizations_wireless_controller_connections: Wireless controller connections (org)
+    organizations_wireless_controller_devices_interfaces_l2_by_device: Wireless controller devices interfaces
+      L2 by device (org)
+    organizations_wireless_controller_devices_interfaces_l2_statuses_change_history_by_device: Wireless
+      controller devices interfaces L2 statuses change history by device (org)
+    organizations_wireless_controller_devices_interfaces_l2_usage_history_by_interval: Wireless controller
+      devices interfaces L2 usage history by interval (org)
+    organizations_wireless_controller_devices_interfaces_l3_by_device: Wireless controller devices interfaces
+      L3 by device (org)
+    organizations_wireless_controller_devices_interfaces_l3_statuses_change_history_by_device: Wireless
+      controller devices interfaces L3 statuses change history by device (org)
+    organizations_wireless_controller_devices_interfaces_l3_usage_history_by_interval: Wireless controller
+      devices interfaces L3 usage history by interval (org)
+    organizations_wireless_controller_devices_interfaces_packets_overview_by_device: Wireless controller
+      devices interfaces packets overview by device (org)
+    organizations_wireless_controller_devices_interfaces_usage_history_by_interval: Wireless controller
+      devices interfaces usage history by interval (org)
+    organizations_wireless_controller_devices_redundancy_failover_history: Wireless controller devices
+      redundancy failover history (org)
+    organizations_wireless_controller_devices_redundancy_statuses: Wireless controller devices redundancy
+      statuses (org)
+    organizations_wireless_controller_devices_system_utilization_history_by_interval: Wireless controller
+      devices system utilization history by interval (org)
+    organizations_wireless_controller_overview_by_device: Wireless controller overview by device (org)
+    organizations_wireless_devices_channel_utilization_by_device: Wireless devices channel utilization
+      by device (org)
+    organizations_wireless_devices_channel_utilization_by_network: Wireless devices channel utilization
+      by network (org)
+    organizations_wireless_devices_channel_utilization_history_by_device_by_interval: Wireless devices
+      channel utilization history by device by interval (org)
+    organizations_wireless_devices_channel_utilization_history_by_network_by_interval: Wireless devices
+      channel utilization history by network by interval (org)
+    organizations_wireless_devices_ethernet_statuses: Wireless devices ethernet statuses (org)
+    organizations_wireless_devices_packet_loss_by_client: Wireless devices packet loss by client (org)
+    organizations_wireless_devices_packet_loss_by_device: Wireless devices packet loss by device (org)
+    organizations_wireless_devices_packet_loss_by_network: Wireless devices packet loss by network (org)
+    organizations_wireless_devices_power_mode_history: Wireless devices power mode history (org)
+    organizations_wireless_devices_system_cpu_load_history: Wireless devices system CPU load history (org)
+    organizations_wireless_devices_wireless_controllers_by_device: Wireless devices wireless controllers
+      by device (org)
+    organizations_wireless_ssids_statuses_by_device: Wireless SSIDs statuses by device (org)
+- title: Configure switch ports, stacks and VLAN profiles
+  description: Configure switch ports, port schedules, link aggregation, storm control, STP, MTU, stacks,
+    VLAN profiles and switch profiles in configuration templates, and clone switches.
+  components:
+    devices_switch_ports: Switch ports (device)
+    devices_switch_ports_cycle: Switch ports cycle (device)
+    devices_switch_ports_statuses: Switch ports statuses (device)
+    devices_switch_warm_spare: Switch warm spare (device)
+    networks_switch_alternate_management_interface: Switch alternate management interface
+    networks_switch_link_aggregations: Switch link aggregations
+    networks_switch_mtu: Switch MTU
+    networks_switch_port_schedules: Switch port schedules
+    networks_switch_settings: Switch settings
+    networks_switch_stacks: Switch stacks
+    networks_switch_stacks_add: Switch stacks add
+    networks_switch_stacks_remove: Switch stacks remove
+    networks_switch_storm_control: Switch storm control
+    networks_switch_stp: Switch STP
+    networks_vlan_profiles: VLAN profiles
+    networks_vlan_profiles_assignments_by_device: VLAN profiles assignments by device
+    networks_vlan_profiles_assignments_reassign: VLAN profiles assignments reassign
+    organizations_config_templates_switch_profiles: Config templates switch profiles (org)
+    organizations_config_templates_switch_profiles_ports: Config templates switch profiles ports (org)
+    organizations_switch_devices_clone: Switch devices clone (org)
+    organizations_switch_ports_by_switch: Switch ports by switch (org)
+    organizations_switch_ports_clients_overview_by_device: Switch ports clients overview by device (org)
+    organizations_switch_ports_overview: Switch ports overview (org)
+    organizations_switch_ports_statuses_by_switch: Switch ports statuses by switch (org)
+    organizations_switch_ports_topology_discovery_by_device: Switch ports topology discovery by device
+      (org)
+    organizations_switch_ports_usage_history_by_device_by_interval: Switch ports usage history by device
+      by interval (org)
+    playbook:device_switch_ports: 'Playbook: Device switch ports'
+    playbook:ms_playbook: 'Playbook: Ms playbook'
+    playbook:switch_port_config: 'Playbook: Switch port config'
+- title: Configure switch routing, DHCP, QoS and access control
+  description: Configure switch routing interfaces, static routes, OSPF, multicast, DHCP server policy
+    and ARP inspection, access policies and ACLs, and QoS and DSCP-to-CoS mappings.
+  components:
+    devices_switch_routing_interfaces: Switch routing interfaces (device)
+    devices_switch_routing_interfaces_dhcp: Switch routing interfaces DHCP (device)
+    devices_switch_routing_static_routes: Switch routing static routes (device)
+    networks_switch_access_control_lists: Switch access control lists
+    networks_switch_access_policies: Switch access policies
+    networks_switch_dhcp_server_policy: Switch DHCP server policy
+    networks_switch_dhcp_server_policy_arp_inspection_trusted_servers: Switch DHCP server policy ARP inspection
+      trusted servers
+    networks_switch_dhcp_server_policy_arp_inspection_warnings_by_device: Switch DHCP server policy ARP
+      inspection warnings by device
+    networks_switch_dhcp_v4_servers_seen: Switch DHCP v4 servers seen
+    networks_switch_dscp_to_cos_mappings: Switch DSCP to CoS mappings
+    networks_switch_qos_rules_order: Switch QoS rules order
+    networks_switch_routing_multicast: Switch routing multicast
+    networks_switch_routing_multicast_rendezvous_points: Switch routing multicast rendezvous points
+    networks_switch_routing_ospf: Switch routing OSPF
+    networks_switch_stacks_routing_interfaces: Switch stacks routing interfaces
+    networks_switch_stacks_routing_interfaces_dhcp: Switch stacks routing interfaces DHCP
+    networks_switch_stacks_routing_static_routes: Switch stacks routing static routes
+    playbook:devices_switch_routing_interfaces: 'Playbook: Devices switch routing interfaces'
+    playbook:networks_switch_dscp_to_cos_mappings: 'Playbook: Networks switch DSCP to CoS mappings'
+    playbook:networks_switch_qos_rules_order: 'Playbook: Networks switch QoS rules order'
+- title: Manage cameras and video analytics
+  description: Configure camera video settings, quality and retention, wireless profiles, custom analytics
+    and boundaries, camera roles and permissions, and retrieve snapshots, clips and video links.
+  components:
+    devices_camera_analytics_live: Camera analytics live (device)
+    devices_camera_clip: Camera clip (device)
+    devices_camera_custom_analytics: Camera custom analytics (device)
+    devices_camera_generate_snapshot: Camera generate snapshot (device)
+    devices_camera_quality_and_retention: Camera quality and retention (device)
+    devices_camera_sense: Camera sense (device)
+    devices_camera_video_link: Camera video link (device)
+    devices_camera_video_settings: Camera video settings (device)
+    devices_camera_wireless_profiles: Camera wireless profiles (device)
+    networks_camera_quality_retention_profiles: Camera quality retention profiles
+    networks_camera_wireless_profiles: Camera wireless profiles
+    organizations_camera_boundaries_areas_by_device: Camera boundaries areas by device (org)
+    organizations_camera_boundaries_lines_by_device: Camera boundaries lines by device (org)
+    organizations_camera_custom_analytics_artifacts: Camera custom analytics artifacts (org)
+    organizations_camera_detections_history_by_boundary_by_interval: Camera detections history by boundary
+      by interval (org)
+    organizations_camera_permissions: Camera permissions (org)
+    organizations_camera_roles: Camera roles (org)
+    playbook:mv_playbook: 'Playbook: Mv playbook'
+    playbook:organizations_camera_custom_analytics_artifacts: 'Playbook: Organizations camera custom analytics
+      artifacts'
+- title: Manage cellular gateways and eSIMs
+  description: Configure cellular gateway LAN, DHCP, subnet pools, uplinks and port forwarding, manage
+    SIMs, eSIM inventory and service providers, and review cellular data usage and uplink status.
+  components:
+    devices_cellular_gateway_lan: Cellular gateway LAN (device)
+    devices_cellular_gateway_port_forwarding_rules: Cellular gateway port forwarding rules (device)
+    devices_cellular_geolocations: Cellular geolocations (device)
+    devices_cellular_sims: Cellular SIMs (device)
+    devices_cellular_uplinks_bands_masks_update: Cellular uplinks bands masks update (device)
+    networks_cellular_gateway_connectivity_monitoring_destinations: Cellular gateway connectivity monitoring
+      destinations
+    networks_cellular_gateway_dhcp: Cellular gateway DHCP
+    networks_cellular_gateway_subnet_pool: Cellular gateway subnet pool
+    networks_cellular_gateway_uplink: Cellular gateway uplink
+    organizations_cellular_gateway_esims_inventory: Cellular gateway eSIMs inventory (org)
+    organizations_cellular_gateway_esims_service_providers: Cellular gateway eSIMs service providers (org)
+    organizations_cellular_gateway_esims_service_providers_accounts: Cellular gateway eSIMs service providers
+      accounts (org)
+    organizations_cellular_gateway_esims_service_providers_accounts_communication_plans: Cellular gateway
+      eSIMs service providers accounts communication plans (org)
+    organizations_cellular_gateway_esims_service_providers_accounts_rate_plans: Cellular gateway eSIMs
+      service providers accounts rate plans (org)
+    organizations_cellular_gateway_esims_swap: Cellular gateway eSIMs swap (org)
+    organizations_cellular_gateway_uplink_statuses: Cellular gateway uplink statuses (org)
+    organizations_devices_cellular_data_devices: Devices cellular data devices (org)
+    organizations_devices_cellular_data_profiles: Devices cellular data profiles (org)
+    organizations_devices_cellular_data_profiles_assignments: Devices cellular data profiles assignments
+      (org)
+    organizations_devices_cellular_data_profiles_assignments_batch_create: Devices cellular data profiles
+      assignments batch create (org)
+    organizations_devices_cellular_data_profiles_assignments_bulk_delete: Devices cellular data profiles
+      assignments bulk delete (org)
+    organizations_devices_cellular_data_usage_by_device: Devices cellular data usage by device (org)
+    organizations_devices_cellular_data_usage_history_by_device_by_interval: Devices cellular data usage
+      history by device by interval (org)
+    organizations_devices_cellular_geolocations: Devices cellular geolocations (org)
+    organizations_devices_cellular_uplinks_bands_by_device: Devices cellular uplinks bands by device (org)
+    organizations_devices_cellular_uplinks_towers_by_device: Devices cellular uplinks towers by device
+      (org)
+- title: Manage environmental sensors
+  description: Configure sensor alert profiles, relationships and MQTT brokers, send sensor commands,
+    and read current and historical sensor readings.
+  components:
+    devices_sensor_commands: Sensor commands (device)
+    devices_sensor_relationships: Sensor relationships (device)
+    networks_sensor_alerts_current_overview_by_metric: Sensor alerts current overview by metric
+    networks_sensor_alerts_overview_by_metric: Sensor alerts overview by metric
+    networks_sensor_alerts_profiles: Sensor alerts profiles
+    networks_sensor_mqtt_brokers: Sensor MQTT brokers
+    networks_sensor_relationships: Sensor relationships
+    organizations_sensor_gateways_connections_latest: Sensor gateways connections latest (org)
+    organizations_sensor_readings_history: Sensor readings history (org)
+    organizations_sensor_readings_latest: Sensor readings latest (org)
+- title: Manage mobile devices with Systems Manager
+  description: Manage enrolled Systems Manager devices, users, profiles, target groups, apps and trusted
+    access, run lock, wipe and reboot commands, and configure APNs and VPP accounts.
+  components:
+    networks_sm_bypass_activation_lock_attempts: SM bypass activation lock attempts
+    networks_sm_devices: SM devices
+    networks_sm_devices_cellular_usage_history: SM devices cellular usage history
+    networks_sm_devices_certs: SM devices certs
+    networks_sm_devices_checkin: SM devices checkin
+    networks_sm_devices_connectivity: SM devices connectivity
+    networks_sm_devices_desktop_logs: SM devices desktop logs
+    networks_sm_devices_device_command_logs: SM devices device command logs
+    networks_sm_devices_device_profiles: SM devices device profiles
+    networks_sm_devices_fields: SM devices fields
+    networks_sm_devices_install_apps: SM devices install apps
+    networks_sm_devices_lock: SM devices lock
+    networks_sm_devices_modify_tags: SM devices modify tags
+    networks_sm_devices_move: SM devices move
+    networks_sm_devices_network_adapters: SM devices network adapters
+    networks_sm_devices_performance_history: SM devices performance history
+    networks_sm_devices_reboot: SM devices reboot
+    networks_sm_devices_refresh_details: SM devices refresh details
+    networks_sm_devices_security_centers: SM devices security centers
+    networks_sm_devices_shutdown: SM devices shutdown
+    networks_sm_devices_unenroll: SM devices unenroll
+    networks_sm_devices_uninstall_apps: SM devices uninstall apps
+    networks_sm_devices_wipe: SM devices wipe
+    networks_sm_devices_wlan_lists: SM devices WLAN lists
+    networks_sm_profiles: SM profiles
+    networks_sm_target_groups: SM target groups
+    networks_sm_trusted_access_configs: SM trusted access configs
+    networks_sm_user_access_devices: SM user access devices
+    networks_sm_user_access_devices_delete: SM user access devices delete
+    networks_sm_users: SM users
+    networks_sm_users_device_profiles: SM users device profiles
+    networks_sm_users_softwares: SM users softwares
+    organizations_sm_admins_roles: SM admins roles (org)
+    organizations_sm_apns_cert: SM APNs cert (org)
+    organizations_sm_sentry_policies_assignments: SM sentry policies assignments (org)
+    organizations_sm_sentry_policies_assignments_by_network: SM sentry policies assignments by network
+      (org)
+    organizations_sm_vpp_accounts: SM VPP accounts (org)
+- title: Manage clients, guest access and privacy data
+  description: Provision clients, authorize splash page access, configure splash themes and assets, manage
+    Meraki authentication users and Bluetooth clients, and handle PII requests and keys.
+  components:
+    networks_bluetooth_clients: Bluetooth clients
+    networks_clients: Clients
+    networks_clients_provision: Clients provision
+    networks_clients_splash_authorization: Clients splash authorization
+    networks_clients_splash_authorization_status: Clients splash authorization status
+    networks_meraki_auth_users: Meraki auth users
+    networks_pii_pii_keys: PII PII keys
+    networks_pii_requests: PII requests
+    networks_pii_requests_delete: PII requests delete
+    networks_pii_sm_devices_for_key: PII SM devices for key
+    networks_pii_sm_owners_for_key: PII SM owners for key
+    networks_wireless_ssids_splash_settings: Wireless SSIDs splash settings
+    organizations_splash_assets: Splash assets (org)
+    organizations_splash_themes: Splash themes (org)
+    organizations_splash_themes_assets: Splash themes assets (org)
+- title: Configure alerts, webhooks and events
+  description: Configure alert settings and profiles, webhook HTTP servers and payload templates, review
+    events and assurance alerts, and dismiss or restore alerts.
+  components:
+    networks_alerts_history: Alerts history
+    networks_alerts_settings: Alerts settings
+    networks_events: Events
+    networks_events_event_types: Events event types
+    networks_webhooks_http_servers: Webhooks HTTP servers
+    networks_webhooks_payload_templates: Webhooks payload templates
+    networks_webhooks_webhook_tests: Webhooks webhook tests
+    organizations_alerts_profiles: Alerts profiles (org)
+    organizations_assurance_alerts: Assurance alerts (org)
+    organizations_assurance_alerts_dismiss: Assurance alerts dismiss (org)
+    organizations_assurance_alerts_overview: Assurance alerts overview (org)
+    organizations_assurance_alerts_overview_by_network: Assurance alerts overview by network (org)
+    organizations_assurance_alerts_overview_by_type: Assurance alerts overview by type (org)
+    organizations_assurance_alerts_overview_historical: Assurance alerts overview historical (org)
+    organizations_assurance_alerts_restore: Assurance alerts restore (org)
+    organizations_assurance_alerts_taxonomy_categories: Assurance alerts taxonomy categories (org)
+    organizations_assurance_alerts_taxonomy_types: Assurance alerts taxonomy types (org)
+    organizations_webhooks_callbacks_statuses: Webhooks callbacks statuses (org)
+    organizations_webhooks_logs: Webhooks logs (org)
+- title: Monitor device status, uplinks and availability
+  description: Query device availability, status, provisioning, uplink status and usage, power modules
+    and memory usage across the organization.
+  components:
+    devices_appliance_performance: Appliance performance (device)
+    organizations_appliance_devices_ports_transceivers_readings_history_by_device: Appliance devices ports
+      transceivers readings history by device (org)
+    organizations_appliance_interfaces_packets_overviews_by_device: Appliance interfaces packets overviews
+      by device (org)
+    organizations_appliance_uplinks_statuses_overview: Appliance uplinks statuses overview (org)
+    organizations_appliance_uplinks_usage_by_network: Appliance uplinks usage by network (org)
+    organizations_devices_availabilities: Devices availabilities (org)
+    organizations_devices_availabilities_change_history: Devices availabilities change history (org)
+    organizations_devices_overview_by_model: Devices overview by model (org)
+    organizations_devices_power_modules_statuses_by_device: Devices power modules statuses by device (org)
+    organizations_devices_provisioning_statuses: Devices provisioning statuses (org)
+    organizations_devices_statuses: Devices statuses (org)
+    organizations_devices_statuses_overview: Devices statuses overview (org)
+    organizations_devices_system_memory_usage_history_by_interval: Devices system memory usage history
+      by interval (org)
+    organizations_devices_uplinks_addresses_by_device: Devices uplinks addresses by device (org)
+    organizations_devices_uplinks_loss_and_latency: Devices uplinks loss and latency (org)
+    organizations_uplinks_statuses: Uplinks statuses (org)
+    playbook:device_statuses: 'Playbook: Device statuses'
+- title: Report on clients, applications and network usage
+  description: Search clients and review their bandwidth, review top clients, applications, devices and
+    SSIDs by usage, and query traffic analysis, application health and link-layer topology.
+  components:
+    networks_clients_overview: Clients overview
+    networks_health_alerts: Health alerts
+    networks_insight_applications_health_by_time: Insight applications health by time
+    networks_topology_link_layer: Topology link layer
+    networks_traffic_analysis: Traffic analysis
+    organizations_clients_bandwidth_usage_history: Clients bandwidth usage history (org)
+    organizations_clients_overview: Clients overview (org)
+    organizations_clients_search: Clients search (org)
+    organizations_insight_applications: Insight applications (org)
+    organizations_insight_monitored_media_servers: Insight monitored media servers (org)
+    organizations_summary_top_appliances_by_utilization: Summary top appliances by utilization (org)
+    organizations_summary_top_applications_by_usage: Summary top applications by usage (org)
+    organizations_summary_top_applications_categories_by_usage: Summary top applications categories by
+      usage (org)
+    organizations_summary_top_clients_by_usage: Summary top clients by usage (org)
+    organizations_summary_top_clients_manufacturers_by_usage: Summary top clients manufacturers by usage
+      (org)
+    organizations_summary_top_devices_by_usage: Summary top devices by usage (org)
+    organizations_summary_top_devices_models_by_usage: Summary top devices models by usage (org)
+    organizations_summary_top_networks_by_status: Summary top networks by status (org)
+    organizations_summary_top_ssids_by_usage: Summary top SSIDs by usage (org)
+    organizations_summary_top_switches_by_energy_usage: Summary top switches by energy usage (org)
+    playbook:organizations_clients_search_info: 'Playbook: Organizations clients search info'

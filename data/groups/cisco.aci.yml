@@ -1,0 +1,383 @@
+fqcn: cisco.aci
+product: Cisco ACI
+use_cases:
+- title: Manage tenants, application profiles and EPGs
+  description: Create tenants, application profiles and endpoint groups, bind EPGs to domains and static
+    paths, and tag endpoints.
+  components:
+    ap: Application profiles
+    bulk_static_binding_to_epg: Bulk static path bindings to EPGs
+    endpoint_tag_ip: Endpoint IP tags
+    endpoint_tag_mac: Endpoint MAC tags
+    epg: Endpoint groups (EPGs)
+    epg_monitoring_policy: EPG monitoring policies
+    epg_subnet: EPG Subnets
+    epg_to_contract: EPG to contract bindings
+    epg_to_contract_interface: EPG to consumed contract interface bindings
+    epg_to_contract_master: EPG contract masters
+    epg_to_domain: EPG to domain bindings
+    epg_useg_attribute_block_statement: uSeg attribute block statements
+    epg_useg_attribute_simple_statement: uSeg attribute simple statements
+    static_binding_to_epg: Static path bindings to EPGs
+    tag: Object tags
+    tenant: Tenants
+    tenant_ep_retention_policy: Endpoint retention policies
+- title: Manage endpoint security groups
+  description: Create ESGs, define their EPG, IP subnet and tag selectors, and attach contracts.
+  components:
+    esg: Endpoint security groups (ESGs)
+    esg_contract_master: ESG contract masters
+    esg_epg_selector: ESG EPG selectors
+    esg_ip_subnet_selector: ESG IP subnet selectors
+    esg_tag_selector: ESG tag selectors
+    esg_to_contract: ESG to contract bindings
+- title: Manage contracts, filters and policy enforcement
+  description: Define contracts, subjects and filters, and bind them to EPGs, L2/L3 external EPGs, management
+    EPGs and vzAny.
+  components:
+    contract: Contract resources
+    contract_export: Contract interfaces (exports)
+    contract_subject: Contract subjects
+    contract_subject_to_filter: Subject to filter bindings
+    contract_subject_to_service_graph: Subject to service graph bindings
+    filter: Filters
+    filter_entry: Filter entries
+    l2out_extepg_to_contract: L2Out external EPG contract bindings
+    l3out_extepg_to_contract: L3Out external EPG contract bindings
+    management_network_instance_profile_to_contract: Management network profile contract bindings
+    node_mgmt_epg_to_contract: Node management EPG contract bindings
+    oob_contract: Out-of-band contracts
+    subject_label: Subject Labels
+    taboo_contract: Taboo contracts
+    vzany_to_contract: vzAny contract bindings
+- title: Manage VRFs, bridge domains and DHCP relay
+  description: Create VRFs and bridge domains with their subnets, L3Out and NetFlow bindings, and configure
+    DHCP relay and option policies.
+  components:
+    bd: Bridge domains
+    bd_dhcp_label: Bridge domain DHCP labels
+    bd_rogue_exception_mac: Rogue exception MACs
+    bd_subnet: Bridge domain subnets
+    bd_to_l3out: Bridge domain to L3Out bindings
+    bd_to_netflow_monitor_policy: Bridge domain NetFlow monitor bindings
+    dhcp_option: DHCP options
+    dhcp_option_policy: DHCP option policies
+    dhcp_relay: DHCP relay policies
+    dhcp_relay_provider: DHCP relay providers
+    vrf: VRFs
+    vrf_fallback_route_group: VRF fallback route groups
+    vrf_leak_internal_subnet: VRF leaked subnets
+- title: Connect external networks with L3Outs
+  description: Create L3Outs with their node and interface profiles, external EPGs and subnets, floating
+    SVIs and static routes.
+  components:
+    fabric_external_connection_profile: Fabric external connection profiles
+    fabric_external_routing_profile: Fabric external routing profiles
+    l3out: L3Outs
+    l3out_dhcp_relay_label: L3Out DHCP relay labels
+    l3out_extepg: L3Out external EPGs
+    l3out_extsubnet: External subnets
+    l3out_floating_svi: Floating SVIs
+    l3out_floating_svi_path: Floating SVI paths
+    l3out_floating_svi_path_secondary_ip: Floating SVI path secondary IPs
+    l3out_floating_svi_secondary_ip: Floating SVI secondary IPs
+    l3out_interface: L3Out interfaces
+    l3out_interface_secondary_ip: L3Out interface secondary IPs
+    l3out_logical_interface_profile: Logical interface profiles
+    l3out_logical_interface_vpc_member: vPC member nodes
+    l3out_logical_node: Logical nodes
+    l3out_logical_node_profile: Logical node profiles
+    l3out_route_tag_policy: Route tag policies
+    l3out_static_routes: Static routes
+    l3out_static_routes_nexthop: Static route next hops
+    l3out_to_sr_mpls_infra_l3out: SR-MPLS infra L3Out bindings
+- title: Configure L3Out routing protocols (BGP, OSPF, EIGRP, HSRP, BFD)
+  description: Configure BGP peers, OSPF and EIGRP interface profiles, HSRP groups and BFD profiles for
+    L3Outs, plus the matching interface policies.
+  components:
+    bfd_multihop_node_policy: BFD multihop node policies
+    interface_policy_bfd: BFD interface policies
+    interface_policy_bfd_multihop: BFD multihop interface policies
+    interface_policy_eigrp: EIGRP interface policies
+    interface_policy_hsrp: HSRP interface policies
+    interface_policy_ospf: OSPF interface policies
+    l3out_bfd_interface_profile: L3Out BFD interface profiles
+    l3out_bfd_multihop_interface_profile: L3Out BFD multihop interface profiles
+    l3out_bgp_peer: L3Out BGP peers
+    l3out_bgp_protocol_profile: L3Out BGP protocol profiles
+    l3out_eigrp_interface_profile: L3Out EIGRP interface profiles
+    l3out_hsrp_group: HSRP groups
+    l3out_hsrp_interface_profile: L3Out HSRP interface profiles
+    l3out_hsrp_secondary_vip: HSRP secondary virtual IPs
+    l3out_logical_interface_profile_ospf_policy: L3Out OSPF interface profiles
+- title: Control routing with BGP policies and route maps
+  description: Define BGP policies and route reflectors, route control profiles, match rules and action
+    rules, and routing authentication keys.
+  components:
+    action_rule_additional_communities: Additional community action rules
+    action_rule_set_as_path: AS path action rules
+    action_rule_set_as_path_asn: AS path ASNs
+    bgp_address_family_context_policy: BGP address family context policies
+    bgp_best_path_policy: BGP best path policies
+    bgp_peer_prefix_policy: BGP peer prefix policies
+    bgp_route_summarization_policy: BGP route summarization policies
+    bgp_rr_asn: BGP route reflector ASN
+    bgp_rr_node: BGP route reflector nodes
+    bgp_timers_policy: BGP timers policies
+    key_policy: Key policies
+    keychain_policy: Keychain policies
+    match_as_path_regex_term: Match AS path regex terms
+    match_community_factor: Match community factors
+    match_community_regex_term: Match community regex terms
+    match_community_term: Match community terms
+    match_route_destination: Match route destinations
+    match_rule: Match rules
+    route_control_context: Route control contexts
+    route_control_profile: Route control profiles
+    tenant_action_rule_profile: Action rule profiles
+- title: Configure multicast (PIM and IGMP)
+  description: Configure PIM interface and route map policies, IGMP interface policies and VRF multicast.
+  components:
+    igmp_interface_policy: IGMP interface policies
+    interface_policy_pim: PIM interface policies
+    pim_route_map_entry: PIM route map entries
+    pim_route_map_policy: PIM route map policies
+    vrf_multicast: VRF multicast
+- title: Connect Layer 2 external networks with L2Outs
+  description: Create L2Outs with their node, interface and path profiles and external EPGs.
+  components:
+    l2out: L2Outs
+    l2out_extepg: L2Out external EPGs
+    l2out_logical_interface_path: L2Out logical interface paths
+    l2out_logical_interface_profile: L2Out logical interface profiles
+    l2out_logical_node_profile: L2Out logical node profiles
+- title: Insert L4-L7 services and service graphs
+  description: Register L4-L7 devices and interfaces, build service graph templates, and configure device
+    selection and policy-based redirect.
+  components:
+    l4l7_concrete_device: Concrete devices
+    l4l7_concrete_interface: Concrete interfaces
+    l4l7_concrete_interface_attachment: Concrete interface attachments
+    l4l7_device: L4-L7 devices
+    l4l7_device_selection_interface_context: Device selection interface contexts
+    l4l7_device_selection_policy: Device selection policies
+    l4l7_logical_interface: Logical interfaces
+    l4l7_policy_based_redirect: Policy-based redirect policies
+    l4l7_policy_based_redirect_destination: Policy-based redirect destinations
+    l4l7_redirect_health_group: Redirect health groups
+    l4l7_service_graph_template: Service graph templates
+    l4l7_service_graph_template_connection: Service graph connections
+    l4l7_service_graph_template_connection_to_connector: Service graph connector connections
+    l4l7_service_graph_template_functional_connection: Service graph functional connections
+    l4l7_service_graph_template_node: Service graph nodes
+    l4l7_service_graph_template_term_node: Service graph terminal nodes
+- title: Manage domains, VLAN pools and AEPs
+  description: Create physical, virtual, bridged and routed domains, VLAN/encap pools and ranges, and
+    attachable access entity profiles with their bindings.
+  components:
+    aep: Attachable access entity profiles (AEPs)
+    aep_to_domain: AEP to domain bindings
+    aep_to_epg: AEP to EPG bindings
+    domain: Physical, virtual, bridged, routed and FC domains
+    domain_to_encap_pool: Domain to encap pool bindings
+    domain_to_vlan_pool: Domain to VLAN pool bindings
+    encap_pool: Encap pools
+    encap_pool_range: Encap pool ranges
+    vlan_pool: VLAN pools
+    vlan_pool_encap_block: VLAN pool encap blocks
+- title: Define interface policies and policy groups
+  description: Configure CDP, LLDP, LACP, link-level, spanning-tree, storm-control and other interface
+    policies and combine them into leaf and spine policy groups.
+  components:
+    access_switch_policy_group: Access switch policy groups
+    fabric_interface_policy_group: Fabric interface policy groups
+    interface_policy_cdp: CDP interface policies
+    interface_policy_fc: Fibre Channel interface policies
+    interface_policy_l2: Layer 2 interface policies
+    interface_policy_leaf_breakout_port_group: Leaf breakout port groups
+    interface_policy_leaf_fc_policy_group: Leaf Fibre Channel policy groups
+    interface_policy_leaf_policy_group: Leaf interface policy groups
+    interface_policy_leaf_profile: Leaf interface profiles
+    interface_policy_leaf_profile_fex_policy_group: FEX policy groups
+    interface_policy_link_level: Link-level interface policies
+    interface_policy_lldp: LLDP interface policies
+    interface_policy_mcp: MCP interface policies
+    interface_policy_port_channel: Port channel policies
+    interface_policy_port_channel_member: Port channel member policies
+    interface_policy_port_security: Port security policies
+    interface_policy_spanning_tree: Spanning tree policies
+    interface_policy_spine_policy_group: Spine interface policy groups
+    interface_policy_storm_control: Storm control policies
+- title: Configure access ports, switch profiles and selectors
+  description: Build leaf and spine interface and switch profiles, port selectors and blocks, vPC protection
+    groups, and set port-level configuration and descriptions.
+  components:
+    access_port_block_to_access_port: Port blocks of access port selectors
+    access_port_to_interface_policy_leaf_profile: Leaf interface profile port selectors
+    access_spine_interface_profile: Spine interface profiles
+    access_spine_interface_profile_to_spine_switch_profile: Spine interface to switch profile bindings
+    access_spine_interface_selector: Spine interface selectors
+    access_spine_switch_profile: Spine switch profiles
+    access_spine_switch_selector: Spine switch selectors
+    access_sub_port_block_to_access_port: Sub port blocks of access port selectors
+    interface_blacklist: Interface enable and disable
+    interface_config: Access and fabric port configuration (ACI 5.2+)
+    interface_description: Interface descriptions
+    interface_selector_to_switch_policy_leaf_profile: Interface selector to switch profile bindings
+    node_block: Node blocks
+    switch_access_config: Switch access policy configuration
+    switch_leaf_selector: Leaf selectors
+    switch_policy_leaf_profile: Leaf switch profiles
+    switch_policy_vpc_protection_group: vPC protection groups
+- title: 'Build the fabric: nodes, pods and fabric policies'
+  description: Register and decommission fabric nodes, define pod, leaf and spine profiles and policy
+    groups, and set fabric-wide settings.
+  components:
+    fabric_leaf_profile: Fabric leaf profiles
+    fabric_leaf_switch_assoc: Leaf switch associations
+    fabric_node: Fabric node members
+    fabric_node_control: Fabric node controls
+    fabric_node_decommission: Node commissioning and decommissioning
+    fabric_pod: Pod setup policies
+    fabric_pod_connectivity_profile: Pod connectivity profiles
+    fabric_pod_external_tep: Pod external TEPs
+    fabric_pod_policy_group: Pod policy groups
+    fabric_pod_profile: Pod profiles
+    fabric_pod_remote_pool: Pod remote pools
+    fabric_pod_selector: Pod selectors
+    fabric_spine_profile: Fabric spine profiles
+    fabric_spine_switch_assoc: Spine switch associations
+    fabric_switch_block: Switch blocks
+    fabric_switch_policy_group: Fabric switch policy groups
+    fabric_wide_settings: Fabric-wide settings
+    switch_fabric_config: Switch fabric policy configuration
+- title: Upgrade firmware and schedule maintenance
+  description: Manage firmware sources, policies and groups, maintenance policies and groups, and the
+    schedulers that trigger them.
+  components:
+    fabric_scheduler: Schedulers
+    firmware_group: Firmware groups
+    firmware_group_node: Firmware group nodes
+    firmware_policy: Firmware policies
+    firmware_source: Firmware image sources
+    maintenance_group: Maintenance groups
+    maintenance_group_node: Maintenance group nodes
+    maintenance_policy: Maintenance policies
+- title: Mirror and monitor traffic (SPAN, NetFlow, IP SLA)
+  description: Configure access, fabric and tenant SPAN sessions, NetFlow exporters, monitors and records,
+    and IP SLA monitoring policies.
+  components:
+    access_span_dst_group: Access SPAN destination groups
+    access_span_filter_group: Access SPAN filter groups
+    access_span_filter_group_entry: Access SPAN filter group entries
+    access_span_src_group: Access SPAN source groups
+    access_span_src_group_src: Access SPAN sources
+    access_span_src_group_src_path: Access SPAN source paths
+    fabric_span_dst_group: Fabric SPAN destination groups
+    fabric_span_src_group: Fabric SPAN source groups
+    fabric_span_src_group_src: Fabric SPAN sources
+    fabric_span_src_group_src_node: Fabric SPAN source nodes
+    fabric_span_src_group_src_path: Fabric SPAN source paths
+    ip_sla_monitoring_policy: IP SLA monitoring policies
+    netflow_exporter_policy: NetFlow exporter policies
+    netflow_monitor_policy: NetFlow monitor policies
+    netflow_monitor_to_exporter: NetFlow monitor to exporter bindings
+    netflow_record_policy: NetFlow record policies
+    tenant_span_dst_group: Tenant SPAN destination groups
+    tenant_span_src_group: Tenant SPAN source groups
+    tenant_span_src_group_src: Tenant SPAN sources
+    tenant_span_src_group_to_dst_group: SPAN source to destination bindings
+- title: Send SNMP and syslog telemetry
+  description: Configure SNMP policies, clients and users, and syslog groups, sources and remote destinations.
+  components:
+    snmp_client: SNMP clients
+    snmp_client_group: SNMP client groups
+    snmp_community_policy: SNMP community policies
+    snmp_policy: SNMP policies
+    snmp_user: SNMP v3 users
+    syslog_group: Syslog groups
+    syslog_remote_dest: Syslog remote destinations
+    syslog_source: Syslog sources
+- title: Administer users, roles and management security
+  description: Manage AAA users, roles, domains, privileges, certificates and key rings, and secure the
+    fabric management access and HTTPS ciphers.
+  components:
+    aaa_certificate_authority: Certificate authorities
+    aaa_custom_privilege: RBAC custom privileges
+    aaa_domain: Security domains
+    aaa_key_ring: Key rings
+    aaa_role: Roles
+    aaa_security_default_settings: Security default settings
+    aaa_ssh_auth: SSH authentication
+    aaa_user: Users
+    aaa_user_certificate: User certificates
+    aaa_user_domain: User security domains
+    aaa_user_role: User roles
+    fabric_management_access: Fabric management access
+    fabric_management_access_https_cipher: HTTPS cipher configuration
+    system_global_aes_passphrase_encryption: Global AES passphrase encryption
+- title: Configure management network, NTP, DNS and system settings
+  description: Configure in-band and out-of-band management EPGs and addresses, NTP, DNS, banners and
+    system-wide endpoint controls.
+  components:
+    dns_domain: DNS domains
+    dns_profile: DNS profiles
+    dns_provider: DNS providers
+    management_network_instance_profile: External management network profiles
+    node_mgmt_epg: In-band and out-of-band management EPGs
+    ntp_policy: NTP policies
+    ntp_server: NTP servers
+    static_node_mgmt_address: Static node management addresses
+    system: System information
+    system_banner: Alias and banners
+    system_connectivity_preference: APIC connectivity preferences
+    system_endpoint_controls: Endpoint controls (IP aging, loop protection)
+- title: Apply quality of service policies
+  description: Define custom QoS policies and map Dot1P and DSCP classes.
+  components:
+    qos_custom_policy: Custom QoS policies
+    qos_dot1p_class: Dot1P classes
+    qos_dscp_class: DSCP classes
+- title: Back up, snapshot and roll back configuration
+  description: Export configuration, take snapshots, roll back and preview changes, and define remote
+    file paths.
+  components:
+    config_export_policy: Configuration export policies
+    config_rollback: Configuration rollback and preview
+    config_snapshot: Configuration snapshots
+    file_remote_path: Remote file paths
+- title: Extend ACI to public clouds with Cloud APIC
+  description: Configure cloud context profiles, CIDRs, subnets, cloud EPGs and selectors, and cloud provider,
+    region and VPN gateway objects.
+  components:
+    cloud_ap: Cloud application profiles
+    cloud_aws_provider: AWS providers
+    cloud_bgp_asn: Cloud BGP ASN profiles
+    cloud_cidr: Cloud CIDRs
+    cloud_ctx_profile: Cloud context profiles
+    cloud_epg: Cloud EPGs
+    cloud_epg_selector: Cloud endpoint selectors
+    cloud_external_epg: Cloud external EPGs
+    cloud_external_epg_selector: Cloud external endpoint selectors
+    cloud_provider: Cloud providers (query)
+    cloud_region: Cloud regions
+    cloud_subnet: Cloud subnets
+    cloud_vpn_gateway: Cloud VPN gateways (routers)
+    cloud_zone: Cloud availability zones
+- title: Integrate with virtual machine managers (VMM)
+  description: Configure VMM controllers, credentials, uplinks, vSwitch policies and enhanced LAG policies.
+  components:
+    vmm_controller: VMM controllers
+    vmm_credential: VMM credentials
+    vmm_enhanced_lag_policy: Enhanced LAG policies
+    vmm_uplink: VMM uplinks
+    vmm_uplink_container: VMM uplink containers
+    vmm_vswitch_policy: vSwitch policies
+- title: Call the APIC API, inventory and helpers
+  description: Send raw REST calls to the APIC, build Ansible inventory from ACI, expand interface ranges
+    and flatten ACI data.
+  components:
+    rest: Direct REST API access
+    filter:listify: listify filter (flatten ACI model data)
+    inventory:aci_inventory_system: ACI inventory plugin
+    lookup:interface_range: Interface range lookup

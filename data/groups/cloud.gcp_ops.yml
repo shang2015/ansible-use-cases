@@ -1,0 +1,11 @@
+fqcn: cloud.gcp_ops
+product: "Google Cloud Platform"
+use_cases:
+- title: "Migrate VMs and manage images on Google Cloud"
+  description: "Clone on-premises KVM VMs, import images and run GCP instances, manage machine images and upload files to Cloud Storage."
+  components:
+    "playbook:move_vm_from_on_prem_to_gcp.move_vm_from_on_prem_to_gcp": "VM migration playbook"
+    "role:clone_on_prem_vm": "Clone on-premises VM"
+    "role:import_image_and_run_gcp_instance": "Import image and run instance"
+    "role:manage_machine_image": "Machine images"
+    "playbook:upload_file_to_cloud_storage.upload_file_to_cloud_storage": "Cloud Storage upload playbook"

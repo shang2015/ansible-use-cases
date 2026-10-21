@@ -1,0 +1,12 @@
+fqcn: microsoft.wsl
+product: "Windows Subsystem for Linux"
+use_cases:
+- title: "Manage WSL distributions"
+  description: "Install, configure, import, export and run commands in WSL distributions, and report WSL status."
+  components:
+    "distribution": "Distributions"
+    "distribution_config": "Distribution configuration"
+    "import": "Import"
+    "export": "Export"
+    "command": "Commands"
+    "status": "Status"

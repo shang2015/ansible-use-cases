@@ -1,0 +1,17 @@
+fqcn: splunk.itsi
+product: Splunk IT Service Intelligence
+use_cases:
+- title: Manage services, glass tables and correlation searches
+  description: Create and update ITSI services, the glass tables that visualise them, and correlation searches that generate notable events.
+  components:
+    service: Services
+    glass_table: Glass tables
+    correlation_search: Correlation searches
+- title: Group and respond to episodes
+  description: Define aggregation policies that group notable events into episodes, read episode details, add comments and update episode fields, and trigger Event-Driven Ansible from ITSI episodes.
+  components:
+    aggregation_policy: Aggregation policies
+    episode_details: Episode details
+    add_episode_comments: Episode comments
+    update_episode_details: Episode updates
+    eda_event_source:aap_eda_rulebook: ITSI episode event source

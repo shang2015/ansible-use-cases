@@ -1,0 +1,27 @@
+fqcn: amazon.ai
+product: Amazon AI services
+use_cases:
+- title: Run generative AI on Amazon Bedrock
+  description: List foundation models, run inference and manage AgentCore runtimes and their endpoints.
+  components:
+    bedrock_foundation_models: Foundation models
+    bedrock_invoke_model: Model inference
+    bedrock_agentcore_runtime: AgentCore runtimes
+    bedrock_agentcore_runtime_endpoint: AgentCore runtime endpoints
+- title: Deploy machine learning with Amazon SageMaker
+  description: Manage SageMaker models, endpoints and configurations, images, model package groups, pipelines
+    and code repositories.
+  components:
+    sagemaker_model: Models
+    sagemaker_endpoint: Endpoints
+    sagemaker_endpoint_config: Endpoint configurations
+    sagemaker_image: Images
+    sagemaker_image_version: Image versions
+    sagemaker_model_package_group: Model package groups
+    sagemaker_pipeline: Pipelines
+    sagemaker_code_repository: Code repositories
+- title: Detect operational issues with DevOps Guru
+  description: Manage resource collections and read insights.
+  components:
+    devopsguru_resource_collection: Resource collections
+    devopsguru_insight: Insights

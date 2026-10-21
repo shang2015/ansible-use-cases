@@ -1,0 +1,217 @@
+fqcn: ibm.power_aix
+product: IBM AIX on Power
+notes:
+- Many demo playbooks show a single module with various options; they are grouped here with the module
+  they exercise.
+use_cases:
+- title: Patch and update AIX software
+  description: Install and update filesets, apply interim fixes, generate FLRTVC reports, download fixes
+    from IBM Fix Central, and bootstrap DNF on AIX.
+  components:
+    installp: Filesets (installp)
+    geninstall: Generic installer
+    install_all_updates: Install all updates
+    emgr: Interim fixes (emgr)
+    flrtvc: FLRTVC security fix reports
+    suma: SUMA fix downloads
+    lpp: Installed software facts
+    role:power_aix_bootstrap: DNF bootstrap role
+    playbook:demo_installp: Fileset installation demo
+    playbook:demo_install_all_updates: Update-all demo
+    playbook:demo_emgr: Interim fix demo
+    playbook:demo_flrtvc: FLRTVC demo
+    playbook:demo_flrtvc_local_patch_server: FLRTVC with local patch server demo
+    playbook:demo_shell_flrtvc_wget_ifix: Sync ifixes to a web server demo
+    playbook:demo_suma: SUMA demo
+    playbook:demo_lpp_facts: Installed software facts demo
+    playbook:demo_dnf: DNF package install demo
+    playbook:demo_dnf_bootstrap: DNF bootstrap demo
+    playbook:demo_dnf_bootstrap_local: DNF bootstrap from local repository demo
+    playbook:demo_update-all-hosts: Update all hosts demo
+- title: Apply kernel and library updates without downtime
+  description: Run live kernel updates and live library updates, and clean up failed live update operations.
+  components:
+    lku: Live kernel update
+    llvupdate: Live library update
+    clvupdate: Failed live update cleanup
+    role:live_kernel_update: Live kernel update role
+    playbook:demo_lku: Live kernel update demo
+    playbook:demo_aix_lku_role: Live kernel update role demo
+    playbook:demo_llvupdate: Live library update demo
+    playbook:demo_clvupdate: Live update cleanup demo
+- title: Install, upgrade and migrate with NIM
+  description: Set up NIM servers and resources, install and back up clients, upgrade AIX and VIOS, and
+    migrate NIM masters or client OS levels.
+  components:
+    nim: NIM operations
+    nimclient: NIM client operations
+    nim_resource: NIM resources
+    nim_backup: NIM client backups
+    nim_flrtvc: NIM FLRTVC fixes
+    nim_suma: NIM SUMA downloads
+    nim_select_target_disk: Target disk selection
+    nim_updateios: VIOS updates
+    nim_upgradeios: VIOS upgrades
+    nim_viosupgrade: VIOS upgrades (viosupgrade)
+    nim_vios_alt_disk: VIOS alternate disk
+    nim_vios_hc: VIOS health check
+    role:nim_alt_disk_migration: Alternate disk migration role
+    role:nim_master_migration: NIM master migration role
+    role:power_aix_vioshc: VIOS health checker role
+    playbook:demo_nim: NIM operations demo
+    playbook:demo_nim_alt_disk_migration: Alternate disk migration demo
+    playbook:demo_nim_backup: NIM backup demo
+    playbook:demo_nim_check: NIM check demo
+    playbook:demo_nim_flrtvc: NIM FLRTVC demo
+    playbook:demo_nim_install: BOS install from mksysb demo
+    playbook:demo_nim_install_filesets: NIM fileset install demo
+    playbook:demo_nim_master_migration: NIM master migration demo
+    playbook:demo_nim_resource: NIM resource demo
+    playbook:demo_nim_suma: NIM SUMA demo
+    playbook:demo_nim_updateios: VIOS update demo
+    playbook:demo_nim_vios_hc: VIOS health check demo
+    playbook:demo_nim_viosupgrade: VIOS upgrade demo
+    playbook:demo_nimclient: NIM client demo
+    playbook:demo_vioshc: VIOS health checker demo
+- title: Back up and clone system images
+  description: Back up volume groups, clone the root volume group to an alternate disk, and manage boot
+    images and boot lists.
+  components:
+    backup: Volume group backups
+    alt_disk: Alternate rootvg disk
+    bosboot: Boot images
+    bootlist: Boot list
+    playbook:demo_backup_datavg: Data volume group backup demo
+    playbook:demo_backup_rootvg: Root volume group backup demo
+    playbook:demo_alt_disk: Alternate disk demo
+    playbook:demo_bosboot: Boot image demo
+- title: Manage storage, filesystems and devices
+  description: Configure LVM volume groups and logical volumes, filesystems, mounts, paging space, dump
+    devices and multipath devices, and encrypt logical volumes.
+  components:
+    lvg: Volume groups
+    lvol: Logical volumes
+    lvm: LVM facts
+    filesystem: Filesystems
+    mount: Mounts
+    pagingspace: Paging space
+    sysdumpdev: System dump devices
+    devices: Devices
+    mpio: MPIO devices
+    hdcrypt: Encryption information
+    hdcrypt_auth: Encryption authentication methods
+    hdcrypt_conv: Encrypt and decrypt volumes
+    hdcrypt_pks: PKS authentication and keys
+    playbook:demo_lvg: Volume group demo
+    playbook:demo_lvol: Logical volume demo
+    playbook:demo_lvm_facts: LVM facts demo
+    playbook:demo_filesystem: Filesystem demo
+    playbook:demo_mount: Mount demo
+    playbook:demo_pagingspace: Paging space demo
+    playbook:demo_sysdumpdev: Dump device demo
+    playbook:demo_devices: Device defaults demo
+    playbook:demo_mpio: MPIO demo
+    playbook:dynamic_mpio: MPIO demo (dynamic inventory)
+    playbook:demo_hdcrypt_auth: Encryption authentication demo
+    playbook:demo_hdcrypt_conv: Encryption conversion demo
+    playbook:demo_hdcrypt_facts: Encryption facts demo
+    playbook:demo_hdcrypt_pks: Encryption PKS demo
+- title: Configure networking and IPsec
+  description: Set up TCP/IP, routes, filter rules, tunnels and IPsec, and control inetd services and
+    the bootptab file.
+  components:
+    mktcpip: TCP/IP setup
+    route: Routes
+    mkfilt: Filter rules
+    mktun: Tunnels
+    role:ipsec: IPsec tunnels role
+    role:inetd: inetd services role
+    role:bootptab: bootptab role
+    playbook:demo_mktcpip: TCP/IP setup demo
+    playbook:demo_route: Route demo
+    playbook:demo_mkfilt: Filter rule demo
+    playbook:demo_mktun: Tunnel demo
+    playbook:dynamic_mktun: Tunnel demo (dynamic inventory)
+    playbook:demo_setup_ipsec_tunnel: IPsec tunnel demo
+- title: Manage users, groups and password policy
+  description: Create and modify users and groups, set password rules and hashes, and edit security stanza
+    files.
+  components:
+    user: Users
+    group: Groups
+    password_hash: Password hashing
+    password_rules_policies: Password rules and policies
+    chsec: Stanza file attributes
+    playbook:demo_user: User demo
+    playbook:demo_group: Group demo
+    playbook:demo_password_rules_policies: Password policy demo
+    playbook:demo_chsec: Stanza file demo
+- title: Harden and audit systems
+  description: Apply AIX security hardening settings and control the auditing subsystem.
+  components:
+    aixpert: Security hardening
+    audit: Auditing
+    playbook:demo_audit: Audit demo
+- title: Tune and configure system settings
+  description: Set kernel and component tunables, SMT mode, inittab entries, timezone, system configuration
+    variables, and reboot machines.
+  components:
+    tunables: Tunables
+    tunfile_mgmt: Tunable files
+    smtctl: SMT mode
+    inittab: inittab entries
+    timezone_mgmt: Timezone
+    getconf: System configuration variables
+    reboot: Reboot
+    playbook:demo_tunables: Tunables demo
+    playbook:dynamic_tunables: Tunables demo (dynamic inventory)
+    playbook:demo_tunfile_mgmt: Tunable file demo
+    playbook:dynamic_tunfile_mgmt: Tunable file demo (dynamic inventory)
+    playbook:demo_inittab: inittab demo
+    playbook:demo_timezone_mgmt: Timezone demo
+    playbook:demo_getconf: System configuration demo
+    playbook:demo_reboot: Reboot demo
+- title: Monitor performance and diagnose problems
+  description: Collect CPU, memory, I/O, network, Fibre Channel and process statistics, report and clear
+    error log entries, gather LPAR facts and run snap.
+  components:
+    iostat: I/O statistics
+    vmstat: Virtual memory statistics
+    lparstat: LPAR statistics
+    lpar: LPAR facts
+    nmon: Health monitoring (nmon)
+    ps: Processes
+    entstat: Ethernet statistics
+    fcstat: Fibre Channel statistics
+    netstat: Network statistics
+    traceroute: Traceroute
+    errpt: Error log reports
+    errclear: Error log cleanup
+    snap: System snap data
+    playbook:demo_iostat: I/O statistics demo
+    playbook:demo_vmstat: Virtual memory statistics demo
+    playbook:demo_lparstat: LPAR statistics demo
+    playbook:demo_lpar_facts: LPAR facts demo
+    playbook:demo_nmon: nmon demo
+    playbook:demo_ps: Process demo
+    playbook:demo_entstat: Ethernet statistics demo
+    playbook:demo_fcstat: Fibre Channel statistics demo
+    playbook:demo_netstat: Network statistics demo
+    playbook:demo_traceroute: Traceroute demo
+    playbook:demo_errpt: Error log report demo
+    playbook:demo_errclear: Error log cleanup demo
+    playbook:demo_snap: Snap demo
+- title: Respond to AIX events with Event-Driven Ansible
+  description: Watch CPU, filesystem and file changes over SSH and new IBM FLRT security fixes, and react
+    through rulebooks.
+  components:
+    eda_event_source:aix_cpu_watch: CPU utilization event source
+    eda_event_source:aix_filesystem_watch: Filesystem utilization event source
+    eda_event_source:aix_file_watch: File change event source
+    eda_event_source:flrt_monitor: FLRT security fix event source
+    playbook:eda.demo_aix_cpu_watch: CPU watch rulebook demo
+    playbook:eda.demo_aix_filesystem_watch: Filesystem watch rulebook demo
+    playbook:eda.demo_aix_file_watch: File watch rulebook demo
+    playbook:eda.rulebook_flrt_monitor_basic: Basic FLRT monitoring
+    playbook:eda.rulebook_flrt_monitor_notification_only: FLRT notification only
+    playbook:eda.rulebook_flrt_monitor_severity_based: Severity-based FLRT monitoring

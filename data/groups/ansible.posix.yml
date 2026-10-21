@@ -1,0 +1,34 @@
+fqcn: ansible.posix
+product: POSIX and Linux systems
+use_cases:
+- title: Manage Linux system settings and security
+  description: Manage SELinux state, booleans, sysctl entries, firewalld, file ACLs, mounts and SSH authorized
+    keys.
+  components:
+    selinux: SELinux policy and state
+    seboolean: SELinux booleans
+    sysctl: Kernel parameters
+    firewalld: firewalld
+    acl: File ACLs
+    mount: Mount points
+    authorized_key: SSH authorized keys
+    at: Scheduled commands
+    rhel: RHEL facts
+- title: Update files and image-based systems
+  description: Copy files with rsync, apply patch files and manage packages and upgrades on rpm-ostree
+    systems.
+  components:
+    synchronize: rsync file synchronization
+    patch: Patch files
+    rhel_rpm_ostree: rpm-ostree packages
+    rpm_ostree_upgrade: rpm-ostree upgrades
+- title: Profile and format Ansible output
+  description: Show task and role timing, cgroup performance, timers and JSON or debug-formatted output.
+  components:
+    callback:profile_tasks: Task timing
+    callback:profile_roles: Role timing
+    callback:timer: Play timer
+    callback:cgroup_perf_recap: cgroup performance recap
+    callback:debug: Debug output
+    callback:json: JSON output
+    callback:jsonl: JSONL output

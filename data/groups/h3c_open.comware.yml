@@ -1,0 +1,106 @@
+fqcn: h3c_open.comware
+product: H3C Comware 7
+use_cases:
+- title: Configure interfaces, VLANs and Layer 2
+  description: Configure interface state, MTU and IP addressing, switchport and VLAN settings, port channels,
+    LACP, LLDP, STP and DLDP.
+  components:
+    interface: Interfaces
+    ipinterface: IP interfaces
+    mtu: MTU and jumbo frames
+    switchport: Switchport settings
+    vlan: VLANs
+    portchannel: Port channels (LAG)
+    lacp: LACP
+    lldp: LLDP timers
+    lldp_global: LLDP global settings
+    lldp_interface: LLDP interfaces
+    neighbors: LLDP neighbors
+    stp: Spanning tree
+    iface_stp: Interface spanning tree
+    dldp: DLDP
+    intfstate: Interface state check
+- title: Configure routing and VRFs
+  description: Configure BGP, OSPF and IS-IS routing and VPN instances.
+  components:
+    bgp_global: BGP global settings
+    bgp_af: BGP address families
+    bgp_group: BGP groups
+    ospf: OSPF
+    ospf_intf: OSPF interfaces
+    isis_global: IS-IS global settings
+    isis_interface: IS-IS interfaces
+    vpn_instance: VPN instances
+- title: Build VXLAN and EVPN fabrics
+  description: Configure EVPN, L2VPN, VSIs and VXLAN tunnels and mappings.
+  components:
+    evpn: EVPN
+    l2vpn_global: L2VPN global settings
+    vsi: VSIs
+    vsi_intf: VSI interfaces
+    vxlan: VXLAN mappings
+    vxlan_svc_instance: VXLAN service instances
+    vxlan_tunnel: VXLAN tunnels
+- title: Stack switches and provide gateway redundancy
+  description: Manage IRF stacking membership and ports, VRRP, and BFD failure detection.
+  components:
+    irf_members: IRF members
+    irf_ports: IRF ports
+    vrrp: VRRP
+    vrrp_global: VRRP global settings
+    bfd: BFD
+- title: Control access, authentication and users
+  description: Configure ACLs, AAA, RADIUS and HWTACACS schemes, local users, and FTP service.
+  components:
+    acl: ACLs
+    aaa: AAA
+    radius: RADIUS schemes
+    hwtacacs: HWTACACS schemes
+    local_user: Local users
+    ftp: FTP service
+- title: Configure multicast and time services
+  description: Configure IGMP multicast and NTP time synchronisation.
+  components:
+    igmp: IGMP
+    ntp: NTP
+- title: Monitor, log and collect telemetry
+  description: Configure SNMP, syslog and info-center logging, sFlow, NetStream and telemetry streaming,
+    and collect diagnostic logs.
+  components:
+    snmp_community: SNMP communities
+    snmp_group: SNMP groups
+    snmp_target_host: SNMP target hosts
+    snmp_user: SNMP users
+    syslog_global: Syslog global settings
+    log_source: Log output rules
+    loghost: Log hosts
+    log: Diagnostic log collection
+    sflow: sFlow
+    sflow_intf: sFlow interfaces
+    netstream: NetStream
+    tele_stream: Telemetry streaming
+    teleflowgroup_global: Telemetry flow groups
+    telemetryflowtrace: Telemetry flow trace
+    netconf: NETCONF service
+- title: Upgrade devices and manage configuration
+  description: Install OS images and patches, load licenses, set startup files, save, back up, compare
+    and roll back configuration, reboot or factory-reset devices.
+  components:
+    install_os: OS install
+    patch: Patches
+    license: Licenses
+    startup: Startup files
+    file_copy: File copy
+    save: Save configuration
+    config: Configuration backup
+    install_config: Install configuration
+    compare: Configuration compare
+    rollback: Configuration rollback
+    reboot: Reboot
+    clean_erase: Factory reset
+- title: Run commands and gather facts
+  description: Run CLI commands, gather device facts and test reachability with ping.
+  components:
+    command: CLI commands
+    facts: Facts
+    ping: Ping

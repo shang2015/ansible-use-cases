@@ -1,0 +1,114 @@
+fqcn: infoblox.nios_modules
+product: Infoblox NIOS
+notes:
+- Module names have the nios_ prefix omitted; sample playbooks are listed with the object they create,
+  update or delete.
+use_cases:
+- title: Manage DNS zones, views and name server groups
+  description: Create DNS views and zones, and define authoritative, delegation, forwarding, stub and
+    forward/stub name server groups.
+  components:
+    zone: DNS zones
+    dns_view: DNS views
+    nsgroup: Authoritative name server groups
+    nsgroup_delegation: Delegation groups
+    nsgroup_forwardingmember: Forwarding member groups
+    nsgroup_forwardstubserver: Forward/stub server groups
+    nsgroup_stubmember: Stub member groups
+    playbook:create_zone: Zone creation sample
+    playbook:delete_zone: Zone deletion sample
+    playbook:create_dns_view: DNS view creation sample
+    playbook:delete_dnsview: DNS view deletion sample
+    playbook:create_nsgroup_delegation: Delegation group sample
+    playbook:create_nsgroup_forwardingmember: Forwarding member group sample
+    playbook:create_nsgroup_forwardstubserver: Forward/stub server group sample
+    playbook:create_nsgroup_stubmember: Stub member group sample
+- title: Manage DNS records
+  description: Add, update and remove A, AAAA, CNAME, host, MX, NAPTR, PTR, SRV and TXT records.
+  components:
+    a_record: A records
+    aaaa_record: AAAA records
+    cname_record: CNAME records
+    host_record: Host records
+    mx_record: MX records
+    naptr_record: NAPTR records
+    ptr_record: PTR records
+    srv_record: SRV records
+    txt_record: TXT records
+    playbook:create_a_record: A record creation sample
+    playbook:update_a_record: A record update sample
+    playbook:delete_a_record_by_name: A record deletion by name sample
+    playbook:create_cname_record: CNAME record creation sample
+    playbook:delete_cname_record: CNAME record deletion sample
+    playbook:create_mx_record: MX record creation sample
+    playbook:delete_mx_record: MX record deletion sample
+    playbook:create_txt_record: TXT record creation sample
+    playbook:delete_txt_record: TXT record deletion sample
+    playbook:delete_host_record: Host record deletion sample
+    playbook:host_record_aliases_issue160: Host record alias idempotency sample
+    playbook:host_record_issue108: Host record duplicate-name sample
+    playbook:host_record_nextip_issue63: Host record next-IP allocation sample
+- title: 'Manage IPAM: networks, ranges, fixed addresses and VLANs'
+  description: Maintain network views, networks, DHCP ranges, fixed addresses, VLANs and extensible attributes.
+  components:
+    network_view: Network views
+    network: Networks
+    range: DHCP ranges
+    fixed_address: DHCP fixed addresses
+    vlan: VLANs
+    extensible_attribute: Extensible attributes
+    playbook:create_network: Network creation sample
+    playbook:delete_network: Network deletion sample
+    playbook:create_network_view: Network view creation sample
+    playbook:delete_network_view: Network view deletion sample
+    playbook:create_extensible_attribute: Extensible attribute sample
+    playbook:extattrs_inheritance: Extensible attribute inheritance sample
+- title: Manage DNS traffic control (DTC)
+  description: Define DTC servers, pools, LBDNs, topologies and HTTP, ICMP, PDP, SIP, SNMP and TCP health
+    monitors.
+  components:
+    dtc_server: DTC servers
+    dtc_pool: DTC pools
+    dtc_lbdn: DTC LBDNs
+    dtc_topology: DTC topologies
+    dtc_monitor_http: HTTP monitors
+    dtc_monitor_icmp: ICMP monitors
+    dtc_monitor_pdp: PDP monitors
+    dtc_monitor_sip: SIP monitors
+    dtc_monitor_snmp: SNMP monitors
+    dtc_monitor_tcp: TCP monitors
+    playbook:create_dtc_server: DTC server sample
+    playbook:nios_dtc_server_wapi_2_14_example: DTC server (WAPI 2.14) sample
+    playbook:create_dtc_pool: DTC pool sample
+    playbook:create_dtc_lbdn: DTC LBDN sample
+    playbook:create_dtc_topology: DTC topology creation sample
+    playbook:delete_dtc_topology: DTC topology deletion sample
+    playbook:create_dtc_monitor_http: HTTP monitor creation sample
+    playbook:delete_dtc_monitor_http: HTTP monitor deletion sample
+    playbook:create_dtc_monitor_icmp: ICMP monitor creation sample
+    playbook:delete_dtc_monitor_icmp: ICMP monitor deletion sample
+    playbook:create_dtc_monitor_pdp: PDP monitor creation sample
+    playbook:delete_dtc_monitor_pdp: PDP monitor deletion sample
+    playbook:create_dtc_monitor_sip: SIP monitor creation sample
+    playbook:delete_dtc_monitor_sip: SIP monitor deletion sample
+    playbook:create_dtc_monitor_snmp: SNMP monitor creation sample
+    playbook:delete_dtc_monitor_snmp: SNMP monitor deletion sample
+    playbook:create_dtc_monitor_tcp: TCP monitor creation sample
+    playbook:delete_dtc_monitor_tcp: TCP monitor deletion sample
+- title: Administer the Grid
+  description: Manage Grid members and admin users and restart Grid services.
+  components:
+    member: Grid members
+    adminuser: Admin users
+    restartservices: Service restarts
+    playbook:update_member: Member update sample
+    playbook:create_adminuser: Admin user sample
+    playbook:restart_services: Service restart sample
+- title: Query NIOS and allocate next-available resources
+  description: Use NIOS as dynamic inventory and look up objects, the next free IP, network or VLAN ID.
+  components:
+    inventory:nios_inventory: NIOS inventory
+    lookup:nios_lookup: Object lookup
+    lookup:nios_next_ip: Next available IP
+    lookup:nios_next_network: Next available network
+    lookup:nios_next_vlan_id: Next available VLAN ID

@@ -1,0 +1,54 @@
+fqcn: ansible.platform
+product: Ansible Automation Platform
+use_cases:
+- title: Manage organizations, users, teams and access
+  description: Create gateway organizations, users, teams, role definitions and role assignments, and
+    manage tokens and applications.
+  components:
+    organization: Organizations
+    team: Teams
+    user: Users
+    role_definition: Role definitions
+    role_user_assignment: User role assignments
+    role_team_assignment: Team role assignments
+    token: Tokens
+    application: Applications
+- title: Configure authentication
+  description: Configure authenticators, authenticator maps and user authenticators for platform sign-in.
+  components:
+    authenticator: Authenticators
+    authenticator_map: Authenticator maps
+    authenticator_user: User authenticators
+- title: Configure the gateway and its services
+  description: Configure gateway settings, services, nodes, clusters, routes, ports, certificates and
+    feature flags.
+  components:
+    settings: Gateway settings
+    feature_flag: Feature flags
+    service: Services
+    service_cluster: Service clusters
+    service_node: Service nodes
+    service_type: Service types
+    service_key: Service keys
+    route: Custom routes
+    ui_plugin_route: UI plugin routes
+    http_port: HTTP ports
+    ca_certificate: CA certificates
+- title: Manage automation controller content
+  description: Manage controller inventories, hosts, groups, job templates, labels, credential types and
+    instance groups, and list jobs.
+  components:
+    inventory_source: Inventory sources
+    host: Hosts
+    group: Inventory groups
+    job_template: Job templates
+    job: Jobs
+    label: Labels
+    controller_credential_type: Credential types
+    credential_input_source: Credential input sources
+    instance_group: Instance groups
+- title: Call the platform API
+  description: Query the platform API from playbooks and connect over HTTP.
+  components:
+    connection:http: HTTP connection
+    lookup:gateway_api: Gateway API lookup

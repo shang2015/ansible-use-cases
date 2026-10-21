@@ -1,0 +1,10 @@
+fqcn: f5networks.f5_eda_security
+product: "F5 BIG-IP"
+use_cases:
+- title: "Respond to threats on F5 BIG-IP"
+  description: "Switch ASM policy enforcement mode and update ASM policies with blocked IPs on BIG-IP classic and BIG-IP Next from Event-Driven Ansible."
+  components:
+    "playbook:bigip-classic.awaf-blocking": "Set blocking mode (classic)"
+    "playbook:bigip-classic.awaf-transparent": "Set transparent mode (classic)"
+    "playbook:bigip-classic.block-ips": "Block IPs (classic)"
+    "playbook:bigip-next.block-ips": "Block IPs (Next)"

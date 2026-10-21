@@ -1,0 +1,8 @@
+fqcn: redhat.quarkus
+product: "Quarkus"
+use_cases:
+- title: "Build and deploy Quarkus applications"
+  description: "Install and deploy a Quarkus application."
+  components:
+    "role:quarkus": "Quarkus application"
+    "playbook:playbook": "Build and deploy playbook"

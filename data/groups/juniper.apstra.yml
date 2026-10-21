@@ -1,0 +1,63 @@
+fqcn: juniper.apstra
+product: Juniper Apstra
+use_cases:
+- title: Design the fabric
+  description: Manage logical devices, rack types, templates, configlets, property sets, tags, interface
+    maps and resource pools used to design a data center fabric.
+  components:
+    design: Logical devices, rack types and templates
+    configlets: Configlets
+    property_set: Property sets
+    tag: Tags
+    interface_map: Interface maps
+    resource_pools: Resource pools
+    resource_group: Resource groups
+- title: Build and operate blueprints
+  description: Create and roll back blueprints, apply fabric settings and cabling, and collect configuration,
+    health and reports.
+  components:
+    blueprint: Blueprints
+    fabric_settings: Fabric settings
+    cabling_map: Cabling maps
+    rollback: Rollback and revisions
+    blueprint_config: Rendered configuration
+    blueprint_health: Anomalies and build errors
+    blueprint_report: Blueprint reports
+    iba_probes: Intent-based analytics probes
+- title: Provide tenant networking and connectivity
+  description: Manage security zones, virtual networks, connectivity templates, routing policies, external
+    gateways, interconnect gateways, floating IPs, generic systems and endpoint policies.
+  components:
+    security_zone: Security zones and tenants
+    virtual_network: Virtual networks
+    connectivity_template: Connectivity templates
+    connectivity_template_assignment: Connectivity template assignments
+    routing_policy: Routing policies
+    external_gateway: External EVPN gateways
+    interconnect_gateway: Interconnect domains and gateways
+    floating_ip: Floating IPs
+    generic_systems: Generic systems
+    endpoint_policy: Endpoint policies
+    virtual_infra_manager: Virtual infrastructure managers
+- title: Onboard and upgrade devices
+  description: Onboard devices with system agents and ZTP, manage devices, and upgrade device operating
+    systems.
+  components:
+    system_agents: System agents
+    ztp_config: ZTP configuration
+    ztp_device: ZTP devices
+    device_management: Device management
+    os_images: NOS images
+    os_upgrade: Device OS upgrades
+    upgrade_group: Upgrade groups
+- title: Administer the Apstra platform
+  description: Authenticate, manage users, roles, AAA servers, and IP allow and deny lists, and gather
+    facts.
+  components:
+    authenticate: Authentication
+    apstra: Apstra facts
+    rbac_user: RBAC users
+    rbac_roles: RBAC roles
+    aaa_server: AAA (RADIUS) servers
+    allowed: IP allow list
+    banned: IP deny list

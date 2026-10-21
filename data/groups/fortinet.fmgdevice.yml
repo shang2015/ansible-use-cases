@@ -1,0 +1,1568 @@
+fqcn: fortinet.fmgdevice
+product: Fortinet FortiGate (via FortiManager)
+notes:
+- Modules configure FortiGate settings through the FortiManager device database, per managed device and VDOM.
+use_cases:
+- title: Manage firewall policies and traffic shaping
+  description: Create IPv4, IPv6, proxy, local-in, multicast, DoS and interface policies, and traffic shapers, shaping
+    policies and profiles on managed FortiGates.
+  components:
+    firewall_authportal: Firewall authentication portals
+    firewall_dospolicy: IPv4 DoS policies
+    firewall_dospolicy6: IPv6 DoS policies
+    firewall_dospolicy6_anomaly: IPv6 DoS policies - anomaly
+    firewall_global: Global firewall settings
+    firewall_identitybasedroute: Identity based routing
+    firewall_identitybasedroute_rule: Identity based routing - rule
+    firewall_interfacepolicy: IPv4 interface policies
+    firewall_interfacepolicy6: IPv6 interface policies
+    firewall_ipv6ehfilter: IPv6 extension header filter
+    firewall_localinpolicy: User defined IPv4 local-in policies
+    firewall_localinpolicy6: User defined IPv6 local-in policies
+    firewall_multicastpolicy: Multicast NAT policies
+    firewall_multicastpolicy6: IPv6 multicast NAT policies
+    firewall_ondemandsniffer: On-demand packet sniffer
+    firewall_policy: IPv4 policies
+    firewall_policy_fabricpolicy: IPv4 policies - fabric policy
+    firewall_proxypolicy: Proxy policies
+    firewall_responseshapingpolicy: Firewall response shaping policy
+    firewall_securitypolicy: Security policies (policy package)
+    firewall_shaper_peripshaper: Per-IP traffic shaper
+    firewall_shaper_trafficshaper: Shared traffic shaper
+    firewall_shapingpolicy: Shaping policies
+    firewall_shapingprofile: Shaping profiles
+    firewall_shapingprofile_shapingentries: Shaping profiles - shaping entries
+    firewall_sniffer: Sniffer policies
+    firewall_sniffer_anomaly: Sniffer policies - anomaly
+    firewall_trafficclass: Traffic classes
+    firewall_ttlpolicy: TTL policies
+    system_dscpbasedpriority: DSCP based priority table
+    system_tosbasedpriority: ToS based priority table
+- title: Manage addresses, services, schedules and Internet Services
+  description: Define address and address-group objects, services, schedules, Internet Service entries, GeoIP and
+    external resources used by policies.
+  components:
+    firewall_address: IPv4 addresses
+    firewall_address6: IPv6 firewall addresses
+    firewall_address6_subnetsegment: IPv6 firewall addresses - subnet segment
+    firewall_address6_tagging: IPv6 firewall addresses - tagging
+    firewall_address6template: IPv6 address templates
+    firewall_address6template_subnetsegment: IPv6 address templates - subnet segment
+    firewall_address6template_subnetsegment_values: IPv6 address templates - subnet segment - values
+    firewall_address_tagging: IPv4 addresses - tagging
+    firewall_addrgrp: IPv4 address groups
+    firewall_addrgrp6: IPv6 address groups
+    firewall_addrgrp6_tagging: IPv6 address groups - tagging
+    firewall_addrgrp_tagging: IPv4 address groups - tagging
+    firewall_customtag: Custom tag table
+    firewall_dnstranslation: DNS translation
+    firewall_internetservice: Internet Service application
+    firewall_internetserviceaddition: Internet Services Addition
+    firewall_internetserviceaddition_entry: Internet Services Addition - entry
+    firewall_internetserviceaddition_entry_portrange: Internet Services Addition - entry - port range
+    firewall_internetserviceappend: Additional port mappings for Internet Services
+    firewall_internetservicecustom: Custom Internet Services
+    firewall_internetservicecustom_entry: Custom Internet Services - entry
+    firewall_internetservicecustomgroup: Custom Internet Service group
+    firewall_internetservicedefinition: Internet Service definition
+    firewall_internetservicedefinition_entry: Internet Service definition - entry
+    firewall_internetservicedefinition_entry_portrange: Internet Service definition - entry - port range
+    firewall_internetserviceextension: Internet Services Extension
+    firewall_internetserviceextension_disableentry: Internet Services Extension - disable entry
+    firewall_internetserviceextension_disableentry_ip6range: Internet Services Extension - disable entry - IPv6
+      range
+    firewall_internetserviceextension_disableentry_iprange: Internet Services Extension - disable entry - IP range
+    firewall_internetserviceextension_disableentry_portrange: Internet Services Extension - disable entry - port
+      range
+    firewall_internetserviceextension_entry: Internet Services Extension - entry
+    firewall_internetserviceextension_entry_portrange: Internet Services Extension - entry - port range
+    firewall_internetservicegroup: Group of Internet Service
+    firewall_internetservicename: Internet service names
+    firewall_ipmacbinding_setting: IP to MAC binding settings
+    firewall_ipmacbinding_table: IP MAC binding table
+    firewall_multicastaddress: Multicast addresses
+    firewall_multicastaddress6: IPv6 multicast address
+    firewall_multicastaddress6_tagging: IPv6 multicast address - tagging
+    firewall_multicastaddress_tagging: Multicast addresses - tagging
+    firewall_networkservicedynamic: Dynamic Network Services
+    firewall_proxyaddress: Web proxy address
+    firewall_proxyaddress6: Web proxy address (IPv6)
+    firewall_proxyaddress6_headergroup: Web proxy address (IPv6) - header group
+    firewall_proxyaddress6_tagging: Web proxy address (IPv6) - tagging
+    firewall_proxyaddress_headergroup: Web proxy address - header group
+    firewall_proxyaddress_tagging: Web proxy address - tagging
+    firewall_proxyaddrgrp: Web proxy address group
+    firewall_proxyaddrgrp6: Web proxy address group (IPv6)
+    firewall_proxyaddrgrp6_tagging: Web proxy address group (IPv6) - tagging
+    firewall_proxyaddrgrp_tagging: Web proxy address group - tagging
+    firewall_schedule_group: Schedule group configuration
+    firewall_schedule_onetime: Onetime schedule configuration
+    firewall_schedule_recurring: Recurring schedule configuration
+    firewall_service_category: Service categories
+    firewall_service_custom: Custom services
+    firewall_service_group: Service groups
+    firewall_vendormac: Vendor and the MAC address they have
+    firewall_wildcardfqdn_custom: Config global/VDOM Wildcard FQDN address
+    firewall_wildcardfqdn_group: Config global Wildcard FQDN address groups
+    system_externalresource: External resource
+    system_geoipcountry: Device system geoip country
+    system_geoipoverride: Geographical location mapping for IP address
+    system_geoipoverride_ip6range: Geographical location mapping for IP address - IPv6 range
+    system_geoipoverride_iprange: Geographical location mapping for IP address - IP range
+    system_objecttag: Object tags
+    system_objecttagging: Object tagging
+- title: Configure NAT, virtual IPs and IP pools
+  description: Configure virtual IPs and groups, IP pools, central SNAT maps, IP translation, NAT64 and load-balancing
+    health monitors.
+  components:
+    firewall_centralsnatmap: IPv4 and IPv6 central SNAT policies
+    firewall_ippool: IPv4 IP pools
+    firewall_ippool6: IPv6 IP pools
+    firewall_iptranslation: IP translation
+    firewall_ldbmonitor: Server load balancing health monitors
+    firewall_vip: Virtual IP for IPv4
+    firewall_vip6: Virtual IP for IPv6
+    firewall_vip6_quic: Virtual IP for IPv6 - quic
+    firewall_vip6_realservers: Virtual IP for IPv6 - real servers
+    firewall_vip6_sslciphersuites: Virtual IP for IPv6 - SSL cipher suites
+    firewall_vip6_sslserverciphersuites: Virtual IP for IPv6 - SSL server cipher suites
+    firewall_vip_gslbpublicips: Virtual IP for IPv4 - GSLB public IPS
+    firewall_vip_quic: Virtual IP for IPv4 - quic
+    firewall_vip_realservers: Virtual IP for IPv4 - real servers
+    firewall_vip_sslciphersuites: Virtual IP for IPv4 - SSL cipher suites
+    firewall_vip_sslserverciphersuites: Virtual IP for IPv4 - SSL server cipher suites
+    firewall_vipgrp: IPv4 virtual IP groups
+    firewall_vipgrp6: IPv6 virtual IP groups
+    system_nat64: NAT64 settings
+    system_nat64_secondaryprefix: NAT64 settings - secondary prefix
+    system_pcpserver: PCP server information
+    system_pcpserver_pools: PCP server information - pools
+- title: Configure SSL/SSH inspection and protocol options
+  description: Set up SSL/SSH inspection profiles, protocol options, SSL servers and profile groups that security
+    policies reference.
+  components:
+    firewall_profilegroup: Profile groups
+    firewall_profileprotocoloptions: Protocol options
+    firewall_profileprotocoloptions_cifs: Protocol options - CIFS
+    firewall_profileprotocoloptions_cifs_serverkeytab: Protocol options - CIFS - server keytab
+    firewall_profileprotocoloptions_dns: Protocol options - DNS
+    firewall_profileprotocoloptions_ftp: Protocol options - FTP
+    firewall_profileprotocoloptions_http: Protocol options - HTTP
+    firewall_profileprotocoloptions_imap: Protocol options - IMAP
+    firewall_profileprotocoloptions_mailsignature: Protocol options - mail signature
+    firewall_profileprotocoloptions_mapi: Protocol options - MAPI
+    firewall_profileprotocoloptions_nntp: Protocol options - NNTP
+    firewall_profileprotocoloptions_pop3: Protocol options - POP3
+    firewall_profileprotocoloptions_smtp: Protocol options - SMTP
+    firewall_profileprotocoloptions_ssh: Protocol options - SSH
+    firewall_profileprotocoloptions_websocket: Protocol options - websocket
+    firewall_ssh_hostkey: SSH proxy host public keys
+    firewall_ssh_localca: SSH proxy local CA
+    firewall_ssh_localkey: SSH proxy local keys
+    firewall_ssh_setting: SSH proxy settings
+    firewall_ssl_defaultcertificate: SSL default certificate
+    firewall_ssl_keyringlist: SSL keyring list
+    firewall_ssl_setting: SSL proxy settings
+    firewall_sslserver: SSL servers
+    firewall_sslsshprofile: SSL/SSH protocol options
+    firewall_sslsshprofile_dot: SSL/SSH protocol options - DoT
+    firewall_sslsshprofile_echoutersni: SSL/SSH protocol options - echoutersni
+    firewall_sslsshprofile_ftps: SSL/SSH protocol options - FTPS
+    firewall_sslsshprofile_https: SSL/SSH protocol options - HTTPS
+    firewall_sslsshprofile_imaps: SSL/SSH protocol options - IMAPS
+    firewall_sslsshprofile_pop3s: SSL/SSH protocol options - POP3S
+    firewall_sslsshprofile_smtps: SSL/SSH protocol options - SMTPS
+    firewall_sslsshprofile_ssh: SSL/SSH protocol options - SSH
+    firewall_sslsshprofile_ssl: SSL/SSH protocol options - SSL
+    firewall_sslsshprofile_sslclientcertificate: SSL/SSH protocol options - SSL client certificate
+    firewall_sslsshprofile_sslexempt: SSL/SSH protocol options - SSL exempt
+    firewall_sslsshprofile_sslserver: SSL/SSH protocol options - SSL server
+- title: Publish applications with ZTNA and access proxy
+  description: Configure access proxies and virtual hosts, ZTNA servers, tags, traffic forwarding and web portals
+    for zero-trust application access.
+  components:
+    firewall_accessproxy: IPv4 access proxy
+    firewall_accessproxy6: IPv6 access proxy
+    firewall_accessproxy6_apigateway: IPv6 access proxy - API gateway
+    firewall_accessproxy6_apigateway6: IPv6 access proxy - API gateway (IPv6)
+    firewall_accessproxy6_apigateway6_realservers: IPv6 access proxy - API gateway (IPv6) - real servers
+    firewall_accessproxy6_apigateway6_sslciphersuites: IPv6 access proxy - API gateway (IPv6) - SSL cipher suites
+    firewall_accessproxy6_apigateway_quic: IPv6 access proxy - API gateway - quic
+    firewall_accessproxy6_apigateway_realservers: IPv6 access proxy - API gateway - real servers
+    firewall_accessproxy6_apigateway_sslciphersuites: IPv6 access proxy - API gateway - SSL cipher suites
+    firewall_accessproxy_apigateway: IPv4 access proxy - API gateway
+    firewall_accessproxy_apigateway6: IPv4 access proxy - API gateway (IPv6)
+    firewall_accessproxy_apigateway6_quic: IPv4 access proxy - API gateway (IPv6) - quic
+    firewall_accessproxy_apigateway6_realservers: IPv4 access proxy - API gateway (IPv6) - real servers
+    firewall_accessproxy_apigateway6_sslciphersuites: IPv4 access proxy - API gateway (IPv6) - SSL cipher suites
+    firewall_accessproxy_apigateway_quic: IPv4 access proxy - API gateway - quic
+    firewall_accessproxy_apigateway_realservers: IPv4 access proxy - API gateway - real servers
+    firewall_accessproxy_apigateway_sslciphersuites: IPv4 access proxy - API gateway - SSL cipher suites
+    firewall_accessproxysshclientcert: Access Proxy SSH client certificate
+    firewall_accessproxysshclientcert_certextension: Access Proxy SSH client certificate - certextension
+    firewall_accessproxyvirtualhost: Access Proxy virtual hosts
+    ztna_connectoredge: ZTNA connector edge
+    ztna_connectorserviceedge: ZTNA connector service edge
+    ztna_destination: ZTNA destination
+    ztna_reverseconnector: ZTNA Reverse-Connector
+    ztna_serviceconnector: ZTNA service connector
+    ztna_trafficforwardproxy: ZTNA traffic forward proxy
+    ztna_trafficforwardproxy_quic: ZTNA traffic forward proxy - quic
+    ztna_trafficforwardproxy_sslciphersuites: ZTNA traffic forward proxy - SSL cipher suites
+    ztna_trafficforwardproxy_sslserverciphersuites: ZTNA traffic forward proxy - SSL server cipher suites
+    ztna_trafficforwardproxyreverseservice: ZTNA traffic forward proxy reverse service
+    ztna_trafficforwardproxyreverseservice_remoteservers: ZTNA traffic forward proxy reverse service - remote servers
+    ztna_webportal: ZTNA web-portal
+    ztna_webportalbookmark: ZTNA web-portal bookmark
+    ztna_webportalbookmark_bookmarks: ZTNA web-portal bookmark - bookmarks
+    ztna_webportalbookmark_llmsecureproxy: ZTNA web-portal bookmark - LLM secure proxy
+    ztna_webproxy: ZTNA web-proxy
+    ztna_webproxy_apigateway: ZTNA web-proxy - API gateway
+    ztna_webproxy_apigateway6: ZTNA web-proxy - API gateway (IPv6)
+    ztna_webproxy_apigateway6_quic: ZTNA web-proxy - API gateway (IPv6) - quic
+    ztna_webproxy_apigateway6_realservers: ZTNA web-proxy - API gateway (IPv6) - real servers
+    ztna_webproxy_apigateway6_sslciphersuites: ZTNA web-proxy - API gateway (IPv6) - SSL cipher suites
+    ztna_webproxy_apigateway_quic: ZTNA web-proxy - API gateway - quic
+    ztna_webproxy_apigateway_realservers: ZTNA web-proxy - API gateway - real servers
+    ztna_webproxy_apigateway_sslciphersuites: ZTNA web-proxy - API gateway - SSL cipher suites
+- title: Block malware and intrusions
+  description: Configure antivirus profiles and quarantine, IPS sensors, signatures and virtual patching.
+  components:
+    antivirus_exemptlist: Antivirus exempt lists
+    antivirus_heuristic: Antivirus heuristics
+    antivirus_profile: Antivirus profiles
+    antivirus_profile_cifs: Antivirus profiles - CIFS
+    antivirus_profile_ftp: Antivirus profiles - FTP
+    antivirus_profile_http: Antivirus profiles - HTTP
+    antivirus_profile_imap: Antivirus profiles - IMAP
+    antivirus_profile_nacquar: Antivirus profiles - nacquar
+    antivirus_profile_nntp: Antivirus profiles - NNTP
+    antivirus_profile_pop3: Antivirus profiles - POP3
+    antivirus_profile_smtp: Antivirus profiles - SMTP
+    antivirus_profile_websocket: Antivirus profiles - websocket
+    antivirus_quarantine: Antivirus quarantine options
+    antivirus_settings: Antivirus settings
+    ips_custom: IPS custom signatures
+    ips_decoder: IPS decoders
+    ips_decoder_parameter: IPS decoders - parameter
+    ips_global: IPS global settings
+    ips_rule: IPS rules
+    ips_rulesettings: IPS rule settings
+    ips_sensor: IPS sensors
+    ips_sensor_entries: IPS sensors - entries
+    ips_sensor_entries_exemptip: IPS sensors - entries - exempt IP
+    ips_settings: IPS VDOM settings
+    ips_tlsactiveprobe: IPS TLS active probe
+    rule_fmwp: FMWP signatures
+    rule_otdt: OT detection signatures
+    rule_otvp: OT patch signatures
+    system_ips: IPS system settings
+    virtualpatch_profile: Virtual-patch profile
+    virtualpatch_profile_exemption: Virtual-patch profile - exemption
+- title: Control applications and SaaS usage
+  description: Configure application control lists, custom signatures and categories, and CASB SaaS applications,
+    profiles and user activities.
+  components:
+    application: Application control lists
+    application_categories: Application categories
+    application_classificationsettings: App classification setting
+    application_custom: Custom application signatures
+    application_group: Application groups
+    application_list_defaultnetworkservices: Default network service entries
+    application_list_entries: Application list entries
+    application_name: Application signatures
+    application_rulesettings: Application rule settings
+    application_unsanctionedapps: Unsanctioned applications
+    casb_attributematch: CASB attribute matching
+    casb_attributematch_attribute: CASB attribute matching - attribute
+    casb_attributematch_match: CASB attribute matching - match
+    casb_attributematch_match_rule: CASB attribute matching - match - rule
+    casb_profile: CASB profile
+    casb_profile_saasapplication: CASB profile - saas application
+    casb_profile_saasapplication_accessrule: CASB profile - saas application - access rule
+    casb_profile_saasapplication_accessrule_attributefilter: CASB profile - saas application - access rule - attribute
+      filter
+    casb_profile_saasapplication_advancedtenantcontrol: CASB profile - saas application - advanced tenant control
+    casb_profile_saasapplication_advancedtenantcontrol_attribute: CASB profile - saas application - advanced tenant
+      control - attribute
+    casb_profile_saasapplication_customcontrol: CASB profile - saas application - custom control
+    casb_profile_saasapplication_customcontrol_attributefilter: CASB profile - saas application - custom control
+      - attribute filter
+    casb_profile_saasapplication_customcontrol_option: CASB profile - saas application - custom control - option
+    casb_saasapplication: CASB SaaS applications
+    casb_saasapplication_inputattributes: CASB SaaS applications - input attributes
+    casb_saasapplication_outputattributes: CASB SaaS applications - output attributes
+    casb_useractivity: CASB user activity
+    casb_useractivity_match: CASB user activity - match
+    casb_useractivity_match_rules: CASB user activity - match - rules
+    casb_useractivity_match_tenantextraction: CASB user activity - match - tenant extraction
+    casb_useractivity_match_tenantextraction_filters: CASB user activity - match - tenant extraction - filters
+    casb_useractivity_match_tenantsessionextraction: CASB user activity - match - tenant session extraction
+    casb_useractivity_match_tenantsessionextraction_filters: CASB user activity - match - tenant session extraction
+      - filters
+- title: Filter web, DNS, email and files and prevent data loss
+  description: Configure web, DNS, video, email and file filters, DLP sensors, ICAP offload, image analysis and
+    browser isolation.
+  components:
+    dlp_datatype: DLP data types
+    dlp_dictionary: DLP dictionaries
+    dlp_dictionary_entries: DLP dictionaries - entries
+    dlp_exactdatamatch: DLP exact data match templates
+    dlp_exactdatamatch_columns: DLP exact data match templates - columns
+    dlp_filepattern: DLP file patterns
+    dlp_filepattern_entries: DLP file patterns - entries
+    dlp_fpdocsource: DLP fingerprint document sources
+    dlp_label: DLP labels
+    dlp_label_entries: DLP labels - entries
+    dlp_profile: DLP profiles
+    dlp_profile_rule: DLP profiles - rule
+    dlp_sensor: DLP sensors
+    dlp_sensor_entries: DLP sensors - entries
+    dlp_settings: DLP settings
+    dlp_settings_ocr: DLP settings - OCR
+    dnsfilter_domainfilter: DNS domain filters
+    dnsfilter_domainfilter_entries: DNS domain filters - entries
+    dnsfilter_profile: DNS domain filter profile
+    dnsfilter_profile_dnstranslation: DNS domain filter profile - DNS translation
+    dnsfilter_profile_domainfilter: DNS domain filter profile - domain filter
+    dnsfilter_profile_ftgddns: DNS domain filter profile - ftgddns
+    dnsfilter_profile_ftgddns_filters: DNS domain filter profile - ftgddns - filters
+    emailfilter_blockallowlist: Anti-spam block/allow list
+    emailfilter_blockallowlist_entries: Anti-spam block/allow list - entries
+    emailfilter_bword: AntiSpam banned word list
+    emailfilter_bword_entries: AntiSpam banned word list - entries
+    emailfilter_dnsbl: AntiSpam DNSBL/ORBL
+    emailfilter_dnsbl_entries: AntiSpam DNSBL/ORBL - entries
+    emailfilter_fortiguard: Email filter FortiGuard settings
+    emailfilter_fortishield: Email filter FortiShield settings
+    emailfilter_iptrust: AntiSpam IP trust
+    emailfilter_iptrust_entries: AntiSpam IP trust - entries
+    emailfilter_mheader: AntiSpam MIME header
+    emailfilter_mheader_entries: AntiSpam MIME header - entries
+    emailfilter_options: AntiSpam options
+    emailfilter_profile: Email Filter profiles
+    emailfilter_profile_gmail: Email Filter profiles - gmail
+    emailfilter_profile_imap: Email Filter profiles - IMAP
+    emailfilter_profile_msnhotmail: Email Filter profiles - msn hotmail
+    emailfilter_profile_pop3: Email Filter profiles - POP3
+    emailfilter_profile_smtp: Email Filter profiles - SMTP
+    filefilter_profile: File-filter profiles
+    filefilter_profile_rules: File-filter profiles - rules
+    icap_localserver: ICAP local servers
+    icap_localserver_icapservice: ICAP local servers - ICAP service
+    icap_profile: ICAP profiles
+    icap_profile_icapheaders: ICAP profiles - ICAP headers
+    icap_remoteserver: ICAP remote servers
+    icap_remoteservergroup: ICAP remote server groups
+    icap_remoteservergroup_serverlist: ICAP remote server groups - server list
+    icap_server: ICAP servers
+    icap_servergroup: ICAP server groups
+    icap_servergroup_serverlist: ICAP server groups - server list
+    imageanalyzer_profile: Image analyzer profile
+    isolator_profile: Isolator profile
+    isolator_profile_entries: Isolator profile - entries
+    isolator_setting: Isolator setting
+    videofilter_keyword: Video filter keywords
+    videofilter_keyword_word: Video filter keywords - word
+    videofilter_profile: VideoFilter profile
+    videofilter_profile_filters: VideoFilter profile - filters
+    videofilter_profile_fortiguardcategory_filters: VideoFilter profile - FortiGuard category filters
+    videofilter_youtubekey: YouTube API keys
+    webfilter_content: Web filter banned word tables
+    webfilter_content_entries: Web filter banned word tables - entries
+    webfilter_contentheader: Web filter content types
+    webfilter_contentheader_entries: Web filter content types - entries
+    webfilter_domainlist: Web filter domain lists
+    webfilter_domainlist_entries: Web filter domain lists - entries
+    webfilter_fortiguard: FortiGuard Web Filter service
+    webfilter_ftgdlocalcat: FortiGuard Web Filter local categories
+    webfilter_ftgdlocalrating: FortiGuard local ratings
+    webfilter_ftgdlocalrisk: FortiGuard Web Filter local risk score
+    webfilter_ftgdrisklevel: FortiGuard Web Filter risk level
+    webfilter_ipsurlfiltercachesetting: IPS URL filter cache settings
+    webfilter_ipsurlfiltersetting: IPS URL filter settings
+    webfilter_ipsurlfiltersetting6: IPS URL filter settings for IPv6
+    webfilter_override: Web filter overrides
+    webfilter_profile: Web filter profiles
+    webfilter_profile_antiphish_custompatterns: Web filter profiles - antiphish custom patterns
+    webfilter_profile_antiphish_inspectionentries: Web filter profiles - antiphish inspection entries
+    webfilter_profile_ftgdwf: Web filter profiles - ftgdwf
+    webfilter_profile_ftgdwf_filters: Web filter profiles - ftgdwf - filters
+    webfilter_profile_ftgdwf_quota: Web filter profiles - ftgdwf - quota
+    webfilter_profile_ftgdwf_risk: Web filter profiles - ftgdwf - risk
+    webfilter_profile_override: Web filter profiles - override
+    webfilter_profile_web: Web filter profiles - web
+    webfilter_searchengine: Web filter search engines
+    webfilter_urlfilter: Web filter URL filters
+    webfilter_urlfilter_entries: Web filter URL filters - entries
+    webfilter_urllist: Web filter URL lists
+    webfilter_urllist_entries: Web filter URL lists - entries
+- title: Protect web applications and LLM traffic
+  description: Configure web application firewall profiles and signatures, and LLM proxy servers and profiles.
+  components:
+    llm_profile: LLM Proxy profiles
+    llm_profile_chat: LLM Proxy profiles - chat
+    llm_profile_imagegen: LLM Proxy profiles - imagegen
+    llm_profile_listmodels: LLM Proxy profiles - list models
+    llm_profile_response: LLM Proxy profiles - response
+    llm_proxy: LLM Proxy
+    llm_server: LLM Proxy servers
+    waf_mainclass: WAF signature main classes
+    waf_profile: Web application firewall (WAF) profiles
+    waf_profile_addresslist: Web application firewall (WAF) profiles - address list
+    waf_profile_constraint: Web application firewall (WAF) profiles - constraint
+    waf_profile_constraint_contentlength: Web application firewall (WAF) profiles - constraint - content length
+    waf_profile_constraint_exception: Web application firewall (WAF) profiles - constraint - exception
+    waf_profile_constraint_headerlength: Web application firewall (WAF) profiles - constraint - header length
+    waf_profile_constraint_hostname: Web application firewall (WAF) profiles - constraint - hostname
+    waf_profile_constraint_linelength: Web application firewall (WAF) profiles - constraint - line length
+    waf_profile_constraint_malformed: Web application firewall (WAF) profiles - constraint - malformed
+    waf_profile_constraint_maxcookie: Web application firewall (WAF) profiles - constraint - maxcookie
+    waf_profile_constraint_maxheaderline: Web application firewall (WAF) profiles - constraint - max header line
+    waf_profile_constraint_maxrangesegment: Web application firewall (WAF) profiles - constraint - max range segment
+    waf_profile_constraint_maxurlparam: Web application firewall (WAF) profiles - constraint - max URL param
+    waf_profile_constraint_method: Web application firewall (WAF) profiles - constraint - method
+    waf_profile_constraint_paramlength: Web application firewall (WAF) profiles - constraint - param length
+    waf_profile_constraint_urlparamlength: Web application firewall (WAF) profiles - constraint - URL param length
+    waf_profile_constraint_version: Web application firewall (WAF) profiles - constraint - version
+    waf_profile_method: Web application firewall (WAF) profiles - method
+    waf_profile_method_methodpolicy: Web application firewall (WAF) profiles - method - method policy
+    waf_profile_signature: Web application firewall (WAF) profiles - signature
+    waf_profile_signature_customsignature: Web application firewall (WAF) profiles - signature - custom signature
+    waf_profile_signature_mainclass: Web application firewall (WAF) profiles - signature - main class
+    waf_profile_urlaccess: Web application firewall (WAF) profiles - URL access
+    waf_profile_urlaccess_accesspattern: Web application firewall (WAF) profiles - URL access - access pattern
+    waf_signature: WAF signatures
+    waf_subclass: WAF signature subclasses
+- title: Configure proxies, WAN optimization and protocol security
+  description: Configure explicit web and FTP proxies, WAN optimization, web caching, and VoIP, GTP, PFCP, SCTP,
+    SSH and Diameter protocol filters.
+  components:
+    diameterfilter_profile: Diameter filter profiles
+    firewall_pfcp: PFCP firewall settings
+    ftpproxy_explicit: Explicit FTP proxy settings
+    gtp_apnshaper: Global per-APN shaper
+    gtp_ieallowlist: IE allow list
+    gtp_ieallowlist_entries: IE allow list - entries
+    gtp_rattimeoutprofile: RAT timeout profile
+    pfcp_messagefilter: Message filter for PFCP messages
+    sctpfilter_profile: SCTP filter profiles
+    sctpfilter_profile_ppidfilters: SCTP filter profiles - ppid filters
+    sshfilter_profile: SSH filter profile
+    sshfilter_profile_shellcommands: SSH filter profile - shellcommands
+    voip_profile: VoIP profiles
+    voip_profile_msrp: VoIP profiles - MSRP
+    voip_profile_sccp: VoIP profiles - SCCP
+    voip_profile_sip: VoIP profiles - SIP
+    wanopt_authgroup: WAN optimization authentication groups
+    wanopt_cacheservice: WAN optimization cache services
+    wanopt_cacheservice_dstpeer: WAN optimization cache services - dstpeer
+    wanopt_cacheservice_srcpeer: WAN optimization cache services - srcpeer
+    wanopt_contentdeliverynetworkrule: WAN optimization content delivery network rules
+    wanopt_contentdeliverynetworkrule_rules: WAN optimization content delivery network rules - rules
+    wanopt_contentdeliverynetworkrule_rules_contentid: WAN optimization content delivery network rules - rules -
+      content ID
+    wanopt_contentdeliverynetworkrule_rules_matchentries: WAN optimization content delivery network rules - rules
+      - match entries
+    wanopt_contentdeliverynetworkrule_rules_skipentries: WAN optimization content delivery network rules - rules
+      - skip entries
+    wanopt_peer: WAN optimization peers
+    wanopt_profile: WAN optimization profiles
+    wanopt_profile_cifs: WAN optimization profiles - CIFS
+    wanopt_profile_ftp: WAN optimization profiles - FTP
+    wanopt_profile_http: WAN optimization profiles - HTTP
+    wanopt_profile_mapi: WAN optimization profiles - MAPI
+    wanopt_profile_tcp: WAN optimization profiles - TCP
+    wanopt_remotestorage: Remote cache storage devices
+    wanopt_settings: WAN optimization settings
+    wanopt_webcache: Global web cache settings
+    webcache_prefetch: Webcache prefetch
+    webcache_reversecacheserver: Webcache reverse cache server
+    webcache_settings: Webcache settings
+    webcache_useragent: Webcache user agent
+    webproxy_debugurl: Debug URL addresses
+    webproxy_dynamicbypass: Web proxy dynamic bypass
+    webproxy_explicit: Explicit web proxy settings
+    webproxy_explicit_pacpolicy: Explicit web proxy settings - pac policy
+    webproxy_explicitproxy: Explicit web proxy (legacy table)
+    webproxy_fastfallback: Proxy destination connection fast-fallback
+    webproxy_forwardserver: Web proxy forward servers
+    webproxy_forwardservergroup: Forward server group
+    webproxy_forwardservergroup_serverlist: Forward server group - server list
+    webproxy_global: Web proxy global settings
+    webproxy_implicitproxyrule: Web proxy implicit proxy rule
+    webproxy_implicitproxyrule_proxyservers: Web proxy implicit proxy rule - proxy servers
+    webproxy_implicitproxysetting: Web proxy implicit proxy setting
+    webproxy_isolatorserver: Web proxy isolator servers
+    webproxy_pacpolicy: Web proxy pac policy
+    webproxy_profile: Web proxy profiles
+    webproxy_profile_headers: Web proxy profiles - headers
+    webproxy_redirectprofile: Web proxy redirect profile
+    webproxy_redirectprofile_entries: Web proxy redirect profile - entries
+    webproxy_urllist: Web proxy URL list
+    webproxy_urllist_entries: Web proxy URL list - entries
+    webproxy_urlmatch: URL match
+    webproxy_wisp: Websense WISP servers
+- title: Configure static routes, policy routes and route filters
+  description: Configure static and policy routes, access, prefix, AS-path and community lists, route maps, key
+    chains and global routing settings.
+  components:
+    router_accesslist: Access lists
+    router_accesslist6: IPv6 access lists
+    router_accesslist6_rule: IPv6 access lists - rule
+    router_accesslist_rule: Access lists - rule
+    router_aspathlist: AS path lists
+    router_aspathlist_rule: AS path lists - rule
+    router_authpath: Authentication based routing
+    router_communitylist: Community lists
+    router_communitylist_rule: Community lists - rule
+    router_extcommunitylist: Extended community lists
+    router_extcommunitylist_rule: Extended community lists - rule
+    router_keychain: Key chains
+    router_keychain_key: Key chains - key
+    router_policy: IPv4 routing policies
+    router_policy6: IPv6 routing policies
+    router_prefixlist: IPv4 prefix lists
+    router_prefixlist6: IPv6 prefix lists
+    router_prefixlist6_rule: IPv6 prefix lists - rule
+    router_prefixlist_rule: IPv4 prefix lists - rule
+    router_routemap: Route maps
+    router_routemap_rule: Route maps - rule
+    router_setting: Router settings
+    router_static: IPv4 static routing tables
+    router_static6: IPv6 static routing tables
+- title: Configure BGP and BFD
+  description: Configure BGP neighbors, groups, networks and redistribution, and BFD for IPv4 and IPv6.
+  components:
+    router_bfd: BFD
+    router_bfd6: IPv6 BFD
+    router_bfd6_multihoptemplate: IPv6 BFD - multi hop template
+    router_bfd6_neighbor: IPv6 BFD - neighbor
+    router_bfd_multihoptemplate: BFD - multi hop template
+    router_bfd_neighbor: BFD - neighbor
+    router_bgp: BGP
+    router_bgp_admindistance: BGP - admin distance
+    router_bgp_aggregateaddress: BGP - aggregate address
+    router_bgp_aggregateaddress6: BGP - aggregate address (IPv6)
+    router_bgp_neighbor: BGP - neighbor
+    router_bgp_neighbor_conditionaladvertise: BGP - neighbor - conditional advertise
+    router_bgp_neighbor_conditionaladvertise6: BGP - neighbor - conditional advertise (IPv6)
+    router_bgp_neighborgroup: BGP - neighbor group
+    router_bgp_neighborrange: BGP - neighbor range
+    router_bgp_neighborrange6: BGP - neighbor range (IPv6)
+    router_bgp_network: BGP - network
+    router_bgp_network6: BGP - network (IPv6)
+    router_bgp_redistribute: BGP - redistribute
+    router_bgp_redistribute6: BGP - redistribute (IPv6)
+    router_bgp_vrf: BGP - vrf
+    router_bgp_vrf6: BGP - vrf (IPv6)
+    router_bgp_vrf6_leaktarget: BGP - vrf (IPv6) - leak target
+    router_bgp_vrf_leaktarget: BGP - vrf - leak target
+    router_bgp_vrfleak: BGP - vrf leak
+    router_bgp_vrfleak6: BGP - vrf leak (IPv6)
+    router_bgp_vrfleak6_target: BGP - vrf leak (IPv6) - target
+    router_bgp_vrfleak_target: BGP - vrf leak - target
+- title: Configure OSPF, RIP, IS-IS and multicast routing
+  description: Configure OSPF and OSPFv3, RIP and RIPng, IS-IS, and PIM and multicast flow routing.
+  components:
+    router_isis: IS-IS
+    router_isis_isisinterface: IS-IS - IS-IS interface
+    router_isis_isisnet: IS-IS - IS-IS net
+    router_isis_redistribute: IS-IS - redistribute
+    router_isis_redistribute6: IS-IS - redistribute (IPv6)
+    router_isis_summaryaddress: IS-IS - summary address
+    router_isis_summaryaddress6: IS-IS - summary address (IPv6)
+    router_multicast: Router multicast
+    router_multicast6: IPv6 multicast
+    router_multicast6_interface: IPv6 multicast - interface
+    router_multicast6_pimsmglobal: IPv6 multicast - pimsm global
+    router_multicast6_pimsmglobal_rpaddress: IPv6 multicast - pimsm global - rp address
+    router_multicast6_pimsmglobalvrf: IPv6 multicast - pimsm global vrf
+    router_multicast6_pimsmglobalvrf_rpaddress: IPv6 multicast - pimsm global vrf - rp address
+    router_multicast6flow: IPv6 multicast-flow
+    router_multicast6flow_flows: IPv6 multicast-flow - flows
+    router_multicast_interface: Router multicast - interface
+    router_multicast_interface_igmp: Router multicast - interface - IGMP
+    router_multicast_interface_joingroup: Router multicast - interface - join group
+    router_multicast_pimsmglobal: Router multicast - pimsm global
+    router_multicast_pimsmglobal_rpaddress: Router multicast - pimsm global - rp address
+    router_multicast_pimsmglobalvrf: Router multicast - pimsm global vrf
+    router_multicast_pimsmglobalvrf_rpaddress: Router multicast - pimsm global vrf - rp address
+    router_multicastflow: Multicast flow
+    router_multicastflow_flows: Multicast flow - flows
+    router_ospf: OSPF
+    router_ospf6: IPv6 OSPF
+    router_ospf6_area: IPv6 OSPF - area
+    router_ospf6_area_ipseckeys: IPv6 OSPF - area - IPsec keys
+    router_ospf6_area_range: IPv6 OSPF - area - range
+    router_ospf6_area_virtuallink: IPv6 OSPF - area - virtual link
+    router_ospf6_area_virtuallink_ipseckeys: IPv6 OSPF - area - virtual link - IPsec keys
+    router_ospf6_ospf6interface: IPv6 OSPF - OSPFv3 interface
+    router_ospf6_ospf6interface_ipseckeys: IPv6 OSPF - OSPFv3 interface - IPsec keys
+    router_ospf6_ospf6interface_neighbor: IPv6 OSPF - OSPFv3 interface - neighbor
+    router_ospf6_redistribute: IPv6 OSPF - redistribute
+    router_ospf6_summaryaddress: IPv6 OSPF - summary address
+    router_ospf_area: OSPF - area
+    router_ospf_area_filterlist: OSPF - area - filter list
+    router_ospf_area_range: OSPF - area - range
+    router_ospf_area_virtuallink: OSPF - area - virtual link
+    router_ospf_area_virtuallink_md5keys: OSPF - area - virtual link - MD5 keys
+    router_ospf_distributelist: OSPF - distribute list
+    router_ospf_neighbor: OSPF - neighbor
+    router_ospf_network: OSPF - network
+    router_ospf_ospfinterface: OSPF - OSPF interface
+    router_ospf_ospfinterface_md5keys: OSPF - OSPF interface - MD5 keys
+    router_ospf_redistribute: OSPF - redistribute
+    router_ospf_summaryaddress: OSPF - summary address
+    router_rip: RIP
+    router_rip_distance: RIP - distance
+    router_rip_distributelist: RIP - distribute list
+    router_rip_interface: RIP - interface
+    router_rip_neighbor: RIP - neighbor
+    router_rip_network: RIP - network
+    router_rip_offsetlist: RIP - offset list
+    router_rip_redistribute: RIP - redistribute
+    router_ripng: RIPng
+    router_ripng_aggregateaddress: RIPng - aggregate address
+    router_ripng_distance: RIPng - distance
+    router_ripng_distributelist: RIPng - distribute list
+    router_ripng_interface: RIPng - interface
+    router_ripng_neighbor: RIPng - neighbor
+    router_ripng_network: RIPng - network
+    router_ripng_offsetlist: RIPng - offset list
+    router_ripng_redistribute: RIPng - redistribute
+- title: Build IPsec VPNs and tunnels
+  description: Configure IPsec phase 1 and 2, IKE settings, Fabric VPN, GRE, IP-in-IP, SIT, VXLAN and other tunnels,
+    plus L2TP, PPTP and OCVPN.
+  components:
+    system_evpn: EVPN instance
+    system_fabricvpn: Fabric VPN
+    system_fabricvpn_advertisedsubnets: Fabric VPN - advertised subnets
+    system_fabricvpn_overlays: Fabric VPN - overlays
+    system_geneve: GENEVE devices
+    system_gretunnel: GRE tunnel
+    system_ike: IKE global attributes
+    system_ike_dhgroup1: IKE global attributes - DH group 1
+    system_ike_dhgroup14: IKE global attributes - DH group 14
+    system_ike_dhgroup15: IKE global attributes - DH group 15
+    system_ike_dhgroup16: IKE global attributes - DH group 16
+    system_ike_dhgroup17: IKE global attributes - DH group 17
+    system_ike_dhgroup18: IKE global attributes - DH group 18
+    system_ike_dhgroup19: IKE global attributes - DH group 19
+    system_ike_dhgroup2: IKE global attributes - DH group 2
+    system_ike_dhgroup20: IKE global attributes - DH group 20
+    system_ike_dhgroup21: IKE global attributes - DH group 21
+    system_ike_dhgroup27: IKE global attributes - DH group 27
+    system_ike_dhgroup28: IKE global attributes - DH group 28
+    system_ike_dhgroup29: IKE global attributes - DH group 29
+    system_ike_dhgroup30: IKE global attributes - DH group 30
+    system_ike_dhgroup31: IKE global attributes - DH group 31
+    system_ike_dhgroup32: IKE global attributes - DH group 32
+    system_ike_dhgroup5: IKE global attributes - DH group 5
+    system_ipiptunnel: IP in IP Tunneling
+    system_ipsecaggregate: Aggregate of IPsec tunnels
+    system_ipv6tunnel: IPv6/IPv4 in IPv6 tunnel
+    system_mobiletunnel: Mobile tunnels, an implementation of Network Mobility
+    system_mobiletunnel_network: Mobile tunnels, an implementation of Network Mobility - network
+    system_sittunnel: IPv6 tunnel over IPv4
+    system_sovsase: Sovereign SASE
+    system_vneinterface: Virtual network enabler tunnels
+    system_vnetunnel: Virtual network enabler tunnel
+    system_vxlan: VXLAN devices
+    vpn_ipsec_concentrator: Concentrator configuration
+    vpn_ipsec_fec: Forward Error Correction
+    vpn_ipsec_fec_mappings: Forward Error Correction - mappings
+    vpn_ipsec_fec_mappings_tos: Forward Error Correction - mappings - ToS
+    vpn_ipsec_forticlient: FortiClient policy realm
+    vpn_ipsec_manualkey: IPsec manual keys (policy-based)
+    vpn_ipsec_manualkeyinterface: IPsec manual key interfaces
+    vpn_ipsec_phase1: IPsec phase 1 (policy-based)
+    vpn_ipsec_phase1_ipv4excluderange: IPsec phase 1 (policy-based) - IPv4 exclude range
+    vpn_ipsec_phase1_ipv6excluderange: IPsec phase 1 (policy-based) - IPv6 exclude range
+    vpn_ipsec_phase1interface: IPsec phase 1 interfaces (route-based)
+    vpn_ipsec_phase1interface_ipv4excluderange: IPsec phase 1 interfaces (route-based) - IPv4 exclude range
+    vpn_ipsec_phase1interface_ipv6excluderange: IPsec phase 1 interfaces (route-based) - IPv6 exclude range
+    vpn_ipsec_phase2: IPsec phase 2 (policy-based)
+    vpn_ipsec_phase2interface: IPsec phase 2 interfaces (route-based)
+    vpn_l2tp: L2TP
+    vpn_ocvpn: Overlay Controller VPN settings
+    vpn_ocvpn_forticlientaccess: Overlay Controller VPN settings - forticlient access
+    vpn_ocvpn_forticlientaccess_authgroups: Overlay Controller VPN settings - forticlient access - auth groups
+    vpn_ocvpn_overlays: Overlay Controller VPN settings - overlays
+    vpn_ocvpn_overlays_subnets: Overlay Controller VPN settings - overlays - subnets
+    vpn_pptp: PPTP
+    vpn_qkd: Quantum Key Distribution servers
+- title: Configure SSL VPN and web portals
+  description: Configure SSL VPN settings, portals, realms, bookmarks and host-check software.
+  components:
+    vpn_ssl_client: SSL VPN clients
+    vpn_ssl_settings: SSL VPN settings
+    vpn_ssl_settings_authenticationrule: SSL VPN settings - authentication rule
+    vpnsslweb_hostchecksoftware: SSL-VPN host check software
+    vpnsslweb_hostchecksoftware_checkitemlist: SSL-VPN host check software - check item list
+    vpnsslweb_portal: SSL VPN portals
+    vpnsslweb_portal_bookmarkgroup: SSL VPN portals - bookmark group
+    vpnsslweb_portal_bookmarkgroup_bookmarks: SSL VPN portals - bookmark group - bookmarks
+    vpnsslweb_portal_bookmarkgroup_bookmarks_formdata: SSL VPN portals - bookmark group - bookmarks - form data
+    vpnsslweb_portal_landingpage: SSL VPN portals - landing page
+    vpnsslweb_portal_landingpage_formdata: SSL VPN portals - landing page - form data
+    vpnsslweb_portal_macaddrcheckrule: SSL VPN portals - MAC addr check rule
+    vpnsslweb_portal_oschecklist: SSL VPN portals - oschecklist
+    vpnsslweb_portal_splitdns: SSL VPN portals - splitdns
+    vpnsslweb_realm: SSL VPN realms
+    vpnsslweb_userbookmark: SSL-VPN user bookmark
+    vpnsslweb_userbookmark_bookmarks: SSL-VPN user bookmark - bookmarks
+    vpnsslweb_userbookmark_bookmarks_formdata: SSL-VPN user bookmark - bookmarks - form data
+    vpnsslweb_usergroupbookmark: SSL-VPN user group bookmark
+    vpnsslweb_usergroupbookmark_bookmarks: SSL-VPN user group bookmark - bookmarks
+    vpnsslweb_usergroupbookmark_bookmarks_formdata: SSL-VPN user group bookmark - bookmarks - form data
+- title: Manage certificates, keys and HSMs
+  description: Manage local, CA, remote and HSM-backed certificates, KMIP servers, ACME and network HSM settings.
+  components:
+    certificate_hsmlocal: Local certificates on HSM
+    certificate_remote: Remote certificates (PEM)
+    system_acme: ACME client
+    system_acme_accounts: ACME client - accounts
+    system_nethsm: Network HSM settings
+    system_nethsm_hagroups: Network HSM settings - hagroups
+    system_nethsm_partitions: Network HSM settings - partitions
+    system_nethsm_servers: Network HSM settings - servers
+    system_nethsm_slots: Network HSM settings - slots
+    vpn_certificate_ca: CA certificate
+    vpn_certificate_crl: Certificate Revocation List as a PEM file
+    vpn_certificate_hsmlocal: Local certificates on HSM (VPN)
+    vpn_certificate_local: Local keys and certificates
+    vpn_certificate_ocspserver: OCSP server configuration
+    vpn_certificate_remote: Remote certificates (VPN PEM)
+    vpn_certificate_setting: VPN certificate setting
+    vpn_certificate_setting_crlverification: VPN certificate setting - crl verification
+    vpn_kmipserver: KMIP server entry configuration
+    vpn_kmipserver_serverlist: KMIP server entry configuration - server list
+- title: Configure authentication rules and single sign-on
+  description: Configure authentication rules, schemes and settings, FSSO agents and polling, and domain controller
+    integration.
+  components:
+    authentication_rule: Authentication Rules
+    authentication_scheme: Authentication Schemes
+    authentication_setting: Authentication setting
+    system_fssopolling: FSSO polling (system)
+    user_adgrp: FSSO groups
+    user_domaincontroller: Domain controller entries
+    user_exchange: MS Exchange server entries
+    user_fsso: FSSO agents
+    user_fssopolling: FSSO active directory servers for polling mode
+    user_fssopolling_adgrp: FSSO active directory servers for polling mode - adgrp
+    user_krbkeytab: Kerberos keytab entries
+    user_nacpolicy: NAC policy
+    user_setting: User authentication setting
+- title: Manage users, groups and identity providers
+  description: Configure local users, groups, LDAP, RADIUS, TACACS+, SAML, OIDC and SCIM identity sources, FortiTokens,
+    peers and password policies.
+  components:
+    endpointcontrol_fctems: FortiClient EMS servers
+    endpointcontrol_fctemsoverride: FortiClient EMS server overrides
+    endpointcontrol_settings: Endpoint control settings
+    system_saml: Global settings for SAML authentication
+    system_saml_serviceproviders: Global settings for SAML authentication - service providers
+    system_saml_serviceproviders_assertionattributes: Global settings for SAML authentication - service providers
+      - assertion attributes
+    system_vdomradiusserver: VDOM RADIUS server
+    user_certificate: Certificate users
+    user_domaincontroller_extraserver: Domain controller entries - extra server
+    user_externalidentityprovider: External identity provider
+    user_fortitoken: FortiTokens
+    user_group: User groups
+    user_group_match: User groups - match
+    user_ldap: LDAP server entries
+    user_local: Local users
+    user_oidc: OpenID Connect server entry configuration
+    user_passwordpolicy: User password policy
+    user_peer: Peer users
+    user_peergrp: Peer groups
+    user_pop3: POP3 server entry configuration
+    user_quarantine: Quarantine support
+    user_quarantine_targets: Quarantine support - targets
+    user_quarantine_targets_macs: Quarantine support - targets - macs
+    user_radius: RADIUS server entries
+    user_radius_accountingserver: RADIUS server entries - accounting server
+    user_saml: SAML server entry configuration
+    user_scim: SCIM client entries
+    user_securityexemptlist: Security exemption list
+    user_securityexemptlist_rule: Security exemption list - rule
+    user_setting_authports: User authentication setting - auth ports
+    user_tacacs: TACACS+ server entries
+- title: Manage administrators and access profiles
+  description: Create administrator accounts, access profiles, API users, SSO administrators and password and SSH
+    settings for device management.
+  components:
+    system_accprofile: Access profiles for system administrators
+    system_accprofile_fwgrppermission: Access profiles for system administrators - firewall group permission
+    system_accprofile_loggrppermission: Access profiles for system administrators - log group permission
+    system_accprofile_netgrppermission: Access profiles for system administrators - net group permission
+    system_accprofile_secfabgrppermission: Access profiles for system administrators - Security Fabric group permission
+    system_accprofile_sysgrppermission: Access profiles for system administrators - system group permission
+    system_accprofile_utmgrppermission: Access profiles for system administrators - UTM group permission
+    system_admin: Admin users
+    system_admin_trusthosts: Admin users - trusthosts
+    system_apiuser: API users
+    system_apiuser_trusthost: API users - trusthost
+    system_passwordpolicy: Password policy
+    system_passwordpolicyguestadmin: Password policy for guest administrators
+    system_sshconfig: SSH config
+    system_ssoadmin: SSO admin users
+    system_ssoforticloudadmin: FortiCloud SSO administrators
+    system_ssofortigatecloudadmin: FortiGate Cloud SSO administrators
+- title: Integrate the Security Fabric, FortiGuard and firmware updates
+  description: Configure the Security Fabric, FortiGuard, FortiSandbox and other Fortinet service connections, update
+    schedules and device firmware upgrades.
+  components:
+    system_autoinstall: USB auto installation
+    system_autoscript: Auto script
+    system_autoupdate_pushupdate: Push updates
+    system_autoupdate_schedule: Update schedule
+    system_autoupdate_tunneling: Web proxy tunneling for the FDN
+    system_centralmanagement: Central management
+    system_centralmanagement_serverlist: Central management - server list
+    system_cloudservice: System cloud service
+    system_csf: Security Fabric (CSF)
+    system_csf_fabricconnector: Security Fabric (CSF) - fabric connector
+    system_csf_fabricdatasourceexemption: Security Fabric (CSF) - fabric datasource exemption
+    system_csf_fabricdevice: Security Fabric (CSF) - fabric device
+    system_csf_sharedobjects: Security Fabric (CSF) - shared objects
+    system_csf_sharedobjects_objects: Security Fabric (CSF) - shared objects - objects
+    system_csf_sharedobjects_objects_keys: Security Fabric (CSF) - shared objects - objects - keys
+    system_csf_trustedlist: Security Fabric (CSF) - trusted list
+    system_deviceupgrade: Independent upgrades for managed devices
+    system_deviceupgrade_knownhamembers: Independent upgrades for managed devices - known HA members
+    system_deviceupgradeexemptions: Device upgrade exemptions
+    system_federatedupgrade: Coordinate federated upgrades within the Security Fabric
+    system_federatedupgrade_knownhamembers: Coordinate federated upgrades within the Security Fabric - known HA
+      members
+    system_federatedupgrade_nodelist: Coordinate federated upgrades within the Security Fabric - nodelist
+    system_fortiai: FortiAI
+    system_fortidata: FortiData
+    system_fortiguard: FortiGuard services
+    system_fortimq: FortiMQ settings
+    system_fortindr: FortiNDR
+    system_fortisandbox: FortiSandbox
+    system_ftmpush: FortiToken Mobile push services
+    system_healthcheckfortiguard: SD-WAN status checking or health checking
+    system_securityrating_controls: Settings for individual Security Rating controls
+    system_securityrating_settings: Settings for Security Rating
+- title: Automate with stitches and integrate cloud and SDN platforms
+  description: Configure automation triggers, conditions, actions and stitches, notifications, and SDN connectors
+    for AWS, Azure and NSX.
+  components:
+    automation_setting: Automation setting configuration
+    aws_vpce: AWS VPC configuration
+    azure_vwaningresspublicips: Azure vWAN SLB ingress public IPs
+    azure_vwanslb: Azure vWAN slb setting
+    azure_vwanslb_permanentsecurityrules: Azure vWAN slb setting - permanent security rules
+    azure_vwanslb_permanentsecurityrules_rules: Azure vWAN slb setting - permanent security rules - rules
+    azure_vwanslb_temporarysecurityrules: Azure vWAN slb setting - temporary security rules
+    azure_vwanslb_temporarysecurityrules_rules: Azure vWAN slb setting - temporary security rules - rules
+    notification: Event notification configuration
+    nsx_profile: NSX Profile
+    nsxt_servicechain: NSX-T service chain
+    nsxt_servicechain_serviceindex: NSX-T service chain - service index
+    nsxt_setting: NSX-T setting
+    system_automationaction: Action for automation stitches
+    system_automationaction_formdata: Action for automation stitches - form data
+    system_automationaction_httpheaders: Action for automation stitches - HTTP headers
+    system_automationcondition: Condition for automation stitches
+    system_automationdestination: Automation destinations
+    system_automationstitch: Automation stitches
+    system_automationstitch_actions: Automation stitches - actions
+    system_automationtrigger: Trigger for automation stitches
+    system_automationtrigger_fields: Trigger for automation stitches - fields
+    system_autoscale: System auto-scaling
+    system_sdnconnector: Connection to SDN Connector
+    system_sdnconnector_compartmentlist: Connection to SDN Connector - compartment list
+    system_sdnconnector_externalaccountlist: Connection to SDN Connector - external account list
+    system_sdnconnector_forwardingrule: Connection to SDN Connector - forwarding rule
+    system_sdnconnector_ociregionlist: Connection to SDN Connector - oci region list
+    system_sdnconnector_routetable: Connection to SDN Connector - route table
+    system_sdnproxy: SDN proxy
+    system_sdnvpn: Public cloud VPN service
+    system_vpce: System VPC configuration
+- title: Configure interfaces, zones, DHCP and addressing
+  description: Configure physical, VLAN and virtual interfaces, zones, modems, LLDP, DHCP servers and relays, IPAM
+    and neighbor and ARP settings.
+  components:
+    system_3gmodem_custom: 3G MODEM custom
+    system_5gmodem: USB 5G modems
+    system_5gmodem_dataplan: USB 5G modems - dataplan
+    system_5gmodem_modem1: USB 5G modems - modem 1
+    system_5gmodem_modem1_simswitch: USB 5G modems - modem 1 SIM switch
+    system_5gmodem_modem2: USB 5G modems - modem 2
+    system_arptable: ARP table
+    system_bypass: System bypass
+    system_dedicatedmgmt: Dedicated management
+    system_dhcp6_server: DHCPv6 servers
+    system_dhcp6_server_iprange: DHCPv6 servers - IP range
+    system_dhcp6_server_options: DHCPv6 servers - options
+    system_dhcp6_server_prefixrange: DHCPv6 servers - prefix range
+    system_dhcp_server: DHCP servers
+    system_dhcp_server_excluderange: DHCP servers - exclude range
+    system_dhcp_server_iprange: DHCP servers - IP range
+    system_dhcp_server_options: DHCP servers - options
+    system_dhcp_server_reservedaddress: DHCP servers - reserved address
+    system_dhcp_template: DHCP server templates
+    system_dhcp_template_excluderange: DHCP server templates - exclude range
+    system_dhcp_template_iprange: DHCP server templates - IP range
+    system_dhcp_template_options: DHCP server templates - options
+    system_dhcp_template_reservedaddress: DHCP server templates - reserved address
+    system_digitalio: Digital I/O
+    system_dnp3proxy: DNP3 proxy settings
+    system_interface: Interfaces
+    system_interface_clientoptions: Interfaces - client options
+    system_interface_dhcpsnoopingserverlist: Interfaces - DHCP snooping server list
+    system_interface_egressqueues: Interfaces - egress queues
+    system_interface_ipv6: Interfaces - IPv6
+    system_interface_ipv6_clientoptions: Interfaces - IPv6 - client options
+    system_interface_ipv6_dhcp6iapdlist: Interfaces - IPv6 - DHCPv6 iapd list
+    system_interface_ipv6_ip6delegatedprefixlist: Interfaces - IPv6 - IPv6 delegated prefix list
+    system_interface_ipv6_ip6dnssllist: Interfaces - IPv6 - IPv6 dnssl list
+    system_interface_ipv6_ip6extraaddr: Interfaces - IPv6 - IPv6 extra addr
+    system_interface_ipv6_ip6prefixlist: Interfaces - IPv6 - IPv6 prefix list
+    system_interface_ipv6_ip6rdnsslist: Interfaces - IPv6 - IPv6 rdnss list
+    system_interface_ipv6_ip6routelist: Interfaces - IPv6 - IPv6 route list
+    system_interface_ipv6_vrrp6: Interfaces - IPv6 - vrrp (IPv6)
+    system_interface_l2tpclientsettings: Interfaces - L2TP client settings
+    system_interface_mirroringfilter: Interfaces - mirroring filter
+    system_interface_secondaryip: Interfaces - secondary IP
+    system_interface_tagging: Interfaces - tagging
+    system_interface_vrrp: Interfaces - vrrp
+    system_interface_vrrp_proxyarp: Interfaces - vrrp - proxy ARP
+    system_interface_wifinetworks: Interfaces - wifinetworks
+    system_ipam: IP address management services
+    system_ipam_pools: IP address management services - pools
+    system_ipam_pools_exclude: IP address management services - pools - exclude
+    system_ipam_rules: IP address management services - rules
+    system_ipv6neighborcache: IPv6 neighbor cache table
+    system_lldp_networkpolicy: LLDP network policy
+    system_lldp_networkpolicy_guest: LLDP network policy - guest
+    system_lldp_networkpolicy_guestvoicesignaling: LLDP network policy - guest voice signaling
+    system_lldp_networkpolicy_softphone: LLDP network policy - softphone
+    system_lldp_networkpolicy_streamingvideo: LLDP network policy - streaming video
+    system_lldp_networkpolicy_videoconferencing: LLDP network policy - video conferencing
+    system_lldp_networkpolicy_videosignaling: LLDP network policy - video signaling
+    system_lldp_networkpolicy_voice: LLDP network policy - voice
+    system_lldp_networkpolicy_voicesignaling: LLDP network policy - voice signaling
+    system_ltemodem: USB LTE/WIMAX devices
+    system_ltemodem_dataplan: USB LTE/WIMAX devices - dataplan
+    system_ltemodem_simswitch: USB LTE/WIMAX devices - simswitch
+    system_macaddresstable: MAC address tables
+    system_modem: Modem
+    system_ndproxy: IPv6 neighbor discovery proxy
+    system_physicalswitch: Physical switches
+    system_pppoeinterface: PPPoE interfaces
+    system_proxyarp: Proxy ARP
+    system_spanport: Device system span port
+    system_splitportmode: Split port mode of ports
+    system_stp: Spanning Tree Protocol
+    system_switchinterface: Switch interface
+    system_virtualswitch: Virtual hardware switch interfaces
+    system_virtualswitch_port: Virtual hardware switch interfaces - port
+    system_virtualwirepair: Virtual wire pairs
+    system_wccp: WCCP
+    system_zone: Zones to group two or more interfaces
+    system_zone_tagging: Zones to group two or more interfaces - tagging
+- title: Configure SD-WAN and link health
+  description: Configure SD-WAN zones, members, health checks and rules, virtual WAN link, link monitors and speed
+    tests.
+  components:
+    system_linkmonitor: Link Health Monitor
+    system_linkmonitor_serverlist: Link Health Monitor - server list
+    system_sdwan: SD-WAN
+    system_sdwan_duplication: SD-WAN - duplication
+    system_sdwan_healthcheck: SD-WAN - health check
+    system_sdwan_healthcheck_sla: SD-WAN - health check - sla
+    system_sdwan_healthcheckfortiguard: SD-WAN - health check FortiGuard
+    system_sdwan_healthcheckfortiguard_sla: SD-WAN - health check FortiGuard - sla
+    system_sdwan_members: SD-WAN - members
+    system_sdwan_neighbor: SD-WAN - neighbor
+    system_sdwan_service: SD-WAN - service
+    system_sdwan_service_sla: SD-WAN - service - sla
+    system_sdwan_zone: SD-WAN - zone
+    system_speedtestschedule: Speed test schedule for each interface
+    system_speedtestserver: Speed test server list
+    system_speedtestserver_host: Speed test server list - host
+    system_speedtestsetting: Speed test setting
+    system_virtualwanlink: Redundant internet connections using SD-WAN
+    system_virtualwanlink_healthcheck: Redundant internet connections using SD-WAN - health check
+    system_virtualwanlink_healthcheck_sla: Redundant internet connections using SD-WAN - health check - sla
+    system_virtualwanlink_members: Redundant internet connections using SD-WAN - members
+    system_virtualwanlink_neighbor: Redundant internet connections using SD-WAN - neighbor
+    system_virtualwanlink_service: Redundant internet connections using SD-WAN - service
+    system_virtualwanlink_service_sla: Redundant internet connections using SD-WAN - service - sla
+- title: Configure high availability, clustering and hardware acceleration
+  description: Configure HA and cluster synchronisation, standalone clusters, load balancing, NPU and DPDK acceleration
+    and hardware monitoring.
+  components:
+    dpdk_cpus: CPUs
+    dpdk_global: Global DPDK options
+    loadbalance_flowrule: Flow rule configuration
+    loadbalance_setting: Load balance setting
+    loadbalance_setting_workers: Load balance setting - workers
+    loadbalance_workergroup: Worker group configuration
+    monitoring_np6ipsecengine: NP6 IPsec engine status monitoring
+    monitoring_npuhpe: NPU-hpe status monitoring
+    system_affinityinterrupt: Interrupt affinity
+    system_affinitypacketredistribution: Packet redistribution
+    system_clustersync: Cluster session synchronisation
+    system_clustersync_sessionsyncfilter: Cluster session synchronisation - session sync filter
+    system_clustersync_sessionsyncfilter_customservice: Cluster session synchronisation - session sync filter -
+      custom service
+    system_elbc: Enhanced load balance cluster
+    system_fipscc: FIPS-CC mode
+    system_gigk: Gi firewall gatekeeper
+    system_ha: High availability (HA)
+    system_ha_frupsettings: High availability (HA) - frup settings
+    system_ha_hamgmtinterfaces: High availability (HA) - HA mgmt interfaces
+    system_ha_linkgroup: High availability (HA) - link group
+    system_ha_secondaryvcluster: High availability (HA) - secondary virtual cluster
+    system_ha_unicastpeers: High availability (HA) - unicast peers
+    system_ha_vcluster: High availability (HA) - virtual cluster
+    system_halic: HA licenses
+    system_hamonitor: HA monitoring
+    system_iscsi: System iSCSI
+    system_isfqueueprofile: Create a queue profile of switch
+    system_memmgr: Memory manager
+    system_np6: NP6 attributes
+    system_np6_fpanomaly: NP6 attributes - fpanomaly
+    system_np6_hpe: NP6 attributes - hpe
+    system_np6xlite: NP6XLITE attributes
+    system_np6xlite_fpanomaly: NP6XLITE attributes - fpanomaly
+    system_np6xlite_hpe: NP6XLITE attributes - hpe
+    system_npu_dswdtsprofile: NPU DSW DTS profile
+    system_npu_npqueues: Queue assignment on NP7LITE
+    system_npu_portcpumap: NPU interface to CPU core mapping
+    system_npu_portnpumap: Port to NPU group mapping
+    system_npupost: NPU attributes after interface initialization
+    system_npupost_portnpumap: NPU attributes after interface initialization - port NPU map
+    system_npusetting_prp: NPU PRP attributes
+    system_npuvlink: NPU VDOM link
+    system_sessionhelper: Session helper
+    system_sessionttl: Global session TTL timers for this FortiGate
+    system_sessionttl_port: Global session TTL timers for this FortiGate - port
+    system_standalonecluster: FortiGate Session Life Support Protocol
+    system_standalonecluster_clusterpeer: FortiGate Session Life Support Protocol - cluster peer
+    system_standalonecluster_clusterpeer_sessionsyncfilter: FortiGate Session Life Support Protocol - cluster peer
+      - session sync filter
+    system_standalonecluster_clusterpeer_sessionsyncfilter_customservice: FortiGate Session Life Support Protocol
+      - cluster peer - session sync filter - custom service
+    system_standalonecluster_monitorprefix: FortiGate Session Life Support Protocol - monitor prefix
+    system_storage: Logical storage
+- title: Forward logs to FortiAnalyzer, syslog and cloud services
+  description: Configure log forwarding to FortiAnalyzer, FortiGuard, syslog servers, TACACS+ accounting, WebTrends
+    and Azure Security Center.
+  components:
+    log_azuresecuritycenter2_filter: Azure Security Center (second) - filter
+    log_azuresecuritycenter2_filter_freestyle: Azure Security Center (second) - filter free style
+    log_azuresecuritycenter2_setting: Azure Security Center (second) - setting
+    log_azuresecuritycenter2_setting_customfieldname: Azure Security Center (second) - setting custom field name
+    log_azuresecuritycenter_filter: Azure Security Center - filter
+    log_azuresecuritycenter_filter_freestyle: Azure Security Center - filter free style
+    log_azuresecuritycenter_setting: Azure Security Center - setting
+    log_azuresecuritycenter_setting_customfieldname: Azure Security Center - setting custom field name
+    log_fortianalyzer2_filter: FortiAnalyzer 2 - filter
+    log_fortianalyzer2_filter_freestyle: FortiAnalyzer 2 - filter free style
+    log_fortianalyzer2_overridefilter: FortiAnalyzer 2 - override filter
+    log_fortianalyzer2_overridefilter_freestyle: FortiAnalyzer 2 - override filter free style
+    log_fortianalyzer2_overridesetting: FortiAnalyzer 2 - override setting
+    log_fortianalyzer2_setting: FortiAnalyzer 2 - setting
+    log_fortianalyzer3_filter: FortiAnalyzer 3 - filter
+    log_fortianalyzer3_filter_freestyle: FortiAnalyzer 3 - filter free style
+    log_fortianalyzer3_overridefilter: FortiAnalyzer 3 - override filter
+    log_fortianalyzer3_overridefilter_freestyle: FortiAnalyzer 3 - override filter free style
+    log_fortianalyzer3_overridesetting: FortiAnalyzer 3 - override setting
+    log_fortianalyzer3_setting: FortiAnalyzer 3 - setting
+    log_fortianalyzer_filter: FortiAnalyzer - filter
+    log_fortianalyzer_filter_freestyle: FortiAnalyzer - filter free style
+    log_fortianalyzer_overridefilter: FortiAnalyzer - override filter
+    log_fortianalyzer_overridefilter_freestyle: FortiAnalyzer - override filter free style
+    log_fortianalyzer_overridesetting: FortiAnalyzer - override setting
+    log_fortianalyzer_setting: FortiAnalyzer - setting
+    log_fortianalyzercloud_filter: FortiAnalyzer Cloud - filter
+    log_fortianalyzercloud_filter_freestyle: FortiAnalyzer Cloud - filter free style
+    log_fortianalyzercloud_overridefilter: FortiAnalyzer Cloud - override filter
+    log_fortianalyzercloud_overridefilter_freestyle: FortiAnalyzer Cloud - override filter free style
+    log_fortianalyzercloud_overridesetting: FortiAnalyzer Cloud - override setting
+    log_fortianalyzercloud_setting: FortiAnalyzer Cloud - setting
+    log_syslogd2_filter: syslog server 2 - filter
+    log_syslogd2_filter_freestyle: syslog server 2 - filter free style
+    log_syslogd2_overridefilter: syslog server 2 - override filter
+    log_syslogd2_overridefilter_freestyle: syslog server 2 - override filter free style
+    log_syslogd2_overridesetting: syslog server 2 - override setting
+    log_syslogd2_overridesetting_customfieldname: syslog server 2 - override setting custom field name
+    log_syslogd2_overridesetting_logtemplates: syslog server 2 - override setting log templates
+    log_syslogd2_setting: syslog server 2 - setting
+    log_syslogd2_setting_customfieldname: syslog server 2 - setting custom field name
+    log_syslogd2_setting_logtemplates: syslog server 2 - setting log templates
+    log_syslogd3_filter: syslog server 3 - filter
+    log_syslogd3_filter_freestyle: syslog server 3 - filter free style
+    log_syslogd3_overridefilter: syslog server 3 - override filter
+    log_syslogd3_overridefilter_freestyle: syslog server 3 - override filter free style
+    log_syslogd3_overridesetting: syslog server 3 - override setting
+    log_syslogd3_overridesetting_customfieldname: syslog server 3 - override setting custom field name
+    log_syslogd3_overridesetting_logtemplates: syslog server 3 - override setting log templates
+    log_syslogd3_setting: syslog server 3 - setting
+    log_syslogd3_setting_customfieldname: syslog server 3 - setting custom field name
+    log_syslogd3_setting_logtemplates: syslog server 3 - setting log templates
+    log_syslogd4_filter: syslog server 4 - filter
+    log_syslogd4_filter_freestyle: syslog server 4 - filter free style
+    log_syslogd4_overridefilter: syslog server 4 - override filter
+    log_syslogd4_overridefilter_freestyle: syslog server 4 - override filter free style
+    log_syslogd4_overridesetting: syslog server 4 - override setting
+    log_syslogd4_overridesetting_customfieldname: syslog server 4 - override setting custom field name
+    log_syslogd4_overridesetting_logtemplates: syslog server 4 - override setting log templates
+    log_syslogd4_setting: syslog server 4 - setting
+    log_syslogd4_setting_customfieldname: syslog server 4 - setting custom field name
+    log_syslogd4_setting_logtemplates: syslog server 4 - setting log templates
+    log_syslogd_filter: syslog server 1 - filter
+    log_syslogd_filter_freestyle: syslog server 1 - filter free style
+    log_syslogd_overridefilter: syslog server 1 - override filter
+    log_syslogd_overridefilter_freestyle: syslog server 1 - override filter free style
+    log_syslogd_overridesetting: syslog server 1 - override setting
+    log_syslogd_overridesetting_customfieldname: syslog server 1 - override setting custom field name
+    log_syslogd_overridesetting_logtemplates: syslog server 1 - override setting log templates
+    log_syslogd_setting: syslog server 1 - setting
+    log_syslogd_setting_customfieldname: syslog server 1 - setting custom field name
+    log_syslogd_setting_logtemplates: syslog server 1 - setting log templates
+    log_tacacsaccounting2_filter: TACACS+ accounting 2 - filter
+    log_tacacsaccounting2_setting: TACACS+ accounting 2 - setting
+    log_tacacsaccounting3_filter: TACACS+ accounting 3 - filter
+    log_tacacsaccounting3_setting: TACACS+ accounting 3 - setting
+    log_tacacsaccounting_filter: TACACS+ accounting 1 - filter
+    log_tacacsaccounting_setting: TACACS+ accounting 1 - setting
+- title: Configure local logging, alerts and reports
+  description: Configure disk and memory logging, log settings and filters, threat weights, alert email, and report
+    charts, datasets, layouts and themes.
+  components:
+    alertemail_setting: Alert email settings
+    log_customfield: Custom log fields
+    log_customformat: Custom log formats
+    log_customformat_logtemplates: Custom log formats - log templates
+    log_disk_filter: Filters for local disk logging
+    log_disk_filter_freestyle: Filters for local disk logging - free style
+    log_disk_setting: Settings for local disk logging
+    log_eventfilter: Log event filters
+    log_fortiguard_filter: FortiGuard (FortiCloud) logging - filter
+    log_fortiguard_filter_freestyle: FortiGuard (FortiCloud) logging - filter free style
+    log_fortiguard_overridefilter: FortiGuard (FortiCloud) logging - override filter
+    log_fortiguard_overridefilter_freestyle: FortiGuard (FortiCloud) logging - override filter free style
+    log_fortiguard_overridesetting: FortiGuard (FortiCloud) logging - override setting
+    log_fortiguard_setting: FortiGuard (FortiCloud) logging - setting
+    log_guidisplay: GUI log display
+    log_memory_filter: Filters for memory buffer
+    log_memory_filter_freestyle: Filters for memory buffer - free style
+    log_memory_globalsetting: Global settings for memory logging
+    log_memory_setting: Settings for memory buffer
+    log_nulldevice_filter: Filters for null device logging
+    log_nulldevice_filter_freestyle: Filters for null device logging - free style
+    log_nulldevice_setting: Settings for null device logging
+    log_setting: General log settings
+    log_slbc_globalsetting: LOG Global settings for SLBC platform
+    log_threatweight: Threat weight settings
+    log_threatweight_application: Threat weight settings - application
+    log_threatweight_geolocation: Threat weight settings - geolocation
+    log_threatweight_ips: Threat weight settings - IPS
+    log_threatweight_level: Threat weight settings - level
+    log_threatweight_malware: Threat weight settings - malware
+    log_threatweight_web: Threat weight settings - web
+    log_webtrends_filter: Filters for WebTrends
+    log_webtrends_filter_freestyle: Filters for WebTrends - free style
+    log_webtrends_setting: Settings for WebTrends
+    report_chart: Report chart widget configuration
+    report_chart_categoryseries: Report chart widget configuration - category series
+    report_chart_column: Report chart widget configuration - column
+    report_chart_column_mapping: Report chart widget configuration - column - mapping
+    report_chart_drilldowncharts: Report chart widget configuration - drill down charts
+    report_chart_valueseries: Report chart widget configuration - value series
+    report_chart_xseries: Report chart widget configuration - xseries
+    report_chart_yseries: Report chart widget configuration - yseries
+    report_dataset: Report dataset configuration
+    report_dataset_field: Report dataset configuration - field
+    report_dataset_parameters: Report dataset configuration - parameters
+    report_layout: Report layout configuration
+    report_layout_bodyitem: Report layout configuration - body item
+    report_layout_bodyitem_parameters: Report layout configuration - body item - parameters
+    report_layout_page: Report layout configuration - page
+    report_layout_page_footer: Report layout configuration - page - footer
+    report_layout_page_footer_footeritem: Report layout configuration - page - footer - footer item
+    report_layout_page_header: Report layout configuration - page - header
+    report_layout_page_header_headeritem: Report layout configuration - page - header - header item
+    report_setting: Report setting configuration
+    report_style: Report style configuration
+    report_theme: Report themes configuration
+- title: Monitor with SNMP, NetFlow, sFlow and Ethernet OAM
+  description: Configure SNMP agents, communities and users, NetFlow and sFlow export, network visibility and Ethernet
+    OAM connectivity checks.
+  components:
+    ethernetoam_cfm: CFM domain configuration
+    ethernetoam_cfm_service: CFM domain configuration - service
+    system_netflow: NetFlow
+    system_netflow_collectors: NetFlow - collectors
+    system_netflow_exclusionfilters: NetFlow - exclusion filters
+    system_networkvisibility: Network visibility settings
+    system_sflow: sFlow
+    system_sflow_collectors: sFlow - collectors
+    system_snmp_community: SNMP community configuration
+    system_snmp_community_hosts: SNMP community configuration - hosts
+    system_snmp_community_hosts6: SNMP community configuration - hosts (IPv6)
+    system_snmp_mibview: SNMP Access Control MIB View configuration
+    system_snmp_rmonstat: SNMP Remote Network Monitoring
+    system_snmp_sysinfo: SNMP system info configuration
+    system_snmp_user: SNMP user configuration
+    system_vdomnetflow: NetFlow per VDOM
+    system_vdomnetflow_collectors: NetFlow per VDOM - collectors
+    system_vdomsflow: VDOM sFlow
+    system_vdomsflow_collectors: VDOM sFlow - collectors
+- title: Manage FortiSwitch units and fleet settings
+  description: Authorise and configure managed FortiSwitches, ports, groups and profiles, FortiLink, initial and
+    auto configuration, locations and PTP.
+  components:
+    switchcontroller_autoconfig_custom: Auto config custom
+    switchcontroller_autoconfig_custom_switchbinding: Auto config custom - switch binding
+    switchcontroller_autoconfig_default: Auto config default
+    switchcontroller_autoconfig_policy: Auto config policy
+    switchcontroller_customcommand: Custom command
+    switchcontroller_dsl_policy: DSL policy
+    switchcontroller_fortilinksettings: Integrated FortiLink settings for FortiSwitch
+    switchcontroller_fortilinksettings_nacports: Integrated FortiLink settings for FortiSwitch - NAC ports
+    switchcontroller_global: FortiSwitch global settings
+    switchcontroller_initialconfig_template: Template for auto-generated VLANs
+    switchcontroller_initialconfig_vlans: Initial template for auto-generated VLAN interfaces
+    switchcontroller_location: FortiSwitch location services
+    switchcontroller_location_addresscivic: FortiSwitch location services - address civic
+    switchcontroller_location_coordinates: FortiSwitch location services - coordinates
+    switchcontroller_location_elinnumber: FortiSwitch location services - elin number
+    switchcontroller_managedswitch: Managed FortiSwitches
+    switchcontroller_managedswitch_8021xsettings: Managed FortiSwitches - 802.1X settings
+    switchcontroller_managedswitch_components: Managed FortiSwitches - components
+    switchcontroller_managedswitch_customcommand: Managed FortiSwitches - custom command
+    switchcontroller_managedswitch_dhcpsnoopingstaticclient: Managed FortiSwitches - DHCP snooping static client
+    switchcontroller_managedswitch_igmpsnooping: Managed FortiSwitches - IGMP snooping
+    switchcontroller_managedswitch_igmpsnooping_vlans: Managed FortiSwitches - IGMP snooping - vlans
+    switchcontroller_managedswitch_ipsourceguard: Managed FortiSwitches - IP source guard
+    switchcontroller_managedswitch_ipsourceguard_bindingentry: Managed FortiSwitches - IP source guard - binding
+      entry
+    switchcontroller_managedswitch_mirror: Managed FortiSwitches - mirror
+    switchcontroller_managedswitch_ports: Managed FortiSwitches - ports
+    switchcontroller_managedswitch_ports_dhcpsnoopoption82override: Managed FortiSwitches - ports - DHCP snoop option82
+      override
+    switchcontroller_managedswitch_remotelog: Managed FortiSwitches - remote log
+    switchcontroller_managedswitch_routeoffloadrouter: Managed FortiSwitches - route offload router
+    switchcontroller_managedswitch_routerstatic: Managed FortiSwitches - router static
+    switchcontroller_managedswitch_routervrf: Managed FortiSwitches - router vrf
+    switchcontroller_managedswitch_snmpcommunity: Managed FortiSwitches - SNMP community
+    switchcontroller_managedswitch_snmpcommunity_hosts: Managed FortiSwitches - SNMP community - hosts
+    switchcontroller_managedswitch_snmpsysinfo: Managed FortiSwitches - SNMP system info
+    switchcontroller_managedswitch_snmptrapthreshold: Managed FortiSwitches - SNMP trap threshold
+    switchcontroller_managedswitch_snmpuser: Managed FortiSwitches - SNMP user
+    switchcontroller_managedswitch_staticmac: Managed FortiSwitches - static MAC
+    switchcontroller_managedswitch_stormcontrol: Managed FortiSwitches - storm control
+    switchcontroller_managedswitch_stpinstance: Managed FortiSwitches - STP instance
+    switchcontroller_managedswitch_stpsettings: Managed FortiSwitches - STP settings
+    switchcontroller_managedswitch_switchlog: Managed FortiSwitches - switch log
+    switchcontroller_managedswitch_systemdhcpserver: Managed FortiSwitches - system DHCP server
+    switchcontroller_managedswitch_systemdhcpserver_iprange: Managed FortiSwitches - system DHCP server - IP range
+    switchcontroller_managedswitch_systemdhcpserver_options: Managed FortiSwitches - system DHCP server - options
+    switchcontroller_managedswitch_systeminterface: Managed FortiSwitches - system interface
+    switchcontroller_managedswitch_vlan: Managed FortiSwitches - VLAN
+    switchcontroller_ptp_interfacepolicy: PTP interface-policy configuration
+    switchcontroller_ptp_policy: PTP policy configuration
+    switchcontroller_ptp_profile: Global PTP profile
+    switchcontroller_ptp_settings: Global PTP settings
+    switchcontroller_switchgroup: FortiSwitch switch groups
+    switchcontroller_switchinterfacetag: Switch object tags
+    switchcontroller_switchprofile: FortiSwitch switch profile
+    switchcontroller_system: System-wide switch controller settings
+    switchcontroller_virtualportpool: Virtual pool
+- title: Define FortiSwitch port, VLAN, security and monitoring policies
+  description: Define FortiSwitch ACLs, QoS, 802.1X and NAC, port, VLAN and MAC policies, storm control, STP, IGMP
+    snooping, LLDP, SNMP and logging.
+  components:
+    switchcontroller_8021xsettings: Global 802.1X settings
+    switchcontroller_acl_group: ACL group
+    switchcontroller_acl_ingress: ACL ingress
+    switchcontroller_acl_ingress_action: ACL ingress - action
+    switchcontroller_acl_ingress_classifier: ACL ingress - classifier
+    switchcontroller_dynamicportpolicy: Dynamic port policy
+    switchcontroller_dynamicportpolicy_policy: Dynamic port policy - policy
+    switchcontroller_flowtracking: FortiSwitch flow tracking and export via ipfix/NetFlow
+    switchcontroller_flowtracking_aggregates: FortiSwitch flow tracking and export via ipfix/NetFlow - aggregates
+    switchcontroller_flowtracking_collectors: FortiSwitch flow tracking and export via ipfix/NetFlow - collectors
+    switchcontroller_igmpsnooping: FortiSwitch IGMP snooping global settings
+    switchcontroller_igmpsnoopingstaticgroup: FortiSwitch IGMP snooping static group settings
+    switchcontroller_igmpsnoopingstaticgroup_ports: FortiSwitch IGMP snooping static group settings - ports
+    switchcontroller_ipsourceguardlog: FortiSwitch IP source guard log
+    switchcontroller_lldpprofile: FortiSwitch LLDP profiles
+    switchcontroller_lldpprofile_customtlvs: FortiSwitch LLDP profiles - custom TLVs
+    switchcontroller_lldpprofile_medlocationservice: FortiSwitch LLDP profiles - MED location service
+    switchcontroller_lldpprofile_mednetworkpolicy: FortiSwitch LLDP profiles - MED network policy
+    switchcontroller_lldpsettings: FortiSwitch LLDP settings
+    switchcontroller_macpolicy: MAC policy
+    switchcontroller_nacdevice: NAC device
+    switchcontroller_nacsettings: Integrated NAC settings for FortiSwitch
+    switchcontroller_networkmonitorsettings: Network monitor settings
+    switchcontroller_portpolicy: Port policy
+    switchcontroller_qos_dot1pmap: QoS 802.1p maps
+    switchcontroller_qos_ipdscpmap: FortiSwitch QoS IP precedence/DSCP
+    switchcontroller_qos_ipdscpmap_map: FortiSwitch QoS IP precedence/DSCP - map
+    switchcontroller_qos_qospolicy: FortiSwitch QoS policy
+    switchcontroller_qos_queuepolicy: FortiSwitch QoS egress queue policy
+    switchcontroller_qos_queuepolicy_cosqueue: FortiSwitch QoS egress queue policy - CoS queue
+    switchcontroller_remotelog: Remote log
+    switchcontroller_securitypolicy_8021x: 802.1X security policies
+    switchcontroller_securitypolicy_admin: Admin security policies
+    switchcontroller_securitypolicy_localaccess: Security policy local access
+    switchcontroller_sflow: FortiSwitch sFlow
+    switchcontroller_snmpcommunity: FortiSwitch SNMP v1/v2c communities globally
+    switchcontroller_snmpcommunity_hosts: FortiSwitch SNMP v1/v2c communities globally - hosts
+    switchcontroller_snmpsysinfo: FortiSwitch SNMP system information globally
+    switchcontroller_snmptrapthreshold: FortiSwitch SNMP trap threshold values globally
+    switchcontroller_snmpuser: FortiSwitch SNMP v3 users globally
+    switchcontroller_stormcontrol: FortiSwitch storm control
+    switchcontroller_stormcontrolpolicy: Storm control policy
+    switchcontroller_stpinstance: FortiSwitch multiple spanning tree protocol
+    switchcontroller_stpsettings: FortiSwitch spanning tree protocol
+    switchcontroller_switchlog: FortiSwitch logging
+    switchcontroller_trafficpolicy: FortiSwitch traffic policy
+    switchcontroller_trafficsniffer: FortiSwitch RSPAN/ERSPAN traffic sniffing parameters
+    switchcontroller_trafficsniffer_targetip: FortiSwitch RSPAN/ERSPAN traffic sniffing parameters - target IP
+    switchcontroller_trafficsniffer_targetmac: FortiSwitch RSPAN/ERSPAN traffic sniffing parameters - target MAC
+    switchcontroller_trafficsniffer_targetport: FortiSwitch RSPAN/ERSPAN traffic sniffing parameters - target port
+    switchcontroller_vlanpolicy: VLAN policy
+- title: Manage FortiAP access points and wireless controller
+  description: Configure managed FortiAPs, WTP profiles and groups, controller timers, regions, inter-controller
+    links, logging and SNMP.
+  components:
+    system_wireless_apstatus: Accepted wireless APs
+    system_wireless_settings: Wireless radio settings
+    wireless_apcfgprofile: AP local configuration profiles
+    wireless_apcfgprofile_commandlist: AP local configuration profiles - command list
+    wireless_apstatus: Access point status
+    wireless_arrpprofile: WiFi Automatic Radio Resource Provisioning
+    wireless_bleprofile: Bluetooth Low Energy profile
+    wireless_bonjourprofile: Bonjour profiles
+    wireless_bonjourprofile_policylist: Bonjour profiles - policy list
+    wireless_global: Wireless controller global settings
+    wireless_intercontroller: Inter wireless controller operation
+    wireless_intercontroller_intercontrollerpeer: Inter wireless controller operation - inter controller peer
+    wireless_log: Wireless controller event log filters
+    wireless_lwprofile: LoRaWAN profile
+    wireless_region: FortiAP regions
+    wireless_setting: VDOM wireless controller configuration
+    wireless_setting_offendingssid: VDOM wireless controller configuration - offending SSID
+    wireless_snmp: Wireless controller SNMP
+    wireless_snmp_community: Wireless controller SNMP - community
+    wireless_snmp_community_hosts: Wireless controller SNMP - community - hosts
+    wireless_snmp_community_hosts6: Wireless controller SNMP - community - hosts (IPv6)
+    wireless_snmp_user: Wireless controller SNMP - user
+    wireless_syslogprofile: Wireless syslog profiles
+    wireless_timers: CAPWAP timers
+    wireless_wtp: Managed access points (WTPs)
+    wireless_wtp_lan: Managed access points (WTPs) - lan
+    wireless_wtp_radio1: Managed access points (WTPs) - radio 1
+    wireless_wtp_radio2: Managed access points (WTPs) - radio 2
+    wireless_wtp_radio3: Managed access points (WTPs) - radio 3
+    wireless_wtp_radio4: Managed access points (WTPs) - radio 4
+    wireless_wtp_splittunnelingacl: Managed access points (WTPs) - split tunneling ACL
+    wireless_wtpgroup: WTP groups
+    wireless_wtpprofile: WTP profile
+    wireless_wtpprofile_denymaclist: WTP profile - denymaclist
+    wireless_wtpprofile_eslsesdongle: WTP profile - ESL SES dongle
+    wireless_wtpprofile_lan: WTP profile - lan
+    wireless_wtpprofile_lbs: WTP profile - LBS
+    wireless_wtpprofile_platform: WTP profile - platform
+    wireless_wtpprofile_radio1: WTP profile - radio 1
+    wireless_wtpprofile_radio2: WTP profile - radio 2
+    wireless_wtpprofile_radio3: WTP profile - radio 3
+    wireless_wtpprofile_radio4: WTP profile - radio 4
+    wireless_wtpprofile_splittunnelingacl: WTP profile - split tunneling ACL
+- title: Configure SSIDs, wireless security and Hotspot 2.0
+  description: Configure virtual access points and groups, MPSK, WIDS, QoS, access control lists, UTM and NAC profiles
+    and Hotspot 2.0 settings.
+  components:
+    wireless_accesscontrollist: WiFi bridge access control list
+    wireless_accesscontrollist_layer3ipv4rules: WiFi bridge access control list - layer 3 IPv4 rules
+    wireless_accesscontrollist_layer3ipv6rules: WiFi bridge access control list - layer 3 IPv6 rules
+    wireless_hotspot20_anqp3gppcellular: 3GPP public land mobile network
+    wireless_hotspot20_anqp3gppcellular_mccmnclist: 3GPP public land mobile network - mccmnclist
+    wireless_hotspot20_anqpipaddresstype: IP address type availability
+    wireless_hotspot20_anqpnairealm: Network access identifier
+    wireless_hotspot20_anqpnairealm_nailist: Network access identifier - NAI list
+    wireless_hotspot20_anqpnairealm_nailist_eapmethod: Network access identifier - NAI list - EAP method
+    wireless_hotspot20_anqpnairealm_nailist_eapmethod_authparam: Network access identifier - NAI list - EAP method
+      - auth param
+    wireless_hotspot20_anqpnetworkauthtype: Network authentication type
+    wireless_hotspot20_anqproamingconsortium: Roaming consortium
+    wireless_hotspot20_anqproamingconsortium_oilist: Roaming consortium - OI list
+    wireless_hotspot20_anqpvenuename: Venue name duple
+    wireless_hotspot20_anqpvenuename_valuelist: Venue name duple - value list
+    wireless_hotspot20_anqpvenueurl: Venue URL
+    wireless_hotspot20_anqpvenueurl_valuelist: Venue URL - value list
+    wireless_hotspot20_h2qpadviceofcharge: Advice of charge
+    wireless_hotspot20_h2qpadviceofcharge_aoclist: Advice of charge - aoc list
+    wireless_hotspot20_h2qpadviceofcharge_aoclist_planinfo: Advice of charge - aoc list - plan info
+    wireless_hotspot20_h2qpconncapability: Connection capability
+    wireless_hotspot20_h2qpoperatorname: Operator friendly name
+    wireless_hotspot20_h2qpoperatorname_valuelist: Operator friendly name - value list
+    wireless_hotspot20_h2qposuprovider: OSU providers
+    wireless_hotspot20_h2qposuprovider_friendlyname: OSU providers - friendly name
+    wireless_hotspot20_h2qposuprovider_servicedescription: OSU providers - service description
+    wireless_hotspot20_h2qposuprovidernai: OSU provider NAIs
+    wireless_hotspot20_h2qposuprovidernai_nailist: OSU provider NAIs - NAI list
+    wireless_hotspot20_h2qptermsandconditions: Terms and conditions
+    wireless_hotspot20_h2qpwanmetric: WAN metrics
+    wireless_hotspot20_hsprofile: Hotspot profile
+    wireless_hotspot20_icon: OSU provider icon
+    wireless_hotspot20_icon_iconlist: OSU provider icon - icon list
+    wireless_hotspot20_qosmap: QoS map set
+    wireless_hotspot20_qosmap_dscpexcept: QoS map set - dscpexcept
+    wireless_hotspot20_qosmap_dscprange: QoS map set - DSCP range
+    wireless_mpskprofile: MPSK profile
+    wireless_mpskprofile_mpskgroup: MPSK profile - MPSK group
+    wireless_mpskprofile_mpskgroup_mpskkey: MPSK profile - MPSK group - MPSK key
+    wireless_nacprofile: WiFi network access control
+    wireless_qosprofile: WiFi quality of service
+    wireless_ssidpolicy: WiFi SSID policies
+    wireless_utmprofile: UTM profile
+    wireless_vap: Virtual Access Points
+    wireless_vap_dynamicmapping: Virtual Access Points - dynamic mapping
+    wireless_vap_macfilterlist: Virtual Access Points - MAC filter list
+    wireless_vap_mpskkey: Virtual Access Points - MPSK key
+    wireless_vap_portalmessageoverrides: Virtual Access Points - portal message overrides
+    wireless_vap_vlanname: Virtual Access Points - VLAN name
+    wireless_vap_vlanpool: Virtual Access Points - VLAN pool
+    wireless_vapgroup: Virtual Access Point
+    wireless_wagprofile: Wireless access gateway
+    wireless_widsprofile: Wireless intrusion detection system
+- title: Manage FortiExtender and LAN extension
+  description: Configure FortiExtender controllers, profiles and data plans, and extension controller connections.
+  components:
+    extendercontroller_extender: Extender controller extender
+    extendercontroller_extender_controllerreport: Extender controller extender - controller report
+    extendercontroller_extender_modem1: Extender controller extender - modem 1
+    extendercontroller_extender_modem1_autoswitch: Extender controller extender - modem 1 - autoswitch
+    extendercontroller_extender_modem2: Extender controller extender - modem 2
+    extendercontroller_extender_modem2_autoswitch: Extender controller extender - modem 2 - autoswitch
+    extendercontroller_extender_wanextension: Extender controller extender - WAN extension
+    extensioncontroller_dataplan: FortiExtender dataplan configuration
+    extensioncontroller_extender: Extender controller configuration
+    extensioncontroller_extender_wanextension: Extender controller configuration - WAN extension
+    extensioncontroller_extenderprofile: FortiExtender extender profile configuration
+    extensioncontroller_extenderprofile_cellular: FortiExtender extender profile configuration - cellular
+    extensioncontroller_extenderprofile_cellular_controllerreport: FortiExtender extender profile configuration
+      - cellular - controller report
+    extensioncontroller_extenderprofile_cellular_modem1: FortiExtender extender profile configuration - cellular
+      - modem 1
+    extensioncontroller_extenderprofile_cellular_modem1_autoswitch: FortiExtender extender profile configuration
+      - cellular - modem 1 - autoswitch
+    extensioncontroller_extenderprofile_cellular_modem2_autoswitch: FortiExtender extender profile configuration
+      - cellular - modem 2 autoswitch
+    extensioncontroller_extenderprofile_cellular_smsnotification: FortiExtender extender profile configuration -
+      cellular - SMS notification
+    extensioncontroller_extenderprofile_cellular_smsnotification_alert: FortiExtender extender profile configuration
+      - cellular - SMS notification - alert
+    extensioncontroller_extenderprofile_cellular_smsnotification_receiver: FortiExtender extender profile configuration
+      - cellular - SMS notification - receiver
+    extensioncontroller_extenderprofile_wifi_radio1: FortiExtender extender profile configuration - wifi radio 1
+    extensioncontroller_extenderprofile_wifi_radio2: FortiExtender extender profile configuration - wifi radio 2
+    extensioncontroller_extendervap: FortiExtender wifi VAP configuration
+    extensioncontroller_fortigate: FortiGate controller configuration
+    extensioncontroller_fortigateprofile: FortiGate connector profile configuration
+    extensioncontroller_fortigateprofile_lanextension: FortiGate connector profile configuration - lan extension
+- title: Run FortiManager operations and gather facts
+  description: Gather device facts, send generic FortiManager API requests, and clone, move or rename managed objects.
+  components:
+    clone: Clone objects
+    fact: Device facts
+    generic: Generic API requests
+    move: Move objects
+    rename: Rename objects
+- title: Customize replacement messages and GUI
+  description: Customize replacement messages and message groups, images, custom languages and GUI themes shown
+    to users.
+  components:
+    system_customlanguage: Custom languages
+    system_replacemsg_admin: Replacement messages - admin
+    system_replacemsg_alertmail: Replacement messages - alert mail
+    system_replacemsg_auth: Replacement messages - auth
+    system_replacemsg_automation: Replacement messages - automation
+    system_replacemsg_custommessage: Replacement messages - custom message
+    system_replacemsg_devicedetectionportal: Replacement messages - device detection portal
+    system_replacemsg_fortiguardwf: Replacement messages - fortiguardwf
+    system_replacemsg_ftp: Replacement messages - FTP
+    system_replacemsg_http: Replacement messages - HTTP
+    system_replacemsg_icap: Replacement messages - ICAP
+    system_replacemsg_mail: Replacement messages - mail
+    system_replacemsg_mm1: Replacement messages - MM1
+    system_replacemsg_mm3: Replacement messages - MM3
+    system_replacemsg_mm4: Replacement messages - MM4
+    system_replacemsg_mm7: Replacement messages - MM7
+    system_replacemsg_mms: Replacement messages - MMS
+    system_replacemsg_nacquar: Replacement messages - nacquar
+    system_replacemsg_nntp: Replacement messages - NNTP
+    system_replacemsg_spam: Replacement messages - spam
+    system_replacemsg_sslvpn: Replacement messages - SSL VPN
+    system_replacemsg_trafficquota: Replacement messages - traffic quota
+    system_replacemsg_utm: Replacement messages - UTM
+    system_replacemsg_webproxy: Replacement messages - web proxy
+    system_replacemsggroup: Replacement message groups
+    system_replacemsggroup_admin: Replacement message groups - admin
+    system_replacemsggroup_alertmail: Replacement message groups - alert mail
+    system_replacemsggroup_auth: Replacement message groups - auth
+    system_replacemsggroup_automation: Replacement message groups - automation
+    system_replacemsggroup_custommessage: Replacement message groups - custom message
+    system_replacemsggroup_fortiguardwf: Replacement message groups - fortiguardwf
+    system_replacemsggroup_ftp: Replacement message groups - FTP
+    system_replacemsggroup_http: Replacement message groups - HTTP
+    system_replacemsggroup_icap: Replacement message groups - ICAP
+    system_replacemsggroup_mail: Replacement message groups - mail
+    system_replacemsggroup_nacquar: Replacement message groups - nacquar
+    system_replacemsggroup_spam: Replacement message groups - spam
+    system_replacemsggroup_sslvpn: Replacement message groups - SSL VPN
+    system_replacemsggroup_trafficquota: Replacement message groups - traffic quota
+    system_replacemsggroup_utm: Replacement message groups - UTM
+    system_replacemsggroup_webproxy: Replacement message groups - web proxy
+    system_replacemsgimage: Replacement message images
+    system_theme: Custom GUI themes
+- title: Set global system settings, DNS, time, VDOMs and messages
+  description: Configure global and VDOM settings, DNS, NTP and time zone, console, replacement messages, themes,
+    and other system-wide options.
+  components:
+    system_alias: CLI command aliases
+    system_console: Console settings
+    system_consoleserver: Console Server
+    system_consoleserver_entries: Console Server - entries
+    system_ddns: Dynamic DNS (DDNS)
+    system_dns: DNS settings
+    system_dns64: DNS64
+    system_dnsdatabase: DNS databases
+    system_dnsdatabase_dnsentry: DNS databases - DNS entry
+    system_dnsserver: DNS servers
+    system_emailserver: Email server
+    system_global: Global system attributes
+    system_icond: Industrial connectivity (iCOND)
+    system_ipsurlfilterdns: IPS URL filter DNS servers
+    system_ipsurlfilterdns6: IPS URL filter IPv6 DNS servers
+    system_ngfwsettings: IPS NGFW policy-mode VDOM settings
+    system_ntp: NTP
+    system_ntp_ntpserver: NTP - NTP server
+    system_proberesponse: Probe response
+    system_ptp: PTP
+    system_ptp_serverinterface: PTP - server interface
+    system_settings: VDOM settings
+    system_smcntp: SMC NTP
+    system_smcntp_ntpserver: SMC NTP - NTP server
+    system_smsserver: SMS server
+    system_timezone: Time zone
+    system_vdom: Virtual domains (VDOMs)
+    system_vdomdns: DNS servers for a non-management VDOM
+    system_vdomexception: VDOM exceptions
+    system_vdomlink: VDOM links
+    system_vdomproperty: VDOM resource properties
+    system_vinalarm: VIN alarm settings

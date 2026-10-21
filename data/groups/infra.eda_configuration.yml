@@ -1,0 +1,29 @@
+fqcn: infra.eda_configuration
+product: Event-Driven Ansible Controller
+use_cases:
+- title: Configure rulebook activations and their content
+  description: Manage credentials, decision environments, projects with syncs, and rulebook activations
+    in EDA Controller, as modules or as roles.
+  components:
+    credential: Credentials
+    decision_environment: Decision environments
+    project: Projects
+    project_sync: Project syncs
+    rulebook_activation: Rulebook activations
+    role:credential: Credentials role
+    role:decision_environment: Decision environments role
+    role:project: Projects role
+    role:project_sync: Project syncs role
+    role:rulebook_activation: Rulebook activations role
+- title: Manage users and tokens
+  description: Manage EDA Controller users and user tokens.
+  components:
+    user: Users
+    user_token: User tokens
+    role:user: Users role
+    role:user_token: User tokens role
+- title: Apply and query configuration as code
+  description: Run all object roles for which variables are defined and search the EDA API.
+  components:
+    role:dispatch: Configuration dispatch
+    lookup:eda_api: EDA API lookup

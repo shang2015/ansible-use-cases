@@ -1,0 +1,18 @@
+fqcn: ibm.ibm_zos_ims
+product: IBM IMS
+use_cases:
+- title: Generate IMS definitions and manage the catalog
+  description: Generate ACB, DBD and PSB definitions, populate and purge the IMS Catalog and submit DDL
+    statements.
+  components:
+    acb_gen: ACB generation
+    dbd_gen: DBD generation
+    psb_gen: PSB generation
+    catalog_populate: Catalog population
+    catalog_purge: Catalog purge
+    ddl: DDL statements
+- title: Run IMS and DBRC commands
+  description: Submit IMS and DBRC commands.
+  components:
+    command: IMS commands
+    dbrc: DBRC commands

@@ -1,0 +1,21 @@
+fqcn: infra.leapp
+product: RHEL in-place upgrade (Leapp)
+use_cases:
+- title: Analyze and remediate before the upgrade
+  description: Run the pre-upgrade analysis and remediate the findings.
+  components:
+    role:analysis: Analysis phase
+    role:remediate: Remediation phase
+    playbook:analysis: Pre-upgrade analysis
+    playbook:remediate: Remediation
+- title: Upgrade RHEL
+  description: Run the upgrade phase, upgrade high availability clusters in a rolling fashion and support
+    the process with logging, kernel module and RPM helpers.
+  components:
+    role:upgrade: Upgrade phase
+    role:common: Logging
+    playbook:upgrade: RHEL upgrade
+    playbook:rolling_upgrade_ha_cluster: Rolling HA cluster upgrade
+    modprobe: Kernel modules
+    sr_fingerprint: Syslog messages
+    filter:rpm_sort: RPM sorting

@@ -1,0 +1,8 @@
+fqcn: virsec.vsp
+product: Virsec Security Platform
+use_cases:
+- title: Install the Virsec Probe
+  description: Install the Virsec Probe on managed hosts so they can be monitored by the Virsec Security
+    Platform.
+  components:
+    role:vsp: Virsec Probe installation

@@ -1,0 +1,57 @@
+fqcn: microsoft.hyperv
+product: Microsoft Hyper-V
+use_cases:
+- title: Manage virtual machines
+  description: Create and configure Hyper-V VMs, including power state, boot, processors, memory, nested
+    virtualization, groups, tags and checkpoints.
+  components:
+    vm: Virtual machines
+    vm_state: Power states
+    vm_boot: Boot and firmware
+    processor: Processors
+    memory: Memory
+    nested_virt: Nested virtualization
+    integration_service: Integration services
+    com_port: COM ports
+    vm_group: VM groups
+    vm_tag: Metadata tags
+    checkpoint: Checkpoints
+    shielded_vm: Shielded VMs and key protectors
+    resource_pool: Resource pools
+- title: Manage VM storage
+  description: Manage virtual hard disks, SCSI controllers, DVD drives and ISO mounts, Fibre Channel adapters,
+    hardware passthrough and storage pools.
+  components:
+    vhd: VHD and VHDX files
+    hard_disk: Hard disk drives
+    scsi_controller: SCSI controllers
+    dvd_drive: DVD drives and ISOs
+    san_adapter: Virtual Fibre Channel HBAs
+    hardware_passthrough: Hardware passthrough
+    storage_pool: Storage pools
+- title: Manage virtual networking
+  description: Configure virtual switches, VM network adapters, ACLs and SDN network isolation.
+  components:
+    vswitch: Virtual switches
+    network_adapter: Network adapters
+    network_acl: Network ACLs
+    isolation: Network isolation
+- title: Move, replicate and cluster VMs
+  description: Live and storage migration, VM export and import, Hyper-V Replica, migration networks and
+    cluster maintenance and anti-affinity.
+  components:
+    vm_move: Live and storage migration
+    vm_transfer: VM export and import
+    replication: VM replication
+    replication_server: Replica server settings
+    migration_network: Migration networks
+    cluster_node_maintenance: Cluster node maintenance
+    cluster_group_set: Cluster group sets
+- title: Configure hosts and work inside guests
+  description: Configure Hyper-V hosts, wait for guest agents and IP addresses, and run scripts and copy
+    files inside guests.
+  components:
+    host: Hyper-V hosts
+    vm_guest_wait: Guest readiness
+    guest_command: Guest PowerShell commands
+    guest_copy: Guest file transfer

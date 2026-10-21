@@ -1,0 +1,19 @@
+fqcn: network.base
+product: Network device management
+use_cases:
+- title: Gather and persist network facts
+  description: Collect structured facts for network resources, list supported resource modules and save
+    facts to YAML.
+  components:
+    role:gather: Fact gathering
+    role:list: Supported resource modules
+    role:persist: Fact persistence
+    role:resource_manager: Resource manager
+- title: Configure, detect drift and remediate
+  description: Apply configuration from host_vars, deploy changes, detect configuration drift and remediate
+    it.
+  components:
+    role:configure: Configuration
+    role:deploy: Deployment
+    role:detect: Drift detection
+    role:remediate: Drift remediation

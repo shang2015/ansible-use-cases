@@ -1,0 +1,27 @@
+fqcn: f5networks.f5_platform_modernization
+product: F5 BIG-IP
+use_cases:
+- title: Migrate standalone BIG-IP devices
+  description: Back up a source BIG-IP, move configuration and UCS files to the destination, and run the
+    standalone migration in stages or in full.
+  components:
+    role:backup: Backup
+    role:f5_source: Source BIG-IP
+    role:f5_destination: Destination BIG-IP
+    playbook:standalone.migrate_standalone_full: Full standalone migration
+    playbook:standalone.migrate_standalone_pt1: Standalone migration part 1
+    playbook:standalone.migrate_standalone_pt2: Standalone migration part 2
+- title: Migrate high availability pairs
+  description: Migrate combined or sequential HA pairs in stages, including waiting for UCS restore.
+  components:
+    playbook:high_availability.migrate_ha_combined_pt1: Combined HA part 1
+    playbook:high_availability.migrate_ha_combined_pt2: Combined HA part 2
+    playbook:high_availability.migrate_ha_sequential_pt1: Sequential HA part 1
+    playbook:high_availability.migrate_ha_sequential_pt2: Sequential HA part 2
+    playbook:high_availability.migrate_ha_sequential_pt3: Sequential HA part 3
+    playbook:high_availability.ha_test_code: UCS restore wait
+- title: Prepare and clean up test applications
+  description: Create AS3 test applications at scale and remove all tenants.
+  components:
+    playbook:test_code.00_pre-setup_apps: AS3 test applications
+    playbook:test_code.00_delete_apps: Remove tenants

@@ -1,0 +1,116 @@
+fqcn: everpure.flasharray
+product: Everpure (Pure Storage) FlashArray
+notes:
+- Module names have the purefa_ prefix omitted.
+use_cases:
+- title: Provision volumes and connect hosts
+  description: Create volumes and volume groups, define hosts, host groups and VMware protocol endpoints,
+    and apply QoS and tags.
+  components:
+    volume: Volumes
+    volume_tags: Volume tags
+    vg: Volume groups
+    host: Hosts
+    hg: Host groups
+    endpoint: Protocol endpoints
+    qos_policy: QoS policies
+    tags: Resource tags
+- title: Protect data with snapshots and protection groups
+  description: Take volume snapshots, schedule protection group snapshots and replication, set SafeMode
+    defaults and eradication timers, and manage offload targets.
+  components:
+    snap: Volume snapshots
+    pg: Protection groups
+    pgsnap: Protection group snapshots
+    pgsched: Protection group schedules
+    default_protection: SafeMode default protection
+    eradication: Eradication timer
+    offload: Offload targets
+- title: Replicate and stretch across arrays
+  description: Connect arrays, and manage ActiveCluster pods and ActiveDR replica links.
+  components:
+    connect: Array connections
+    pod: Pods
+    pod_replica: Pod replica links
+- title: Provide file services
+  description: Manage file systems, directories, exports, file servers, policies, directory snapshots
+    and file copies.
+  components:
+    fs: File systems
+    directory: Directories
+    dirsnap: Directory snapshots
+    export: File exports
+    file: File copies
+    policy: File system policies
+    server: File servers
+- title: Configure array networking
+  description: Manage network interfaces, subnets, VLANs, network access policies, DNS and TLS policies.
+  components:
+    network: Network interfaces
+    subnet: Subnets
+    vlan: VLANs
+    network_access_policy: Network access policies
+    dns: DNS
+    tls_policy: TLS policies
+- title: Manage users, directory services and authentication
+  description: Manage local users, groups and API tokens, Active Directory, directory services and roles,
+    SAML, RBAC policies, certificates and KMIP.
+  components:
+    user: Local users
+    localuser: Local users (directory service)
+    localgroup: Local groups
+    lds: Local directory services
+    token: API tokens
+    apiclient: API clients
+    ad: Active Directory accounts
+    ds: Directory service
+    dsrole: Directory service roles
+    dsrole_old: Directory service roles (pre-6.6.3)
+    saml: SAML identity providers
+    policy_management_access: Management access policies
+    certs: SSL certificates
+    kmip: KMIP servers
+- title: Monitor the array and forward logs
+  description: Configure alerts, email, SNMP and syslog, review audits, messages and sessions, collect
+    metrics and manage phone home and remote assist.
+  components:
+    alert: Alert email
+    smtp: SMTP
+    snmp: SNMP managers
+    snmp_agent: SNMP agent
+    syslog: Syslog
+    syslog_settings: Syslog servers
+    logging: Audit and session logs
+    audits: Audit events
+    messages: Alert messages
+    sessions: Sessions
+    metrics: OpenMetrics data
+    phonehome: Phone home
+    proxy: Phone home proxy
+    ra: Remote assist
+- title: Administer array settings and lifecycle
+  description: Set array name, banners, timeouts, time, maintenance windows, EULA, hardware identification,
+    capacity expansion and erasure, and collect array information.
+  components:
+    admin: Global admin settings
+    arrayname: Array name
+    banner: Login banners
+    console: Console lock
+    timeout: GUI idle timeout
+    ntp: NTP
+    maintenance: Maintenance windows
+    eula: EULA
+    hardware: Hardware identification
+    cbsexpand: Cloud Block Store capacity
+    smis: SMI-S
+    vnc: VNC port
+    zte: Zero Touch Erasure
+    info: Array information
+    inventory: Inventory
+- title: Organise Fusion fleets and workloads
+  description: Manage Fusion fleets, workloads, realms and topology groups.
+  components:
+    fleet: Fleets
+    workload: Workloads
+    realm: Realms
+    tgroup: Topology groups

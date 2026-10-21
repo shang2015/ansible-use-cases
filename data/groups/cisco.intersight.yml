@@ -1,0 +1,161 @@
+fqcn: cisco.intersight
+product: Cisco Intersight
+notes:
+- Policy, pool and profile modules cover both configuration and read-only info queries.
+use_cases:
+- title: Define server hardware and boot policies
+  description: Configure BIOS and AI-optimized BIOS presets, boot order, memory, GPU, power, thermal,
+    firmware, storage and drive security, virtual media and adapter policies for servers.
+  components:
+    bios_policy: BIOS policies
+    bios_ai_tuning: AI-optimized BIOS presets
+    confidential_compute: Confidential computing BIOS policies
+    boot_order_policy: Boot order policies
+    memory_policy: Memory policies
+    memory_persistent_policy: Persistent memory policies
+    gpu_policy: GPU policies
+    power_policy: Power policies
+    thermal_policy: Thermal policies
+    firmware_policy: Firmware policies
+    storage_policy: Storage policies
+    ai_storage_policy: AI-optimized storage policies
+    drive_security_policy: Drive security policies
+    virtual_media_policy: Virtual media policies
+    adapter_config_policy: Adapter configuration policies
+    playbook:intersight_bios_policy: BIOS policy playbook
+    playbook:intersight_boot_order_policy: Boot order policy playbook
+    playbook:intersight_virtual_media_policy: Virtual media policy playbook
+    playbook:pxe_boot: PXE boot policy playbook
+- title: Define management, access and monitoring policies
+  description: Configure IMC access, IPMI over LAN, KVM, SSH, LDAP and local users, certificates, device
+    connector, network connectivity, NTP, SMTP, SNMP and syslog policies.
+  components:
+    imc_access_policy: IMC access policies
+    ipmi_over_lan_policy: IPMI over LAN policies
+    kvm_policy: Virtual KVM policies
+    ssh_policy: SSH policies
+    ldap_policy: LDAP policies
+    local_user_policy: Local user policies
+    certificate_management_policy: Certificate management policies
+    device_connector_policy: Device connector policies
+    network_connectivity_policy: Network connectivity policies
+    ntp_policy: NTP policies
+    smtp_policy: SMTP policies
+    snmp_policy: SNMP policies
+    syslog_policy: Syslog policies
+    playbook:intersight_imc_access_policy: IMC access policy playbook
+    playbook:intersight_oob_imc_access_policy: Out-of-band IMC access policy playbook
+    playbook:intersight_ntp_policy: NTP policy playbook
+- title: Configure server Ethernet connectivity
+  description: Define LAN connectivity policies with vNICs, vNIC templates, Ethernet adapter, network
+    control, network group and QoS policies.
+  components:
+    lan_connectivity_policy: LAN connectivity policies and vNICs
+    vnic_template: vNIC templates
+    ethernet_adapter_policy: Ethernet adapter policies
+    ethernet_network_control_policy: Ethernet network control policies
+    ethernet_network_group_policy: Ethernet network group policies
+    ethernet_qos_policy: Ethernet QoS policies
+    playbook:intersight_lan_connectivity_policy: LAN connectivity policy playbook
+    playbook:intersight_vnic_template: vNIC template playbook
+    playbook:intersight_attach_vnic_template: vNIC template attachment playbook
+    playbook:intersight_eth_network: Ethernet network VLAN report playbook
+- title: Configure server SAN, Fibre Channel and iSCSI connectivity
+  description: Define SAN connectivity policies with vHBAs, vHBA templates, Fibre Channel adapter, network,
+    QoS and zone policies, and iSCSI adapter, boot and static target policies.
+  components:
+    san_connectivity_policy: SAN connectivity policies and vHBAs
+    vhba_template: vHBA templates
+    fibre_channel_adapter_policy: Fibre Channel adapter policies
+    fibre_channel_network_policy: Fibre Channel network policies
+    fibre_channel_qos_policy: Fibre Channel QoS policies
+    fibre_channel_zone_policy: Fibre Channel zone policies
+    iscsi_adapter_policy: iSCSI adapter policies
+    iscsi_boot_policy: iSCSI boot policies
+    iscsi_static_target_policy: iSCSI static target policies
+    playbook:attach_vhba_template: vHBA template attachment playbook
+- title: Configure UCS domains and fabric policies
+  description: Manage UCS domain profiles and chassis profiles, and the fabric port, VLAN, VSAN, multicast,
+    flow control, link, MACsec, switch control and system QoS policies they use.
+  components:
+    domain: UCS domain profiles
+    chassis_profile: Chassis profiles
+    port_policy: Port policies
+    vlan_policy: VLAN policies and VLANs
+    vsan_policy: VSAN policies and VSANs
+    multicast_policy: Multicast policies
+    flow_control_policy: Flow control policies
+    link_aggregation_policy: Link aggregation policies
+    link_control_policy: Link control policies
+    macsec_policy: MACsec policies
+    switch_control_policy: Switch control policies
+    system_qos_policy: System QoS policies
+    playbook:intersight_domain_profile: Domain profile playbook
+    playbook:deploy_domain_profile: Domain profile deployment preview playbook
+    playbook:intersight_port_policy: Fabric port policy playbook
+    playbook:port_policy_json_patch: Fabric port policy JSON patch playbook
+- title: Allocate identity pools
+  description: Manage IP, IQN, MAC, UUID and WWN pools and reserve identifiers in them.
+  components:
+    ip_pool: IP pools
+    iqn_pool: IQN pools
+    mac_pool: MAC pools
+    uuid_pool: UUID pools
+    wwn_pool: WWNN and WWPN pools
+    pool_reservation: Pool reservations
+- title: Create and deploy server profiles
+  description: Create server profiles and templates, derive profiles from templates, qualify servers for
+    pools, define Unified Edge profiles and assign or deploy profiles to servers.
+  components:
+    server_profile: Server profiles
+    server_profile_template: Server profile templates
+    server_profile_derive: Derived server profiles
+    server_pool_qualification_policy: Server pool qualification policies
+    unified_edge_profile: Unified Edge profile templates
+    playbook:intersight_server_profile: Server profile playbook
+    playbook:intersight_server_profile_template: Server profile template playbook
+    playbook:profile_with_buckets: Policy bucket profile playbook
+    playbook:only_new_server_profiles: Unassigned server profiles playbook
+    playbook:assign_server_to_profile: Server profile assignment playbook
+    playbook:deploy_server_profiles: Server profile deployment playbook
+- title: Administer organizations, claims and API access
+  description: Manage organizations and resource groups, claim devices as targets and call the Intersight
+    REST API directly.
+  components:
+    organization: Organizations
+    resource_group: Resource groups
+    target_claim: Target claims
+    rest_api: REST API calls
+    playbook:claim_device: Device claim playbook
+- title: Operate servers
+  description: Update server firmware, run power and other server actions, and disable alarm suppression.
+  components:
+    playbook:server_firmware: Server firmware update playbook
+    playbook:firmware_direct_download: Firmware direct download playbook
+    playbook:server_actions: Server actions playbook
+    playbook:alarm_suppression: Alarm suppression playbook
+- title: Report on inventory and build Ansible inventories
+  description: Gather Intersight information, count servers and VMs, report HCL status and GPU servers,
+    and generate Ansible inventory files from Intersight.
+  components:
+    info: Intersight information
+    playbook:intersight_info: Object count playbook
+    playbook:count_servers: Server count playbook
+    playbook:count_vms: VM count playbook
+    playbook:intersight_vm_hosts: VM hosts CSV playbook
+    playbook:gpu_servers_to_csv: GPU servers CSV playbook
+    playbook:hcl_status: HCL status playbook
+    playbook:update_all_inventory: All-servers inventory playbook
+    playbook:update_standalone_inventory: Standalone C-Series inventory playbook
+    playbook:update_hx_inventory: HyperFlex inventory playbook
+    playbook:update_hx_edge_inventory: HyperFlex Edge inventory playbook
+- title: Deploy solution blueprints
+  description: Configure policies and profiles for AI Pod, cloud object storage and HyperFlex clusters,
+    and run orchestration and workload definition workflows.
+  components:
+    playbook:ai_pod: AI Pod playbook
+    playbook:cos_server_policies_and_profiles: Cloud object storage playbook
+    playbook:hyperflex_cluster_profiles: HyperFlex cluster profiles playbook
+    playbook:hyperflex_edge_cluster_profiles: HyperFlex Edge cluster profiles playbook
+    playbook:ova_workflow: OVA orchestration workflow playbook
+    playbook:workload_definition: Workload definition playbook

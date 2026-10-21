@@ -1,0 +1,13 @@
+fqcn: redhat.satellite_operations
+product: Red Hat Satellite
+use_cases:
+- title: Install, back up and monitor Red Hat Satellite
+  description: Run the Satellite installer, generate Capsule certificate bundles, schedule backups, connect
+    to Red Hat Cloud and gather performance metrics with Performance Co-Pilot and Grafana.
+  components:
+    role:installer: Satellite installer
+    role:fake_installer_rpm: Installer RPM placeholder
+    role:capsule_certs_generate: Capsule certificate bundles
+    role:backup: Backup cron job
+    role:cloud_connector: Red Hat Cloud Connector
+    role:metrics: Performance metrics (PCP and Grafana)

@@ -1,0 +1,142 @@
+fqcn: amazon.aws
+product: Amazon Web Services
+notes:
+- Most modules cover both management and read-only info queries for the same resource.
+use_cases:
+- title: Manage EC2 instances and images
+  description: Launch and manage EC2 instances, spot and dedicated hosts, AMIs, key pairs, launch templates,
+    tags and instance metadata.
+  components:
+    ec2_instance: EC2 instances
+    ec2_instance_type: Instance types
+    ec2_spot_instance: Spot instances
+    ec2_dedicated_host: Dedicated hosts
+    ec2_placement_group: Placement groups
+    ec2_launch_template: Launch templates
+    ec2_ami: AMIs
+    ec2_import_image: Image imports
+    ec2_key: Key pairs
+    ec2_tag: Tags
+    ec2_metadata: Instance metadata
+- title: Scale compute with Auto Scaling
+  description: Manage Auto Scaling groups, their instances and instance refreshes.
+  components:
+    autoscaling_group: Auto Scaling groups
+    autoscaling_instance: Auto Scaling instances
+    autoscaling_instance_refresh: Instance refreshes
+- title: Manage block storage and S3
+  description: Create and attach EBS volumes and snapshots, manage S3 buckets and objects.
+  components:
+    ec2_vol: EBS volumes
+    ec2_snapshot: EBS snapshots
+    s3_bucket: S3 buckets
+    s3_object: S3 objects
+- title: Build VPC networking
+  description: Create VPCs, subnets, route tables, gateways, endpoints, peering, VPN, transit gateways,
+    network ACLs, ENIs and elastic IPs.
+  components:
+    ec2_vpc_net: VPCs
+    ec2_vpc_subnet: Subnets
+    ec2_vpc_route_table: Route tables
+    ec2_vpc_igw: Internet gateways
+    ec2_vpc_egress_igw: Egress-only internet gateways
+    ec2_vpc_nat_gateway: NAT gateways
+    ec2_vpc_dhcp_option: DHCP option sets
+    ec2_vpc_nacl: Network ACLs
+    ec2_vpc_endpoint: VPC endpoints
+    ec2_vpc_endpoint_service: Endpoint services
+    ec2_vpc_peering: VPC peering
+    ec2_vpc_vgw: VPN gateways
+    ec2_vpc_vpn: VPN connections
+    ec2_transit_gateway: Transit gateways
+    ec2_transit_gateway_vpc_attachment: Transit gateway attachments
+    ec2_eni: Network interfaces
+    ec2_eip: Elastic IPs
+    ec2_security_group: Security groups
+- title: Balance load and manage DNS
+  description: Manage application and classic load balancers, Route 53 zones, records, health checks and
+    signing keys.
+  components:
+    elb_application_lb: Application load balancers
+    elb_classic_lb: Classic load balancers
+    route53_zone: Route 53 zones
+    route53: Route 53 records
+    route53_health_check: Route 53 health checks
+    route53_key_signing_key: Route 53 key signing keys
+- title: Manage identity, access and encryption
+  description: Manage IAM users, groups, roles, policies, access keys, instance profiles, password policy,
+    KMS keys and temporary credentials.
+  components:
+    iam_user: IAM users
+    iam_group: IAM groups
+    iam_role: IAM roles
+    iam_policy: Inline policies
+    iam_managed_policy: Managed policies
+    iam_access_key: Access keys
+    iam_instance_profile: Instance profiles
+    iam_mfa_device: MFA devices
+    iam_password_policy: Password policy
+    kms_key: KMS keys
+    sts_assume_role: Assumed role credentials
+- title: Run serverless functions
+  description: Create Lambda functions, layers, aliases, event mappings and policies, and invoke functions.
+  components:
+    lambda: Lambda functions
+    lambda_alias: Function aliases
+    lambda_event: Event mappings
+    lambda_layer: Layers
+    lambda_policy: Policies
+    lambda_execute: Function invocation
+- title: Run managed databases on RDS
+  description: Manage RDS instances, Aurora clusters, parameter, option and subnet groups, and snapshots.
+  components:
+    rds_instance: RDS instances
+    rds_cluster: RDS clusters
+    rds_global_cluster: Global clusters
+    rds_engine_versions: Engine versions
+    rds_instance_param_group: Instance parameter groups
+    rds_cluster_param_group: Cluster parameter groups
+    rds_option_group: Option groups
+    rds_subnet_group: Subnet groups
+    rds_instance_snapshot: Instance snapshots
+    rds_cluster_snapshot: Cluster snapshots
+    rds_snapshot: Snapshot queries
+- title: Back up resources
+  description: Define backup plans, vaults, selections and tags, and review restore jobs.
+  components:
+    backup_plan: Backup plans
+    backup_vault: Backup vaults
+    backup_selection: Backup selections
+    backup_tag: Backup tags
+    backup_restore_job: Restore jobs
+- title: Provision stacks and monitor activity
+  description: Deploy CloudFormation stacks, record CloudTrail, create CloudWatch alarms, rules and log
+    groups.
+  components:
+    cloudformation: CloudFormation stacks
+    cloudtrail: CloudTrail
+    cloudwatch_metric_alarm: Metric alarms
+    cloudwatchevent_rule: Event rules
+    cloudwatchlogs_log_group: Log groups
+    cloudwatchlogs_log_group_metric_filter: Log metric filters
+- title: Discover AWS accounts, regions and secrets
+  description: Look up account, region and zone details, service IP ranges, Secrets Manager and SSM parameters.
+  components:
+    aws_caller: Caller identity
+    aws_az: Availability zones
+    aws_region: Regions
+    lookup:aws_account_attribute: Account attributes
+    lookup:aws_collection_constants: Collection constants
+    lookup:aws_service_ip_ranges: Service IP ranges
+    lookup:secretsmanager_secret: Secrets Manager secrets
+    lookup:ssm_parameter: SSM parameters
+- title: Use AWS inventory, connections and events
+  description: Build inventory from EC2 and RDS, connect through Systems Manager and react to CloudTrail
+    and SQS events.
+  components:
+    inventory:aws_ec2: EC2 inventory
+    inventory:aws_rds: RDS inventory
+    connection:aws_ssm: Systems Manager connection
+    eda_event_source:aws_cloudtrail: CloudTrail events
+    eda_event_source:aws_sqs_queue: SQS queue events
+    callback:aws_resource_actions: Resource actions summary

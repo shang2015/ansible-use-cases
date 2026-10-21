@@ -1,0 +1,7 @@
+fqcn: infra.ansible_rekey_variables
+product: "Ansible Vault"
+use_cases:
+- title: "Change the vault password of inventory variables"
+  description: "Re-encrypt inventory variables with a new vault password."
+  components:
+    "role:rekey_variable": "Rekey variables"

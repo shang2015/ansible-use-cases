@@ -1,0 +1,57 @@
+fqcn: os_migrate.vmware_migration_kit
+product: VMware to OpenStack migration
+use_cases:
+- title: Prepare and validate the migration
+  description: Run pre-checks, set up requirements and conversion hosts, and export and convert VMware
+    guest metadata for OpenStack.
+  components:
+    role:prelude: Preflight validation
+    role:conversion_host: Conversion hosts
+    role:export_metadata: VMware metadata export
+    role:convert_metadata: Metadata conversion
+    playbook:pre_checks: Pre-migration checks
+    playbook:setup_requirements: Setup requirements
+    playbook:conversion_host_content: Conversion host content
+    playbook:gather_guest_metadata: Guest metadata export
+    playbook:convert_metadata: Metadata export
+    playbook:import_volumes: Migrator preparation
+    playbook:migration: Pre-checks run
+    playbook:migration_v2v: Requirements setup
+    warn: Warnings
+- title: Migrate VMware workloads to OpenStack
+  description: Migrate VMs, import VMware volumes, and create OpenStack servers and network ports from
+    source VM information.
+  components:
+    role:import_workloads: Workload import
+    migrate: VM migration
+    import_vmware_volume: VMware volume import
+    create_server: OpenStack servers
+    create_network_port: Network ports
+    playbook:run_migration_from_conversion_host: Migrate VMs from conversion host
+- title: Map and manage flavors
+  description: Pick the best matching flavor for a guest, export VMware definitions to flavors and import
+    or remove flavors in OpenStack.
+  components:
+    best_match_flavor: Best-match flavor
+    export_flavor: Flavor export
+    import_flavor: Flavor import
+    delete_flavor: Flavor deletion
+    flavor: Flavor details
+- title: Wrap migrated workloads in Heat stacks
+  description: Generate Heat templates for migrated VMs, create, wrap or abandon stacks and discover existing
+    instances.
+  components:
+    generate_heat_template: Heat templates
+    create_heat_stack: Heat stacks
+    discover_heat_wrap: Migrated instance discovery
+    abandon_heat_stack: Abandon Heat stack
+    playbook:wrap_heat_stack: Wrap Heat stack
+    playbook:abandon_heat_stack: Abandon Heat stack playbook
+- title: Inspect and clean up OpenStack resources
+  description: Query volume details and metadata, and delete servers, ports and volumes.
+  components:
+    volume: Volume details
+    volume_metadata: Volume metadata
+    delete_server: Server deletion
+    delete_port: Port deletion
+    delete_volume: Volume deletion

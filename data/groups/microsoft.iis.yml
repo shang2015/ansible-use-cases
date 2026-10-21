@@ -1,0 +1,12 @@
+fqcn: microsoft.iis
+product: "Microsoft IIS"
+use_cases:
+- title: "Manage IIS websites and applications"
+  description: "Configure IIS websites, web applications, application pools, virtual directories, authentication and default document order."
+  components:
+    "website": "Websites"
+    "web_application": "Web applications"
+    "web_app_pool": "Application pools"
+    "virtual_directory": "Virtual directories"
+    "authentication": "Authentication"
+    "page_order": "Default document order"

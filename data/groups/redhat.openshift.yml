@@ -1,0 +1,25 @@
+fqcn: redhat.openshift
+product: Red Hat OpenShift
+use_cases:
+- title: Deploy and expose applications
+  description: Manage OpenShift objects, process templates, start builds, import images and expose services
+    as routes.
+  components:
+    k8s: OpenShift objects
+    openshift_process: Templates
+    openshift_build: Builds
+    openshift_import_image: Image imports
+    openshift_route: Routes
+    openshift_registry: Integrated registry information
+    connection:oc: oc connection
+- title: Administer clusters and clean up resources
+  description: Authenticate to clusters, sync groups from external providers, migrate template instances
+    and prune builds, deployments, images and authorization references.
+  components:
+    openshift_auth: Cluster login
+    openshift_adm_groups_sync: Group sync
+    openshift_adm_migrate_template_instances: Template instance migration
+    openshift_adm_prune_auth: Authorization pruning
+    openshift_adm_prune_builds: Build pruning
+    openshift_adm_prune_deployments: Deployment pruning
+    openshift_adm_prune_images: Image pruning

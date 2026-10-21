@@ -1,0 +1,17 @@
+fqcn: cyberark.isp
+product: "CyberArk Identity Security Platform"
+use_cases:
+- title: "Manage privileged accounts, safes and platforms"
+  description: "Create and update CyberArk accounts, safes, safe members, users, applications and platforms, and authenticate to the Identity Security Platform."
+  components:
+    "authentication": "Authentication"
+    "account": "Accounts"
+    "safe": "Safes"
+    "safe_member": "Safe members"
+    "user": "Users"
+    "application": "Applications"
+    "platform": "Platforms"
+- title: "Retrieve credentials at run time"
+  description: "Retrieve credentials from the Secrets Manager Central Credential Provider for use in playbooks."
+  components:
+    "credential": "Credentials"

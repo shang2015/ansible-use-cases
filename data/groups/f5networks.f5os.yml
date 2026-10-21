@@ -1,0 +1,79 @@
+fqcn: f5networks.f5os
+product: F5OS (rSeries and VELOS)
+use_cases:
+- title: Manage tenants and VELOS partitions
+  description: Deploy and manage tenants and their images and console access on rSeries and VELOS, and
+    manage VELOS chassis partitions and their high availability.
+  components:
+    f5os_tenant: Tenants
+    f5os_tenant_image: Tenant images
+    f5os_tenant_console_enable: Tenant console access
+    f5os_tenant_wait: Tenant wait
+    velos_partition: VELOS partitions
+    velos_partition_ha_config: Partition high availability
+    velos_partition_image: Partition images
+    velos_partition_change_password: Partition password
+    velos_partition_wait: Partition wait
+- title: Configure ports, VLANs and Layer 2
+  description: Configure interfaces, port groups, LAGs, VLANs, LLDP, spanning tree, forwarding database
+    entries and management interfaces.
+  components:
+    f5os_interface: Interfaces
+    f5os_portgroup: Port groups
+    f5os_lag: LAGs
+    f5os_vlan: VLANs
+    f5os_lldp_config: LLDP
+    f5os_stp_config: Spanning tree
+    f5os_fdb: Forwarding database
+    rseries_management_interfaces: rSeries management interfaces
+    velos_controller_management_interfaces: VELOS controller management interfaces
+- title: Configure quality of service
+  description: Configure QoS mappings, meter groups and traffic priorities.
+  components:
+    f5os_qos_mapping: QoS mappings
+    f5os_qos_meter_group: QoS meter groups
+    f5os_qos_traffic_priority: QoS traffic priorities
+- title: Manage users, authentication and certificates
+  description: Manage users and passwords, LDAP and external authentication, login policy, client certificate
+    authentication, TLS certificates, allowed IPs, appliance mode and the primary key.
+  components:
+    f5os_user: Users and roles
+    f5os_user_password_change: User passwords
+    f5os_auth: Authentication settings
+    f5os_auth_ldap: LDAP configuration
+    f5os_auth_server: Authentication server groups
+    f5os_login_policy: Login policy
+    f5os_client_cert_auth: Client certificate authentication
+    f5os_tls_cert_key: TLS certificate and key
+    f5os_import_tls_cert_key: TLS certificate and key import
+    f5os_allowed_ips: Allowed IPs
+    f5os_appliance_mode: Appliance mode
+    f5os_primarykey: Primary key
+- title: Configure system services
+  description: Configure system settings, DNS, NTP, proxy, banners, SNMP, logging and audit logging, and
+    license activation.
+  components:
+    f5os_system: System settings
+    f5os_dns: DNS
+    f5os_ntp_server: NTP servers
+    f5os_proxy_server: Proxy server
+    f5os_banner: Login banner and MoTD
+    f5os_snmp: SNMP
+    f5os_logging: Logging
+    f5os_audit_log: Audit logging
+    f5os_license: Licensing
+- title: Upgrade software and protect configuration
+  description: Import and install system images, back up and restore configuration, and generate qkview
+    diagnostics.
+  components:
+    f5os_system_image_import: System image import
+    f5os_system_image_install: System software install
+    f5os_config_backup: Configuration backup
+    f5os_config_restore: Configuration restore
+    f5os_qkview: Qkview generation
+- title: Gather facts and health
+  description: Collect device facts, device information and system health.
+  components:
+    f5os: Facts
+    f5os_device: Device information
+    f5os_system_health: System health

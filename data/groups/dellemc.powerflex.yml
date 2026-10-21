@@ -1,0 +1,109 @@
+fqcn: dellemc.powerflex
+product: Dell PowerFlex
+notes:
+- Each module has a matching sample playbook (modules.*); _v2 modules target PowerFlex 5.x (Gen2) systems.
+use_cases:
+- title: Provision volumes, snapshots and clones
+  description: Create and map volumes, take snapshots, schedule snapshot policies and create thin clones.
+  components:
+    volume: Volumes
+    volume_v2: Volumes (5.x)
+    snapshot: Snapshots
+    snapshot_v2: Snapshots (5.x)
+    snapshot_policy: Snapshot policies
+    thin_clone: Thin clones (5.x)
+    playbook:modules.thin_clone_example: Thin clone sample playbook
+    playbook:modules.volume: Volumes sample playbook
+    playbook:modules.volume_v2: Volumes (5.x) sample playbook
+    playbook:modules.snapshot: Snapshots sample playbook
+    playbook:modules.snapshot_v2: Snapshots (5.x) sample playbook
+    playbook:modules.snapshot_policy: Snapshot policies sample playbook
+- title: Manage protection domains, pools and devices
+  description: Create protection domains, storage pools, fault sets, devices, device groups and storage
+    nodes.
+  components:
+    protection_domain: Protection domains
+    protection_domain_v2: Protection domains (5.x)
+    storagepool: Storage pools
+    storagepool_v2: Storage pools (5.x)
+    fault_set: Fault sets
+    device: Devices
+    device_v2: Devices (5.x)
+    device_group: Device groups (5.x)
+    storage_node: Storage nodes (5.x)
+    playbook:modules.protection_domain: Protection domains sample playbook
+    playbook:modules.protection_domain_v2: Protection domains (5.x) sample playbook
+    playbook:modules.storagepool: Storage pools sample playbook
+    playbook:modules.storagepool_v2: Storage pools (5.x) sample playbook
+    playbook:modules.fault_set: Fault sets sample playbook
+    playbook:modules.device: Devices sample playbook
+    playbook:modules.device_v2: Devices (5.x) sample playbook
+    playbook:modules.device_group: Device groups (5.x) sample playbook
+    playbook:modules.storage_node: Storage nodes (5.x) sample playbook
+- title: Manage cluster components and hosts
+  description: Manage the MDM cluster, SDCs, SDSs, SDTs and NVMe hosts.
+  components:
+    mdm_cluster: MDM cluster
+    sdc: SDCs
+    sds: SDSs
+    sdt: SDTs (NVMe targets)
+    nvme_host: NVMe hosts
+    playbook:modules.mdm_cluster: MDM cluster sample playbook
+    playbook:modules.sdc: SDCs sample playbook
+    playbook:modules.sds: SDSs sample playbook
+    playbook:modules.sdt: SDTs (NVMe targets) sample playbook
+    playbook:modules.nvme_host: NVMe hosts sample playbook
+- title: Replicate volumes between systems
+  description: Manage replication pairs and replication consistency groups.
+  components:
+    replication_pair: Replication pairs
+    replication_consistency_group: Replication consistency groups
+    playbook:modules.replication_pair: Replication pairs sample playbook
+    playbook:modules.replication_consistency_group: Replication consistency groups sample playbook
+- title: Deploy resource groups
+  description: Manage resource group deployments.
+  components:
+    resource_group: Resource groups
+    playbook:modules.resource_group: Resource groups sample playbook
+- title: Install and uninstall PowerFlex components
+  description: Install or remove the MDM, SDS, SDC, SDT, SDR, gateway, ActiveMQ, LIA, tie-breaker and
+    web UI, then configure protection domains, fault sets and pools.
+  components:
+    role:powerflex_common: Common functions
+    role:powerflex_mdm: MDM
+    role:powerflex_tb: Tie-breaker
+    role:powerflex_sds: SDS
+    role:powerflex_sdc: SDC
+    role:powerflex_sdt: SDT
+    role:powerflex_sdr: SDR
+    role:powerflex_lia: LIA
+    role:powerflex_gateway: Gateway
+    role:powerflex_activemq: ActiveMQ
+    role:powerflex_webui: Web UI
+    role:powerflex_config: Protection domain, fault set and pool configuration
+    playbook:roles.site: Installation
+    playbook:roles.site_powerflex45: Installation (4.5)
+    playbook:roles.uninstall_powerflex: SDC uninstall
+    playbook:roles.uninstall_powerflex45: SDC uninstall (4.5)
+- title: Provision Gen2 (5.x) storage with roles
+  description: Provision devices, storage nodes, infrastructure, volumes and snapshots on PowerFlex Gen2
+    systems.
+  components:
+    role:powerflex_provisioning_v2: Gen2 provisioning
+    playbook:roles.powerflex_provisioning_v2_devices: Device and storage node provisioning
+    playbook:roles.powerflex_provisioning_v2_infrastructure: Infrastructure provisioning
+    playbook:roles.powerflex_provisioning_v2_volumes: Volume lifecycle
+    playbook:roles.powerflex_provisioning_v2_snapshots: Snapshot and thin clone management
+- title: Query, validate and diagnose the system
+  description: Gather system information, detect Gen2 systems, and validate configuration and diagnostics.
+  components:
+    info: System information
+    info_v2: System information (5.x)
+    role:powerflex_common_v2: Gen2 detection and validation
+    role:powerflex_system_v2: Gen2 queries, validation and diagnostics
+    playbook:roles.powerflex_common_v2: Gen2 detection and validation
+    playbook:roles.powerflex_system_v2_queries: Gen2 system queries
+    playbook:roles.powerflex_system_v2_validation: Gen2 configuration validation
+    playbook:roles.powerflex_system_v2_diagnostics: Gen2 diagnostics
+    playbook:modules.info: System information sample playbook
+    playbook:modules.info_v2: System information (5.x) sample playbook

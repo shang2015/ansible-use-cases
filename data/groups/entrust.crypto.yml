@@ -1,0 +1,8 @@
+fqcn: entrust.crypto
+product: "Entrust Certificate Authority Gateway"
+use_cases:
+- title: "Request and manage certificates from Entrust"
+  description: "Request, get, hold, unhold and revoke SSL/TLS certificates through the CAGW API."
+  components:
+    "cagw_certificate": "CAGW certificates"
+    "role:cagw_certificate": "CAGW certificate role"

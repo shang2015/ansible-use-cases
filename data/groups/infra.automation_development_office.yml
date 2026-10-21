@@ -1,0 +1,190 @@
+fqcn: infra.automation_development_office
+product: Red Hat Ansible Automation Platform, OpenShift and RHEL platform services
+notes:
+- A collection of roles and playbooks that stand up supporting platform services (AAP, Satellite, identity,
+  observability, developer tools) mostly on OpenShift and RHEL.
+use_cases:
+- title: Install and configure Ansible Automation Platform
+  description: Install AAP on OpenShift or RHEL, configure its objects, build execution environment images
+    and generate bootstrap content for new components.
+  components:
+    role:install_aap: AAP installation
+    role:aap_configuration: AAP configuration
+    role:aap_build_ee: Execution environment image build
+    role:ocp_aap_hub_harden: Automation Hub hardening
+    role:bootstrap_controller: Controller objects bootstrap
+    role:bootstrap_flatten_vars: Bootstrap variable flattening
+    role:bootstrap_framework_defaults: Bootstrap framework defaults
+    role:bootstrap_generate_env_vars: Bootstrap environment variables
+    role:bootstrap_generate_playbook_repo: Bootstrap playbook repository
+    role:bootstrap_resolve_component: Bootstrap component resolution
+- title: Manage AWS resources
+  description: Copy AMIs between regions, create, modify, query and delete EC2 instances, and set or read
+    S3 bucket policies.
+  components:
+    ec2_ami_copy: AMI copies
+    playbook:aws.ec2.ado_ec2_instance_create: EC2 instance creation
+    playbook:aws.ec2.ado_ec2_instance_modify: EC2 instance modification
+    playbook:aws.ec2.ado_ec2_instance_info: EC2 instance information
+    playbook:aws.ec2.ado_ec2_instance_delete: EC2 instance deletion
+    playbook:aws.s3.ado_s3_bucket_policy_set: S3 bucket policy (inline)
+    playbook:aws.s3.ado_s3_bucket_policy_set_from_file: S3 bucket policy (from file)
+    playbook:aws.s3.ado_s3_bucket_policy_info: S3 bucket policy information
+- title: Operate and harden RHEL hosts
+  description: Patch hosts, manage repositories, services, mounts and cron schedules, call RHEL system
+    roles, gather facts and apply DISA STIG compliance.
+  components:
+    role:rhel_patching: Patching
+    role:rhel_repos: Repositories
+    role:rhel_services_management: Services
+    role:rhel_mount: Filesystem mounts
+    role:rhel_cron: Special cron schedules
+    role:rhel_facts: RHEL facts
+    role:rhel_ext_system_roles: RHEL system roles wrapper
+    role:rhel_stig_cac: DISA STIG compliance
+- title: Install and configure Red Hat Satellite
+  description: Install Satellite and Capsule servers, configure Satellite, manage content views and register
+    RHEL hosts.
+  components:
+    role:satellite_install: Satellite installation
+    role:capsule_install: Capsule installation
+    role:satellite_config: Satellite configuration
+    role:satellite_content_view: Content views
+    role:satellite_oidc: Satellite OIDC login
+    role:rhel_sat_reg: Host registration to Satellite
+- title: Set up identity management and directory services
+  description: Deploy IdM servers, replicas, clients and DNS, establish IdM and Active Directory trust,
+    and install 389 Directory Server.
+  components:
+    role:idm_server: IdM servers
+    role:idm_configure_replica: IdM replicas
+    role:idm_client: IdM clients
+    role:idm_dns: IdM DNS
+    role:idm_ad_trust: IdM and AD trust
+    role:install_dirsrv: Directory Server installation
+    role:ocp_search_dirsrv: Directory Server search
+- title: Manage Keycloak (Red Hat build of Keycloak)
+  description: Install Red Hat build of Keycloak and manage realms, clients, client scopes, groups, users,
+    mappers, identity providers and federation, and connect NetBox to it.
+  components:
+    role:install_rhbk: Keycloak installation
+    role:rhbk_realm: Realms
+    role:rhbk_client: Clients
+    role:rhbk_client_scope: Client scopes
+    role:rhbk_groups: Groups
+    role:rhbk_users: Users
+    role:rhbk_setup_mapper: Mappers
+    role:rhbk_manage_idp: Identity providers
+    role:rhbk_manage_federation: Federation
+    role:netbox_oidc: NetBox OIDC login
+- title: Deploy observability, logging and monitoring
+  description: Install Grafana and manage its data sources, folders, dashboards and alerts, deploy Elasticsearch,
+    Loki, OpenShift logging and Zabbix, and export login and workspace metrics.
+  components:
+    role:install_grafana: Grafana on RHEL
+    role:grafana_install: Grafana on OpenShift
+    role:grafana_create_datasource: Grafana data sources
+    role:grafana_manage_folders: Grafana folders
+    role:grafana_upload_dashboards: Grafana dashboards
+    role:grafana_upload_alerts: Grafana alerts
+    playbook:grafana.ado-grafana-datasources: Grafana data sources playbook
+    playbook:grafana.ado-grafana-folders: Grafana folders playbook
+    playbook:grafana.ado-grafana-dashboards: Grafana dashboards playbook
+    playbook:grafana.ado-grafana-alerts: Grafana alerts playbook
+    playbook:grafana.ado-grafana-content: Grafana content sync playbook
+    role:install_elastic: Elasticsearch installation
+    role:elastic: Elasticsearch and Kibana
+    role:ocp_logging: OpenShift logging
+    role:ocp_loki: Loki
+    role:ocp_zabbix: Zabbix monitoring stack
+    role:keycloak_login_events_exporter: Keycloak login events exporter
+    playbook:rhbk.ado-rhbk-login-events-exporter: Keycloak login events exporter playbook
+    playbook:devspaces.ado-devspaces-status-exporter: Dev Spaces status exporter playbook
+- title: Prepare OpenShift clusters and operators
+  description: Subscribe and wait for operators, create namespaces and service accounts, configure ingress
+    certificates, routes, image registry, pull secrets and console settings, and clean up stuck resources.
+  components:
+    role:ocp_operator_defaults: Operator defaults
+    role:ocp_operator_subscription: Operator subscriptions
+    role:ocp_operatorgroups: Operator groups
+    role:ocp_wait_operator: Wait for operators
+    role:ocp_wait_pods: Wait for pods
+    role:ocp_namespace: Namespaces
+    role:ocp_service_accounts: Service accounts
+    role:ocp_pull_secrets: Pull secrets
+    role:ocp_secret_replicator: Secret replication to Vault
+    role:ocp_image_registry: Integrated image registry
+    role:ocp_default_ingress_cert: Default ingress certificate
+    role:ocp_cert_manager: cert-manager
+    role:ocp_awspca: AWS Private CA issuer
+    role:ocp_routes: Routes
+    role:ocp_alt_routes: Alternate routes
+    role:ocp_component_route: Component routes
+    role:ocp_discover_routes: Route discovery
+    role:ocp_console_banner: Console banner
+    role:ocp_web_terminal: Web Terminal
+    role:ocp_descheduler: Descheduler
+    role:ocp_print_crd: CRD printing
+    role:ocp_absent_cleanup: Absent namespace cleanup
+- title: Configure OpenShift networking and storage
+  description: Manage network policies, tenant and user-defined networks, egress, MetalLB, NMState, NFS,
+    iSCSI and EFS storage, MinIO object storage, backup with OADP and data foundation.
+  components:
+    role:ocp_networking: Networking orchestration
+    role:ocp_network_policy: Network policies
+    role:ocp_udn: User-defined networks
+    role:ocp_egress: Egress IP and firewall
+    role:ocp_metallb_install: MetalLB
+    role:ocp_nmstate_install: NMState
+    role:ocp_nfs_storage: NFS storage
+    role:ocp_iscsi_storage: iSCSI storage
+    role:ocp_efs_csi: EFS CSI driver
+    role:ocp_minio: MinIO
+    role:ocp_oadp: OADP backup
+    role:ocp_data_foundation: Data foundation
+- title: Secure OpenShift access and compliance
+  description: Configure LDAP, OIDC and htpasswd authentication, manage Keycloak client secrets, deploy
+    Advanced Cluster Security with policies and reports, and run compliance scans and remediation.
+  components:
+    role:ocp_ldap_auth: LDAP authentication
+    role:ocp_oidc_auth: OIDC authentication
+    role:ocp_htpasswd_admin: htpasswd administrators
+    role:ocp_rhbk_client_secrets: Keycloak client secrets
+    role:ocp_acs: Advanced Cluster Security
+    role:acs_upload_policies: ACS policies
+    role:acs_report: ACS vulnerability reports
+    role:ocp_compliance_install: Compliance Operator installation
+    role:ocp_compliance_profiles: Compliance profiles
+    role:ocp_compliance_scan: Compliance scans
+    role:ocp_compliance_remediation: Compliance remediation
+- title: Deploy developer tools and applications on OpenShift
+  description: Deploy GitLab and runners, Developer Hub, Dev Spaces, GitOps applications, Quay, BookStack,
+    Pega, Kafka, Postfix and Jira content.
+  components:
+    role:install_gitlab: GitLab on RHEL
+    role:gitlab_install: GitLab on OpenShift
+    role:ocp_gitlab_runner: GitLab Runner
+    role:ocp_dev_hub: Developer Hub
+    role:ocp_devspaces: Dev Spaces
+    role:ocp_devspaces_user_config: Dev Spaces user configuration
+    role:ocp_gitops: GitOps
+    role:ocp_gitops_application: GitOps applications
+    role:ocp_quay: Quay
+    role:bookstack_openshift: BookStack
+    role:ocp_pega: Pega
+    role:kafka_install: Kafka
+    role:install_postfix: Postfix
+    role:jira: Jira
+    role:jira_stories: Jira stories
+- title: Run virtualization, multi-cluster and disconnected installs
+  description: Install OpenShift Virtualization and the Migration Toolkit, build VM images, manage clusters
+    with ACM policies and validate disconnected install bundles.
+  components:
+    role:ocp_virtualization: OpenShift Virtualization
+    role:ocp_virtualization_install: OpenShift Virtualization HyperConverged
+    role:ocp_mtv: Migration Toolkit for Virtualization
+    role:vm_image_management: VM image creation
+    role:ocp_acm: Advanced Cluster Management
+    role:ocp_acm_policy: ACM policy delivery manifests
+    role:ocp_disconnected_install: Disconnected install validation
+    playbook:openshift.ado-validate-disconnected-install-bundle: Disconnected bundle validation playbook

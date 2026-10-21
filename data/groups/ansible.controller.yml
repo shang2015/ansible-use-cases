@@ -1,0 +1,72 @@
+fqcn: ansible.controller
+product: Ansible Automation Platform (automation controller)
+use_cases:
+- title: Launch and monitor jobs and workflows
+  description: Launch job templates, bulk jobs and workflows, wait for completion, cancel or approve runs, and list job results.
+  components:
+    job_launch: Job launch
+    bulk_job_launch: Bulk job launch
+    job_wait: Wait for job
+    job_cancel: Cancel job
+    job: Job listing
+    workflow_launch: Workflow launch
+    workflow_node_wait: Wait for workflow node
+    workflow_approval: Workflow approvals
+    ad_hoc_command: Ad hoc commands
+    ad_hoc_command_cancel: Cancel ad hoc command
+    ad_hoc_command_wait: Wait for ad hoc command
+- title: Define job templates, workflows and schedules
+  description: Create job templates, workflow templates and their nodes, schedules, labels and notification templates, and generate schedule recurrence rules.
+  components:
+    job_template: Job templates
+    workflow_job_template: Workflow job templates
+    workflow_job_template_node: Workflow nodes
+    schedule: Schedules
+    label: Labels
+    notification_template: Notification templates
+    lookup:schedule_rrule: Schedule rrule lookup
+    lookup:schedule_rruleset: Schedule rruleset lookup
+- title: Manage projects and execution environments
+  description: Create projects from source control, trigger project updates and register execution environments.
+  components:
+    project: Projects
+    project_update: Project updates
+    execution_environment: Execution environments
+- title: Manage inventories, hosts and dynamic sources
+  description: Create inventories, groups and hosts (including in bulk), configure inventory sources and trigger source syncs, and build inventory from the controller API.
+  components:
+    inventory: Inventories
+    group: Groups
+    host: Hosts
+    bulk_host_create: Bulk host create
+    bulk_host_delete: Bulk host delete
+    inventory_source: Inventory sources
+    inventory_source_update: Inventory source updates
+    inventory:controller: Controller dynamic inventory
+- title: Manage credentials and secrets
+  description: Create credentials, custom credential types and credential input sources for external secret managers.
+  components:
+    credential: Credentials
+    credential_type: Credential types
+    credential_input_source: Credential input sources
+- title: Manage organizations, users and access control
+  description: Create organizations, teams and users, define role definitions and assign them to users and teams.
+  components:
+    organization: Organizations
+    team: Teams
+    user: Users
+    role_definition: Role definitions
+    role_user_assignment: User role assignments
+    role_team_assignment: Team role assignments
+- title: Administer the controller platform
+  description: Manage instances and instance groups, system settings and licensing, export or import configuration, and query the API with lookups.
+  components:
+    instance: Instances
+    instance_group: Instance groups
+    settings: Settings
+    license: License
+    subscriptions: Subscriptions
+    export: Export configuration
+    import: Import configuration
+    controller_meta: Collection metadata
+    lookup:controller_api: Controller API lookup

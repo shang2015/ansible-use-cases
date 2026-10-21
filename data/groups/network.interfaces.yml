@@ -1,0 +1,18 @@
+fqcn: network.interfaces
+product: Network interface management
+use_cases:
+- title: Gather and persist interface facts
+  description: Collect structured interface facts, list supported resource modules and save facts to YAML.
+  components:
+    role:gather: Fact gathering
+    role:list: Supported resource modules
+    role:persist: Fact persistence
+- title: Deploy, detect drift and remediate
+  description: Deploy interface changes, detect configuration drift, remediate it and run interface health
+    checks.
+  components:
+    role:deploy: Deployment
+    role:detect: Drift detection
+    role:remediate: Drift remediation
+    role:health_checks: Health checks
+    filter:health_check_view: Health check view

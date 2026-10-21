@@ -1,0 +1,30 @@
+fqcn: cloud.aws_troubleshooting
+product: Amazon Web Services
+use_cases:
+- title: Troubleshoot network connectivity
+  description: Evaluate security groups, network ACLs, NAT, internet gateway routes and VPC peering to
+    find why traffic is blocked.
+  components:
+    role:connectivity_troubleshooter: Connectivity troubleshooter
+    role:connectivity_troubleshooter_igw: Internet gateway checks
+    role:connectivity_troubleshooter_local: Local network checks
+    role:connectivity_troubleshooter_nat: NAT checks
+    role:connectivity_troubleshooter_peering: VPC peering checks
+    role:connectivity_troubleshooter_validate: Validation checks
+    eval_security_groups: Security group evaluation
+    eval_network_acls: Network ACL evaluation
+    eval_nat_network_acls: NAT network ACL evaluation
+    eval_src_igw_route: Source and internet gateway route evaluation
+    eval_vpc_peering: VPC peering evaluation
+    get_connection_next_hop: Next hop type
+    validate_network_acls: Network ACL validation
+    validate_route_tables: Route table validation
+    validate_security_group_rules: Security group rule validation
+- title: Troubleshoot RDS connectivity
+  description: Check connectivity to Amazon RDS instances.
+  components:
+    role:troubleshoot_rds_connectivity: RDS connectivity
+- title: Set up AWS credentials
+  description: Define credentials for AWS modules.
+  components:
+    role:aws_setup_credentials: Credentials setup

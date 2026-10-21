@@ -1,0 +1,17 @@
+fqcn: ansible.mcp_builder
+product: "Model Context Protocol (MCP) servers"
+use_cases:
+- title: "Install and configure MCP servers"
+  description: "Install MCP servers from PyPI, npm or source with a generic build environment and a playbook that sets them up."
+  components:
+    "playbook:install_mcp": "Install MCP servers"
+    "role:common": "Generic MCP build environment"
+    "role:github_mcp": "GitHub MCP server"
+- title: "Install cloud provider MCP servers"
+  description: "Install the AWS Cloud Control, CDK, Core and IAM MCP servers and the Azure MCP server."
+  components:
+    "role:aws_ccapi_mcp": "AWS Cloud Control MCP server"
+    "role:aws_cdk_mcp": "AWS CDK MCP server"
+    "role:aws_core_mcp": "AWS Core MCP server"
+    "role:aws_iam_mcp": "AWS IAM MCP server"
+    "role:azure_mcp": "Azure MCP server"

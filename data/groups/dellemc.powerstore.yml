@@ -1,0 +1,130 @@
+fqcn: dellemc.powerstore
+product: Dell PowerStore
+notes:
+- Each module has a matching sample playbook (modules.*), listed with it; further playbooks under samples.*
+  show multi-step workflows.
+use_cases:
+- title: 'Provision block storage: volumes and volume groups'
+  description: Create, modify, map and delete volumes and volume groups, and bulk-create or search volumes.
+  components:
+    volume: Volumes
+    volumegroup: Volume groups
+    storage_container: Storage containers
+    playbook:samples.capacity_volumes: Volumes above a capacity threshold
+    playbook:samples.create_multiple_volumes: Multiple volume creation
+    playbook:samples.create_multiple_volumes_async: Asynchronous multiple volume creation
+    playbook:samples.delete_multiple_volumes: Multiple volume deletion
+    playbook:samples.find_empty_volume_groups: Empty volume group search
+    playbook:samples.search_volumes: Volume search by name pattern
+    playbook:modules.volume: Volumes sample playbook
+    playbook:modules.volumegroup: Volume groups sample playbook
+    playbook:modules.storage_container: Storage containers sample playbook
+- title: Manage hosts and performance limits
+  description: Register hosts and host groups, attach vCenter, and apply IO limit and QoS policies.
+  components:
+    host: Hosts
+    hostgroup: Host groups
+    vcenter: vCenter
+    io_limit_rule: IO limit rules
+    qos_policy: QoS policies
+    playbook:modules.host: Hosts sample playbook
+    playbook:modules.hostgroup: Host groups sample playbook
+    playbook:modules.vcenter: vCenter sample playbook
+    playbook:modules.io_limit_rule: IO limit rules sample playbook
+    playbook:modules.qos_policy: QoS policies sample playbook
+- title: 'Provision file storage: NAS servers, file systems and shares'
+  description: Create NAS servers with file interfaces, DNS and NIS, file systems, NFS exports and SMB
+    shares, and apply quotas.
+  components:
+    nasserver: NAS servers
+    file_interface: File interfaces
+    file_dns: File DNS
+    file_nis: File NIS
+    nfs_server: NFS servers
+    smb_server: SMB servers
+    filesystem: File systems
+    nfs: NFS exports
+    smbshare: SMB shares
+    quota: Quotas
+    file_io_limit_rule: File IO limit rules
+    playbook:samples.nas_server_end_to_end: NAS server end-to-end setup
+    playbook:samples.get_fs_used_size_greaterthan_threshold: File systems above a used-size threshold
+    playbook:samples.get_smbshares_associated_with_given_fs_name: SMB shares of a file system
+    playbook:samples.get_unused_fs: Unused file systems
+    playbook:modules.nasserver: NAS servers sample playbook
+    playbook:modules.file_interface: File interfaces sample playbook
+    playbook:modules.file_dns: File DNS sample playbook
+    playbook:modules.file_nis: File NIS sample playbook
+    playbook:modules.nfs_server: NFS servers sample playbook
+    playbook:modules.smb_server: SMB servers sample playbook
+    playbook:modules.filesystem: File systems sample playbook
+    playbook:modules.nfs: NFS exports sample playbook
+    playbook:modules.smbshare: SMB shares sample playbook
+    playbook:modules.quota: Quotas sample playbook
+    playbook:modules.file_io_limit_rule: File IO limit rules sample playbook
+- title: Protect data with snapshots and replication
+  description: Define protection and snapshot rules, take snapshots, replicate to remote systems and recover
+    from the recycle bin.
+  components:
+    protectionpolicy: Protection policies
+    snapshotrule: Snapshot rules
+    snapshot: Snapshots
+    filesystem_snapshot: File system snapshots
+    replicationrule: Replication rules
+    replicationsession: Replication sessions
+    remotesystem: Remote systems
+    recycle_bin: Recycle bin
+    playbook:modules.protectionpolicy: Protection policies sample playbook
+    playbook:modules.snapshotrule: Snapshot rules sample playbook
+    playbook:modules.snapshot: Snapshots sample playbook
+    playbook:modules.filesystem_snapshot: File system snapshots sample playbook
+    playbook:modules.replicationrule: Replication rules sample playbook
+    playbook:modules.replicationsession: Replication sessions sample playbook
+    playbook:modules.remotesystem: Remote systems sample playbook
+    playbook:modules.recycle_bin: Recycle bin sample playbook
+- title: Administer users, directory services and security
+  description: Manage local users, roles, LDAP domains and accounts, certificates and security configuration.
+  components:
+    local_user: Local users
+    role: Roles
+    ldap_domain: LDAP domains
+    ldap_account: LDAP accounts
+    certificate: Certificates
+    security_config: Security configuration
+    playbook:modules.local_user: Local users sample playbook
+    playbook:modules.role: Roles sample playbook
+    playbook:modules.ldap_domain: LDAP domains sample playbook
+    playbook:modules.ldap_account: LDAP accounts sample playbook
+    playbook:modules.certificate: Certificates sample playbook
+    playbook:modules.security_config: Security configuration sample playbook
+- title: Configure the cluster, networks and notifications
+  description: Set up cluster, networks, DNS, NTP, SMTP, email destinations, SNMP, remote support and
+    service configuration.
+  components:
+    cluster: Cluster
+    network: Networks
+    dns: DNS
+    ntp: NTP
+    smtp_config: SMTP
+    email: Email destinations
+    snmp_manager: SNMP managers
+    remote_support: Remote support
+    remote_support_contact: Remote support contacts
+    service_config: Service configuration
+    playbook:modules.cluster: Cluster sample playbook
+    playbook:modules.network: Networks sample playbook
+    playbook:modules.dns: DNS sample playbook
+    playbook:modules.ntp: NTP sample playbook
+    playbook:modules.smtp_config: SMTP sample playbook
+    playbook:modules.email: Email destinations sample playbook
+    playbook:modules.snmp_manager: SNMP managers sample playbook
+    playbook:modules.remote_support: Remote support sample playbook
+    playbook:modules.remote_support_contact: Remote support contacts sample playbook
+    playbook:modules.service_config: Service configuration sample playbook
+- title: Gather system information and track jobs
+  description: Collect facts about PowerStore entities and monitor asynchronous jobs.
+  components:
+    info: Facts
+    job: Jobs
+    playbook:modules.info: Facts sample playbook
+    playbook:modules.job: Jobs sample playbook

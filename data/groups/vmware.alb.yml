@@ -1,0 +1,214 @@
+fqcn: vmware.alb
+product: VMware Avi Load Balancer (NSX Advanced Load Balancer)
+notes:
+- Most modules map one-to-one to an Avi Controller REST object and are named after it; module names have
+  the avi_ prefix.
+use_cases:
+- title: Publish applications with virtual services and pools
+  description: Create virtual services and their VIPs, server pools and pool groups, health monitors,
+    data scripts and the address and string groups they use.
+  components:
+    virtualservice: Virtual services
+    vsvip: Virtual service VIPs
+    vsgs: Virtual service GSLB mappings
+    pool: Pools
+    poolgroup: Pool groups
+    poolgroupdeploymentpolicy: Pool group deployment policies
+    healthmonitor: Health monitors
+    vsdatascriptset: Data script sets
+    microservicegroup: Microservice groups
+    ipaddrgroup: IP address groups
+    stringgroup: String groups
+    labelgroup: Label groups
+    labelprofile: Label profiles
+    prioritylabels: Priority labels
+    serverautoscalepolicy: Server autoscale policies
+    autoscalelaunchconfig: Autoscale launch configurations
+    protocolparser: Protocol parsers
+    lookup:avi: Avi object lookup
+- title: Shape traffic with policies and profiles
+  description: Define application, network and persistence profiles, HTTP, L4, DNS and NAT policies, rate
+    limits, error pages and traffic cloning.
+  components:
+    applicationprofile: Application profiles
+    applicationpersistenceprofile: Persistence profiles
+    networkprofile: Network profiles
+    httppolicyset: HTTP policy sets
+    l4policyset: L4 policy sets
+    dnspolicy: DNS policies
+    natpolicy: NAT policies
+    networksecuritypolicy: Network security policies
+    ratelimitconfiguration: Rate limit configurations
+    errorpageprofile: Error page profiles
+    errorpagebody: Error page bodies
+    trafficcloneprofile: Traffic clone profiles
+    icapprofile: ICAP profiles
+    ssopolicy: SSO policies
+- title: Protect applications with WAF, bot and API security
+  description: Configure web application firewall policies and profiles, bot detection, IP reputation,
+    CSRF protection and API policies and schemas.
+  components:
+    wafpolicy: WAF policies
+    wafprofile: WAF profiles
+    wafpolicypsmgroup: WAF positive security model groups
+    wafapplicationsignatureprovider: WAF signature providers
+    positivesecuritypolicy: Positive security policies
+    securitypolicy: Security policies
+    securitymanagerdata: Security manager data
+    csrfpolicy: CSRF policies
+    botdetectionpolicy: Bot detection policies
+    botmapping: Bot mappings
+    botconfigconsolidator: Bot configuration consolidators
+    botipreputationtypemapping: Bot IP reputation mappings
+    ipreputationdb: IP reputation databases
+    apipolicy: API policies
+    apipath: API paths
+    apiratelimitprofile: API rate limit profiles
+    apischema: API schemas
+    apispecgenerate: API spec generation
+- title: Manage certificates, TLS and authentication
+  description: Manage SSL certificates and profiles, certificate management and PKI profiles, HSM groups,
+    JWT settings and client authentication profiles.
+  components:
+    sslkeyandcertificate: SSL keys and certificates
+    sslprofile: SSL profiles
+    certificatemanagementprofile: Certificate management profiles
+    pkiprofile: PKI profiles
+    certjwtstore: JWT certificate store
+    jwtserverprofile: JWT server profiles
+    hardwaresecuritymodulegroup: HSM groups
+    authprofile: Authentication profiles
+    authmappingprofile: Authentication mapping profiles
+    serviceauthprofile: Service authentication profiles
+    sessionkeyforwarder: Session key forwarders
+    trustedhostprofile: Trusted host profiles
+- title: Distribute traffic globally with GSLB
+  description: Configure GSLB sites, GSLB services and members, geographic database profiles and dynamic
+    DNS records.
+  components:
+    gslb: GSLB configuration
+    gslbservice: GSLB services
+    gslbservice_patch_member: GSLB service members
+    gslbgeodbprofile: GSLB geo database profiles
+    geodb: Geo databases
+    gslbcrmruntime: GSLB CRM runtime
+    gslbhsmruntime: GSLB HSM runtime
+    gslbsmruntime: GSLB SM runtime
+    dynamicdnsrecord: Dynamic DNS records
+- title: Connect clouds and manage Service Engines
+  description: Define cloud connectors and vCenter servers, Service Engine groups and properties, Service
+    Engine instances, availability zones and Kubernetes cluster integrations.
+  components:
+    cloud: Clouds
+    cloudconnectoruser: Cloud connector users
+    cloudproperties: Cloud properties
+    clusterclouddetails: Cluster cloud details
+    vcenterserver: vCenter servers
+    availabilityzone: Availability zones
+    nsxtsegmentruntime: NSX-T segment runtime
+    akoamkocluster: AKO and AMKO clusters
+    serviceenginegroup: Service Engine groups
+    serviceengine: Service Engines
+    seproperties: Service Engine properties
+    update_se_data_vnics: Service Engine data vNICs
+    testsedatastorelevel1: SE datastore test level 1
+    testsedatastorelevel2: SE datastore test level 2
+    testsedatastorelevel3: SE datastore test level 3
+- title: Configure networks, VRFs and IPAM and DNS
+  description: Define networks, network services and VRF contexts, and integrate IPAM and DNS providers.
+  components:
+    network: Networks
+    networkservice: Network services
+    vrfcontext: VRF contexts
+    ipamdnsproviderprofile: IPAM and DNS provider profiles
+    customipamdnsprofile: Custom IPAM and DNS profiles
+- title: Administer the controller, licensing and API access
+  description: Configure the controller cluster, sites, system settings and limits, licensing and registration,
+    scheduling and API sessions.
+  components:
+    cluster: Controller cluster
+    controllerproperties: Controller properties
+    controllerportalregistration: Controller portal registration
+    controllersite: Controller sites
+    systemconfiguration: System configuration
+    systemlimits: System limits
+    tenantsystemconfiguration: Tenant system configuration
+    licensestatus: License status
+    licenseledgerdetails: License ledger
+    pulse_registration: Pulse registration
+    siteversion: Site version
+    scheduler: Schedulers
+    memorybalancerrequest: Memory balancer requests
+    localworkerfdsversion: Local worker FDS version
+    api_session: API sessions
+    saml_api_session: SAML API sessions
+    api_version: API version
+    webapput: Web application unit test objects
+- title: Manage tenants, users and roles
+  description: Create tenants and bind them to configuration, and manage users, roles and user account
+    profiles.
+  components:
+    tenant: Tenants
+    tenantbinding: Tenant bindings
+    user: Users
+    useraccount: User accounts
+    useraccountprofile: User account profiles
+    role: Roles
+- title: Upgrade, back up and troubleshoot
+  description: Upload images and files, drive upgrades and track their status, back up the configuration,
+    compare states and collect tech support data.
+  components:
+    image: Images
+    api_image: Image API
+    api_fileservice: File service API
+    fileobject: File objects
+    fileobject_upload: File object upload
+    upgradeprofile: Upgrade profiles
+    upgradestatusinfo: Upgrade status information
+    upgradestatussummary: Upgrade status summaries
+    backup: Backups
+    backupconfiguration: Backup configuration
+    statediffsnapshot: State difference snapshots
+    statediffoperation: State difference operations
+    techsupport: Tech support bundles
+    techsupportmessage: Tech support messages
+    techsupportprofile: Tech support profiles
+    albservicesconfig: ALB Services configuration
+    albservicesjob: ALB Services jobs
+    albservicesstatus: ALB Services status
+    albservicesfileupload: ALB Services file uploads
+    albservicesfiledownload: ALB Services file downloads
+    sspinstance: SSP instances
+- title: Monitor, alert and report
+  description: Configure analytics profiles, alert rules and their email, syslog, script and SNMP trap
+    destinations, webhooks, reports and log retention.
+  components:
+    analyticsprofile: Analytics profiles
+    applicationinsightspolicy: Application insights policies
+    alertconfig: Alert configurations
+    actiongroupconfig: Alert action groups
+    alertemailconfig: Alert email configurations
+    alertsyslogconfig: Alert syslog configurations
+    alertscriptconfig: Alert script configurations
+    snmptrapprofile: SNMP trap profiles
+    webhook: Webhooks
+    inventoryfaultconfig: Inventory fault configuration
+    report: Reports
+    reportprofile: Report profiles
+    systemreport: System reports
+    taskjournal: Task journal
+    retentionpolicy: Retention policies
+- title: Deploy controllers and Service Engines
+  description: Deploy the controller VM on vCenter and use roles to install and configure controllers
+    and Service Engines on VMware, KVM and Cisco CSP.
+  components:
+    deploy_controller: Controller VM deployment on vCenter
+    role:aviconfig: Avi configuration role
+    role:avicontroller: Controller role
+    role:avicontroller_vmware: Controller on VMware role
+    role:avicontroller_kvm: Controller on KVM role
+    role:avicontroller_csp: Controller on Cisco CSP role
+    role:avise: Service Engine role
+    role:avise_vmware: Service Engine on VMware role
+    role:avise_kvm: Service Engine on KVM role
+    role:avise_csp: Service Engine on Cisco CSP role

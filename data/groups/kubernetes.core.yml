@@ -1,0 +1,39 @@
+fqcn: kubernetes.core
+product: Kubernetes
+use_cases:
+- title: Manage Kubernetes objects
+  description: Create, patch, scale, roll back and inspect Kubernetes objects and services, and query
+    the API.
+  components:
+    k8s: Kubernetes objects
+    k8s_json_patch: JSON patches
+    k8s_scale: Scaling
+    k8s_rollback: Rollbacks
+    k8s_service: Services
+    k8s_cluster: Cluster and API information
+    lookup:k8s: Kubernetes API lookup
+    lookup:kustomize: Kustomize builds
+    filter:k8s_config_resource_name: ConfigMap and Secret names
+- title: Deploy applications with Helm
+  description: Install and manage Helm releases, repositories, plugins and registry credentials, pull
+    charts and render templates.
+  components:
+    helm: Helm releases
+    helm_repository: Helm repositories
+    helm_plugin: Helm plugins
+    helm_pull: Chart downloads
+    helm_registry_auth: Registry authentication
+    helm_template: Chart templates
+- title: Operate nodes and pods
+  description: Drain, cordon and taint nodes, run commands in pods, copy files and fetch logs.
+  components:
+    k8s_drain: Node drain and cordon
+    k8s_taint: Node taints
+    k8s_exec: Pod commands
+    k8s_cp: Pod file copy
+    k8s_log: Logs
+    connection:kubectl: kubectl connection
+- title: Connect to clusters
+  description: Generate and update kubeconfig files.
+  components:
+    kubeconfig: Kubeconfig files

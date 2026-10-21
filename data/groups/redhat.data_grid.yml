@@ -1,0 +1,9 @@
+fqcn: redhat.data_grid
+product: "Red Hat Data Grid"
+use_cases:
+- title: "Deploy Data Grid and manage caches"
+  description: "Install and configure Infinispan or Data Grid servers and configure caches at runtime."
+  components:
+    "role:infinispan": "Data Grid server"
+    "playbook:infinispan": "Data Grid playbook"
+    "role:infinispan_cache": "Caches"

@@ -1,0 +1,18 @@
+fqcn: redhat.amq_streams
+product: Red Hat AMQ Streams (Apache Kafka)
+use_cases:
+- title: Install AMQ Streams
+  description: Install ZooKeeper-based or KRaft-mode Kafka brokers, Connect, Cruise Control and the exporter.
+  components:
+    role:amq_streams_common: Common plays
+    role:amq_streams_zookeeper: ZooKeeper
+    role:amq_streams_kraft: KRaft-mode Kafka
+    role:amq_streams_broker: Brokers
+    role:amq_streams_connect: Kafka Connect
+    role:amq_streams_cruise_control: Cruise Control
+    role:amq_streams_exporter: Exporter
+    playbook:playbook: AMQ Streams installation
+- title: Validate the installation
+  description: Check that AMQ Streams was installed correctly.
+  components:
+    playbook:validate: Installation validation

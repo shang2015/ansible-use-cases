@@ -1,0 +1,7 @@
+fqcn: dynatrace.oneagent
+product: "Dynatrace"
+use_cases:
+- title: "Install Dynatrace OneAgent"
+  description: "Install and configure OneAgent on Linux, Windows and AIX."
+  components:
+    "role:oneagent": "OneAgent"

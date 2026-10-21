@@ -1,0 +1,12 @@
+fqcn: redhat.edge_manager
+product: "Red Hat Edge Manager (Flight Control)"
+use_cases:
+- title: "Manage edge devices with Flight Control"
+  description: "Manage Flight Control resources, image builds, certificate requests and enrollment configuration, connect to managed devices and build inventory."
+  components:
+    "resource": "Flight Control resources"
+    "image_builder": "Image builder"
+    "certificate_management": "Certificate requests"
+    "enrollment_config": "Enrollment configuration"
+    "connection:flightctl_console": "Device console connection"
+    "inventory:flightctl": "Flight Control inventory"

@@ -1,0 +1,139 @@
+fqcn: dellemc.enterprise_sonic
+product: Dell Enterprise SONiC
+use_cases:
+- title: 'Configure Layer 2: interfaces, VLANs and link aggregation'
+  description: Manage interface attributes, VLANs and VLAN mapping, access and trunk assignments, LAGs,
+    MAC, STP, port breakout and port groups.
+  components:
+    sonic_interfaces: Interfaces
+    sonic_l2_interfaces: Layer 2 interfaces
+    sonic_vlans: VLANs
+    sonic_vlan_mapping: VLAN mappings
+    sonic_lag_interfaces: LAG interfaces
+    sonic_mac: MAC settings
+    sonic_stp: Spanning tree
+    sonic_port_breakout: Port breakout
+    sonic_port_group: Port groups
+    sonic_pms: Port security
+    sonic_lst: Link state tracking
+    sonic_br_l2pt: Layer 2 protocol tunneling
+    sonic_mclag: MCLAG domains
+    sonic_poe: Power over Ethernet
+- title: Configure Layer 3 addressing, VRFs and static routing
+  description: Set up IP addressing, VRFs, static routes, ECMP, IP neighbours, VRRP, IPv6 router advertisement
+    and DHCP relay and snooping.
+  components:
+    sonic_l3_interfaces: Layer 3 interfaces
+    sonic_vrfs: VRFs
+    sonic_static_routes: Static routes
+    sonic_ecmp_load_share: ECMP load sharing
+    sonic_ars: Adaptive routing and switching
+    sonic_ip_neighbor: IP neighbour settings
+    sonic_ip_neighbor_interfaces: Interface IP neighbour settings
+    sonic_ipv6_router_advertisement: IPv6 router advertisement
+    sonic_vrrp: VRRP
+    sonic_dhcp_relay: DHCP relay
+    sonic_dhcp_snooping: DHCP snooping
+- title: 'Configure dynamic routing: BGP, OSPF and PIM'
+  description: Manage BGP sessions, address families and communities, OSPFv2 and OSPFv3, BFD and multicast
+    PIM.
+  components:
+    sonic_bgp: BGP global
+    sonic_bgp_af: BGP address families
+    sonic_bgp_neighbors: BGP neighbours
+    sonic_bgp_neighbors_af: BGP neighbour address families
+    sonic_bgp_as_paths: BGP AS path lists
+    sonic_bgp_communities: BGP communities
+    sonic_bgp_ext_communities: BGP extended communities
+    sonic_ospfv2: OSPFv2 global
+    sonic_ospf_area: OSPFv2 areas
+    sonic_ospfv2_interfaces: OSPFv2 interfaces
+    sonic_ospfv3: OSPFv3 global
+    sonic_ospfv3_area: OSPFv3 areas
+    sonic_ospfv3_interfaces: OSPFv3 interfaces
+    sonic_pim_global: PIM global
+    sonic_pim_interfaces: PIM interfaces
+    sonic_bfd: BFD
+- title: Control routing policy
+  description: Maintain prefix lists and route maps used to filter and modify routes.
+  components:
+    sonic_prefix_lists: Prefix lists
+    sonic_route_maps: Route maps
+- title: Build data centre overlays with VXLAN and EVPN
+  description: Configure VXLAN tunnels, EVPN ESI multihoming and BGP L3 fabrics.
+  components:
+    sonic_vxlans: VXLANs
+    sonic_evpn_esi_multihome: EVPN ESI multihoming
+    playbook:bgp_l3_fabric.clos-fabric: BGP Clos fabric
+- title: Apply ACLs, flow-based services and control-plane protection
+  description: Manage Layer 2 and Layer 3 ACLs and their interface bindings, FBS policies and CoPP.
+  components:
+    sonic_l2_acls: Layer 2 ACLs
+    sonic_l3_acls: Layer 3 ACLs
+    sonic_acl_interfaces: ACL interface bindings
+    sonic_fbs_classifiers: FBS classifiers
+    sonic_fbs_groups: FBS groups
+    sonic_fbs_policies: FBS policies
+    sonic_fbs_interfaces: FBS interfaces
+    sonic_copp: Control-plane policing
+- title: Configure QoS, RoCE and lossless Ethernet
+  description: Manage QoS buffers, maps, schedulers, WRED, PFC and RoCE settings, DCBx and drop counters.
+  components:
+    sonic_qos_buffer: QoS buffers
+    sonic_qos_interfaces: QoS interfaces
+    sonic_qos_maps: QoS maps
+    sonic_qos_pfc: QoS PFC
+    sonic_qos_scheduler: QoS schedulers
+    sonic_qos_wred: QoS WRED profiles
+    sonic_roce: RoCE QoS
+    sonic_dcbx: DCBx
+    sonic_drop_counter: Drop counters
+- title: Secure device access and authentication
+  description: Manage AAA, users, RADIUS, TACACS, LDAP, MFA, login lockout, SSH, PKI and FIPS.
+  components:
+    sonic_aaa: AAA
+    sonic_users: Users
+    sonic_radius_server: RADIUS servers
+    sonic_tacacs_server: TACACS servers
+    sonic_ldap: LDAP
+    sonic_mfa: Multi-factor authentication
+    sonic_login_lockout: Login lockout
+    sonic_ssh: SSH client
+    sonic_ssh_server: SSH server
+    sonic_pki: PKI
+    sonic_fips: FIPS
+- title: Configure monitoring, time and discovery
+  description: Set up logging, NTP, PTP, sFlow, port mirroring, LLDP and network policy.
+  components:
+    sonic_logging: Logging
+    sonic_ntp: NTP
+    sonic_ptp_default_ds: PTP global
+    sonic_ptp_port_ds: PTP ports
+    sonic_sflow: sFlow
+    sonic_mirroring: Port mirroring
+    sonic_lldp_global: LLDP global
+    sonic_lldp_interfaces: LLDP interfaces
+    sonic_network_policy: Network policy
+- title: Administer devices and run commands
+  description: Set system parameters, management servers, software images, send CLI commands or REST calls,
+    manage configuration sections and use example playbooks.
+  components:
+    sonic_system: System settings
+    sonic_mgmt_servers: Management servers
+    sonic_image_management: Image management
+    sonic_command: CLI commands
+    sonic_config: Configuration sections
+    sonic_api: REST operations
+    sonic: SONiC action plugin
+    playbook:common_examples.interface_naming: Interface naming
+    playbook:common_examples.mgmt_vrf_config: Management VRF
+    playbook:common_examples.sonic_aaa: AAA example
+    playbook:common_examples.sonic_api: REST API example
+    playbook:common_examples.sonic_bgp: BGP example
+    playbook:common_examples.sonic_bgp_communities: BGP communities example
+    playbook:common_examples.sonic_command: CLI command example
+    playbook:common_examples.sonic_config: Configuration example
+    playbook:common_examples.sonic_facts: Facts example
+    playbook:common_examples.sonic_interfaces_config: Interfaces example
+    playbook:common_examples.sonic_system: System example
+    playbook:common_examples.sonic_vxlans_config: VXLAN example

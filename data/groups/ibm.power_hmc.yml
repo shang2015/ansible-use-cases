@@ -1,0 +1,52 @@
+fqcn: ibm.power_hmc
+product: IBM Power HMC
+use_cases:
+- title: Manage Power systems and firmware
+  description: Power on and off managed systems, change hardware resources, update firmware and platform
+    levels, and create serviceable events.
+  components:
+    power_system: Managed systems
+    firmware_update: Firmware levels
+    platform_update: Platform updates
+    create_service_event: Serviceable events
+    inventory:powervm_inventory: Power server inventory
+    playbook:demo_firmware_update: Firmware update demo
+- title: Manage logical partitions
+  description: Create, activate, shut down, resize, migrate and profile PowerVM LPARs and install Linux
+    on them.
+  components:
+    powervm_lpar_instance: LPAR instances
+    powervm_partition_profile: Partition profiles
+    powervm_dlpar: Dynamic resource changes
+    powervm_lpar_migration: LPAR migration
+    role:redhat_linux_install: Red Hat Linux install (PXE)
+    playbook:redhat_linux_install: Install Linux
+- title: Manage virtual I/O and networking
+  description: Create Virtual I/O Servers, virtual switches, virtual networks, bridges and client network
+    adapters, and report VIOS device mappings.
+  components:
+    vios: Virtual I/O Servers
+    vios_mapping: VIOS device mappings
+    powervm_virtual_switches: Virtual switches
+    powervm_virtual_network: Virtual networks
+    power_network_bridge: Virtual network bridges
+    powervm_client_network_adapter: Client network adapters
+- title: Maintain and secure VIOS
+  description: Update and upgrade VIOS, back it up, create alternate rootvg disks and apply firewall and
+    hardening rules.
+  components:
+    vios_update_upgrade: VIOS update and upgrade
+    vios_maintenance: VIOS backup
+    vios_alt_root_vg: Alternate rootvg
+    vios_secure: VIOS security hardening
+- title: Administer the HMC
+  description: Update the HMC, run HMC commands and manage users and password policies.
+  components:
+    hmc_update_upgrade: HMC update and upgrade
+    hmc_command: HMC commands
+    hmc_user: HMC users
+    hmc_pwdpolicy: Password policies
+    role:password_policy: Password policy
+    playbook:demo_hmc_user: HMC user demo
+    playbook:demo_hmc_passwordless_setup: Passwordless setup demo
+    playbook:roles_passpolicy_playbook: Password policy playbook

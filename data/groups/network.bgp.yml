@@ -1,0 +1,13 @@
+fqcn: network.bgp
+product: "BGP"
+use_cases:
+- title: "Manage BGP configuration and detect drift"
+  description: "Gather and persist BGP facts, detect drift from the desired state, deploy changes and remediate drift across network platforms, and run health checks."
+  components:
+    "role:gather": "Gather facts"
+    "role:persist": "Persist facts as host variables"
+    "role:detect": "Detect configuration drift"
+    "role:remediate": "Remediate drift"
+    "role:deploy": "Deploy configuration"
+    "role:health_checks": "Health checks"
+    "filter:health_check_view": "Health check view filter"

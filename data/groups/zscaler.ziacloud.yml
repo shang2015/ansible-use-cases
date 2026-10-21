@@ -1,0 +1,135 @@
+fqcn: zscaler.ziacloud
+product: Zscaler Internet Access (ZIA)
+notes:
+- Module names have the zia_ prefix omitted. Many modules are info-only lookups used to reference objects
+  in rules.
+use_cases:
+- title: Control web access with URL filtering and file type rules
+  description: Manage URL filtering rules and custom categories, file type control, browser control, FTP
+    control and custom file types.
+  components:
+    url_filtering_rules: URL filtering rules
+    url_filtering_rule: URL filtering rule queries
+    url_categories: URL categories
+    url_filtering_and_cloud_app_settings: URL filtering and cloud app settings
+    file_type_control_rules: File type control rules
+    file_type_categories: File type categories
+    custom_file_types: Custom file types
+    browser_control_policy: Browser control policy
+    browser_control_supported_versions: Supported browser versions
+    ftp_control_policy: FTP control policy
+    end_user_notification: End user notifications
+- title: Control SaaS and cloud application usage
+  description: Manage cloud app control rules and application instances, risk profiles, tenant restrictions
+    and bandwidth control.
+  components:
+    cloud_app_control_rules: Cloud app control rules
+    cloud_app_control_rule_actions: Cloud app control rule actions
+    cloud_applications: Cloud applications
+    cloud_application_instances: Cloud application instances
+    risk_profiles: Risk profiles
+    tenant_restriction_profile: Tenant restriction profiles
+    bandwidth_control_rules: Bandwidth control rules
+    bandwidth_classes: Bandwidth classes
+- title: Enforce cloud firewall policy
+  description: Manage firewall filtering, DNS, IPS and NAT control rules with their IP groups, network
+    services and time windows.
+  components:
+    cloud_firewall_rule: Firewall filtering rules
+    cloud_firewall_dns_rules: Firewall DNS rules
+    cloud_firewall_ips_rules: Firewall IPS rules
+    nat_control_policy: NAT control rules
+    cloud_firewall_ip_destination_groups: IP destination groups
+    cloud_firewall_ip_source_groups: IP source groups
+    cloud_firewall_network_services: Network services
+    cloud_firewall_network_services_groups: Network service groups
+    cloud_firewall_network_application: Network applications
+    cloud_firewall_network_application_group: Network application groups
+    cloud_firewall_time_windows: Time windows
+    ips_signature_rules: Custom IPS signature rules
+    dns_gateway: DNS gateways
+- title: Protect against advanced threats and malware
+  description: Configure advanced threat protection, malware inspection and exceptions, sandbox rules
+    and submission, and security denylists.
+  components:
+    atp_settings: Advanced threat settings
+    atp_malicious_urls: Malicious URL denylist
+    atp_malware_inspection: Malware inspection
+    atp_malware_policy: Malware policy exceptions
+    atp_malware_protocols: Malware protocol inspection
+    atp_malware_settings: Malware settings
+    atp_security_exceptions: Security exceptions
+    mobile_advanced_threat_settings: Mobile malware protection
+    security_policy_settings: Security denylist
+    sandbox_rules: Sandbox rules
+    sandbox_advanced_settings: Sandbox MD5 blocklist
+    sandbox_submission: Sandbox file submission
+    ssl_inspection_rules: SSL inspection rules
+- title: Prevent data loss and protect SaaS data
+  description: Manage DLP rules, dictionaries, engines and notifications, and CASB DLP and malware rules.
+  components:
+    dlp_web_rules: DLP web rules
+    dlp_dictionaries: DLP dictionaries
+    dlp_engine: DLP engines
+    dlp_notification_template: DLP notification templates
+    dlp_icap_server: DLP ICAP servers
+    dlp_idm_profile: DLP IDM profiles
+    dlp_incident_receiver: DLP incident receivers
+    casb_dlp_rules: CASB DLP rules
+    casb_malware_rules: CASB malware rules
+    casb_tenant: CASB tenants
+    casb_email_label: CASB email labels
+    casb_tombstone_template: CASB tombstone templates
+    email_profiles: Email profiles
+- title: Forward traffic to Zscaler
+  description: Manage forwarding control rules, GRE tunnels, static IPs, VPN credentials, ZPA gateways,
+    proxies and extranets.
+  components:
+    forwarding_control_rule: Forwarding control rules
+    traffic_forwarding_gre_tunnels: GRE tunnels
+    traffic_forwarding_gre_tunnel: GRE tunnel queries
+    traffic_forwarding_gre_internal_ranges: GRE internal IP ranges
+    traffic_forwarding_static_ip: Static IPs
+    traffic_forwarding_vpn_credentials: VPN credentials
+    ip_source_anchoring_zpa_gateway: ZPA gateways
+    third_party_proxy_service: Third-party proxy services
+    extranet: Extranets
+    traffic_capture_rules: Traffic capture rules
+- title: Manage locations, service edges and data centres
+  description: Define locations and groups, data centres and exclusions, sub-clouds, virtual service edges
+    and NSS servers.
+  components:
+    location_management: Locations
+    location_groups: Location groups
+    datacenters: Data centres
+    dc_exclusions: Data centre exclusions
+    sub_cloud: Sub-clouds
+    virtual_service_edge_node: Virtual service edge nodes
+    vzen_cluster: Virtual service edge clusters
+    nss_servers: NSS servers
+    workload_groups: Workload groups
+    cloud_browser_isolation_profile: Browser isolation profiles
+- title: Manage users, devices and authentication
+  description: Query users, departments, groups and devices, and configure authentication settings and
+    exempt URLs.
+  components:
+    user_management: Users
+    user_management_department: Departments
+    user_management_groups: User groups
+    device_group: Device groups
+    devices: Devices
+    domain_profiles: Domain profiles
+    authentication_settings: Authentication settings
+    auth_settings_urls: Authentication-exempt URLs
+- title: Administer the ZIA tenant
+  description: Review admin users and roles, configure advanced settings, alerts and remote assistance,
+    label rules and activate saved changes.
+  components:
+    admin_users: Admin users
+    admin_roles: Admin roles
+    advanced_settings: Advanced settings
+    alerts: Alert subscriptions
+    remote_assistance: Remote assistance
+    rule_labels: Rule labels
+    activation: Configuration activation
+    activation_status: Activation status

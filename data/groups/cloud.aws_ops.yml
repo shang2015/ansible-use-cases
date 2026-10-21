@@ -1,0 +1,50 @@
+fqcn: cloud.aws_ops
+product: Amazon Web Services
+use_cases:
+- title: Provision EC2 instances and networking
+  description: Create and delete EC2 instances with networking, custom AMIs and imported images, terminate
+    instances by tag, and manage VPC peering and transit gateways.
+  components:
+    role:manage_ec2_instance: EC2 instances
+    role:ec2_networking_resources: EC2 networking resources
+    role:customized_ami: Custom AMIs
+    role:import_image_and_run_aws_instance: Image import and instance launch
+    role:ec2_instance_terminate_by_tag: Terminate instances by tag
+    role:manage_vpc_peering: VPC peering
+    role:manage_transit_gateway: Transit gateways
+    role:awsconfig_detach_and_delete_internet_gateway: Internet gateway removal
+- title: Validate network configuration
+  description: Evaluate network ACLs, route tables and security group rules.
+  components:
+    network_acls: Network ACL evaluation
+    route_tables: Route table evaluation
+    security_group_rules: Security group rule evaluation
+- title: Deploy applications and data services
+  description: Deploy web apps, API Gateway with Lambda, Aurora global clusters, and move objects between
+    S3 buckets.
+  components:
+    role:deploy_flask_app: Flask app
+    role:awsconfig_apigateway_with_lambda_integration: API Gateway with Lambda
+    role:create_rds_global_cluster: Aurora global clusters
+    role:move_objects_between_buckets: S3 object moves
+    playbook:webapp.webapp: Web app
+    playbook:webapp.webapp_ha_aurora: HA Aurora inventory
+    playbook:webapp.migrate_webapp: Web app migration
+    playbook:upload_file_to_s3: S3 file upload
+- title: Migrate on-premises VMs to AWS
+  description: Clone on-premises KVM VMs and move them to AWS.
+  components:
+    role:clone_on_prem_vm: On-premises VM cloning
+    playbook:move_vm_from_on_prem_to_aws.move_vm_from_on_prem_to_aws: Move VM to AWS
+- title: Back up and secure AWS accounts
+  description: Define credentials, create backup plans, select backup resources, and restore CloudTrail
+    logging and KMS keys.
+  components:
+    role:aws_setup_credentials: Credentials setup
+    role:backup_create_plan: Backup plans
+    role:backup_select_resources: Backup selection
+    role:awsconfig_multiregion_cloudtrail: Multi-region CloudTrail
+    role:enable_cloudtrail_encryption_with_kms: CloudTrail KMS encryption
+    playbook:aws_restore_cloudtrail: Restore CloudTrail
+    playbook:aws_restore_cloudtrail_encryption: Restore CloudTrail encryption
+    playbook:aws_restore_kms_key: Restore KMS key

@@ -1,0 +1,160 @@
+fqcn: dellemc.powerscale
+product: Dell PowerScale (OneFS)
+notes:
+- Each module has a matching example playbook under modules/.
+use_cases:
+- title: Manage filesystems, quotas and storage tiering
+  description: Manage filesystems and their ACLs, enforce Smart Quotas, and define file pool policies,
+    storage pool tiers and SmartPools settings.
+  components:
+    filesystem: Filesystems
+    smartquota: Smart Quotas
+    filepoolpolicy: File pool policies
+    storagepooltier: Storage pool tiers
+    smartpoolsettings: SmartPools settings
+    playbook:modules.filesystem: Filesystems playbook
+    playbook:modules.filesystem_mult_ace_container_inherit: 'Filesystem ACL example: multi-trustee, container
+      inherit'
+    playbook:modules.filesystem_mult_ace_container_inherit_only: 'Filesystem ACL example: allow and deny
+      for one trustee'
+    playbook:modules.filesystem_mult_ace_object_container_inherit: 'Filesystem ACL example: multi-trustee,
+      full inheritance'
+    playbook:modules.filesystem_mult_ace_object_inherit: 'Filesystem ACL example: multi-trustee, object
+      inherit'
+    playbook:modules.filesystem_mult_ace_object_no_prop: 'Filesystem ACL example: multi-trustee, object
+      inherit without propagation'
+    playbook:modules.smartquota: Smart Quotas playbook
+    playbook:modules.filepoolpolicy: File pool policies playbook
+    playbook:modules.storagepooltier: Storage pool tiers playbook
+    playbook:modules.smartpoolsettings: SmartPools settings playbook
+- title: Protect data with snapshots and SyncIQ replication
+  description: Take, schedule and expose writable snapshots, and configure SyncIQ policies, jobs, performance
+    rules, certificates, global settings and reports.
+  components:
+    snapshot: Snapshots
+    snapshotschedule: Snapshot schedules
+    writable_snapshots: Writable snapshots
+    synciqpolicy: SyncIQ policies
+    synciqjob: SyncIQ jobs
+    synciqrules: SyncIQ performance rules
+    synciqcertificate: SyncIQ target certificates
+    synciq_global_settings: SyncIQ global settings
+    synciqreports: SyncIQ reports
+    synciqtargetreports: SyncIQ target reports
+    playbook:modules.snapshot: Snapshots playbook
+    playbook:modules.snapshotschedule: Snapshot schedules playbook
+    playbook:modules.writable_snapshots: Writable snapshots playbook
+    playbook:modules.synciqpolicy: SyncIQ policies playbook
+    playbook:modules.synciqjobs: SyncIQ jobs playbook
+    playbook:modules.synciqrules: SyncIQ performance rules playbook
+    playbook:modules.synciqcertificate: SyncIQ target certificates playbook
+    playbook:modules.synciq_global_settings: SyncIQ global settings playbook
+    playbook:modules.synciqreports: SyncIQ reports playbook
+    playbook:modules.synciqtargetreports: SyncIQ target reports playbook
+- title: Share files over NFS and SMB
+  description: Create NFS exports and aliases and SMB shares and files, and set the NFS and SMB defaults,
+    global and zone settings.
+  components:
+    nfs: NFS exports
+    nfs_alias: NFS aliases
+    nfs_default_settings: NFS default settings
+    nfs_global_settings: NFS global settings
+    nfs_zone_settings: NFS zone settings
+    smb: SMB shares
+    smb_file: SMB files
+    smb_global_settings: SMB global settings
+    playbook:modules.nfs: NFS exports playbook
+    playbook:modules.nfs_alias: NFS aliases playbook
+    playbook:modules.nfs_default_settings: NFS default settings playbook
+    playbook:modules.nfs_global_settings: NFS global settings playbook
+    playbook:modules.nfs_zone_settings: NFS zone settings playbook
+    playbook:modules.smb: SMB shares playbook
+    playbook:modules.smb_file: SMB files playbook
+    playbook:modules.smb_global_settings: SMB global settings playbook
+- title: Provide S3 object storage
+  description: Create S3 buckets and access keys and set the S3 global and zone settings.
+  components:
+    s3_bucket: S3 buckets
+    s3_key: S3 keys
+    s3_global_settings: S3 global settings
+    s3_zone_settings: S3 zone settings
+    playbook:modules.s3_bucket: S3 buckets playbook
+    playbook:modules.s3_key: S3 keys playbook
+    playbook:modules.s3_global_settings: S3 global settings playbook
+    playbook:modules.s3_zone_settings: S3 zone settings playbook
+- title: Manage access zones, identity and authentication
+  description: Create access zones, connect Active Directory and LDAP providers, manage local users, groups
+    and roles, user mapping rules and server certificates.
+  components:
+    accesszone: Access zones
+    ads: Active Directory providers
+    ldap: LDAP providers
+    user: Users
+    group: Groups
+    role: Roles
+    user_mapping_rule: User mapping rules
+    server_certificate: Server certificates
+    playbook:modules.accesszone: Access zones playbook
+    playbook:modules.ads: Active Directory providers playbook
+    playbook:modules.ldap: LDAP providers playbook
+    playbook:modules.user: Users playbook
+    playbook:modules.group: Groups playbook
+    playbook:modules.role: Roles playbook
+    playbook:modules.user_mapping_rules: User mapping rules playbook
+    playbook:modules.server_certificate: Server certificates playbook
+- title: Configure cluster networking
+  description: Define groupnets, subnets, network pools, provisioning rules and network settings.
+  components:
+    groupnet: Groupnets
+    subnet: Subnets
+    networkpool: Network pools
+    networkrule: Network provisioning rules
+    networksettings: Network settings
+    playbook:modules.groupnet: Groupnets playbook
+    playbook:modules.subnet: Subnets playbook
+    playbook:modules.networkpool: Network pools playbook
+    playbook:modules.networkrule: Network provisioning rules playbook
+    playbook:modules.networksettings: Network settings playbook
+- title: Configure alerts and support
+  description: Set up alert channels, rules, settings and suppression, SNMP, Support Assist and IPMI.
+  components:
+    alert_channel: Alert channels
+    alert_rule: Alert rules
+    alert_settings: Alert settings
+    event_alert_suppression: Event alert suppression
+    snmp_settings: SNMP settings
+    support_assist: Support Assist
+    ipmi: IPMI configuration
+    playbook:modules.alert_channel: Alert channels playbook
+    playbook:modules.alert_rule: Alert rules playbook
+    playbook:modules.alert_settings: Alert settings playbook
+    playbook:modules.event_alert_suppression: Event alert suppression playbook
+    playbook:modules.snmp_settings: SNMP settings playbook
+    playbook:modules.support_assist: Support Assist playbook
+    playbook:modules.ipmi: IPMI configuration playbook
+- title: Run and monitor cluster jobs
+  description: Start and manage jobs, set job policies and read job types, events and reports.
+  components:
+    job: Jobs
+    job_policy: Job policies
+    job_type: Job types
+    job_event: Job events
+    job_report: Job reports
+    playbook:modules.job: Jobs playbook
+    playbook:modules.job_info: Jobs playbook
+    playbook:modules.job_policy: Job policies playbook
+    playbook:modules.job_type_info: Job types playbook
+    playbook:modules.job_event_info: Job events playbook
+    playbook:modules.job_report_info: Job reports playbook
+- title: Administer the cluster and gather facts
+  description: Collect cluster and node information, manage cluster services and general settings.
+  components:
+    info: Cluster information
+    node: Nodes
+    cluster_services: Cluster services
+    settings: General settings
+    playbook:modules.info: Cluster information playbook
+    playbook:modules.module_defaults_example: Module defaults example playbook
+    playbook:modules.node: Nodes playbook
+    playbook:modules.cluster_services: Cluster services playbook
+    playbook:modules.settings: General settings playbook

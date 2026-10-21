@@ -1,0 +1,9 @@
+fqcn: dynatrace.event_driven_ansible
+product: "Dynatrace"
+use_cases:
+- title: "Remediate Dynatrace problems with Event-Driven Ansible"
+  description: "Receive Dynatrace problems or webhook events in rulebooks to trigger auto-remediation."
+  components:
+    "eda_event_source:dt_esa_api": "Problems API event source"
+    "eda_event_source:dt_webhook": "Webhook event source"
+    "playbook:run-task": "Test playbook"

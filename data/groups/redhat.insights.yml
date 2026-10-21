@@ -1,0 +1,9 @@
+fqcn: redhat.insights
+product: "Red Hat Insights"
+use_cases:
+- title: "Connect hosts to Red Hat Insights"
+  description: "Install and configure the Insights client and compliance scanning, and use Insights as an inventory source."
+  components:
+    "role:insights_client": "Insights client"
+    "role:compliance": "Compliance"
+    "inventory:insights": "Insights inventory"

@@ -1,0 +1,89 @@
+fqcn: ansible.oci
+product: Oracle Cloud Infrastructure
+use_cases:
+- title: Manage compute instances and images
+  description: Launch and manage Compute instances, custom images, console connections and VNIC attachments,
+    look up shapes, and build inventory from OCI Compute.
+  components:
+    instance: Compute instances
+    image: Custom images
+    shape: Compute shapes
+    instance_console_connection: Console connections
+    vnic_attachment: VNIC attachments
+    inventory:oci_compute: Compute inventory
+- title: Manage block and boot volumes and backups
+  description: Create and attach block and boot volumes and volume groups, take backups, and assign backup
+    policies.
+  components:
+    blockstorage_volume: Block volumes
+    volume_attachment: Volume attachments
+    boot_volume: Boot volumes
+    boot_volume_backup: Boot volume backups
+    volume_backup: Volume backups
+    volume_group: Volume groups
+    volume_group_backup: Volume group backups
+    volume_backup_policy: Backup policies
+    volume_backup_policy_assignment: Backup policy assignments
+- title: Build virtual cloud networks
+  description: Create VCNs, subnets, route tables, gateways, DHCP options and IP addresses, and connect
+    networks through DRGs and peering.
+  components:
+    network_vcn: Virtual cloud networks
+    network_subnet: Subnets
+    network_route_table: Route tables
+    network_dhcp_options: DHCP options
+    network_internet_gateway: Internet gateways
+    network_nat_gateway: NAT gateways
+    network_service_gateway: Service gateways
+    network_local_peering_gateway: Local peering gateways
+    network_drg: Dynamic routing gateways
+    network_drg_attachment: DRG attachments
+    network_private_ip: Private IPs
+    network_public_ip: Public IPs
+- title: Secure network traffic
+  description: Manage network security groups and their rules, and retrieve security lists.
+  components:
+    network_security_group: Network security groups
+    network_security_group_rule: Security group rules
+    network_security: Security lists (management)
+    network_security_list: Security list information
+- title: Balance load across backends
+  description: Create load balancers with listeners, backend sets, backends, health checkers and routing
+    policies.
+  components:
+    loadbalancer: Load balancers
+    loadbalancer_listener: Listeners
+    loadbalancer_backend_set: Backend sets
+    loadbalancer_backend: Backends
+    loadbalancer_health_checker: Health checkers
+    loadbalancer_routing_policy: Routing policies
+- title: Manage object storage and databases
+  description: Manage Object Storage buckets, objects and lifecycle policies, and provision Autonomous
+    Databases.
+  components:
+    object_storage_bucket: Buckets
+    object_storage_object: Objects
+    object_lifecycle_policy: Lifecycle policies
+    autonomous_database: Autonomous Databases
+- title: Run Kubernetes clusters on OKE
+  description: Create OKE clusters and node pools, and look up available node pool options.
+  components:
+    oke_cluster: OKE clusters
+    oke_node_pool: Node pools
+    oke_node_pool_options: Node pool options
+- title: Control access, compartments and tagging
+  description: Manage compartments, identity domains, users, groups, dynamic groups, policies, API keys,
+    tags and bastions for secure access.
+  components:
+    identity_compartment: Compartments
+    identity_domain: Identity domains
+    identity_user: Users
+    identity_group: Groups
+    identity_user_group_membership: Group memberships
+    identity_dynamic_group: Dynamic groups
+    identity_policy: Policies
+    identity_api_key: API keys
+    identity_availability_domain: Availability domains
+    identity_tag_namespace: Tag namespaces
+    identity_tag: Tags
+    bastion: Bastions

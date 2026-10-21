@@ -1,0 +1,10 @@
+fqcn: netapp.azure
+product: "NetApp Azure NetApp Files"
+use_cases:
+- title: "Manage Azure NetApp Files"
+  description: "Create accounts, capacity pools, volumes and snapshots in Azure NetApp Files."
+  components:
+    "account": "Accounts"
+    "capacity_pool": "Capacity pools"
+    "volume": "Volumes"
+    "snapshot": "Snapshots"

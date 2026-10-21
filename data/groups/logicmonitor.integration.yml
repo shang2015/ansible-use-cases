@@ -1,0 +1,24 @@
+fqcn: logicmonitor.integration
+product: LogicMonitor
+use_cases:
+- title: Onboard and organize monitored devices
+  description: Manage devices, device groups and datasources, and gather information about LogicMonitor
+    objects.
+  components:
+    device: Devices
+    device_group: Device groups
+    datasource: Datasources
+    website_check: Website checks
+    info: LogicMonitor information
+- title: Manage collectors
+  description: Manage collectors, collector groups and OpenTelemetry collectors.
+  components:
+    collector: Collectors
+    collector_group: Collector groups
+    otel_collector: OpenTelemetry collectors
+- title: Route alerts
+  description: Manage alert rules and escalation chains and receive events in Event-Driven Ansible.
+  components:
+    alert_rule: Alert rules
+    escalation_chain: Escalation chains
+    eda_event_source:webhook: Webhook event source

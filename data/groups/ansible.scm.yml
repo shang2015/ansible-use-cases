@@ -1,0 +1,8 @@
+fqcn: ansible.scm
+product: "Source control"
+use_cases:
+- title: "Retrieve and publish Git repositories"
+  description: "Retrieve a repository to the execution node and publish changes to a remote location."
+  components:
+    "git_retrieve": "Retrieve repository"
+    "git_publish": "Publish changes"

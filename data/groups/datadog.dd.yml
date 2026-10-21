@@ -1,0 +1,7 @@
+fqcn: datadog.dd
+product: "Datadog"
+use_cases:
+- title: "Install the Datadog agent"
+  description: "Install the Datadog agent and configure checks."
+  components:
+    "role:agent": "Datadog agent"

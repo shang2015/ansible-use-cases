@@ -1,0 +1,13 @@
+fqcn: bigpanda.incident
+product: "BigPanda"
+use_cases:
+- title: "Triage and resolve BigPanda incidents"
+  description: "Tag, assign, comment on, merge, split and resolve BigPanda incidents and resolve alerts."
+  components:
+    "add_tag": "Incident tags"
+    "assign": "Incident assignment"
+    "comment": "Incident comments"
+    "merge": "Merge incidents"
+    "split": "Split incidents"
+    "resolve": "Resolve incidents"
+    "resolve_alert": "Resolve alerts"

@@ -1,0 +1,17 @@
+fqcn: cloud.terraform
+product: "HashiCorp Terraform"
+use_cases:
+- title: "Run Terraform deployments and plans"
+  description: "Apply Terraform configurations and plans, read module outputs, stash plan files and apply plans from a Git repository."
+  components:
+    "terraform": "Terraform deployments"
+    "terraform_output": "Terraform outputs"
+    "plan_stash": "Plan stash"
+    "role:git_plan": "Apply a plan from Git"
+    "lookup:tf_output": "Terraform output lookup"
+- title: "Build inventory from Terraform state"
+  description: "Build Ansible inventory from Terraform state files and outputs."
+  components:
+    "inventory:terraform_provider": "Terraform state inventory (providers)"
+    "inventory:terraform_state": "Terraform state inventory (cloud resources)"
+    "role:inventory_from_outputs": "In-memory inventory from outputs"

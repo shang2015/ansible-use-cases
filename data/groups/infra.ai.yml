@@ -1,0 +1,21 @@
+fqcn: infra.ai
+product: Red Hat AI infrastructure
+use_cases:
+- title: Provision and tear down AI infrastructure in the cloud
+  description: Provision and tear down infrastructure on AWS, Azure and Google Cloud.
+  components:
+    playbook:aws_provision: Provision AWS infrastructure
+    playbook:aws_teardown: Tear down AWS infrastructure
+    playbook:azure_provision: Provision Azure infrastructure
+    playbook:azure_teardown: Tear down Azure infrastructure
+    playbook:gcp_provision: Create a GCP instance
+    playbook:gcp_teardown: Tear down Google Cloud infrastructure
+- title: Prepare bare-metal hosts and proxies
+  description: Create installation ISO images for bare-metal hosts and provision infrastructure and an
+    nginx reverse proxy with self-signed TLS certificates.
+  components:
+    role:baremetal_iso: Bare-metal installation ISO
+    playbook:baremetal_provision: Provision bare-metal infrastructure
+    role:nginx_proxy: nginx reverse proxy
+    playbook:proxy: Install nginx proxy
+    playbook:gcp_proxy: Install nginx proxy on GCP

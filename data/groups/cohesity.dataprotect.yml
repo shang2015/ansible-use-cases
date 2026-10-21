@@ -1,0 +1,113 @@
+fqcn: cohesity.dataprotect
+product: Cohesity DataProtect
+notes:
+- Module names have the cohesity_ prefix omitted; playbooks are grouped by the workload they protect.
+use_cases:
+- title: Install and remove agents and connectors
+  description: Manage physical and Windows agents and datastore plugins, and install the agent on Linux,
+    AIX or Windows hosts.
+  components:
+    agent: Physical agents
+    win_agent: Windows agents
+    plugin: Datastore plugins
+    playbook:physical-workflow.agent-install.install_linux_agent: Linux agent install
+    playbook:physical-workflow.agent-install.install_agent_centos: CentOS agent install
+    playbook:physical-workflow.agent-install.install_agent_oracle_linux: Oracle Linux agent install
+    playbook:physical-workflow.agent-install.install_agent_sles: SLES agent install
+    playbook:physical-workflow.agent-install.install_agent_ubuntu: Ubuntu agent install
+    playbook:physical-workflow.agent-install.install_agent_aix: AIX agent install
+    playbook:physical-workflow.agent-install.install_win_agent: Windows agent install
+    playbook:physical-workflow.uninstall-agent.uninstall_linux_agent: Linux agent removal
+    playbook:physical-workflow.uninstall-agent.uninstall_win_agent: Windows agent removal
+    playbook:uda-workflow.connector-install.install_postgres_plugin: PostgreSQL plugin install
+    playbook:uda-workflow.connector-install.install_sap_hana_plugin: SAP HANA plugin install
+    playbook:uda-workflow.connector-install.uninstall_sap_hana_plugin: SAP HANA plugin removal
+- title: Protect physical servers
+  description: Register physical sources, create and update protection groups, and restore files on Linux
+    hosts.
+  components:
+    playbook:physical-workflow.register_single_physical_source: Single source registration
+    playbook:physical-workflow.register_multiple_physical_source: Multiple source registration
+    playbook:physical-workflow.refresh_physical_sources: Source refresh
+    playbook:physical-workflow.unregister_source: Source unregistration
+    playbook:physical-workflow.create_physical_protection_group: Protection group creation
+    playbook:physical-workflow.update_physical_protection_group: Protection group update
+    playbook:physical-workflow.remove_sources_from_protection_group: Source removal from group
+    playbook:physical-workflow.delete_protection_group: Protection group deletion
+    playbook:physical-workflow.restore_files_linux: Linux file restore
+- title: Protect and recover VMware virtual machines
+  description: Register vCenter sources, build protection jobs, restore VMs and files, and clone VMs.
+  components:
+    source: Protection sources
+    job: Protection jobs
+    restore_vm: VM restores
+    restore_file: File and folder restores
+    restore_vmware_file: VMware file restores
+    clone_vm: VM clones
+    playbook:vmware-workflow.register_vmware_source: vCenter source registration
+    playbook:vmware-workflow.update_vmware_source: vCenter source update
+    playbook:vmware-workflow.refresh_source: vCenter source refresh
+    playbook:vmware-workflow.create_vmware_protection_group: Protection group creation
+    playbook:vmware-workflow.create_tag_based_protection_group: Tag-based protection group creation
+    playbook:vmware-workflow.update_vmware_protection_group: Protection group update
+    playbook:vmware-workflow.remove_vms_from_job: VM removal from job
+    playbook:vmware-workflow.delete_protection_group: Protection group deletion
+    playbook:vmware-workflow.restore_vm: VM restore
+    playbook:vmware-workflow.restore_files_vmware: File restore
+    playbook:vmware-workflow.cohesity_clone_vm: VM clone
+- title: Migrate virtual machines
+  description: Create, monitor, sync, finalise or cancel VM migrations from Cohesity backups.
+  components:
+    migrate_vm: VM migrations
+    migration: Migration sync status
+    sync_objects: Migration object sync
+    finalize_migration: Migration finalisation
+    cancel_migration: Migration cancellation
+    playbook:vmware-workflow.migration.create_vm_migration: VM migration creation
+    playbook:vmware-workflow.migration.migrate_task: Migration task
+    playbook:vmware-workflow.migration.get_migration_status: Migration status
+    playbook:vmware-workflow.migration.sync_objects: Migration object sync
+    playbook:vmware-workflow.migration.finalize_migration: Migration finalisation
+    playbook:vmware-workflow.migration.cancel_migration: Migration cancellation
+- title: Protect NAS and manage views
+  description: Register NFS and SMB sources, create NAS protection jobs, and create or delete Cohesity
+    views.
+  components:
+    view: Views
+    playbook:nas-workflow.register_NAS_NFS_source: NFS source registration
+    playbook:nas-workflow.register_NAS_SMB_source: SMB source registration
+    playbook:nas-workflow.create_nas_workflow: NAS protection job
+    playbook:nas-workflow.remove_source_from_job: Source removal from job
+    playbook:view-workflow.create_view: View creation
+    playbook:view-workflow.delete_view: View deletion
+- title: Protect and recover databases
+  description: Protect Oracle, SQL Server and user-defined-archive (UDA) databases and recover Oracle
+    databases.
+  components:
+    oracle_source: Oracle sources
+    oracle_job: Oracle protection jobs
+    oracle_restore: Oracle restores
+    uda_source: UDA sources
+    uda_protection_group: UDA protection groups
+    playbook:oracle-workflow.register_oracle_source: Oracle source registration
+    playbook:oracle-workflow.refresh_oracle_source: Oracle source refresh
+    playbook:oracle-workflow.create_oracle_job: Oracle protection job
+    playbook:oracle-workflow.recover_db: Oracle recovery
+    playbook:sql-workflow.register_sql_source: SQL Server source registration
+    playbook:uda-workflow.register_uda_source: UDA source registration
+    playbook:uda-workflow.create_uda_protection_group: UDA protection group
+- title: Manage policies, storage domains and cluster runs
+  description: Create protection policies and storage domains, start, stop or delete protection groups,
+    and gather cluster facts.
+  components:
+    policy: Protection policies
+    storage_domain: Storage domains
+    facts: Cluster facts
+    playbook:policy.create_policy: Policy creation
+    playbook:policy.delete_policy: Policy deletion
+    playbook:storage_domain_workflow.create_storage_domain: Storage domain creation
+    playbook:storage_domain_workflow.delete_storage_domain: Storage domain deletion
+    playbook:common.start_protection_group: Protection group start
+    playbook:common.stop_protection_group: Protection group stop
+    playbook:common.delete_protection_group: Protection group deletion
+    playbook:facts: Facts export

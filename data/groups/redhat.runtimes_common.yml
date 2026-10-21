@@ -1,0 +1,12 @@
+fqcn: redhat.runtimes_common
+product: "Red Hat JBoss middleware runtimes"
+use_cases:
+- title: "Download artifacts and manage files for middleware runtimes"
+  description: "Download Maven artifacts and Red Hat products, search products, edit XML, wait on log output and sort versions."
+  components:
+    "maven_artifact": "Maven artifacts"
+    "product_download": "Product downloads"
+    "product_search": "Product search"
+    "xml": "XML files"
+    "tail_grep": "Log file wait"
+    "filter:version_sort": "Version sort filter"

@@ -1,0 +1,125 @@
+fqcn: netbox.netbox
+product: NetBox
+use_cases:
+- title: Model sites, locations, racks and tenants
+  description: Define regions, sites, locations, racks and rack roles, tenants, contacts and manufacturers.
+  components:
+    region: Regions
+    site_group: Site groups
+    site: Sites
+    location: Locations
+    rack_group: Rack groups
+    rack_role: Rack roles
+    rack: Racks
+    tenant_group: Tenant groups
+    tenant: Tenants
+    contact_group: Contact groups
+    contact_role: Contact roles
+    contact: Contacts
+    contact_assignment: Contact assignments
+    manufacturer: Manufacturers
+- title: Manage devices and hardware components
+  description: Create devices, types, roles and platforms with their interfaces, ports, bays, modules
+    and inventory items, and connect them with cables.
+  components:
+    device: Devices
+    device_type: Device types
+    device_role: Device roles
+    platform: Platforms
+    virtual_chassis: Virtual chassis
+    inventory_item: Inventory items
+    inventory_item_role: Inventory item roles
+    device_interface: Device interfaces
+    device_interface_template: Interface templates
+    front_port: Front ports
+    front_port_template: Front port templates
+    rear_port: Rear ports
+    rear_port_template: Rear port templates
+    console_port: Console ports
+    console_port_template: Console port templates
+    console_server_port: Console server ports
+    console_server_port_template: Console server port templates
+    device_bay: Device bays
+    device_bay_template: Device bay templates
+    module: Modules
+    module_type: Module types
+    module_bay: Module bays
+    cable: Cables
+- title: Manage power infrastructure
+  description: Track power panels, feeds, ports and outlets and their templates.
+  components:
+    power_panel: Power panels
+    power_feed: Power feeds
+    power_port: Power ports
+    power_port_template: Power port templates
+    power_outlet: Power outlets
+    power_outlet_template: Power outlet templates
+- title: Manage IP addressing and VLANs
+  description: Maintain RIRs, aggregates, ASNs, prefixes, IP and MAC addresses, VRFs, route targets, VLANs
+    and FHRP groups.
+  components:
+    rir: RIRs
+    aggregate: Aggregates
+    asn: ASNs
+    prefix: Prefixes
+    ip_address: IP addresses
+    mac_address: MAC addresses
+    ipam_role: IPAM roles
+    vrf: VRFs
+    route_target: Route targets
+    vlan_group: VLAN groups
+    vlan: VLANs
+    fhrp_group: FHRP groups
+    fhrp_group_assignment: FHRP group assignments
+    service: Services
+    service_template: Service templates
+- title: Track circuits, tunnels and overlays
+  description: Record providers, provider networks, circuits and terminations, tunnels and L2VPNs.
+  components:
+    provider: Providers
+    provider_network: Provider networks
+    circuit_type: Circuit types
+    circuit: Circuits
+    circuit_termination: Circuit terminations
+    tunnel_group: Tunnel groups
+    tunnel: Tunnels
+    l2vpn: L2VPNs
+    l2vpn_termination: L2VPN terminations
+- title: Model virtualisation and wireless
+  description: Track clusters, virtual machines, their interfaces and disks, and wireless LANs and links.
+  components:
+    cluster_type: Cluster types
+    cluster_group: Cluster groups
+    cluster: Clusters
+    virtual_machine: Virtual machines
+    vm_interface: VM interfaces
+    virtual_disk: Virtual disks
+    wireless_lan_group: Wireless LAN groups
+    wireless_lan: Wireless LANs
+    wireless_link: Wireless links
+- title: Customise NetBox and drive automation
+  description: Add custom fields and links, tags, config contexts and templates, export templates, data
+    sources, journal entries and webhooks.
+  components:
+    custom_field: Custom fields
+    custom_field_choice_set: Custom field choice sets
+    custom_link: Custom links
+    tag: Tags
+    config_context: Config contexts
+    config_template: Config templates
+    export_template: Export templates
+    data_source: Data sources
+    journal_entry: Journal entries
+    webhook: Webhooks
+- title: Administer users and permissions
+  description: Manage users, groups, API tokens and object permissions.
+  components:
+    user: Users
+    user_group: User groups
+    token: API tokens
+    permission: Permissions
+- title: Use NetBox as inventory and lookup source
+  description: Build dynamic inventory from NetBox and query its objects from playbooks.
+  components:
+    inventory:nb_inventory: NetBox inventory
+    lookup:nb_lookup: NetBox lookup

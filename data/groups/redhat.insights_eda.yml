@@ -1,0 +1,7 @@
+fqcn: redhat.insights_eda
+product: "Red Hat Insights"
+use_cases:
+- title: "Respond to Red Hat Insights events"
+  description: "Receive Red Hat Insights events in Event-Driven Ansible."
+  components:
+    "eda_event_source:insights": "Insights event source"

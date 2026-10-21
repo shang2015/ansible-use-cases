@@ -1,0 +1,69 @@
+fqcn: scale_computing.hypercore
+product: Scale Computing HyperCore
+use_cases:
+- title: Create and operate virtual machines
+  description: Create, update and delete VMs, adjust parameters, disks, NICs, boot devices and node affinity,
+    and clone, import and export VMs.
+  components:
+    vm: Virtual machines
+    vm_params: VM parameters
+    vm_disk: VM disks
+    vm_nic: VM network interfaces
+    vm_boot_devices: Boot devices
+    vm_node_affinity: Node affinity
+    vm_clone: VM clones
+    vm_import: VM import
+    vm_export: VM export
+- title: Deploy VMs from images and templates
+  description: Manage ISO images and virtual disks, attach cloned disks to VMs, download images to create
+    templates, and clone templates into VMs.
+  components:
+    iso: ISO images
+    virtual_disk: Virtual disks
+    virtual_disk_attach: Virtual disk attachment
+    role:url2template: Template from URL role
+    role:template2vm: VM from template role
+- title: Protect VMs with snapshots and replication
+  description: Take VM snapshots and attach snapshot disks, schedule snapshots, and replicate VMs to remote
+    clusters.
+  components:
+    vm_snapshot: VM snapshots
+    vm_snapshot_attach_disk: Snapshot disk attachment
+    snapshot_schedule: Snapshot schedules
+    vm_replication: VM replication
+    remote_cluster: Remote clusters
+- title: Configure the cluster
+  description: Set the cluster name, DNS, time server and time zone, SMTP and email alerts, syslog, certificates,
+    OIDC and registration, and configure clusters from one role.
+  components:
+    cluster_name: Cluster name
+    dns_config: DNS
+    time_server: Time server
+    time_zone: Time zone
+    smtp: SMTP
+    email_alert: Email alerts
+    syslog_server: Syslog servers
+    certificate: Certificates
+    oidc_config: OIDC configuration
+    registration: Registration
+    user: Local users
+    role:cluster_config: Cluster configuration role
+- title: Update and support the cluster
+  description: Install cluster updates and check their status, update single-node systems, open support
+    tunnels, shut down clusters, and wait for tasks.
+  components:
+    version_update: Version updates
+    version_update_status: Update status
+    role:version_update_single_node: Single-node update role
+    support_tunnel: Support tunnel
+    cluster_shutdown: Cluster shutdown
+    task_wait: Task wait
+    role:check_local_time: Local time check role
+- title: Inspect clusters and call the API
+  description: Gather cluster and node information, build inventory from HyperCore and call the REST API
+    directly.
+  components:
+    cluster: Cluster information
+    node: Nodes
+    inventory:hypercore: HyperCore inventory
+    api: REST API

@@ -1,0 +1,131 @@
+fqcn: ibm.storage_virtualize
+product: IBM Storage Virtualize (FlashSystem and SAN Volume Controller)
+notes:
+- Module names have the ibm_ prefix omitted.
+use_cases:
+- title: Set up and maintain the storage system
+  description: Run initial setup, authenticate, gather information, send CLI commands, manage Call Home,
+    remote support, syslog, FlashSystem grid, firmware upgrades and log collection.
+  components:
+    svc_initial_setup: Initial setup
+    svc_complete_initial_setup: Initial setup completion
+    playbook:initial_setup_system_complete: Full initial setup
+    svc_auth: Authentication tokens
+    svc: System information
+    svcinfo_command: svcinfo CLI commands
+    svctask_command: svctask CLI commands
+    svc_manage_callhome: Call Home
+    svc_manage_sra: Remote support assistance
+    sv_manage_syslog_server: Syslog servers
+    sv_manage_flashsystem_grid: FlashSystem grid
+    playbook:firmware_upgrade.main: Firmware upgrade
+    playbook:flashsystem_log_collection.main: Log and dump collection
+    playbook:generic_ansible_sample: Generic sample
+    playbook:generic_info: Generic information sample
+    playbook:cluster_config_replication.extract_src_cluster_config: Source cluster configuration export
+    playbook:cluster_config_replication.replicate_config_on_target_cluster: Configuration replication
+      to target
+- title: Manage users, security and certificates
+  description: Manage users, user groups, ownership groups, security options, system certificates and
+    truststores.
+  components:
+    svc_manage_user: Users
+    svc_manage_usergroup: User groups
+    svc_manage_ownershipgroup: Ownership groups
+    sv_manage_security: Security options
+    sv_manage_ssl_certificate: SSL certificates
+    sv_manage_system_certificate: System certificates
+    sv_manage_truststore_for_replication: Replication truststores
+    playbook:security_mgmt: Security settings
+- title: Provision pools, drives and volumes
+  description: Manage MDisks, pools, drives, provisioning policies, volumes, volume groups, mirrored volumes,
+    change volumes and clones.
+  components:
+    svc_mdisk: MDisks
+    svc_mdiskgrp: Storage pools
+    sv_manage_drive: Drives
+    sv_manage_provisioning_policy: Provisioning policies
+    svc_manage_volume: Volumes
+    svc_manage_volumegroup: Volume groups
+    svc_manage_mirrored_volume: Mirrored volumes
+    svc_manage_cv: Change volumes
+    sv_manage_clone: Clones and thin clones
+    playbook:volumegrp_create: Volume group creation
+- title: Connect hosts and map volumes
+  description: Define hosts and host clusters, port sets and FC port set members, IP provisioning, volume
+    mappings and SAN zoning.
+  components:
+    svc_host: Hosts
+    svc_hostcluster: Host clusters
+    svc_manage_portset: Port sets
+    sv_manage_fcportsetmember: FC port set members
+    svc_manage_ip: IP provisioning
+    svc_vol_map: Volume mappings
+    playbook:map_volume_to_host: Volume-to-host mapping
+    playbook:cisco_fc_zoning.main: Cisco SAN zoning pre-flight
+    playbook:cisco_fc_zoning.cisco_zone_sync: Cisco SAN zone sync
+- title: Protect data with snapshots and FlashCopy
+  description: Manage snapshots and snapshot policies, FlashCopy mappings and consistency groups, and
+    safeguarded policies.
+  components:
+    sv_manage_snapshot: Snapshots
+    sv_manage_snapshotpolicy: Snapshot policies
+    svc_manage_flashcopy: FlashCopy mappings
+    svc_manage_consistgrp_flashcopy: FlashCopy consistency groups
+    svc_start_stop_flashcopy: FlashCopy start and stop
+    svc_manage_safeguarded_policy: Safeguarded policies
+- title: Replicate data between systems
+  description: Set up partnerships, remote copy relationships and groups, replication policies, and switch
+    replication direction.
+  components:
+    sv_manage_fc_partnership: FC partnerships
+    sv_manage_ip_partnership: IP partnerships
+    svc_manage_replication: Remote copy relationships
+    svc_manage_replicationgroup: Remote copy consistency groups
+    svc_start_stop_replication: Remote copy start and stop
+    sv_manage_replication_policy: Replication policies
+    sv_switch_replication_direction: Replication direction
+    playbook:create_GMCV_in_CG: Global Mirror with change volumes in a consistency group
+    playbook:policy_based_replication.main: Policy-based replication
+- title: Run policy-based high availability and disaster recovery
+  description: Manage storage partitions, configure PBHA and PBR, and migrate objects or Hyperswap and
+    Global Mirror to the new models.
+  components:
+    sv_manage_storage_partition: Storage partitions
+    playbook:PBHA.main: PBHA configuration
+    playbook:PBRHA.main: PBR configuration
+    playbook:PBRHA.remove_dr_link: DR link removal
+    playbook:move_existing_objects_into_PBHA_env.main: Move objects into PBHA
+    playbook:move_existing_objects_into_PBHA_env.decommission_partition: Partition decommission
+    playbook:hyperswap_to_pbha_migration.migrate_hyperswap_to_pbha: Hyperswap to PBHA migration
+    playbook:hyperswap_to_pbha_migration.migrate_dependent_volumes: Dependent volume migration
+    playbook:migrate_gm_gmcv_to_pbr.migrate_consistency_groups.main: Consistency group migration to PBR
+    playbook:migrate_gm_gmcv_to_pbr.migrate_consistency_groups.cleanup: Consistency group migration cleanup
+    playbook:migrate_gm_gmcv_to_pbr.migrate_independent_relationships.main: Independent relationship migration
+      to PBR
+    playbook:migrate_gm_gmcv_to_pbr.migrate_independent_relationships.cleanup: Independent relationship
+      migration cleanup
+    playbook:migrate_gm_gmcv_to_pbr.migrate_prefix_relationships.main: Prefix relationship migration to
+      PBR
+    playbook:migrate_gm_gmcv_to_pbr.migrate_prefix_relationships.cleanup: Prefix relationship migration
+      cleanup
+- title: Migrate volumes and hosts between systems
+  description: Migrate volumes between clusters and iSCSI hosts, and handle multipath and host actions
+    during partition migration.
+  components:
+    svc_manage_migration: Volume migration
+    playbook:volume_migrate: Volume migration
+    playbook:volume_migration_on_svc_iscsi.create_iscsi_host_map_vol_switch: iSCSI host mapping switch
+    playbook:volume_migration_on_svc_iscsi.initiate_migration_for_given_volume: iSCSI volume migration
+    playbook:partition_migration_host_actions.main: Partition migration monitoring
+    playbook:partition_migration_host_actions.host_identification: Host identification
+    playbook:partition_migration_host_actions.discover_multipath_devices: Multipath discovery
+    playbook:partition_migration_host_actions.rescan_multipath_devices: Multipath rescan
+    playbook:partition_migration_host_actions.verify_multipath_devices: Multipath verification
+    playbook:partition_migration_host_actions.iscsi_logout: iSCSI logout
+- title: Back up to and restore from cloud
+  description: Configure Amazon S3 cloud accounts, cloud backups and restore backups.
+  components:
+    sv_manage_awss3_cloudaccount: Amazon S3 cloud accounts
+    sv_manage_cloud_backups: Cloud backups
+    sv_restore_cloud_backup: Cloud backup restores

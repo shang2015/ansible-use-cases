@@ -1,0 +1,21 @@
+fqcn: zabbix.zabbix
+product: Zabbix
+use_cases:
+- title: Manage monitored hosts and proxies
+  description: Create, update and delete hosts, host groups, proxies and proxy groups, and maintain hosts
+    and agents.
+  components:
+    host: Hosts
+    hostgroup: Host groups
+    proxy: Proxies
+    proxy_group: Proxy groups
+    role:host: Host maintenance
+    role:agent: Agent maintenance
+    role:repository: Repository list
+    inventory:zabbix_inventory: Zabbix inventory
+- title: Respond to Zabbix events
+  description: Act on events and run example remediation playbooks.
+  components:
+    event: Events
+    playbook:example_dummy: Example remediation
+    playbook:example_oci_volume_extend: OCI volume extension remediation

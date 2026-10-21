@@ -1,0 +1,56 @@
+fqcn: arista.avd
+product: Arista AVD (EOS)
+use_cases:
+- title: Design the network fabric
+  description: Turn an abstracted data model into structured configuration and fabric documentation, and
+    validate inputs against AVD schemas.
+  components:
+    role:eos_designs: Network designs
+    eos_designs: eos_designs facts
+    eos_designs_structured_config: Structured configuration
+    eos_designs_documentation: Fabric documentation
+    validate_inputs: Input validation
+    set_vars: Variables as facts
+    verify_requirements: Python requirements check
+    role:build_output_folders: Output folders
+- title: Generate EOS configuration
+  description: Generate EOS CLI configuration and device documentation from the intended data model.
+  components:
+    role:eos_cli_config_gen: EOS CLI configuration
+    eos_cli_config_gen: EOS configuration generation
+- title: Deploy configuration
+  description: Deploy intended configuration to devices over eAPI or to CloudVision, with tags and workflows.
+  components:
+    role:eos_config_deploy_eapi: Deploy over eAPI
+    role:cv_deploy: Deploy to CloudVision
+    cv_workflow: CloudVision workflow
+    role:cvp_configlet_upload: CloudVision configlet upload (removed)
+    role:eos_config_deploy_cvp: CloudVision deployment (removed)
+    role:dhcp_provisioner: DHCP provisioner (removed)
+- title: Validate and snapshot network state
+  description: Run ANTA tests against EOS devices and collect show command snapshots and reports.
+  components:
+    role:anta_runner: ANTA runner
+    anta_workflow: ANTA workflow
+    role:eos_snapshot: Show command snapshots
+    role:eos_validate_state: State validation (removed)
+- title: Use AVD filters, tests and examples
+  description: Helper filters and tests for sorting, hashing, encrypting passwords, expanding ranges and
+    rendering Markdown, plus example installation.
+  components:
+    filter:add_md_toc: Markdown table of contents
+    filter:decrypt: Decrypt passwords
+    filter:encrypt: Encrypt passwords
+    filter:default: Default value
+    filter:hide_passwords: Hide passwords
+    filter:ip_address_sort: IP address sort
+    filter:is_in_filter: Hostname filter match
+    filter:list_compress: List compression
+    filter:natural_sort: Natural sort
+    filter:range_expand: Range expansion
+    filter:secure_hash: Secure hash
+    filter:snmp_hash: SNMP passphrase hash
+    filter:status_render: Status rendering
+    test:contains: Contains test
+    test:defined: Defined test
+    playbook:install_examples: Install examples

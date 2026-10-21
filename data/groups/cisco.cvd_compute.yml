@@ -1,0 +1,22 @@
+fqcn: cisco.cvd_compute
+product: Cisco UCS (Intersight)
+use_cases:
+- title: Deploy UCS server and chassis profiles
+  description: Deploy server profiles, derive chassis profiles from templates and rediscover chassis.
+  components:
+    role:deploy_ucs_server_profile: Server profile deployment
+    role:derive_ucs_chassis_profile_template: Chassis profile derivation
+    role:rediscover_ucs_chassis: Chassis rediscovery
+- title: Configure UCS networking
+  description: Add vNICs and VLANs to LAN connectivity policies and query and update fabric interconnect
+    port policies.
+  components:
+    role:add_ucs_vnic: vNICs
+    role:add_ucs_vlan_to_vnic: VLANs on vNICs
+    role:query_ucs_fi_available_ports: Available fabric interconnect ports
+    role:query_ucs_fi_port_configuration: Fabric interconnect port configuration
+    role:update_ucs_fi_port_policy: Fabric interconnect port policy
+- title: Upgrade fabric interconnect firmware
+  description: Run firmware upgrades on Cisco UCS fabric interconnects.
+  components:
+    role:upgrade_ucs_fi_firmware: Firmware upgrade

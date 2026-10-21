@@ -1,0 +1,26 @@
+fqcn: infra.aap_utilities
+product: Ansible Automation Platform
+use_cases:
+- title: Install Ansible Automation Platform
+  description: Download the setup bundle, prepare the system and inventory, run the installer, install
+    on OpenShift and set up certificates and a Git SSH server.
+  components:
+    role:aap_setup_download: Setup download
+    role:aap_setup_prepare: Installation preparation
+    role:aap_setup_install: Installation
+    role:aap_ocp_install: OpenShift installation
+    role:aap_certs: Certificates
+    role:git_ssh_setup: Git over SSH server
+    role:kerberos: Kerberos for Windows management
+- title: Operate Ansible Automation Platform
+  description: Start, stop and check containerized services and rotate passwords and secret keys.
+  components:
+    role:aap_manage_containerized_services: Containerized services
+    role:aap_password_rotate: Password rotation
+    role:aap_secret_rotate: Secret key rotation
+- title: Back up, restore and remove Ansible Automation Platform
+  description: Back up and restore the platform and remove it.
+  components:
+    role:aap_backup: Backup
+    role:aap_restore: Restore
+    role:aap_remove: Removal

@@ -1,0 +1,8 @@
+fqcn: ansible.receptor
+product: "Receptor"
+use_cases:
+- title: "Deploy Receptor nodes"
+  description: "Install and configure Receptor nodes and Podman for them."
+  components:
+    "role:setup": "Receptor nodes"
+    "role:podman": "Podman"

@@ -1,0 +1,55 @@
+fqcn: ansible.eda
+product: Event-Driven Ansible
+use_cases:
+- title: Run rulebook activations
+  description: Manage rulebooks, projects, decision environments, rulebook activations and event streams
+    in EDA Controller.
+  components:
+    project: Projects
+    decision_environment: Decision environments
+    rulebook: Rulebooks
+    rulebook_activation: Rulebook activations
+    rulebook_activation_copy: Activation copies
+    event_stream: Event streams
+    playbook:hello: Hello playbook
+- title: Manage EDA Controller credentials and access
+  description: Manage credentials, credential types and input sources, users, tokens and team role assignments.
+  components:
+    credential: Credentials
+    credential_type: Credential types
+    credential_input_source: Credential input sources
+    controller_token: Controller tokens
+    user: Users
+    role_team_assignment: Team role assignments
+- title: Receive events from webhooks, alerts and message queues
+  description: Receive events through webhooks, Alertmanager, Kafka, AWS SQS and CloudTrail, Azure Service
+    Bus and PostgreSQL notifications.
+  components:
+    eda_event_source:webhook: Webhooks
+    eda_event_source:alertmanager: Alertmanager
+    eda_event_source:kafka: Kafka topics
+    eda_event_source:aws_sqs_queue: AWS SQS queues
+    eda_event_source:aws_cloudtrail: AWS CloudTrail
+    eda_event_source:azure_service_bus: Azure Service Bus
+    eda_event_source:pg_listener: PostgreSQL pub/sub
+- title: Watch systems, files and URLs
+  description: Generate events from file changes, journald logs and URL status checks.
+  components:
+    eda_event_source:file: YAML fact files
+    eda_event_source:file_watch: File system changes
+    eda_event_source:journald: journald logs
+    eda_event_source:url_check: URL status checks
+- title: Test rulebooks with generated events
+  description: Generate synthetic events for developing and testing rules.
+  components:
+    eda_event_source:generic: Custom data
+    eda_event_source:range: Finite event ranges
+    eda_event_source:tick: Continuous ticks
+- title: Shape and normalize event data
+  description: Filter keys, normalize key names and extract hosts from events before rules evaluate them.
+  components:
+    eda_event_filter:dashes_to_underscores: Dashes to underscores
+    eda_event_filter:insert_hosts_to_meta: Hosts to event metadata
+    eda_event_filter:json_filter: Key filter
+    eda_event_filter:noop: No-op filter
+    eda_event_filter:normalize_keys: Key normalization

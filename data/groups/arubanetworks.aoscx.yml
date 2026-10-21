@@ -1,0 +1,62 @@
+fqcn: arubanetworks.aoscx
+product: Aruba AOS-CX
+use_cases:
+- title: Configure interfaces, VLANs and Layer 2
+  description: Configure physical, Layer 2, Layer 3, LAG and VLAN interfaces, VLANs, static MACs, PoE
+    and VSX.
+  components:
+    interface: Interfaces
+    l2_interface: Layer 2 interfaces
+    l3_interface: Layer 3 interfaces
+    lag_interface: LAG interfaces
+    vlan: VLANs
+    vlan_interface: VLAN interfaces
+    static_mac: Static MACs
+    mac: MAC table
+    poe: Power over Ethernet
+    vsx: VSX
+- title: Configure routing
+  description: Configure VRFs, static routes, and OSPFv2 and OSPFv3 areas, routers, interfaces and virtual
+    links.
+  components:
+    vrf: VRFs
+    static_route: Static routes
+    ospf_router: OSPF routers
+    ospf_area: OSPF areas
+    ospf_interface: OSPF interfaces
+    ospf_vlink: OSPF virtual links
+    ospfv3_router: OSPFv3 routers
+    ospfv3_area: OSPFv3 areas
+    ospfv3_vlink: OSPFv3 virtual links
+- title: Manage access control lists and object groups
+  description: Create ACLs and object groups and apply ACLs to interfaces and VLANs.
+  components:
+    acl: ACLs
+    acl_interface: ACLs on interfaces
+    acl_vlan: ACLs on VLANs
+    object_group: Object groups
+- title: Configure quality of service
+  description: Configure QoS schedule profiles, COS and DSCP trust modes, queues and queue profiles.
+  components:
+    qos: QoS schedule profiles
+    qos_cos: COS trust modes
+    qos_dscp: DSCP trust modes
+    queue: Queues
+    queue_profile: Queue profiles
+    queue_profile_entry: Queue profile entries
+- title: Administer the switch, firmware and configuration
+  description: Set global configuration, banners and DNS, run commands, back up, upload and checkpoint
+    configuration, upload and boot firmware, and gather facts.
+  components:
+    system: Global system settings
+    banner: Banners
+    dns: DNS client
+    command: CLI commands
+    config: Configuration commands
+    facts: Device facts
+    backup_config: Configuration backup
+    upload_config: Configuration upload
+    checkpoint: Configuration checkpoints
+    upload_firmware: Firmware upload
+    boot_firmware: Firmware boot
+    connection:aoscx: AOS-CX connection

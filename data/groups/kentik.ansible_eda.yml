@@ -1,0 +1,8 @@
+fqcn: kentik.ansible_eda
+product: "Kentik"
+use_cases:
+- title: "Respond to Kentik alerts"
+  description: "Receive Kentik webhook events in Event-Driven Ansible."
+  components:
+    "eda_event_source:kentik_webhook": "Webhook event source"
+    "playbook:example_playbook": "Example playbook"

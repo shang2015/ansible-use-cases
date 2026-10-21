@@ -1,0 +1,79 @@
+fqcn: lantronix.oob
+product: Lantronix Percepxion and SLC9000
+use_cases:
+- title: Onboard devices and organize the Percepxion fleet
+  description: Register and assign devices, query the device inventory, organize devices with tags, smart
+    groups and projects, and write a dynamic inventory from Percepxion.
+  components:
+    percepxion: Platform facts
+    percepxion_import_devices: Device import
+    percepxion_devices: Device inventory
+    percepxion_device_tags: Device tags
+    percepxion_smart_groups: Smart groups
+    percepxion_projects: Project assignment
+    role:oob_fleet_inventory: Fleet inventory role
+    playbook:percepxion.percepxion_facts: Platform facts playbook
+    playbook:percepxion.percepxion_import_devices: Device import playbook
+    playbook:percepxion.percepxion_devices: Device inventory playbook
+    playbook:percepxion.percepxion_device_tags: Device tag playbook
+    playbook:percepxion.percepxion_smart_groups: Smart group playbook
+    playbook:percepxion.percepxion_projects: Project assignment playbook
+- title: Configure, schedule and monitor through Percepxion
+  description: Manage configuration content, scheduled job groups and event rules, and query telemetry
+    and audit logs.
+  components:
+    percepxion_config: Configuration content
+    percepxion_jobs: Scheduled job groups
+    percepxion_event_rules: Event rules
+    percepxion_telemetry: Telemetry
+    percepxion_audit_logs: Audit logs
+    playbook:percepxion.percepxion_config: Configuration playbook
+    playbook:percepxion.percepxion_jobs: Job group playbook
+    playbook:percepxion.percepxion_event_rules: Event rule playbook
+    playbook:percepxion.percepxion_telemetry: Telemetry playbook
+    playbook:percepxion.percepxion_audit_logs: Audit log playbook
+- title: Control user access
+  description: Manage Percepxion user accounts and bulk suspend or restore, manage local accounts on SLC9000
+    devices, and lock down access outside an allowlist.
+  components:
+    percepxion_users: Percepxion users
+    slc_users: SLC9000 sysadmin account
+    role:oob_user_management: User management role
+    playbook:percepxion.percepxion_users: Percepxion user playbook
+    playbook:slc.slc_users: SLC9000 user playbook
+    playbook:lockdown: Access lockdown playbook
+- title: Manage firmware across the fleet
+  description: Check firmware compliance and trigger firmware updates on Percepxion-managed fleets and
+    on SLC9000 devices.
+  components:
+    percepxion_firmware: Fleet firmware
+    slc_firmware: SLC9000 firmware
+    role:oob_firmware_audit: Firmware audit role
+    playbook:percepxion.percepxion_firmware: Fleet firmware playbook
+    playbook:slc.slc_firmware: SLC9000 firmware playbook
+- title: Configure SLC9000 console servers
+  description: Gather facts, manage running configuration, ethernet interfaces and system identity, query
+    serial ports and attached devices, and enforce hostname, NTP and syslog baselines.
+  components:
+    slc: SLC9000 facts
+    slc_config: Running configuration
+    slc_network: Ethernet interfaces
+    slc_system: System identity and reboot
+    slc_device_ports: Serial device ports
+    slc_managed_devices: Devices on serial ports
+    role:oob_baseline_config: Baseline configuration role
+    playbook:slc.slc_facts: Facts playbook
+    playbook:slc.slc_config: Configuration playbook
+    playbook:slc.slc_network: Network playbook
+    playbook:slc.slc_system: System identity playbook
+    playbook:slc.slc_device_ports: Serial port playbook
+    playbook:slc.slc_managed_devices: Managed device playbook
+- title: Run end-to-end out-of-band workflows
+  description: Onboard SLC9000 devices, snapshot fleet health, confirm the out-of-band path during incidents,
+    and audit out-of-band infrastructure security.
+  components:
+    playbook:combo.day1_slc_onboarding: Day-1 SLC9000 onboarding
+    playbook:combo.new_device_fleet_onboarding: Fleet onboarding
+    playbook:combo.fleet_health_snapshot: Fleet health snapshot
+    playbook:combo.incident_response_oob: Incident response path check
+    playbook:combo.security_audit: Security audit

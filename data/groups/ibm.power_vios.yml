@@ -1,0 +1,32 @@
+fqcn: ibm.power_vios
+product: IBM Power Virtual I/O Server (VIOS)
+use_cases:
+- title: Update and upgrade VIOS
+  description: Download fixes, update to the latest maintenance level, upgrade VIOS and run end-to-end
+    update demos.
+  components:
+    fix_download: Fix downloads
+    updateios: VIOS updates
+    viosupgrade: VIOS upgrades
+    playbook:demo_fix_download: Fix download demo
+    playbook:demo_updateios: Update demo
+    playbook:demo_full_update: Download and update demo
+    playbook:demo_viosupgrade: Upgrade demo
+- title: Back up and secure VIOS
+  description: Back up the root volume group and VIOS configuration, create alternate rootvg disks and
+    apply security hardening.
+  components:
+    backupios: Root volume group backup
+    viosbr: Configuration backup and restore
+    alt_root_vg: Alternate rootvg
+    viosecure: Security hardening and firewall
+    playbook:demo_backupios: Backup demo
+    playbook:demo_viosbr: viosbr demo
+- title: Inspect devices and bootstrap package management
+  description: Report physical, logical and virtual device mappings, bootstrap DNF on AIX and check for
+    updates with yum.
+  components:
+    mapping: Device mappings
+    role:power_vios_bootstrap: DNF bootstrap
+    playbook:demo_dnf_bootstrap: Bootstrap DNF
+    playbook:demo_yum: yum update check

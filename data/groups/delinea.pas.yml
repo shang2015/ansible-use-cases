@@ -1,0 +1,9 @@
+fqcn: delinea.pas
+product: "Delinea Privileged Access Service"
+use_cases:
+- title: "Install and enrol Delinea agents"
+  description: "Install, enrol, unenrol and remove Delinea audit and monitoring, authentication and privilege elevation, and privileged access services on Linux hosts."
+  components:
+    "role:delinea_vault": "Privileged access services"
+    "role:delinea_auth": "Authentication and privilege elevation"
+    "role:delinea_audit": "Audit and monitoring"

@@ -1,0 +1,8 @@
+fqcn: network.backup
+product: "Network device backup"
+use_cases:
+- title: "Back up and restore network configurations"
+  description: "Back up network configurations to a datastore and restore them across platforms such as IOS, IOS-XR, NX-OS, EOS and Junos."
+  components:
+    "role:backup": "Backup"
+    "role:restore": "Restore"

@@ -1,0 +1,12 @@
+fqcn: infra.mecm_ops
+product: "Microsoft Configuration Manager (SCCM/MECM)"
+use_cases:
+- title: "Patch Windows systems and report on MECM health"
+  description: "Orchestrate Windows patching and reboots, create emergency patch deployments and generate MECM health check reports."
+  components:
+    "role:patch_and_reboot": "Patch and reboot"
+    "playbook:patch_and_reboot": "Patch and reboot playbook"
+    "role:emergency_patch": "Emergency patch"
+    "playbook:emergency_patch": "Emergency patch playbook"
+    "role:health_check_report": "Health check report"
+    "playbook:health_check_report": "Health check report playbook"

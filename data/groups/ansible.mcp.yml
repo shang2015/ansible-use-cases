@@ -1,0 +1,20 @@
+fqcn: ansible.mcp
+product: Model Context Protocol (MCP)
+use_cases:
+- title: Call tools on MCP servers
+  description: Connect to an MCP server, list its tools and server information, and call a specific tool.
+  components:
+    connection:mcp: MCP connection
+    server: Server information
+    tools: Tool list
+    run_tool: Tool calls
+- title: Automate cloud and source control with MCP servers
+  description: Example playbooks that use MCP servers to create AWS resources, create an Azure SQL database
+    and create a GitHub repository and pull request.
+  components:
+    playbook:aws_ccapi_demo.demo: AWS Cloud Control API demo
+    playbook:aws_ccapi_demo_validation_failure.demo: AWS Cloud Control API validation failures
+    playbook:aws_core_demo.demo: AWS Core demo
+    playbook:aws_core_demo_validation_failure.demo: AWS Core validation failures
+    playbook:azure_create_sql_database.playbook: Azure SQL database
+    playbook:github_create_repository_and_pull_request.playbook: GitHub repository and pull request

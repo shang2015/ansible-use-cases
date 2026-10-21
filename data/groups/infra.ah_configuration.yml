@@ -1,0 +1,40 @@
+fqcn: infra.ah_configuration
+product: Ansible Automation Hub
+use_cases:
+- title: Manage collections and repositories
+  description: Configure collection remotes and repositories, sync them, publish and update collections
+    and sync collections offline.
+  components:
+    role:collection_remote: Collection remotes
+    role:collection_repository: Collection repositories
+    role:collection_repository_sync: Collection repository syncs
+    role:repository: Repositories
+    role:repository_sync: Repository syncs
+    role:collection: Collections
+    role:namespace: Namespaces
+    role:publish: Collection publishing
+    role:offline_sync: Offline sync
+- title: Manage execution environment content
+  description: Configure execution environment registries, namespaces, repositories and images and run
+    index and sync operations.
+  components:
+    role:ee_registry: EE registries
+    role:ee_registry_index: EE registry indexing
+    role:ee_registry_sync: EE registry syncs
+    role:ee_namespace: EE namespaces
+    role:ee_repository: EE repositories
+    role:ee_repository_sync: EE repository syncs
+    role:ee_image: EE images
+- title: Manage users, groups and permissions
+  description: Create users, groups, group roles and role permissions in Automation Hub.
+  components:
+    role:user: Users
+    role:group: Groups
+    role:group_roles: Group roles
+    role:role: Role permissions
+- title: Configure clients and run the full configuration
+  description: Generate ansible.cfg files for Automation Hub servers and run every configuration role
+    for which variables are defined.
+  components:
+    role:ansible_config: ansible.cfg files
+    role:dispatch: Configuration dispatch

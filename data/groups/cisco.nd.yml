@@ -1,0 +1,103 @@
+fqcn: cisco.nd
+product: Cisco Nexus Dashboard
+use_cases:
+- title: Create and manage VXLAN and external fabrics
+  description: Create and manage iBGP, eBGP, AI/ML, campus and external connectivity fabrics, and group
+    fabrics into VXLAN fabric groups.
+  components:
+    manage_fabric_ibgp_vxlan: iBGP VXLAN fabrics
+    manage_fabric_ebgp_vxlan: eBGP VXLAN fabrics
+    manage_fabric_ai_ibgp_vxlan: AI/ML iBGP VXLAN fabrics
+    manage_fabric_ai_ebgp_vxlan: AI/ML eBGP VXLAN fabrics
+    manage_fabric_campus_ibgp_vxlan: Campus iBGP VXLAN fabrics
+    manage_fabric_external: External connectivity fabrics
+    manage_fabric_group_vxlan: VXLAN fabric groups (MSD)
+    manage_fabric_group_members: Fabric group members
+- title: Manage switches, links and fabric resources
+  description: Add switches to fabrics, manage links, vPC pairs, ToR associations, policies, policy groups
+    and resource pools, and set maintenance mode.
+  components:
+    manage_switches: Switches
+    manage_links: Links
+    manage_vpc_pair: vPC pairs
+    manage_tor: Access and ToR switches
+    manage_policy: Policies
+    manage_policy_group: Policy groups
+    manage_resource_manager: Resource manager
+    maintenance_mode: Maintenance mode
+- title: Provision networks, VRFs and routing policy
+  description: Define networks, VRFs and L3Outs, and manage ACLs, prefix lists, route maps and BGP community
+    lists on fabrics.
+  components:
+    manage_networks: Networks
+    manage_vrfs: VRFs
+    manage_l3out: L3Outs
+    manage_acl: ACLs
+    manage_prefix: Prefix lists
+    manage_route_map: Route maps
+    manage_community: BGP community lists
+    manage_extended_community: BGP extended community lists
+- title: Configure switch interfaces
+  description: Manage Ethernet, port-channel, vPC, loopback, SVI and subinterface definitions, singly
+    or together in one workflow.
+  components:
+    interface_ethernet_access: Ethernet access interfaces
+    interface_ethernet_routed: Routed Ethernet interfaces
+    interface_ethernet_trunk_host: Ethernet trunk host interfaces
+    interface_port_channel_access: Access port channels
+    interface_port_channel_routed: Routed port channels
+    interface_port_channel_trunk_host: Trunk port channels
+    interface_vpc_access: vPC access interfaces
+    interface_vpc_trunk_host: vPC trunk interfaces
+    interface_loopback: Loopback interfaces
+    interface_svi: SVI interfaces
+    interface_subinterface_managed: Managed subinterfaces
+    interface_subinterface_unmanaged: Unmanaged subinterfaces
+    interfaces_workflow: Multi-family interface workflow
+- title: Upgrade fabric software
+  description: Stage, validate and apply software updates to switches through fabric update groups.
+  components:
+    fabric_update_group: Fabric update groups
+    fabric_prepare_update: Update preparation and validation
+- title: Run assurance, compliance and pre-change analysis
+  description: Run Nexus Dashboard Insights compliance analysis, delta analysis, instant assurance and
+    pre-change analysis, and capture snapshots.
+  components:
+    compliance_analysis: Compliance analysis
+    compliance_requirement_communication: Communication requirements
+    compliance_requirement_config_import: Import configuration requirements
+    compliance_requirement_config_manual: Manual configuration requirements
+    compliance_requirement_config_snapshot: Snapshot configuration requirements
+    compliance_requirement_config_template: Template configuration requirements
+    delta_analysis: Delta analysis
+    instant_assurance_analysis: Instant assurance analysis
+    pcv: Pre-change analysis jobs
+    pcv_compliance: Pre-change compliance
+    pcv_delta_analysis: Pre-change delta analysis
+    snapshot: Fabric snapshots
+- title: Monitor flows and policy usage
+  description: Configure flow rules and interface flow rules and retrieve policy CAM hit counts.
+  components:
+    flow_rules: Flow rules
+    interface_flow_rules: Interface flow rules
+    policy_cam_statistics_hit_counts: Policy CAM hit counts
+- title: Administer Nexus Dashboard
+  description: Set up the dashboard, manage sites, clusters and federation, users, API keys, backups,
+    restores and packaged services.
+  components:
+    setup: Initial setup
+    site: Sites
+    cluster_config_route: Cluster routes
+    federation_member: Multi-cluster federation
+    local_user: Local users
+    api_key: API keys
+    backup: Backups
+    backup_restore: Backup restore
+    service: Service packages
+    service_instance: Service instances
+    version: Version
+- title: Call the REST API and log messages
+  description: Call the Nexus Dashboard REST API directly and log messages from playbooks.
+  components:
+    rest: REST API
+    log: Playbook logging

@@ -1,0 +1,73 @@
+fqcn: infoblox.universal_ddi
+product: Infoblox Universal DDI
+use_cases:
+- title: Manage IP address space (IPAM)
+  description: Create IP spaces, address blocks, subnets, ranges and addresses, and query the next available
+    block, subnet or IP.
+  components:
+    ipam_address: IP addresses
+    ipam_address_block: Address blocks
+    ipam_federation_federated_block: Federated blocks
+    ipam_federation_federated_realm: Federated realms
+    ipam_host: IPAM hosts
+    ipam_ip_space: IP spaces
+    ipam_next_available_address_block: Next available address block
+    ipam_next_available_ip: Next available IP
+    ipam_next_available_subnet: Next available subnet
+    ipam_range: DHCP ranges
+    ipam_subnet: Subnets
+- title: Manage authoritative and forward DNS
+  description: Create DNS views, authoritative and forward zones, delegations and resource records, and
+    copy DNS objects between views.
+  components:
+    dns_auth_zone: Authoritative zones
+    dns_delegation: Zone delegations
+    dns_forward_zone: Forward zones
+    dns_record: DNS resource records
+    dns_view: DNS views
+    dns_view_bulk_copy: DNS view bulk copy
+- title: Manage DNS and DHCP servers and options
+  description: Configure DNS and DHCP server profiles, name server groups, ACLs, HA groups, DHCP hosts,
+    fixed addresses, DHCP options and TSIG and Kerberos keys.
+  components:
+    dhcp_fixed_address: Fixed addresses
+    dhcp_ha_group: DHCP HA groups
+    dhcp_host: DHCP hosts
+    dhcp_option_code: DHCP option codes
+    dhcp_option_group: DHCP option groups
+    dhcp_option_space: DHCP option spaces
+    dhcp_server: DHCP config profiles (servers)
+    dns_acl: Named ACLs
+    dns_auth_nsg: Authoritative name server groups
+    dns_forward_nsg: Forward name server groups
+    dns_host: DNS hosts
+    dns_server: DNS config profiles (servers)
+    kerberos_key: Kerberos keys
+    tsig_key: TSIG keys
+- title: Manage DNS traffic control (DTC)
+  description: Define DTC servers, pools, LBDNs, policies and health checks to steer DNS answers by service
+    health.
+  components:
+    dtc_health_check_http: HTTP health checks
+    dtc_health_check_icmp: ICMP health checks
+    dtc_health_check_snmp: SNMP health checks
+    dtc_health_check_tcp: TCP health checks
+    dtc_lbdn: LBDNs
+    dtc_policy: DTC policies
+    dtc_pool: DTC pools
+    dtc_server: DTC servers
+    dtc_snmp_user_security_model: SNMP user security models
+- title: Manage Universal DDI infrastructure and anycast
+  description: Register infrastructure hosts and services with join tokens, configure anycast and discover
+    cloud providers.
+  components:
+    anycast_config: Anycast configurations
+    anycast_host: Anycast hosts
+    cloud_discovery_providers: Cloud discovery providers
+    infra_host: Infrastructure hosts
+    infra_join_token: Host activation join tokens
+    infra_service: Infrastructure services
+- title: Query Universal DDI objects
+  description: Look up Universal DDI objects from playbooks using the lookup plugin.
+  components:
+    lookup:universal_ddi_lookup: Universal DDI lookup plugin

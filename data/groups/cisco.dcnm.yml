@@ -1,0 +1,66 @@
+fqcn: cisco.dcnm
+product: Cisco Nexus Dashboard Fabric Controller (NDFC/DCNM)
+use_cases:
+- title: Manage fabrics, switches and links
+  description: Create and configure NDFC fabrics and fabric groups, add or remove switches, and manage
+    links, vPC pairs and maintenance mode.
+  components:
+    dcnm_fabric: Fabrics
+    dcnm_fabric_group: Fabric groups
+    dcnm_inventory: Switch inventory
+    dcnm_links: Links
+    dcnm_vpc_pair: vPC pairs
+    dcnm_maintenance_mode: Maintenance mode
+    dcnm_resource_manager: Resources
+- title: Manage VXLAN networks, VRFs and interfaces
+  description: Add, change and remove VRFs, networks and switch interfaces in a VXLAN fabric.
+  components:
+    dcnm_vrf: VRFs
+    dcnm_network: Networks
+    dcnm_interface: Interfaces
+- title: Manage service insertion
+  description: Configure service nodes, service policies and service route peerings in a managed fabric.
+  components:
+    dcnm_service_node: Service nodes
+    dcnm_service_policy: Service policies
+    dcnm_service_route_peering: Service route peerings
+- title: Manage switch images, policies and templates
+  description: Upload images, define image policies, upgrade Nexus switches, manage bootflash files, policies
+    and templates.
+  components:
+    dcnm_image_upload: Image uploads
+    dcnm_image_policy: Image policies
+    dcnm_image_upgrade: Image upgrades
+    dcnm_bootflash: Bootflash files
+    dcnm_policy: Switch policies
+    dcnm_template: Templates
+- title: Call the controller API and validate data
+  description: Send REST requests to the controller, log messages and validate NDFC input data before
+    applying it.
+  components:
+    dcnm_rest: REST API requests
+    dcnm_log: Logging
+    ndfc_interface_validate: Interface data validation
+    ndfc_inventory_validate: Inventory data validation
+    ndfc_network_validate: Network data validation
+    ndfc_pc_members_validate: Port-channel member validation
+    ndfc_vpc_pair_validate: vPC pair validation
+    schemas: Interface schemas
+    tools: Test utilities
+- title: Run role test playbooks
+  description: Example and test playbooks for the bootflash, fabric, image, interface, inventory, network,
+    policy, vPC and VRF roles.
+  components:
+    playbook:roles.dcnm_bootflash.create_files: Create bootflash files
+    playbook:roles.dcnm_bootflash.dcnm_tests: Bootflash tests
+    playbook:roles.dcnm_fabric.dcnm_tests: Fabric tests
+    playbook:roles.dcnm_image_policy.dcnm_tests: Image policy tests
+    playbook:roles.dcnm_image_upgrade.dcnm_tests: Image upgrade tests
+    playbook:roles.dcnm_interface.dcnm_tests: Interface tests
+    playbook:roles.dcnm_inventory.dcnm_tests: Inventory tests
+    playbook:roles.dcnm_maintenance_mode.dcnm_tests: Maintenance mode tests
+    playbook:roles.dcnm_network.dcnm_tests: Network tests
+    playbook:roles.dcnm_policy.dcnm_tests: Policy tests
+    playbook:roles.dcnm_vpc_pair.dcnm_tests: vPC pair tests
+    playbook:roles.dcnm_vrf.dcnm_tests: VRF tests
+    playbook:roles.ndfc_interface.ndfc_tests: NDFC interface tests

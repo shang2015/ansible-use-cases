@@ -1,0 +1,8 @@
+fqcn: ibm.ibm_zos_sysauto
+product: "IBM Z System Automation"
+use_cases:
+- title: "Manage dynamic resources in IBM Z System Automation"
+  description: "Create and resume or delete dynamic resource instances."
+  components:
+    "role:sa_create_dynamic_resource": "Create dynamic resources"
+    "role:sa_delete_dynamic_resource": "Delete dynamic resources"

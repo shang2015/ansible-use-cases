@@ -1,0 +1,99 @@
+fqcn: redhat.rhv
+product: Red Hat Virtualization (oVirt)
+use_cases:
+- title: Manage virtual machines, templates and pools
+  description: Create, start, stop and clone virtual machines, templates, instance types and VM pools,
+    and manage their disks, NICs and snapshots.
+  components:
+    vm: Virtual machines
+    vm_os: Supported operating systems
+    template: Templates
+    instance_type: Instance types
+    vmpool: VM pools
+    disk: Disks
+    nic: VM network interfaces
+    snapshot: VM snapshots
+    role:vm_infra: VM infrastructure role
+    role:image_template: Image template role
+- title: Manage data centers, clusters and hosts
+  description: Manage data centers, clusters, hosts, host networking and power management, affinity groups
+    and labels, and scheduling policies.
+  components:
+    datacenter: Data centers
+    cluster: Clusters
+    host: Hosts
+    host_network: Host networks
+    host_pm: Host power management
+    affinity_group: Affinity groups
+    affinity_label: Affinity labels
+    scheduling_policy: Scheduling policies
+    role:cluster_upgrade: Cluster upgrade role
+    role:infra: Infrastructure setup role
+- title: Manage storage
+  description: Manage storage domains and connections, disk profiles and host storage, and list the templates
+    and VMs on a storage domain.
+  components:
+    storage_domain: Storage domains
+    storage_connection: Storage connections
+    disk_profile: Disk profiles
+    host_storage: Host storage
+    storage_template: Templates on storage domains
+    storage_vm: VMs on storage domains
+    role:remove_stale_lun: Remove stale LUN role
+- title: Manage logical networks
+  description: Manage logical networks, vNIC profiles, MAC pools and QoS entries.
+  components:
+    network: Logical networks
+    vnic_profile: vNIC profiles
+    mac_pool: MAC pools
+    qos: QoS entries
+- title: Manage users, permissions and quotas
+  description: Manage users, groups, roles, permissions and datacenter quotas, and authenticate to the
+    engine.
+  components:
+    user: Users
+    group: Groups
+    role: Roles
+    permission: Permissions
+    quota: Quotas
+    auth: Authentication
+- title: Deploy and maintain the oVirt engine
+  description: Install the oVirt Engine and hosted engine, configure repositories, and shut down the environment.
+  components:
+    role:engine_setup: Engine setup role
+    role:hosted_engine_setup: Hosted engine setup role
+    role:repositories: Repositories role
+    role:shutdown_env: Environment shutdown role
+- title: Recover from disasters
+  description: Fail over and fail back a virtualization environment between sites.
+  components:
+    role:disaster_recovery: Disaster recovery role
+- title: Organize, track and inspect the environment
+  description: Manage tags, external providers, jobs and events, and read API and system option information.
+  components:
+    tag: Tags
+    external_provider: External providers
+    job: Jobs
+    event: Events
+    api: API information
+    system_option: System options
+- title: Use inventory, filters and output plugins
+  description: Build inventory from oVirt, extract VM IP addresses and disk sizes, show planned VM changes,
+    and format playbook output.
+  components:
+    inventory:ovirt: oVirt inventory
+    filter:ovirtvmip: First VM IP
+    filter:ovirtvmips: All VM IPs
+    filter:ovirtvmipsv4: All VM IPv4 addresses
+    filter:ovirtvmipsv6: All VM IPv6 addresses
+    filter:ovirtvmipv4: First VM IPv4 address
+    filter:ovirtvmipv6: First VM IPv6 address
+    filter:ovirtdiff: Pending VM changes
+    filter:convert_to_bytes: Convert to bytes
+    filter:filtervalue: Find values in a dictionary
+    filter:get_network_xml_to_dict: Network XML to dictionary
+    filter:get_ovf_disk_size: OVF disk size
+    filter:json_query: JSON query
+    filter:removesensitivevmdata: Remove sensitive VM data
+    test:ovirt_proxied_check: Proxy check
+    callback:stdout: Log output

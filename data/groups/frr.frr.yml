@@ -1,0 +1,8 @@
+fqcn: frr.frr
+product: "FRRouting"
+use_cases:
+- title: "Configure BGP and gather facts on FRR"
+  description: "Configure global BGP settings and collect facts from FRR devices."
+  components:
+    "frr_bgp": "Global BGP"
+    "frr": "Facts"

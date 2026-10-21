@@ -1,0 +1,243 @@
+fqcn: f5networks.f5_modules
+product: F5 BIG-IP and BIG-IQ
+notes:
+- Modules cover BIG-IP (bigip_*) and BIG-IQ (bigiq_*) through their iControl REST interfaces; most are
+  idempotent and can be run against a device or a cluster member.
+use_cases:
+- title: Publish applications through virtual servers and pools
+  description: Create virtual servers and addresses, pools, members and nodes, SNAT, traffic policies,
+    iRules, data groups and iApp or LX packages for local traffic management.
+  components:
+    bigip_virtual_server: Virtual servers
+    bigip_virtual_address: Virtual addresses
+    bigip_pool: Pools
+    bigip_pool_member: Pool members
+    bigip_node: Nodes
+    bigip_snat_pool: SNAT pools
+    bigip_snat_translation: SNAT translations
+    bigip_policy: LTM policies
+    bigip_policy_rule: LTM policy rules
+    bigip_irule: iRules
+    bigip_data_group: Data groups
+    bigip_iapp_service: iApp services
+    bigip_iapp_template: iApp templates
+    bigip_lx_package: LX packages
+    bigip_ltm_global: Global LTM settings
+- title: Tune traffic with profiles and persistence
+  description: Configure HTTP, TCP, UDP, SSL, FTP, SIP, DNS and analytics profiles, persistence, timer
+    and service policies, and message-routing for generic message protocols.
+  components:
+    bigip_profile_analytics: Analytics profiles
+    bigip_profile_client_ssl: Client SSL profiles
+    bigip_profile_server_ssl: Server SSL profiles
+    bigip_profile_dns: DNS profiles
+    bigip_profile_fastl4: Fast L4 profiles
+    bigip_profile_ftp: FTP profiles
+    bigip_profile_http: HTTP profiles
+    bigip_profile_http2: HTTP/2 profiles
+    bigip_profile_http_compression: HTTP compression profiles
+    bigip_profile_oneconnect: OneConnect profiles
+    bigip_profile_persistence_cookie: Cookie persistence profiles
+    bigip_profile_persistence_src_addr: Source address persistence profiles
+    bigip_profile_persistence_universal: Universal persistence profiles
+    bigip_profile_sip: SIP profiles
+    bigip_profile_tcp: TCP profiles
+    bigip_profile_udp: UDP profiles
+    bigip_timer_policy: Timer policies
+    bigip_service_policy: Service policies
+    bigip_message_routing_peer: Message routing peers
+    bigip_message_routing_protocol: Message routing protocols
+    bigip_message_routing_route: Message routing routes
+    bigip_message_routing_router: Message routing routers
+    bigip_message_routing_transport_config: Message routing transports
+- title: Monitor application health
+  description: Define LTM health monitors for HTTP, HTTPS, TCP, UDP, ICMP, DNS, FTP, LDAP, MySQL, Oracle,
+    SMTP, SNMP and external checks.
+  components:
+    bigip_monitor_dns: DNS monitors
+    bigip_monitor_external: External monitors
+    bigip_monitor_ftp: FTP monitors
+    bigip_monitor_gateway_icmp: Gateway ICMP monitors
+    bigip_monitor_http: HTTP monitors
+    bigip_monitor_https: HTTPS monitors
+    bigip_monitor_icmp: ICMP monitors
+    bigip_monitor_ldap: LDAP monitors
+    bigip_monitor_mysql: MySQL monitors
+    bigip_monitor_oracle: Oracle monitors
+    bigip_monitor_smtp: SMTP monitors
+    bigip_monitor_snmp_dca: SNMP DCA monitors
+    bigip_monitor_tcp: TCP monitors
+    bigip_monitor_tcp_echo: TCP echo monitors
+    bigip_monitor_tcp_half_open: TCP half-open monitors
+    bigip_monitor_udp: UDP monitors
+- title: Distribute traffic globally with DNS and GTM
+  description: Configure data centers, GTM servers, pools, wide IPs and monitors, DNS listeners and zones,
+    resolvers and topology-based routing.
+  components:
+    bigip_gtm_global: Global GTM settings
+    bigip_gtm_datacenter: Data centers
+    bigip_gtm_server: GTM servers
+    bigip_gtm_virtual_server: GTM virtual servers
+    bigip_gtm_pool: GTM pools
+    bigip_gtm_pool_member: GTM pool members
+    bigip_gtm_wide_ip: Wide IPs
+    bigip_gtm_dns_listener: DNS listeners
+    bigip_gtm_topology_region: Topology regions
+    bigip_gtm_topology_record: Topology records
+    bigip_gtm_monitor_bigip: GTM BIG-IP monitors
+    bigip_gtm_monitor_external: GTM external monitors
+    bigip_gtm_monitor_firepass: GTM FirePass monitors
+    bigip_gtm_monitor_http: GTM HTTP monitors
+    bigip_gtm_monitor_https: GTM HTTPS monitors
+    bigip_gtm_monitor_tcp: GTM TCP monitors
+    bigip_gtm_monitor_tcp_half_open: GTM TCP half-open monitors
+    bigip_dns_zone: DNS zones
+    bigip_dns_nameserver: DNS nameservers
+    bigip_dns_resolver: DNS resolvers
+    bigip_dns_cache_resolver: DNS cache resolvers
+- title: Protect applications with AFM firewall and DoS controls
+  description: Define AFM firewall policies, rules, address and port lists, schedules, DoS profiles and
+    vectors, and firewall logging profiles.
+  components:
+    bigip_firewall_policy: Firewall policies
+    bigip_firewall_rule: Firewall rules
+    bigip_firewall_address: Address lists
+    bigip_firewall_port: Port lists
+    bigip_firewall_schedule: Schedules
+    bigip_firewall_global_rules: Global rules
+    bigip_firewall_dos_profile: DoS profiles
+    bigip_firewall_dos_vector: DoS attack vectors
+    bigip_firewall_log_profile: Firewall log profiles
+    bigip_firewall_log_profile_network: Network firewall log settings
+- title: Secure web applications and remote access with ASM and APM
+  description: Import, export and manage ASM web application firewall policies and DoS settings, and import
+    APM policies, access control lists and network access resources.
+  components:
+    bigip_asm_policy_manage: ASM policies
+    bigip_asm_policy_import: ASM policy imports
+    bigip_asm_policy_fetch: ASM policy exports
+    bigip_asm_policy_server_technology: ASM server technologies
+    bigip_asm_policy_signature_set: ASM signature sets
+    bigip_asm_advanced_settings: ASM advanced settings
+    bigip_asm_dos_application: ASM DoS application settings
+    bigip_apm_policy_import: APM policy imports
+    bigip_apm_policy_fetch: APM policy exports
+    bigip_apm_acl: APM ACLs
+    bigip_apm_network_access: APM network access resources
+- title: Configure network connectivity and routing
+  description: Set up VLANs, self IPs, trunks, interfaces, route domains, routes, tunnels, IPsec, advanced
+    routing and CGNAT pools.
+  components:
+    bigip_vlan: VLANs
+    bigip_selfip: Self IPs
+    bigip_trunk: Trunks
+    bigip_interface: Physical interfaces
+    bigip_routedomain: Route domains
+    bigip_static_route: Static routes
+    bigip_management_route: Management routes
+    bigip_imish_config: Advanced routing configuration
+    bigip_network_globals: Global network settings
+    bigip_tunnel: Tunnels
+    bigip_ike_peer: IPsec IKE peers
+    bigip_ipsec_policy: IPsec policies
+    bigip_traffic_selector: IPsec traffic selectors
+    bigip_cgnat_lsn_pool: CGNAT LSN pools
+- title: Manage certificates and keys
+  description: Import and delete SSL certificates and keys, create CSRs, configure OCSP and renew device
+    certificates.
+  components:
+    bigip_ssl_certificate: SSL certificates
+    bigip_ssl_key: SSL keys
+    bigip_ssl_key_cert: Key and certificate pairs
+    bigip_ssl_csr: Certificate signing requests
+    bigip_ssl_ocsp: OCSP configurations
+    bigip_device_certificate: Device certificates
+- title: Administer users and authentication
+  description: Manage local users, partitions, password policy, remote authentication through LDAP and
+    RADIUS, and remote user defaults and roles.
+  components:
+    bigip_user: Users
+    bigip_partition: Partitions
+    bigip_password_policy: Password policy
+    bigip_device_auth: System authentication
+    bigip_device_auth_ldap: LDAP authentication
+    bigip_device_auth_radius: RADIUS authentication
+    bigip_device_auth_radius_server: RADIUS servers
+    bigip_remote_role: Remote roles
+    bigip_remote_user: Remote user defaults
+- title: Build high-availability clusters
+  description: Establish device trust, device groups, traffic groups, HA groups and config-sync between
+    BIG-IP systems.
+  components:
+    bigip_device_trust: Device trust
+    bigip_device_connectivity: HA connectivity
+    bigip_device_group: Device groups
+    bigip_device_group_member: Device group members
+    bigip_device_traffic_group: Traffic groups
+    bigip_device_ha_group: HA groups
+    bigip_configsync_action: Config-sync actions
+- title: License, provision and upgrade devices
+  description: Install licenses, provision modules, create vCMP guests, install software images and manage
+    UCS archives, QKviews and files.
+  components:
+    bigip_device_license: Device licenses
+    bigip_provision: Module provisioning
+    bigip_provision_async: Module provisioning (asynchronous)
+    bigip_vcmp_guest: vCMP guests
+    bigip_software_image: Software images
+    bigip_software_install: Software installation
+    bigip_software_update: Software update settings
+    bigip_ucs: UCS archives
+    bigip_ucs_fetch: UCS downloads
+    bigip_qkview: QKviews
+    bigip_file_copy: Datastore files
+- title: Configure system settings, logging and monitoring
+  description: Set hostname, DNS, NTP, SSH, HTTPD, SMTP, SNMP, syslog and log destinations, and tune system
+    database variables, CLI scripts and configuration sections.
+  components:
+    bigip_hostname: Hostname
+    bigip_device_dns: System DNS
+    bigip_device_ntp: NTP servers
+    bigip_device_sshd: SSH daemon
+    bigip_device_httpd: HTTPD settings
+    bigip_smtp: SMTP settings
+    bigip_snmp: SNMP settings
+    bigip_snmp_community: SNMP communities
+    bigip_snmp_trap: SNMP traps
+    bigip_device_syslog: System syslog
+    bigip_remote_syslog: Remote syslog
+    bigip_log_destination: Log destinations
+    bigip_log_publisher: Log publishers
+    bigip_sys_db: System database variables
+    bigip_sys_global: Global system settings
+    bigip_sys_daemon_log_tmm: TMM daemon logging
+    bigip_cli_alias: CLI aliases
+    bigip_cli_script: CLI scripts
+    bigip_config: Configuration sections
+- title: Run commands and gather device facts
+  description: Collect device information, run TMSH or BASH commands and wait for a device to be ready
+    before continuing.
+  components:
+    bigip_device: BIG-IP device information
+    bigiq_device: BIG-IQ device information
+    bigip_command: TMSH and BASH commands
+    bigip_wait: Wait for device condition
+    filter:markdev: File path helper filter
+- title: Manage BIG-IQ applications, devices and licenses
+  description: Deploy applications through BIG-IQ, discover BIG-IP devices, and manage registration key
+    and utility license pools and assignments.
+  components:
+    bigiq_application_http: HTTP applications
+    bigiq_application_https_offload: HTTPS offload applications
+    bigiq_application_https_waf: HTTPS WAF applications
+    bigiq_application_fasthttp: FastHTTP applications
+    bigiq_application_fastl4_tcp: FastL4 TCP applications
+    bigiq_application_fastl4_udp: FastL4 UDP applications
+    bigiq_device_discovery: Device discovery
+    bigiq_regkey_pool: Registration key pools
+    bigiq_regkey_license: Registration key licenses
+    bigiq_regkey_license_assignment: Registration key license assignments
+    bigiq_utility_license: Utility licenses
+    bigiq_utility_license_assignment: Utility license assignments
+    lookup:bigiq_license: BIG-IQ license lookup
+    lookup:license_hopper: License hopper lookup

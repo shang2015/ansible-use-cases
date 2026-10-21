@@ -1,0 +1,28 @@
+fqcn: ibm.ibm_zos_cics
+product: IBM CICS Transaction Server for z/OS
+use_cases:
+- title: Create and maintain CICS region data sets
+  description: Allocate and remove the CSD, global and local catalogs, auxiliary temporary storage, trace
+    and dump data sets, local request queue and transient data data sets.
+  components:
+    csd: CICS system definition data set
+    global_catalog: Global catalog
+    local_catalog: Local catalog
+    aux_temp_storage: Auxiliary temporary storage
+    aux_trace: Auxiliary trace
+    transaction_dump: Transaction dump
+    local_request_queue: Local request queue
+    td_intrapartition: Transient data intrapartition
+- title: Start and stop CICS regions
+  description: Create startup JCL and stop a CICS region.
+  components:
+    region_jcl: Startup JCL
+    stop_region: Stop region
+- title: Query and manage CICS resources through CMCI
+  description: Query, create, update, delete and act on CICS and CICSPlex SM resources and definitions.
+  components:
+    cmci: CICS resource queries
+    cmci_create: Create definitions
+    cmci_update: Update resources
+    cmci_delete: Delete resources
+    cmci_action: Resource actions

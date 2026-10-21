@@ -1,0 +1,80 @@
+fqcn: vmware.vmware
+product: VMware vSphere
+use_cases:
+- title: Create and operate virtual machines
+  description: Create, update and delete virtual machines, change power state, take and revert snapshots,
+    apply customization and advanced settings, and set custom attributes.
+  components:
+    vm: Virtual machines
+    vm_powerstate: Power state
+    vm_snapshot: Snapshots
+    vm_snapshot_revert: Snapshot revert
+    vm_apply_customization: Customization specifications
+    vm_advanced_settings: Advanced settings
+    vm_custom_attributes: Custom attributes
+- title: Deploy from templates and content libraries
+  description: Deploy VMs from folder templates, content library templates and OVFs, and manage local
+    and subscribed content libraries with ISO and OVF imports.
+  components:
+    deploy_folder_template: Deploy from folder template
+    folder_template_from_vm: Template from VM
+    deploy_content_library_template: Deploy from library template
+    deploy_content_library_ovf: Deploy from library OVF
+    content_template: Library template from VM
+    local_content_library: Local content libraries
+    subscribed_content_library: Subscribed content libraries
+    content_library_item: Library items
+    import_content_library_iso: ISO import
+    import_content_library_ovf: OVF and OVA import
+- title: Manage clusters, DRS and HA
+  description: Manage clusters and their DRS, DPM, HA and vCLS settings, DRS recommendations and per-VM
+    overrides.
+  components:
+    cluster: Clusters
+    cluster_drs: DRS
+    cluster_drs_recommendations: DRS recommendations
+    cluster_drs_vm_overrides: DRS VM overrides
+    cluster_dpm: DPM
+    cluster_ha: HA
+    cluster_ha_vm_overrides: HA VM overrides
+    cluster_vcls: vCLS placement
+- title: Manage ESXi hosts
+  description: Connect hosts to vCenter, manage maintenance mode, power state and host services, and gather
+    host information.
+  components:
+    esxi: Host information
+    esxi_host: Host status
+    esxi_connection: Host connection
+    esxi_maintenance_mode: Maintenance mode
+    esxi_powerstate: Host power state
+    esxi_service: Host services
+- title: Organize the vSphere inventory
+  description: Manage folders, tags, tag categories and tag associations, and look up managed object IDs
+    from inventory paths.
+  components:
+    folder: Folders
+    tags: Tags
+    tag_categories: Tag categories
+    tag_associations: Tag associations
+    lookup:moid_from_path: Managed object ID lookup
+- title: Administer vCenter and encryption
+  description: Back up and configure the vCenter Server Appliance, check licences and appliance information,
+    and manage native and standard key providers.
+  components:
+    appliance: Appliance information
+    vcsa_settings: Appliance settings
+    vcsa_backup_schedule: Appliance backup schedule
+    license: Licence keys
+    key_provider: Key provider information
+    key_provider_native: Native key providers
+    key_provider_standard: Standard key providers
+- title: Report on inventory and react to events
+  description: Build dynamic inventories of VMs and ESXi hosts, report VM resources, portgroups and cluster
+    grouping, and trigger Event-Driven Ansible from vCenter events.
+  components:
+    vm_list_group_by_clusters: VMs by cluster and folder
+    vm_portgroup: VM portgroups
+    vm_resource: VM resources
+    inventory:vms: VM inventory
+    inventory:esxi_hosts: ESXi host inventory
+    eda_event_source:vcenter_event_manager: vCenter event source

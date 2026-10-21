@@ -1,0 +1,56 @@
+fqcn: arista.eos
+product: Arista EOS
+notes:
+- Module names have the eos_ prefix omitted.
+use_cases:
+- title: Configure Layer 2 interfaces and VLANs
+  description: Manage interfaces, VLANs, L2 and L3 interface settings, LAG and LACP.
+  components:
+    interfaces: Interfaces
+    l2_interfaces: Layer 2 interfaces
+    l3_interfaces: Layer 3 interfaces
+    vlans: VLANs
+    lag_interfaces: LAG interfaces
+    lacp: LACP
+    lacp_interfaces: LACP interfaces
+- title: 'Configure routing: static routes, BGP, OSPF and VRFs'
+  description: Manage static routes, BGP, OSPFv2 and OSPFv3, prefix lists, route maps and VRFs.
+  components:
+    static_routes: Static routes
+    bgp_global: BGP global
+    bgp_address_family: BGP address families
+    ospfv2: OSPFv2
+    ospfv3: OSPFv3
+    ospf_interfaces: OSPF interfaces
+    prefix_lists: Prefix lists
+    route_maps: Route maps
+    vrf: VRFs
+    vrf_global: VRF definitions
+- title: Apply access control lists
+  description: Define ACLs and bind them to interfaces.
+  components:
+    acls: ACLs
+    acl_interfaces: ACL interface bindings
+- title: Configure discovery, logging, time and monitoring
+  description: Manage LLDP, logging, NTP and SNMP.
+  components:
+    lldp: LLDP
+    lldp_global: LLDP global
+    lldp_interfaces: LLDP interfaces
+    logging_global: Logging
+    ntp_global: NTP
+    snmp_server: SNMP server
+- title: 'Administer devices: users, banners and management access'
+  description: Set hostname and system attributes, local users, banners and eAPI.
+  components:
+    hostname: Hostname
+    system: System attributes
+    user: Local users
+    banner: Banners
+    eapi: eAPI
+- title: Run commands, push configuration and gather facts
+  description: Run arbitrary commands, manage configuration sections and collect device facts.
+  components:
+    command: Commands
+    config: Configuration sections
+    facts: Facts

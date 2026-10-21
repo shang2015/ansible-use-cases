@@ -1,0 +1,48 @@
+fqcn: crowdstrike.falcon
+product: CrowdStrike Falcon
+use_cases:
+- title: Install and configure the Falcon sensor
+  description: Download, install, configure and uninstall the Falcon sensor and manage sensor update policies
+    and builds.
+  components:
+    role:falcon_install: Sensor installation
+    role:falcon_configure: Sensor configuration
+    role:falcon_uninstall: Sensor removal
+    falconctl: Sensor settings
+    sensor_download: Sensor installer download
+    sensor_update_policy: Sensor update policies
+    sensor_update_builds: Sensor builds
+    kernel_support: Supported kernels
+    cid: Customer ID
+    lookup:maintenance_token: Maintenance token
+- title: Manage hosts and host groups
+  description: Look up hosts, group them, contain or hide them, and query Flight Control child CIDs.
+  components:
+    host: Hosts
+    host_group: Host groups
+    host_contain: Network containment
+    host_hide: Host visibility
+    fctl_child_cid: Flight Control child CIDs
+    lookup:fctl_child_cids: Child CID lookup
+    lookup:host_ids: Host ID lookup
+    auth: Authentication
+- title: Run Next-Gen SIEM and threat hunting
+  description: Manage NG-SIEM correlation rules, data connections and parsers, search repositories, and
+    download hunting and intel rules.
+  components:
+    correlation_rule: Correlation rules
+    ngsiem_data_connection: Data connections
+    ngsiem_data_connector: Data connectors
+    ngsiem_parser: Parsers
+    ngsiem_search: Searches
+    hunting_rule_download: Hunting rules
+    intel_rule: Intel rules
+    intel_rule_download: Intel rule downloads
+    playbook:redhat_insights_yara: YARA rules for Red Hat Insights
+- title: Build inventory and react to Falcon events
+  description: Build inventory from Falcon Hosts and Discover and stream Falcon events to Event-Driven
+    Ansible.
+  components:
+    inventory:falcon_hosts: Falcon Hosts inventory
+    inventory:falcon_discover: Falcon Discover inventory
+    eda_event_source:eventstream: Event Stream source

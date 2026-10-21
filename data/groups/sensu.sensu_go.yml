@@ -1,0 +1,62 @@
+fqcn: sensu.sensu_go
+product: Sensu Go
+use_cases:
+- title: Define monitoring checks and assets
+  description: Create checks, hooks, assets and Bonsai assets, and register monitored entities.
+  components:
+    check: Checks
+    hook: Hooks
+    asset: Assets
+    bonsai_asset: Bonsai assets
+    entity: Entities
+- title: Process events and route notifications
+  description: Manage events, filters, mutators, handlers, handler sets, pipelines and silences to route
+    and suppress alerts.
+  components:
+    event: Events
+    filter: Filters
+    mutator: Mutators
+    handler: Handlers
+    handler_set: Handler sets
+    pipe_handler: Pipe handlers
+    socket_handler: Socket handlers
+    pipeline: Pipelines
+    silence: Silences
+- title: Control access and authentication
+  description: Manage users, roles, role bindings, cluster roles and bindings, and AD, LDAP and OIDC authentication
+    providers.
+  components:
+    user: Users
+    role: Roles
+    role_binding: Role bindings
+    cluster_role: Cluster roles
+    cluster_role_binding: Cluster role bindings
+    auth_provider: Authentication providers
+    ad_auth_provider: Active Directory provider
+    ldap_auth_provider: LDAP provider
+    oidc_auth_provider: OIDC provider
+- title: Manage namespaces, secrets and datastores
+  description: Manage namespaces, secrets and secrets providers (environment and Vault), external datastores,
+    and Tessen data sharing.
+  components:
+    namespace: Namespaces
+    secret: Secrets
+    secrets_provider: Secrets providers
+    secrets_provider_env: Environment secrets provider
+    secrets_provider_vault: Vault secrets provider
+    datastore: External datastores
+    tessen: Tessen
+- title: Operate Sensu clusters
+  description: Manage Sensu Go clusters and etcd replicators.
+  components:
+    cluster: Clusters
+    etcd_replicator: Etcd replicators
+- title: Install the backend and agents
+  description: Enable Sensu repositories and install, configure and start the backend and agents, with
+    helper filters for inventory.
+  components:
+    role:install: Installation role
+    role:backend: Backend role
+    role:agent: Agent role
+    filter:backends: Backend connection filter
+    filter:package_name: Package name filter

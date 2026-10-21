@@ -1,0 +1,19 @@
+fqcn: opensvc.cluster_v3
+product: OpenSVC
+use_cases:
+- title: Build and remove clusters
+  description: Build a cluster from a server inventory and remove clusters and their services.
+  components:
+    role:provision_cluster: Cluster provisioning
+    role:unprovision_cluster: Cluster removal
+    role:unprovision_services: Service removal
+- title: Set up cluster networking, storage and heartbeat
+  description: Install the backend network and CNI, name service, DRBD prerequisites, storage pools and
+    relay heartbeats.
+  components:
+    role:install_backend_network: Backend network
+    role:install_cni: CNI plugins
+    role:install_dns: Name service
+    role:install_drbd: DRBD prerequisites
+    role:install_pool: Storage pools
+    role:install_hb_relay: Relay heartbeat

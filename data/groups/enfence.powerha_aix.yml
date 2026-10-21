@@ -1,0 +1,27 @@
+fqcn: enfence.powerha_aix
+product: IBM PowerHA SystemMirror for AIX
+use_cases:
+- title: Build and update PowerHA clusters
+  description: Prepare AIX, create cluster configuration, update PowerHA and manage the cluster.
+  components:
+    role:cluster_prepare: AIX preparation
+    role:cluster_create: Cluster creation
+    role:cluster_update: PowerHA update
+    cluster: Clusters
+    ha: PowerHA facts
+- title: Manage resource groups and services
+  description: Manage resource groups, application controllers, service IPs and file collections.
+  components:
+    rg: Resource groups
+    appcontroller: Application controllers
+    service_ip: Service IPs
+    fc: File collections
+- title: Manage cluster storage
+  description: Manage volume groups, logical volumes, file systems and mirror pools, and find suitable
+    physical volumes.
+  components:
+    vg: Volume groups
+    lv: Logical volumes
+    fs: File systems
+    mp: Mirror pools
+    pv: Physical volumes

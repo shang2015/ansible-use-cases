@@ -1,0 +1,28 @@
+fqcn: gluware_inc.control
+product: Gluware Control
+use_cases:
+- title: Manage devices and inventory
+  description: Manage device lifecycle, discover and update device attributes and build inventory from
+    Gluware Control.
+  components:
+    device: Devices
+    run_discover_device_attributes: Device attribute discovery
+    update_device_attributes: Device attribute updates
+    inventory:glu_devices: Gluware inventory
+- title: Audit, back up and restore configuration
+  description: Run configuration audits, capture configuration to detect drift, take backups, list them
+    and restore devices.
+  components:
+    audit_config: Configuration audits
+    audit_config_batch: Batch configuration audits
+    capture_config: Configuration capture
+    backup: Backups
+    get_backups: Backup list
+    restore: Restores
+- title: Provision and run workflows
+  description: Preview and provision configuration models and run RPA workflows on one or many devices.
+  components:
+    cm_preview: Config modeling preview
+    cm_provision: Config modeling provision
+    rpa_workflow: RPA workflows
+    rpa_workflow_batch: Batch RPA workflows

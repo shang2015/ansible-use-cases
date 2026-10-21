@@ -1,0 +1,52 @@
+fqcn: microsoft.ad
+product: Microsoft Active Directory
+use_cases:
+- title: Manage directory objects
+  description: Create and manage users, groups, computers, service accounts, organizational units and
+    generic AD objects.
+  components:
+    user: Users
+    group: Groups
+    computer: Computers
+    service_account: Service accounts
+    ou: Organizational units
+    object: Directory objects
+    pso: Password settings objects
+    kds_root_key: KDS root keys
+- title: Build domains and domain controllers
+  description: Create domains and child domains, promote or demote domain controllers, join hosts to domains
+    and manage trusts.
+  components:
+    domain: Domains
+    domain_child: Child domains
+    domain_controller: Domain controllers
+    domain_trust: Domain trusts
+    membership: Domain membership
+    offline_join: Offline domain join
+- title: Configure sites and Group Policy
+  description: Manage replication sites, site links, subnets and Group Policy object links.
+  components:
+    site: Replication sites
+    site_link: Site links
+    site_subnet: Site subnets
+    gpo_link: GPO links
+- title: Manage certificate and federation services
+  description: Manage AD Certificate Services templates and distribution points and AD FS relying party
+    trusts and claim rules.
+  components:
+    cs_template: Certificate templates
+    cs_authority: CRL and AIA settings
+    fs_trust: AD FS relying party trusts
+    fs_claim_rule: AD FS claim rules
+- title: Query AD and debug LDAP
+  description: Build inventory from AD, parse LDAP values and distinguished names in playbooks, and debug
+    LDAP client connections.
+  components:
+    inventory:ldap: LDAP inventory
+    debug_ldap_client: LDAP client debugging
+    filter:as_datetime: LDAP datetime
+    filter:as_guid: LDAP GUID
+    filter:as_sid: LDAP SID
+    filter:dn_escape: DN escaping
+    filter:parse_dn: DN parsing
+    filter:split_dn: DN splitting

@@ -1,0 +1,23 @@
+fqcn: infra.support_assist
+product: Red Hat Support
+use_cases:
+- title: Open and update Red Hat support cases
+  description: Create cases, add comments and attach files through the Red Hat API, and refresh API tokens.
+  components:
+    role:rh_case: Case management
+    role:rh_token_refresh: Red Hat token refresh
+    playbook:rh_case_create: Create case
+    playbook:rh_case_update: Update case
+- title: Collect diagnostics from RHEL, OpenShift and AAP
+  description: Gather SOS reports from hosts and OpenShift nodes, OpenShift must-gather data and AAP API
+    data.
+  components:
+    role:sos_report: SOS reports
+    role:ocp_must_gather: OpenShift must-gather
+    role:aap_api_gather: AAP API gather
+    role:aap_api_token: AAP API token
+    playbook:sos_report: SOS report
+    playbook:sos_report_rhel: RHEL host SOS report
+    playbook:sos_report_ocp: OpenShift node SOS report
+    playbook:ocp_must_gather: OpenShift must-gather pipeline
+    playbook:aap_api_gather: AAP API gather and case upload

@@ -1,0 +1,10 @@
+fqcn: nokia.srlinux
+product: "Nokia SR Linux"
+use_cases:
+- title: "Configure and query Nokia SR Linux devices"
+  description: "Run CLI commands, update, replace and delete configuration, validate it, and retrieve configuration or state."
+  components:
+    "cli": "CLI commands"
+    "config": "Configuration"
+    "validate": "Validation"
+    "get": "Configuration and state retrieval"

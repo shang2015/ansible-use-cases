@@ -1,0 +1,10 @@
+fqcn: chocolatey.chocolatey
+product: "Chocolatey"
+use_cases:
+- title: "Manage Windows packages with Chocolatey"
+  description: "Install and remove packages and configure Chocolatey settings, features and sources."
+  components:
+    "chocolatey": "Packages"
+    "chocolatey_config": "Configuration settings"
+    "chocolatey_feature": "Features"
+    "chocolatey_source": "Sources"

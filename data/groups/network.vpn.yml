@@ -1,0 +1,10 @@
+fqcn: network.vpn
+product: "VPN"
+use_cases:
+- title: "Deploy and validate VPN configuration"
+  description: "Deploy VPN settings to network appliances, validate them, and manage Azure local network gateways and virtual network gateway connections."
+  components:
+    "role:deploy": "Deploy VPN configuration"
+    "role:validate": "Validate VPN configuration"
+    "localnetworkgateway": "Azure local network gateways"
+    "virtualnetworkgatewayconnection": "Azure gateway connections"

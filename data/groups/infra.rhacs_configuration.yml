@@ -1,0 +1,47 @@
+fqcn: infra.rhacs_configuration
+product: Red Hat Advanced Cluster Security for Kubernetes (RHACS)
+use_cases:
+- title: Manage security policies
+  description: Create, clone, import and export security policies and categories, and attach notifiers
+    to them.
+  components:
+    policy: Security policies
+    policy_category: Policy categories
+    policy_clone: Policy cloning
+    policy_export: Policy export
+    policy_import: Policy import
+    policy_notifier: Policy notifiers
+    exception: Vulnerability exception expiration
+- title: Control access
+  description: Configure authentication providers, group-to-role mapping, roles, permission sets, access
+    scopes, machine access and API tokens.
+  components:
+    auth_provider: Authentication providers
+    group: Role mappings
+    role: Roles
+    permission_set: Permission sets
+    access_scope: Access scopes
+    machine_access: Machine access
+    api_token: API tokens
+- title: Scan images and verify signatures
+  description: Integrate image scanners, registries, delegated scanning, image watches and Cosign signatures.
+  components:
+    image_integration: Scanner and registry integrations
+    delegated_image_scan: Delegated image scanning
+    image_watch: Image watches
+    signature: Cosign signatures
+- title: Report on compliance and vulnerabilities
+  description: Schedule compliance scans and vulnerability reports and group deployments into collections.
+  components:
+    compliance_schedule: Compliance schedules
+    report_schedule: Vulnerability report schedules
+    collection: Deployment collections
+- title: Configure the RHACS platform and integrations
+  description: Manage RHACS configuration, secured cluster init bundles, notifier integrations, cloud
+    platform integrations and external backups.
+  components:
+    config: RHACS configuration
+    init_bundle: Cluster init bundles
+    notifier_integration: Notification methods
+    cloud_management_platform: Cloud platform integrations
+    external_backup: External backups

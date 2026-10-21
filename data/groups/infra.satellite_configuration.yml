@@ -1,0 +1,42 @@
+fqcn: infra.satellite_configuration
+product: Red Hat Satellite
+use_cases:
+- title: Export Satellite configuration as code
+  description: Export the live Satellite configuration to a file tree, scoped by organization and name
+    filters.
+  components:
+    role:filetree_create: Configuration export
+    playbook:run_filetree_create: Export Satellite configuration
+    filter:satellite_configuration_build_export_search_query: Export search query
+    filter:satellite_configuration_append_export_search_for_resource: Per-resource export search
+    filter:satellite_configuration_append_export_search_to_api_link: Export search on API path
+    filter:satellite_configuration_append_locked_export_search_to_api_link: Locked-object search on API
+      path
+    filter:satellite_configuration_filter_export_items: Export item filter
+    filter:satellite_configuration_filter_export_organizations: Export organization filter
+    filter:satellite_configuration_filters_for_post_api_export: Remaining export filters
+    filter:satellite_configuration_export_item_is_locked: Locked object check
+    filter:satellite_configuration_locked_item_names: Locked object names
+    filter:satellite_configuration_reject_locked_items: Locked object removal
+    filter:satellite_configuration_reject_orphaned_katello_products: Orphaned product cleanup
+    filter:satellite_configuration_sanitize_partition_table_layout: Partition table sanitizing
+    filter:satellite_configuration_unwrap_raw_markers: Raw marker removal
+    filter:satellite_configuration_contains_template_markers: Template marker detection
+- title: Apply configuration as code to Satellite
+  description: Read configuration files, resolve connection details and apply the definitions to Satellite.
+  components:
+    role:filetree_read: Read configuration files
+    role:dispatch: Apply configuration
+    role:global_vars: Shared variables
+    playbook:run_filetree_read: Import into Satellite
+    filter:satellite_configuration_merge_by_key: Override merging
+- title: Detect and reconcile configuration drift
+  description: Compare live Satellite configuration with the code and write reconcile diff files.
+  components:
+    role:filetree_reconcile: Configuration reconciliation
+    playbook:run_filetree_reconcile: Reconcile Satellite
+    filetree_reconcile_diff: Reconcile diff files
+- title: Format configuration files
+  description: Format YAML files with PyYAML.
+  components:
+    format_yaml: YAML formatting

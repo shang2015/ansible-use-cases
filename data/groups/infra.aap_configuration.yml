@@ -1,0 +1,126 @@
+fqcn: infra.aap_configuration
+product: Red Hat Ansible Automation Platform (configuration as code)
+notes:
+- Roles take lists of objects as variables; the dispatch role calls the other roles in the right order
+  to configure a whole platform.
+use_cases:
+- title: Configure the whole platform from code
+  description: Apply a complete configuration to Automation Platform with the dispatch role and playbooks,
+    and share global variables and ansible.cfg settings.
+  components:
+    role:dispatch: Dispatch role
+    role:global_vars: Global variables
+    role:ansible_config: ansible.cfg generation
+    role:meta_dependency_check: Collection dependency check
+    playbook:configure_aap: Post-installation configuration
+    playbook:set_organization: Organization assignment
+    playbook:rename_objects: Object renaming
+    playbook:get_stats: Platform statistics
+- title: Manage organizations, users, teams and RBAC in the controller
+  description: Create organizations, users and teams and grant access with roles and role definitions
+    in automation controller.
+  components:
+    role:controller_organizations: Controller organizations
+    role:controller_users: Controller users
+    role:controller_teams: Controller teams
+    role:controller_roles: Controller roles
+    role:controller_role_definitions: Controller role definitions
+    role:controller_role_team_assignments: Controller team role assignments
+    role:controller_role_user_assignments: Controller user role assignments
+    role:controller_settings: Controller settings
+    role:controller_license: Controller licence
+    role:controller_labels: Labels
+    role:controller_applications: OAuth applications
+- title: Manage credentials and execution environments in the controller
+  description: Define credential types, credentials and input sources, execution environments, instances
+    and instance groups.
+  components:
+    role:controller_credential_types: Credential types
+    role:controller_credentials: Credentials
+    role:controller_credential_input_sources: Credential input sources
+    role:controller_execution_environments: Execution environments
+    role:controller_instances: Instances
+    role:controller_instance_groups: Instance groups
+- title: Manage projects, inventories and hosts in the controller
+  description: Create and sync projects, inventories, inventory sources, hosts and host groups, including
+    bulk host creation.
+  components:
+    role:controller_projects: Projects
+    role:controller_project_update: Project updates
+    role:controller_inventories: Inventories
+    role:controller_inventory_sources: Inventory sources
+    role:controller_inventory_source_update: Inventory source updates
+    role:controller_hosts: Hosts
+    role:controller_host_groups: Host groups
+    role:controller_bulk_host_create: Bulk host creation
+- title: Define and run jobs and workflows in the controller
+  description: Create job and workflow templates, schedules and notifications, then launch, monitor and
+    cancel jobs and ad hoc commands.
+  components:
+    role:controller_job_templates: Job templates
+    role:controller_workflow_job_templates: Workflow job templates
+    role:controller_schedules: Schedules
+    role:controller_notification_templates: Notification templates
+    role:controller_job_launch: Job launches
+    role:controller_workflow_launch: Workflow launches
+    role:controller_bulk_job_launch: Bulk job launches
+    role:controller_jobs_cancel: Job cancellation
+    role:controller_ad_hoc_command: Ad hoc commands
+    role:controller_ad_hoc_command_cancel: Ad hoc command cancellation
+    role:collect_async_status: Asynchronous task status
+- title: Configure Event-Driven Ansible
+  description: Create EDA users, tokens, credentials, decision environments, projects, event streams and
+    rulebook activations.
+  components:
+    role:eda_users: EDA users
+    role:eda_controller_tokens: Controller tokens
+    role:eda_credential_types: Credential types
+    role:eda_credentials: Credentials
+    role:eda_credential_input_sources: Credential input sources
+    role:eda_decision_environments: Decision environments
+    role:eda_projects: Projects
+    role:eda_event_streams: Event streams
+    role:eda_rulebook_activations: Rulebook activations
+- title: Configure the platform gateway
+  description: Manage gateway organizations, users, teams, authenticators and maps, role assignments,
+    settings, applications, services, routes, ports and service clusters.
+  components:
+    role:gateway_organizations: Gateway organizations
+    role:gateway_users: Gateway users
+    role:gateway_teams: Gateway teams
+    role:gateway_authenticators: Authenticators
+    role:gateway_authenticator_maps: Authenticator maps
+    role:gateway_role_definitions: Role definitions
+    role:gateway_role_team_assignments: Team role assignments
+    role:gateway_role_user_assignments: User role assignments
+    role:gateway_settings: Gateway settings
+    role:gateway_applications: OAuth applications
+    role:gateway_services: Services
+    role:gateway_service_clusters: Service clusters
+    role:gateway_service_nodes: Service nodes
+    role:gateway_service_keys: Service keys
+    role:gateway_routes: Routes
+    role:gateway_http_ports: HTTP ports
+- title: Manage Automation Hub users and groups
+  description: Create Hub users, groups, group roles and role permissions.
+  components:
+    role:hub_user: Users
+    role:hub_group: Groups
+    role:hub_group_roles: Group roles
+    role:hub_role: Role permissions
+- title: Curate collections and execution environment images in Automation Hub
+  description: Manage namespaces, collection remotes, repositories and publishing, and execution environment
+    registries, repositories and images.
+  components:
+    role:hub_namespace: Namespaces
+    role:hub_collection: Collections
+    role:hub_collection_remote: Collection remotes
+    role:hub_collection_repository: Collection repositories
+    role:hub_collection_repository_sync: Collection repository sync
+    role:hub_publish: Collection publishing
+    role:hub_ee_registry: EE registries
+    role:hub_ee_registry_index: EE registry indexing
+    role:hub_ee_registry_sync: EE registry sync
+    role:hub_ee_repository: EE repositories
+    role:hub_ee_repository_sync: EE repository sync
+    role:hub_ee_image: EE images

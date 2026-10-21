@@ -1,0 +1,30 @@
+fqcn: servicenow.itsm
+product: ServiceNow
+use_cases:
+- title: Manage incidents, problems and changes
+  description: Create, update and close incidents, problems, change requests and their tasks.
+  components:
+    incident: Incidents
+    problem: Problems
+    problem_task: Problem tasks
+    change_request: Change requests
+    change_request_task: Change request tasks
+- title: Manage requests and the configuration database
+  description: Manage service catalog carts, catalog requests and tasks, and configuration items and their
+    relations.
+  components:
+    service_catalog: Service catalog carts
+    catalog_request: Catalog requests
+    catalog_request_task: Catalog request tasks
+    configuration_item: Configuration items
+    configuration_item_batch: Configuration items in batch
+    configuration_item_relations: Configuration item relations
+- title: Integrate ServiceNow with Ansible
+  description: Call the ServiceNow API, handle attachments, build inventory from table records and trigger
+    Event-Driven Ansible from record changes.
+  components:
+    api: ServiceNow API requests
+    attachment: Attachment download
+    attachment_upload: Attachment upload
+    inventory:now: Table record inventory
+    eda_event_source:records: Record events

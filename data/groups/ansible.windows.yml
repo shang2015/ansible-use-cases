@@ -1,0 +1,108 @@
+fqcn: ansible.windows
+product: Microsoft Windows
+use_cases:
+- title: Manage files, folders and permissions
+  description: Copy, create, find, template and edit files and folders, and set ACLs, ownership, inheritance,
+    compression and auditing.
+  components:
+    win_copy: Copy files
+    win_file: Files and directories
+    win_find: Find files
+    win_stat: File information
+    win_tempfile: Temporary files
+    win_template: Templates
+    win_lineinfile: Line in file
+    win_get_url: Download files
+    slurp: Fetch files from hosts
+    win_acl: ACLs
+    win_acl_inheritance: ACL inheritance
+    win_owner: Ownership
+    win_file_compression: File compression
+    win_audit_rule: Audit rules
+    win_share: File shares
+    win_mapped_drive: Mapped drives
+- title: Install software and updates
+  description: Install packages, features, optional features, capabilities, hotfixes and Windows updates,
+    and read product licence information.
+  components:
+    win_package: Packages
+    win_feature: Windows features
+    win_optional_feature: Optional features
+    win_capability: Windows capabilities
+    win_hotfix: Hotfixes
+    win_updates: Windows updates
+    win_product: Product and licence info
+- title: Manage services, tasks and processes
+  description: Manage Windows services and scheduled tasks, and wait for conditions or listening ports.
+  components:
+    win_service: Services
+    win_scheduled_task: Scheduled tasks
+    win_wait_for: Wait for conditions
+    win_listen_ports: Listening ports
+- title: Manage users, groups and security policy
+  description: Manage local users, groups, group membership, profiles, user rights, credentials, certificates,
+    audit policy and auto logon.
+  components:
+    win_user: Local users
+    win_group: Local groups
+    win_group_membership: Group membership
+    win_user_profile: User profiles
+    win_user_right: User rights
+    win_credential: Credential Manager
+    win_certificate: Certificate info
+    win_certificate_store: Certificate store
+    win_audit_policy_system: System audit policy
+    win_auto_logon: Auto logon
+    win_whoami: Current user information
+- title: Configure networking and firewall
+  description: Configure DNS client, DNS zones and records, DHCP leases, hosts file, proxies, static routes
+    and Windows Firewall.
+  components:
+    win_dns_client: DNS client
+    win_dns_record: DNS records
+    win_dns_zone: DNS zones
+    win_dhcp_lease: DHCP leases
+    win_hosts: Hosts file
+    win_http_proxy: WinHTTP proxy
+    win_inet_proxy: WinINet proxy
+    win_route: Static routes
+    win_firewall: Windows Firewall
+    win_firewall_rule: Firewall rules
+- title: Configure system settings and registry
+  description: Set hostname, computer description, time zone, region, environment variables, PATH, registry
+    values, event logs and reboot hosts.
+  components:
+    win_hostname: Hostname
+    win_computer_description: Computer description
+    win_timezone: Time zone
+    win_region: Region settings
+    win_environment: Environment variables
+    win_path: PATH variable
+    win_regedit: Registry values
+    win_reg_stat: Registry information
+    win_eventlog: Event logs
+    win_reboot: Reboot
+- title: Manage disks and volumes
+  description: Gather disk information, initialise disks, create partitions and format volumes.
+  components:
+    win_disk: Disk information
+    win_initialize_disk: Disk initialisation
+    win_partition: Partitions
+    win_format: Volume formatting
+- title: Run commands, scripts and DSC configurations
+  description: Run commands, shell and PowerShell scripts, apply PowerShell DSC and DSC v3 configurations,
+    call web services and check async tasks.
+  components:
+    win_command: Commands
+    win_shell: Shell commands
+    win_powershell: PowerShell scripts
+    win_dsc: DSC configurations
+    dsc3: DSC v3 configurations
+    win_uri: Web service calls
+    async: Async task status
+- title: Gather facts and test connectivity
+  description: Gather host facts, test connectivity and quote arguments safely for Windows shells.
+  components:
+    setup: Facts
+    win_ping: Ping
+    filter:quote: Shell quoting filter

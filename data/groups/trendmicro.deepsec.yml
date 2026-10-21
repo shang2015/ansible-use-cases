@@ -1,0 +1,19 @@
+fqcn: trendmicro.deepsec
+product: Trend Micro Deep Security
+use_cases:
+- title: Manage protection rules
+  description: Manage anti-malware, firewall, integrity monitoring, intrusion prevention and log inspection
+    rules.
+  components:
+    anti_malwares: Anti-malware rules
+    firewall_rules: Firewall rules
+    integrity_monitoring_rules: Integrity monitoring rules
+    intrusion_prevention_rules: Intrusion prevention rules
+    log_inspection_rules: Log inspection rules
+- title: Administer Deep Security and view hosts
+  description: Create API keys, configure syslog and system settings and get information about hosts.
+  components:
+    apikey: API keys
+    syslog: Syslog configuration
+    system_settings: System settings
+    hosts: Hosts

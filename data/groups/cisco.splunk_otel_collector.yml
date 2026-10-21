@@ -1,0 +1,7 @@
+fqcn: cisco.splunk_otel_collector
+product: "Splunk OpenTelemetry Collector"
+use_cases:
+- title: "Install the Splunk OpenTelemetry Collector"
+  description: "Install and configure the collector."
+  components:
+    "role:collector": "OpenTelemetry Collector"

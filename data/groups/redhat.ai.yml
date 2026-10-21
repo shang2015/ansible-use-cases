@@ -1,0 +1,12 @@
+fqcn: redhat.ai
+product: "Red Hat Enterprise Linux AI"
+use_cases:
+- title: "Set up and serve InstructLab models on RHEL AI"
+  description: "Initialise and edit InstructLab configuration, download and serve models, and query a deployed model."
+  components:
+    "playbook:ilab": "Set up RHEL AI"
+    "ilab_init": "Initial InstructLab configuration"
+    "ilab_config": "InstructLab configuration"
+    "ilab_model_download": "Model download"
+    "role:ilab_serve": "Serve a model"
+    "completion": "Model completion"

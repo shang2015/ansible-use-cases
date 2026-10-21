@@ -1,0 +1,142 @@
+fqcn: sap.sap_operations
+product: SAP (HANA, ABAP, NetWeaver and BTP)
+notes:
+- Includes many filters and tests that help parse SAP, pcs cluster and license data inside playbooks.
+use_cases:
+- title: Prepare hosts for SAP
+  description: Prepare RHEL hosts and containers for SAP, register subscriptions, open firewall ports,
+    distribute SSH keys and load the collection's variables.
+  components:
+    role:sap_operations: Collection variables
+    role:prepare: RHEL host preparation
+    role:prepare_container: Container preparation
+    role:general_preconfigure: General SAP preconfiguration
+    role:hana_preconfigure: SAP HANA preconfiguration
+    role:subscription_manager: Subscription registration
+    role:firewall: Firewall for SAP instances
+    role:ssh_keys_distribute: SSH key distribution
+    role:powershell: PowerShell
+    is_container: Container detection
+    azure_imds: Azure instance metadata
+- title: Download and install SAP software
+  description: Download SAP software from the download center and baskets, unpack SAR archives, run SWPM
+    and sapinst, install the SAP host agent and JVM, and replace the SAP kernel.
+  components:
+    role:download: Software download
+    role:downloadbasket: Download basket content
+    role:swpm_download_service: SWPM download service
+    role:swpm: SWPM
+    role:sapinst: sapinst
+    role:sapinst_crl: sapinst certificate revocation list
+    role:sapcar: SAPCAR
+    role:unpack: SAR and ZIP unpacking
+    role:saphostagent_sar: SAP host agent from SAR
+    role:sapjvm: SAP JVM
+    role:sap_kernel_update: SAP kernel update
+    swdc_auth: Download center authentication
+    me_downloadbasket: Download basket information
+    me_downloaditemset: Download item set information
+    me_file: File information
+    filter:me_aliases: Software aliases filter
+    filter:me_enr_from_alias: ENR from alias filter
+    test:me_valid_alias: Valid software alias test
+    playbook:sample_saphostagent_sar_e2e: SAP host agent install sample
+- title: Install and operate SAP HANA
+  description: Install and update HANA instances, manage services, the user store and SSFS keys, back
+    up and restore databases and read system replication status.
+  components:
+    role:hana: HANA instance
+    role:hana_update: HANA update
+    role:hana_sudoers: HANA sudoers
+    role:ssfs_sync: SSFS key synchronization
+    service: HANA services
+    hdbuserstore: HANA user store
+    hana_backup: HANA backups
+    hana_restore: HANA restores
+    hana_system_replication: HANA system replication information
+    test:hana_instance: HANA instance test
+    playbook:sample_hana_present_e2e: HANA download and install sample
+- title: Build and check high-availability clusters
+  description: Pre-configure and check Pacemaker clusters, authorize nodes, read cluster status and CIB,
+    check SAP HA and failover configuration, manage enqueue locks and switch kernels in a rolling fashion.
+  components:
+    role:cluster_preconfigure: Cluster package preconfiguration
+    role:pcs_config_checks: Cluster configuration checks
+    pcs_auth: Cluster node authorization
+    pcs_status: Cluster status
+    pcs_cib: Cluster information base
+    pcs_capabilities: Pacemaker capabilities
+    pcs_fence_azure_arm_list: Azure fence host list
+    ha_check_config: HA configuration check
+    ha_check_failoverconfig: HA failover configuration check
+    ha_get_failoverconfig: HA failover configuration
+    enq_admin: Enqueue server information
+    enq_admin_lock: Enqueue server lock management
+    enq_admin_locks: Enqueue server locks
+    rolling_kernel_switch: Rolling kernel switch
+    filter:pcs_cluster_property_mapping: Cluster property filter
+    filter:pcs_nodes_from_status: Cluster nodes filter
+    filter:pcs_resources: Cluster resources filter
+    filter:pcs_resources_from_cib: Cluster resources from CIB filter
+    filter:pcs_resources_from_status: Cluster resources from status filter
+    test:ascs_instance: ASCS instance test
+- title: Administer SAP systems, instances and licenses
+  description: Manage SAP systems, list installed instances, read parameters and /proc data, install and
+    inspect license keys, and run SAP quality checks.
+  components:
+    system: SAP systems
+    host: Installed SAP instances
+    parameter: Parameters
+    proc: /proc file contents
+    role:quality: SAP quality checks
+    saplikey: License keys
+    saplikey_get: Hardware key information
+    saplikey_show: License key information
+    filter:license_content: License content filter
+    test:app_instance: Application instance test
+    show_c: Copyright notice
+    show_w: Warranty notice
+- title: Manage ABAP systems and transports
+  description: Read ABAP system details, search transport requests, and create and import transports.
+  components:
+    abap_system: ABAP system information
+    abap_transport: Transport request information
+    abap_transports: Transport request search
+    abap_transport_create: Transport request creation
+    abap_transport_import: Transport request import
+- title: Manage SAP BTP and Cloud Foundry
+  description: Read BTP global accounts and subaccounts, manage subaccounts, browse the Cloud Foundry
+    marketplace, spaces and service plans, manage service instances and keys, and install the Cloud Foundry
+    CLI and SAP Cloud Connector.
+  components:
+    btp_global_account: BTP global account
+    btp_global_account_assignments: Global account assignments
+    btp_subaccount: BTP subaccount
+    btp_subaccounts: BTP subaccounts
+    cf_marketplace: Cloud Foundry marketplace
+    cf_spaces: Cloud Foundry spaces
+    cf_service_plans: Service plans
+    cf_service_instance: Service instance
+    cf_service_instances: Service instances
+    cf_service_instance_key: Service instance key
+    cf_service_instance_keys: Service instance keys
+    role:cf: Cloud Foundry CLI
+    role:cloudconnector: SAP Cloud Connector
+    playbook:sample_test_sap_btp: BTP test sample
+- title: Validate and transform data in playbooks
+  description: Check SAP system IDs, host names and FQDNs, evaluate truthiness, merge defaults, find mount
+    paths and render inifile parameters.
+  components:
+    filter:valid_sid: SAP system ID filter
+    filter:valid_hostname: Host name filter
+    filter:valid_fqdn: FQDN filter
+    filter:all: All-true filter
+    filter:any: Any-true filter
+    filter:combine_default: Default dictionary merge filter
+    filter:inifile_params: Inifile parameters filter
+    filter:mount_path: Mount path filter
+    test:valid_sid: SAP system ID test
+    test:valid_hostname: Host name test
+    test:valid_fqdn: FQDN test
+    test:all: All-true test
+    test:any: Any-true test

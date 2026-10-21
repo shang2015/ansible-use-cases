@@ -1,0 +1,10 @@
+fqcn: netapp.aws
+product: "NetApp Cloud Volumes Service for AWS"
+use_cases:
+- title: "Manage NetApp Cloud Volumes Service on AWS"
+  description: "Manage pools, file systems, snapshots and Active Directory settings."
+  components:
+    "pool": "Pools"
+    "filesystems": "File systems"
+    "snapshots": "Snapshots"
+    "active_directory": "Active Directory"

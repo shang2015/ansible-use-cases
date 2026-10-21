@@ -1,0 +1,39 @@
+fqcn: ansible.aap_snapshot
+product: Ansible Automation Platform
+use_cases:
+- title: Check readiness before migration
+  description: Run preflight checks, discover installed AAP components and normalize inventory groups
+    across deployment types.
+  components:
+    role:preflight: Pre-migration checks
+    role:common: Inventory group normalization
+    aap_component: AAP component discovery
+    filter:aap_version: AAP version parsing
+- title: Export and import component data
+  description: Export and import Automation Controller, EDA, Gateway and Hub data and the PostgreSQL databases
+    behind them.
+  components:
+    role:automationcontroller: Automation Controller data
+    role:automationeda: Event-Driven Ansible data
+    role:automationgateway: Automation Gateway data
+    role:automationhub: Automation Hub and Pulp content
+    role:postgresql: PostgreSQL databases
+    playbook:artifact_export: Export artifact
+    playbook:artifact_import: Import artifact
+- title: Manage and verify migration artifacts
+  description: Manage the artifact lifecycle and validate migration artifacts.
+  components:
+    role:artifact: Artifact lifecycle
+    validate_migration_artifact: Artifact validation
+    playbook:artifact_verify: Verify artifact
+    playbook:common.validate_artifact: Validate artifact
+- title: Operate platform services during migration
+  description: Start and stop services, manage component versions, Receptor mesh, Performance Co-Pilot
+    and OpenShift operator-based deployments.
+  components:
+    role:operations: Component operations
+    role:receptor: Receptor mesh
+    role:pcp: Performance Co-Pilot
+    role:ocp_utils: OpenShift cluster operations
+    playbook:common.start_services: Start EDA services
+    playbook:common.stop_services: Stop monitoring services

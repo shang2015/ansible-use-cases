@@ -1,0 +1,25 @@
+fqcn: ansible.mariadb
+product: MariaDB
+use_cases:
+- title: Manage databases, users and access
+  description: Add and remove databases, users and roles and manage password policies.
+  components:
+    db: Databases
+    user: Users
+    role: Roles
+    password_policy: Password policies
+- title: Run queries and manage replication
+  description: Run queries and manage replication and replication filters.
+  components:
+    query: Queries
+    replication: Replication
+    replication_filter: Replication filters
+- title: Tune and monitor servers
+  description: Manage global variables, Performance Schema setup and slow query log settings, and gather
+    server and binary log information.
+  components:
+    variables: Global variables
+    perf_schema: Performance Schema
+    slow_log: Slow query log
+    info: Server information
+    binlog: Binary logs

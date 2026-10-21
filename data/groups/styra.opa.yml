@@ -1,0 +1,7 @@
+fqcn: styra.opa
+product: "Open Policy Agent"
+use_cases:
+- title: "Deploy an OPA policy decision point on Kubernetes"
+  description: "Deploy an OPA-based policy decision point."
+  components:
+    "role:k8s_pdp": "Kubernetes policy decision point"

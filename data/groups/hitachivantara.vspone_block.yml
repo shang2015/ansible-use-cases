@@ -1,0 +1,400 @@
+fqcn: hitachivantara.vspone_block
+product: Hitachi Vantara VSP One Block and SDS Block storage
+use_cases:
+- title: Provision volumes and connect hosts
+  description: Create logical devices (LDEVs), host groups, iSCSI targets, NVM subsystems and PAV aliases, set host
+    modes and server priorities, and attach volumes to hosts.
+  components:
+    hg: Host groups
+    hg_bulk: Host groups bulk
+    iscsi_target: iSCSI target
+    iscsi_target_bulk: iSCSI target bulk
+    ldev: LDEV
+    ldev_bulk: LDEV bulk
+    nvm_subsystems: NVM subsystems
+    pav_alias: PAV alias
+    server_priority_manager: Server priority manager
+    supported_host_mode: Supported host mode
+    vsp_one_server: VSP One server
+    vsp_one_server_hba: VSP One server HBA
+    vsp_one_volume: VSP One volume
+    playbook:vsp_direct.delete_ldev_from_host: Delete LDEV from host playbook
+    playbook:vsp_direct.hostgroup: Host group playbook
+    playbook:vsp_direct.hostgroup_bulk: Host group bulk playbook
+    playbook:vsp_direct.hostgroup_facts: Host group information playbook
+    playbook:vsp_direct.iscsi_target: iSCSI target playbook
+    playbook:vsp_direct.iscsi_target_bulk: iSCSI target bulk playbook
+    playbook:vsp_direct.iscsi_target_facts: iSCSI target information playbook
+    playbook:vsp_direct.ldev: LDEV playbook
+    playbook:vsp_direct.ldev_bulk: LDEV bulk playbook
+    playbook:vsp_direct.ldev_facts: LDEV information playbook
+    playbook:vsp_direct.nvm_subsystem_facts: NVM subsystem information playbook
+    playbook:vsp_direct.nvm_subsystems: NVM subsystems playbook
+    playbook:vsp_direct.pav_alias: PAV alias playbook
+    playbook:vsp_direct.pav_alias_facts: PAV alias information playbook
+    playbook:vsp_direct.provision_ldev_to_host: Provision LDEV to host playbook
+    playbook:vsp_direct.server_priority_manager: Server priority manager playbook
+    playbook:vsp_direct.server_priority_manager_facts: Server priority manager information playbook
+    playbook:vsp_direct.supported_host_mode_facts: Supported host mode information playbook
+    playbook:vsp_direct.vsp_one_server: VSP One server playbook
+    playbook:vsp_direct.vsp_one_server_facts: VSP One server information playbook
+    playbook:vsp_direct.vsp_one_server_hba_facts: VSP One server HBA information playbook
+    playbook:vsp_direct.vsp_one_volume: VSP One volume playbook
+    playbook:vsp_direct.vsp_one_volume_facts: VSP One volume information playbook
+- title: Manage pools, parity groups and drives
+  description: Manage storage pools, DDP pools, parity groups, cache logical partitions, disk drives and MP blades.
+  components:
+    clpr: CLPR
+    cmd_dev: Command device
+    ddp_pool: DDP pool
+    disk_drive: Disk drive
+    mp: MP
+    paritygroup: Parity group
+    storagepool: Storage pool
+    playbook:vsp_direct.clpr: CLPR playbook
+    playbook:vsp_direct.clpr_facts: CLPR information playbook
+    playbook:vsp_direct.cmd_dev: Command device playbook
+    playbook:vsp_direct.ddp_pool: DDP pool playbook
+    playbook:vsp_direct.ddp_pool_facts: DDP pool information playbook
+    playbook:vsp_direct.disk_drive: Disk drive playbook
+    playbook:vsp_direct.disk_drive_facts: Disk drive information playbook
+    playbook:vsp_direct.mp_facts: MP information playbook
+    playbook:vsp_direct.paritygroup: Parity group playbook
+    playbook:vsp_direct.paritygroup_facts: Parity group information playbook
+    playbook:vsp_direct.storage_pool: Storage pool playbook
+    playbook:vsp_direct.storagepool_facts: Storage pool information playbook
+    playbook:vsp_direct.vsp_one_ddp_pool: VSP One ddp pool playbook
+    playbook:vsp_direct.vsp_one_ddp_pool_facts: VSP One ddp pool information playbook
+- title: Virtualize external storage
+  description: Manage external parity groups, external volumes and external path groups to bring external storage
+    under VSP control.
+  components:
+    external_paritygroup: External parity group
+    external_path_group: External path group
+    external_volume: External volume
+    playbook:vsp_direct.external_paritygroup: External parity group playbook
+    playbook:vsp_direct.external_paritygroup_facts: External parity group information playbook
+    playbook:vsp_direct.external_path_group: External path group playbook
+    playbook:vsp_direct.external_path_group_facts: External path group information playbook
+    playbook:vsp_direct.external_volume: External volume playbook
+    playbook:vsp_direct.external_volume_facts: External volume information playbook
+- title: Manage storage ports
+  description: Change storage port settings on VSP and VSP One block storage systems.
+  components:
+    storage_port: Storage port
+    vsp_one_port: VSP One port
+    playbook:vsp_direct.storage_port: Storage port playbook
+    playbook:vsp_direct.storage_port_facts: Storage port information playbook
+    playbook:vsp_direct.vsp_one_port: VSP One port playbook
+    playbook:vsp_direct.vsp_one_port_facts: VSP One port information playbook
+- title: Protect data with snapshots and local copies
+  description: Create and manage Shadow Image pairs and groups, Thin Image snapshots and snapshot groups, and view
+    snapshot families and virtual clone parents.
+  components:
+    shadow_image_group: Shadow image group
+    shadow_image_pair: Shadow image pair
+    snapshot: Snapshot
+    snapshot_family: Snapshot family
+    snapshot_group: Snapshot group
+    vclone_parent_volume: Virtual clone parent volume
+    vsp_one_snapshot: VSP One snapshot
+    vsp_one_snapshot_group: VSP One snapshot group
+    playbook:vsp_direct.shadow_image_group: Shadow image group playbook
+    playbook:vsp_direct.shadow_image_group_facts: Shadow image group information playbook
+    playbook:vsp_direct.shadow_image_pair: Shadow image pair playbook
+    playbook:vsp_direct.shadow_image_pair_facts: Shadow image pair information playbook
+    playbook:vsp_direct.snapshot: Snapshot playbook
+    playbook:vsp_direct.snapshot_facts: Snapshot information playbook
+    playbook:vsp_direct.snapshot_family_facts: Snapshot family information playbook
+    playbook:vsp_direct.snapshot_group: Snapshot group playbook
+    playbook:vsp_direct.snapshot_group_facts: Snapshot group information playbook
+    playbook:vsp_direct.vclone_parent_volume_facts: Virtual clone parent volume information playbook
+    playbook:vsp_direct.vsp_one_snapshot: VSP One snapshot playbook
+    playbook:vsp_direct.vsp_one_snapshot_facts: VSP One snapshot information playbook
+    playbook:vsp_direct.vsp_one_snapshot_group: VSP One snapshot group playbook
+    playbook:vsp_direct.vsp_one_snapshot_group_facts: VSP One snapshot group information playbook
+- title: Replicate remotely with TrueCopy and Universal Replicator
+  description: Create and manage TrueCopy and Hitachi Universal Replicator pairs, journals, journal volumes and
+    remote copy groups.
+  components:
+    hur: HUR
+    hur_bulk: HUR bulk
+    journal: Journal
+    remote_copy_group: Remote copy group
+    truecopy: Truecopy
+    truecopy_bulk: Truecopy bulk
+    playbook:vsp_direct.hur: HUR playbook
+    playbook:vsp_direct.hur_bulk: HUR bulk playbook
+    playbook:vsp_direct.hur_facts: HUR information playbook
+    playbook:vsp_direct.hur_with_first_available_journal_pool: HUR with first available journal pool playbook
+    playbook:vsp_direct.journal: Journal playbook
+    playbook:vsp_direct.journal_facts: Journal information playbook
+    playbook:vsp_direct.journal_volume: Journal volume playbook
+    playbook:vsp_direct.journal_volume_facts: Journal volume information playbook
+    playbook:vsp_direct.remote_copy_group: Remote copy group playbook
+    playbook:vsp_direct.remote_copy_group_facts: Remote copy group information playbook
+    playbook:vsp_direct.truecopy: Truecopy playbook
+    playbook:vsp_direct.truecopy_bulk: Truecopy bulk playbook
+    playbook:vsp_direct.truecopy_facts: Truecopy information playbook
+- title: Build global-active device (GAD) pairs and migrate with NDM
+  description: Create and manage GAD pairs and consistency groups and run non-disruptive migration workflows that
+    create, migrate and clean up GAD pairs.
+  components:
+    gad: GAD
+    gad_bulk: GAD bulk
+    vsp_one_gad: VSP One gad
+    vsp_one_gad_consistency_group: VSP One gad consistency group
+    playbook:ndm_gad_playbooks.cleanup_gad_pairs_pvol: Cleanup Workflow - Remove Primary Volumes, Remote Connections,
+      Quorum Disks
+    playbook:ndm_gad_playbooks.create_gad_pairs_using_wwns: Complete GAD Migration Workflow - Query, Create, Migrate,
+      Cleanup
+    playbook:ndm_gad_playbooks.migrate_gad_pairs: Migrate Existing GAD Pairs - Discovery, Migration, Cleanup
+    playbook:vsp_direct.gad_pair: GAD pair playbook
+    playbook:vsp_direct.gad_pair_bulk: GAD pair bulk playbook
+    playbook:vsp_direct.gad_pair_facts: GAD pair information playbook
+    playbook:vsp_direct.vsp_one_gad_consistency_group: VSP One gad consistency group playbook
+    playbook:vsp_direct.vsp_one_gad_consistency_group_facts: VSP One gad consistency group information playbook
+    playbook:vsp_direct.vsp_one_gad_facts: VSP One gad information playbook
+    playbook:vsp_direct.vsp_one_gad_pair: VSP One gad pair playbook
+- title: Connect storage systems and configure quorum disks
+  description: Register remote storage systems, set up remote and iSCSI remote connections, and create quorum disks
+    for replication and GAD.
+  components:
+    iscsi_remote_connection: iSCSI remote connection
+    quorum_disk: Quorum disk
+    remote_connection: Remote connection
+    remote_storage_registration: Remote storage registration
+    playbook:vsp_direct.iscsi_remote_connection: iSCSI remote connection playbook
+    playbook:vsp_direct.iscsi_remote_connection_facts: iSCSI remote connection information playbook
+    playbook:vsp_direct.quorum_disk: Quorum disk playbook
+    playbook:vsp_direct.quorum_disk_facts: Quorum disk information playbook
+    playbook:vsp_direct.remote_connection: Remote connection playbook
+    playbook:vsp_direct.remote_connection_facts: Remote connection information playbook
+    playbook:vsp_direct.remote_storage_registration: Remote storage registration playbook
+    playbook:vsp_direct.remote_storage_registration_facts: Remote storage registration information playbook
+- title: Control access with resource groups and locks
+  description: Manage resource groups, lock and unlock them, and run lock-aware workflows against a single or replicated
+    storage system.
+  components:
+    resource_group: Resource group
+    resource_group_lock: Resource group lock
+    playbook:resource_management_with_lock.vsp_direct.remote_replication_example: Resource Group Lock Playbook
+    playbook:resource_management_with_lock.vsp_direct.remote_replication_gad: GAD and GAD Bulk Resource Group Lock
+      Playbook
+    playbook:resource_management_with_lock.vsp_direct.single_storage_example: Resource Group Lock Management
+    playbook:vsp_direct.resource_group: Resource group playbook
+    playbook:vsp_direct.resource_group_facts: Resource group information playbook
+- title: Manage users, user groups and sessions
+  description: Manage users, user groups and API sessions on VSP block storage systems.
+  components:
+    session: Session
+    user: User
+    user_group: User group
+    playbook:vsp_direct.session: Session playbook
+    playbook:vsp_direct.session_facts: Session information playbook
+    playbook:vsp_direct.user: User playbook
+    playbook:vsp_direct.user_facts: User information playbook
+    playbook:vsp_direct.user_group: User group playbook
+    playbook:vsp_direct.user_group_facts: User group information playbook
+- title: Configure, monitor and audit the storage system
+  description: Update storage system settings, retrieve alerts and hardware information, configure SNMP, set up
+    audit log transfer destinations and collect troubleshooting bundles.
+  components:
+    audit_log_transfer_dest: Audit log transfer dest
+    snmp_settings: SNMP settings
+    storage_system: Storage system
+    storage_system_monitor: Storage system monitor
+    storagesystem: Storage system
+    troubleshooting: Troubleshooting
+    upload_file: Upload file
+    playbook:accept_user_consent: Gather User Consent for Data Collection
+    playbook:vsp_direct.audit_log_transfer_dest: Audit log transfer dest playbook
+    playbook:vsp_direct.audit_log_transfer_dest_facts: Audit log transfer dest information playbook
+    playbook:vsp_direct.snmp_setting: SNMP setting playbook
+    playbook:vsp_direct.snmp_settings_facts: SNMP settings information playbook
+    playbook:vsp_direct.storage_system_monitor_facts: Storage system monitor information playbook
+    playbook:vsp_direct.storagesystem_facts: Storage system information playbook
+    playbook:vsp_direct.vsp_storage_connection_session_example: VSP storage connection session example playbook
+    playbook:vsp_direct.vsp_storage_system: VSP storage system playbook
+    playbook:vsp_direct.vsp_upload_files_for_audit_log: VSP upload files for audit log playbook
+- title: Provision SDS Block volumes, pools and snapshots
+  description: Create and manage volumes, storage pools, snapshots and Virtual Private Storage settings on VSP One
+    SDS Block and Cloud systems, and estimate pool capacity.
+  components:
+    sds_block_capacity_management_settings: Capacity management settings
+    sds_block_snapshot: Snapshot
+    sds_block_storage_pool: Storage pool
+    sds_block_storage_pool_estimated_capacity: Storage pool estimated capacity
+    sds_block_volume: Volume
+    sds_block_vps: VPS
+    playbook:sds_block_direct.capacity_management_settings_facts: Capacity management settings information playbook
+    playbook:sds_block_direct.estimated_capacity_facts: Estimated capacity information playbook
+    playbook:sds_block_direct.sdsb_snapshot: Snapshot playbook
+    playbook:sds_block_direct.sdsb_snapshot_facts: Snapshot information playbook
+    playbook:sds_block_direct.storage_pool: Storage pool playbook
+    playbook:sds_block_direct.storage_pool_facts: Storage pool information playbook
+    playbook:sds_block_direct.update_vps_volume_adr_setting: Update VPS volume ADR setting playbook
+    playbook:sds_block_direct.volume: Volume playbook
+    playbook:sds_block_direct.volume_facts: Volume information playbook
+    playbook:sds_block_direct.vps: VPS playbook
+    playbook:sds_block_direct.vps_facts: VPS information playbook
+- title: Connect hosts to SDS Block
+  description: Manage compute nodes, compute ports, port authentication and CHAP users, and review control and compute
+    ports.
+  components:
+    sds_block_chap_user: CHAP user
+    sds_block_compute_node: Compute node
+    sds_block_compute_port: Compute port
+    sds_block_compute_port_authentication: Compute port authentication
+    sds_block_control_port: Control port
+    sds_block_port: Port
+    playbook:sds_block_direct.chap_user: CHAP user playbook
+    playbook:sds_block_direct.chap_user_facts: CHAP user information playbook
+    playbook:sds_block_direct.compute_node: Compute node playbook
+    playbook:sds_block_direct.compute_node_facts: Compute node information playbook
+    playbook:sds_block_direct.compute_port: Compute port playbook
+    playbook:sds_block_direct.compute_port_facts: Compute port information playbook
+    playbook:sds_block_direct.port_auth: Port auth playbook
+    playbook:sds_block_direct.sdsb_control_port_facts: Control port information playbook
+- title: Manage SDS Block clusters, nodes and drives
+  description: Manage clusters, storage nodes and BMC connections, spare nodes, drives, fault domains, protection
+    domains, storage controllers and network settings.
+  components:
+    sds_block_cluster: Cluster
+    sds_block_cluster_config: Cluster config
+    sds_block_drive: Drive
+    sds_block_drives: Drives
+    sds_block_fault_domain: Fault domain
+    sds_block_internode_port: Internode port
+    sds_block_protection_domain: Protection domain
+    sds_block_spare_node: Spare node
+    sds_block_storage_controller: Storage controller
+    sds_block_storage_network_setting: Storage network setting
+    sds_block_storage_node: Storage node
+    sds_block_storage_node_bmc_connection: Storage node BMC connection
+    sds_block_storage_node_network_settings: Storage node network settings
+    sds_block_storage_time: Storage time
+    playbook:sds_block_direct.protection_domain: Protection domain playbook
+    playbook:sds_block_direct.sdsb_cluster: Cluster playbook
+    playbook:sds_block_direct.sdsb_cluster_config_facts: Cluster config information playbook
+    playbook:sds_block_direct.sdsb_cluster_network_facts: Cluster network information playbook
+    playbook:sds_block_direct.sdsb_drive: Drive playbook
+    playbook:sds_block_direct.sdsb_drive_facts: Drive information playbook
+    playbook:sds_block_direct.sdsb_fault_domain_facts: Fault domain information playbook
+    playbook:sds_block_direct.sdsb_internode_port_facts: Internode port information playbook
+    playbook:sds_block_direct.sdsb_protection_domains_facts: Protection domains information playbook
+    playbook:sds_block_direct.sdsb_storage_controller: Storage controller playbook
+    playbook:sds_block_direct.sdsb_storage_controller_facts: Storage controller information playbook
+    playbook:sds_block_direct.sdsb_storage_node_network_setting_facts: Storage node network setting information
+      playbook
+    playbook:sds_block_direct.sdsb_storage_time_facts: Storage time information playbook
+    playbook:sds_block_direct.spare_node: Spare node playbook
+    playbook:sds_block_direct.spare_node_facts: Spare node information playbook
+    playbook:sds_block_direct.storage_node: Storage node playbook
+    playbook:sds_block_direct.storage_node_bmc_connection: Storage node BMC connection playbook
+    playbook:sds_block_direct.storage_node_bmc_connection_facts: Storage node BMC connection information playbook
+    playbook:sds_block_direct.storage_node_facts: Storage node information playbook
+    playbook:sds_block_direct.storagesystem_facts: Storage system information playbook
+- title: Replicate SDS Block data to remote systems
+  description: Manage journals, remote iSCSI ports and remote path groups used for replication.
+  components:
+    sds_block_journal: Journal
+    sds_block_remote_iscsi_port: Remote iSCSI port
+    sds_block_remote_path_group: Remote path group
+    playbook:sds_block_direct.remote_iscsi_port: Remote iSCSI port playbook
+    playbook:sds_block_direct.remote_iscsi_port_facts: Remote iSCSI port information playbook
+    playbook:sds_block_direct.remote_path_group: Remote path group playbook
+    playbook:sds_block_direct.remote_path_group_facts: Remote path group information playbook
+    playbook:sds_block_direct.sdsb_journal: Journal playbook
+    playbook:sds_block_direct.sdsb_journal_facts: Journal information playbook
+- title: Secure and administer SDS Block access
+  description: Manage users, user groups, external authentication servers, encryption, login messages, web server
+    access, sessions and authentication tickets.
+  components:
+    sds_block_authentication_ticket: Authentication ticket
+    sds_block_encryption_environment_setting: Encryption environment setting
+    sds_block_encryption_environment_settings: Encryption environment settings
+    sds_block_encryption_key: Encryption key
+    sds_block_encryption_key_count: Encryption key count
+    sds_block_login_message: Login message
+    sds_block_session: Session
+    sds_block_storage_external_auth_server_setting: Storage external auth server setting
+    sds_block_storage_user_auth_setting: Storage user auth setting
+    sds_block_user: User
+    sds_block_user_group: User group
+    sds_block_web_server: Web server
+    playbook:sds_block_direct.authentication_ticket: Authentication ticket playbook
+    playbook:sds_block_direct.encryption_environment_setting_facts: Encryption environment setting information playbook
+    playbook:sds_block_direct.encryption_environment_settings: Encryption environment settings playbook
+    playbook:sds_block_direct.encryption_key: Encryption key playbook
+    playbook:sds_block_direct.encryption_key_count_facts: Encryption key count information playbook
+    playbook:sds_block_direct.encryption_key_facts: Encryption key information playbook
+    playbook:sds_block_direct.external_auth_server_setting: External auth server setting playbook
+    playbook:sds_block_direct.external_auth_server_setting_facts: External auth server setting information playbook
+    playbook:sds_block_direct.sdsb_login_message: Login message playbook
+    playbook:sds_block_direct.sdsb_login_message_facts: Login message information playbook
+    playbook:sds_block_direct.sdsb_session: Session playbook
+    playbook:sds_block_direct.sdsb_session_facts: Session information playbook
+    playbook:sds_block_direct.sdsb_user_facts: User information playbook
+    playbook:sds_block_direct.sdsb_user_group_facts: User group information playbook
+    playbook:sds_block_direct.sdsb_user_groups: User groups playbook
+    playbook:sds_block_direct.sdsb_users: Users playbook
+    playbook:sds_block_direct.sdsb_web_server: Web server playbook
+    playbook:sds_block_direct.sdsb_web_server_facts: Web server information playbook
+    playbook:sds_block_direct.user_auth_setting: User auth setting playbook
+    playbook:sds_block_direct.user_auth_setting_facts: User auth setting information playbook
+- title: Monitor and maintain SDS Block systems
+  description: Manage storage system settings and licenses, retrieve and configure event and audit logs, dump logs,
+    run software updates, view jobs and configure SNMP.
+  components:
+    sds_block_audit_log_setting: Audit log setting
+    sds_block_dump_log_file: Dump log file
+    sds_block_dump_log_status: Dump log status
+    sds_block_event_log_setting: Event log setting
+    sds_block_event_logs: Event logs
+    sds_block_job: Job
+    sds_block_license: License
+    sds_block_license_setting: License setting
+    sds_block_snmp_settings: SNMP settings
+    sds_block_software_update_file: Software update file
+    sds_block_storage_software_update: Storage software update
+    sds_block_storage_system: Storage system
+    playbook:sds_block_direct.audit_log_setting: Audit log setting playbook
+    playbook:sds_block_direct.event_log_facts: Event log information playbook
+    playbook:sds_block_direct.event_log_setting: Event log setting playbook
+    playbook:sds_block_direct.event_log_setting_facts: Event log setting information playbook
+    playbook:sds_block_direct.events_log_facts: Events log information playbook
+    playbook:sds_block_direct.job_facts: Job information playbook
+    playbook:sds_block_direct.sdsb_audit_log_setting_facts: Audit log setting information playbook
+    playbook:sds_block_direct.sdsb_dump_log_file: Dump log file playbook
+    playbook:sds_block_direct.sdsb_dump_log_file_status_facts: Dump log file status information playbook
+    playbook:sds_block_direct.sdsb_license: License playbook
+    playbook:sds_block_direct.sdsb_license_facts: License information playbook
+    playbook:sds_block_direct.sdsb_license_setting: License setting playbook
+    playbook:sds_block_direct.sdsb_license_setting_facts: License setting information playbook
+    playbook:sds_block_direct.snmp_settings: SNMP settings playbook
+    playbook:sds_block_direct.snmp_settings_facts: SNMP settings information playbook
+    playbook:sds_block_direct.software_update_file_facts: Software update file information playbook
+    playbook:sds_block_direct.storage_software_update: Storage software update playbook
+    playbook:sds_block_direct.storage_system: Storage system playbook
+- title: Run guided storage workflows
+  description: Run role-based workflows that create quorum disks, journals and GAD or HUR pairs, and delete or query
+    host volumes by WWN.
+  components:
+    playbook:role_playbooks.create_primary_and_secondary_diskless_quorum_disk: Create Primary and Secondary Quorum
+      Disk
+    playbook:role_playbooks.create_primary_and_secondary_journals: Create journal on primary and secondary storages
+      using role
+    playbook:role_playbooks.create_primary_and_secondary_quorum_disk: Create Primary and Secondary Quorum Disk
+    playbook:role_playbooks.hv_vsp_gad_pairs_creation: Create GAD Pairs using hv_vsp_gad_pairs_creation role
+    playbook:role_playbooks.hv_vsp_hur_pairs_creation: Create HUR Pairs using hv_vsp_hur_pairs_creation role
+    role:hv_vsp_create_primary_and_secondary_diskless_quorum_disk: Create primary and secondary diskless quorum
+      disk role
+    role:hv_vsp_create_primary_and_secondary_quorum_disk: Create primary and secondary quorum disk role
+    role:hv_vsp_gad_pairs_creation: GAD pairs creation role
+    role:hv_vsp_host_volume_deletion: Host volume deletion role
+    role:hv_vsp_hur_pairs_creation: HUR pairs creation role
+    role:hv_vsp_ndm_gad_migration_pairs: NDM GAD migration pairs role
+    role:hv_vsp_ndm_gad_migration_volumes: NDM GAD migration volumes role
+    role:hv_vsp_primary_secondary_journal_creation: Primary secondary journal creation role
+    role:hv_vsp_query_host_volumes_by_wwns: Query host volumes by WWNs role

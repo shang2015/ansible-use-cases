@@ -1,0 +1,257 @@
+fqcn: fortinet.fortiswitch
+product: Fortinet FortiSwitch
+notes:
+- Most modules configure one FortiSwitch object each; execute_* modules run one-off actions.
+use_cases:
+- title: Back up, restore and upgrade switch configuration and firmware
+  description: Back up default, full and standalone configurations, restore configurations and images,
+    stage firmware, upload files and run delayed CLI commands.
+  components:
+    execute_backup_config: Configuration backup
+    execute_backup_default_config: Default configuration backup
+    execute_backup_full_config: Full configuration backup
+    execute_backup_standalone_config: Standalone configuration backup
+    execute_restore_config: Configuration restore
+    execute_restore_image: Image restore
+    execute_stage_image: Firmware image staging
+    execute_upload_file: File upload
+    execute_create_delayed_cli_cmds: Delayed CLI commands (create)
+    execute_query_delayed_cli_cmds: Delayed CLI commands (query)
+    execute_cancel_delayed_cli_cmds: Delayed CLI commands (cancel)
+- title: Gather facts and configure through the generic API
+  description: Retrieve configuration and monitor facts, configure any switch object through the generic
+    JSON module, and convert the current configuration into playbooks.
+  components:
+    configuration_fact: Configuration facts
+    monitor_fact: Monitor facts
+    json_generic: Generic JSON configuration
+    export_config_playbook: Export configuration as playbooks
+- title: Configure ports, VLANs and link aggregation
+  description: Configure physical ports, trunks, VLANs, VLAN pruning, forwarding domains, static MAC entries
+    and virtual wires.
+  components:
+    switch_physical_port: Physical ports
+    switch_phy_mode: PHY modes
+    switch_interface: Ports and trunks
+    switch_trunk: Link aggregation
+    switch_vlan: VLANs
+    switch_vlan_pruning: VLAN pruning
+    switch_vlan_tpid: VLAN ether-types
+    switch_domain: Forwarding domains
+    switch_virtual_wire: Virtual wires
+    switch_auto_isl_port_group: Auto ISL port groups
+    switch_auto_network: Auto networks
+    switch_static_mac: Static MAC entries
+    system_mac_address_table: MAC address table
+    system_port_pair: Port pairs
+- title: Configure Layer 2 protocols and multicast
+  description: Configure spanning tree, LLDP, Media Redundancy Protocol, IGMP and MLD snooping, and storm
+    control.
+  components:
+    switch_stp_instance: STP instances
+    switch_stp_settings: STP settings
+    switch_lldp_profile: LLDP profiles
+    switch_lldp_settings: LLDP settings
+    switch_mrp_profile: MRP profiles
+    switch_mrp_settings: MRP settings
+    switch_igmp_snooping_globals: IGMP snooping
+    switch_mld_snooping_globals: MLD snooping
+    switch_storm_control: Storm control
+- title: Control access and secure switch ports
+  description: Configure access control lists, 802.1X dynamic policies, MACsec, IP-MAC binding, IP source
+    guard, RA guard and device quarantine.
+  components:
+    switch_acl_ingress: Ingress ACL policies
+    switch_acl_egress: Egress ACL policies
+    switch_acl_prelookup: Prelookup ACL policies
+    switch_acl_802_1x: 802.1X dynamic ACL policies
+    switch_acl_policer: ACL policers
+    switch_acl_service_custom: Custom ACL services
+    switch_acl_settings: ACL global settings
+    switch_macsec_profile: MACsec profiles
+    switch_ip_mac_binding: IP-MAC binding
+    switch_ip_source_guard: IP source guard
+    switch_raguard_policy: IPv6 RA guard policies
+    switch_quarantine: Quarantined devices
+    switch_security_feature: Security feature controls
+- title: Configure QoS and time synchronisation
+  description: Configure QoS mappings and policies, ToS-based priority, PTP policies and profiles, and
+    NTP.
+  components:
+    switch_qos_dot1p_map: 802.1p QoS maps
+    switch_qos_ip_dscp_map: DSCP QoS maps
+    switch_qos_qos_policy: QoS egress policies
+    system_tos_based_priority: ToS-based priority
+    switch_ptp_policy: PTP policies
+    switch_ptp_settings: PTP settings
+    system_ptp_interface_policy: PTP interface policies
+    system_ptp_profile: PTP profiles
+    system_ntp: NTP
+- title: Configure routing
+  description: Configure static routes, BGP, OSPF, IS-IS, RIP, multicast, VRFs, policy routing and the
+    route filters they use.
+  components:
+    router_static: IPv4 static routes
+    router_static6: IPv6 static routes
+    router_bgp: BGP
+    router_ospf: OSPF
+    router_ospf6: OSPFv3
+    router_isis: IS-IS
+    router_rip: RIP
+    router_ripng: RIPng
+    router_multicast: Multicast routing
+    router_multicast_flow: Multicast flows
+    router_vrf: VRFs
+    router_policy: Policy routing
+    router_auth_path: Auth-based routing
+    router_gwdetect: Gateway detection
+    router_setting: RIB settings
+    router_key_chain: Key chains
+    router_route_map: Route maps
+    router_access: Access lists
+    router_access_list6: IPv6 access lists
+    router_aspath: AS path lists
+    router_community: Community lists
+    router_prefix: Prefix lists
+    router_prefix_list6: IPv6 prefix lists
+- title: Configure management interfaces, IP services and virtual domains
+  description: Configure layer 3 interfaces, DHCP and DNS servers, ARP and neighbor tables, zones, VDOMs
+    and VXLAN.
+  components:
+    system_interface: Interfaces
+    system_dhcp_server: DHCP servers
+    execute_clear_dhcp_lease: DHCP lease clearing
+    system_dns: DNS settings
+    system_dns_database: DNS databases
+    system_dns_server: DNS servers
+    system_arp_table: ARP table
+    system_proxy_arp: Proxy ARP
+    system_ipv6_neighbor_cache: IPv6 neighbor cache
+    system_zone: Zones
+    system_vdom: Virtual domains
+    system_vdom_dns: VDOM DNS
+    system_vdom_property: VDOM properties
+    system_vxlan: VXLAN devices
+- title: Manage administrators, authentication and certificates
+  description: Configure administrator accounts and access profiles, password policy, local, LDAP, RADIUS
+    and TACACS+ users, and CA, local and remote certificates.
+  components:
+    system_admin: Administrators
+    system_accprofile: Administrator access profiles
+    system_password_policy: Password policy
+    user_local: Local users
+    user_group: User groups
+    user_ldap: LDAP servers
+    user_radius: RADIUS servers
+    user_tacacsplus: TACACS+ servers
+    user_peer: Peer users
+    user_peergrp: Peer user groups
+    user_setting: User authentication settings
+    system_certificate_ca: CA certificates
+    system_certificate_local: Local certificates
+    system_certificate_remote: Remote certificates
+    system_certificate_crl: Certificate revocation lists
+    system_certificate_ocsp: OCSP servers
+    execute_import_ca_certificate: CA certificate import
+    execute_import_local_certificate: Local certificate import
+    execute_sign_data: Data signing
+    system_security: Secure mode
+- title: Configure logging and alerting
+  description: Send logs to disk, memory, syslog servers and FortiAnalyzer, filter log events, and configure
+    alarms and alert e-mail.
+  components:
+    log_disk_setting: Disk logging
+    log_disk_filter: Disk log filters
+    log_memory_setting: Memory logging
+    log_memory_global_setting: Memory log global settings
+    log_memory_filter: Memory log filters
+    log_syslogd_setting: Syslog server 1
+    log_syslogd_filter: Syslog server 1 filters
+    log_syslogd_override_setting: Syslog override settings
+    log_syslogd_override_filter: Syslog override filters
+    log_syslogd2_setting: Syslog server 2
+    log_syslogd2_filter: Syslog server 2 filters
+    log_syslogd3_setting: Syslog server 3
+    log_syslogd3_filter: Syslog server 3 filters
+    log_fortianalyzer_setting: FortiAnalyzer logging 1
+    log_fortianalyzer_filter: FortiAnalyzer log filters 1
+    log_fortianalyzer_override_setting: FortiAnalyzer override settings
+    log_fortianalyzer_override_filter: FortiAnalyzer override filters
+    log_fortianalyzer2_setting: FortiAnalyzer logging 2
+    log_fortianalyzer2_filter: FortiAnalyzer log filters 2
+    log_fortianalyzer3_setting: FortiAnalyzer logging 3
+    log_fortianalyzer3_filter: FortiAnalyzer log filters 3
+    log_fortiguard_setting: FortiGuard Analysis Service logging
+    log_remote_setting: Remote logging
+    log_eventfilter: Log event filter
+    log_custom_field: Custom log fields
+    log_gui: GUI log display
+    alertemail_setting: Alert e-mail settings
+    system_alertemail: Alert e-mail server
+    system_email_server: E-mail server
+    system_alarm: Alarms
+- title: Monitor and troubleshoot the switch
+  description: Capture packets, mirror ports, export sFlow and flow data, monitor links and networks,
+    configure SNMP and set debug and bug-report options.
+  components:
+    system_sniffer_profile: Packet sniffer profiles
+    execute_start_sniffer_profile_capture: Sniffer capture start
+    execute_pause_sniffer_profile_capture: Sniffer capture pause
+    execute_stop_sniffer_profile_capture: Sniffer capture stop
+    execute_download_sniffer_profile: Sniffer capture download
+    execute_delete_sniffer_profile_capture: Sniffer capture deletion
+    switch_mirror: Port mirroring
+    system_sflow: sFlow
+    system_flow_export: Flow export
+    system_link_monitor: Link health monitors
+    switch_network_monitor_settings: Network monitor settings
+    switch_network_monitor_directed: Directed network monitor entries
+    system_snmp_community: SNMP communities
+    system_snmp_sysinfo: SNMP system information
+    system_snmp_user: SNMP users
+    system_debug: Startup debug values
+    system_bug_report: Bug reports
+- title: Manage central management, cloud and FortiGuard updates
+  description: Connect the switch to FortiManager, FortiSwitch cloud and FortiLAN cloud, set up management
+    tunnels and FortiAnalyzer, and configure FortiGuard and automatic updates.
+  components:
+    system_central_management: Central management
+    system_fortimanager: FortiManager
+    system_fm: FortiManager (fm)
+    system_fsw_cloud: FortiSwitch cloud
+    system_flan_cloud: FortiLAN cloud
+    system_management_tunnel: Management tunnel
+    switch_controller_global: Switch controller global settings
+    system_fortianalyzer: FortiAnalyzer 1
+    system_fortianalyzer2: FortiAnalyzer 2
+    system_fortianalyzer3: FortiAnalyzer 3
+    system_fortiguard: FortiGuard services
+    system_autoupdate_schedule: Update schedule
+    system_autoupdate_push_update: Push updates
+    system_autoupdate_override: FDS server override
+    system_autoupdate_clientoverride: FDN client override
+    system_autoupdate_tunneling: Web proxy tunneling
+- title: Configure global system settings, scheduling and automation
+  description: Set global and system options, console and web access, resource limits, command aliases,
+    schedules, auto scripts, automation stitches and object tags.
+  components:
+    system_global: Global attributes
+    switch_global: Switch global settings
+    system_settings: System settings
+    system_console: Console
+    gui_console: Dashboard CLI console
+    system_web: Web attributes
+    system_session_ttl: Session TTL
+    system_resource_limits: Resource limits
+    system_location: Locations
+    system_object_tag: Object tags
+    system_alias_command: Alias commands
+    system_alias_group: Alias groups
+    system_auto_script: Auto scripts
+    system_automation_action: Automation actions
+    system_automation_destination: Automation destinations
+    system_automation_stitch: Automation stitches
+    system_automation_trigger: Automation triggers
+    system_schedule_onetime: One-time schedules
+    system_schedule_recurring: Recurring schedules
+    system_schedule_group: Schedule groups

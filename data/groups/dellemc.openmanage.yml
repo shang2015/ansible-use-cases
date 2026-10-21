@@ -1,0 +1,340 @@
+fqcn: dellemc.openmanage
+product: Dell OpenManage (iDRAC, OpenManage Enterprise, Redfish)
+notes:
+- Capabilities are available as modules, roles and ready-to-run example playbooks for iDRAC, OpenManage
+  Enterprise (OME), OpenManage Enterprise Modular, OMEVV and generic Redfish servers.
+use_cases:
+- title: Configure iDRAC attributes, BIOS and boot
+  description: Configure iDRAC attributes, BIOS settings, boot order and secure boot, and query network
+    adapters and BIOS attribute registries.
+  components:
+    idrac_attributes: IDRAC attributes
+    idrac_bios: IDRAC BIOS
+    idrac_bios_registry: IDRAC BIOS registry
+    idrac_boot: IDRAC boot
+    idrac_network: IDRAC network
+    idrac_network_attributes: IDRAC network attributes
+    idrac_secure_boot: IDRAC secure boot
+    playbook:idrac.idrac_attributes: IDRAC attributes (playbook, idrac)
+    playbook:idrac.idrac_bios: IDRAC BIOS (playbook, idrac)
+    playbook:idrac.idrac_bios_registry_info: IDRAC BIOS registry info (playbook)
+    playbook:idrac.idrac_boot: IDRAC boot (playbook)
+    playbook:idrac.idrac_network_attributes: IDRAC network attributes (playbook)
+    playbook:idrac.idrac_network_attributes_info: IDRAC network attributes info (playbook)
+    playbook:idrac.idrac_network_attributes_info_validate: IDRAC network attributes info validate (playbook)
+    playbook:idrac.idrac_network_info: IDRAC network info (playbook)
+    playbook:idrac.idrac_secure_boot: IDRAC secure boot (playbook)
+    playbook:roles.idrac_attributes.idrac_attributes: IDRAC attributes (playbook, roles.idrac_attributes)
+    playbook:roles.idrac_bios.idrac_bios: IDRAC BIOS (playbook, roles.idrac_bios)
+    role:idrac_attributes: IDRAC attributes (role)
+    role:idrac_bios: IDRAC BIOS (role)
+    role:idrac_boot: IDRAC boot (role)
+- title: Update server firmware
+  description: Update firmware on PowerEdge servers from a repository or DUP file through iDRAC or Redfish,
+    and roll components back.
+  components:
+    idrac_firmware: IDRAC firmware
+    redfish_firmware: Redfish firmware
+    redfish_firmware_rollback: Redfish firmware rollback
+    playbook:idrac.idrac_firmware: IDRAC firmware (playbook, idrac)
+    playbook:idrac.idrac_firmware_info: IDRAC firmware info (playbook)
+    playbook:redfish.firmware.redfish_firmware: Redfish firmware (playbook, redfish.firmware)
+    playbook:redfish.firmware.redfish_firmware_from_http_jobtracking: Redfish firmware from HTTP jobtracking
+      (playbook)
+    playbook:redfish.firmware.redfish_firmware_from_local_jobtracking: Redfish firmware from local jobtracking
+      (playbook)
+    playbook:redfish.firmware.redfish_firmware_rollback: Redfish firmware rollback (playbook)
+    playbook:roles.idrac_firmware.idrac_firmware: IDRAC firmware (playbook, roles.idrac_firmware)
+    playbook:roles.redfish_firmware.redfish_firmware: Redfish firmware (playbook, roles.redfish_firmware)
+    role:idrac_firmware: IDRAC firmware (role)
+    role:redfish_firmware: Redfish firmware (role)
+- title: Track Lifecycle Controller status and jobs
+  description: Check Lifecycle Controller readiness, follow and delete jobs, export its logs and manage
+    the job queue.
+  components:
+    idrac_lifecycle_controller_job_status: IDRAC lifecycle controller job status
+    idrac_lifecycle_controller_jobs: IDRAC lifecycle controller jobs
+    idrac_lifecycle_controller_logs: IDRAC lifecycle controller logs
+    idrac_lifecycle_controller_status: IDRAC lifecycle controller status
+    playbook:idrac.idrac_lifecycle_controller_job_status_info: IDRAC lifecycle controller job status info
+      (playbook)
+    playbook:idrac.idrac_lifecycle_controller_jobs: IDRAC lifecycle controller jobs (playbook)
+    playbook:idrac.idrac_lifecycle_controller_logs: IDRAC lifecycle controller logs (playbook)
+    playbook:idrac.idrac_lifecycle_controller_status_info: IDRAC lifecycle controller status info (playbook)
+    playbook:roles.idrac_job_queue.idrac_job_queue: IDRAC job queue (playbook)
+    role:idrac_job_queue: IDRAC job queue (role)
+- title: Export and import server configuration profiles
+  description: Export and import iDRAC server configuration profiles (SCP) to capture and replicate server
+    settings.
+  components:
+    idrac_server_config_profile: IDRAC server config profile
+    playbook:idrac.idrac_server_config_profile: IDRAC server config profile (playbook)
+    playbook:roles.idrac_export_server_config_profile.idrac_export_server_config_profile: IDRAC export
+      server config profile (playbook)
+    playbook:roles.idrac_import_server_config_profile.idrac_import_server_config_profile: IDRAC import
+      server config profile (playbook)
+    role:idrac_export_server_config_profile: IDRAC export server config profile (role)
+    role:idrac_import_server_config_profile: IDRAC import server config profile (role)
+- title: Configure server storage and RAID
+  description: Configure physical disks, virtual disks, RAID volumes and storage controllers through iDRAC
+    and Redfish.
+  components:
+    idrac_redfish_storage_controller: IDRAC redfish storage controller
+    idrac_storage_volume: IDRAC storage volume
+    redfish_storage_volume: Redfish storage volume
+    playbook:idrac.idrac_redfish_storage_controller: IDRAC redfish storage controller (playbook)
+    playbook:idrac.idrac_redfish_storage_controller_job_tracking: IDRAC redfish storage controller job
+      tracking (playbook)
+    playbook:idrac.idrac_storage_volume: IDRAC storage volume (playbook)
+    playbook:redfish.storage.redfish_storage_volume: Redfish storage volume (playbook, redfish.storage)
+    playbook:redfish.storage.redfish_storage_volume_create_job_tracking: Redfish storage volume create
+      job tracking (playbook)
+    playbook:redfish.storage.redfish_storage_volume_delete_job_tracking: Redfish storage volume delete
+      job tracking (playbook)
+    playbook:redfish.storage.redfish_storage_volume_initialize_job_tracking: Redfish storage volume initialize
+      job tracking (playbook)
+    playbook:redfish.storage.redfish_storage_volume_modify_job_tracking: Redfish storage volume modify
+      job tracking (playbook)
+    playbook:roles.idrac_storage_controller.idrac_storage_controller: IDRAC storage controller (playbook)
+    playbook:roles.redfish_storage_volume.redfish_storage_volume: Redfish storage volume (playbook, roles.redfish_storage_volume)
+    role:idrac_storage_controller: IDRAC storage controller (role)
+    role:redfish_storage_volume: Redfish storage volume (role)
+- title: Manage iDRAC users, certificates, licenses and sessions
+  description: Configure local iDRAC user accounts, certificates and CSRs, licenses and web sessions.
+  components:
+    idrac_certificates: IDRAC certificates
+    idrac_license: IDRAC license
+    idrac_session: IDRAC session
+    idrac_user: IDRAC user
+    playbook:idrac.idrac_certificates: IDRAC certificates (playbook)
+    playbook:idrac.idrac_license: IDRAC license (playbook)
+    playbook:idrac.idrac_session: IDRAC session (playbook)
+    playbook:idrac.idrac_session_info: IDRAC session info (playbook)
+    playbook:idrac.idrac_user: IDRAC user (playbook, idrac)
+    playbook:idrac.idrac_user_info: IDRAC user info (playbook)
+    playbook:roles.idrac_certificate.idrac_certificate: IDRAC certificate (playbook)
+    playbook:roles.idrac_user.idrac_user: IDRAC user (playbook, roles.idrac_user)
+    role:idrac_certificate: IDRAC certificate (role)
+    role:idrac_user: IDRAC user (role)
+- title: Control server power, reset and OS deployment
+  description: Power servers on and off, reset or factory-reset iDRAC, mount virtual media, boot network
+    ISO images to deploy an OS and erase systems.
+  components:
+    idrac_os_deployment: IDRAC OS deployment
+    idrac_reset: IDRAC reset
+    idrac_system_erase: IDRAC system erase
+    idrac_virtual_media: IDRAC virtual media
+    redfish_powerstate: Redfish powerstate
+    playbook:idrac.idrac_boot_virtual_media_workflow: IDRAC boot virtual media workflow (playbook)
+    playbook:idrac.idrac_os_deployment: IDRAC OS deployment (playbook, idrac)
+    playbook:idrac.idrac_reset: IDRAC reset (playbook, idrac)
+    playbook:idrac.idrac_reset_result_tracking: IDRAC reset result tracking (playbook)
+    playbook:idrac.idrac_virtual_media: IDRAC virtual media (playbook)
+    playbook:redfish.redfish_powerstate: Redfish powerstate (playbook)
+    playbook:roles.idrac_os_deployment.idrac_os_deployment: IDRAC OS deployment (playbook, roles.idrac_os_deployment)
+    playbook:roles.idrac_reset.idrac_reset: IDRAC reset (playbook, roles.idrac_reset)
+    playbook:roles.idrac_server_powerstate.idrac_server_powerstate: IDRAC server powerstate (playbook)
+    role:idrac_os_deployment: IDRAC OS deployment (role)
+    role:idrac_reset: IDRAC reset (role)
+    role:idrac_server_powerstate: IDRAC server powerstate (role)
+- title: Gather inventory and diagnostics
+  description: Collect system inventory, run and export diagnostics, SupportAssist and technical support
+    reports, and build inventories from OME.
+  components:
+    idrac_diagnostics: IDRAC diagnostics
+    idrac_support_assist: IDRAC support assist
+    idrac_system: IDRAC system
+    ome_diagnostics: OME diagnostics
+    inventory:ome_inventory: OME inventory (inventory plugin)
+    playbook:idrac.idrac_diagnostics: IDRAC diagnostics (playbook)
+    playbook:idrac.idrac_support_assist: IDRAC support assist (playbook)
+    playbook:idrac.idrac_system_info: IDRAC system info (playbook)
+    playbook:ome.ome_diagnostics: OME diagnostics (playbook)
+    playbook:roles.idrac_gather_facts.idrac_gather_facts: IDRAC gather facts (playbook)
+    role:idrac_gather_facts: IDRAC gather facts (role)
+- title: Discover and organise devices in OpenManage Enterprise
+  description: Run discovery jobs, query and group managed devices, run device actions and power operations
+    and follow OME jobs.
+  components:
+    ome_device: Device inventory info
+    ome_device_group: OME device group
+    ome_devices: OME devices
+    ome_discovery: OME discovery
+    ome_groups: OME groups
+    ome_job: Job info
+    ome_powerstate: OME powerstate
+    playbook:ome.ome_device_group: OME device group (playbook)
+    playbook:ome.ome_device_info: OME device info (playbook)
+    playbook:ome.ome_devices: OME devices (playbook)
+    playbook:ome.ome_discovery: OME discovery (playbook)
+    playbook:ome.ome_group_device_action: OME group device action (playbook)
+    playbook:ome.ome_groups: OME groups (playbook)
+    playbook:ome.ome_job_info: OME job info (playbook)
+    playbook:ome.powerstate.ome_powerstate: OME powerstate (playbook)
+    playbook:ome.powerstate.ome_powerstate_with_job_tracking: OME powerstate with job tracking (playbook)
+- title: Manage firmware baselines and catalogs in OME
+  description: Create firmware catalogs and baselines, check baseline compliance and update firmware on
+    managed devices.
+  components:
+    ome_firmware: OME firmware
+    ome_firmware_baseline: OME firmware baseline
+    ome_firmware_baseline_compliance: OME firmware baseline compliance
+    ome_firmware_catalog: OME firmware catalog
+    playbook:ome.firmware.baseline.component_reports_filtering.component_complaince_report_with_baseline: Component
+      complaince report with baseline (playbook)
+    playbook:ome.firmware.baseline.component_reports_filtering.component_complaince_report_with_devices: Component
+      complaince report with devices (playbook)
+    playbook:ome.firmware.baseline.ome_firmware_baseline: OME firmware baseline (playbook)
+    playbook:ome.firmware.baseline.ome_firmware_baseline_compliance_info: OME firmware baseline compliance
+      info (playbook)
+    playbook:ome.firmware.baseline.ome_firmware_baseline_compliance_info_filters: OME firmware baseline
+      compliance info filters (playbook)
+    playbook:ome.firmware.baseline.ome_firmware_baseline_info: OME firmware baseline info (playbook)
+    playbook:ome.firmware.catalog.ome_firmware_catalog: OME firmware catalog (playbook)
+    playbook:ome.firmware.ome_firmware: OME firmware (playbook)
+    playbook:ome.firmware.ome_firmware_with_job_tracking: OME firmware with job tracking (playbook)
+- title: Deploy templates and profiles and check compliance
+  description: Create, deploy and clone configuration templates, profiles, identity pools and server interface
+    profiles, and report on configuration compliance.
+  components:
+    ome_configuration_compliance: OME configuration compliance
+    ome_configuration_compliance_baseline: OME configuration compliance baseline
+    ome_identity_pool: OME identity pool
+    ome_profile: OME profile
+    ome_server_interface_profile: OME server interface profile
+    ome_server_interface_profiles: OME server interface profiles
+    ome_template: OME template
+    ome_template_identity_pool: OME template identity pool
+    ome_template_network_vlan: OME template network VLAN
+    playbook:ome.compliance.ome_configuration_compliance_baseline: OME configuration compliance baseline
+      (playbook)
+    playbook:ome.compliance.ome_configuration_compliance_baseline_workflow: OME configuration compliance
+      baseline workflow (playbook)
+    playbook:ome.compliance.ome_configuration_compliance_info: OME configuration compliance info (playbook)
+    playbook:ome.ome_identity_pool: OME identity pool (playbook)
+    playbook:ome.ome_server_interface_profile_info: OME server interface profile info (playbook)
+    playbook:ome.ome_server_interface_profile_workflow: OME server interface profile workflow (playbook)
+    playbook:ome.ome_server_interface_profiles: OME server interface profiles (playbook)
+    playbook:ome.ome_template_identity_pool: OME template identity pool (playbook)
+    playbook:ome.profile.ome_profile: OME profile (playbook)
+    playbook:ome.profile.ome_profile_assign_job_tracking: OME profile assign job tracking (playbook)
+    playbook:ome.profile.ome_profile_info: OME profile info (playbook)
+    playbook:ome.profile.ome_profile_migrate_job_tracking: OME profile migrate job tracking (playbook)
+    playbook:ome.profile.ome_profile_unassign_job_tracking: OME profile unassign job tracking (playbook)
+    playbook:ome.template.ome_template: OME template (playbook)
+    playbook:ome.template.ome_template_create_modify_lcd_display: OME template create modify lcd display
+      (playbook)
+    playbook:ome.template.ome_template_info: OME template info (playbook)
+    playbook:ome.template.ome_template_info_with_filter: OME template info with filter (playbook)
+    playbook:ome.template.ome_template_lcd_display_string_deploy: OME template lcd display string deploy
+      (playbook)
+    playbook:ome.template.ome_template_network_vlan: OME template network VLAN (playbook)
+    playbook:ome.template.ome_template_network_vlan_info: OME template network VLAN info (playbook)
+    playbook:ome.template.ome_template_with_job_tracking: OME template with job tracking (playbook)
+- title: Manage fabrics, VLANs and switch ports
+  description: Create VLANs, smart fabrics and uplinks and configure port breakout.
+  components:
+    ome_network_port_breakout: OME network port breakout
+    ome_network_vlan: OME network VLAN
+    ome_smart_fabric: OME smart fabric
+    ome_smart_fabric_uplink: OME smart fabric uplink
+    playbook:ome.ome_network_port_breakout: OME network port breakout (playbook)
+    playbook:ome.ome_network_port_breakout_job_traking: OME network port breakout job traking (playbook)
+    playbook:ome.ome_network_vlan: OME network VLAN (playbook)
+    playbook:ome.ome_network_vlan_info: OME network VLAN info (playbook)
+    playbook:ome.ome_smart_fabric: OME smart fabric (playbook)
+    playbook:ome.ome_smart_fabric_info: OME smart fabric info (playbook)
+    playbook:ome.ome_smart_fabric_uplink: OME smart fabric uplink (playbook)
+    playbook:ome.ome_smart_fabric_uplink_info: OME smart fabric uplink info (playbook)
+- title: Configure OpenManage Enterprise Modular chassis
+  description: Set chassis slot names, local access, location, management network, network services, power
+    settings and quick deploy.
+  components:
+    ome_chassis_slots: OME chassis slots
+    ome_device_local_access_configuration: OME device local access configuration
+    ome_device_location: OME device location
+    ome_device_mgmt_network: OME device mgmt network
+    ome_device_network_services: OME device network services
+    ome_device_power_settings: OME device power settings
+    ome_device_quick_deploy: OME device quick deploy
+    playbook:ome.ome_chassis_slots: OME chassis slots (playbook)
+    playbook:ome.ome_device_local_access_configuration: OME device local access configuration (playbook)
+    playbook:ome.ome_device_location: OME device location (playbook)
+    playbook:ome.ome_device_mgmt_network: OME device mgmt network (playbook)
+    playbook:ome.ome_device_network_services: OME device network services (playbook)
+    playbook:ome.ome_device_power_settings: OME device power settings (playbook)
+    playbook:ome.ome_device_quick_deploy: OME device quick deploy (playbook)
+- title: Configure the OpenManage Enterprise console
+  description: Configure console preferences, network address, proxy, time and web server, certificates,
+    login security and email and syslog alert forwarding.
+  components:
+    ome_application_alerts_smtp: OME application alerts SMTP
+    ome_application_alerts_syslog: OME application alerts syslog
+    ome_application_certificate: OME application certificate
+    ome_application_console_preferences: OME application console preferences
+    ome_application_network_address: OME application network address
+    ome_application_network_proxy: OME application network proxy
+    ome_application_network_settings: OME application network settings
+    ome_application_network_time: OME application network time
+    ome_application_network_webserver: OME application network webserver
+    ome_application_security_settings: OME application security settings
+    playbook:ome.application.ome_application_alerts_smtp: OME application alerts SMTP (playbook)
+    playbook:ome.application.ome_application_alerts_syslog: OME application alerts syslog (playbook)
+    playbook:ome.application.ome_application_certificate: OME application certificate (playbook)
+    playbook:ome.application.ome_application_console_preferences: OME application console preferences
+      (playbook)
+    playbook:ome.application.ome_application_network_address: OME application network address (playbook)
+    playbook:ome.application.ome_application_network_address_with_job_tracking: OME application network
+      address with job tracking (playbook)
+    playbook:ome.application.ome_application_network_proxy: OME application network proxy (playbook)
+    playbook:ome.application.ome_application_network_settings: OME application network settings (playbook)
+    playbook:ome.application.ome_application_network_time: OME application network time (playbook)
+    playbook:ome.application.ome_application_network_time_zone_info: OME application network time zone
+      info (playbook)
+    playbook:ome.application.ome_application_network_webserver: OME application network webserver (playbook)
+    playbook:ome.application.ome_application_network_webserver_port_changed_tracking: OME application
+      network webserver port changed tracking (playbook)
+    playbook:ome.application.ome_application_security_settings: OME application security settings (playbook)
+- title: Manage OME users, directory services and sessions
+  description: Create OME users, connect Active Directory and LDAP groups and manage console sessions.
+  components:
+    ome_active_directory: OME active directory
+    ome_domain_user_groups: OME domain user groups
+    ome_session: OME sessions
+    ome_user: OME user
+    playbook:ome.ome_active_directory: OME active directory (playbook)
+    playbook:ome.ome_domain_user_groups: OME domain user groups (playbook)
+    playbook:ome.ome_session: OME session (playbook)
+    playbook:ome.user.ome_user: OME user (playbook)
+    playbook:ome.user.ome_user_info: OME user info (playbook)
+- title: Manage alert policies and event subscriptions
+  description: Define OME alert policies and look up their actions, categories and message IDs, and manage
+    Redfish event subscriptions.
+  components:
+    ome_alert_policies: OME alert policies
+    ome_alert_policies_actions: OME alert policies actions
+    ome_alert_policies_category: OME alert policies category
+    ome_alert_policies_message_id: OME alert policies message ID
+    redfish_event_subscription: Redfish event subscription
+    playbook:ome.alert_policy.ome_alert_policies: OME alert policies (playbook)
+    playbook:ome.alert_policy.ome_alert_policies_actions_info: OME alert policies actions info (playbook)
+    playbook:ome.alert_policy.ome_alert_policies_category_info: OME alert policies category info (playbook)
+    playbook:ome.alert_policy.ome_alert_policies_info: OME alert policies info (playbook)
+    playbook:ome.alert_policy.ome_alert_policies_message_id_info: OME alert policies message ID info (playbook)
+    playbook:redfish.redfish_event_subscription: Redfish event subscription (playbook)
+- title: Manage hosts in vCenter with OMEVV
+  description: Maintain OMEVV baseline and firmware repository profiles, check cluster firmware compliance,
+    update host firmware and query vCenter details.
+  components:
+    omevv_baseline_profile: OMEVV baseline profile
+    omevv_firmware: OMEVV firmware
+    omevv_firmware_compliance: OMEVV firmware compliance
+    omevv_firmware_repository_profile: OMEVV firmware repository profile
+    omevv_vcenter: OMEVV vcenter
+    playbook:omevv.omevv_baseline_profile: OMEVV baseline profile (playbook)
+    playbook:omevv.omevv_baseline_profile_info: OMEVV baseline profile info (playbook)
+    playbook:omevv.omevv_firmware: OMEVV firmware (playbook)
+    playbook:omevv.omevv_firmware_compliance_info: OMEVV firmware compliance info (playbook)
+    playbook:omevv.omevv_firmware_repository_profile_info: OMEVV firmware repository profile info (playbook)
+    playbook:omevv.omevv_firmware_repository_proile: OMEVV firmware repository proile (playbook)
+    playbook:omevv.omevv_vcenter_info: OMEVV vcenter info (playbook)

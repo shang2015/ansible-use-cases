@@ -1,0 +1,10 @@
+fqcn: seiko.smartcs
+product: "Seiko SmartCS console server"
+use_cases:
+- title: "Administer SmartCS console servers"
+  description: "Run commands, manage configuration, collect facts and send strings to serial ports on SmartCS devices."
+  components:
+    "command": "Commands"
+    "config": "Configuration"
+    "facts": "Facts"
+    "tty_command": "Serial port commands"

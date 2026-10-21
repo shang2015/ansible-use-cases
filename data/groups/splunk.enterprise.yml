@@ -1,0 +1,8 @@
+fqcn: splunk.enterprise
+product: "Splunk Enterprise"
+use_cases:
+- title: "Deploy Splunk Universal Forwarders"
+  description: "Install and bootstrap the Splunk Universal Forwarder on Linux and Windows hosts."
+  components:
+    "splunk_universal_forwarder_linux": "Universal Forwarder on Linux"
+    "win_splunk_universal_forwarder": "Universal Forwarder on Windows"

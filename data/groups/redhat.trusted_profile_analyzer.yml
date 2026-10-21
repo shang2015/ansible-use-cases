@@ -1,0 +1,7 @@
+fqcn: redhat.trusted_profile_analyzer
+product: "Red Hat Trusted Profile Analyzer"
+use_cases:
+- title: "Deploy Trusted Profile Analyzer"
+  description: "Configure Trusted Profile Analyzer on a single managed node."
+  components:
+    "role:tpa_single_node": "Single-node deployment"

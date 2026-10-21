@@ -1,0 +1,8 @@
+fqcn: cyberark.conjur
+product: "CyberArk Conjur"
+use_cases:
+- title: "Retrieve secrets and grant host identity"
+  description: "Fetch credentials from Conjur and grant machine identity to hosts."
+  components:
+    "lookup:conjur_variable": "Conjur variable lookup"
+    "role:conjur_host_identity": "Host identity"

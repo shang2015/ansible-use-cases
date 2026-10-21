@@ -1,0 +1,76 @@
+fqcn: infra.windows_ops
+product: Microsoft Windows Server operations
+use_cases:
+- title: Harden and audit compliance
+  description: Apply CIS and DISA STIG baselines, detect drift from the CIS baseline, produce audit-ready
+    compliance reports and manage audit policy.
+  components:
+    role:windows_manage_cis: CIS benchmark role
+    role:windows_manage_stig: DISA STIG role
+    role:windows_manage_audit: Audit policy role
+    playbook:compliance_hardening: STIG hardening
+    playbook:compliance_drift_detection: CIS drift detection
+    playbook:compliance_audit_report: Compliance audit report
+- title: Manage accounts and remote access
+  description: Manage local accounts, file permissions, and remote access through RDP, OpenSSH Server
+    and WinRM.
+  components:
+    role:windows_manage_accounts: Local accounts role
+    role:windows_manage_file_acl: File ACL role
+    role:windows_manage_rdp: RDP role
+    role:windows_manage_sshd: OpenSSH Server role
+    role:windows_manage_winrm: WinRM role
+- title: Configure system settings
+  description: Set hostname, description, locale and time, registry and environment variables, boot, recovery,
+    performance, WSL and user experience settings, and run initial setup.
+  components:
+    role:windows_manage_init: System initialization role
+    role:windows_manage_hostname: Hostname role
+    role:windows_manage_description: Description role
+    role:windows_manage_locale: Locale role
+    role:windows_manage_time: Time role
+    role:windows_manage_registry: System registry role
+    role:windows_manage_user_settings: Per-user registry role
+    role:windows_manage_environment: Environment variables role
+    role:windows_manage_boot: Boot manager role
+    role:windows_manage_recovery: Recovery environment role
+    role:windows_manage_performance: Performance tuning role
+    role:windows_manage_user_experience: User experience role
+    role:windows_manage_wsl: WSL role
+    role:windows_manage_dotnet: .NET optimization role
+- title: Configure networking and firewall
+  description: Configure network and DNS client settings, the hosts file, and Windows Firewall profiles
+    and rules.
+  components:
+    role:windows_manage_network: Network role
+    role:windows_manage_dns_client: DNS client role
+    role:windows_manage_hosts_file: Hosts file role
+    role:windows_manage_firewall: Firewall role
+- title: Install software, features and updates
+  description: Install packages, roles and features, optional features and capabilities, deploy IIS web
+    servers, and manage Windows updates.
+  components:
+    role:windows_manage_packages: Packages role
+    role:windows_manage_features: Roles and features role
+    role:windows_manage_optional_features: Optional features role
+    role:windows_manage_capabilities: Capabilities role
+    role:windows_manage_iis: IIS role
+    role:windows_manage_updates: Windows updates role
+- title: Manage files and storage
+  description: Create, copy, download, fetch and remove files and directories, and clean up disks.
+  components:
+    role:windows_manage_file_create: File creation role
+    role:windows_manage_file_copy: File copy role
+    role:windows_manage_file_get: File download role
+    role:windows_manage_file_fetch: File fetch role
+    role:windows_manage_file_remove: File removal role
+    role:windows_manage_disk_cleanup: Disk cleanup role
+- title: Run services, scheduled tasks and desired state configuration
+  description: Manage Windows services, scheduled tasks and reboots, and apply PowerShell DSC and DSC
+    v3 configurations.
+  components:
+    role:windows_manage_service: Services role
+    role:windows_manage_scheduled_tasks: Scheduled tasks role
+    role:windows_manage_reboot: Reboot role
+    role:windows_manage_dsc: DSC role
+    role:windows_manage_dsc3: DSC v3 role

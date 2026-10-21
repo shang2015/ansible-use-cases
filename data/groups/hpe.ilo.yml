@@ -1,0 +1,304 @@
+fqcn: hpe.ilo
+product: HPE iLO (Integrated Lights-Out)
+notes:
+- Modules use the iLO Redfish API; the bundled roles and example playbooks cover the same operations one
+  task at a time.
+use_cases:
+- title: Configure BIOS and boot settings
+  description: Read and change BIOS attributes, boot mode, boot order and one-time boot, restore BIOS
+    defaults, enable or disable PXE and verify applied settings.
+  components:
+    boot: Boot operations
+    playbook:Bios.disable_pxe: Disable pxe (playbook)
+    playbook:Bios.enable_pxe: Enable pxe (playbook)
+    playbook:Bios.get_bios_attributes: Get BIOS attributes (playbook)
+    playbook:Bios.get_bios_boot_order: Get BIOS boot order (playbook)
+    playbook:Bios.get_bios_registries: Get BIOS registries (playbook)
+    playbook:Bios.get_boot_override: Get boot override (playbook)
+    playbook:Bios.reboot_system: Reboot system (playbook)
+    playbook:Bios.set_bios_attribute: Set BIOS attribute (playbook)
+    playbook:Bios.set_bootmode_legacybios: Set bootmode legacybios (playbook)
+    playbook:Bios.set_bootmode_uefi: Set bootmode uefi (playbook)
+    playbook:Bios.set_default_bios_settings: Set default BIOS settings (playbook)
+    playbook:Bios.set_onetime_boot: Set onetime boot (playbook)
+    playbook:Bios.verify_bios_attributes: Verify BIOS attributes (playbook)
+    playbook:Network.get_boot_settings: Get boot settings (playbook)
+    playbook:Network.verify_uefi_boot_order: Verify uefi boot order (playbook)
+    role:changbiosattr: Change BIOS attribute (role)
+    role:get_bios_registries: Get BIOS registries (role)
+    role:get_boot_settings: Get boot settings (role)
+    role:getbiosattr: Get BIOS attributes (role)
+    role:getbootorder: Get boot order (role)
+    role:getbootoverride: Get boot override (role)
+    role:setbiosdefault: Set default BIOS settings (role)
+    role:setonetimeboot: Set one-time boot (role)
+    role:verify_bios_attributes: Verify BIOS attributes (role)
+    role:verify_uefi_boot_order: Verify uefi boot order (role)
+- title: Control server power
+  description: Power servers on, off or restart them gracefully or by force, perform cold boots and wait
+    for reboots to complete.
+  components:
+    power: Power operations
+    playbook:Power.get_server_poststate: Get server poststate (playbook)
+    playbook:Power.power_force_off: Power force off (playbook)
+    playbook:Power.power_graceful_restart: Power graceful restart (playbook)
+    playbook:Power.power_graceful_shutdown: Power graceful shutdown (playbook)
+    playbook:Power.power_on: Power on (playbook)
+    playbook:Power.set_cold_boot: Set cold boot (playbook)
+    playbook:Power.wait_for_ilo_reboot_completion: Wait for iLO reboot completion (playbook)
+    role:get_server_poststate: Get server poststate (role)
+    role:powerforceoff: Force power off (role)
+    role:powergracefullshutdown: Graceful shutdown (role)
+    role:poweron: Power on (role)
+    role:powerreboot: Restart (role)
+    role:set_cold_boot: Set cold boot (role)
+    role:systemreboot: Reboot system (role)
+    role:wait_for_ilo_reboot_completion: Wait for iLO reboot completion (role)
+- title: Update firmware and install packages
+  description: Upload and flash firmware and BIOS images, update through install sets, check update status
+    and install smart components and packages.
+  components:
+    firmware: Firmware operations
+    playbook:RLCP.package_install: Package install (playbook)
+    playbook:RLCP.smart_comp_install: Smart comp install (playbook)
+    playbook:UpdateService.DL.Bios_flash: BIOS flash (playbook, UpdateService.DL)
+    playbook:UpdateService.DL.Flashfwpkg: Flashfwpkg (playbook, UpdateService.DL)
+    playbook:UpdateService.DL.Flashfwpkgilo: Flashfwpkgilo (playbook, UpdateService.DL)
+    playbook:UpdateService.DL.Upload_comp: Upload comp (playbook, UpdateService.DL)
+    playbook:UpdateService.RL.Bios_flash: BIOS flash (playbook, UpdateService.RL)
+    playbook:UpdateService.RL.Flashfwpkg: Flashfwpkg (playbook, UpdateService.RL)
+    playbook:UpdateService.RL.FlashfwpkgUBM: FlashfwpkgUBM (playbook)
+    playbook:UpdateService.RL.Flashfwpkgilo: Flashfwpkgilo (playbook, UpdateService.RL)
+    playbook:UpdateService.RL.Upload_comp: Upload comp (playbook, UpdateService.RL)
+    playbook:UpdateService.firmware_upload: Firmware upload (playbook)
+    playbook:UpdateService.get_firmware_status: Get firmware status (playbook)
+    playbook:UpdateService.update_firmware_through_install_set: Update firmware through install set (playbook)
+    playbook:UpdateService.update_firmware_with_upload: Update firmware with upload (playbook)
+    role:firmware_upload: Firmware upload (role)
+    role:flashfwpkg: Flash firmware package (role)
+    role:get_firmware_status: Get firmware status (role)
+    role:rlcpinstall: Install package (RLCP) (role)
+    role:smartcompinstall: Install smart component (role)
+    role:update_firmware_through_install_set: Update firmware through install set (role)
+    role:update_firmware_with_upload: Update firmware with upload (role)
+    role:uploadcomp: Upload component and flash (role)
+- title: Inventory server hardware and software
+  description: Collect system, CPU, memory, disk, NIC, PCI, fan, PSU, firmware and software inventory
+    and store it as JSON.
+  components:
+    device: Device operations
+    redfish: Redfish server information
+    playbook:Chassis.get_device_inventory_info: Get device inventory info (playbook)
+    playbook:Inventory.get_cpu_inventory: Get CPU inventory (playbook)
+    playbook:Inventory.get_disk_inventory: Get disk inventory (playbook)
+    playbook:Inventory.get_fan_inventory: Get fan inventory (playbook)
+    playbook:Inventory.get_firmware_inventory: Get firmware inventory (playbook)
+    playbook:Inventory.get_firmware_update_methods: Get firmware update methods (playbook)
+    playbook:Inventory.get_memory_inventory: Get memory inventory (playbook)
+    playbook:Inventory.get_nic_inventory: Get NIC inventory (playbook)
+    playbook:Inventory.get_psu_inventory: Get psu inventory (playbook)
+    playbook:Inventory.get_sessions_inventory: Get sessions inventory (playbook)
+    playbook:Inventory.get_software_inventory: Get software inventory (playbook)
+    playbook:Inventory.get_storage_cont_inventory: Get storage cont inventory (playbook)
+    playbook:Inventory.get_system_inventory: Get system inventory (playbook)
+    playbook:Inventory.get_system_inventory_all: Get system inventory all (playbook)
+    playbook:Inventory.get_system_inventory_default: Get system inventory default (playbook)
+    playbook:Inventory.get_volume_inventory: Get volume inventory (playbook)
+    playbook:Network.get_network_adapter_details: Get network adapter details (playbook)
+    playbook:Network.get_pci_device_details: Get pci device details (playbook)
+    playbook:Network.get_pci_slot_details: Get pci slot details (playbook)
+    role:get_device_inventory_info: Get device inventory info (role)
+    role:get_network_adapter_details: Get network adapter details (role)
+    role:get_pci_device_details: Get pci device details (role)
+    role:get_pci_slot_details: Get pci slot details (role)
+    role:get_software_inventory: Get software inventory (role)
+    role:getallsysinven: Get all system inventory (role)
+    role:getcpuinven: Get CPU inventory (role)
+    role:getdefsysinv: Get default system inventory (role)
+    role:getdiskinven: Get disk inventory (role)
+    role:getfaninven: Get fan inventory (role)
+    role:getfirminven: Get firmware inventory (role)
+    role:getfirmupdate: Get firmware update methods (role)
+    role:getmeminven: Get memory inventory (role)
+    role:getnicinven: Get NIC inventory (role)
+    role:getpsuinven: Get PSU inventory (role)
+    role:getsessions: Get sessions (role)
+    role:getstgctrlinv: Get storage controller inventory (role)
+    role:getvolumeinven: Get volume inventory (role)
+    role:systeminven: Get system inventory (role)
+- title: Monitor chassis power, thermals and indicator LEDs
+  description: Report chassis inventory, power and thermal readings and switch the chassis indicator LED
+    on or off.
+  components:
+    playbook:Chassis.get_chassis_inventory: Get chassis inventory (playbook)
+    playbook:Chassis.get_chassis_power: Get chassis power (playbook)
+    playbook:Chassis.get_chassis_thermals: Get chassis thermals (playbook)
+    playbook:Chassis.indicator_led_off: Indicator LED off (playbook)
+    playbook:Chassis.indicator_led_on: Indicator LED on (playbook)
+    role:getchassinven: Get chassis inventory (role)
+    role:getchassistherm: Get chassis thermals (role)
+    role:getchasspower: Get chassis power (role)
+    role:ledoff: Indicator LED off (role)
+    role:ledon: Indicator LED on (role)
+- title: Configure server storage and logical drives
+  description: Create, verify and delete logical drives and volumes, query physical drives and drive operating
+    mode, and securely erase drives.
+  components:
+    storage: Storage operations
+    playbook:Storage.create_logical_drives: Create logical drives (playbook)
+    playbook:Storage.create_logical_drives_with_particular_physical_drives: Create logical drives with
+      particular physical drives (playbook)
+    playbook:Storage.delete_all_logical_drives: Delete all logical drives (playbook)
+    playbook:Storage.delete_specified_logical_drives: Delete specified logical drives (playbook)
+    playbook:Storage.delete_volumes: Delete volumes (playbook)
+    playbook:Storage.erase_physical_drives: Erase physical drives (playbook)
+    playbook:Storage.get_drive_operating_mode: Get drive operating mode (playbook)
+    playbook:Storage.get_logical_drives: Get logical drives (playbook)
+    playbook:Storage.get_physical_drives: Get physical drives (playbook)
+    playbook:Storage.get_specified_logical_drives: Get specified logical drives (playbook)
+    playbook:Storage.get_usb_info: Get USB info (playbook)
+    playbook:Storage.verify_logical_drives: Verify logical drives (playbook)
+    playbook:Storage.verify_specified_logical_drives: Verify specified logical drives (playbook)
+    role:create_logical_drives: Create logical drives (role)
+    role:create_logical_drives_with_particular_physical_drives: Create logical drives with particular
+      physical drives (role)
+    role:create_volume: Create volume (role)
+    role:delete_all_logical_drives: Delete all logical drives (role)
+    role:delete_specified_logical_drives: Delete specified logical drives (role)
+    role:delete_volumes: Delete volumes (role)
+    role:erase_physical_drives: Erase physical drives (role)
+    role:get_drive_operating_mode: Get drive operating mode (role)
+    role:get_logical_drives: Get logical drives (role)
+    role:get_physical_drives: Get physical drives (role)
+    role:get_specified_logical_drives: Get specified logical drives (role)
+    role:get_usb_info: Get USB info (role)
+    role:verify_logical_drives: Verify logical drives (role)
+    role:verify_specified_logical_drives: Verify specified logical drives (role)
+- title: Manage iLO user accounts and sessions
+  description: Add, delete and list iLO users, change passwords, user names and roles, check user privileges
+    and open and close sessions.
+  components:
+    playbook:User.adduser: Adduser (playbook)
+    playbook:User.check_user_privileges: Check user privileges (playbook)
+    playbook:User.deluser: Deluser (playbook)
+    playbook:User.listusers: Listusers (playbook)
+    playbook:User.updatepass: Updatepass (playbook)
+    playbook:User.updateusername: Updateusername (playbook)
+    playbook:User.updateuserrole: Updateuserrole (playbook)
+    role:adduser: Add user (role)
+    role:check_user_privileges: Check user privileges (role)
+    role:deluser: Delete user (role)
+    role:listallusers: List all users (role)
+    role:login: Log in (create session) (role)
+    role:logout: Log out (delete session) (role)
+    role:updatepass: Update password (role)
+    role:updaterole: Update user role (role)
+    role:updateusername: Update user name (role)
+- title: Manage certificates and security settings
+  description: Enable certificate login, import trusted CA certificates, map certificates to users and
+    configure Secure Boot and SPDM.
+  components:
+    security: Security operations
+    playbook:Security.enable_certificate_login: Enable certificate login (playbook)
+    playbook:Security.get_trusted_ca_certificates: Get trusted ca certificates (playbook)
+    playbook:Security.import_trusted_ca: Import trusted ca (playbook)
+    playbook:Security.map_user_certificate: Map user certificate (playbook)
+    playbook:Security.set_secure_boot: Set secure boot (playbook)
+    playbook:Security.set_spdm_settings: Set spdm settings (playbook)
+    role:enable_certificate_login: Enable certificate login (role)
+    role:get_trusted_ca_certificates: Get trusted ca certificates (role)
+    role:import_trusted_ca: Import trusted ca (role)
+    role:map_user_certificate: Map user certificate (role)
+    role:set_secure_boot: Set secure boot (role)
+    role:set_spdm_settings: Set spdm settings (role)
+- title: Configure iLO network, DNS and time
+  description: Set the iLO hostname, domain, DNS servers, NIC settings, WINS registration, NTP servers
+    and time zone, and read network protocols.
+  components:
+    network: Network operations
+    playbook:Manager.config_hostname: Config hostname (playbook)
+    playbook:Manager.disable_winsreg: Disable winsreg (playbook)
+    playbook:Manager.get_host_interfaces: Get host interfaces (playbook)
+    playbook:Manager.get_hostname: Get hostname (playbook)
+    playbook:Manager.get_manager_nic_inventory: Get manager NIC inventory (playbook)
+    playbook:Manager.get_network_protocols: Get network protocols (playbook)
+    playbook:Manager.ilo_nicsettings: ILO nicsettings (playbook)
+    playbook:Manager.set_dns: Set DNS (playbook)
+    playbook:Manager.set_ntpservers: Set ntpservers (playbook)
+    playbook:Manager.set_timezone: Set timezone (playbook)
+    role:confighostname: Configure iLO hostname (role)
+    role:disablewinsreg: Disable WINS registration (role)
+    role:get_host_interfaces: Get host interfaces (role)
+    role:get_hostname: Get hostname (role)
+    role:get_network_protocols: Get network protocols (role)
+    role:getmnicinven: Get manager NIC inventory (role)
+    role:setdns: Set DNS (role)
+    role:setdomainname: Set domain name (role)
+    role:setntpservers: Set NTP servers (role)
+    role:settimezone: Set time zone (role)
+- title: Back up, restore and reset iLO
+  description: Back up and restore iLO configuration, manage backup files, restart the manager and perform
+    a factory reset.
+  components:
+    playbook:Manager.delete_ilo_backup_files: Delete iLO backup files (playbook)
+    playbook:Manager.get_ilo_backup_files: Get iLO backup files (playbook)
+    playbook:Manager.ilo_backup: ILO backup (playbook)
+    playbook:Manager.ilo_factory_reset: ILO factory reset (playbook)
+    playbook:Manager.ilo_restore: ILO restore (playbook)
+    playbook:Manager.restart_manager: Restart manager (playbook)
+    role:delete_ilo_backup_files: Delete iLO backup files (role)
+    role:get_ilo_backup_files: Get iLO backup files (role)
+    role:ilo_backup: ILO backup (role)
+    role:ilo_factory_reset: ILO factory reset (role)
+    role:ilo_restore: ILO restore (role)
+    role:iloreset: Restart iLO manager (role)
+- title: Monitor iLO health and logs
+  description: Report manager health and inventory, read and clear manager logs and list mounted virtual
+    media.
+  components:
+    manage: Management operations
+    playbook:Manager.clear_logs: Clear logs (playbook)
+    playbook:Manager.get_health_report: Get health report (playbook)
+    playbook:Manager.get_manager_inventory: Get manager inventory (playbook)
+    playbook:Manager.get_manager_logs: Get manager logs (playbook)
+    playbook:Manager.get_virtual_media: Get virtual media (playbook)
+    role:cleariellogs: Clear manager logs (role)
+    role:get_health_report: Get health report (role)
+    role:get_manager_inventory: Get manager inventory (role)
+    role:getiellogs: Get manager logs (role)
+    role:getvirtmediainfo: Get virtual media info (role)
+- title: Configure SNMP alerts and users
+  description: Create, update and delete SNMP alert destinations and SNMPv3 users.
+  components:
+    snmp: SNMP operations
+    playbook:SNMP.create_snmp_alert_destinations: Create SNMP alert destinations (playbook)
+    playbook:SNMP.create_snmpv3_users: Create snmpv3 users (playbook)
+    playbook:SNMP.delete_all_snmp_alert_destinations: Delete all SNMP alert destinations (playbook)
+    playbook:SNMP.delete_all_snmpv3_users: Delete all snmpv3 users (playbook)
+    playbook:SNMP.delete_specified_snmpv3_users: Delete specified snmpv3 users (playbook)
+    playbook:SNMP.get_snmp_alert_destinations: Get SNMP alert destinations (playbook)
+    playbook:SNMP.get_snmpv3_users: Get snmpv3 users (playbook)
+    playbook:SNMP.update_snmpv3_users: Update snmpv3 users (playbook)
+    role:create_snmp_alert_destinations: Create SNMP alert destinations (role)
+    role:create_snmpv3_users: Create snmpv3 users (role)
+    role:delete_all_snmp_alert_destinations: Delete all SNMP alert destinations (role)
+    role:delete_all_snmpv3_users: Delete all snmpv3 users (role)
+    role:delete_specified_snmpv3_users: Delete specified snmpv3 users (role)
+    role:get_snmp_alert_destinations: Get SNMP alert destinations (role)
+    role:get_snmpv3_users: Get snmpv3 users (role)
+    role:update_snmpv3_users: Update snmpv3 users (role)
+- title: Run Redfish commands and OEM configuration
+  description: Send Redfish commands and set HPE OEM configuration attributes and firmware update commands
+    on iLO.
+  components:
+    fwupdate_command: Firmware update commands
+    redfish_command: Redfish commands
+    redfish_config: Redfish configuration attributes
+- title: Collect results and run example automation
+  description: Helper roles that store task results as JSON and an example playbook set for automation
+    testing.
+  components:
+    playbook:automation: Automation test playbook
+    role:copyresulttoop: Copy results to JSON file (role)
+    role:creatoutput: Create JSON output file (role)
+    role:playbooks: Example playbooks role

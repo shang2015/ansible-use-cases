@@ -1,0 +1,9 @@
+fqcn: trilio.trilio_kubernetes
+product: Trilio for Kubernetes
+use_cases:
+- title: Back up, recover and migrate Kubernetes applications
+  description: Orchestrate backup, recovery and migration of Kubernetes applications and their data with Trilio, using the role or the utility playbooks.
+  components:
+    role:trilio_kubernetes: Trilio for Kubernetes role
+    playbook:trilio-utility: Trilio utility playbook
+    playbook:trilio-utility-local: Trilio utility playbook (local)

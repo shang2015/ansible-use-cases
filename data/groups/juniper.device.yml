@@ -1,0 +1,83 @@
+fqcn: juniper.device
+product: Juniper Junos
+use_cases:
+- title: Configure interfaces, VLANs and Layer 2
+  description: Configure interfaces, Layer 2 and Layer 3 settings, VLANs, link aggregation, LACP and LLDP.
+  components:
+    junos_interfaces: Interfaces
+    junos_l2_interfaces: Layer 2 interfaces
+    junos_l3_interfaces: Layer 3 interfaces
+    junos_vlans: VLANs
+    junos_lag_interfaces: Link aggregation interfaces
+    junos_lacp: LACP global settings
+    junos_lacp_interfaces: LACP interfaces
+    junos_lldp_global: LLDP global settings
+    junos_lldp_interfaces: LLDP interfaces
+- title: Configure routing and VRFs
+  description: Configure BGP, OSPFv2, OSPFv3, static routes, prefix lists, routing options, routing instances
+    and VRFs.
+  components:
+    junos_bgp_global: BGP global settings
+    junos_bgp_address_family: BGP address families
+    junos_ospfv2: OSPFv2
+    junos_ospfv3: OSPFv3
+    junos_ospf_interfaces: OSPF interfaces
+    junos_static_routes: Static routes
+    junos_prefix_lists: Prefix lists
+    junos_routing_options: Routing options
+    junos_routing_instances: Routing instances
+    junos_vrf: VRFs
+- title: Secure the network with ACLs and firewall policy
+  description: Configure ACLs, SRX security policies and zones, and chassis clusters.
+  components:
+    junos_acls: ACLs
+    junos_acl_interfaces: ACL interfaces
+    junos_security_policies: Security policies
+    junos_security_policies_global: Global security policy settings
+    junos_security_zones: Security zones
+    srx_cluster: SRX chassis clusters
+- title: Administer the device
+  description: Manage hostname, system attributes, users, banners, NTP, SNMP, logging and the NETCONF
+    service.
+  components:
+    junos_hostname: Hostname
+    tbrdevice_hostname: Hostname (tbr)
+    junos_system: System attributes
+    junos_user: Local users
+    junos_banner: Banners
+    junos_ntp_global: NTP
+    junos_snmp_server: SNMP server
+    junos_logging_global: Logging
+    junos_netconf: NETCONF service
+- title: Run commands, RPCs and manage configuration
+  description: Run CLI commands and NETCONF RPCs, load and commit configuration, retrieve data with PyEZ
+    tables, gather facts, and connect through PyEZ.
+  components:
+    command: CLI commands
+    junos_command: Junos CLI commands
+    junos: Arbitrary commands
+    rpc: NETCONF RPCs
+    junos_rpc: Junos RPCs
+    config: Configuration
+    junos_config: Junos configuration
+    table: PyEZ tables and views
+    facts: Facts
+    tbrdevice: Device facts (tbr)
+    connection:pyez: PyEZ connection
+- title: Upgrade software and operate the system
+  description: Install Junos software and packages, copy files, and reboot, halt or otherwise operate
+    the system.
+  components:
+    software: Software installation
+    junos_package: Packages
+    file_copy: File copy
+    system: System operations
+- title: Test and validate network state
+  description: Test reachability with ping and path MTU discovery, and run JSNAPy snapshot tests with
+    formatted results.
+  components:
+    ping: Ping
+    junos_ping: Junos ping
+    pmtud: Path MTU discovery
+    jsnapy: JSNAPy tests
+    callback:jsnapy: JSNAPy result output

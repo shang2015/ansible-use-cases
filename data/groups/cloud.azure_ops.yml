@@ -1,0 +1,45 @@
+fqcn: cloud.azure_ops
+product: Microsoft Azure
+use_cases:
+- title: Provision Azure infrastructure
+  description: Create and configure resource groups, virtual machines, networking, load balancers, security
+    groups, snapshots, storage accounts and PostgreSQL flexible servers.
+  components:
+    role:azure_manage_resource_group: Resource groups
+    role:azure_virtual_machine_with_public_ip: Virtual machines
+    role:azure_manage_networking_stack: Networking stack
+    role:azure_manage_network_interface: Network interfaces
+    role:azure_load_balancer_with_public_ip: Load balancers
+    role:azure_manage_security_group: Security groups
+    role:azure_manage_snapshot: VM snapshots
+    role:azure_manage_storage_account: Storage accounts
+    role:azure_manage_postgresqlflex: PostgreSQL flexible servers
+    role:azure_repo_microsoft_prod: Microsoft package repository
+- title: Deploy and migrate web applications
+  description: Bootstrap web apps and container apps, validate deployments and migrate applications between
+    regions.
+  components:
+    playbook:webapp: Web app
+    playbook:webapp_container: Container instance app
+    playbook:vmss_migrate: Cross-region migration
+    playbook:validate_deployment: Deployment validation
+- title: Run machine learning and AI platforms
+  description: Manage Azure AI Search and Cognitive Services accounts, automate MLOps lifecycles, deploy
+    across environments with promotion gates and optimize ML costs.
+  components:
+    role:azure_manage_ai_search: AI Search
+    role:azure_manage_cognitive_account: Cognitive Services accounts
+    role:self_service_ml_platform: Self-service ML platform
+    role:multi_env_ml_deployment: Multi-environment ML deployment
+    role:azure_ml_cost_optimization: ML cost optimization
+    playbook:self_service_ml_platform: Self-service ML platform playbook
+    playbook:multi_env_ml_deployment: Multi-environment ML playbook
+    playbook:mlops_lifecycle: MLOps lifecycle
+    playbook:rag_pipeline: RAG pipeline
+    playbook:cost_optimization: ML and AI cost optimization
+- title: Onboard Azure Arc hosts
+  description: Configure Arc hosts, deploy the Arc agent and set up the Arc SSH proxy.
+  components:
+    role:azure_configure_archost: Arc host configuration
+    playbook:archost_deploy: Arc agent deployment
+    playbook:archost_proxy: Arc SSH proxy

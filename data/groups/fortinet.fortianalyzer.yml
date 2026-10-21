@@ -1,0 +1,326 @@
+fqcn: fortinet.fortianalyzer
+product: Fortinet FortiAnalyzer
+notes:
+- Modules map one-to-one to FortiAnalyzer API objects (CLI configuration, device manager, event management
+  and report objects).
+use_cases:
+- title: Add and organise managed devices
+  description: Add, import and delete devices, and maintain ADOMs, device groups, folders and VDOMs in
+    the device manager database.
+  components:
+    cli_exec_fgfm_reclaimdevtunnel: Reclaim device management tunnel
+    dvm_cmd_add_device: Add device
+    dvm_cmd_add_devlist: Add multiple devices
+    dvm_cmd_del_device: Delete device
+    dvm_cmd_del_devlist: Delete multiple devices
+    dvm_cmd_import_devlist: Import ADOMs and devices
+    dvmdb_adom: ADOMs
+    dvmdb_adom_objectmember: ADOM object members
+    dvmdb_device: Devices
+    dvmdb_device_vdom: Device VDOMs
+    dvmdb_folder: Device folders
+    dvmdb_group: Device groups
+    dvmdb_group_objectmember: Device group members
+    rename: Rename object
+- title: Manage administrators, profiles and approval workflow
+  description: Create admin users, groups and access profiles, set password policy and administrator metadata,
+    and define approval workflows.
+  components:
+    cli_metafields_system_admin_user: Meta fields system admin user
+    cli_system_admin_group: Admin groups
+    cli_system_admin_group_member: Admin group member
+    cli_system_admin_profile: Admin profiles
+    cli_system_admin_profile_datamaskcustomfields: Admin profile data mask custom fields
+    cli_system_admin_profile_writepasswdprofiles: Admin profile write password profiles
+    cli_system_admin_profile_writepasswduserlist: Admin profile write password user list
+    cli_system_admin_setting: Admin settings
+    cli_system_admin_user: Admin users
+    cli_system_admin_user_adom: Admin user ADOM
+    cli_system_admin_user_adomexclude: Admin user ADOM exclude
+    cli_system_admin_user_dashboard: Admin user dashboard
+    cli_system_admin_user_dashboardtabs: Admin user dashboard tabs
+    cli_system_admin_user_metadata: Admin user metadata
+    cli_system_admin_user_policyblock: Admin user policy block
+    cli_system_admin_user_policypackage: Admin user policy package
+    cli_system_admin_user_restrictdevvdom: Admin user restricted devices/VDOMs
+    cli_system_metadata_admins: Metadata admins
+    cli_system_passwordpolicy: Password policy
+    cli_system_workflow_approvalmatrix: Workflow approval matrix
+    cli_system_workflow_approvalmatrix_approver: Workflow approval matrix approver
+- title: Integrate external authentication
+  description: Authenticate administrators against LDAP, RADIUS, TACACS+ and SAML identity providers.
+  components:
+    cli_system_admin_ldap: LDAP servers
+    cli_system_admin_ldap_adom: Admin LDAP ADOM
+    cli_system_admin_radius: RADIUS servers
+    cli_system_admin_tacacs: TACACS+ servers
+    cli_system_saml: SAML settings
+    cli_system_saml_fabricidp: SAML fabric IdP
+    cli_system_saml_serviceproviders: SAML service providers
+- title: Configure network interfaces, routing, DNS and time
+  description: Configure interfaces, aggregate and IPv6 settings, static routes, DNS, NTP servers, web
+    proxy and interface sniffers.
+  components:
+    cli_system_dns: DNS
+    cli_system_interface: Interfaces
+    cli_system_interface_ipv6: Interface IPv6
+    cli_system_interface_member: Interface member
+    cli_system_ntp: NTP
+    cli_system_ntp_ntpserver: NTP ntpserver
+    cli_system_route: Static routes (IPv4)
+    cli_system_route6: Static routes (IPv6)
+    cli_system_sniffer: Sniffer
+    cli_system_webproxy: Web proxy
+- title: Restrict access with local-in policies
+  description: Define IPv4 and IPv6 local-in policies with their source, destination, port and interface
+    members.
+  components:
+    cli_system_localinpolicy: Local in policy
+    cli_system_localinpolicy6: Local in policy IPv6
+    cli_system_localinpolicy6_dport: Local in policy IPv6 destination port
+    cli_system_localinpolicy6_dst: Local in policy IPv6 destination
+    cli_system_localinpolicy6_intf: Local in policy IPv6 interface
+    cli_system_localinpolicy6_src: Local in policy IPv6 source
+    cli_system_localinpolicy_dport: Local in policy destination port
+    cli_system_localinpolicy_dst: Local in policy destination
+    cli_system_localinpolicy_intf: Local in policy interface
+    cli_system_localinpolicy_src: Local in policy source
+- title: Configure high availability and backups
+  description: Configure HA clusters with peers and virtual IPs, and schedule backups of system settings.
+  components:
+    cli_system_backup_allsettings: Backup all settings
+    cli_system_ha: High availability
+    cli_system_ha_peer: HA peer
+    cli_system_ha_privatepeer: HA private peer
+    cli_system_ha_vip: HA vip
+- title: Manage certificates and TLS settings
+  description: Manage CA, local, remote, SSH, OFTP and CRL certificates and preferred SSL/TLS cipher suites.
+  components:
+    cli_system_certificate_ca: Certificate ca
+    cli_system_certificate_crl: Certificate crl
+    cli_system_certificate_local: Certificate local
+    cli_system_certificate_oftp: Certificate oftp
+    cli_system_certificate_remote: Certificate remote
+    cli_system_certificate_ssh: Certificate SSH
+    cli_system_sslciphersuites: SSL cipher suites
+- title: Tune global system settings
+  description: Set global attributes, FIPS-CC mode, GUI behaviour, central management and Docker host
+    options.
+  components:
+    cli_system_centralmanagement: Central management
+    cli_system_docker: Docker
+    cli_system_fips: FIPS-CC mode
+    cli_system_global: Global settings
+    cli_system_guiact: GUI settings
+- title: Configure local logging and remote log destinations
+  description: Set logging to disk, memory, FortiAnalyzer and remote syslog servers, with per-destination
+    filters.
+  components:
+    cli_system_locallog_disk_filter: Local log disk filter
+    cli_system_locallog_disk_setting: Local log disk setting
+    cli_system_locallog_fortianalyzer2_filter: Local log FortiAnalyzer 2 filter
+    cli_system_locallog_fortianalyzer2_setting: Local log FortiAnalyzer 2 setting
+    cli_system_locallog_fortianalyzer3_filter: Local log FortiAnalyzer 3 filter
+    cli_system_locallog_fortianalyzer3_setting: Local log FortiAnalyzer 3 setting
+    cli_system_locallog_fortianalyzer_filter: Local log FortiAnalyzer filter
+    cli_system_locallog_fortianalyzer_setting: Local log FortiAnalyzer setting
+    cli_system_locallog_memory_filter: Local log memory filter
+    cli_system_locallog_memory_setting: Local log memory setting
+    cli_system_locallog_setting: Local log setting
+    cli_system_locallog_syslogd2_filter: Local log syslog 2 filter
+    cli_system_locallog_syslogd2_setting: Local log syslog 2 setting
+    cli_system_locallog_syslogd3_filter: Local log syslog 3 filter
+    cli_system_locallog_syslogd3_setting: Local log syslog 3 setting
+    cli_system_locallog_syslogd_filter: Local log syslog filter
+    cli_system_locallog_syslogd_setting: Local log syslog setting
+    cli_system_syslog: Syslog servers
+- title: Control log collection, retention and rate limits
+  description: Set log rolling policies, rate limits, device selection, topology and auto-deletion of
+    logs, reports, DLP archives and quarantined files.
+  components:
+    cli_system_autodelete: Auto delete
+    cli_system_autodelete_dlpfilesautodeletion: Auto delete dlpfilesautodeletion
+    cli_system_autodelete_logautodeletion: Auto delete logautodeletion
+    cli_system_autodelete_quarantinefilesautodeletion: Auto delete quarantinefilesautodeletion
+    cli_system_autodelete_reportautodeletion: Auto delete reportautodeletion
+    cli_system_log_alert: Log alert
+    cli_system_log_devicedisable: Log device disable
+    cli_system_log_deviceselector: Log device selector
+    cli_system_log_fospolicystats: Log FortiOS policy stats
+    cli_system_log_interfacestats: Log interface stats
+    cli_system_log_ioc: Log IoC
+    cli_system_log_maildomain: Log mail domain
+    cli_system_log_pcapfile: Log pcap file
+    cli_system_log_ratelimit: Log rate limit
+    cli_system_log_ratelimit_device: Log rate limit device
+    cli_system_log_ratelimit_ratelimits: Log rate limit rate limits
+    cli_system_log_settings: Log settings
+    cli_system_log_settings_rollinganalyzer: Log settings rolling (analyzer)
+    cli_system_log_settings_rollinglocal: Log settings rolling (local)
+    cli_system_log_settings_rollingregular: Log settings rolling (regular)
+    cli_system_log_topology: Log topology
+    cli_system_log_ueba: Log UEBA
+- title: Forward and fetch logs
+  description: Forward logs to other collectors with filters and masking, and configure log-fetch servers
+    and client profiles.
+  components:
+    cli_system_logfetch_clientprofile: Log fetch client profile
+    cli_system_logfetch_clientprofile_devicefilter: Log fetch client profile device filter
+    cli_system_logfetch_clientprofile_logfilter: Log fetch client profile log filter
+    cli_system_logfetch_serversettings: Log fetch server settings
+    cli_system_logforward: Log forward
+    cli_system_logforward_devicefilter: Log forward device filter
+    cli_system_logforward_logfieldexclusion: Log forward log field exclusion
+    cli_system_logforward_logfilter: Log forward log filter
+    cli_system_logforward_logmaskingcustom: Log forward log masking (custom)
+    cli_system_logforwardservice: Log forward service
+- title: Configure system alerts and SNMP monitoring
+  description: Send alert events by console and email, define alert destinations and expose system status
+    through SNMP.
+  components:
+    cli_system_alertconsole: Alert console
+    cli_system_alertemail: Alert email
+    cli_system_alertevent: Alert event
+    cli_system_alertevent_alertdestination: Alert event alert destination
+    cli_system_mail: Alert email server
+    cli_system_snmp_community: SNMP community
+    cli_system_snmp_community_hosts: SNMP community hosts
+    cli_system_snmp_community_hosts6: SNMP community hosts IPv6
+    cli_system_snmp_sysinfo: SNMP sysinfo
+    cli_system_snmp_user: SNMP user
+- title: Handle events and alerts
+  description: Acknowledge, assign, comment on and mark alert events as read, and import event handlers.
+  components:
+    eventmgmt_alerts_ack: Event management alerts ack
+    eventmgmt_alerts_assign: Event management alerts assign
+    eventmgmt_alerts_comment: Event management alerts comment
+    eventmgmt_alerts_import: Event management alerts import
+    eventmgmt_alerts_read: Event management alerts read
+    eventmgmt_alerts_unack: Event management alerts unack
+    eventmgmt_basichandlers_import: Event management basic handlers import
+    eventmgmt_correlationhandlers_import: Event management correlation handlers import
+- title: Define event handlers and notifications
+  description: Configure basic and correlation handlers, data selectors, triggers and notification profiles.
+  components:
+    eventmgmt_config_basichandler: Event management config basic handler
+    eventmgmt_config_correlationhandler: Event management config correlation handler
+    eventmgmt_config_dataselector: Event management config data selector
+    eventmgmt_config_notificationprofile: Event management config notification profile
+    eventmgmt_config_trigger: Event management config trigger
+    eventmgmt_config_trigger_device: Event management config trigger device
+    eventmgmt_config_trigger_filter: Event management config trigger filter
+    eventmgmt_config_trigger_filter_rule: Event management config trigger filter rule
+- title: Design report charts, datasets and layouts
+  description: Build report datasets, charts, macros and layouts, and import and install report templates.
+  components:
+    report_config_chart: Report config chart
+    report_config_chart_drilldowntable: Report config chart drill down table
+    report_config_chart_tablecolumns: Report config chart table columns
+    report_config_chart_variabletemplate: Report config chart variable template
+    report_config_dataset: Report config dataset
+    report_config_dataset_variable: Report config dataset variable
+    report_config_layout: Report config layout
+    report_config_layout_component: Report config layout component
+    report_config_layout_component_variable: Report config layout component variable
+    report_config_layout_footer: Report config layout footer
+    report_config_layout_header: Report config layout header
+    report_config_layoutfolder: Report config layout folder
+    report_config_macro: Report config macro
+    report_configfile_import: Report config file import
+    report_template_delete: Report template delete
+    report_template_import: Report template import
+    report_template_install: Report template install
+- title: Schedule, run and deliver reports
+  description: Schedule reports with filters and devices, configure output and email recipients, run reports
+    and manage generated reports and graph files.
+  components:
+    cli_system_report_autocache: Report auto cache
+    cli_system_report_estbrowsetime: Report estimated browse time
+    cli_system_report_group: Report group
+    cli_system_report_group_chartalternative: Report group chart alternatives
+    cli_system_report_group_groupby: Report group group by
+    cli_system_report_setting: Report setting
+    report_config_output: Report config output
+    report_config_output_emailrecipients: Report config output email recipients
+    report_config_schedule: Report config schedule
+    report_config_schedule_addressfilter: Report config schedule address filter
+    report_config_schedule_devices: Report config schedule devices
+    report_config_schedule_filter: Report config schedule filter
+    report_config_schedule_reportlayout: Report config schedule report layout
+    report_graphfile: Report graph file
+    report_graphfile_delete: Report graph file delete
+    report_reports_data_delete: Report reports data delete
+    report_run: Run reports
+    report_run_delete: Report run delete
+- title: Join the Security Fabric and connect external services
+  description: Add FortiAnalyzer to a Security Fabric or SOC fabric, manage trusted nodes and fabric connectors
+    and query SDN connectors.
+  components:
+    cli_system_connector: Connector
+    cli_system_csf: Security Fabric membership
+    cli_system_csf_fabricconnector: Security Fabric fabric connector
+    cli_system_csf_trustedlist: Security Fabric trusted list
+    cli_system_socfabric: SOC fabric
+    cli_system_socfabric_trustedlist: SOC fabric trusted list
+    sys_api_sdnconnector: SDN connector query
+- title: Configure FortiGuard updates and firmware management
+  description: Configure the built-in FortiGuard update service, schedules, server overrides, web proxy,
+    push updates and firmware management settings.
+  components:
+    cli_fmupdate_analyzer_virusreport: FortiGuard update analyzer virus report
+    cli_fmupdate_avips_advancedlog: FortiGuard update AV/IPS advanced log
+    cli_fmupdate_avips_webproxy: FortiGuard update AV/IPS web proxy
+    cli_fmupdate_customurllist: FortiGuard update custom URL list
+    cli_fmupdate_diskquota: FortiGuard update disk quota
+    cli_fmupdate_fctservices: FortiGuard update FortiClient services
+    cli_fmupdate_fdssetting: FortiGuard update FDS setting
+    cli_fmupdate_fdssetting_pushoverride: FortiGuard update FDS setting push override
+    cli_fmupdate_fdssetting_pushoverridetoclient: FortiGuard update FDS setting push override to client
+    cli_fmupdate_fdssetting_pushoverridetoclient_announceip: FortiGuard update FDS setting push override
+      to client announce IP
+    cli_fmupdate_fdssetting_serveroverride: FortiGuard update FDS setting server override
+    cli_fmupdate_fdssetting_serveroverride_servlist: FortiGuard update FDS setting server override server
+      list
+    cli_fmupdate_fdssetting_updateschedule: FortiGuard update FDS setting update schedule
+    cli_fmupdate_fgdsetting: FortiGuard update FGD setting
+    cli_fmupdate_fwmsetting: FortiGuard update firmware management setting
+    cli_fmupdate_fwmsetting_upgradetimeout: FortiGuard update firmware management setting upgrade timeout
+    cli_fmupdate_multilayer: FortiGuard update multilayer
+    cli_fmupdate_publicnetwork: FortiGuard update public network
+    cli_fmupdate_serveraccesspriorities: FortiGuard update server access priorities
+    cli_fmupdate_serveraccesspriorities_privateserver: FortiGuard update server access priorities private
+      server
+    cli_fmupdate_serveroverridestatus: FortiGuard update server override status
+    cli_fmupdate_service: FortiGuard update service
+    cli_fmupdate_webspam_fgdsetting: FortiGuard update web spam FGD setting
+    cli_fmupdate_webspam_fgdsetting_serveroverride: FortiGuard update web spam FGD setting server override
+    cli_fmupdate_webspam_fgdsetting_serveroverride_servlist: FortiGuard update web spam FGD setting server
+      override server list
+    cli_fmupdate_webspam_webproxy: FortiGuard update web spam web proxy
+- title: Tune the SQL database and FortiView analytics
+  description: Configure SQL log database settings and custom index fields, and FortiView cache and display
+    options.
+  components:
+    cli_system_fortiview_autocache: FortiView auto cache
+    cli_system_fortiview_setting: FortiView setting
+    cli_system_sql: SQL settings
+    cli_system_sql_customindex: SQL custom index
+    cli_system_sql_customskipidx: SQL custom skip index
+    cli_system_sql_tsindexfield: SQL text search index field
+- title: Call the FortiAnalyzer API and gather facts
+  description: Gather system facts, log in and out of API sessions, send generic or proxied JSON requests
+    and generate WSDL.
+  components:
+    fact: Gather facts
+    generic: Generic API request
+    sys_generate_wsdl: Generate WSDL
+    sys_login_challenge: Login challenge
+    sys_login_user: Log in
+    sys_logout: Log out
+    sys_proxy_json: JSON proxy to managed devices
+- title: Upgrade device firmware and restart
+  description: Update firmware on managed devices and restart FortiAnalyzer.
+  components:
+    sys_reboot: Restart FortiAnalyzer
+    um_image_upgrade: Device firmware upgrade (legacy API)
+    um_image_upgrade_ext: Device firmware upgrade

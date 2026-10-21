@@ -1,0 +1,34 @@
+fqcn: dellemc.vplex
+product: Dell VPLEX
+use_cases:
+- title: Provision storage and virtual volumes
+  description: Manage storage volumes, extents, devices, distributed devices, and virtual and distributed
+    virtual volumes, and rediscover arrays.
+  components:
+    array: Arrays
+    storage_volume: Storage volumes
+    extent: Extents
+    device: Devices
+    distributed_device: Distributed devices
+    virtual_volume: Virtual volumes
+    distributed_virtual_volume: Distributed virtual volumes
+    role:createdevice: Local device creation
+    role:removedevice: Local device teardown
+- title: Present storage to hosts
+  description: Manage initiators, ports and storage views.
+  components:
+    initiator: Initiators
+    port: Ports
+    storage_view: Storage views
+    role:createstorageview: Storage view creation
+- title: Protect and migrate data
+  description: Manage consistency groups, distributed consistency groups and data migrations.
+  components:
+    consistency_group: Consistency groups
+    distributed_consistency_group: Distributed consistency groups
+    data_migration: Data migrations
+- title: Gather VPLEX information
+  description: Gather storage details and map storage entity usage hierarchy.
+  components:
+    gatherfacts: Storage details
+    maps: Usage hierarchy maps

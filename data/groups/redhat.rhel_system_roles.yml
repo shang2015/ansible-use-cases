@@ -1,0 +1,58 @@
+fqcn: redhat.rhel_system_roles
+product: Red Hat Enterprise Linux
+use_cases:
+- title: Harden system security
+  description: Configure SELinux, crypto policies, auditing, file integrity monitoring, application allowlisting,
+    sudo, SSH and remote attestation.
+  components:
+    role:selinux: SELinux
+    role:crypto_policies: Crypto policies
+    role:auditd: Audit rules
+    role:aide: AIDE intrusion detection
+    role:fapolicyd: File access policy daemon
+    role:sudo: sudo
+    role:ssh: SSH client
+    role:tlog: Terminal session recording
+    role:keylime_server: Keylime remote attestation
+    role:trustee_server: Trustee server
+    role:trustee_client: Trustee guest components
+- title: Manage networking and connectivity
+  description: Configure network interfaces, firewalld, VPN tunnels, time synchronization and mail transfer.
+  components:
+    role:network: Network
+    role:firewall: Firewall
+    role:vpn: VPN tunnels
+    role:timesync: Time synchronization
+    role:postfix: Postfix mail
+- title: Manage storage and disk encryption
+  description: Configure local storage, snapshots, GFS2 file systems and network-bound disk encryption.
+  components:
+    role:storage: Local storage
+    role:snapshot: Snapshots
+    role:gfs2: GFS2 file systems
+    role:nbde_server: NBDE servers (Tang)
+    role:nbde_client: NBDE clients (Clevis)
+- title: Tune and operate the base system
+  description: Manage kernel settings, bootloader, kdump, systemd units, journald, logging, metrics and
+    the Cockpit console.
+  components:
+    role:kernel_settings: Kernel settings
+    role:bootloader: Bootloader
+    role:kdump: kdump
+    role:systemd: systemd units
+    role:journald: journald
+    role:logging: Logging
+    role:metrics: Performance metrics
+    role:cockpit: Cockpit web console
+- title: Integrate identity, certificates and Red Hat services
+  description: Join Active Directory, issue and renew certificates, and connect systems to Red Hat.
+  components:
+    role:ad_integration: Active Directory integration
+    role:certificate: Certificates
+    role:rhc: Red Hat connector
+- title: Run applications, containers and clusters
+  description: Manage Podman containers, PostgreSQL and high availability clusters.
+  components:
+    role:podman: Podman
+    role:postgresql: PostgreSQL
+    role:ha_cluster: High availability clusters

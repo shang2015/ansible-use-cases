@@ -1,0 +1,69 @@
+fqcn: infinidat.infinibox
+product: Infinidat InfiniBox
+use_cases:
+- title: Provision volumes, file systems and pools
+  description: Create pools, volumes, snapshots and file systems, publish NFS exports and clients, and
+    tag resources with metadata.
+  components:
+    pool: Pools
+    vol: Volumes
+    fs: File systems
+    export: NFS exports
+    export_client: NFS export clients
+    metadata: Metadata
+    playbook:test_create_volumes: Create volumes example
+    playbook:test_create_snapshots: Create snapshots example
+    playbook:test_remove_snapshots: Remove snapshots example
+    playbook:test_remove_volumes: Remove volumes example
+    playbook:test_create_metadata: Create metadata example
+    playbook:test_search_metadata: Search metadata example
+    playbook:test_remove_metadata: Remove metadata example
+- title: Connect hosts and map storage
+  description: Define hosts, host clusters and their FC and iSCSI ports, map volumes to hosts or clusters,
+    name FC switches and configure network spaces.
+  components:
+    host: Hosts
+    cluster: Host clusters
+    port: Host ports
+    map: Volume mappings
+    fibre_channel_switch: FC switch names
+    network_space: Network spaces
+    playbook:test_create_map_cluster: Create cluster mapping example
+    playbook:test_remove_map_cluster: Remove cluster mapping example
+    playbook:test_create_network_spaces: Create network spaces example
+    playbook:test_remove_network_spaces: Remove network spaces example
+- title: Manage users, certificates and single sign-on
+  description: Manage array users and user repositories, SSO configuration and SSL certificates.
+  components:
+    user: Users
+    users_repository: User repositories
+    sso: Single sign-on
+    certificate: SSL certificates
+    playbook:test_remove_users_repository: Remove user repository example
+- title: Configure the array, notifications and monitoring
+  description: Configure array settings, custom events, notification rules and targets, register with
+    Infinimetrics, and configure a full array from one playbook.
+  components:
+    config: Array configuration
+    event: Custom events
+    notification_rule: Notification rules
+    notification_target: Notification targets
+    infinimetrics: Infinimetrics registration
+    playbook:configure_array: Array configuration
+    playbook:test_config_sample: Configuration example
+    playbook:test_notification_rules_sample: Notification rules example
+    playbook:test_persist_api_session: Persistent API session example
+    filter:delta_time: Time delta filter
+- title: Create and remove sample resource sets
+  description: Create and remove a complete set of sample resources for testing and demonstrations.
+  components:
+    playbook:test_create_resources: Create resources
+    playbook:test_create_resources_demo: Create resources demo
+    playbook:test_remove_resources: Remove resources
+    playbook:test_remove_resources_demo: Remove resources demo
+- title: Demonstrate Infinisafe cyber resilience
+  description: Set up, run and tear down the Infinisafe demonstration.
+  components:
+    playbook:infinisafe_demo_setup: Demo setup
+    playbook:infinisafe_demo_runtest: Demo test run
+    playbook:infinisafe_demo_teardown: Demo teardown

@@ -1,0 +1,376 @@
+fqcn: azure.azcollection
+product: Microsoft Azure
+prerequisites:
+- An Azure service principal or managed identity with rights on the target subscriptions, stored as an
+  Automation Platform credential.
+- The azure.azcollection Python requirements (Azure SDK packages) available in the execution environment.
+notes:
+- Most modules cover both management and read-only info queries for the same resource.
+use_cases:
+- title: Manage virtual machines and images
+  description: Create, resize, start, stop and delete Azure VMs, including extensions, sizes, images,
+    SSH keys and availability constructs.
+  success: VMs match the declared definition, and re-running the job makes no changes.
+  components:
+    virtualmachine: Virtual machines
+    virtualmachineextension: VM extensions
+    virtualmachineimage: VM images (marketplace)
+    virtualmachinesize: VM sizes
+    vmsku: Compute SKUs
+    imagesku: Image SKUs
+    image: Custom images
+    sshpublickey: SSH public keys
+    availabilityset: Availability sets
+    proximityplacementgroup: Proximity placement groups
+    capacityreservationgroup: Capacity reservation groups
+    dedicatedhost: Dedicated hosts
+    hostgroup: Dedicated host groups
+- title: Manage VM scale sets
+  description: Create, scale and update virtual machine scale sets, their extensions and individual instances.
+  success: Scale sets and their instances match the declared definition and re-running the job makes no
+    changes.
+  components:
+    virtualmachinescaleset: VM scale sets
+    virtualmachinescalesetextension: Scale set extensions
+    virtualmachinescalesetinstance: Scale set instances
+    vmssnetworkinterface: Scale set network interfaces
+    autoscale: Autoscale settings
+- title: Manage disks, snapshots and shared image galleries
+  description: Provision managed disks, snapshots, disk encryption sets and shared image gallery content.
+  success: Disks, snapshots and gallery images exist as declared and encryption settings are applied.
+  components:
+    manageddisk: Managed disks
+    multiplemanageddisks: Multiple managed disks
+    snapshot: Snapshots
+    diskaccess: Disk access
+    diskencryptionset: Disk encryption sets
+    gallery: Image galleries
+    galleryimage: Gallery images
+    galleryimageversion: Gallery image versions
+- title: Manage virtual networks and connectivity
+  description: Create virtual networks, subnets, peerings, route tables, NAT gateways and service endpoint
+    policies.
+  success: Network topology matches the declared definition, and re-running the job makes no changes.
+  components:
+    virtualnetwork: Virtual networks
+    subnet: Subnets
+    virtualnetworkpeering: Virtual network peering
+    routetable: Route tables
+    route: Routes
+    natgateway: NAT gateways
+    serviceendpointpolicy: Service endpoint policies
+    serviceendpointpolicydefinition: Service endpoint policy definitions
+    networkinterface: Network interfaces
+    publicipaddress: Public IP addresses
+    publicipprefix: Public IP prefixes
+- title: Manage hybrid, VPN and WAN connectivity
+  description: Configure virtual network gateways, VPN sites, ExpressRoute circuits and Virtual WAN hubs.
+  success: Gateways, connections and WAN hubs exist as declared and re-running the job makes no changes.
+  components:
+    virtualnetworkgateway: Virtual network gateways
+    virtualnetworkgatewayconnection: Gateway connections
+    virtualnetworkgatewaynatrule: Gateway NAT rules
+    localnetworkgateway: Local network gateways
+    expressroute: ExpressRoute circuits
+    vpnsite: VPN sites
+    vpnsitelink: VPN site links
+    virtualwan: Virtual WAN
+    virtualhub: Virtual hubs
+    virtualhubconnection: Virtual hub connections
+- title: Manage load balancing and traffic distribution
+  description: Configure load balancers, application gateways, Traffic Manager and Front Door profiles.
+  success: Load balancing and traffic routing resources match the declared definition.
+  components:
+    loadbalancer: Load balancers
+    loadbalancerbackendaddresspool: Backend address pools
+    appgateway: Application gateways
+    trafficmanager: Traffic Manager
+    trafficmanagerprofile: Traffic Manager profiles
+    trafficmanagerendpoint: Traffic Manager endpoints
+    afdendpoint: Front Door endpoints
+    afdorigin: Front Door origins
+    afdorigingroup: Front Door origin groups
+    afdroute: Front Door routes
+    afdrules: Front Door rules
+    afdruleset: Front Door rule sets
+    cdnprofile: CDN profiles
+    cdnendpoint: CDN endpoints
+- title: Manage network security and firewalls
+  description: Configure network security groups, application security groups, Azure Firewall, firewall
+    policies, WAF policies, DDoS plans and Bastion.
+  success: Security groups, firewalls and protection plans enforce the declared rules, and re-running
+    the job makes no changes.
+  components:
+    securitygroup: Network security groups
+    applicationsecuritygroup: Application security groups
+    azurefirewall: Azure Firewall
+    firewallpolicy: Firewall policies
+    firewallpolicyrulecollectiongroup: Firewall rule collection groups
+    ipgroup: IP groups
+    applicationfirewallpolicy: Web application firewall policies
+    ddosprotectionplan: DDoS protection plans
+    bastionhost: Bastion hosts
+- title: Manage private connectivity and DNS
+  description: Create private endpoints, private link services and public or private DNS zones and records.
+  success: Private endpoints and DNS zones and records resolve and connect as declared.
+  components:
+    privateendpoint: Private endpoints
+    privateendpointconnection: Private endpoint connections
+    privateendpointdnszonegroup: Private endpoint DNS zone groups
+    privatelinkservice: Private link services
+    dnszone: DNS zones
+    dnsrecordset: DNS record sets
+    privatednszone: Private DNS zones
+    privatednsrecordset: Private DNS record sets
+    privatednszonelink: Private DNS zone links
+- title: Manage Kubernetes and OpenShift clusters
+  description: Create and update AKS clusters and node pools, query available versions and credentials,
+    and manage Azure Red Hat OpenShift clusters.
+  success: Clusters and node pools match the declared definition and version information can be queried.
+  components:
+    aks: AKS clusters
+    aksagentpool: AKS node pools
+    aksagentpoolversion: Node pool versions
+    akscredentials: AKS credentials
+    aksupgrade: AKS upgrade versions
+    aksversion: Kubernetes versions
+    openshiftmanagedcluster: OpenShift clusters
+    openshiftmanagedclusterkubeconfig: OpenShift kubeconfig
+    openshiftmanagedclusterversion: OpenShift versions
+- title: Manage containers and container registries
+  description: Run container instances and Container Apps, and manage registries with their replications,
+    tokens, scope maps, tags and webhooks.
+  success: Container workloads and registries exist as declared and registry access settings are applied.
+  components:
+    containerinstance: Container instances
+    containerapp: Container Apps
+    containerappenvironment: Container Apps environments
+    containerregistry: Container registries
+    containerregistryreplication: Registry replications
+    containerregistryscopemap: Registry scope maps
+    containerregistrytag: Registry tags
+    containerregistrytoken: Registry tokens
+    containerregistrytokenpassword: Registry token passwords
+    containerregistrywebhook: Registry webhooks
+- title: Manage web apps and serverless
+  description: Deploy and configure App Service plans, web apps, deployment slots, Function Apps and API
+    Management.
+  success: Apps, plans and slots match the declared definition and access restrictions are applied.
+  components:
+    appserviceplan: App Service plans
+    webapp: Web apps
+    webappslot: Web app slots
+    webappaccessrestriction: Web app access restrictions
+    webappvnetconnection: Web app virtual network connections
+    functionapp: Function Apps
+    apimanagement: API Management APIs
+    apimanagementservice: API Management services
+    appconfiguration: App Configuration stores
+    appconfigurationkey: App Configuration key-values
+- title: Manage storage
+  description: Create storage accounts, blob containers, file shares and lifecycle management policies.
+  success: Storage accounts, containers and shares exist as declared and re-running the job makes no changes.
+  components:
+    storageaccount: Storage accounts
+    storageaccountmanagementpolicy: Storage management policies
+    storageblob: Blob containers and objects
+    storageshare: File shares
+    storagesharedirectory: File share directories
+- title: Manage SQL databases
+  description: Manage Azure SQL servers, databases, elastic pools, firewall rules and managed instances
+    including retention policies.
+  success: SQL servers, databases and managed instances match the declared definition.
+  components:
+    sqlserver: SQL servers
+    sqldatabase: SQL databases
+    sqlelasticpool: Elastic pools
+    sqlfirewallrule: SQL firewall rules
+    sqlmanagedinstance: SQL managed instances
+    sqlmidatabase: Managed instance databases
+    sqlmidblongtermretentionpolicy: Long-term retention policies
+    sqlmidbshorttermretentionpolicy: Short-term retention policies
+- title: Manage open source and NoSQL databases and caches
+  description: Manage MySQL and PostgreSQL flexible servers, Cosmos DB accounts and Azure Cache for Redis.
+  success: Database servers, databases, firewall rules and caches exist as declared.
+  components:
+    mysqlflexibleserver: MySQL flexible servers
+    mysqlflexibledatabase: MySQL databases
+    mysqlflexibleconfiguration: MySQL configurations
+    mysqlflexiblefirewallrule: MySQL firewall rules
+    postgresqlflexibleserver: PostgreSQL flexible servers
+    postgresqlflexibledatabase: PostgreSQL databases
+    postgresqlflexibleconfiguration: PostgreSQL configurations
+    postgresqlflexiblefirewallrule: PostgreSQL firewall rules
+    postgresqlflexibleadministrator: PostgreSQL administrators
+    postgresqlflexiblebackup: PostgreSQL backups
+    postgresqlflexiblevirtualendpoint: PostgreSQL virtual endpoints
+    cosmosdbaccount: Cosmos DB accounts
+    rediscache: Redis caches
+    rediscachefirewallrule: Redis firewall rules
+- title: Manage identity and directory objects
+  description: Manage Microsoft Entra ID (Azure AD) applications, groups, users, service principals, passwords,
+    managed identities and federated credentials.
+  success: Directory objects and identities match the declared definition.
+  components:
+    adapplication: Entra ID applications
+    adgroup: Entra ID groups
+    adpassword: Application passwords
+    adserviceprincipal: Service principals
+    aduser: Entra ID users
+    userassignedidentity: User-assigned managed identities
+    federatedidentitycredential: Federated identity credentials
+    accesstoken: API access tokens
+- title: Manage access control and governance
+  description: Manage role definitions and assignments, resource locks, tags, management groups, resource
+    groups, subscriptions and delegated management.
+  success: Role assignments, locks, tags and groups match the declared definition, so access and governance
+    are consistent across subscriptions.
+  components:
+    roledefinition: Role definitions
+    roleassignment: Role assignments
+    lock: Resource locks
+    tags: Tags
+    managementgroup: Management groups
+    resourcegroup: Resource groups
+    subscription: Subscriptions
+    account: Account details
+    registrationassignment: Lighthouse registration assignments
+    registrationdefinition: Lighthouse registration definitions
+- title: Manage secrets, keys and certificates
+  description: Manage Key Vault instances and their secrets, keys, certificates and HSM security domains,
+    and read secrets in playbooks.
+  success: Vaults and their contents exist as declared and secrets can be retrieved at run time.
+  components:
+    keyvault: Key vaults
+    keyvaultsecret: Key Vault secrets
+    keyvaultkey: Key Vault keys
+    keyvaultcertificate: Key Vault certificates
+    keyvaultsecuritydomain: Key Vault security domains
+    lookup:azure_keyvault_secret: Key Vault secret lookup
+    lookup:azure_service_principal_attribute: Service principal attribute lookup
+- title: Monitor and alert on Azure resources
+  description: Configure Log Analytics workspaces, diagnostic settings, metric and activity log alerts,
+    action groups, data collection rules, network flow logs and Network Watcher.
+  success: Monitoring, alerting and logging settings match the declared definition.
+  components:
+    loganalyticsworkspace: Log Analytics workspaces
+    monitordiagnosticsetting: Diagnostic settings
+    monitorlogprofile: Log profiles
+    monitormetricalerts: Metric alerts
+    monitoractivitylogalerts: Activity log alerts
+    monitorscheduledqueryrules: Scheduled query alerts
+    monitoractiongroups: Action groups
+    monitordatacollectionendpoint: Data collection endpoints
+    monitordatacollectionrules: Data collection rules
+    monitordatacollectionruleassociation: Data collection rule associations
+    networkflowlog: Network flow logs
+    networkwatcher: Network Watcher
+    resourcehealthstates: Resource health states
+- title: Protect and back up workloads
+  description: Configure Recovery Services vaults, backup vaults, backup policies and VM or disk backups,
+    and check backup jobs.
+  success: Backup vaults, policies and protected items exist as declared and backup job status can be
+    queried.
+  components:
+    recoveryservicesvault: Recovery Services vaults
+    recoveryservicesvaultconfig: Recovery Services vault configuration
+    backupazurevm: VM backups
+    backuppolicy: Backup policies
+    vmbackuppolicy: VM backup policies
+    backupjob: Backup jobs
+    dataprotectionbackupvault: Backup vaults
+    dataprotectionbackupinstancedisk: Disk backup instances
+- title: Deploy infrastructure from templates and generic resources
+  description: Deploy ARM template deployments or create any Azure resource through the generic resource
+    module.
+  success: Templates and resources are deployed to the declared state.
+  components:
+    deployment: ARM template deployments
+    resource: Generic Azure resources
+- title: Manage data, analytics and AI services
+  description: Manage Azure Machine Learning workspaces, compute, models, jobs and endpoints; AI Search;
+    Cognitive Services; Databricks, Data Factory and HDInsight; and Batch accounts.
+  success: AI, analytics and batch resources exist as declared and endpoints can be invoked.
+  components:
+    ml_workspace: ML workspaces
+    ml_registry: ML registries
+    ml_compute: ML compute
+    ml_connection: ML connections
+    ml_data: ML data assets
+    ml_datastore: ML datastores
+    ml_environment: ML environments
+    ml_component: ML components
+    ml_model: ML models
+    ml_job: ML jobs
+    ml_schedule: ML schedules
+    ml_batch_endpoint: ML batch endpoints
+    ml_batch_deployment: ML batch deployments
+    ml_batch_endpoint_invoke: ML batch endpoint invocation
+    ml_online_endpoint: ML online endpoints
+    ml_online_deployment: ML online deployments
+    ml_online_endpoint_invoke: ML online endpoint invocation
+    cognitivesearch: AI Search services
+    searchdatasource: Search data sources
+    searchindex: Search indexes
+    searchindexer: Search indexers
+    searchskillset: Search skillsets
+    searchsynonymmap: Search synonym maps
+    cognitiveservicesaccount: Cognitive Services accounts
+    cognitiveservicesdeployment: Model deployments
+    cognitiveservicesmodel: Available models
+    databricksworkspace: Databricks workspaces
+    datafactory: Data factories
+    hdinsightcluster: HDInsight clusters
+    batchaccount: Batch accounts
+    batchaccountapplication: Batch applications
+    batchaccountapplicationpackage: Batch application packages
+    batchaccountpool: Batch pools
+- title: Manage messaging, events and IoT
+  description: Manage Event Hubs, Event Grid topics and subscriptions, Service Bus, Notification Hubs
+    and IoT Hub, and consume Event Hub and Service Bus events in Event-Driven Ansible.
+  success: Messaging and IoT resources exist as declared and events are delivered to rulebooks.
+  components:
+    eventhub: Event Hubs
+    eventgrid_topic: Event Grid topics
+    eventgrid_subscription: Event Grid subscriptions
+    eventgrid_topic_subscription: Event Grid topic subscriptions
+    servicebus: Service Bus namespaces
+    servicebusqueue: Service Bus queues
+    servicebustopic: Service Bus topics
+    servicebustopicsubscription: Service Bus subscriptions
+    servicebusrule: Service Bus rules
+    servicebussaspolicy: Service Bus SAS policies
+    notificationhub: Notification Hubs
+    iothub: IoT hubs
+    iothubconsumergroup: IoT Hub consumer groups
+    iotdevice: IoT devices
+    iotdevicemodule: IoT device modules
+    eda_event_source:azure_event_hub: Event Hub event source
+    eda_event_source:azure_service_bus: Service Bus event source
+- title: Automate operations and DevTest environments
+  description: Manage Azure Automation accounts and runbooks and DevTest Labs including VMs, networks,
+    images, policies and schedules.
+  success: Automation accounts and lab resources match the declared definition.
+  components:
+    automationaccount: Automation accounts
+    automationrunbook: Automation runbooks
+    devtestlab: DevTest Labs
+    devtestlabarmtemplate: Lab ARM templates
+    devtestlabartifact: Lab artifacts
+    devtestlabartifactsource: Lab artifact sources
+    devtestlabcustomimage: Lab custom images
+    devtestlabenvironment: Lab environments
+    devtestlabpolicy: Lab policies
+    devtestlabschedule: Lab schedules
+    devtestlabvirtualmachine: Lab virtual machines
+    devtestlabvirtualnetwork: Lab virtual networks
+- title: Discover Azure inventory and onboard Arc servers
+  description: Build dynamic inventory from Azure Resource Manager or Resource Graph queries, onboard
+    Azure Arc hosts and manage Arc extensions and SSH access.
+  success: Azure resources appear as inventory hosts and Arc machines are configured as declared.
+  components:
+    inventory:azure_rm: Azure Resource Manager inventory
+    inventory:azure_kql: Resource Graph (KQL) inventory
+    role:azure_arc: Azure Arc host configuration
+    arcmachineextensions: Arc machine extensions
+    arcssh: Arc SSH proxy

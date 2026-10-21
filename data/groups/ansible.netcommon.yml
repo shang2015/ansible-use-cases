@@ -1,0 +1,48 @@
+fqcn: ansible.netcommon
+product: Network automation (common)
+use_cases:
+- title: Connect to network devices
+  description: Connect over network_cli, NETCONF, httpapi, gRPC, libssh and persistent sockets.
+  components:
+    connection:network_cli: CLI over SSH
+    connection:netconf: NETCONF
+    connection:httpapi: HTTP API
+    connection:grpc: gRPC
+    connection:libssh: libssh
+    connection:persistent: Persistent socket
+    telnet: Telnet commands
+- title: Run commands and push configuration
+  description: Run CLI commands, push, back up and restore text configuration, and manage resource modules.
+  components:
+    cli_command: CLI commands
+    cli_config: CLI configuration
+    cli_backup: Configuration backup
+    cli_restore: Configuration restore
+    network_resource: Resource modules
+    net_ping: Reachability tests
+    net_put: Copy files to devices
+    net: Copy files from devices
+- title: Manage devices over NETCONF, RESTCONF and gRPC
+  description: Fetch and change configuration and state data and run operations on devices that expose
+    model-driven interfaces.
+  components:
+    netconf: NETCONF data
+    netconf_config: NETCONF configuration
+    netconf_rpc: NETCONF operations
+    restconf: RESTCONF data
+    restconf_config: RESTCONF configuration
+    grpc: gRPC data
+    grpc_config: gRPC configuration
+- title: Parse device output and prepare data
+  description: Parse CLI and XML output, work with VLAN lists, hash passwords and edit ACL entries in
+    playbooks.
+  components:
+    filter:parse_cli: CLI parsing
+    filter:parse_cli_textfsm: TextFSM parsing
+    filter:parse_xml: XML parsing
+    filter:vlan_expander: VLAN expansion
+    filter:vlan_parser: VLAN parsing
+    filter:pop_ace: ACL entry removal
+    filter:comp_type5: Type 5 password comparison
+    filter:type5_pw: Type 5 password hash
+    filter:hash_salt: Hash salt

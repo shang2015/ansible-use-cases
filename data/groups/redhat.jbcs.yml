@@ -1,0 +1,7 @@
+fqcn: redhat.jbcs
+product: "Red Hat JBoss Core Services"
+use_cases:
+- title: "Install JBoss Core Services"
+  description: "Install and configure JBoss Core Services."
+  components:
+    "role:jbcs": "JBoss Core Services"

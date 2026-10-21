@@ -1,0 +1,364 @@
+fqcn: ibm.isam
+product: IBM Security Verify Access (ISAM)
+notes:
+- Modules are generic wrappers around the ibmsecurity library; most functionality is delivered through
+  the bundled roles and example playbooks.
+use_cases:
+- title: Connect to appliances and run ISAM functions
+  description: Connect to Verify Access appliances through the ISAM connection plugin and run ibmsecurity
+    functions, CLI commands and connectivity checks.
+  components:
+    isam: ISAM module (run any ibmsecurity function)
+    isamadmin: ISAM admin module
+    connection:isam: ISAM appliance connection plugin
+    playbook:cli: CLI (playbook)
+    playbook:connectivity_check: Connectivity check (playbook)
+- title: Transform configuration data for appliances
+  description: Reshape YAML configuration, build XML policy documents and read configuration file trees
+    for use in ISAM tasks.
+  components:
+    filter:exclude: Exclude keys filter
+    filter:flatten_management_root: Flatten management root filter
+    filter:include_only: Include-only filter
+    filter:rename_key: Rename key filter
+    filter:to_nice_xml: Nice XML filter
+    filter:to_xml: XML filter
+    lookup:filetree: File tree lookup
+- title: Apply a baseline configuration to a fleet
+  description: Bootstrap appliances and apply a common site configuration, run sanity checks, or revert
+    appliances to their pre-configuration state.
+  components:
+    playbook:base.first_steps: First steps (playbook)
+    playbook:base.template: Template (playbook)
+    playbook:base_site: Base site (playbook)
+    playbook:bootstrap_local: Bootstrap local (playbook)
+    playbook:revert: Revert (playbook)
+    playbook:site: Site (playbook)
+    role:base: Base (role)
+    role:bootstrap_local: Bootstrap local (role)
+    role:common_handlers: Common handlers (role)
+    role:meta: Meta (role)
+    role:sanity_checks: Sanity checks (role)
+- title: Configure network, DNS and time settings
+  description: Set appliance interfaces, VLANs, IPv4 and DHCP addresses, static routes, host records,
+    hostname, DNS, NTP and TCP/IP tuning.
+  components:
+    playbook:base.add_interfaces: Add interfaces (playbook)
+    playbook:base.configure_dhcp: Configure DHCP (playbook)
+    playbook:base.configure_dns: Configure DNS (playbook)
+    playbook:base.configure_interfaces: Configure interfaces (playbook)
+    playbook:base.configure_static_routes: Configure static routes (playbook)
+    playbook:base.configure_time: Configure time (playbook)
+    playbook:base.delete_interfaces: Delete interfaces (playbook)
+    playbook:base.set_dns: Set DNS (playbook)
+    playbook:base.set_host_records: Set host records (playbook)
+    playbook:base.set_hostname: Set hostname (playbook)
+    playbook:base.set_listening_interfaces: Set listening interfaces (playbook)
+    role:add_network_ipv4: Add network IPv4 (role)
+    role:add_runtime_listening_interface: Add runtime listening interface (role)
+    role:add_static_route: Add static route (role)
+    role:config_dns: Config DNS (role)
+    role:config_ntp: Config NTP (role)
+    role:set_host_records: Set host records (role)
+    role:set_network_hostname: Set network hostname (role)
+    role:set_network_ipv4_dhcp: Set network IPv4 DHCP (role)
+    role:set_tcpip_tuning: Set tcpip tuning (role)
+    role:update_network_interface_vlan: Update network interface VLAN (role)
+    role:update_network_ipv4: Update network IPv4 (role)
+    role:update_static_route: Update static route (role)
+- title: Update firmware, fixpacks and licensing
+  description: Upload and install firmware updates and fixpacks, swap or back up firmware partitions,
+    import licenses, activate modules and report fix levels.
+  components:
+    playbook:base.activate_modules: Activate modules (playbook)
+    playbook:base.backup_firmware: Backup firmware (playbook)
+    playbook:base.install_fixpacks: Install fixpacks (playbook)
+    playbook:base.install_update: Install update (playbook)
+    playbook:base.install_updates: Install updates (playbook)
+    playbook:base.swap_firmware: Swap firmware (playbook)
+    playbook:base.upload_updates: Upload updates (playbook)
+    playbook:install_firmware: Install firmware (playbook)
+    playbook:install_fixpack: Install fixpack (playbook)
+    playbook:report_fix_levels: Report fix levels (playbook)
+    role:activate_module: Activate module (role)
+    role:delete_activation: Delete activation (role)
+    role:get_firmware: Get firmware (role)
+    role:get_fixpack: Get fixpack (role)
+    role:install_firmware: Install firmware (role)
+    role:install_fixpack: Install fixpack (role)
+    role:install_license: Install license (role)
+- title: Manage snapshots and application logs
+  description: Create, upload, download, apply and delete configuration snapshots, and export, archive
+    or delete application logs.
+  components:
+    playbook:base.apply_snapshot: Apply snapshot (playbook)
+    playbook:base.create_snapshot: Create snapshot (playbook)
+    playbook:base.delete_application_logs: Delete application logs (playbook)
+    playbook:base.delete_snapshots: Delete snapshots (playbook)
+    playbook:base.download_snapshots: Download snapshots (playbook)
+    playbook:base.export_application_logs: Export application logs (playbook)
+    playbook:base.upload_snapshot: Upload snapshot (playbook)
+    playbook:export_logs: Export logs (playbook)
+    playbook:rp_archive_logs: RP archive logs (playbook)
+    role:archive_logs: Archive logs (role)
+    role:create_snapshot: Create snapshot (role)
+    role:export_application_logs: Export application logs (role)
+- title: Monitor appliances and forward alerts
+  description: Set up SNMP monitoring, system alerts by email, SNMP or syslog, remote syslog forwarding
+    and audit settings, and collect CPU and memory statistics.
+  components:
+    playbook:report_cpu_statistics: Report CPU statistics (playbook)
+    playbook:report_memory_statistics: Report memory statistics (playbook)
+    playbook:system_alerts: System alerts (playbook)
+    role:add_system_alerts_rsyslog: Add system alerts rsyslog (role)
+    role:add_system_alerts_smtp: Add system alerts SMTP (role)
+    role:add_system_alerts_snmp: Add system alerts SNMP (role)
+    role:config_snmp_monitoring: Config SNMP monitoring (role)
+    role:config_snmp_monitoring_v3: Config SNMP monitoring v3 (role)
+    role:get_cpu_statistics: Get CPU statistics (role)
+    role:get_memory_statistics: Get memory statistics (role)
+    role:set_audit_configuration: Set audit configuration (role)
+    role:set_rsyslog_forwarder: Set rsyslog forwarder (role)
+    role:set_rsyslog_forwarder_sources: Set rsyslog forwarder sources (role)
+- title: Compare appliances and generate reports
+  description: Compare an appliance against a master configuration and generate reports on junctions and
+    other appliance details.
+  components:
+    isamcompare: Appliance comparison module
+    playbook:compare: Compare (playbook)
+    playbook:report_junctions: Report junctions (playbook)
+    role:execute_compare: Execute compare (role)
+    role:gen_report: Gen report (role)
+- title: Manage certificates and keystores
+  description: Create certificate databases, generate self-signed certificates and CSRs, import and export
+    personal and signer certificates, and update the management SSL certificate.
+  components:
+    playbook:base.configure_certificate_databases: Configure certificate databases (playbook)
+    playbook:base.configure_certificate_requests: Configure certificate requests (playbook)
+    playbook:base.configure_management_ssl: Configure management SSL (playbook)
+    playbook:base.configure_personal_certificates: Configure personal certificates (playbook)
+    playbook:base.configure_signer_certificates: Configure signer certificates (playbook)
+    playbook:base.create_ssl_certificate_databases: Create SSL certificate databases (playbook)
+    playbook:base.export_personal_certificates: Export personal certificates (playbook)
+    playbook:base.extract_certificates: Extract certificates (playbook)
+    playbook:base.generate_self_signed_certificates: Generate self signed certificates (playbook)
+    playbook:base.import_personal_certificates: Import personal certificates (playbook)
+    playbook:base.import_signer_certificates: Import signer certificates (playbook)
+    playbook:base.load_signer_certificates: Load signer certificates (playbook)
+    playbook:web.upload_personal_certificate: Upload personal certificate (playbook)
+    role:create_keystore: Create keystore (role)
+    role:import_ca_certs: Import ca certs (role)
+    role:import_certificate_db: Import certificate DB (role)
+    role:import_personal_cert: Import personal cert (role)
+    role:load_signer_cert: Load signer cert (role)
+    role:set_cert_replication: Set cert replication (role)
+    role:set_keystore_desc: Set keystore desc (role)
+    role:update_management_ssl_cert: Update management SSL cert (role)
+- title: Manage administrators, system accounts and management authorization
+  description: Change administrator passwords, create system accounts and groups, assign management authorization
+    roles and switch appliance authentication to an external directory.
+  components:
+    playbook:base.change_admin_password: Change admin password (playbook)
+    playbook:base.configure_sysaccounts: Configure sysaccounts (playbook)
+    playbook:base.create_sysaccount: Create sysaccount (playbook)
+    playbook:base.create_sysaccounts: Create sysaccounts (playbook)
+    playbook:base.set_management_authorization: Set management authorization (playbook)
+    playbook:base.set_password_sysaccounts: Set password sysaccounts (playbook)
+    playbook:change_passwords: Change passwords (playbook)
+    playbook:isam-va-sysaccount: ISAM va sysaccount (playbook)
+    playbook:switch_auth: Switch auth (playbook)
+    role:add_mgmtazn_role: Add mgmtazn role (role)
+    role:add_sysaccount_group: Add sysaccount group (role)
+    role:add_sysaccount_user: Add sysaccount user (role)
+    role:set_admin_cfg: Set admin cfg (role)
+    role:set_admin_pw: Set admin pw (role)
+    role:set_mgmtazn_role_feature: Set mgmtazn role feature (role)
+    role:set_mgmtazn_role_group: Set mgmtazn role group (role)
+    role:set_role_group: Set role group (role)
+    role:set_role_user: Set role user (role)
+    role:switch_auth: Switch auth (role)
+- title: Configure clusters, containers and runtime tuning
+  description: Join nodes to a cluster, replicate certificates and runtime state, tune advanced and runtime
+    parameters, load extensions and run Verify Access in containers.
+  components:
+    playbook:base.configure_advanced_tuning_parameters: Configure advanced tuning parameters (playbook)
+    playbook:base.configure_cluster: Configure cluster (playbook)
+    playbook:base.configure_containers: Configure containers (playbook)
+    playbook:base.configure_extensions: Configure extensions (playbook)
+    playbook:base.configure_runtime_tunings: Configure runtime tunings (playbook)
+    playbook:base.get_container_metadata: Get container metadata (playbook)
+    playbook:base.publish: Publish (playbook)
+    playbook:docker: Docker (playbook)
+    role:add_cluster_node: Add cluster node (role)
+    role:docker: Docker (role)
+    role:export_cluster_sign: Export cluster sign (role)
+    role:externalize_hvdb_db2: Externalize hvdb db2 (role)
+    role:set_advanced_tuning_parameter: Set advanced tuning parameter (role)
+    role:set_cluster_config: Set cluster config (role)
+    role:set_dsc_config: Set dsc config (role)
+    role:set_runtime_replication: Set runtime replication (role)
+    role:set_runtime_tuning_parameter: Set runtime tuning parameter (role)
+    role:upload_extension: Upload extension (role)
+- title: Configure reverse proxy instances and junctions
+  description: Create, configure, restart and delete WebSEAL reverse proxy instances, edit their configuration
+    stanzas, and manage junctions and failover cookies.
+  components:
+    playbook:isamcfg: Isamcfg (playbook)
+    playbook:rp_conf_update: RP conf update (playbook)
+    playbook:rp_operation: RP operation (playbook)
+    playbook:rp_restart: RP restart (playbook)
+    playbook:web.config_reverseproxy_aac: Config reverseproxy AAC (playbook)
+    playbook:web.config_reverseproxy_federations: Config reverseproxy federations (playbook)
+    playbook:web.config_reverseproxy_mmfa: Config reverseproxy MMFA (playbook)
+    playbook:web.config_reverseproxy_oauth: Config reverseproxy OAuth (playbook)
+    playbook:web.configure_reverseproxy_instances: Configure reverseproxy instances (playbook)
+    playbook:web.configure_reverseproxy_junctions: Configure reverseproxy junctions (playbook)
+    playbook:web.configure_reverseproxy_junctions_setall: Configure reverseproxy junctions setall (playbook)
+    playbook:web.configure_reverseproxy_wafcrssetup: Configure reverseproxy wafcrssetup (playbook)
+    playbook:web.create_reverseproxy_instances: Create reverseproxy instances (playbook)
+    playbook:web.delete_reverseproxy_instance: Delete reverseproxy instance (playbook)
+    playbook:web.get_reverseproxy_stanza: Get reverseproxy stanza (playbook)
+    playbook:web.restart_reverseproxy_instances: Restart reverseproxy instances (playbook)
+    role:add_junction: Add junction (role)
+    role:add_junction_servers: Add junction servers (role)
+    role:add_reverseproxy_conf: Add reverseproxy conf (role)
+    role:config_failover_cookie: Config failover cookie (role)
+    role:config_reverseproxy_aac: Config reverseproxy AAC (role)
+    role:config_reverseproxy_federation: Config reverseproxy federation (role)
+    role:config_reverseproxy_oauth: Config reverseproxy OAuth (role)
+    role:create_reverseproxy: Create reverseproxy (role)
+    role:delete_junction: Delete junction (role)
+    role:delete_reverseproxy_conf: Delete reverseproxy conf (role)
+    role:execute_rp_op: Execute RP op (role)
+    role:get_junction_details: Get junction details (role)
+    role:get_junctions: Get junctions (role)
+    role:get_reverseproxies: Get reverseproxies (role)
+    role:set_junction: Set junction (role)
+    role:set_reverseproxy_conf: Set reverseproxy conf (role)
+    role:update_reverseproxy_conf: Update reverseproxy conf (role)
+- title: Manage management root, SSO keys and web content
+  description: Upload management root files, SSO, LTPA and Kerberos key files, certificate mapping files,
+    URL mappings and HTTP transformation rules to the reverse proxy.
+  components:
+    playbook:web.configure_http_transformation_rules: Configure HTTP transformation rules (playbook)
+    playbook:web.configure_kerberos: Configure kerberos (playbook)
+    playbook:web.configure_management_root: Configure management root (playbook)
+    playbook:web.create_sso_keys: Create SSO keys (playbook)
+    playbook:web.export_sso_keys: Export SSO keys (playbook)
+    playbook:web.import_certificate_mapping_files: Import certificate mapping files (playbook)
+    playbook:web.import_keytab_files: Import keytab files (playbook)
+    playbook:web.import_sso_keys: Import SSO keys (playbook)
+    playbook:web.update_jmt_files: Update JMT files (playbook)
+    playbook:web.upload_dynurl_files: Upload dynurl files (playbook)
+    playbook:web.upload_http_transformation_files: Upload HTTP transformation files (playbook)
+    playbook:web.upload_jmt_files: Upload JMT files (playbook)
+    playbook:web.upload_ltpa_files: Upload LTPA files (playbook)
+    playbook:web.upload_management_root_files: Upload management root files (playbook)
+    playbook:web.upload_runtime_components: Upload runtime components (playbook)
+    role:create_mgmt_root_dir: Create mgmt root dir (role)
+    role:create_mgmt_root_file: Create mgmt root file (role)
+    role:delete_mgmt_root_file: Delete mgmt root file (role)
+    role:import_client_cert_mapping: Import client cert mapping (role)
+    role:import_http_transformation: Import HTTP transformation (role)
+    role:import_management_root: Import management root (role)
+    role:import_url_mapping: Import URL mapping (role)
+    role:update_auth_mech: Update auth mech (role)
+    role:update_management_root: Update management root (role)
+    role:upload_ltpa_key: Upload LTPA key (role)
+- title: Configure the policy server and user registry
+  description: Configure the policy server, federated directories, embedded LDAP, Redis and runtime components,
+    and run pdadmin commands.
+  components:
+    playbook:pdadmin: Pdadmin (playbook)
+    playbook:web.configure_federated_directories: Configure federated directories (playbook)
+    playbook:web.configure_policyserver: Configure policyserver (playbook)
+    playbook:web.configure_redis: Configure redis (playbook)
+    playbook:web.configure_runtime_components: Configure runtime components (playbook)
+    playbook:web.execute_pdadmin: Execute pdadmin (playbook)
+    playbook:web.set_embedded_ldap_admin_pw: Set embedded LDAP admin pw (playbook)
+    playbook:web.set_runtime_components: Set runtime components (playbook)
+    role:add_suffix: Add suffix (role)
+    role:config_fed_dir: Config FED dir (role)
+    role:config_policyserver: Config policyserver (role)
+    role:execute_pdadmin: Execute pdadmin (role)
+    role:web: Web (role)
+- title: Configure advanced access control and authentication policies
+  description: Define authentication mechanisms and policies, access control policies and attributes,
+    mapping rules, information points, FIDO2, mobile MFA and SCIM settings.
+  components:
+    playbook:aac.configure_access_control_attributes: Configure access control attributes (playbook)
+    playbook:aac.configure_access_control_policies: Configure access control policies (playbook)
+    playbook:aac.configure_access_control_policy_attachments: Configure access control policy attachments
+      (playbook)
+    playbook:aac.configure_access_control_policy_resources: Configure access control policy resources
+      (playbook)
+    playbook:aac.configure_advanced_configurations: Configure advanced configurations (playbook)
+    playbook:aac.configure_authentication_mechanisms: Configure authentication mechanisms (playbook)
+    playbook:aac.configure_authentication_policies: Configure authentication policies (playbook)
+    playbook:aac.configure_fido2: Configure FIDO2 (playbook)
+    playbook:aac.configure_mapping_rules: Configure mapping rules (playbook, aac)
+    playbook:aac.configure_mmfa: Configure MMFA (playbook)
+    playbook:aac.configure_policy_information_points: Configure policy information points (playbook)
+    playbook:aac.configure_runtime_template_root: Configure runtime template root (playbook)
+    playbook:aac.configure_scim: Configure SCIM (playbook)
+    playbook:aac.configure_server_connections: Configure server connections (playbook)
+    playbook:aac.configure_user_registry: Configure user registry (playbook)
+    playbook:aac.create_authentication_mechanisms: Create authentication mechanisms (playbook)
+    playbook:aac.create_authentication_policies: Create authentication policies (playbook)
+    playbook:aac.create_runtime_template_directories: Create runtime template directories (playbook)
+    playbook:aac.disable_all_authentication_policies: Disable all authentication policies (playbook)
+    playbook:aac.export_runtime_template_root: Export runtime template root (playbook)
+    playbook:aac.import_runtime_template_files: Import runtime template files (playbook)
+    role:aac: AAC (role)
+    role:add_attribute_source: Add attribute source (role)
+    role:add_server_connection_ldap: Add server connection LDAP (role)
+    role:add_server_connection_ws: Add server connection ws (role)
+    role:config_policy_attachments: Config policy attachments (role)
+    role:create_runtime_template_directories: Create runtime template directories (role)
+    role:import_runtime_template_file: Import runtime template file (role)
+    role:search_attribute_source: Search attribute source (role)
+    role:search_mapping_rule: Search mapping rule (role)
+    role:set_access_control_policy: Set access control policy (role)
+    role:set_access_policy: Set access policy (role)
+    role:set_attribute_source: Set attribute source (role)
+    role:set_auth_mech: Set auth mech (role)
+    role:set_auth_policy: Set auth policy (role)
+    role:set_mapping_rule: Set mapping rule (role)
+    role:update_advanced_configuration: Update advanced configuration (role)
+    role:upload_mapping_rule: Upload mapping rule (role)
+- title: Protect APIs with OAuth
+  description: Create API protection definitions and OAuth 2.0 clients for API access control.
+  components:
+    playbook:aac.configure_api_protection_clients: Configure API protection clients (playbook)
+    playbook:aac.configure_api_protection_definitions: Configure API protection definitions (playbook)
+    playbook:aac.create_api_protection_clients: Create API protection clients (playbook)
+    playbook:aac.create_api_protection_definitions: Create API protection definitions (playbook)
+    role:add_oauth_client: Add OAuth client (role)
+    role:add_oauth_definition: Add OAuth definition (role)
+    role:set_oauth_client: Set OAuth client (role)
+    role:set_oauth_definition: Set OAuth definition (role)
+- title: Configure identity federation
+  description: Create federations and partners, STS chain templates and points of contact for SAML and
+    OIDC single sign-on, including the federation cookbook scenarios.
+  components:
+    playbook:fed.configure_mapping_rules: Configure mapping rules (playbook, fed)
+    playbook:fed.configure_sts_chain_templates: Configure sts chain templates (playbook)
+    playbook:fed.configure_sts_chains: Configure sts chains (playbook)
+    playbook:fed.create_federation_partners: Create federation partners (playbook)
+    playbook:fed.create_federations: Create federations (playbook)
+    playbook:fed.set_current_poc_profile: Set current poc profile (playbook)
+    playbook:fed.set_user_registry_user_pw: Set user registry user pw (playbook)
+    playbook:federation_cookbook.fed_idp_part1: FED idp part1 (playbook)
+    playbook:federation_cookbook.fed_idp_part2: FED idp part2 (playbook)
+    playbook:federation_cookbook.fed_sp_part1: FED sp part1 (playbook)
+    playbook:federation_cookbook.fed_sp_part2: FED sp part2 (playbook)
+    role:add_chain_template: Add chain template (role)
+    role:add_federation: Add federation (role)
+    role:add_module_chain: Add module chain (role)
+    role:add_partner: Add partner (role)
+    role:fed: FED (role)
+    role:get_federation: Get federation (role)
+    role:set_current_point_of_contact: Set current point of contact (role)
+    role:set_federation: Set federation (role)
+    role:set_partner: Set partner (role)
+    role:update_point_of_contact: Update point of contact (role)

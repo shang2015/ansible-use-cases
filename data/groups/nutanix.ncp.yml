@@ -1,0 +1,354 @@
+fqcn: nutanix.ncp
+product: Nutanix (Prism Central, AHV, NDB, Karbon)
+notes:
+- 'Many resources have two module generations: the original modules and the newer `_v2` modules based
+  on the v4 API (labelled "(v4)").'
+use_cases:
+- title: Manage virtual machines
+  description: Create, update, clone, power on and off and delete AHV VMs, attach categories and serial
+    ports, export OVAs and revert VMs to recovery points.
+  components:
+    vm_revert_v2: VM revert (v4)
+    vms: VMs
+    vms_categories_v2: VMs categories (v4)
+    vms_clone: VM clones
+    vms_clone_v2: VMs clone (v4)
+    vms_info_v2: VMs info (v4)
+    vms_ova: OVA from VM
+    vms_power_actions_v2: VMs power actions (v4)
+    vms_serial_port_info_v2: VMs serial port info (v4)
+    vms_serial_port_v2: VMs serial port (v4)
+    vms_v2: VMs (v4)
+- title: Manage VM disks, NICs, CD-ROMs and GPUs
+  description: Add, change, migrate and remove VM disks, network interfaces, IP assignments, CD-ROM and
+    ISO media and GPUs.
+  components:
+    gpus_info_v2: GPUs info (v4)
+    gpus_v2: GPUs (v4)
+    vms_cd_rom_info_v2: VMs CD ROM info (v4)
+    vms_cd_rom_iso_v2: VMs CD ROM ISO (v4)
+    vms_cd_rom_v2: VMs CD ROM (v4)
+    vms_disks_info_v2: VMs disks info (v4)
+    vms_disks_migrate_v2: VMs disks migrate (v4)
+    vms_disks_v2: VMs disks (v4)
+    vms_nics_info_v2: VMs NICs info (v4)
+    vms_nics_ip_v2: VMs NICs IP (v4)
+    vms_nics_migrate_v2: VMs NICs migrate (v4)
+    vms_nics_v2: VMs NICs (v4)
+- title: Install Nutanix Guest Tools and customise guests
+  description: Install, upgrade and configure Nutanix Guest Tools and create guest customization profiles
+    and staged customizations.
+  components:
+    vm_guest_customization_profile_v2: VM guest customization profile (v4)
+    vm_guest_customization_profiles_info_v2: VM guest customization profiles info (v4)
+    vms_ngt_info_v2: VMs NGT info (v4)
+    vms_ngt_insert_iso_v2: VMs NGT insert ISO (v4)
+    vms_ngt_update_v2: VMs NGT update (v4)
+    vms_ngt_upgrade_v2: VMs NGT upgrade (v4)
+    vms_ngt_v2: VMs NGT (v4)
+    vms_stage_guest_customization_v2: VMs stage guest customization (v4)
+- title: Manage images, OVAs and VM templates
+  description: Upload and manage images, OVAs and AHV templates, deploy VMs from templates and OVAs, and
+    track template versions and guest OS updates.
+  components:
+    images: Images
+    images_info_v2: Images info (v4)
+    images_v2: Images (v4)
+    ova_deploy_vm_v2: OVA deploy VM (v4)
+    ova_download_v2: OVA download (v4)
+    ova_info_v2: OVA info (v4)
+    ova_v2: OVA (v4)
+    templates_deploy_v2: Templates deploy (v4)
+    templates_guest_os_v2: Templates guest OS (v4)
+    templates_info_v2: Templates info (v4)
+    templates_v2: Templates (v4)
+    templates_version_v2: Templates version (v4)
+    templates_versions_info_v2: Templates versions info (v4)
+- title: Control VM, image and template placement
+  description: Define affinity and anti-affinity policies, startup policies, image and template placement
+    policies and image rate limits.
+  components:
+    image_placement_policies: Image placement policies
+    image_placement_policies_info_v2: Image placement policies info (v4)
+    image_placement_policies_v2: Image placement policies (v4)
+    image_placement_policy: Image placement policy
+    image_rate_limit_policies_info_v2: Image rate limit policies info (v4)
+    image_rate_limit_policy_v2: Image rate limit policy (v4)
+    template_placement_policies_info_v2: Template placement policies info (v4)
+    template_placement_policy_v2: Template placement policy (v4)
+    vm_anti_affinity_policies_info_v2: VM anti affinity policies info (v4)
+    vm_anti_affinity_policy_compliance_info_v2: VM anti affinity policy compliance info (v4)
+    vm_anti_affinity_policy_v2: VM anti affinity policy (v4)
+    vm_host_affinity_policies_info_v2: VM host affinity policies info (v4)
+    vm_host_affinity_policy_re_enforce_v2: VM host affinity policy re enforce (v4)
+    vm_host_affinity_policy_v2: VM host affinity policy (v4)
+    vm_startup_policies_info_v2: VM startup policies info (v4)
+    vm_startup_policy_v2: VM startup policy (v4)
+- title: Manage subnets, VPCs and virtual switches
+  description: Create subnets, VPCs and virtual switches and map VPC traffic to virtual switches.
+  components:
+    subnets: Subnets
+    subnets_info_v2: Subnets info (v4)
+    subnets_v2: Subnets (v4)
+    virtual_switch_v2: Virtual switch (v4)
+    virtual_switches_info_v2: Virtual switches info (v4)
+    vpc_virtual_switch_mapping_v2: VPC virtual switch mapping (v4)
+    vpc_virtual_switch_mappings_info_v2: VPC virtual switch mappings info (v4)
+    vpcs: VPCs
+    vpcs_info_v2: VPCs info (v4)
+    vpcs_v2: VPCs (v4)
+- title: Configure routing, floating IPs and network functions
+  description: Manage routes and route tables, policy-based routing, floating IPs, network functions and
+    load balancer sessions.
+  components:
+    floating_ips: Floating IPS
+    floating_ips_info_v2: Floating IPS info (v4)
+    floating_ips_v2: Floating IPS (v4)
+    load_balancer_session_v2: Load balancer session (v4)
+    load_balancer_sessions_info_v2: Load balancer sessions info (v4)
+    network_function_v2: Network function (v4)
+    network_functions_info_v2: Network functions info (v4)
+    pbrs: Policy-based routing
+    pbrs_info_v2: Policy-based routing info (v4)
+    pbrs_v2: Policy-based routing (v4)
+    route_tables_info_v2: Route tables info (v4)
+    routes_info_v2: Routes info (v4)
+    routes_v2: Routes (v4)
+    static_routes: VPC static routes
+- title: Manage network security policies and groups
+  description: Create security policies, import and export them, and maintain address groups and service
+    groups used in rules.
+  components:
+    address_groups: Address groups
+    address_groups_info_v2: Address groups info (v4)
+    address_groups_v2: Address groups (v4)
+    security_policy_rules_info_v2: Security policy rules info (v4)
+    security_rules: Security policies
+    security_rules_export_v2: Security rules export (v4)
+    security_rules_import_v2: Security rules import (v4)
+    security_rules_info_v2: Security rules info (v4)
+    security_rules_v2: Security rules (v4)
+    service_groups: Service groups
+    service_groups_info_v2: Service groups info (v4)
+    service_groups_v2: Service groups (v4)
+- title: Manage storage containers, volume groups and object stores
+  description: Configure storage containers and policies, volume groups with their disks, iSCSI clients
+    and VM attachments, and object stores with their certificates.
+  components:
+    object_stores_certificate_download_v2: Object stores certificate download (v4)
+    object_stores_certificate_info_v2: Object stores certificate info (v4)
+    object_stores_certificate_v2: Object stores certificate (v4)
+    object_stores_info_v2: Object stores info (v4)
+    object_stores_stats_info_v2: Object stores stats info (v4)
+    object_stores_v2: Object stores (v4)
+    storage_containers_info_v2: Storage containers info (v4)
+    storage_containers_stats_v2: Storage containers stats (v4)
+    storage_containers_v2: Storage containers (v4)
+    storage_policies_info_v2: Storage policies info (v4)
+    storage_policies_v2: Storage policies (v4)
+    volume_groups_categories_v2: Volume groups categories (v4)
+    volume_groups_disks_info_v2: Volume groups disks info (v4)
+    volume_groups_disks_v2: Volume groups disks (v4)
+    volume_groups_info_v2: Volume groups info (v4)
+    volume_groups_iscsi_clients_info_v2: Volume groups iscsi clients info (v4)
+    volume_groups_iscsi_clients_v2: Volume groups iscsi clients (v4)
+    volume_groups_v2: Volume groups (v4)
+    volume_groups_vms_v2: Volume groups VMs (v4)
+- title: Manage clusters, nodes and hosts
+  description: Register clusters, add and remove nodes, discover unconfigured nodes, apply cluster profiles
+    and categories, and query hosts.
+  components:
+    clusters: Clusters
+    clusters_categories_v2: Clusters categories (v4)
+    clusters_info_v2: Clusters info (v4)
+    clusters_nodes_v2: Clusters nodes (v4)
+    clusters_profile_association_v2: Clusters profile association (v4)
+    clusters_profiles_info_v2: Clusters profiles info (v4)
+    clusters_profiles_v2: Clusters profiles (v4)
+    clusters_v2: Clusters (v4)
+    discover_unconfigured_nodes_v2: Discover unconfigured nodes (v4)
+    hosts: Hosts
+    hosts_info_v2: Hosts info (v4)
+    nodes_network_info_v2: Nodes network info (v4)
+- title: 'Secure clusters: certificates, SNMP, passwords and key management'
+  description: Update SSL certificates, configure SNMP, rotate system passwords, manage key management
+    servers, check STIG rules and accept the EULA.
+  components:
+    eula_accept_v2: EULA accept (v4)
+    eula_info_v2: EULA info (v4)
+    key_management_server_info_v2: Key management server info (v4)
+    key_management_server_v2: Key management server (v4)
+    password_managers_info_v2: Password managers info (v4)
+    password_managers_v2: Password managers (v4)
+    snmp_config_info_v2: SNMP config info (v4)
+    snmp_status_v2: SNMP status (v4)
+    snmp_transport_v2: SNMP transport (v4)
+    snmp_trap_info_v2: SNMP trap info (v4)
+    snmp_trap_v2: SNMP trap (v4)
+    snmp_user_info_v2: SNMP user info (v4)
+    snmp_user_v2: SNMP user (v4)
+    ssl_certificates_info_v2: SSL certificates info (v4)
+    ssl_certificates_v2: SSL certificates (v4)
+    stigs_info_v2: STIGs info (v4)
+- title: Upgrade software with Lifecycle Manager
+  description: Configure LCM, run inventory and prechecks and perform software and firmware upgrades.
+  components:
+    lcm_config_info_v2: LCM config info (v4)
+    lcm_config_v2: LCM config (v4)
+    lcm_entities_info_v2: LCM entities info (v4)
+    lcm_inventory_v2: LCM inventory (v4)
+    lcm_prechecks_v2: LCM prechecks (v4)
+    lcm_status_info_v2: LCM status info (v4)
+    lcm_upgrades_v2: LCM upgrades (v4)
+- title: Image nodes with Foundation
+  description: Discover nodes, upload hypervisor and AOS images, set IPMI addresses and image nodes and
+    create clusters with Foundation or Foundation Central.
+  components:
+    foundation: Node imaging and cluster creation
+    foundation_aos_packages: Foundation AOS packages
+    foundation_bmc_ipmi_config: Foundation BMC IPMI config
+    foundation_central: Foundation Central imaging
+    foundation_central_api_keys: Foundation Central API keys
+    foundation_central_imaged_clusters: Foundation central imaged clusters
+    foundation_central_imaged_nodes: Foundation central imaged nodes
+    foundation_discover_nodes: Foundation discover nodes
+    foundation_hypervisor_images: Foundation hypervisor images
+    foundation_image_upload: Foundation image upload
+    foundation_node_network: Foundation node network
+- title: Deploy and operate Prism Central
+  description: Deploy and register Prism Central, configure backup targets, restore from backups and track
+    or abort tasks.
+  components:
+    pc_backup_target_info_v2: Prism Central backup target info (v4)
+    pc_backup_target_v2: Prism Central backup target (v4)
+    pc_config_info_v2: Prism Central config info (v4)
+    pc_deploy_v2: Prism Central deploy (v4)
+    pc_registration_v2: Prism Central registration (v4)
+    pc_restorable_domain_managers_info_v2: Prism Central restorable domain managers info (v4)
+    pc_restore_points_info_v2: Prism Central restore points info (v4)
+    pc_restore_source_info_v2: Prism Central restore source info (v4)
+    pc_restore_source_v2: Prism Central restore source (v4)
+    pc_restore_v2: Prism Central restore (v4)
+    pc_task_abort_v2: Prism Central task abort (v4)
+    pc_tasks_info_v2: Prism Central tasks info (v4)
+    pc_unregistration_v2: Prism Central unregistration (v4)
+- title: Protect data and run disaster recovery
+  description: Define protection policies and rules, recovery plans and recovery plan jobs, and create,
+    replicate and restore recovery points and protected resources.
+  components:
+    promote_protected_resources_v2: Promote protected resources (v4)
+    protected_resources_info_v2: Protected resources info (v4)
+    protection_policies_info_v2: Protection policies info (v4)
+    protection_policies_v2: Protection policies (v4)
+    protection_rules: Protection rules
+    recovery_plan_jobs: Recovery plan jobs
+    recovery_plans: Recovery plans
+    recovery_point_replicate_v2: Recovery point replicate (v4)
+    recovery_point_restore_v2: Recovery point restore (v4)
+    recovery_points_info_v2: Recovery points info (v4)
+    recovery_points_v2: Recovery points (v4)
+    restore_protected_resources_v2: Restore protected resources (v4)
+    vm_recovery_point_info_v2: VM recovery point info (v4)
+- title: Manage users, roles and authorization
+  description: Manage Prism Central users, user groups, roles, role memberships, access control and authorization
+    policies, entity groups and API keys.
+  components:
+    acps: Access control policies
+    authorization_policies_info_v2: Authorization policies info (v4)
+    authorization_policies_v2: Authorization policies (v4)
+    entity_group_v2: Entity group (v4)
+    entity_groups_info_v2: Entity groups info (v4)
+    iam_entities_info_v2: IAM entities info (v4)
+    operations_info_v2: Operations info (v4)
+    permissions: Permissions
+    role_membership_v2: Role membership (v4)
+    role_memberships_info_v2: Role memberships info (v4)
+    roles: Roles
+    roles_info_v2: Roles info (v4)
+    roles_v2: Roles (v4)
+    user_groups: User groups
+    user_groups_info_v2: User groups info (v4)
+    user_groups_v2: User groups (v4)
+    users: Users
+    users_api_key_info_v2: Users API key info (v4)
+    users_api_key_v2: Users API key (v4)
+    users_info_v2: Users info (v4)
+    users_revoke_api_key_v2: Users revoke API key (v4)
+    users_v2: Users (v4)
+- title: Integrate directory services and SAML
+  description: Connect directory services and SAML identity providers, test connections, search directory
+    users and groups and map directory groups to categories.
+  components:
+    category_mapping_v2: Category mapping (v4)
+    category_mappings_info_v2: Category mappings info (v4)
+    directory_server_config_v2: Directory server config (v4)
+    directory_server_configs_info_v2: Directory server configs info (v4)
+    directory_service_search_v2: Directory service search (v4)
+    directory_services_connection_v2: Directory services connection (v4)
+    directory_services_info_v2: Directory services info (v4)
+    directory_services_v2: Directory services (v4)
+    saml_identity_providers_info_v2: SAML identity providers info (v4)
+    saml_identity_providers_v2: SAML identity providers (v4)
+- title: Organise resources with categories, projects and resource groups
+  description: Create categories and projects and group resources for tenancy and policy assignment.
+  components:
+    categories: Categories
+    categories_info_v2: Categories info (v4)
+    categories_v2: Categories (v4)
+    project_v2: Project (v4)
+    projects: Projects
+    projects_info_v2: Projects info (v4)
+    resource_group_v2: Resource group (v4)
+    resource_groups_info_v2: Resource groups info (v4)
+- title: Provision and clone databases with NDB
+  description: Provision, register, scale, clone, refresh and restore databases and database server VMs
+    with Nutanix Database Service.
+  components:
+    ndb_authorize_db_server_vms: NDB authorize DB server VMs
+    ndb_clones: Database clones info
+    ndb_database_clone_refresh: NDB database clone refresh
+    ndb_database_clones: NDB database clones
+    ndb_database_restore: NDB database restore
+    ndb_database_scale: NDB database scale
+    ndb_databases: NDB databases
+    ndb_db_server_vms: NDB DB server VMs
+    ndb_db_servers: DB server VMs info
+    ndb_linked_databases: NDB linked databases
+    ndb_register_database: NDB register database
+    ndb_register_db_server_vm: NDB register DB server VM
+- title: Protect databases with NDB snapshots and time machines
+  description: Take, replicate and delete database snapshots, catch up logs, manage time machines and
+    define SLAs.
+  components:
+    ndb_database_log_catchup: NDB database log catchup
+    ndb_database_snapshots: NDB database snapshots
+    ndb_replicate_database_snapshots: NDB replicate database snapshots
+    ndb_slas: NDB SLAs
+    ndb_snapshots: Snapshots info
+    ndb_time_machine_clusters: NDB time machine clusters
+    ndb_time_machines: Time machines info
+- title: Configure NDB infrastructure and policies
+  description: Manage NDB clusters, profiles, VLANs, stretched VLANs, tags and maintenance windows and
+    tasks.
+  components:
+    ndb_clusters: NDB clusters
+    ndb_maintenance_tasks: NDB maintenance tasks
+    ndb_maintenance_window: NDB maintenance window
+    ndb_maintenance_windows: NDB maintenance windows
+    ndb_profiles: NDB profiles
+    ndb_stretched_vlans: NDB stretched VLANs
+    ndb_tags: NDB tags
+    ndb_vlans: NDB VLANs
+- title: Run Kubernetes clusters with Karbon
+  description: Create and delete Karbon Kubernetes clusters and node pools and manage private registries.
+  components:
+    karbon_clusters: Karbon clusters
+    karbon_clusters_node_pools: Karbon clusters node pools
+    karbon_registries: Karbon registries
+- title: Build inventories and resolve entity IDs
+  description: Use dynamic inventory plugins for Prism hosts and VMs and look up entity external IDs.
+  components:
+    inventory:ntnx_prism_host_inventory_v2: Prism hosts inventory (v4)
+    inventory:ntnx_prism_vm_inventory: Prism VMs inventory
+    inventory:ntnx_prism_vm_inventory_v2: Prism VMs inventory (v4)
+    lookup:ntnx_ext_id: External ID lookup plugin

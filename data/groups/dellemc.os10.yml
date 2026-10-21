@@ -1,0 +1,69 @@
+fqcn: dellemc.os10
+product: Dell EMC SmartFabric OS10
+notes:
+  - Most configuration is delivered as roles that render templates and push them with os10_config; the role names map one to one to OS10 feature areas.
+use_cases:
+  - title: Run commands and manage device configuration
+    description: Run commands on OS10 switches, manage configuration sections and push a backup running configuration to the device.
+    components:
+      os10_command: Run commands
+      os10_config: Configuration sections
+      os10: Action plugin documentation stub
+      role:os10_copy_config: Push backup configuration
+      role:os10_template: Structured CLI output
+      textfsm_parser: TextFSM parser
+      base_xml_to_dict: XML to JSON conversion
+  - title: Configure interfaces, VLANs and Layer 2
+    description: Configure interfaces, VLANs, link aggregation, LLDP, spanning tree, VLT and uplink settings.
+    components:
+      role:os10_interface: Interfaces
+      role:os10_vlan: VLANs
+      role:os10_lag: Link aggregation (LAG)
+      role:os10_lldp: LLDP
+      role:os10_xstp: Spanning tree
+      role:os10_vlt: VLT
+      role:os10_uplink: Uplink failure detection
+  - title: Configure routing and Layer 3 services
+    description: Configure BGP, VRFs, ECMP, VRRP, BFD, prefix lists and route maps.
+    components:
+      role:os10_bgp: BGP
+      role:os10_vrf: VRFs
+      role:os10_ecmp: ECMP groups
+      role:os10_vrrp: VRRP
+      role:os10_bfd: BFD
+      role:os10_prefix_list: Prefix lists
+      role:os10_route_map: Route maps
+  - title: Configure security, access and QoS policy
+    description: Configure AAA, users, access control lists, flow monitoring, IPv6 RA guard and QoS attributes.
+    components:
+      role:os10_aaa: AAA
+      role:os10_users: Local users
+      role:os10_acl: Access control lists
+      role:os10_flow_monitor: ACL flow-based monitoring
+      role:os10_raguard: IPv6 RA guard
+      role:os10_qos: QoS
+  - title: Administer the switch system and software
+    description: Configure system attributes, DNS, NTP, logging and SNMP, and install or upgrade OS10 software images.
+    components:
+      role:os10_system: System attributes
+      role:os10_dns: DNS
+      role:os10_ntp: NTP
+      role:os10_logging: Logging
+      role:os10_snmp: SNMP
+      role:os10_image_upgrade: Software image upgrade
+  - title: Validate the network and fabric state
+    description: Validate BGP neighbors, MTU, VLT peers and wiring, and collect system network information from all switches in the fabric.
+    components:
+      role:os10_network_validation: Network validation
+      role:os10_fabric_summary: Fabric summary
+      show_system_network_summary: System network summary
+      bgp_validate: BGP neighbor validation
+      mtu_validate: MTU validation
+      vlt_validate: VLT validation
+      wiring_validate: Wiring validation
+  - title: Deploy data center fabrics
+    description: Deploy a CLOS leaf-spine fabric with eBGP or a VXLAN EVPN fabric across OS10 switches.
+    components:
+      role:os10_vxlan: VXLAN and EVPN
+      playbook:clos_fabric_ebgp.datacenter: CLOS fabric with eBGP
+      playbook:vxlan_evpn.datacenter: VXLAN EVPN fabric

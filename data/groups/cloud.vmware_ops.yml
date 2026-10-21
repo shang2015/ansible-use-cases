@@ -1,0 +1,61 @@
+fqcn: cloud.vmware_ops
+product: VMware vSphere
+use_cases:
+- title: Provision virtual machines and templates
+  description: Provision VMs on vCenter or ESXi, deploy OVF files and custom Windows templates, and export
+    VMs as OVF.
+  components:
+    role:provision_vm: VM provisioning
+    role:deploy_ovf: OVF deployment
+    role:deploy_custom_windows_template: Custom Windows templates
+    role:export_vm_as_ovf: OVF export
+    playbook:provision_vm.manage_vm: Provision a VM
+    playbook:provision_vm.deploy_ovf: Provision a VM from OVF
+    playbook:deploy_custom_windows_template: Deploy Windows template
+    playbook:export_vm_as_ovf: Export VM as OVF
+- title: Manage VM snapshots
+  description: Create, remove and revert VM snapshots.
+  components:
+    role:snapshot_management: Snapshot management
+    playbook:snapshot_management.create_snapshot: Create a snapshot
+    playbook:snapshot_management.remove_snapshot: Remove a snapshot
+    playbook:snapshot_management.remove_all_snapshots: Remove all snapshots
+    playbook:snapshot_management.revert_to_a_snapshot: Revert to a snapshot
+- title: Manage ESXi hosts and clusters
+  description: Add, remove and reconnect ESXi hosts, control maintenance mode, and configure cluster settings
+    and high availability.
+  components:
+    role:esxi_maintenance_mode: ESXi maintenance mode
+    role:vcenter_host_connection: ESXi host connection to vCenter
+    role:cluster_settings: Cluster settings
+    playbook:esxi_management.add_esxi_host_to_vcenter: Add ESXi host
+    playbook:esxi_management.remove_esxi_host_from_vcenter: Remove ESXi host
+    playbook:esxi_management.reconnect_esxi_host_in_vcenter: Reconnect ESXi host
+    playbook:esxi_management.enable_maintenance_mode: Enter maintenance mode
+    playbook:esxi_management.disable_maintenance_mode: Exit maintenance mode
+    playbook:cluster_settings.manage_all_settings: Manage cluster settings
+    playbook:cluster_settings.enable_high_availability: Enable high availability
+    playbook:cluster_settings.disable_high_availability: Disable high availability
+- title: Deploy vCenter and virtual ESXi infrastructure
+  description: Deploy a vCenter appliance from the VCSA ISO and provision virtual ESXi host VMs.
+  components:
+    role:provision_vcenter: vCenter appliance
+    role:provision_virtual_esxi: Virtual ESXi hosts
+    playbook:provision_vcenter.provision_vcsa_on_esxi: vCenter appliance on ESXi
+- title: Manage content, folders, ISOs and system settings
+  description: Manage content libraries and vCenter folders, upload ISO files to datastores and configure
+    vCenter or ESXi system settings.
+  components:
+    role:content_library: Content libraries
+    role:manage_folder: Folders
+    role:upload_iso_to_datastore: ISO uploads
+    role:system_settings: System settings
+    playbook:manage_content_library: Manage content library
+    playbook:manage_folder: Manage folder
+    playbook:upload_iso_to_datastore: Upload ISO to datastore
+    playbook:system_settings: Manage vCenter security
+- title: Gather VMware information
+  description: Collect information about vCenter guests, storage, licenses, clusters and appliances.
+  components:
+    role:info: VMware information
+    playbook:info: Gather VMware information

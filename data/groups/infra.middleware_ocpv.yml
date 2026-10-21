@@ -1,0 +1,18 @@
+fqcn: infra.middleware_ocpv
+product: Red Hat OpenShift Virtualization
+use_cases:
+- title: Deploy a lab on OpenShift Virtualization
+  description: Install OpenShift Virtualization, provision the environment, deploy the collection content
+    and configure Ansible Automation Platform.
+  components:
+    role:ocpv_install: OpenShift Virtualization installation
+    role:deploy_collection: Collection deployment
+    role:configure_aap: AAP configuration
+    playbook:install_ocpv: Install OpenShift Virtualization
+    playbook:provision: Provisioning
+    playbook:deploy_lab: Deploy lab
+- title: Discover virtual machines dynamically
+  description: Discover VirtualMachine instances from Kubernetes.
+  components:
+    role:k8s_discovery: VM discovery
+    playbook:k8s_discovery: Dynamic VM discovery

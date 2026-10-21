@@ -1,0 +1,14 @@
+fqcn: ansible.snmp
+product: "SNMP"
+use_cases:
+- title: "Query and set values on devices over SNMP"
+  description: "Run SNMP get, set and walk operations on OIDs using SNMP v1, v2c or v3 USM connections."
+  components:
+    "get": "SNMP get"
+    "set": "SNMP set"
+    "walk": "SNMP walk"
+    "connection:v1": "SNMP v1 connection"
+    "connection:v2c": "SNMP v2c connection"
+    "connection:v3_usm": "SNMP v3 USM connection"
+    "playbook:int_looper": "Interface loop test playbook"
+    "playbook:site": "Site test playbook"

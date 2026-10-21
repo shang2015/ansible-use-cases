@@ -1,0 +1,1131 @@
+fqcn: netscaler.adc
+product: Citrix NetScaler ADC
+use_cases:
+- title: Configure load balancing virtual servers and policies
+  description: Create load balancing virtual servers, their policy and service bindings, persistence, groups, routes
+    and parameters.
+  components:
+    lbaction: Lb action
+    lbglobal_lbpolicy_binding: LB global to lb policy binding
+    lbgroup: LB group
+    lbgroup_lbvserver_binding: LB group to Load Balancing Virtual Server binding
+    lbparameter: LB parameter
+    lbpersistentsessions: Persistence session
+    lbpolicy: Lb policy
+    lbpolicylabel: Lb policy label
+    lbpolicylabel_lbpolicy_binding: Lb policy label to lb policy binding
+    lbprofile: LB profile
+    lbroute: LB route
+    lbroute6: LB route6
+    lbsipparameters: SIP parameters
+    lbvserver: Load Balancing Virtual Server
+    lbvserver_analyticsprofile_binding: Load Balancing Virtual Server to Analytics profile binding
+    lbvserver_appflowpolicy_binding: Load Balancing Virtual Server to AppFlow policy binding
+    lbvserver_appfwpolicy_binding: Load Balancing Virtual Server to application firewall policy binding
+    lbvserver_appqoepolicy_binding: Load Balancing Virtual Server to AppQoS policy binding
+    lbvserver_auditnslogpolicy_binding: Load Balancing Virtual Server to ns log policy binding
+    lbvserver_auditsyslogpolicy_binding: Load Balancing Virtual Server to system log policy binding
+    lbvserver_authorizationpolicy_binding: Load Balancing Virtual Server to authorization policy binding
+    lbvserver_botpolicy_binding: Load Balancing Virtual Server to Bot policy binding
+    lbvserver_cachepolicy_binding: Load Balancing Virtual Server to Integrated Cache policy binding
+    lbvserver_cmppolicy_binding: Load Balancing Virtual Server to compression policy binding
+    lbvserver_contentinspectionpolicy_binding: Load Balancing Virtual Server to ContentInspection policy binding
+    lbvserver_dnspolicy64_binding: Load Balancing Virtual Server to dns64 policy binding
+    lbvserver_feopolicy_binding: Load Balancing Virtual Server to Front end optimization policy binding
+    lbvserver_lbpolicy_binding: Load Balancing Virtual Server to lb policy binding
+    lbvserver_responderpolicy_binding: Load Balancing Virtual Server to responder policy binding
+    lbvserver_rewritepolicy_binding: Load Balancing Virtual Server to rewrite policy binding
+    lbvserver_service_binding: Load Balancing Virtual Server to service binding
+    lbvserver_servicegroup_binding: Load Balancing Virtual Server to service group binding
+    lbvserver_spilloverpolicy_binding: Load Balancing Virtual Server to Spillover policy binding
+    lbvserver_tmtrafficpolicy_binding: Load Balancing Virtual Server to TM traffic policy binding
+    lbvserver_transformpolicy_binding: Load Balancing Virtual Server to URL Transformation policy binding
+    lbvserver_videooptimizationdetectionpolicy_binding: Load Balancing Virtual Server to videooptimization detectionpolicy
+      binding
+    lbvserver_videooptimizationpacingpolicy_binding: Load Balancing Virtual Server to videooptimization pacingpolicy
+      binding
+    uservserver: Virtual server
+    vserver: Virtual server
+- title: Define backend servers, services and health monitors
+  description: Define servers, services and service groups, health monitors, weighted metric tables, database load
+    balancing profiles and Kafka clusters that load balancers distribute traffic to.
+  components:
+    dbdbprofile: DB profile
+    dbsmonitors: DB monitors
+    dbuser: DB user
+    kafkacluster: Kafka cluster
+    kafkacluster_servicegroup_binding: Kafka cluster to service group binding
+    lbmetrictable: Metric table
+    lbmetrictable_metric_binding: Metric table to metric binding
+    lbmonitor: Monitor
+    lbmonitor_metric_binding: Monitor to metric binding
+    lbmonitor_sslcertkey_binding: Monitor to certificate key binding
+    lbwlm: Web log manager
+    lbwlm_lbvserver_binding: Web log manager to Load Balancing Virtual Server binding
+    server: Server
+    service: Service
+    service_lbmonitor_binding: Service to monitor binding
+    servicegroup: Service group
+    servicegroup_lbmonitor_binding: Service group to monitor binding
+    servicegroup_servicegroupmember_binding: Service group to servicegroupmember binding
+- title: Configure global server load balancing and geolocation
+  description: Configure GSLB sites, services, service groups and virtual servers, LDNS entries and geolocation
+    data for multi-site traffic distribution.
+  components:
+    gslbconfig: Gslb config
+    gslbldnsentries: LDNS entry
+    gslbldnsentry: LDNS entry
+    gslbparameter: GSLB parameter
+    gslbservice: GSLB service
+    gslbservice_dnsview_binding: GSLB service to DNS view binding
+    gslbservice_lbmonitor_binding: GSLB service to monitor binding
+    gslbservicegroup: GSLB service group
+    gslbservicegroup_gslbservicegroupmember_binding: GSLB service group to gslbservicegroupmember binding
+    gslbservicegroup_lbmonitor_binding: GSLB service group to monitor binding
+    gslbsite: GSLB site
+    gslbvserver: Global Server Load Balancing Virtual Server
+    gslbvserver_domain_binding: Global Server Load Balancing Virtual Server to domain binding
+    gslbvserver_gslbservice_binding: Global Server Load Balancing Virtual Server to GSLB service binding
+    gslbvserver_gslbservicegroup_binding: Global Server Load Balancing Virtual Server to GSLB service group binding
+    gslbvserver_lbpolicy_binding: Global Server Load Balancing Virtual Server to lb policy binding
+    gslbvserver_spilloverpolicy_binding: Global Server Load Balancing Virtual Server to Spillover policy binding
+    location: Location
+    locationdata: Location data
+    locationfile: Location file
+    locationfile6: Location file6
+    locationparameter: Location parameter
+- title: Configure content switching and cache redirection
+  description: Route requests with content switching virtual servers, actions and policies, and with cache redirection
+    virtual servers and policies.
+  components:
+    crpolicy: Cache redirection policy
+    crvserver: CR virtual server
+    crvserver_analyticsprofile_binding: CR virtual server to Analytics profile binding
+    crvserver_appflowpolicy_binding: CR virtual server to AppFlow policy binding
+    crvserver_appfwpolicy_binding: CR virtual server to application firewall policy binding
+    crvserver_appqoepolicy_binding: CR virtual server to AppQoS policy binding
+    crvserver_cachepolicy_binding: CR virtual server to Integrated Cache policy binding
+    crvserver_cmppolicy_binding: CR virtual server to compression policy binding
+    crvserver_crpolicy_binding: CR virtual server to cache redirection policy binding
+    crvserver_cspolicy_binding: CR virtual server to content-switching policy binding
+    crvserver_feopolicy_binding: CR virtual server to Front end optimization policy binding
+    crvserver_icapolicy_binding: CR virtual server to ICA policy binding
+    crvserver_lbvserver_binding: CR virtual server to Load Balancing Virtual Server binding
+    crvserver_policymap_binding: CR virtual server to map policy binding
+    crvserver_responderpolicy_binding: CR virtual server to responder policy binding
+    crvserver_rewritepolicy_binding: CR virtual server to rewrite policy binding
+    crvserver_spilloverpolicy_binding: CR virtual server to Spillover policy binding
+    csaction: Content Switching action
+    csparameter: CS parameter
+    cspolicy: Content-switching policy
+    cspolicylabel: CS policy label
+    cspolicylabel_cspolicy_binding: CS policy label to content-switching policy binding
+    csvserver: CS virtual server
+    csvserver_analyticsprofile_binding: CS virtual server to Analytics profile binding
+    csvserver_appflowpolicy_binding: CS virtual server to AppFlow policy binding
+    csvserver_appfwpolicy_binding: CS virtual server to application firewall policy binding
+    csvserver_appqoepolicy_binding: CS virtual server to AppQoS policy binding
+    csvserver_auditnslogpolicy_binding: CS virtual server to ns log policy binding
+    csvserver_auditsyslogpolicy_binding: CS virtual server to system log policy binding
+    csvserver_authorizationpolicy_binding: CS virtual server to authorization policy binding
+    csvserver_botpolicy_binding: CS virtual server to Bot policy binding
+    csvserver_cachepolicy_binding: CS virtual server to Integrated Cache policy binding
+    csvserver_cmppolicy_binding: CS virtual server to compression policy binding
+    csvserver_contentinspectionpolicy_binding: CS virtual server to ContentInspection policy binding
+    csvserver_cspolicy_binding: CS virtual server to content-switching policy binding
+    csvserver_domain_binding: CS virtual server to domain binding
+    csvserver_feopolicy_binding: CS virtual server to Front end optimization policy binding
+    csvserver_gslbvserver_binding: CS virtual server to Global Server Load Balancing Virtual Server binding
+    csvserver_lbvserver_binding: CS virtual server to Load Balancing Virtual Server binding
+    csvserver_responderpolicy_binding: CS virtual server to responder policy binding
+    csvserver_rewritepolicy_binding: CS virtual server to rewrite policy binding
+    csvserver_spilloverpolicy_binding: CS virtual server to Spillover policy binding
+    csvserver_tmtrafficpolicy_binding: CS virtual server to TM traffic policy binding
+    csvserver_transformpolicy_binding: CS virtual server to URL Transformation policy binding
+    csvserver_vpnvserver_binding: CS virtual server to VPN virtual server binding
+- title: Accelerate content with caching, compression and optimization
+  description: Configure integrated caching, HTTP compression, front-end optimization, video optimization and AppQoE
+    policies and actions.
+  components:
+    appqoeaction: AppQoS action
+    appqoecustomresp: AppQoE custom response page
+    appqoeparameter: QOS parameter
+    appqoepolicy: AppQoS policy
+    cachecontentgroup: Integrated Cache content group
+    cacheforwardproxy: Forward proxy
+    cacheglobal_cachepolicy_binding: CACHE global to Integrated Cache policy binding
+    cacheobject: Cache object
+    cacheparameter: Cache parameter
+    cachepolicy: Integrated Cache policy
+    cachepolicylabel: Cache policy label
+    cachepolicylabel_cachepolicy_binding: Cache policy label to Integrated Cache policy binding
+    cacheselector: Cache selector
+    cmpaction: Compression action
+    cmpglobal_cmppolicy_binding: CMP global to compression policy binding
+    cmpparameter: CMP parameter
+    cmppolicy: Compression policy
+    cmppolicylabel: Compression policy label
+    cmppolicylabel_cmppolicy_binding: Compression policy label to compression policy binding
+    feoaction: Front end optimization action
+    feoglobal_feopolicy_binding: FEO global to Front end optimization policy binding
+    feoparameter: FEO parameter
+    feopolicy: Front end optimization policy
+    protocolhttpband: HTTP request/response band
+    videooptimizationdetectionaction: Videooptimization detectionaction
+    videooptimizationdetectionpolicy: Videooptimization detectionpolicy
+    videooptimizationdetectionpolicylabel: Videooptimization detection policy label
+    videooptimizationdetectionpolicylabel_videooptimizationdetectionpolicy_binding: Videooptimization detection
+      policy label to videooptimization detectionpolicy binding
+    videooptimizationglobaldetection_videooptimizationdetectionpolicy_binding: Videooptimizationglobaldetection
+      to videooptimization detectionpolicy binding
+    videooptimizationglobalpacing_videooptimizationpacingpolicy_binding: Videooptimizationglobalpacing to videooptimization
+      pacingpolicy binding
+    videooptimizationpacingaction: Videooptimization pacingaction
+    videooptimizationpacingpolicy: Videooptimization pacingpolicy
+    videooptimizationpacingpolicylabel: Videooptimization pacing policy label
+    videooptimizationpacingpolicylabel_videooptimizationpacingpolicy_binding: Videooptimization pacing policy label
+      to videooptimization pacingpolicy binding
+    videooptimizationparameter: VideoOptimization parameter
+- title: Rewrite, respond to and transform HTTP traffic
+  description: Define rewrite, responder, transform and spillover actions, policies, policy labels and their global
+    and virtual server bindings.
+  components:
+    responderaction: Responder action
+    responderglobal_responderpolicy_binding: RESPONDER global to responder policy binding
+    responderhtmlpage: Responder HTML page
+    responderparam: Responser parameter
+    responderpolicy: Responder policy
+    responderpolicylabel: Responder policy label
+    responderpolicylabel_responderpolicy_binding: Responder policy label to responder policy binding
+    rewriteaction: Rewrite action
+    rewriteglobal_rewritepolicy_binding: REWRITE global to rewrite policy binding
+    rewriteparam: Rewrite parameter
+    rewritepolicy: Rewrite policy
+    rewritepolicylabel: Rewrite policy label
+    rewritepolicylabel_rewritepolicy_binding: Rewrite policy label to rewrite policy binding
+    spilloveraction: Spillover action
+    spilloverpolicy: Spillover policy
+    transformaction: Transform action
+    transformglobal_transformpolicy_binding: TRANSFORM global to URL Transformation policy binding
+    transformpolicy: URL Transformation policy
+    transformpolicylabel: Transform policy label
+    transformpolicylabel_transformpolicy_binding: Transform policy label to URL Transformation policy binding
+    transformprofile: URL Transformation profile
+- title: Build policy expressions, data sets and content inspection
+  description: Maintain shared policy building blocks such as expressions, data sets, pattern sets, string maps,
+    callouts and URL sets, plus content inspection, ICAP, tunnel traffic policies, extensions, variables, service
+    chains and WebAssembly modules.
+  components:
+    application: Application
+    contentinspectionaction: Content Inspection action
+    contentinspectioncallout: Content Inspection callout
+    contentinspectionglobal_contentinspectionpolicy_binding: CONTENTINSPECTION global to ContentInspection policy
+      binding
+    contentinspectionparameter: Contentinspection parameter
+    contentinspectionpolicy: ContentInspection policy
+    contentinspectionpolicylabel: ContentInspection policy label
+    contentinspectionpolicylabel_contentinspectionpolicy_binding: ContentInspection policy label to ContentInspection
+      policy binding
+    contentinspectionprofile: ContentInspection profile
+    contentinspectionwasmprofile: WASM profile
+    nsaigwprofile: AI GW profile
+    nsassignment: Assignment
+    nsextension: Extension
+    nsicapprofile: ICAP profile
+    nsservicefunction: Service Function
+    nsservicepath: Service Chain
+    nsservicepath_nsservicefunction_binding: Service Chain to service Function binding
+    nsvariable: Variable
+    nsxmlnamespace: XML namespace
+    policydataset: TYPE set
+    policydataset_value_binding: TYPE set to value binding
+    policyexpression: Expression
+    policyhttpcallout: HTTP callout
+    policymap: Map policy
+    policyparam: Policy parameter
+    policypatset: PAT set
+    policypatset_pattern_binding: PAT set to pattern binding
+    policypatsetfile: Patset file
+    policystringmap: String map
+    policystringmap_pattern_binding: String map to pattern binding
+    policytracing: Policytracing
+    policyurlset: URL set
+    tunnelglobal_tunneltrafficpolicy_binding: TUNNEL global to tunnel policy binding
+    tunneltrafficpolicy: Tunnel policy
+    wasmfile: WASM module related files
+    wasmmodule: WASM Module
+- title: Configure web application firewall profiles
+  description: Define application firewall profiles and the security checks bound to them, such as SQL injection,
+    cross-site scripting, command injection, URL and field checks.
+  components:
+    appfwprofile: Application firewall profile
+    appfwprofile_appfwconfidfield_binding: Application firewall profile to configured confidential form fields binding
+    appfwprofile_blockkeyword_binding: Application firewall profile to blockkeyword binding
+    appfwprofile_bypasslist_binding: Application firewall profile to bypasslist binding
+    appfwprofile_cmdinjection_binding: Application firewall profile to cmdinjection binding
+    appfwprofile_contenttype_binding: Application firewall profile to contenttype binding
+    appfwprofile_cookieconsistency_binding: Application firewall profile to cookieconsistency binding
+    appfwprofile_creditcardnumber_binding: Application firewall profile to creditcardnumber binding
+    appfwprofile_crosssitescripting_binding: Application firewall profile to crosssitescripting binding
+    appfwprofile_csrftag_binding: Application firewall profile to csrftag binding
+    appfwprofile_denylist_binding: Application firewall profile to denylist binding
+    appfwprofile_denyurl_binding: Application firewall profile to denyurl binding
+    appfwprofile_excluderescontenttype_binding: Application firewall profile to excluderescontenttype binding
+    appfwprofile_fakeaccount_binding: Application firewall profile to fakeaccount binding
+    appfwprofile_fieldconsistency_binding: Application firewall profile to fieldconsistency binding
+    appfwprofile_fieldformat_binding: Application firewall profile to fieldformat binding
+    appfwprofile_fileuploadtype_binding: Application firewall profile to fileuploadtype binding
+    appfwprofile_grpcvalidation_binding: Application firewall profile to grpcvalidation binding
+    appfwprofile_jsonblockkeyword_binding: Application firewall profile to jsonblockkeyword binding
+    appfwprofile_jsoncmdurl_binding: Application firewall profile to jsoncmdurl binding
+    appfwprofile_jsondosurl_binding: Application firewall profile to jsondosurl binding
+    appfwprofile_jsonsqlurl_binding: Application firewall profile to jsonsqlurl binding
+    appfwprofile_jsonxssurl_binding: Application firewall profile to jsonxssurl binding
+    appfwprofile_logexpression_binding: Application firewall profile to logexpression binding
+    appfwprofile_restvalidation_binding: Application firewall profile to restvalidation binding
+    appfwprofile_safeobject_binding: Application firewall profile to safeobject binding
+    appfwprofile_sqlinjection_binding: Application firewall profile to sqlinjection binding
+    appfwprofile_starturl_binding: Application firewall profile to starturl binding
+    appfwprofile_trustedlearningclients_binding: Application firewall profile to trustedlearningclients binding
+    appfwprofile_xmlattachmenturl_binding: Application firewall profile to xmlattachmenturl binding
+    appfwprofile_xmldosurl_binding: Application firewall profile to xmldosurl binding
+    appfwprofile_xmlsqlinjection_binding: Application firewall profile to xmlsqlinjection binding
+    appfwprofile_xmlvalidationurl_binding: Application firewall profile to xmlvalidationurl binding
+    appfwprofile_xmlwsiurl_binding: Application firewall profile to xmlwsiurl binding
+    appfwprofile_xmlxss_binding: Application firewall profile to xmlxss binding
+- title: Manage application firewall policies, signatures and API protection
+  description: Manage application firewall policies, labels, signatures, learning settings, content types and error
+    pages, and define API profiles and specifications.
+  components:
+    apiprofile: API profile
+    apiprofile_apispec_binding: API profile to API specification binding
+    apispec: API specification
+    apispecfile: API specification file
+    appfwarchive: Archive
+    appfwconfidfield: Configured confidential form fields
+    appfwcustomsettings: Application firewall custom settings XML configuration
+    appfwfieldtype: Application firewall form field type
+    appfwglobal_appfwpolicy_binding: APPFW global to application firewall policy binding
+    appfwglobal_auditnslogpolicy_binding: APPFW global to ns log policy binding
+    appfwglobal_auditsyslogpolicy_binding: APPFW global to system log policy binding
+    appfwgrpccontenttype: GRRPC content type
+    appfwgrpcwebjsoncontenttype: GRRPC-Web-json content type
+    appfwgrpcwebtextcontenttype: GRRPC-Web-text content type
+    appfwhtmlerrorpage: HTML error page
+    appfwjsoncontenttype: JSON content type
+    appfwjsonerrorpage: JSON error page
+    appfwlearningdata: Learning data
+    appfwlearningsettings: Learning settings
+    appfwmultipartformcontenttype: Multipart form content type
+    appfwpolicy: Application firewall policy
+    appfwpolicylabel: Application firewall policy label
+    appfwpolicylabel_appfwpolicy_binding: Application firewall policy label to application firewall policy binding
+    appfwprotofile: GRPC protofile
+    appfwsettings: AS settings
+    appfwsignatures: Application firewall signatures XML configuration
+    appfwurlencodedformcontenttype: Urlencoded form content type
+    appfwwsdl: WSDL file
+    appfwxmlcontenttype: XML Content type
+    appfwxmlerrorpage: Xml error page
+    appfwxmlschema: XML schema
+- title: Protect against bots
+  description: Configure bot management profiles, policies, signatures, settings and IP reputation checks, with
+    their rate limit, allow list, deny list and CAPTCHA bindings.
+  components:
+    botglobal_botpolicy_binding: BOT global to Bot policy binding
+    botpolicy: Bot policy
+    botpolicylabel: Bot policy label
+    botpolicylabel_botpolicy_binding: Bot policy label to Bot policy binding
+    botprofile: Bot profile
+    botprofile_blacklist_binding: Bot profile to blacklist binding
+    botprofile_captcha_binding: Bot profile to captcha binding
+    botprofile_ipreputation_binding: Bot profile to ipreputation binding
+    botprofile_kmdetectionexpr_binding: Bot profile to kmdetectionexpr binding
+    botprofile_logexpression_binding: Bot profile to logexpression binding
+    botprofile_ratelimit_binding: Bot profile to ratelimit binding
+    botprofile_tps_binding: Bot profile to tps binding
+    botprofile_trapinsertionurl_binding: Bot profile to trapinsertionurl binding
+    botprofile_whitelist_binding: Bot profile to whitelist binding
+    botsettings: Bot engine settings
+    botsignature: Bot signatures
+    reputationsettings: Reputation service settings
+- title: Configure authentication virtual servers and policy labels
+  description: Create authentication virtual servers and bind the authentication, authorization, session and other
+    policies that apply to them, and maintain authentication policy labels.
+  components:
+    authenticationpolicylabel: Authentication policy label
+    authenticationpolicylabel_authenticationpolicy_binding: Authentication policy label to Authentication Policy
+      binding
+    authenticationvserver: Authentication virtual server
+    authenticationvserver_auditnslogpolicy_binding: Authentication virtual server to ns log policy binding
+    authenticationvserver_auditsyslogpolicy_binding: Authentication virtual server to system log policy binding
+    authenticationvserver_authenticationcertpolicy_binding: Authentication virtual server to CERT policy binding
+    authenticationvserver_authenticationldappolicy_binding: Authentication virtual server to LDAP policy binding
+    authenticationvserver_authenticationlocalpolicy_binding: Authentication virtual server to LOCAL policy binding
+    authenticationvserver_authenticationloginschemapolicy_binding: Authentication virtual server to authenticationloginschemapolicy
+      binding
+    authenticationvserver_authenticationnegotiatepolicy_binding: Authentication virtual server to Negotiate Policy
+      binding
+    authenticationvserver_authenticationoauthidppolicy_binding: Authentication virtual server to AAA OAuth IdentityProvider
+      (IdP) policy binding
+    authenticationvserver_authenticationpolicy_binding: Authentication virtual server to Authentication Policy binding
+    authenticationvserver_authenticationradiuspolicy_binding: Authentication virtual server to RADIUS policy binding
+    authenticationvserver_authenticationsamlidppolicy_binding: Authentication virtual server to AAA Saml IdentityProvider
+      (IdP) policy binding
+    authenticationvserver_authenticationsamlpolicy_binding: Authentication virtual server to AAA Saml policy binding
+    authenticationvserver_authenticationsmartaccesspolicy_binding: Authentication virtual server to SmartAccess
+      policy binding
+    authenticationvserver_authenticationtacacspolicy_binding: Authentication virtual server to TACACS policy binding
+    authenticationvserver_authenticationwebauthpolicy_binding: Authentication virtual server to Web authentication
+      policy binding
+    authenticationvserver_cachepolicy_binding: Authentication virtual server to Integrated Cache policy binding
+    authenticationvserver_cspolicy_binding: Authentication virtual server to content-switching policy binding
+    authenticationvserver_responderpolicy_binding: Authentication virtual server to responder policy binding
+    authenticationvserver_rewritepolicy_binding: Authentication virtual server to rewrite policy binding
+    authenticationvserver_tmsessionpolicy_binding: Authentication virtual server to TM session policy binding
+    authenticationvserver_vpnportaltheme_binding: Authentication virtual server to portaltheme binding
+- title: Define authentication methods and identity provider integrations
+  description: Define authentication actions and policies for LDAP, RADIUS, TACACS, SAML, OAuth, certificates, Negotiate,
+    web authentication and login schemas, including SAML and OAuth identity provider profiles.
+  components:
+    authenticationadfsproxyprofile: ADFSProxy Profile
+    authenticationauthnprofile: Authentication profile
+    authenticationcaptchaaction: Captcha Action
+    authenticationcertaction: CERT action
+    authenticationcertpolicy: CERT policy
+    authenticationcitrixauthaction: Citrix Authentication action
+    authenticationdfaaction: Dfa authentication action
+    authenticationdfapolicy: Dfa authentication policy
+    authenticationemailaction: Email entity
+    authenticationepaaction: Epa action
+    authenticationldapaction: LDAP action
+    authenticationldappolicy: LDAP policy
+    authenticationlocalpolicy: LOCAL policy
+    authenticationloginschema: Authenticationloginschema
+    authenticationloginschemapolicy: Authenticationloginschemapolicy
+    authenticationnegotiateaction: Negotiate action
+    authenticationnegotiatepolicy: Negotiate Policy
+    authenticationnoauthaction: No authentication action
+    authenticationoauthaction: OAuth authentication action
+    authenticationoauthidppolicy: AAA OAuth IdentityProvider (IdP) policy
+    authenticationoauthidpprofile: OAuth Identity Provider (IdP) profile
+    authenticationpolicy: Authentication Policy
+    authenticationprotecteduseraction: Protected user action
+    authenticationpushservice: Service details for sending push notifications
+    authenticationradiusaction: RADIUS action
+    authenticationradiuspolicy: RADIUS policy
+    authenticationsamlaction: AAA Saml action
+    authenticationsamlidppolicy: AAA Saml IdentityProvider (IdP) policy
+    authenticationsamlidpprofile: AAA Saml IdentityProvider (IdP) profile
+    authenticationsamlpolicy: AAA Saml policy
+    authenticationsmartaccesspolicy: SmartAccess policy
+    authenticationsmartaccessprofile: SmartAccess profile
+    authenticationstorefrontauthaction: Storefront authentication action
+    authenticationtacacsaction: TACACS action
+    authenticationtacacspolicy: TACACS policy
+    authenticationwebauthaction: Web authentication action
+    authenticationwebauthpolicy: Web authentication policy
+- title: Manage AAA users and groups
+  description: Create AAA users and groups and bind session, authorization, audit and intranet access policies to
+    them.
+  components:
+    aaagroup: AAA group
+    aaagroup_aaauser_binding: AAA group to AAA user binding
+    aaagroup_auditnslogpolicy_binding: AAA group to ns log policy binding
+    aaagroup_auditsyslogpolicy_binding: AAA group to system log policy binding
+    aaagroup_authorizationpolicy_binding: AAA group to authorization policy binding
+    aaagroup_intranetip6_binding: AAA group to intranetip6 binding
+    aaagroup_intranetip_binding: AAA group to intranetip binding
+    aaagroup_tmsessionpolicy_binding: AAA group to TM session policy binding
+    aaagroup_vpnintranetapplication_binding: AAA group to SSLVPN intranet application binding
+    aaagroup_vpnsecureprivateaccessprofile_binding: AAA group to Secure Private Access Profile binding
+    aaagroup_vpnsessionpolicy_binding: AAA group to VPN session policy binding
+    aaagroup_vpntrafficpolicy_binding: AAA group to VPN traffic policy binding
+    aaagroup_vpnurl_binding: AAA group to VPN URL binding
+    aaagroup_vpnurlpolicy_binding: AAA group to VPN url policy binding
+    aaauser: AAA user
+    aaauser_auditnslogpolicy_binding: AAA user to ns log policy binding
+    aaauser_auditsyslogpolicy_binding: AAA user to system log policy binding
+    aaauser_authorizationpolicy_binding: AAA user to authorization policy binding
+    aaauser_intranetip6_binding: AAA user to intranetip6 binding
+    aaauser_intranetip_binding: AAA user to intranetip binding
+    aaauser_tmsessionpolicy_binding: AAA user to TM session policy binding
+    aaauser_vpnintranetapplication_binding: AAA user to SSLVPN intranet application binding
+    aaauser_vpnsecureprivateaccessprofile_binding: AAA user to Secure Private Access Profile binding
+    aaauser_vpnsessionpolicy_binding: AAA user to VPN session policy binding
+    aaauser_vpntrafficpolicy_binding: AAA user to VPN traffic policy binding
+    aaauser_vpnurl_binding: AAA user to VPN URL binding
+    aaauser_vpnurlpolicy_binding: AAA user to VPN url policy binding
+- title: Configure AAA parameters and pre-authentication
+  description: Configure AAA global parameters, directory and OTP settings, SSO profiles, Kerberos constrained delegation
+    accounts, sessions and pre-authentication checks.
+  components:
+    aaacertparams: Certificate parameter
+    aaaglobal_aaapreauthenticationpolicy_binding: AAA global to pre authentication policy binding
+    aaaglobal_authenticationnegotiateaction_binding: AAA global to Negotiate action binding
+    aaakcdaccount: Kerberos constrained delegation account
+    aaaldapparams: LDAP parameter
+    aaaotpparameter: AAA otpparameter
+    aaaparameter: AAA parameter
+    aaapreauthenticationaction: Pre authentication action
+    aaapreauthenticationparameter: Pre authentication parameter
+    aaapreauthenticationpolicy: Pre authentication policy
+    aaaproxyparam: AAA proxy parameter
+    aaaradiusparams: RADIUS parameter
+    aaasession: Active connection
+    aaassoprofile: Aaa sso profile
+    aaatacacsparams: Tacacs parameters
+    radiusnode: RADIUS Node
+- title: Control authorization, traffic management sessions and policy labels
+  description: Define authorization policies and labels and traffic management session and traffic policies, actions
+    and parameters.
+  components:
+    authorizationpolicy: Authorization policy
+    authorizationpolicylabel: Authorization policy label
+    authorizationpolicylabel_authorizationpolicy_binding: Authorization policy label to authorization policy binding
+    tmformssoaction: Form sso action
+    tmglobal_auditnslogpolicy_binding: TM global to ns log policy binding
+    tmglobal_auditsyslogpolicy_binding: TM global to system log policy binding
+    tmglobal_tmsessionpolicy_binding: TM global to TM session policy binding
+    tmglobal_tmtrafficpolicy_binding: TM global to TM traffic policy binding
+    tmsamlssoprofile: SAML sso action
+    tmsessionaction: TM session action
+    tmsessionparameter: Session parameter
+    tmsessionpolicy: TM session policy
+    tmtrafficaction: TM traffic action
+    tmtrafficpolicy: TM traffic policy
+- title: Configure Gateway virtual servers
+  description: Create Gateway (VPN) virtual servers and bind authentication, session, traffic, portal theme, intranet
+    and other policies to them.
+  components:
+    vpnvserver: VPN virtual server
+    vpnvserver_aaapreauthenticationpolicy_binding: VPN virtual server to pre authentication policy binding
+    vpnvserver_analyticsprofile_binding: VPN virtual server to Analytics profile binding
+    vpnvserver_appcontroller_binding: VPN virtual server to appcontroller binding
+    vpnvserver_appflowpolicy_binding: VPN virtual server to AppFlow policy binding
+    vpnvserver_appfwpolicy_binding: VPN virtual server to application firewall policy binding
+    vpnvserver_auditnslogpolicy_binding: VPN virtual server to ns log policy binding
+    vpnvserver_auditsyslogpolicy_binding: VPN virtual server to system log policy binding
+    vpnvserver_authenticationcertpolicy_binding: VPN virtual server to CERT policy binding
+    vpnvserver_authenticationdfapolicy_binding: VPN virtual server to Dfa authentication policy binding
+    vpnvserver_authenticationldappolicy_binding: VPN virtual server to LDAP policy binding
+    vpnvserver_authenticationlocalpolicy_binding: VPN virtual server to LOCAL policy binding
+    vpnvserver_authenticationloginschemapolicy_binding: VPN virtual server to authenticationloginschemapolicy binding
+    vpnvserver_authenticationnegotiatepolicy_binding: VPN virtual server to Negotiate Policy binding
+    vpnvserver_authenticationoauthidppolicy_binding: VPN virtual server to AAA OAuth IdentityProvider (IdP) policy
+      binding
+    vpnvserver_authenticationpolicy_binding: VPN virtual server to Authentication Policy binding
+    vpnvserver_authenticationradiuspolicy_binding: VPN virtual server to RADIUS policy binding
+    vpnvserver_authenticationsamlidppolicy_binding: VPN virtual server to AAA Saml IdentityProvider (IdP) policy
+      binding
+    vpnvserver_authenticationsamlpolicy_binding: VPN virtual server to AAA Saml policy binding
+    vpnvserver_authenticationtacacspolicy_binding: VPN virtual server to TACACS policy binding
+    vpnvserver_authenticationwebauthpolicy_binding: VPN virtual server to Web authentication policy binding
+    vpnvserver_cachepolicy_binding: VPN virtual server to Integrated Cache policy binding
+    vpnvserver_cspolicy_binding: VPN virtual server to content-switching policy binding
+    vpnvserver_feopolicy_binding: VPN virtual server to Front end optimization policy binding
+    vpnvserver_icapolicy_binding: VPN virtual server to ICA policy binding
+    vpnvserver_intranetip6_binding: VPN virtual server to intranetip6 binding
+    vpnvserver_intranetip_binding: VPN virtual server to intranetip binding
+    vpnvserver_responderpolicy_binding: VPN virtual server to responder policy binding
+    vpnvserver_rewritepolicy_binding: VPN virtual server to rewrite policy binding
+    vpnvserver_secureprivateaccessurl_binding: VPN virtual server to secureprivateaccessurl binding
+    vpnvserver_sharefileserver_binding: VPN virtual server to sharefileserver binding
+    vpnvserver_staserver_binding: VPN virtual server to staserver binding
+    vpnvserver_vpnclientlessaccesspolicy_binding: VPN virtual server to Clientless VPN rewrite policy binding
+    vpnvserver_vpnepaprofile_binding: VPN virtual server to Epa profile binding
+    vpnvserver_vpneula_binding: VPN virtual server to EULA for vservers binding
+    vpnvserver_vpnintranetapplication_binding: VPN virtual server to SSLVPN intranet application binding
+    vpnvserver_vpnnexthopserver_binding: VPN virtual server to Next Hop Server binding
+    vpnvserver_vpnportaltheme_binding: VPN virtual server to portaltheme binding
+    vpnvserver_vpnsecureprivateaccessprofile_binding: VPN virtual server to Secure Private Access Profile binding
+    vpnvserver_vpnsessionpolicy_binding: VPN virtual server to VPN session policy binding
+    vpnvserver_vpntrafficpolicy_binding: VPN virtual server to VPN traffic policy binding
+    vpnvserver_vpnurl_binding: VPN virtual server to VPN URL binding
+    vpnvserver_vpnurlpolicy_binding: VPN virtual server to VPN url policy binding
+- title: Configure global Gateway bindings
+  description: Bind authentication, session, traffic, clientless access and other policies and resources globally
+    to the Gateway.
+  components:
+    vpnglobal_appcontroller_binding: VPN global to appcontroller binding
+    vpnglobal_appfwpolicy_binding: VPN global to application firewall policy binding
+    vpnglobal_auditnslogpolicy_binding: VPN global to ns log policy binding
+    vpnglobal_auditsyslogpolicy_binding: VPN global to system log policy binding
+    vpnglobal_authenticationcertpolicy_binding: VPN global to CERT policy binding
+    vpnglobal_authenticationldappolicy_binding: VPN global to LDAP policy binding
+    vpnglobal_authenticationlocalpolicy_binding: VPN global to LOCAL policy binding
+    vpnglobal_authenticationnegotiatepolicy_binding: VPN global to Negotiate Policy binding
+    vpnglobal_authenticationpolicy_binding: VPN global to Authentication Policy binding
+    vpnglobal_authenticationradiuspolicy_binding: VPN global to RADIUS policy binding
+    vpnglobal_authenticationsamlpolicy_binding: VPN global to AAA Saml policy binding
+    vpnglobal_authenticationtacacspolicy_binding: VPN global to TACACS policy binding
+    vpnglobal_domain_binding: VPN global to domain binding
+    vpnglobal_intranetip6_binding: VPN global to intranetip6 binding
+    vpnglobal_intranetip_binding: VPN global to intranetip binding
+    vpnglobal_secureprivateaccessurl_binding: VPN global to secureprivateaccessurl binding
+    vpnglobal_sharefileserver_binding: VPN global to sharefileserver binding
+    vpnglobal_sslcertkey_binding: VPN global to certificate key binding
+    vpnglobal_staserver_binding: VPN global to staserver binding
+    vpnglobal_vpnclientlessaccesspolicy_binding: VPN global to Clientless VPN rewrite policy binding
+    vpnglobal_vpneula_binding: VPN global to EULA for vservers binding
+    vpnglobal_vpnintranetapplication_binding: VPN global to SSLVPN intranet application binding
+    vpnglobal_vpnnexthopserver_binding: VPN global to Next Hop Server binding
+    vpnglobal_vpnportaltheme_binding: VPN global to portaltheme binding
+    vpnglobal_vpnsecureprivateaccessprofile_binding: VPN global to Secure Private Access Profile binding
+    vpnglobal_vpnsessionpolicy_binding: VPN global to VPN session policy binding
+    vpnglobal_vpntrafficpolicy_binding: VPN global to VPN traffic policy binding
+    vpnglobal_vpnurl_binding: VPN global to VPN URL binding
+    vpnglobal_vpnurlpolicy_binding: VPN global to VPN url policy binding
+- title: Define Gateway policies, actions, profiles and ICA access
+  description: Define Gateway session, traffic, URL and clientless access policies and actions, portal themes, EPA
+    and SAML SSO profiles, ICA access settings and RDP and PCoIP profiles.
+  components:
+    icaaccessprofile: Ica accessprofile
+    icaaction: Ica action
+    icaglobal_icapolicy_binding: ICA global to ICA policy binding
+    icalatencyprofile: Profile for Latency monitoring
+    icaparameter: Config Parameters for NS ICA
+    icapolicy: ICA policy
+    rdpclientprofile: RDP clientprofile
+    rdpconnections: Active rdp connections
+    rdpserverprofile: RDP serverprofile
+    vpnalwaysonprofile: AlwyasON profile
+    vpnclientlessaccesspolicy: Clientless VPN rewrite policy
+    vpnclientlessaccessprofile: Clientless VPN rewrite profile
+    vpnepaprofile: Epa profile
+    vpneula: EULA for vservers
+    vpnformssoaction: Form sso action
+    vpnicaconnection: Active ica connections
+    vpnintranetapplication: SSLVPN intranet application
+    vpnnexthopserver: Next Hop Server
+    vpnparameter: VPN parameter
+    vpnpcoipconnection: PCoIP connection
+    vpnpcoipprofile: PCoIP session profile
+    vpnpcoipvserverprofile: PCoIP vserver profile
+    vpnportaltheme: Portaltheme
+    vpnsamlssoprofile: SAML sso action
+    vpnsecureprivateaccessprofile: Secure Private Access Profile
+    vpnsessionaction: VPN session action
+    vpnsessionpolicy: VPN session policy
+    vpntrafficaction: VPN traffic action
+    vpntrafficpolicy: VPN traffic policy
+    vpnurl: VPN URL
+    vpnurlaction: VPN url action
+    vpnurlpolicy: VPN url policy
+- title: Manage SSL certificates, keys and CRLs
+  description: Create, import and link certificates, keys, CA bundles, CRLs, OCSP responders, DH parameters and
+    FIPS or HSM keys.
+  components:
+    sslcacertbundle: CA certbundle
+    sslcacertgroup: Group of CA certificate-key pairs
+    sslcacertgroup_sslcertkey_binding: Group of CA certificate-key pairs to certificate key binding
+    sslcert: Cerificate
+    sslcertbundle: Imported Certbundle
+    sslcertfile: Imported Certfile
+    sslcertificatechain: Linked certificate
+    sslcertkey: Certificate key
+    sslcertkey_sslocspresponder_binding: Certificate key to OCSP responser binding
+    sslcertkeybundle: Certkey bundle
+    sslcertreq: Certificate request
+    sslcrl: Certificate Revocation List
+    sslcrlfile: Imported crl files
+    ssldhfile: Dh imported file
+    ssldhparam: Dh Parameter
+    ssldynamicclientcertcache: Dynamic Client Certificate Cache
+    sslecdsakey: Ecdsa key
+    sslfips: Fips
+    sslfipskey: FIPS key
+    sslfipssimsource: FIPsSIM source
+    sslfipssimtarget: FIPS SIM Target
+    sslhpkekey: HPKE key
+    sslhsmkey: HSM key
+    sslkeyfile: Imported ssl key files
+    sslocspresponder: OCSP responser
+    sslpkcs12: Pkcs12
+    sslpkcs8: Pkcs8
+    sslrsakey: RSA key
+    sslwrapkey: WRAP key
+- title: Configure SSL on virtual servers, services and profiles
+  description: Configure SSL settings, ciphers, curves and certificate bindings on virtual servers, services and
+    service groups, and define SSL profiles, policies, actions and global parameters.
+  components:
+    sslaction: SSL action
+    sslcipher: Cipher
+    sslcipher_sslciphersuite_binding: Cipher to sslciphersuite binding
+    ssldefaultprofile: SSL default profile
+    ssldtlsprofile: DTLS profile
+    sslechconfig: Ech config
+    sslglobal_sslpolicy_binding: SSL global to SSL policy binding
+    ssllogprofile: SSL logging Profile
+    sslparameter: SSL parameter
+    sslpolicy: SSL policy
+    sslpolicylabel: SSL policy label
+    sslpolicylabel_sslpolicy_binding: SSL policy label to SSL policy binding
+    sslprofile: SSL profile
+    sslprofile_ecccurve_binding: SSL profile to ecccurve binding
+    sslprofile_sslcertkey_binding: SSL profile to certificate key binding
+    sslprofile_sslcipher_binding: SSL profile to cipher binding
+    sslprofile_sslciphersuite_binding: SSL profile to sslciphersuite binding
+    sslprofile_sslechconfig_binding: SSL profile to ech config binding
+    sslservice: SSL service
+    sslservice_ecccurve_binding: SSL service to ecccurve binding
+    sslservice_sslcacertbundle_binding: SSL service to CA certbundle binding
+    sslservice_sslcertkey_binding: SSL service to certificate key binding
+    sslservice_sslcipher_binding: SSL service to cipher binding
+    sslservice_sslciphersuite_binding: SSL service to sslciphersuite binding
+    sslservice_sslpolicy_binding: SSL service to SSL policy binding
+    sslservicegroup: SSL service group
+    sslservicegroup_ecccurve_binding: SSL service group to ecccurve binding
+    sslservicegroup_sslcacertbundle_binding: SSL service group to CA certbundle binding
+    sslservicegroup_sslcertkey_binding: SSL service group to certificate key binding
+    sslservicegroup_sslcipher_binding: SSL service group to cipher binding
+    sslservicegroup_sslciphersuite_binding: SSL service group to sslciphersuite binding
+    sslvserver: SSL virtual server
+    sslvserver_ecccurve_binding: SSL virtual server to ecccurve binding
+    sslvserver_sslcacertbundle_binding: SSL virtual server to CA certbundle binding
+    sslvserver_sslcertkey_binding: SSL virtual server to certificate key binding
+    sslvserver_sslcertkeybundle_binding: SSL virtual server to certkey bundle binding
+    sslvserver_sslcipher_binding: SSL virtual server to cipher binding
+    sslvserver_sslciphersuite_binding: SSL virtual server to sslciphersuite binding
+    sslvserver_sslpolicy_binding: SSL virtual server to SSL policy binding
+    sslzerotouchparam: Zerotouch params
+- title: Configure DNS records, zones and policies
+  description: Manage DNS records, zones, views, name servers and keys, and DNS policies, actions, profiles and
+    parameters.
+  components:
+    dnsaaaarec: IPv6 address type record
+    dnsaction: DNS action
+    dnsaction64: Dns64 action
+    dnsaddrec: Address type record
+    dnscaarec: CAA record
+    dnscnamerec: CNAME record
+    dnsglobal_dnspolicy_binding: DNS global to DNS policy binding
+    dnskey: Dns key
+    dnsmxrec: MX record
+    dnsnameserver: Name server
+    dnsnaptrrec: NAPTR record
+    dnsnsrec: Name server record
+    dnsparameter: DNS parameter
+    dnspolicy: DNS policy
+    dnspolicy64: Dns64 policy
+    dnspolicylabel: Dns policy label
+    dnspolicylabel_dnspolicy_binding: Dns policy label to DNS policy binding
+    dnsprofile: DNS profile
+    dnsproxyrecords: Proxy record
+    dnsptrrec: PTR record
+    dnssoarec: SOA record
+    dnssrvrec: Server record
+    dnssubnetcache: Subnet cache
+    dnssuffix: DNS suffix
+    dnssvcbrec: SVCB/HTTPS service binding record
+    dnstxtrec: TXT record
+    dnsview: DNS view
+    dnszone: DNS zone
+- title: Configure interfaces, VLANs and network segmentation
+  description: Configure interfaces, link aggregation, VLANs, VXLAN, bridge groups, LLDP, ARP, IPv6 neighbor discovery,
+    traffic domains and admin partitions.
+  components:
+    arp: Arp
+    arpparam: Global arp parameters
+    bridgegroup: Bridge group
+    bridgegroup_nsip6_binding: Bridge group to ip6 binding
+    bridgegroup_nsip_binding: Bridge group to nsip binding
+    bridgegroup_vlan_binding: Bridge group to "VLAN" binding
+    bridgetable: Bridge table entry
+    channel: Channel
+    channel_interface_binding: Channel to interface binding
+    fis: '"FIS"'
+    fis_channel_binding: '"FIS" to channel binding'
+    fis_interface_binding: '"FIS" to interface binding'
+    interface: Interface
+    interfacepair: '"Interface Pair"'
+    ipv6: Ip v6
+    l2param: Layer 2 related parameter
+    l3param: Layer 3 related parameter
+    l4param: Layer 4 related parameter
+    lacp: Link aggregation control protocol
+    linkset: Link set
+    linkset_channel_binding: Link set to channel binding
+    linkset_interface_binding: Link set to interface binding
+    lldpneighbors: Lldp neighbors
+    lldpparam: Lldp params
+    nd6: Nd6
+    nd6ravariables: Nd6 Router Advertisment configuration variables
+    nd6ravariables_onlinkipv6prefix_binding: Nd6 Router Advertisment configuration variables to on-link IPv6 global
+      prefixes for Router Advertisment binding
+    netbridge: Network bridge
+    netbridge_iptunnel_binding: Network bridge to ip Tunnel binding
+    netbridge_nsip6_binding: Network bridge to ip6 binding
+    netbridge_nsip_binding: Network bridge to nsip binding
+    netbridge_vlan_binding: Network bridge to "VLAN" binding
+    nspartition: Admin partition
+    nspartition_bridgegroup_binding: Admin partition to bridge group binding
+    nspartition_vlan_binding: Admin partition to "VLAN" binding
+    nspartition_vxlan_binding: Admin partition to "VXLAN" binding
+    nstrafficdomain: Traffic Domain
+    nstrafficdomain_bridgegroup_binding: Traffic Domain to bridge group binding
+    nstrafficdomain_vlan_binding: Traffic Domain to "VLAN" binding
+    nstrafficdomain_vxlan_binding: Traffic Domain to "VXLAN" binding
+    onlinkipv6prefix: On-link IPv6 global prefixes for Router Advertisment
+    ptp: Precision Time Protocol
+    rsskeytype: RSS key type
+    vlan: '"VLAN"'
+    vlan_channel_binding: '"VLAN" to channel binding'
+    vlan_interface_binding: '"VLAN" to interface binding'
+    vlan_linkset_binding: '"VLAN" to link set binding'
+    vlan_nsip6_binding: '"VLAN" to ip6 binding'
+    vlan_nsip_binding: '"VLAN" to nsip binding'
+    vxlan: '"VXLAN"'
+    vxlan_nsip6_binding: '"VXLAN" to ip6 binding'
+    vxlan_nsip_binding: '"VXLAN" to nsip binding'
+    vxlan_srcip_binding: '"VXLAN" to srcip binding'
+    vxlanvlanmap: Vxlan vlan mapping
+    vxlanvlanmap_vxlan_binding: Vxlan vlan mapping to "VXLAN" binding
+- title: Configure IP addresses, tunnels and routing
+  description: Configure NetScaler IPs, IP sets, tunnels, static and policy-based routes, route maps, OSPF, BGP
+    and BFD.
+  components:
+    bfdinterface: Bfdinterface
+    bgprouter: BGP Router
+    ip6tunnel: Ip6 Tunnel
+    ip6tunnelparam: Ip6 tunnel parameter
+    iproute: Iproute
+    ipsecparameter: IPSEC paramter
+    ipsecprofile: IPSEC profile
+    ipset: Network ipset
+    ipset_nsip6_binding: Network ipset to ip6 binding
+    ipset_nsip_binding: Network ipset to nsip binding
+    iptunnel: Ip Tunnel
+    iptunnelparam: Ip tunnel parameter
+    nsdhcpip: Dhcp IP
+    nsip: Nsip
+    nsip6: Ip6
+    nspbr: Policy Based Routing(PBR) entry
+    nspbr6: PBR6 entry
+    nspbrs: Policy based routing
+    nssourceroutecachetable: Source IP Mac Cache Table.
+    ospf6interface: Ospf6interface
+    ospf6router: Ospf6router
+    ospfinterface: OSPF Interface
+    ospfrouter: OSPF Router
+    route: Route
+    route6: Route 6
+    routemap: Routemap
+    routerdynamicrouting: Dynamic routing config
+- title: Configure NAT, carrier-grade NAT and subscriber management
+  description: Configure RNAT, INAT, NAT64, network profiles, large scale NAT, MAP-E and PCP, and subscriber profiles
+    and session interfaces.
+  components:
+    forwardingsession: Session forward
+    inat: Inbound nat
+    inatparam: INAT parameter
+    ipsecalgprofile: IPSEC ALG profile
+    ipsecalgsession: IPSEC ALG session
+    lsnappsattributes: LSN Application Attributes
+    lsnappsprofile: LSN Application Profile
+    lsnappsprofile_lsnappsattributes_binding: LSN Application Profile to LSN Application Attributes binding
+    lsnappsprofile_port_binding: LSN Application Profile to port binding
+    lsnclient: Lsn client
+    lsnclient_network6_binding: Lsn client to network6 binding
+    lsnclient_network_binding: Lsn client to network binding
+    lsnclient_nsacl6_binding: Lsn client to ACL6 entry binding
+    lsnclient_nsacl_binding: Lsn client to ACL entry binding
+    lsngroup: LSN group
+    lsngroup_ipsecalgprofile_binding: LSN group to IPSEC ALG profile binding
+    lsngroup_lsnappsprofile_binding: LSN group to LSN Application Profile binding
+    lsngroup_lsnhttphdrlogprofile_binding: LSN group to LSN HTTP header logging Profile binding
+    lsngroup_lsnlogprofile_binding: LSN group to LSN logging Profile binding
+    lsngroup_lsnpool_binding: LSN group to LSN pool binding
+    lsngroup_lsnrtspalgprofile_binding: LSN group to LSN RTSPALG Profile binding
+    lsngroup_lsnsipalgprofile_binding: LSN group to LSN SIPALG Profile binding
+    lsngroup_lsntransportprofile_binding: LSN group to LSN Transport Profile binding
+    lsngroup_pcpserver_binding: LSN group to server binding
+    lsnhttphdrlogprofile: LSN HTTP header logging Profile
+    lsnip6profile: LSN ip6 Profile
+    lsnlogprofile: LSN logging Profile
+    lsnparameter: LSN parameter
+    lsnpool: LSN pool
+    lsnpool_lsnip_binding: LSN pool to lsnip binding
+    lsnrtspalgprofile: LSN RTSPALG Profile
+    lsnrtspalgsession: LSN RTSPALG session
+    lsnsession: Lsn session
+    lsnsipalgcall: LSN SIPALG call
+    lsnsipalgprofile: LSN SIPALG Profile
+    lsnstatic: Static mapping
+    lsntransportprofile: LSN Transport Profile
+    mapbmr: MAP-T Basic Mapping rule
+    mapbmr_bmrv4network_binding: MAP-T Basic Mapping rule to bmrv4network binding
+    mapdmr: MAP-T Default Mapping rule
+    mapdomain: MAP-T Map Domain
+    mapdomain_mapbmr_binding: MAP-T Map Domain to MAP-T Basic Mapping rule binding
+    nat64: Nat64 config
+    nat64param: NAT64 parameter
+    netprofile: Network profile
+    netprofile_natrule_binding: Network profile to natrule binding
+    netprofile_srcportset_binding: Network profile to srcportset binding
+    pcpprofile: PCP Profile
+    pcpserver: Server
+    rnat: RNAT configured route
+    rnat6: IPv6 RNAT configured route
+    rnat6_nsip6_binding: IPv6 RNAT configured route to ip6 binding
+    rnat_nsip_binding: RNAT configured route to nsip binding
+    rnat_retainsourceportset_binding: RNAT configured route to retainsourceportset binding
+    rnatglobal_auditsyslogpolicy_binding: RNAT global to system log policy binding
+    rnatparam: RNAT parameter
+    rnatsession: RNAT session
+    subscribergxinterface: Gx interface Parameters
+    subscriberparam: Subscriber Params
+    subscriberprofile: Subscriber Profile
+    subscriberradiusinterface: RADIUS interface Parameters
+    subscribersessions: Subscriber sesions
+- title: Configure high availability and clustering
+  description: Configure HA node pairs, failover and synchronisation, VRRP virtual router IDs, and cluster nodes
+    and node groups.
+  components:
+    cluster: Cluster
+    clusterfiles: Files
+    clusterinstance: Cluster instance
+    clusternode: Cluster node
+    clusternode_routemonitor_binding: Cluster node to routemonitor binding
+    clusternodegroup: Node group object type
+    clusternodegroup_authenticationvserver_binding: Node group object type to authentication virtual server binding
+    clusternodegroup_clusternode_binding: Node group object type to cluster node binding
+    clusternodegroup_crvserver_binding: Node group object type to CR virtual server binding
+    clusternodegroup_csvserver_binding: Node group object type to CS virtual server binding
+    clusternodegroup_gslbsite_binding: Node group object type to GSLB site binding
+    clusternodegroup_gslbvserver_binding: Node group object type to Global Server Load Balancing Virtual Server
+      binding
+    clusternodegroup_lbvserver_binding: Node group object type to Load Balancing Virtual Server binding
+    clusternodegroup_nslimitidentifier_binding: Node group object type to limit Identifier binding
+    clusternodegroup_service_binding: Node group object type to service binding
+    clusternodegroup_streamidentifier_binding: Node group object type to identifier binding
+    clusternodegroup_vpnvserver_binding: Node group object type to VPN virtual server binding
+    clusterpropstatus: Clusterpropstatus
+    clustersync: Sync
+    hafailover: Failover
+    hafiles: Files
+    hanode: Node
+    hanode_routemonitor6_binding: Node to routemonitor6 binding
+    hanode_routemonitor_binding: Node to routemonitor binding
+    hasecureheartbeats: HA Secure Heartbeats parameter
+    hasync: Sync
+    vrid: Virtual Router ID
+    vrid6: Virtual Router ID for IPv6
+    vrid6_channel_binding: Virtual Router ID for IPv6 to channel binding
+    vrid6_interface_binding: Virtual Router ID for IPv6 to interface binding
+    vrid6_trackinterface_binding: Virtual Router ID for IPv6 to trackinterface binding
+    vrid_channel_binding: Virtual Router ID to channel binding
+    vrid_interface_binding: Virtual Router ID to interface binding
+    vrid_trackinterface_binding: Virtual Router ID to trackinterface binding
+    vridparam: VR ID parameter
+- title: Control traffic with ACLs, rate limiting and surge protection
+  description: Define extended and simple ACLs, access lists, limit identifiers and selectors, rate control and
+    surge queue settings.
+  components:
+    accesslist: Accesslist
+    nsacl: ACL entry
+    nsacl6: ACL6 entry
+    nsacls: ACL entry
+    nsacls6: ACL6 entry
+    nslimitidentifier: Limit Identifier
+    nslimitselector: Limit selector
+    nslimitsessions: Limit sessions
+    nsratecontrol: Rate control
+    nssimpleacl: Simple ACL
+    nssimpleacl6: Simple ACL6
+    nssurgeq: Surge queue
+- title: Configure audit logging and AppFlow export
+  description: Configure audit message, syslog and nslog actions and policies, AppFlow collectors, actions and policies,
+    analytics profiles and stream identifiers.
+  components:
+    analyticsglobal_analyticsprofile_binding: ANALYTICS global to Analytics profile binding
+    analyticsprofile: Analytics profile
+    appflowaction: AppFlow action
+    appflowaction_analyticsprofile_binding: AppFlow action to Analytics profile binding
+    appflowcollector: AppFlow collector
+    appflowglobal_appflowpolicy_binding: APPFLOW global to AppFlow policy binding
+    appflowparam: AppFlow parameter
+    appflowpolicy: AppFlow policy
+    appflowpolicylabel: AppFlow policy label
+    appflowpolicylabel_appflowpolicy_binding: AppFlow policy label to AppFlow policy binding
+    auditmessageaction: Message action
+    auditnslogaction: Ns log action
+    auditnslogglobal_auditnslogpolicy_binding: AUDITNSLOG global to ns log policy binding
+    auditnslogparams: Ns log parameters
+    auditnslogpolicy: Ns log policy
+    auditsyslogaction: System log action
+    auditsyslogglobal_auditsyslogpolicy_binding: AUDITSYSLOG global to system log policy binding
+    auditsyslogparams: System log parameters
+    auditsyslogpolicy: System log policy
+    callhome: Callhome
+    nsappflowcollector: AppflowCollector
+    nsappflowparam: AppflowParam
+    nsweblogparam: Web log parameters
+    streamidentifier: Identifier
+    streamidentifier_analyticsprofile_binding: Identifier to Analytics profile binding
+    streamselector: Selector
+    streamsession: Active connection
+    ulfdserver: Ulfd server
+- title: Configure SNMP and metrics monitoring
+  description: Configure SNMP managers, communities, users, groups, views, alarms and traps, and metrics profiles
+    for monitoring.
+  components:
+    metricsprofile: Metrics profile
+    metricsprofile_authenticationvserver_binding: Metrics profile to authentication virtual server binding
+    metricsprofile_crvserver_binding: Metrics profile to CR virtual server binding
+    metricsprofile_csvserver_binding: Metrics profile to CS virtual server binding
+    metricsprofile_gslbvserver_binding: Metrics profile to Global Server Load Balancing Virtual Server binding
+    metricsprofile_lbvserver_binding: Metrics profile to Load Balancing Virtual Server binding
+    metricsprofile_service_binding: Metrics profile to service binding
+    metricsprofile_servicegroup_binding: Metrics profile to service group binding
+    metricsprofile_uservserver_binding: Metrics profile to virtual server binding
+    metricsprofile_vpnvserver_binding: Metrics profile to VPN virtual server binding
+    nsstats: Stats
+    snmpalarm: Alarm
+    snmpcommunity: Community
+    snmpengineid: SNMP engine id
+    snmpgroup: SNMP group
+    snmpmanager: Manager
+    snmpmib: SNMP mib
+    snmpoption: SNMP option
+    snmptrap: Snmp trap
+    snmptrap_snmpuser_binding: Snmp trap to SNMP user binding
+    snmpuser: SNMP user
+    snmpview: View
+- title: Manage administrators, command policies and sessions
+  description: Manage system users, groups, command policies, partition access, SSH keys, sessions and login or
+    logout of an appliance.
+  components:
+    change_password: Change_password
+    login: Login to a NetScaler ADC node
+    logout: Logout from a NetScaler ADC node
+    nsencryptionkey: Encryption key
+    nsencryptionparams: Default encryption parameters
+    nshmackey: HMAC key
+    systemadmuserinfo: Systemadmuserinfo
+    systemcmdpolicy: Command policy
+    systemglobal_auditnslogpolicy_binding: SYSTEM global to ns log policy binding
+    systemglobal_auditsyslogpolicy_binding: SYSTEM global to system log policy binding
+    systemglobal_authenticationldappolicy_binding: SYSTEM global to LDAP policy binding
+    systemglobal_authenticationlocalpolicy_binding: SYSTEM global to LOCAL policy binding
+    systemglobal_authenticationpolicy_binding: SYSTEM global to Authentication Policy binding
+    systemglobal_authenticationradiuspolicy_binding: SYSTEM global to RADIUS policy binding
+    systemglobal_authenticationtacacspolicy_binding: SYSTEM global to TACACS policy binding
+    systemgroup: System group
+    systemgroup_nspartition_binding: System group to admin partition binding
+    systemgroup_systemcmdpolicy_binding: System group to command policy binding
+    systemgroup_systemuser_binding: System group to system user binding
+    systemsession: System session
+    systemsshkey: Systemsshkey
+    systemuser: System user
+    systemuser_nspartition_binding: System user to admin partition binding
+    systemuser_systemcmdpolicy_binding: System user to command policy binding
+- title: Back up, configure and operate the appliance
+  description: Save and back up configuration, manage restore points and files, install software, reboot or shut
+    down, run ping and traceroute and manage the SSH connection.
+  components:
+    endpointinfo: Information
+    install: Install
+    nsconfig: System config
+    nsconfigview: Nsconfigview
+    nsmigration: Migration operation
+    nsrpcnode: Rpc node
+    nstrace: Nstrace operations
+    ping: Ping
+    ping6: Ping6
+    reboot: Reboot
+    save_config: Login to a NetScaler ADC node
+    shutdown: Shutdown
+    systemautorestorefeature: Enable/Disable the autorestore feature use to create restorepoint
+    systemautosaveparam: System Autosaveparam
+    systembackup: Backup Data for ns backup and restore
+    systemfile: File
+    systemnsbtracing: Systemnsbtracing
+    systemrestorepoint: Setting restorepoints for auto restore
+    traceroute: Traceroute
+    traceroute6: Traceroute6
+    connection:ssh_netscaler_adc: SSH connection to NetScaler ADC
+- title: Tune appliance, TCP, HTTP and protocol settings
+  description: Tune system, NetScaler mode and feature settings, TCP and HTTP profiles and parameters, timers, NTP,
+    DHCP, DPS, QUIC and other protocol profiles.
+  components:
+    appalgparam: AppAlg Param
+    dpsparameter: Dps parameter
+    extendedmemoryparam: Parameter for extended memory used by LSN and Subscriber Store
+    filesystemencryption: File System Encryption Information
+    mcpprofile: McpProfile
+    nschannelparam: Nschannelparam
+    nsconsoleloginprompt: Console prompt
+    nscqaparam: Cqaparam
+    nsdhcpparams: DHCP parameters
+    nsdiameter: Diameter Parameters
+    nsfeature: Feature
+    nshostname: Host name
+    nshttpparam: HTTP parameter
+    nshttpprofile: HTTP profile
+    nskeymanagerproxy: Keymanagerproxy
+    nsmgmtparam: Management related configuration
+    nsmode: Ns mode
+    nsnextgenapi: Nsnextgenapi
+    nsparam: Citrix ADC parameters
+    nsspparams: Surge Protection parameter
+    nstcpbufparam: Tcp buffer parameter
+    nstcpparam: Tcp parameters
+    nstcpprofile: TCP profile
+    nstimeout: Timeout
+    nstimer: Timer
+    nsvpxparam: '"VPX"'
+    ntpparam: NTP parameter
+    ntpserver: NTP server
+    ntpsync: NTP sync
+    quicbridgeprofile: QUIC BRIDGE profile
+    quicparam: Citrix ADC QUIC parameters
+    quicprofile: QUIC profile
+    smppparam: SMPP configuration parameters
+    smppuser: SMPP user
+    systemcpuparam: Systemcpuparam
+    systemextramgmtcpu: Systemextramgmtcpu
+    systemhwerror: Hardware errors
+    systemkek: Key encryption Key
+    systemparameter: System parameter
+    systemscalablemgmtthreads: Scalable Management Threads feature
+    systemsignedexereport: System signedExeReport
+    userprotocol: User protocol
+- title: Manage licensing and central management
+  description: Manage license servers, proxies and offline LAS tokens, capacity, and Application Delivery Management
+    (ADM) and central management settings.
+  components:
+    admparameter: ADM parameter
+    nsaptlicense: Aptlicense
+    nscapacity: Capacity
+    nscentralmanagementserver: Centralmanagementserver
+    nslaslicense: Laslicense
+    nslaslicense_offline: Nslaslicense_offline
+    nslicenseparameters: Licenseparameters
+    nslicenseproxyserver: Licenseproxyserver
+    nslicenseserver: Licenseserver
+    nstestlicense: Testlicense
+- title: Integrate with public cloud and autoscaling
+  description: Configure cloud profiles and parameters, cloud routes and tunnels, Azure and AWS integration, Azure
+    Key Vault and autoscale profiles and policies.
+  components:
+    authenticationazurekeyvault: Azure Key Vault entity
+    autoscaleaction: Autoscale action
+    autoscalepolicy: Autoscale policy
+    autoscaleprofile: Autoscale profile
+    azureapplication: Azure Application
+    azurekeyvault: Azure Key Vault entity
+    cloudallowedngsticketprofile: Allowed ticket profile for NGS
+    cloudawsparam: Cloud awsParam
+    cloudcredential: Cloud credentials
+    cloudgcpstaticroutes: Cloud api to push static routes to cloud
+    cloudngsparameter: Cloud ngsparameter
+    cloudparameter: Cloud parameter
+    cloudparaminternal: Cloud paramInternal
+    cloudprofile: Cloud profile
+    cloudroutes: Cloud routes
+    cloudservice: Cloud service
+    cloudtrafficroutes: Cloud trafficroutes
+    cloudtunnelparameter: Cloudtunnel parameter
+    cloudtunnelvserver: Cloud Tunnel virtual server
+    nstimer_autoscalepolicy_binding: Timer to Autoscale policy binding

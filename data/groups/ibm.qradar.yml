@@ -1,0 +1,19 @@
+fqcn: ibm.qradar
+product: IBM QRadar
+use_cases:
+- title: Manage offenses
+  description: Query offenses with filters, take action on them and add or update notes.
+  components:
+    offense: Offenses
+    offense_action: Offense actions
+    offense_note: Offense notes
+    qradar_offense: Offense information
+    qradar_offense_action: Offense actions (qradar_ prefix)
+    qradar_offense_note: Offense notes (qradar_ prefix)
+- title: Manage detection content and deployment
+  description: Manage analytics rules and log sources and deploy configuration changes.
+  components:
+    qradar_analytics_rules: Analytics rules
+    qradar_log_sources_management: Log sources
+    deploy: Configuration deployment
+    qradar_deploy: Configuration deployment (qradar_ prefix)

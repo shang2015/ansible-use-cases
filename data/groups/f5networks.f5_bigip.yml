@@ -1,0 +1,88 @@
+fqcn: f5networks.f5_bigip
+product: F5 BIG-IP and BIG-IQ
+use_cases:
+- title: Deploy application services with declarative automation
+  description: Deploy AS3, FAST, Device Onboarding, Telemetry Streaming and Cloud Failover declarations
+    to BIG-IP and BIG-IQ, and manage iControl LX packages.
+  components:
+    bigip_as3_deploy: AS3 on BIG-IP
+    bigiq_as3_deploy: AS3 on BIG-IQ
+    bigip_fast_application: FAST applications
+    bigip_fast_template: FAST template sets
+    bigip_do_deploy: Declarative Onboarding on BIG-IP
+    bigiq_do_deploy: Declarative Onboarding on BIG-IQ
+    bigip_ts_deploy: Telemetry Streaming
+    bigip_cfe_deploy: Cloud Failover Extension
+    bigip_lx_package: iControl LX packages
+- title: Protect applications with WAF and access policy
+  description: Import and export Advanced WAF and ASM policies and custom attack signatures, manage WAF
+    policies and APM access policies, and security HTTP, log and SSH proxy profiles.
+  components:
+    bigip_awaf_policy: Advanced WAF policies
+    bigip_awaf_custom_attack_signatures: Custom attack signatures
+    bigip_asm_policy_import: ASM policy import
+    bigip_asm_policy_fetch: ASM policy export
+    bigip_apm_policy_import: APM policy import
+    bigip_apm_policy_fetch: APM policy export
+    bigip_security_http_profile: Security HTTP profiles
+    bigip_security_log_profile: Security log profiles
+    bigip_security_ssh_profile: SSH proxy profiles
+    bigip_security_ssh_profile_keys: SSH proxy keys
+    bigip_security_ssh_profile_rules: SSH proxy rules
+- title: Orchestrate SSL inspection with SSL Orchestrator
+  description: Configure SSL Orchestrator topologies, SSL settings, authentication, resolvers, security
+    policies and service chains, and attach inline security services.
+  components:
+    bigip_sslo_config_topology: Topologies
+    bigip_sslo_config_ssl: SSL configuration
+    bigip_sslo_config_authentication: Authentication objects
+    bigip_sslo_config_resolver: DNS resolver
+    bigip_sslo_config_policy: Security policies
+    bigip_sslo_config_service_chain: Service chains
+    bigip_sslo_config_o365: O365 URL updater
+    bigip_sslo_config_utility: Utility functions
+    bigip_sslo_service_http: HTTP services
+    bigip_sslo_service_icap: ICAP services
+    bigip_sslo_service_layer2: Layer 2 services
+    bigip_sslo_service_layer3: Layer 3 services
+    bigip_sslo_service_tap: TAP services
+    bigip_sslo_service_swg: SWG service
+    bigip_sslo_service_o365_tr: O365 tenant restriction
+    bigip_sslo_service_offbox_awaf: Off-box AWAF service
+    bigip_sslo_service_waf_onbox: On-box WAF service
+- title: Manage SSL certificates and keys
+  description: Create certificate signing requests and import or delete SSL keys, certificates and PKCS12
+    bundles.
+  components:
+    bigip_ssl_csr: Certificate signing requests
+    bigip_ssl_key_cert: Keys and certificates
+    bigip_ssl_pkcs12: PKCS12 bundles
+- title: Upgrade software and back up configuration
+  description: Upload and install software images, and upload, install, fetch and remove UCS archives.
+  components:
+    bigip_software_image: Software images
+    bigip_software_install: Software installation
+    bigip_ucs: UCS archives
+    bigip_ucs_fetch: UCS fetch
+- title: Run commands and administer devices
+  description: Run TMSH and Bash commands, manage configuration and advanced routing sections, config-sync,
+    QKview diagnostics, vCMP guests, and gather device information.
+  components:
+    bigip_command: TMSH and Bash commands
+    bigip_config: Configuration sections
+    bigip_imish_config: Advanced routing configuration
+    bigip_configsync_action: Config-sync actions
+    bigip_qkview: QKview diagnostics
+    bigip_vcmp_guest: vCMP guests
+    bigip_device: BIG-IP device information
+- title: Manage BIG-IP fleets and licences with BIG-IQ
+  description: Discover BIG-IP devices through BIG-IQ and manage registration key and utility licence
+    pools and assignments.
+  components:
+    bigiq_device: BIG-IQ device information
+    bigiq_device_discovery: Device discovery
+    bigiq_regkey_pool: Registration key pools
+    bigiq_regkey_license: Registration key licences
+    bigiq_regkey_license_assignment: Registration key assignments
+    bigiq_utility_license: Utility licences
+    bigiq_utility_license_assignment: Utility licence assignments

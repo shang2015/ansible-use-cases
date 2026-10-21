@@ -1,0 +1,10 @@
+fqcn: redhat.jws
+product: "Red Hat JBoss Web Server"
+use_cases:
+- title: "Install, configure and validate JBoss Web Server"
+  description: "Install and configure Tomcat or JBoss Web Server and validate the deployment."
+  components:
+    "role:jws": "Install and configure"
+    "playbook:playbook": "Install and configure playbook"
+    "role:jws_validation": "Validation"
+    "playbook:validate": "Validation playbook"

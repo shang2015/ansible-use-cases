@@ -1,0 +1,143 @@
+fqcn: redhat.satellite
+product: Red Hat Satellite (Foreman and Katello)
+notes:
+- Modules are shared with upstream Foreman and Katello; roles configure Satellite end to end from variables.
+use_cases:
+- title: 'Organise Satellite: organisations, locations and settings'
+  description: Create organisations and locations, tune Satellite settings and global parameters, and
+    fetch server or task status.
+  components:
+    organization: Organizations
+    location: Locations
+    setting: Settings
+    global_parameter: Global parameters
+    bookmark: Bookmarks
+    status: Server status
+    wait_for_task: Task waits
+    resource: Resource information
+    role:organizations: Organizations role
+    role:locations: Locations role
+    role:settings: Settings role
+- title: Manage users, roles and authentication
+  description: Manage users, groups, roles, LDAP authentication sources, external user groups and webhooks.
+  components:
+    user: Users
+    usergroup: User groups
+    role: Roles
+    external_usergroup: External user groups
+    auth_source_ldap: LDAP authentication sources
+    webhook: Webhooks
+    role:auth_sources_ldap: LDAP authentication sources role
+- title: Manage subscriptions and Red Hat content
+  description: Upload subscription manifests, enable Red Hat repositories and define products, repositories
+    and credentials, then sync them on a schedule.
+  components:
+    subscription_manifest: Subscription manifests
+    redhat_manifest: Red Hat manifests
+    subscription: Subscriptions
+    repository_set: Red Hat repository sets
+    product: Products
+    repository: Repositories
+    repository_sync: Repository sync
+    sync_plan: Sync plans
+    content_credential: Content credentials
+    content_upload: Content uploads
+    flatpak_remote: Flatpak remotes
+    flatpak_remote_scan: Flatpak remote scans
+    flatpak_remote_repository_mirror: Flatpak repository mirrors
+    http_proxy: HTTP proxies
+    filter:cp_label: Candlepin labels
+    role:manifest: Manifest role
+    role:repositories: Repositories role
+    role:sync_plans: Sync plans role
+    role:content_credentials: Content credentials role
+- title: Promote content through lifecycle environments
+  description: Build, filter, publish, version and clean up content views and promote them through lifecycle
+    environments.
+  components:
+    lifecycle_environment: Lifecycle environments
+    content_view: Content views
+    content_view_filter: Content view filters
+    content_view_filter_rule: Content view filter rules
+    content_view_version: Content view versions
+    content_view_history: Content view history
+    role:lifecycle_environments: Lifecycle environments role
+    role:content_views: Content views role
+    role:content_view_publish: Content view publishing role
+    role:content_view_version_cleanup: Version cleanup role
+- title: Export and import content between Satellites
+  description: Export libraries, repositories and content view versions and import them on disconnected
+    Satellites.
+  components:
+    content_export: Content exports
+    content_export_library: Library exports
+    content_export_repository: Repository exports
+    content_export_version: Version exports
+    content_import: Content imports
+    content_import_library: Library imports
+    content_import_repository: Repository imports
+    content_import_version: Version imports
+- title: Register and patch hosts
+  description: Register hosts with activation keys, group them in collections and host groups, track errata,
+    invoke remote execution jobs and convert CentOS to RHEL.
+  components:
+    activation_key: Activation keys
+    registration_command: Registration commands
+    host: Hosts
+    host_collection: Host collections
+    hostgroup: Host groups
+    host_errata: Host errata
+    host_power: Host power state
+    job_invocation: Remote execution jobs
+    job_template: Job templates
+    role:activation_keys: Activation keys role
+    role:hostgroups: Host groups role
+    role:content_rhel: RHEL client registration and patching role
+    role:convert2rhel: CentOS to RHEL conversion role
+- title: Provision hosts and manage infrastructure resources
+  description: Define operating systems, installation media, partition and provisioning templates, images,
+    compute resources and profiles, discovery rules and hardware models.
+  components:
+    operatingsystem: Operating systems
+    architecture: Architectures
+    installation_medium: Installation media
+    partition_table: Partition tables
+    provisioning_template: Provisioning templates
+    os_default_template: Default template associations
+    templates_import: Template imports
+    image: Images
+    compute_resource: Compute resources
+    compute_profile: Compute profiles
+    compute_attribute: Compute attributes
+    discovery_rule: Discovery rules
+    hardware_model: Hardware models
+    role:operatingsystems: Operating systems role
+    role:provisioning_templates: Provisioning templates role
+    role:compute_resources: Compute resources role
+    role:compute_profiles: Compute profiles role
+- title: Configure networking, Capsules and DNS
+  description: Manage subnets, domains, realms and Capsules, and refresh Capsule features.
+  components:
+    subnet: Subnets
+    domain: Domains
+    realm: Realms
+    smart_proxy: Capsules
+    smart_proxy_refresh: Capsule feature refresh
+    role:subnets: Subnets role
+    role:domains: Domains role
+- title: Manage Puppet and compliance content
+  description: Manage Puppet environments, classes, config groups and smart class parameters, and SCAP
+    content and tailoring files.
+  components:
+    puppet_environment: Puppet environments
+    puppetclasses_import: Puppet class imports
+    config_group: Config groups
+    smart_class_parameter: Smart class parameters
+    smart_class_parameter_override_value: Parameter override values
+    scap_content: SCAP content
+    scap_tailoring_file: SCAP tailoring files
+- title: Integrate with Foreman inventory and events
+  description: Use Foreman as a dynamic inventory source and send Ansible events to Foreman.
+  components:
+    inventory:foreman: Foreman inventory
+    callback:foreman: Foreman callback

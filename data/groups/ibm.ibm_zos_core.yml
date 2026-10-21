@@ -1,0 +1,54 @@
+fqcn: ibm.ibm_zos_core
+product: IBM z/OS
+use_cases:
+- title: Manage data sets and files
+  description: Create and manage data sets, copy, fetch, find, archive and back up data, and edit text
+    in data sets and USS files.
+  components:
+    data_set: Data sets
+    copy: Copy
+    fetch: Fetch
+    find: Find
+    stat: Data set and file facts
+    archive: Archive
+    unarchive: Unarchive
+    backup_restore: Backup and restore
+    encode: Encoding
+    lineinfile: Line edits
+    blockinfile: Block edits
+    replace: Pattern replacement
+    mount: File system mounts
+    zfs_resize: zFS resize
+    volume_init: Volume initialization
+    filter:generate_data_set_name: Random data set names
+    filter:zos_stat_by_type: zos_stat field filter
+- title: Submit and monitor jobs
+  description: Submit JCL, query job status, display job output, run programs and manage started tasks.
+  components:
+    job_submit: JCL submission
+    job_query: Job status
+    job_output: Job output
+    mvs_raw: MVS programs
+    script: Scripts
+    started_task: Started tasks
+    role:job_status: Job status report
+- title: Run commands and operator actions
+  description: Run TSO and operator commands and display messages that need operator action.
+  components:
+    tso_command: TSO commands
+    operator: Operator commands
+    operator_action_query: Operator action messages
+    filter:wtor: WTOR message filter
+- title: Administer security and system configuration
+  description: Manage RACF user and group profiles and APF-authorized libraries.
+  components:
+    user: RACF users and groups
+    apf: APF libraries
+- title: Gather facts and diagnostics
+  description: Check connectivity and dependencies, gather z/OS system facts and diagnostic data, and
+    build a report for migrating playbooks to v2.0.0.
+  components:
+    ping: Connectivity check
+    gather: System facts
+    role:gather_diagnostics: Diagnostics collection
+    role:playbook_upgrade_validator: Playbook upgrade report

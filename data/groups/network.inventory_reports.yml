@@ -1,0 +1,19 @@
+fqcn: network.inventory_reports
+product: Network device configuration and reporting
+use_cases:
+- title: Collect network facts and build reports
+  description: Gather device facts, list supported resource modules, persist facts to YAML and generate
+    HTML reports or CSV-ready data.
+  components:
+    role:gather: Fact gathering
+    role:list: Supported resource modules
+    role:persist: Fact persistence
+    role:generate_report: HTML reports
+    filter:flatten_dict: CSV export data
+- title: Apply configuration and fix drift
+  description: Apply configuration from host_vars, detect configuration drift and remediate it.
+  components:
+    role:configure: Configuration
+    role:deploy: Deployment from data store
+    role:detect: Drift detection
+    role:remediate: Drift remediation

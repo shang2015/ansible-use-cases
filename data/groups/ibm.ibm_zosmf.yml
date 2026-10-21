@@ -1,0 +1,39 @@
+fqcn: ibm.ibm_zosmf
+product: IBM z/OSMF
+use_cases:
+- title: Authenticate and run workflows
+  description: Authenticate with z/OSMF, operate workflows, complete them and run management services.
+  components:
+    authenticate: Authentication
+    workflow: Workflows
+    role:zmf_workflow_complete: Workflow completion
+    role:zmf_zmsc_run_management_service: Management services
+    sca: Security requirement validation
+- title: Provision software with Cloud Provisioning
+  description: Create, query, manage, provision and remove software instances from the CP&M catalog.
+  components:
+    role:zmf_cpm_list_software_templates: Software templates
+    role:zmf_cpm_provision_software_service: Provisioning
+    role:zmf_cpm_create_software_instance: Create instances
+    role:zmf_cpm_get_software_instance: Get instances
+    role:zmf_cpm_manage_software_instance: Manage instances
+    role:zmf_cpm_remove_software_instance: Remove instances
+- title: Report on installed software and missing updates
+  description: Query the software inventory and report on holds, missing critical updates, missing fix
+    category updates, update search results and system UUIDs.
+  components:
+    role:zmf_swmgmt_csi_query: CSI query
+    role:zmf_swmgmt_holds_for_reason: Holds by reason
+    role:zmf_swmgmt_identify_missing_critical_updates: Missing critical updates
+    role:zmf_swmgmt_identify_missing_fixcat_updates: Missing fix category updates
+    role:zmf_swmgmt_search_software_updates: Software update search
+    role:zmf_swmgmt_zos_system_uuid: System UUID
+- title: Apply software updates
+  description: Start, resume, cancel and monitor software update processes and copy their output.
+  components:
+    role:zmf_swupdate_start: Start update
+    role:zmf_swupdate_resume: Resume update
+    role:zmf_swupdate_cancel: Cancel update
+    role:zmf_swupdate_retrieve: Update status
+    role:zmf_swupdate_retrieve_all: All update statuses
+    role:zmf_swupdate_copy: Copy update output

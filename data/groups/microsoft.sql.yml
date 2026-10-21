@@ -1,0 +1,7 @@
+fqcn: microsoft.sql
+product: "Microsoft SQL Server"
+use_cases:
+- title: "Install and configure SQL Server"
+  description: "Install and configure Microsoft SQL Server."
+  components:
+    "role:server": "SQL Server"

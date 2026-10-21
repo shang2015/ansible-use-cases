@@ -1,0 +1,26 @@
+fqcn: redhat.eap
+product: Red Hat JBoss EAP / WildFly
+use_cases:
+- title: Install and run the application server
+  description: Install WildFly or JBoss EAP, register subscriptions, open firewall ports, run it as a
+    systemd service, add JDBC drivers and uninstall it.
+  components:
+    role:wildfly_install: Installation
+    role:wildfly_subs: Subscriptions
+    role:wildfly_firewalld: Firewall
+    role:wildfly_systemd: systemd service
+    role:wildfly_driver: JDBC drivers
+    role:wildfly_uninstall: Uninstallation
+    role:wildfly_utils: EAP utilities
+    playbook:playbook: Install and run as a service
+- title: Deploy applications and manage the server over time
+  description: Deploy applications, snapshot and roll back configuration, and migrate servers.
+  components:
+    role:wildfly_app_deploy: Application deployment
+    role:wildfly_snapshot: Configuration snapshot and rollback
+    role:wildfly_migration: Migration
+- title: Validate the server
+  description: Verify the server is properly installed.
+  components:
+    role:wildfly_validation: Validation
+    playbook:validate: Verification

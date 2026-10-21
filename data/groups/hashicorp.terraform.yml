@@ -1,0 +1,103 @@
+fqcn: hashicorp.terraform
+product: HashiCorp Terraform (HCP Terraform and Terraform Enterprise)
+use_cases:
+- title: Manage organizations, projects and workspaces
+  description: Create and maintain HCP Terraform and Terraform Enterprise organizations, projects and
+    workspaces, with workspace bootstrap and configuration versions.
+  components:
+    organizations: Organizations
+    project: Projects
+    workspace: Workspaces
+    workspace_bootstrap: Workspace bootstrap
+    configuration_version: Configuration versions
+    organization_tags: Organization tags
+    reserved_tag_keys: Reserved tag keys
+    explorer: Explorer saved views
+    no_code_module: No-code modules
+- title: Run plans and applies
+  description: Create, apply, cancel and discard runs, view plans, analyze plans for drift, and read run
+    outputs and state outputs.
+  components:
+    run: Runs
+    promote_run: Policy-gated run promotion
+    run_trigger: Run triggers
+    view_plan: Plan details
+    plan_analyze: Plan drift analysis
+    output: State version outputs
+- title: Manage variables and variable sets
+  description: Manage workspace variables and variable sets and attach them to workspaces and projects.
+  components:
+    variable: Variables
+    variable_sets: Variable sets
+- title: Enforce policy and run tasks
+  description: Manage Sentinel, OPA and tf-policy policies and policy sets, review evaluations and task
+    results, override checks, and attach run tasks.
+  components:
+    policy: Policies
+    policy_set: Policy sets
+    policy_set_parameter: Policy set parameters
+    policy_set_version: Policy set versions
+    policy_check: Policy check overrides
+    policy_evaluation: OPA policy evaluations
+    policy_set_outcome: Policy set outcomes
+    tf_policy_evaluation: tf-policy evaluation overrides
+    run_task: Run tasks
+    workspace_run_task: Workspace run tasks
+    task_stage: Task stages
+    task_result: Task results
+    notification_configuration: Notification configurations
+- title: Control access with teams and tokens
+  description: Manage teams, their access to projects and workspaces, user lookups, and organization,
+    team and agent tokens.
+  components:
+    team: Teams
+    team_project_access: Team project access
+    team_workspace_access: Team workspace access
+    user: Users
+    organization_token: Organization tokens
+    team_token: Team tokens
+    ssh_keys: SSH keys
+- title: Run agents and manage dynamic credentials
+  description: Manage self-hosted agent pools, agents and tokens, and OIDC and HYOK (Hold Your Own Key)
+    configurations for AWS, Azure, GCP and Vault.
+  components:
+    agent_pool: Agent pools
+    agent: Agents
+    agent_token: Agent tokens
+    hyok_configuration: HYOK configurations
+    aws_oidc_configuration: AWS OIDC configurations
+    azure_oidc_configuration: Azure OIDC configurations
+    gcp_oidc_configuration: GCP OIDC configurations
+    vault_oidc_configuration: Vault OIDC configurations
+- title: Publish and consume registry content
+  description: Manage private registry modules and providers with their versions and platforms, and look
+    up public registry modules.
+  components:
+    registry_module: Private registry modules
+    registry_provider: Private registry providers
+    registry_provider_version: Provider versions
+    registry_provider_platform: Provider platforms
+    public_registry_module: Public registry modules
+- title: Manage Terraform stacks
+  description: Create stacks and configuration snapshots, and inspect deployment groups, runs, steps,
+    diagnostics and state.
+  components:
+    stack: Stacks
+    stack_configuration: Stack configurations
+    stack_deployment_group: Deployment groups
+    stack_deployment_run: Deployment runs
+    stack_deployment_step: Deployment steps
+    stack_diagnostic: Diagnostics
+    stack_state: Stack state
+- title: Use inventory, lookups and plan-safety checks in playbooks
+  description: Build dynamic inventory from HCP Terraform workspaces, look up outputs, tags, variables,
+    policy checks and run events, and gate automation on drift rules.
+  components:
+    inventory:tfc_inv: Dynamic inventory
+    lookup:tf_output: Output values
+    lookup:tf_org_tags: Organization tags
+    lookup:tf_variable_set_vars: Variable set variables
+    lookup:tf_policy_checks: Policy check outcomes
+    lookup:tf_run_events: Run events
+    filter:plan_guard: Plan guard filter
+    test:plan_safe: Plan safe test

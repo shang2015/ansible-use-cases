@@ -1,0 +1,10 @@
+fqcn: cloud.common
+product: "Ansible turbo mode"
+use_cases:
+- title: "Test and demonstrate turbo mode"
+  description: "Provide demo, failure and import modules and a lookup for developing and testing turbo mode."
+  components:
+    "demo": "Demo module"
+    "fail": "Failure module"
+    "import": "Import test module"
+    "lookup:turbo_demo": "Demo lookup"

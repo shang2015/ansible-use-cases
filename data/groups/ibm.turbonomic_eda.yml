@@ -1,0 +1,11 @@
+fqcn: ibm.turbonomic_eda
+product: "IBM Turbonomic"
+use_cases:
+- title: "Resize cloud instances from Turbonomic recommendations"
+  description: "Create Turbonomic webhooks that send actions to Event-Driven Ansible and resize Azure virtual machines or AWS EC2 instances accordingly."
+  components:
+    "eda_webhook": "Turbonomic webhooks"
+    "role:resize_azure_instance": "Resize Azure VMs"
+    "playbook:resize_azure": "Resize Azure VM playbook"
+    "role:resize_ec2_instance": "Resize EC2 instances"
+    "playbook:resize_ec2": "Resize EC2 playbook"

@@ -1,0 +1,13 @@
+fqcn: ansible.yang
+product: "YANG and NETCONF"
+use_cases:
+- title: "Work with YANG models and NETCONF configuration"
+  description: "Fetch YANG models, generate schemas and skeletons, read device configuration as JSON, push JSON configuration over NETCONF, and convert between JSON and XML."
+  components:
+    "fetch": "Fetch YANG models"
+    "generate_spec": "Generate model specifications"
+    "get": "Get device configuration"
+    "configure": "Push configuration over NETCONF"
+    "lookup:spec": "Model specification lookup"
+    "lookup:json2xml": "JSON to XML lookup"
+    "lookup:xml2json": "XML to JSON lookup"

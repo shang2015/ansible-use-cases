@@ -1,0 +1,23 @@
+fqcn: microsoft.scom
+product: Microsoft System Center Operations Manager (SCOM)
+use_cases:
+- title: Manage monitoring content and agents
+  description: Import or remove management packs, override monitors, manage groups, approve or reject
+    pending agent requests and schedule maintenance.
+  components:
+    management_pack: Management packs
+    monitor_override: Monitor overrides
+    group: Groups
+    pending_agent_request: Pending agent requests
+    maintenance_schedule: Maintenance schedules
+    run_as_account: Run As accounts
+    run_as_distribution: Run As credential distribution
+- title: Handle alerts and notifications
+  description: Manage alert state, notification channels, subscribers and subscriptions, and trigger automation
+    from SCOM alerts.
+  components:
+    alert: Alerts
+    notification_channel: Notification channels
+    notification_subscriber: Notification subscribers
+    notification_subscription: Notification subscriptions
+    eda_event_source:scom_plugin: SCOM alert events

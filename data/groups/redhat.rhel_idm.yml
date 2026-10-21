@@ -1,0 +1,474 @@
+fqcn: redhat.rhel_idm
+product: Red Hat Identity Management (FreeIPA)
+notes:
+- Modules and playbooks target a FreeIPA / Red Hat IdM server; the playbooks are ready-to-run examples
+  for each module.
+use_cases:
+- title: Manage users, groups and password policy
+  description: Create, modify, disable and delete IdM users and groups, set password policies and manage
+    system accounts and user certificates.
+  components:
+    ipagroup: Groups
+    ipapwpolicy: Password policies
+    ipasysaccount: System accounts
+    ipauser: Users
+    playbook:group.add-group: Add group (playbook)
+    playbook:group.add-groups: Add groups (playbook)
+    playbook:group.add-groups-to-group: Add groups to group (playbook)
+    playbook:group.add-user-to-group: Add user to group (playbook)
+    playbook:group.delete-group: Delete group (playbook)
+    playbook:pwpolicy.pwpolicy_absent: Pwpolicy absent (playbook)
+    playbook:pwpolicy.pwpolicy_grace_limit: Pwpolicy grace limit (playbook)
+    playbook:pwpolicy.pwpolicy_password_check: Pwpolicy password check (playbook)
+    playbook:pwpolicy.pwpolicy_present: Pwpolicy present (playbook)
+    playbook:sysaccount.sysaccount-absent: Sysaccount absent (playbook)
+    playbook:sysaccount.sysaccount-disabled: Sysaccount disabled (playbook)
+    playbook:sysaccount.sysaccount-enabled: Sysaccount enabled (playbook)
+    playbook:sysaccount.sysaccount-present: Sysaccount present (playbook)
+    playbook:sysaccount.sysaccount-privileged: Sysaccount privileged (playbook)
+    playbook:sysaccount.sysaccount-unprivileged: Sysaccount unprivileged (playbook)
+    playbook:user.add-user: Add user (playbook)
+    playbook:user.add-user-external-idp: Add user external idp (playbook)
+    playbook:user.delete-preserve-user: Delete preserve user (playbook)
+    playbook:user.delete-user: Delete user (playbook)
+    playbook:user.disable-user: Disable user (playbook)
+    playbook:user.enable-user: Enable user (playbook)
+    playbook:user.ensure_user_with_randompassword: Ensure user with randompassword (playbook)
+    playbook:user.ensure_users_with_randompasswords: Ensure users with randompasswords (playbook)
+    playbook:user.smb-attributes: SMB attributes (playbook)
+    playbook:user.undelete-user: Undelete user (playbook)
+    playbook:user.unlock-users: Unlock users (playbook)
+    playbook:user.user_certificate_absent: User certificate absent (playbook)
+    playbook:user.user_certificate_present: User certificate present (playbook)
+    playbook:user.user_present: User present (playbook)
+    playbook:user.users_absent: Users absent (playbook)
+    playbook:user.users_certificate_absent: Users certificate absent (playbook)
+    playbook:user.users_certificate_present: Users certificate present (playbook)
+    playbook:user.users_present: Users present (playbook)
+- title: Manage hosts, host groups and netgroups
+  description: Add and remove IdM hosts with their IP addresses, principals, keytab permissions and certificates,
+    and organise them into host groups and netgroups.
+  components:
+    ipahost: Hosts
+    ipahostgroup: Host groups
+    ipanetgroup: Netgroups
+    playbook:host.add-host: Add host (playbook)
+    playbook:host.delete-host: Delete host (playbook)
+    playbook:host.disable-host: Disable host (playbook)
+    playbook:host.ensure_host_with_randompassword: Ensure host with randompassword (playbook)
+    playbook:host.host-member-allow_create_keytab-absent: Host member allow create keytab absent (playbook)
+    playbook:host.host-member-allow_create_keytab-present: Host member allow create keytab present (playbook)
+    playbook:host.host-member-allow_retrieve_keytab-absent: Host member allow retrieve keytab absent (playbook)
+    playbook:host.host-member-allow_retrieve_keytab-present: Host member allow retrieve keytab present
+      (playbook)
+    playbook:host.host-member-certificate-absent: Host member certificate absent (playbook)
+    playbook:host.host-member-certificate-present: Host member certificate present (playbook)
+    playbook:host.host-member-ipaddresses-absent: Host member ipaddresses absent (playbook)
+    playbook:host.host-member-ipaddresses-present: Host member ipaddresses present (playbook)
+    playbook:host.host-member-managedby_host-absent: Host member managedby host absent (playbook)
+    playbook:host.host-member-managedby_host-present: Host member managedby host present (playbook)
+    playbook:host.host-member-principal-absent: Host member principal absent (playbook)
+    playbook:host.host-member-principal-present: Host member principal present (playbook)
+    playbook:host.host-present: Host present (playbook)
+    playbook:host.host-present-with-allow_create_keytab: Host present with allow create keytab (playbook)
+    playbook:host.host-present-with-allow_retrieve_keytab: Host present with allow retrieve keytab (playbook)
+    playbook:host.host-present-with-certificate: Host present with certificate (playbook)
+    playbook:host.host-present-with-managedby_host: Host present with managedby host (playbook)
+    playbook:host.host-present-with-principal: Host present with principal (playbook)
+    playbook:host.host-present-with-randompassword: Host present with randompassword (playbook)
+    playbook:host.host-present-with-several-ip-addresses: Host present with several IP addresses (playbook)
+    playbook:host.hosts-member-certificate-absent: Hosts member certificate absent (playbook)
+    playbook:host.hosts-member-certificate-present: Hosts member certificate present (playbook)
+    playbook:host.hosts-member-managedby_host-absent: Hosts member managedby host absent (playbook)
+    playbook:host.hosts-member-managedby_host-present: Hosts member managedby host present (playbook)
+    playbook:host.hosts-member-principal-absent: Hosts member principal absent (playbook)
+    playbook:host.hosts-member-principal-present: Hosts member principal present (playbook)
+    playbook:host.hosts-present-with-certificate: Hosts present with certificate (playbook)
+    playbook:host.hosts-present-with-managedby_host: Hosts present with managedby host (playbook)
+    playbook:host.hosts-present-with-randompasswords: Hosts present with randompasswords (playbook)
+    playbook:hostgroup.ensure-hostgroup-is-absent: Ensure hostgroup is absent (playbook)
+    playbook:hostgroup.ensure-hostgroup-is-present: Ensure hostgroup is present (playbook)
+    playbook:hostgroup.ensure-hosts-and-hostgroups-are-absent-in-hostgroup: Ensure hosts and hostgroups
+      are absent in hostgroup (playbook)
+    playbook:hostgroup.ensure-hosts-and-hostgroups-are-present-in-hostgroup: Ensure hosts and hostgroups
+      are present in hostgroup (playbook)
+    playbook:hostgroup.rename-hostgroup: Rename hostgroup (playbook)
+    playbook:netgroup.netgroup-absent: Netgroup absent (playbook)
+    playbook:netgroup.netgroup-member-absent: Netgroup member absent (playbook)
+    playbook:netgroup.netgroup-member-present: Netgroup member present (playbook)
+    playbook:netgroup.netgroup-present: Netgroup present (playbook)
+- title: Automate group membership with automember rules
+  description: Define automember rules and default groups that place new users and hosts into groups automatically,
+    and rebuild memberships.
+  components:
+    ipaautomember: Automember rules
+    playbook:automember.automember-default-group-not-set: Automember default group not set (playbook)
+    playbook:automember.automember-default-group-set: Automember default group set (playbook)
+    playbook:automember.automember-default-hostgroup-not-set: Automember default hostgroup not set (playbook)
+    playbook:automember.automember-default-hostgroup-set: Automember default hostgroup set (playbook)
+    playbook:automember.automember-group-absent: Automember group absent (playbook)
+    playbook:automember.automember-group-membership-all-users-rebuilt: Automember group membership all
+      users rebuilt (playbook)
+    playbook:automember.automember-group-membership-users-rebuilt: Automember group membership users rebuilt
+      (playbook)
+    playbook:automember.automember-group-orphans-removed: Automember group orphans removed (playbook)
+    playbook:automember.automember-group-present: Automember group present (playbook)
+    playbook:automember.automember-hostgroup-absent: Automember hostgroup absent (playbook)
+    playbook:automember.automember-hostgroup-membership-all-hosts-rebuilt: Automember hostgroup membership
+      all hosts rebuilt (playbook)
+    playbook:automember.automember-hostgroup-membership-hosts-rebuilt: Automember hostgroup membership
+      hosts rebuilt (playbook)
+    playbook:automember.automember-hostgroup-orphans-removed: Automember hostgroup orphans removed (playbook)
+    playbook:automember.automember-hostgroup-present: Automember hostgroup present (playbook)
+    playbook:automember.automember-hostgroup-rule-absent: Automember hostgroup rule absent (playbook)
+    playbook:automember.automember-hostgroup-rule-present: Automember hostgroup rule present (playbook)
+- title: Control host-based access (HBAC)
+  description: Create HBAC rules, services and service groups that decide which users may reach which
+    hosts and services.
+  components:
+    ipahbacrule: HBAC rules
+    ipahbacsvc: HBAC services
+    ipahbacsvcgroup: HBAC service groups
+    playbook:hbacrule.ensure-hbarule-allhosts-absent: Ensure hbarule allhosts absent (playbook)
+    playbook:hbacrule.ensure-hbarule-allhosts-disabled: Ensure hbarule allhosts disabled (playbook)
+    playbook:hbacrule.ensure-hbarule-allhosts-enabled: Ensure hbarule allhosts enabled (playbook)
+    playbook:hbacrule.ensure-hbarule-allhosts-present: Ensure hbarule allhosts present (playbook)
+    playbook:hbacrule.ensure-hbarule-allhosts-server-member-absent: Ensure hbarule allhosts server member
+      absent (playbook)
+    playbook:hbacrule.ensure-hbarule-allhosts-server-member-present: Ensure hbarule allhosts server member
+      present (playbook)
+    playbook:hbacsvc.ensure-hbacsvc-absent: Ensure hbacsvc absent (playbook)
+    playbook:hbacsvc.ensure-hbacsvc-present: Ensure hbacsvc present (playbook)
+    playbook:hbacsvcgroup.ensure-hbacsvcgroup-absent: Ensure hbacsvcgroup absent (playbook)
+    playbook:hbacsvcgroup.ensure-hbacsvcgroup-member-absent: Ensure hbacsvcgroup member absent (playbook)
+    playbook:hbacsvcgroup.ensure-hbacsvcgroup-member-present: Ensure hbacsvcgroup member present (playbook)
+    playbook:hbacsvcgroup.ensure-hbacsvcgroup-present: Ensure hbacsvcgroup present (playbook)
+- title: Manage sudo rules and commands
+  description: Define sudo commands, command groups and rules with their users, hosts and run-as settings
+    centrally.
+  components:
+    ipasudocmd: Sudo commands
+    ipasudocmdgroup: Sudo command groups
+    ipasudorule: Sudo rules
+    playbook:sudocmd.ensure-sudocmd-is-absent: Ensure sudocmd is absent (playbook)
+    playbook:sudocmd.ensure-sudocmd-is-present: Ensure sudocmd is present (playbook)
+    playbook:sudocmdgroup.ensure-sudocmd-are-absent-in-sudocmdgroup: Ensure sudocmd are absent in sudocmdgroup
+      (playbook)
+    playbook:sudocmdgroup.ensure-sudocmd-are-present-in-sudocmdgroup: Ensure sudocmd are present in sudocmdgroup
+      (playbook)
+    playbook:sudocmdgroup.ensure-sudocmdgroup-is-absent: Ensure sudocmdgroup is absent (playbook)
+    playbook:sudocmdgroup.ensure-sudocmdgroup-is-present: Ensure sudocmdgroup is present (playbook)
+    playbook:sudorule.ensure-sudorule-does-not-have-sudooption: Ensure sudorule does not have sudooption
+      (playbook)
+    playbook:sudorule.ensure-sudorule-has-sudooption: Ensure sudorule has sudooption (playbook)
+    playbook:sudorule.ensure-sudorule-host-member-is-absent: Ensure sudorule host member is absent (playbook)
+    playbook:sudorule.ensure-sudorule-host-member-is-present: Ensure sudorule host member is present (playbook)
+    playbook:sudorule.ensure-sudorule-hostgroup-member-is-absent: Ensure sudorule hostgroup member is
+      absent (playbook)
+    playbook:sudorule.ensure-sudorule-hostgroup-member-is-present: Ensure sudorule hostgroup member is
+      present (playbook)
+    playbook:sudorule.ensure-sudorule-hostmask-member-is-absent: Ensure sudorule hostmask member is absent
+      (playbook)
+    playbook:sudorule.ensure-sudorule-hostmask-member-is-present: Ensure sudorule hostmask member is present
+      (playbook)
+    playbook:sudorule.ensure-sudorule-is-absent: Ensure sudorule is absent (playbook)
+    playbook:sudorule.ensure-sudorule-is-disabled: Ensure sudorule is disabled (playbook)
+    playbook:sudorule.ensure-sudorule-is-enabled: Ensure sudorule is enabled (playbook)
+    playbook:sudorule.ensure-sudorule-is-present: Ensure sudorule is present (playbook)
+    playbook:sudorule.ensure-sudorule-is-present-with-order: Ensure sudorule is present with order (playbook)
+    playbook:sudorule.ensure-sudorule-runasuser-group-is-absent: Ensure sudorule runasuser group is absent
+      (playbook)
+    playbook:sudorule.ensure-sudorule-runasuser-group-is-present: Ensure sudorule runasuser group is present
+      (playbook)
+    playbook:sudorule.ensure-sudorule-runasuser-is-absent: Ensure sudorule runasuser is absent (playbook)
+    playbook:sudorule.ensure-sudorule-runasuser-is-present: Ensure sudorule runasuser is present (playbook)
+    playbook:sudorule.ensure-sudorule-sudocmd-is-absent: Ensure sudorule sudocmd is absent (playbook)
+    playbook:sudorule.ensure-sudorule-sudocmd-is-present: Ensure sudorule sudocmd is present (playbook)
+- title: Delegate administration with roles and permissions
+  description: Build role-based access control from permissions, privileges, roles, delegations and self-service
+    rules.
+  components:
+    ipadelegation: Delegations
+    ipapermission: Permissions
+    ipaprivilege: Privileges
+    iparole: Roles
+    ipaselfservice: Self-service permissions
+    playbook:delegation.delegation-absent: Delegation absent (playbook)
+    playbook:delegation.delegation-member-absent: Delegation member absent (playbook)
+    playbook:delegation.delegation-member-present: Delegation member present (playbook)
+    playbook:delegation.delegation-present: Delegation present (playbook)
+    playbook:permission.permission-absent: Permission absent (playbook)
+    playbook:permission.permission-allow-read-employeenum: Permission allow read employeenum (playbook)
+    playbook:permission.permission-member-absent: Permission member absent (playbook)
+    playbook:permission.permission-member-present: Permission member present (playbook)
+    playbook:permission.permission-present: Permission present (playbook)
+    playbook:permission.permission-renamed: Permission renamed (playbook)
+    playbook:privilege.privilege-absent: Privilege absent (playbook)
+    playbook:privilege.privilege-member-absent: Privilege member absent (playbook)
+    playbook:privilege.privilege-member-present: Privilege member present (playbook)
+    playbook:privilege.privilege-present: Privilege present (playbook)
+    playbook:role.role-is-absent: Role is absent (playbook)
+    playbook:role.role-is-present: Role is present (playbook)
+    playbook:role.role-member-group-absent: Role member group absent (playbook)
+    playbook:role.role-member-group-present: Role member group present (playbook)
+    playbook:role.role-member-host-absent: Role member host absent (playbook)
+    playbook:role.role-member-host-present: Role member host present (playbook)
+    playbook:role.role-member-hostgroup-absent: Role member hostgroup absent (playbook)
+    playbook:role.role-member-hostgroup-present: Role member hostgroup present (playbook)
+    playbook:role.role-member-privilege-absent: Role member privilege absent (playbook)
+    playbook:role.role-member-privilege-present: Role member privilege present (playbook)
+    playbook:role.role-member-service-absent: Role member service absent (playbook)
+    playbook:role.role-member-service-present: Role member service present (playbook)
+    playbook:role.role-member-user-absent: Role member user absent (playbook)
+    playbook:role.role-member-user-present: Role member user present (playbook)
+    playbook:role.role-members-absent: Role members absent (playbook)
+    playbook:role.role-members-present: Role members present (playbook)
+    playbook:role.role-rename: Role rename (playbook)
+    playbook:selfservice.selfservice-absent: Selfservice absent (playbook)
+    playbook:selfservice.selfservice-member-absent: Selfservice member absent (playbook)
+    playbook:selfservice.selfservice-member-present: Selfservice member present (playbook)
+    playbook:selfservice.selfservice-present: Selfservice present (playbook)
+- title: Manage Kerberos services and delegation
+  description: Register services and configure constrained delegation rules and targets.
+  components:
+    ipaservice: Services
+    ipaservicedelegationrule: Service delegation rules
+    ipaservicedelegationtarget: Service delegation targets
+    playbook:service.service-host-is-absent: Service host is absent (playbook)
+    playbook:service.service-host-is-present: Service host is present (playbook)
+    playbook:service.service-is-absent: Service is absent (playbook)
+    playbook:service.service-is-disabled: Service is disabled (playbook)
+    playbook:service.service-is-present: Service is present (playbook)
+    playbook:service.service-is-present-with-all-attributes: Service is present with all attributes (playbook)
+    playbook:service.service-is-present-with-host-force: Service is present with host force (playbook)
+    playbook:service.service-is-present-without-host-object: Service is present without host object (playbook)
+    playbook:service.service-member-allow_create_keytab-absent: Service member allow create keytab absent
+      (playbook)
+    playbook:service.service-member-allow_create_keytab-present: Service member allow create keytab present
+      (playbook)
+    playbook:service.service-member-allow_retrieve_keytab-absent: Service member allow retrieve keytab
+      absent (playbook)
+    playbook:service.service-member-allow_retrieve_keytab-present: Service member allow retrieve keytab
+      present (playbook)
+    playbook:service.service-member-certificate-absent: Service member certificate absent (playbook)
+    playbook:service.service-member-certificate-present: Service member certificate present (playbook)
+    playbook:service.service-member-principal-absent: Service member principal absent (playbook)
+    playbook:service.service-member-principal-present: Service member principal present (playbook)
+    playbook:servicedelegationrule.servicedelegationrule-absent: Servicedelegationrule absent (playbook)
+    playbook:servicedelegationrule.servicedelegationrule-present: Servicedelegationrule present (playbook)
+    playbook:servicedelegationrule.servicedelegationrule-principal-member-absent: Servicedelegationrule
+      principal member absent (playbook)
+    playbook:servicedelegationrule.servicedelegationrule-principal-member-present: Servicedelegationrule
+      principal member present (playbook)
+    playbook:servicedelegationrule.servicedelegationrule-target-member-absent: Servicedelegationrule target
+      member absent (playbook)
+    playbook:servicedelegationrule.servicedelegationrule-target-member-present: Servicedelegationrule
+      target member present (playbook)
+    playbook:servicedelegationtarget.servicedelegationtarget-absent: Servicedelegationtarget absent (playbook)
+    playbook:servicedelegationtarget.servicedelegationtarget-member-absent: Servicedelegationtarget member
+      absent (playbook)
+    playbook:servicedelegationtarget.servicedelegationtarget-member-present: Servicedelegationtarget member
+      present (playbook)
+    playbook:servicedelegationtarget.servicedelegationtarget-present: Servicedelegationtarget present
+      (playbook)
+- title: Request and manage certificates
+  description: Request, retrieve, hold, release and revoke certificates for users, hosts and services.
+  components:
+    ipacert: Certificates
+    playbook:cert.cert-hold: Cert hold (playbook)
+    playbook:cert.cert-release: Cert release (playbook)
+    playbook:cert.cert-request-host: Cert request host (playbook)
+    playbook:cert.cert-request-service: Cert request service (playbook)
+    playbook:cert.cert-request-user: Cert request user (playbook)
+    playbook:cert.cert-retrieve: Cert retrieve (playbook)
+    playbook:cert.cert-revoke: Cert revoke (playbook)
+- title: Manage DNS zones and records
+  description: Configure global DNS options and forwarders, DNS zones, forward zones and DNS records.
+  components:
+    ipadnsconfig: Global DNS configuration
+    ipadnsforwardzone: DNS forward zones
+    ipadnsrecord: DNS records
+    ipadnszone: DNS zones
+    playbook:dnsconfig.disable-global-forwarders: Disable global forwarders (playbook)
+    playbook:dnsconfig.disallow-reverse-sync: Disallow reverse sync (playbook)
+    playbook:dnsconfig.forwarders-absent: Forwarders absent (playbook)
+    playbook:dnsconfig.forwarders-present: Forwarders present (playbook)
+    playbook:dnsconfig.set-configuration: Set configuration (playbook)
+    playbook:dnsforwardzone.ensure-dnsforwardzone-is-absent: Ensure dnsforwardzone is absent (playbook)
+    playbook:dnsforwardzone.ensure-dnsforwardzone-is-present: Ensure dnsforwardzone is present (playbook)
+    playbook:dnsforwardzone.ensure-dnsforwardzone-with-forwarder-port: Ensure dnsforwardzone with forwarder
+      port (playbook)
+    playbook:dnsrecord.ensure-A-and-AAAA-records-are-absent: Ensure A and AAAA records are absent (playbook)
+    playbook:dnsrecord.ensure-A-and-AAAA-records-are-present: Ensure A and AAAA records are present (playbook)
+    playbook:dnsrecord.ensure-CNAME-record-is-absent: Ensure CNAME record is absent (playbook)
+    playbook:dnsrecord.ensure-CNAME-record-is-present: Ensure CNAME record is present (playbook)
+    playbook:dnsrecord.ensure-MX-record-is-present: Ensure MX record is present (playbook)
+    playbook:dnsrecord.ensure-PTR-record-is-present: Ensure PTR record is present (playbook)
+    playbook:dnsrecord.ensure-SRV-record-is-present: Ensure SRV record is present (playbook)
+    playbook:dnsrecord.ensure-SSHFP-record-is-present: Ensure SSHFP record is present (playbook)
+    playbook:dnsrecord.ensure-TLSA-record-is-present: Ensure TLSA record is present (playbook)
+    playbook:dnsrecord.ensure-TXT-record-is-present: Ensure TXT record is present (playbook)
+    playbook:dnsrecord.ensure-URI-record-is-present: Ensure URI record is present (playbook)
+    playbook:dnsrecord.ensure-dnsrecord-is-absent: Ensure dnsrecord is absent (playbook)
+    playbook:dnsrecord.ensure-dnsrecord-is-present: Ensure dnsrecord is present (playbook)
+    playbook:dnsrecord.ensure-dnsrecord-with-reverse-is-present: Ensure dnsrecord with reverse is present
+      (playbook)
+    playbook:dnsrecord.ensure-multiple-A-records-are-present: Ensure multiple A records are present (playbook)
+    playbook:dnsrecord.ensure-presence-multiple-records: Ensure presence multiple records (playbook)
+    playbook:dnszone.disable-zone-forwarders: Disable zone forwarders (playbook)
+    playbook:dnszone.dnszone-absent: Dnszone absent (playbook)
+    playbook:dnszone.dnszone-all-params: Dnszone all params (playbook)
+    playbook:dnszone.dnszone-disable: Dnszone disable (playbook)
+    playbook:dnszone.dnszone-enable: Dnszone enable (playbook)
+    playbook:dnszone.dnszone-present: Dnszone present (playbook)
+    playbook:dnszone.dnszone-reverse-from-ip: Dnszone reverse from IP (playbook)
+- title: Manage automount maps and locations
+  description: Define automount locations, maps and keys for NFS and similar shares.
+  components:
+    ipaautomountkey: Automount keys
+    ipaautomountlocation: Automount locations
+    ipaautomountmap: Automount maps
+    playbook:automount.automount-location-absent: Automount location absent (playbook)
+    playbook:automount.automount-location-present: Automount location present (playbook)
+    playbook:automount.automount-map-absent: Automount map absent (playbook)
+    playbook:automount.automount-map-indirect-map: Automount map indirect map (playbook)
+    playbook:automount.automount-map-present: Automount map present (playbook)
+    playbook:automount.automountkey-present: Automountkey present (playbook)
+    playbook:automount.automountkey-renamed: Automountkey renamed (playbook)
+    playbook:automount.automoutkey-absent: Automoutkey absent (playbook)
+- title: Manage ID views, ranges, trusts and external IdPs
+  description: Configure ID views and overrides, ID ranges, AD domain trusts, external identity providers
+    and passkey authentication.
+  components:
+    ipaidoverridegroup: ID overrides for groups
+    ipaidoverrideuser: ID overrides for users
+    ipaidp: External identity providers
+    ipaidrange: ID ranges
+    ipaidview: ID views
+    ipapasskeyconfig: Passkey configuration
+    ipatrust: Domain trusts
+    playbook:idoverridegroup.idoverridegroup-absent: Idoverridegroup absent (playbook)
+    playbook:idoverridegroup.idoverridegroup-present: Idoverridegroup present (playbook)
+    playbook:idoverrideuser.idoverrideuser-absent: Idoverrideuser absent (playbook)
+    playbook:idoverrideuser.idoverrideuser-certificate-absent: Idoverrideuser certificate absent (playbook)
+    playbook:idoverrideuser.idoverrideuser-certificate-present: Idoverrideuser certificate present (playbook)
+    playbook:idoverrideuser.idoverrideuser-present: Idoverrideuser present (playbook)
+    playbook:idp.idp-absent: Idp absent (playbook)
+    playbook:idp.idp-present: Idp present (playbook)
+    playbook:idrange.idrange-absent: Idrange absent (playbook)
+    playbook:idrange.idrange-ad-posix-present: Idrange AD posix present (playbook)
+    playbook:idrange.idrange-ad-present: Idrange AD present (playbook)
+    playbook:idrange.idrange-present: Idrange present (playbook)
+    playbook:idview.idview-absent: Idview absent (playbook)
+    playbook:idview.idview-host-applied: Idview host applied (playbook)
+    playbook:idview.idview-host-unapplied: Idview host unapplied (playbook)
+    playbook:idview.idview-present: Idview present (playbook)
+    playbook:passkeyconfig.passkeyconfig-present: Passkeyconfig present (playbook)
+    playbook:passkeyconfig.passkeyconfig-retrieve: Passkeyconfig retrieve (playbook)
+    playbook:trust.add-trust: Add trust (playbook)
+    playbook:trust.del-trust: Del trust (playbook)
+- title: Store secrets in vaults
+  description: Create standard, symmetric and asymmetric vaults and archive, retrieve and share secret
+    data with their owners and members.
+  components:
+    ipavault: Vaults
+    playbook:vault.change-password-symmetric-vault: Change password symmetric vault (playbook)
+    playbook:vault.data-archive-in-asymmetric-vault: Data archive in asymmetric vault (playbook)
+    playbook:vault.data-archive-in-symmetric-vault: Data archive in symmetric vault (playbook)
+    playbook:vault.ensure-asymetric-vault-is-absent: Ensure asymetric vault is absent (playbook)
+    playbook:vault.ensure-asymetric-vault-is-present: Ensure asymetric vault is present (playbook)
+    playbook:vault.ensure-service-vault-is-absent: Ensure service vault is absent (playbook)
+    playbook:vault.ensure-service-vault-is-present: Ensure service vault is present (playbook)
+    playbook:vault.ensure-shared-vault-is-absent: Ensure shared vault is absent (playbook)
+    playbook:vault.ensure-shared-vault-is-present: Ensure shared vault is present (playbook)
+    playbook:vault.ensure-standard-vault-is-absent: Ensure standard vault is absent (playbook)
+    playbook:vault.ensure-standard-vault-is-present: Ensure standard vault is present (playbook)
+    playbook:vault.ensure-symetric-vault-is-absent: Ensure symetric vault is absent (playbook)
+    playbook:vault.ensure-symetric-vault-is-present: Ensure symetric vault is present (playbook)
+    playbook:vault.ensure-vault-is-present-with-members: Ensure vault is present with members (playbook)
+    playbook:vault.ensure-vault-member-group-is-absent: Ensure vault member group is absent (playbook)
+    playbook:vault.ensure-vault-member-group-is-present: Ensure vault member group is present (playbook)
+    playbook:vault.ensure-vault-member-user-is-absent: Ensure vault member user is absent (playbook)
+    playbook:vault.ensure-vault-member-user-is-present: Ensure vault member user is present (playbook)
+    playbook:vault.ensure-vault-owner-is-absent: Ensure vault owner is absent (playbook)
+    playbook:vault.ensure-vault-owner-is-present: Ensure vault owner is present (playbook)
+    playbook:vault.retrive-data-asymmetric-vault: Retrive data asymmetric vault (playbook)
+    playbook:vault.retrive-data-symmetric-vault: Retrive data symmetric vault (playbook)
+    playbook:vault.vault-is-present-with-password-file: Vault is present with password file (playbook)
+    playbook:vault.vault-is-present-with-public-key-file: Vault is present with public key file (playbook)
+- title: Manage IdM topology, servers and global configuration
+  description: Adjust global IPA settings, servers and locations, hide servers or set service weights,
+    and manage replication topology segments and suffixes.
+  components:
+    ipaconfig: Global IPA configuration
+    ipalocation: Locations
+    ipaserver: IdM servers
+    ipatopologysegment: Topology segments
+    ipatopologysuffix: Topology suffixes
+    playbook:config.change-ipa-domain-netbios-name: Change IPA domain netbios name (playbook)
+    playbook:config.generate-users-groups-sids: Generate users groups SIDs (playbook)
+    playbook:config.retrieve-config: Retrieve config (playbook)
+    playbook:config.set-ca-renewal-master-server: Set ca renewal master server (playbook)
+    playbook:location.location-absent: Location absent (playbook)
+    playbook:location.location-present: Location present (playbook)
+    playbook:server.server-absent: Server absent (playbook)
+    playbook:server.server-absent-continue: Server absent continue (playbook)
+    playbook:server.server-absent-force: Server absent force (playbook)
+    playbook:server.server-absent-ignore_last_of_role: Server absent ignore last of role (playbook)
+    playbook:server.server-absent-ignore_topology_disconnect: Server absent ignore topology disconnect
+      (playbook)
+    playbook:server.server-hidden: Server hidden (playbook)
+    playbook:server.server-location: Server location (playbook)
+    playbook:server.server-no-location: Server no location (playbook)
+    playbook:server.server-no-service-weight: Server no service weight (playbook)
+    playbook:server.server-not-hidden: Server not hidden (playbook)
+    playbook:server.server-present: Server present (playbook)
+    playbook:server.server-service-weight: Server service weight (playbook)
+    playbook:topology.add-topologysegment: Add topologysegment (playbook)
+    playbook:topology.add-topologysegments: Add topologysegments (playbook)
+    playbook:topology.check-topologysegments: Check topologysegments (playbook)
+    playbook:topology.delete-topologysegment: Delete topologysegment (playbook)
+    playbook:topology.delete-topologysegments: Delete topologysegments (playbook)
+    playbook:topology.reinitialize-topologysegment: Reinitialize topologysegment (playbook)
+    playbook:topology.verify-topologysuffix: Verify topologysuffix (playbook)
+- title: Install and uninstall IdM servers, replicas and clients
+  description: Deploy IdM servers, replicas and enrolled clients, or whole clusters, and remove them again.
+  components:
+    playbook:install-client: Install client (playbook)
+    playbook:install-cluster: Install cluster (playbook)
+    playbook:install-replica: Install replica (playbook)
+    playbook:install-server: Install server (playbook)
+    playbook:uninstall-client: Uninstall client (playbook)
+    playbook:uninstall-cluster: Uninstall cluster (playbook)
+    playbook:uninstall-replica: Uninstall replica (playbook)
+    playbook:uninstall-server: Uninstall server (playbook)
+    role:ipaclient: Client enrollment role
+    role:ipareplica: Replica deployment role
+    role:ipaserver: Server deployment role
+- title: Enable smart card authentication
+  description: Configure IdM servers, replicas and clients for smart card login.
+  components:
+    playbook:install-smartcard-clients: Install smartcard clients (playbook)
+    playbook:install-smartcard-replicas: Install smartcard replicas (playbook)
+    playbook:install-smartcard-server: Install smartcard server (playbook)
+    playbook:install-smartcard-servers: Install smartcard servers (playbook)
+    role:ipasmartcard_client: Smart card client role
+    role:ipasmartcard_server: Smart card server role
+- title: Back up and restore IdM servers
+  description: Back up an IdM server locally or to the controller, copy or remove backups, and restore
+    a server from a backup.
+  components:
+    playbook:backup-server: Backup server (playbook)
+    playbook:backup-server-to-controller: Backup server to controller (playbook)
+    playbook:copy-all-backups-from-server: Copy all backups from server (playbook)
+    playbook:copy-backup-from-controller: Copy backup from controller (playbook)
+    playbook:copy-backup-from-server: Copy backup from server (playbook)
+    playbook:remove-all-backups-from-server: Remove all backups from server (playbook)
+    playbook:remove-backup-from-server: Remove backup from server (playbook)
+    playbook:restore-server: Restore server (playbook)
+    playbook:restore-server-from-controller: Restore server from controller (playbook)
+    role:ipabackup: Backup and restore role
+- title: Build dynamic inventory from IdM
+  description: Compile an Ansible inventory from the hosts and host groups of an IPA domain.
+  components:
+    inventory:freeipa: FreeIPA dynamic inventory

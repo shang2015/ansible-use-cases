@@ -1,0 +1,165 @@
+fqcn: inspur.ispim
+product: Inspur server BMC (ISPIM)
+notes:
+- Modules talk to the server BMC; read-only queries are named after the item (for example cpu) and changes
+  are named edit_<item>.
+use_cases:
+- title: Collect server hardware inventory and health
+  description: Read BMC, firmware, CPU, memory, GPU, PCIe, adapter, fan, temperature, voltage, power supply
+    and sensor data, set fan, FRU, UID and sensor thresholds, and run a self test.
+  components:
+    server: Server status
+    bmc: BMC information
+    support: Support information
+    fw_version: Firmware versions
+    self_test: Self test
+    cpu: CPUs
+    mem: Memory
+    gpu: GPUs
+    pcie: PCIe devices
+    adapter: Adapters
+    fru: FRU information
+    edit_fru: FRU settings
+    fan: Fans
+    edit_fan: Fan settings
+    temp: Temperatures
+    volt: Voltages
+    psu: Power supplies
+    sensor: Sensors
+    threshold: Thresholds
+    edit_threshold: Threshold settings
+    uid: UID LED
+    edit_uid: UID LED settings
+- title: Configure storage, RAID and disks
+  description: Read RAID and HBA controllers, backplanes and disks, and create or modify logical disks
+    and physical disk settings.
+  components:
+    raid: RAID controllers
+    hba: HBA cards
+    backplane: Disk backplanes
+    hard_disk: Hard disks
+    onboard_disk: Onboard disks
+    pdisk: Physical disks
+    edit_pdisk: Physical disk settings
+    ldisk: Logical disks
+    add_ldisk: Logical disk creation
+    edit_ldisk: Logical disk settings
+- title: Control power and power budget
+  description: Read and set power status, restore policy, power budget and power supply configuration,
+    and read power consumption.
+  components:
+    power_status: Power status
+    edit_power: Power control
+    power_consumption: Power consumption
+    power_budget: Power budget
+    edit_power_budget: Power budget settings
+    power_restore: Power restore policy
+    edit_power_restore: Power restore settings
+    psu_config: Power supply configuration
+    edit_psu_config: Power supply configuration settings
+    psu_peak: Power supply peak settings
+    edit_psu_peak: Power supply peak changes
+- title: Configure BIOS and boot
+  description: Read and change BIOS setup attributes, export and import BIOS configuration, and set boot
+    options and boot images.
+  components:
+    bios: BIOS setup
+    edit_bios: BIOS attributes
+    bios_export: BIOS export
+    bios_import: BIOS import
+    boot_option: Boot options
+    edit_boot_option: Boot option settings
+    boot_image: BMC boot images
+    edit_boot_image: BMC boot image settings
+- title: Configure BMC network and services
+  description: Set BMC network, IPv4, IPv6, VLAN, bonding, link and NCSI settings, DNS, NTP and enable
+    or disable BMC services.
+  components:
+    network: Network
+    edit_network: Network settings
+    edit_ipv4: IPv4 settings
+    edit_ipv6: IPv6 settings
+    edit_vlan: VLAN settings
+    network_bond: Network bonds
+    edit_network_bond: Network bond settings
+    network_link: Network links
+    edit_network_link: Network link settings
+    ncsi: NCSI
+    edit_ncsi: NCSI settings
+    dns: DNS
+    edit_dns: DNS settings
+    ntp: NTP
+    edit_ntp: NTP settings
+    service: BMC services
+    edit_service: BMC service settings
+- title: Provide remote console and virtual media
+  description: Manage KVM, virtual media and remote image redirection, and capture or download screenshots.
+  components:
+    kvm: KVM
+    edit_kvm: KVM settings
+    reset_kvm: KVM reset
+    virtual_media: Virtual media
+    edit_virtual_media: Virtual media settings
+    media_instance: Virtual media instances
+    edit_media_instance: Virtual media instance settings
+    connect_media: Remote image redirection
+    edit_connect_media: Virtual media image start and stop
+    auto_capture: Automatic screen capture
+    edit_auto_capture: Automatic screen capture settings
+    edit_manual_capture: Manual screen capture
+    download_auto_screenshot: Automatic screenshot downloads
+    download_manual_screenshot: Manual screenshot downloads
+- title: Manage BMC users and directory authentication
+  description: Manage local users and groups, configure Active Directory and LDAP authentication with
+    their groups, and list or delete sessions.
+  components:
+    user: Users
+    user_group: User groups
+    ad: Active Directory information
+    edit_ad: Active Directory settings
+    ad_group: Active Directory groups
+    ldap: LDAP information
+    edit_ldap: LDAP settings
+    ldap_group: LDAP groups
+    session: Online sessions
+    del_session: Session deletion
+- title: Collect logs and send alerts
+  description: Read and clear audit, event and system logs, collect log bundles, set log policies, and
+    configure alert policies, SMTP and SNMP notifications.
+  components:
+    audit_log: Audit log
+    clear_audit_log: Audit log cleanup
+    event_log: Event log
+    clear_event_log: Event log cleanup
+    system_log: System log
+    clear_system_log: System log cleanup
+    collect_log: Log collection
+    collect_blackbox: Blackbox log collection
+    log_setting: Log settings
+    edit_log_setting: Log setting changes
+    edit_m6_log_setting: Log setting changes (M6 servers)
+    event_log_policy: Event log policy
+    edit_event_log_policy: Event log policy settings
+    alert_policy: Alert policy
+    edit_alert_policy: Alert policy settings
+    smtp: SMTP
+    edit_smtp: SMTP settings
+    edit_smtp_com: SMTP communication settings
+    edit_smtp_dest: SMTP destination settings
+    snmp: SNMP
+    edit_snmp: SNMP settings
+    snmp_trap: SNMP traps
+    edit_snmp_trap: SNMP trap settings
+- title: Update firmware and back up or reset the BMC
+  description: Update firmware, CPLD and power supplies, back up and restore server settings, preserve
+    configuration, restore factory defaults and reset the BMC.
+  components:
+    update_fw: Firmware update
+    update_cpld: CPLD update
+    update_psu: Power supply update
+    backup: Settings backup
+    restore: Settings restore
+    preserve_config: Preserved configuration
+    edit_preserve_config: Preserved configuration settings
+    edit_restore_factory_default: Factory default restore
+    reset_bmc: BMC reset

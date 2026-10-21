@@ -1,0 +1,46 @@
+fqcn: ibm.ibm_zhmc
+product: IBM Z Hardware Management Console
+use_cases:
+- title: Manage partitions in DPM mode
+  description: Create and configure DPM partitions with their NICs, HBAs, virtual functions and crypto
+    attachments, and run console commands in them.
+  components:
+    partition: Partitions
+    nic: Partition NICs
+    hba: Partition HBAs
+    virtual_function: Virtual functions
+    crypto_attachment: Crypto attachments
+    partition_command: Partition console commands
+    partition_messages: Partition console messages
+- title: Manage storage and adapters
+  description: Manage adapters, storage groups, storage volumes and their attachment to partitions.
+  components:
+    adapter: Adapters
+    storage_group: Storage groups
+    storage_group_attachment: Storage group attachments
+    storage_volume: Storage volumes
+- title: Manage LPARs and CPCs
+  description: Manage CPCs, temporary processor capacity and classic-mode LPARs including console commands
+    and messages.
+  components:
+    cpc: CPCs
+    cpc_capacity: Temporary processor capacity
+    lpar: LPARs
+    lpar_command: LPAR console commands
+    lpar_messages: LPAR console messages
+- title: Administer the HMC and its users
+  description: Manage HMC users, roles, patterns, password rules, LDAP server definitions and the HMC
+    console.
+  components:
+    console: HMC console
+    user: Users
+    user_role: User roles
+    user_pattern: User patterns
+    password_rule: Password rules
+    ldap_server_definition: LDAP server definitions
+- title: Connect to the HMC and gather versions
+  description: Manage HMC sessions, send direct HTTP requests and retrieve HMC and CPC version facts.
+  components:
+    session: Sessions
+    http: HTTP requests
+    versions: HMC and CPC versions

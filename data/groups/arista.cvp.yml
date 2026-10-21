@@ -1,0 +1,21 @@
+fqcn: arista.cvp
+product: Arista CloudVision Portal
+use_cases:
+- title: Provision devices and configuration
+  description: Manage configlets, the provisioning topology, containers and devices, images, tags and
+    ZTP DHCP service.
+  components:
+    configlet_v3: Configlets
+    container_v3: Containers
+    device_v3: Devices
+    image_v3: EOS images
+    tag_v3: Tags
+    role:configlets_sync: Configlet synchronization
+    role:dhcp_configuration: ZTP DHCP service
+- title: Control changes and validate
+  description: Manage change controls, execute or cancel tasks, validate configlets and collect facts.
+  components:
+    change_control_v3: Change controls
+    task_v3: Tasks
+    validate_v3: Configlet validation
+    facts_v3: CloudVision facts

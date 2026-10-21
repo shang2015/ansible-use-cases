@@ -1,0 +1,158 @@
+fqcn: ibm.power_ibmi
+product: IBM i (IBM Power)
+notes:
+- Plain keys are modules (ibmi_ prefix omitted); roles and playbooks are listed with their type.
+use_cases:
+- title: Run CL commands, SQL and scripts on IBM i
+  description: Execute CL commands, SQL statements, sqlite3 queries and CL or SQL script files on IBM
+    i, with ready-made sample playbooks.
+  components:
+    cl_command: CL commands
+    rtv_command: CL-program-only commands
+    script: Local CL/SQL scripts
+    script_execute: Remote CL/SQL scripts
+    sql_execute: SQL statements
+    sql_query: SQL queries
+    sqlite3: SQLite3 statements
+    playbook:ibmi-cl-command-sample: CL command sample
+    playbook:ibmi-sql-sample: SQL sample
+    playbook:ibmi-sqlite3-sample: SQLite3 sample
+- title: Gather facts, jobs and system information
+  description: Query system values, ethernet ports, unconfigured disks, jobs, job logs, messages and spooled
+    file output.
+  components:
+    facts: Facts
+    sysval: System values
+    ethernet_port: Ethernet ports
+    get_nonconfigure_disks: Unconfigured disks
+    job: Job information
+    query_job_log: Job logs
+    message: Message search
+    spooled_file_data: Spooled file content
+    playbook:ibmi-sysval-sample: System value sample
+    playbook:query-iasp-sample: iASP query sample
+- title: Run and schedule jobs and subsystems
+  description: Submit or schedule batch jobs, manage subsystems and reply to inquiry messages.
+  components:
+    at: Scheduled batch jobs
+    submit_job: Submitted jobs
+    subsystem: Subsystems
+    reply_message: Message replies
+- title: 'Control the system: services, devices, network and power'
+  description: Reboot the machine, vary devices, manage IASPs, host and TCP servers, TCP/IP interfaces
+    and network redundancy groups.
+  components:
+    reboot: Reboot
+    device_vary: Device vary on/off
+    iasp: Independent ASPs
+    host_server_service: Host servers
+    tcp_server_service: TCP servers
+    tcp_interface: TCP/IP interfaces
+    nrg_link: Network redundancy group links
+    role:present_ip_interface: Active IP interfaces
+- title: Manage users, authority and security
+  description: Create user and group profiles, grant or check object authority, check user compliance
+    and default passwords.
+  components:
+    user_and_group: User and group profiles
+    user_compliance_check: User compliance checks
+    object_authority: Object authority
+    module_authority_check: Module authority checks
+    playbook:ibmi-check-default-passwords: Default password check
+    playbook:ssh-addkey: SSH key installation
+    role:configure_passwordless_ssh_login: Passwordless SSH login
+- title: Save, restore and transfer libraries and objects
+  description: Save and restore libraries and objects, find objects, copy and fetch save files, and synchronise
+    files between IBM i nodes.
+  components:
+    lib_save: Library save
+    lib_restore: Library restore
+    object_save: Object save
+    object_restore: Object restore
+    object_find: Object search
+    copy: Save file copy to remote
+    fetch: Fetch from remote
+    sync: Save file sync
+    synchronize: Save file synchronisation
+    sync_files: File sync
+    synchronize_files: File synchronisation
+    role:check_file: Image file checksum checks
+- title: Install and remove licensed programs and open source
+  description: Install, save and uninstall licensed products and set up Bash, Node.js and open source
+    utilities.
+  components:
+    install_product_from_savf: Product install from save file
+    save_product_to_savf: Product save to save file
+    uninstall_product: Product removal
+    playbook:ibmi-bash-setup: Bash setup
+    playbook:ibmi-install-nodejs.ibmi-install-nodejs: Node.js installation
+    playbook:ibmi-install-oss-utils: Open source utilities
+- title: Prepare IBM i for Ansible
+  description: Configure managed-node settings and set up IBM i for the collection, including offline
+    targets.
+  components:
+    module_config: Managed node configuration
+    playbook:enable-ansible-for-i.setup: Ansible setup
+    playbook:enable_offline_ibmi.main: Offline target setup
+- title: Query, download and install PTFs
+  description: Display, check, compare, download and install individual fixes and PTF groups, including
+    via image catalog.
+  components:
+    display_fix: Fix display
+    download_fix: Fix download
+    download_fix_from_cloud: Fix download from cloud
+    fix: Fix install and removal
+    fix_check: PTF group check
+    fix_compare: Fix comparison
+    fix_group_check: PTF group information check
+    fix_imgclg: Fix install via image catalog
+    fix_product_check: Product fix check
+    playbook:ibmi-fix-check: Fix check sample
+    playbook:ibmi-fix-group-check: Fix group check sample
+    role:apply_all_loaded_ptfs: Apply all loaded PTFs
+    role:apply_ptf: Apply PTFs
+    role:check_ptf: PTF status check
+    role:download_individual_ptfs: Individual PTF download
+    role:load_ptf: PTF load
+    role:load_apply_ptfs: PTF load and apply
+    role:sync_apply_individual_ptfs: Individual PTF transfer and apply
+    role:sync_apply_individual_ptfs_local: Local PTF transfer and apply
+    role:sync_apply_individual_ptfs_lv1: Level 1 PTF transfer and apply
+    role:sync_apply_ptf_group: PTF group transfer and apply
+    role:sync_apply_ptf_group_networkinstall: PTF group network install
+- title: Maintain a PTF repository and network install server
+  description: Build a PTF fix repository database and set up network install servers and clients.
+  components:
+    fix_repo: Fix repository
+    fix_repo_lv1: Level 1 fix repository
+    fix_network_install_client: Network install client
+    fix_network_install_server: Network install server
+    playbook:install_fix_repo_dependencies: Fix repository dependencies
+    playbook:ibmi-fix-repo-cum-package: Cumulative package repository
+    playbook:ibmi-fix-repo-download-status: Repository download status
+    playbook:ibmi-fix-repo-lv1: Level 1 repository
+    playbook:ibmi-fix-repo-ptf-group: PTF group repository
+    playbook:ibmi-fix-repo-single-ptf: Single PTF repository
+    role:check_ptf_groups_against_fix_repo: PTF groups against repository
+    role:check_ptfs_by_product_against_fix_repo: Product PTFs against repository
+    role:fix_repo_check_download_individual_ptfs: Check and download individual PTFs
+    role:fix_repo_check_ptf_group: PTF group check in repository
+    role:fix_repo_download_add_ptf_group: PTF group download to repository
+    role:fix_repo_download_apply_individual_ptfs: Individual PTF download and apply
+    role:fix_repo_extract_ptf_group_info: PTF group information extraction
+    role:fix_repo_lv1_find_individual_ptf: Level 1 PTF lookup
+- title: Run Db2 Mirror setup and warm clones
+  description: Configure Db2 Mirror on source and target nodes and suspend or resume warm clone activity.
+  components:
+    mirror_setup_source: Db2 Mirror source setup
+    mirror_setup_copy: Db2 Mirror target setup
+    mirror_warm_clone_activity: Warm clone activity
+- title: Manage IBM i VMs through PowerVC
+  description: Deploy, capture, start and stop IBM i virtual machines and display their details and networks
+    via PowerVC.
+  components:
+    role:deploy_vm_via_powervc: VM deployment
+    role:capture_server_via_powervc: VM capture
+    role:change_server_state_via_powervc: VM power state
+    role:display_vm_info_via_powervc: VM information
+    role:display_network_info_via_powervc: Network information

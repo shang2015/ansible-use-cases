@@ -1,0 +1,78 @@
+fqcn: infra.openshift_virtualization_migration
+product: OpenShift Virtualization migration
+use_cases:
+- title: Bootstrap the migration environment
+  description: Prepare a bootstrap VM and initialise the environment for OpenShift Virtualization migration.
+  components:
+    role:bootstrap: Bootstrap role
+    playbook:bootstrap_aap: Bootstrap VM preparation
+    playbook:bootstrap_aap_install: Bootstrap install
+    playbook:bootstrap_aap_prep: Bootstrap prerequisites
+    playbook:bootstrap_aap_preseed: Bootstrap preseed
+- title: Deploy and seed Ansible Automation Platform for the Migration Factory
+  description: Install and configure AAP on the hub, seed it with Migration Factory content, create tokens
+    and machine credentials, and clean up seeded content.
+  components:
+    role:aap_deploy: AAP deployment role
+    role:aap_seed: AAP seed role
+    role:aap_machine_credentials: Machine credentials role
+    role:create_mf_aap_token: Migration Factory token role
+    role:aap_cleanup: AAP cleanup role
+    playbook:migration_factory_aap: AAP installation
+    playbook:migration_factory_seed: Migration Factory seed
+    playbook:preseed: AAP pre-seed
+    playbook:aap_machine_credentials: Machine credentials
+    playbook:create_mf_aap_token: Migration Factory API token
+    playbook:cleanup_migration_aap: AAP content cleanup
+- title: Prepare the OpenShift cluster and Migration Toolkit for Virtualization
+  description: Manage operators and cluster networking, run cluster health checks, and configure MTV providers,
+    VDDK and mappings.
+  components:
+    role:operator_management: Operator management role
+    role:network_mgmt: Network management role
+    role:cluster_healthcheck: Cluster health check role
+    role:mtv_management: MTV management role
+    playbook:operator_management: Operator management
+    playbook:network_mgmt: Network configuration
+    playbook:cluster_healthcheck: Cluster health checks
+    playbook:mtv_management: MTV management
+    playbook:mtv_provider_vmware: MTV VMware provider
+    playbook:mtv_provider_ovirt: MTV oVirt provider
+    playbook:mtv_vddk: MTV VDDK
+    playbook:mtv_mapping: MTV mappings
+- title: Migrate virtual machines at scale
+  description: Collect source VM inventory, run migrations with MTV and validate the results.
+  components:
+    role:vm_collect: VM collection role
+    role:mtv_migrate: MTV migration role
+    role:validate_migration: Migration validation role
+    playbook:mtv_migrate: MTV migration
+    playbook:validate_migration: Migration validation
+- title: Operate migrated virtual machines
+  description: Manage VM lifecycle, networking, MAC addresses, SSH keys, hot plug, patching, backup and
+    restore after migration.
+  components:
+    role:vm_lifecycle: VM lifecycle role
+    role:vm_networking: VM networking role
+    role:vm_mac_address: VM MAC address role
+    role:vm_ssh: VM SSH key role
+    role:vm_hot_plug: VM hot plug role
+    role:vm_patching: VM patching role
+    role:vm_backup_restore: VM backup and restore role
+    playbook:vm_operations: VM operations
+    playbook:vm_mac_address: VM MAC addresses
+    playbook:vm_ssh: VM SSH keys
+    playbook:vm_hot_plug: VM hot plug
+    playbook:patch: VM patching
+    playbook:vm_backup: VM backups
+    playbook:vm_restore: VM restores
+- title: Clean up migration artifacts
+  description: Remove OpenShift migration artifacts created during migration testing.
+  components:
+    role:ocp_cleanup: OpenShift cleanup role
+    playbook:cleanup_all: Cleanup all
+    playbook:cleanup_ocp_migration_artifacts: OpenShift artifact cleanup
+- title: Format names for Kubernetes resources
+  description: Convert strings to RFC 1123 compatible names for OpenShift resources.
+  components:
+    filter:rfc1123: RFC 1123 name filter

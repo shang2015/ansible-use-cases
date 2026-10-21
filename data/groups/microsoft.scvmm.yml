@@ -1,0 +1,91 @@
+fqcn: microsoft.scvmm
+product: Microsoft System Center Virtual Machine Manager
+use_cases:
+- title: Manage virtual machines
+  description: Create, clone, start, stop, live-migrate and checkpoint virtual machines, and manage their
+    disks, DVD drives, SCSI adapters and network adapters.
+  components:
+    vm: Virtual machines
+    vm_clone: VM clones
+    vm_state: VM power state
+    vm_migrate: VM live migration
+    vm_checkpoint: VM checkpoints
+    vm_disk: VM disks
+    vm_dvd_drive: VM DVD drives
+    vm_scsi_adapter: VM SCSI adapters
+    vm_nic: VM NIC settings
+    network_adapter: VM network adapters
+    virtual_hard_disk: Virtual hard disks
+- title: Manage templates, profiles and the library
+  description: Manage VM and service templates, services, hardware, guest OS, application, SQL, capability
+    and physical computer profiles, and library shares, ISO images and scripts.
+  components:
+    template: VM templates
+    service_template: Service templates
+    service: Services
+    hardware_profile: Hardware profiles
+    guest_os_profile: Guest OS profiles
+    application_profile: Application profiles
+    sql_profile: SQL profiles
+    capability_profile: Capability profiles
+    physical_computer_profile: Physical computer profiles
+- title: Manage Hyper-V hosts and clusters
+  description: Manage Hyper-V hosts, failover clusters, host groups and host network adapters, and query
+    host placement ratings.
+  components:
+    host: Hosts
+    host_cluster: Host clusters
+    host_group: Host groups
+    host_network_adapter: Host network adapters
+    host_rating: Host placement ratings
+    pxe_server: PXE servers
+- title: Configure virtual networking
+  description: Configure logical networks and definitions, VM networks and subnets, logical switches,
+    uplink port profiles, port classifications, IP and MAC pools, and load balancers.
+  components:
+    logical_network: Logical networks
+    logical_network_definition: Network sites
+    vm_network: VM networks
+    vm_subnet: VM subnets
+    logical_switch: Logical switches
+    uplink_port_profile: Uplink port profiles
+    port_classification: Port classifications
+    ip_pool: IP address pools
+    mac_address_pool: MAC address pools
+    load_balancer: Load balancers
+- title: Manage storage
+  description: Manage storage providers, pools and classifications, and query file shares.
+  components:
+    storage_provider: Storage providers
+    storage_pool: Storage pools
+    storage_classification: Storage classifications
+    storage_file_share: Storage file shares
+    library_share: Library shares
+    iso: ISO images
+    script: Library scripts
+    custom_resource: Custom resources
+- title: Provide private clouds and tenant access
+  description: Manage private clouds and capacity limits, user roles and quotas, Run As accounts and custom
+    properties.
+  components:
+    cloud: Private clouds
+    cloud_capacity: Cloud capacity
+    user_role: User roles
+    user_role_quota: User role quotas
+    run_as_account: Run As accounts
+    custom_property: Custom properties
+- title: Patch and keep hosts compliant
+  description: Manage WSUS update servers, baselines and servicing windows, and run and query compliance
+    scans.
+  components:
+    update_server: Update servers
+    baseline: Update baselines
+    servicing_window: Servicing windows
+    compliance: Compliance status
+    compliance_scan: Compliance scans
+- title: Query inventory and track jobs
+  description: Retrieve managed infrastructure inventory, build dynamic inventory and manage job state.
+  components:
+    inventory: Infrastructure inventory
+    inventory:scvmm_inventory: Dynamic inventory
+    job: Jobs

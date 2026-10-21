@@ -1,0 +1,10 @@
+fqcn: openvswitch.openvswitch
+product: "Open vSwitch"
+use_cases:
+- title: "Manage Open vSwitch bridges, ports and bonds"
+  description: "Configure Open vSwitch bridges, ports, bonds and database settings."
+  components:
+    "bridge": "Bridges"
+    "port": "Ports"
+    "bond": "Bonds"
+    "db": "Database settings"

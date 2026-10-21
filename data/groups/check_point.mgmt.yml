@@ -1,0 +1,416 @@
+fqcn: check_point.mgmt
+product: Check Point Management (Security Management API)
+notes:
+- Modules named after a resource (for example host, access_rule) support create, update, delete and info;
+  verb-named modules (set_, show_, add_, delete_) wrap single management API commands.
+use_cases:
+- title: Control sessions, publishing and change tracking
+  description: Open, publish, discard, submit, approve and reject management sessions, lock objects, and
+    review changes, tasks, validations and where objects are used.
+  components:
+    approve_session: Approve session
+    discard: Discard
+    get_attachment: Get attachment
+    lock_object: Lock object
+    objects: Objects
+    publish: Publish
+    put_file: Put file
+    reject_session: Reject session
+    session: Session
+    set_session: Set session
+    show_api_versions: Show API versions
+    show_changes: Show changes
+    show_commands: Show commands
+    show_last_published_session: Show last published session
+    show_place_holder: Show place holder
+    show_unused_objects: Show unused objects
+    show_validations: Show validations
+    submit_session: Submit session
+    task: Task
+    unlock_object: Unlock object
+    where_used: Where used
+- title: Manage access control layers, rules and policy packages
+  description: Create access layers, sections and rules (including batch operations and rulebase export),
+    manage policy packages and settings, and verify and install policy.
+  components:
+    access_layer: Access layer
+    access_layers: Access layers (bulk)
+    access_rule: Access rules
+    access_rules: Access rules (batch)
+    access_section: Access section
+    add_rules_batch: Add rules batch
+    delete_rules_batch: Delete rules batch
+    export_access_rulebase: Export access rulebase
+    install_database: Install database
+    install_policy: Install policy
+    package: Package
+    set_policy_settings: Set policy settings
+    show_access_section: Show access section
+    show_layer_structure: Show layer structure
+    show_policy_settings: Show policy settings
+    verify_policy: Verify policy
+- title: Manage NAT policy
+  description: Create NAT rules and sections for address translation.
+  components:
+    nat_rule: NAT rule
+    nat_section: NAT section
+    show_nat_section: Show NAT section
+- title: Configure HTTPS inspection
+  description: Define HTTPS inspection layers, sections and rules, advanced settings and outbound inspection
+    certificates.
+  components:
+    add_outbound_inspection_certificate: Add outbound inspection certificate
+    delete_outbound_inspection_certificate: Delete outbound inspection certificate
+    https_layer: HTTPS layer
+    https_rule: HTTPS rule
+    https_section: HTTPS section
+    import_outbound_inspection_certificate: Import outbound inspection certificate
+    outbound_inspection_certificate: Outbound inspection certificate
+    set_https_advanced_settings: Set HTTPS advanced settings
+    set_outbound_inspection_certificate: Set outbound inspection certificate
+    show_https_advanced_settings: Show HTTPS advanced settings
+    show_https_section: Show HTTPS section
+- title: Manage network objects and groups
+  description: Create hosts, networks, address ranges, wildcards, groups, DNS domains, security zones,
+    time objects and tags used in policy.
+  components:
+    address_range: Address range
+    checkpoint_host: Checkpoint host
+    dns_domain: DNS domain
+    dynamic_global_network_object: Dynamic global network object
+    dynamic_object: Dynamic object
+    group: Group
+    group_with_exclusion: Group with exclusion
+    host: Host
+    hosts: Hosts (bulk)
+    interoperable_device: Interoperable device
+    logical_server: Logical server
+    multicast_address_range: Multicast address range
+    network: Network
+    security_zone: Security zone
+    tag: Tag
+    time: Time
+    time_group: Time group
+    wildcard: Wildcard
+- title: Integrate data centers and updatable objects
+  description: Import data center objects and queries from cloud and virtualization servers, and manage
+    updatable objects and their repository content.
+  components:
+    add_data_center_object: Add data center object
+    add_data_center_query: Add data center query
+    add_updatable_object: Add updatable object
+    data_center_object: Data center object
+    data_center_query: Data center query
+    delete_data_center_object: Delete data center object
+    delete_data_center_query: Delete data center query
+    delete_updatable_object: Delete updatable object
+    set_data_center_query: Set data center query
+    show_updatable_objects_repository_content: Show updatable objects repository content
+    updatable_object: Updatable object
+    update_updatable_objects_repository_content: Update updatable objects repository content
+- title: Define services and resources
+  description: Define TCP, UDP, ICMP, RPC, SCTP and other services, service groups, protocol resources
+    and bandwidth limits.
+  components:
+    limit: Limit
+    resource_cifs: Resource CIFS
+    resource_ftp: Resource FTP
+    resource_mms: Resource MMS
+    resource_smtp: Resource SMTP
+    resource_tcp: Resource TCP
+    resource_uri: Resource URI
+    resource_uri_for_qos: Resource URI for QoS
+    service_citrix_tcp: Service citrix TCP
+    service_compound_tcp: Service compound TCP
+    service_dce_rpc: Service DCE RPC
+    service_group: Service group
+    service_icmp: Service ICMP
+    service_icmp6: Service ICMPv6
+    service_other: Service other
+    service_rpc: Service RPC
+    service_sctp: Service SCTP
+    service_tcp: Service TCP
+    service_udp: Service UDP
+- title: Control applications and URL filtering
+  description: Manage application sites, categories and groups, categorization overrides, and Application
+    Control settings and updates.
+  components:
+    application_site: Application site
+    application_site_category: Application site category
+    application_site_group: Application site group
+    override_categorization: Override categorization
+    run_app_control_update: Run app control update
+    set_app_control_advanced_settings: Set app control advanced settings
+    set_app_control_update_schedule: Set app control update schedule
+    show_app_control: Show app control
+    show_app_control_advanced_settings: Show app control advanced settings
+    show_app_control_update_schedule: Show app control update schedule
+- title: Configure threat prevention
+  description: Manage threat prevention layers, rules, profiles, exceptions, protections, IPS, anti-malware,
+    threat emulation and extraction, indicators and IOC feeds.
+  components:
+    check_network_feed: Check network feed
+    check_threat_ioc_feed: Check threat IOC feed
+    exception_group: Exception group
+    ips_protection_extended_attribute: IPS protection extended attribute
+    network_feed: Network feed
+    run_ips_update: Run IPS update
+    set_anti_malware_update_schedule: Set anti malware update schedule
+    set_ips_update_schedule: Set IPS update schedule
+    set_threat_advanced_settings: Set threat advanced settings
+    set_threat_emulation_file_type: Set threat emulation file type
+    set_threat_emulation_file_types: Set threat emulation file types
+    set_threat_extraction_file_type: Set threat extraction file type
+    set_threat_extraction_file_types: Set threat extraction file types
+    set_threat_protection_category: Set threat protection category
+    set_threat_protection_sub_category: Set threat protection sub category
+    show_anti_malware_update_schedule: Show anti malware update schedule
+    show_ips: Show IPS
+    show_ips_update_schedule: Show IPS update schedule
+    show_threat_advanced_settings: Show threat advanced settings
+    threat_emulation_file_type: Threat emulation file type
+    threat_emulation_image: Threat emulation image
+    threat_exception: Threat exception
+    threat_extraction_file_type: Threat extraction file type
+    threat_indicator: Threat indicator
+    threat_layer: Threat layer
+    threat_layers: Threat layers
+    threat_profile: Threat profile
+    threat_protection_category: Threat protection category
+    threat_protection_override: Threat protection override
+    threat_protection_sub_category: Threat protection sub category
+    threat_rule: Threat rule
+- title: Prevent data loss and manage content awareness
+  description: Define DLP data types and groups, and configure Content Awareness settings.
+  components:
+    data_type_compound_group: Data type compound group
+    data_type_file_attributes: Data type file attributes
+    data_type_file_group: Data type file group
+    data_type_group: Data type group
+    data_type_keywords: Data type keywords
+    data_type_patterns: Data type patterns
+    data_type_traditional_group: Data type traditional group
+    data_type_weighted_keywords: Data type weighted keywords
+    dlp_next_data_type: DLP next data type
+    set_content_awareness_advanced_settings: Set content awareness advanced settings
+    show_content_awareness_advanced_settings: Show content awareness advanced settings
+    show_dlp_next_data_types_repository_content: Show DLP next data types repository content
+- title: Configure VPN communities and remote access
+  description: Create meshed, star and remote access VPN communities, key exchange settings, Mobile Access
+    rules and profiles, and SecuRemote DNS.
+  components:
+    mobile_access_profile_rule: Mobile access profile rule
+    mobile_access_profile_section: Mobile access profile section
+    mobile_access_rule: Mobile access rule
+    mobile_access_section: Mobile access section
+    mobile_profile: Mobile profile
+    multiple_key_exchanges: Multiple key exchanges
+    passcode_profile: Passcode profile
+    securemote_dns_server: Securemote DNS server
+    set_vpn_community_remote_access: Set VPN community remote access
+    show_mobile_access_profile_section: Show mobile access profile section
+    show_mobile_access_section: Show mobile access section
+    vpn_community_meshed: VPN community meshed
+    vpn_community_remote_access: VPN community remote access
+    vpn_community_star: VPN community star
+- title: Manage gateways, clusters and high availability
+  description: Define simple gateways and clusters, read interfaces and platform data, establish and test
+    trust (SIC), and manage HA state and synchronization.
+  components:
+    abort_get_interfaces: Abort get interfaces
+    cluster_members: Cluster members
+    get_interfaces: Get interfaces
+    get_platform: Get platform
+    ha_full_sync: HA full sync
+    interface: Interface
+    network_probe: Network probe
+    reset_sic: Reset SIC
+    set_gateway_global_use: Set gateway global use
+    set_ha_state: Set HA state
+    set_trust: Set trust
+    show_gateway_capabilities: Show gateway capabilities
+    show_gateway_global_use: Show gateway global use
+    show_gateways_and_servers: Show gateways and servers
+    show_ha: Show HA
+    show_ha_state: Show HA state
+    show_servers_and_processes: Show servers and processes
+    simple_cluster: Simple cluster
+    simple_gateway: Simple gateway
+    test_sic: Test SIC
+    test_trust: Test trust
+- title: Manage VSX and large-scale (LSM) gateways
+  description: Provision VSX objects and run VSX operations, and manage LSM gateways, clusters and profiles,
+    provisioning profiles and satellites.
+  components:
+    def_setting: Def setting
+    install_lsm_policy: Install LSM policy
+    install_lsm_settings: Install LSM settings
+    lsm_cluster: LSM cluster
+    lsm_cluster_profile: LSM cluster profile
+    lsm_gateway: LSM gateway
+    lsm_gateway_profile: LSM gateway profile
+    lsm_run_script: LSM run script
+    lsv_profile: LSV profile
+    provisioning_profile: Provisioning profile
+    update_provisioned_satellites: Update provisioned satellites
+    vsx_provisioning_tool: VSX provisioning tool
+    vsx_run_operation: VSX run operation
+- title: Install and manage software packages and scripts
+  description: Upload packages to the central repository, prepare, verify, install and uninstall software
+    on targets, and run or store scripts.
+  components:
+    add_repository_package: Add repository package
+    delete_repository_package: Delete repository package
+    install_software_package: Install software package
+    prepare_software_package: Prepare software package
+    repository_package: Repository package
+    repository_script: Repository script
+    run_script: Run script
+    show_software_package_details: Show software package details
+    show_software_packages_per_targets: Show software packages per targets
+    uninstall_software_package: Uninstall software package
+    verify_software_package: Verify software package
+- title: Manage licenses
+  description: Add and delete central licenses, manage cloud license pools and gateways, distribute and
+    update cloud licenses, and verify management licensing.
+  components:
+    add_central_license: Add central license
+    central_license: Central license
+    cloud_license_gateway: Cloud license gateway
+    cloud_license_pool: Cloud license pool
+    delete_central_license: Delete central license
+    distribute_cloud_licenses: Distribute cloud licenses
+    set_cloud_license_gateway: Set cloud license gateway
+    set_cloud_license_pool: Set cloud license pool
+    set_cloud_license_scope: Set cloud license scope
+    show_cloud_license_scope: Show cloud license scope
+    show_cloud_licenses_usage: Show cloud licenses usage
+    update_cloud_license: Update cloud license
+    verify_management_license: Verify management license
+- title: Administer administrators, permissions and login policy
+  description: Manage administrators and API keys, permission profiles, password requirements, login restrictions
+    and messages, idle timeouts and API settings.
+  components:
+    add_api_key: Add API key
+    administrator: Administrator
+    change_password_on_next_login: Change password on next login
+    delete_api_key: Delete API key
+    domain_permissions_profile: Domain permissions profile
+    md_permissions_profile: MD permissions profile
+    set_api_settings: Set API settings
+    set_cp_password_requirements: Set Check Point password requirements
+    set_default_administrator_settings: Set default administrator settings
+    set_login_message: Set login message
+    set_login_restrictions: Set login restrictions
+    set_smart_console_idle_timeout: Set smart console idle timeout
+    show_api_settings: Show API settings
+    show_cp_password_requirements: Show Check Point password requirements
+    show_default_administrator_settings: Show default administrator settings
+    show_login_message: Show login message
+    show_login_restrictions: Show login restrictions
+    show_smart_console_idle_timeout: Show smart console idle timeout
+    unlock_administrator: Unlock administrator
+- title: Manage multi-domain environments and global policy
+  description: Create and configure domains, Multi-Domain Servers and global domains, assign global policy,
+    and import or export management data.
+  components:
+    add_domain: Add domain
+    assign_global_assignment: Assign global assignment
+    delete_domain: Delete domain
+    domain: Domain
+    export_management: Export management
+    global_assignment: Global assignment
+    import_management: Import management
+    mds: Multi-Domain Servers
+    set_domain: Set domain
+    set_global_domain: Set global domain
+    set_global_properties: Set global properties
+    show_global_domain: Show global domain
+    show_global_properties: Show global properties
+- title: Integrate identity providers, users and authentication servers
+  description: Manage users, groups and templates, access roles, identity providers and tags, and LDAP,
+    RADIUS, TACACS+, SecurID and IF-MAP servers.
+  components:
+    access_role: Access role
+    delete_infinity_idp: Delete infinity IdP
+    delete_infinity_idp_object: Delete infinity IdP object
+    identity_provider: Identity provider
+    identity_tag: Identity tag
+    idp_administrator_group: IdP administrator group
+    idp_to_domain_assignment: IdP to domain assignment
+    if_map_server: If map server
+    infinity_idp: Infinity IdP
+    infinity_idp_object: Infinity IdP object
+    ldap_group: LDAP group
+    radius_group: RADIUS group
+    radius_server: RADIUS server
+    securid_server: Securid server
+    set_idp_default_assignment: Set IdP default assignment
+    set_idp_to_domain_assignment: Set IdP to domain assignment
+    show_ad_content: Show AD content
+    show_azure_ad_content: Show Azure AD content
+    show_idp_default_assignment: Show IdP default assignment
+    tacacs_group: TACACS+ group
+    tacacs_server: TACACS+ server
+    trusted_client: Trusted client
+    user: User
+    user_group: User group
+    user_template: User template
+- title: Configure logging, notifications and automation
+  description: Configure log exporters, syslog and SMTP servers, query logs, and manage SmartTask automations
+    and triggers.
+  components:
+    export_smart_task: Export smart task
+    import_smart_task: Import smart task
+    log_exporter: Log exporter
+    show_logs: Show logs
+    smart_task: Smart task
+    smart_task_trigger: Smart task trigger
+    smtp_server: SMTP server
+    syslog_server: Syslog server
+- title: Assess compliance and best practices
+  description: Run compliance scans, manage best practices, regulations, requirements and guidelines,
+    and configure compliance settings.
+  components:
+    best_practice: Best practice
+    compliance_scan: Compliance scan
+    firewall_best_practice: Firewall best practice
+    guideline: Guideline
+    guideline_cell_approvals: Guideline cell approvals
+    regulation: Regulation
+    requirement: Requirement
+    set_best_practice: Set best practice
+    set_compliance_settings: Set compliance settings
+    show_compliance_settings: Show compliance settings
+    show_guideline_cells: Show guideline cells
+- title: Manage certificates and trusted CAs
+  description: Manage trusted CA certificates, internal and subordinate CAs, OPSEC trusted CAs and server
+    certificate renewal.
+  components:
+    add_custom_trusted_ca_certificate: Add custom trusted CA certificate
+    cp_trusted_ca_certificate: Check Point trusted CA certificate
+    custom_trusted_ca_certificate: Custom trusted CA certificate
+    delete_custom_trusted_ca_certificate: Delete custom trusted CA certificate
+    external_trusted_ca: External trusted CA
+    opsec_trusted_ca: Opsec trusted CA
+    renew_scaled_sharing_server_certificate: Renew scaled sharing server certificate
+    set_cp_trusted_ca_certificate: Set Check Point trusted CA certificate
+    set_internal_trusted_ca: Set internal trusted CA
+    show_internal_trusted_ca: Show internal trusted CA
+    subordinate_ca: Subordinate CA
+- title: Connect cloud services and telecom objects
+  description: Connect to and configure Check Point cloud services, test AI agent security API keys, and
+    define VoIP domain objects, GSN handover groups and access point names.
+  components:
+    access_point_name: Access point name
+    connect_cloud_services: Connect cloud services
+    disconnect_cloud_services: Disconnect cloud services
+    gsn_handover_group: GSN handover group
+    set_cloud_services: Set cloud services
+    show_cloud_services: Show cloud services
+    test_ai_agent_security_api_key: Test AI agent security API key
+    voip_domain_h323_gatekeeper: Voip domain H.323 gatekeeper
+    voip_domain_h323_gateway: Voip domain H.323 gateway
+    voip_domain_mgcp_call_agent: Voip domain MGCP call agent
+    voip_domain_sccp_call_manager: Voip domain SCCP call manager
+    voip_domain_sip_proxy: Voip domain SIP proxy

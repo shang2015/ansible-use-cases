@@ -1,0 +1,20 @@
+fqcn: paloaltonetworks.panos_policy_automation
+product: Palo Alto Networks PAN-OS
+use_cases:
+- title: Check whether traffic is permitted
+  description: Look up whether traffic is permitted or denied by PAN-OS firewalls and interpret routing
+    and policy match results.
+  components:
+    role:lookup_policy: Policy lookup
+    playbook:examples.lookup_policy: Policy lookup example
+    filter:panos_op_policy_match_result_to_bool: Policy match result
+    filter:panos_op_get_routers_from_dict_or_list: Logical routers
+    filter:panos_op_get_zone_from_interface: Zone from interface
+    filter:panos_op_routing_result_to_interfaces: Interfaces from routing test
+    filter:panos_op_stdout_results_to_list: Operational results as list
+    filter:panos_op_stdout_to_dict: Operational output as dictionary
+- title: Create new network access
+  description: Configure new network access in Panorama.
+  components:
+    role:policy_creation: Policy creation
+    playbook:examples.create_policy: Policy creation example

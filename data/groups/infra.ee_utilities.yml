@@ -1,0 +1,9 @@
+fqcn: infra.ee_utilities
+product: "Ansible execution environments"
+use_cases:
+- title: "Build execution environments and migrate virtualenvs"
+  description: "Build custom execution environments and compile Python requirements from legacy AAP 1.2 virtualenvs."
+  components:
+    "role:ee_builder": "Execution environment builder"
+    "playbook:create_execution_environment": "Create execution environment playbook"
+    "role:virtualenv_migrate": "Virtualenv migration"

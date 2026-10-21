@@ -1,0 +1,199 @@
+fqcn: hpe.oneview
+product: HPE OneView
+notes:
+- Each role wraps the matching module; roles ending in _facts only read information.
+use_cases:
+- title: Configure the OneView appliance and its sessions
+  description: Set appliance time and locale, network interfaces, proxy, SSH access, SNMP destinations
+    and users, manage server certificates, and open or close API sessions.
+  components:
+    appliance_configuration_timeconfig: Time configuration
+    appliance_time_and_locale_configuration: Time and locale
+    appliance_network_interface: Network interface information
+    appliance_network_interfaces: Network interfaces
+    appliance_proxy_configuration: Proxy configuration
+    appliance_ssh_access: SSH access
+    appliance_device_snmp_v1_trap_destinations: SNMPv1 trap destinations
+    appliance_device_snmp_v3_trap_destinations: SNMPv3 trap destinations
+    appliance_device_snmp_v3_users: SNMPv3 users
+    certificates_server: Server certificates
+    version: API versions
+    get_session_id: Login sessions
+    logout_session: Session logout
+    role:oneview_appliance_configuration_timeconfig_facts: Time configuration facts role
+    role:oneview_appliance_time_and_locale_configuration: Time and locale role
+    role:oneview_appliance_time_and_locale_configuration_facts: Time and locale facts role
+    role:oneview_appliance_network_interface_facts: Network interface information facts role
+    role:oneview_appliance_network_interfaces: Network interfaces role
+    role:oneview_appliance_proxy_configuration: Proxy configuration role
+    role:oneview_appliance_proxy_configuration_facts: Proxy configuration facts role
+    role:oneview_appliance_ssh_access: SSH access role
+    role:oneview_appliance_ssh_access_facts: SSH access facts role
+    role:oneview_appliance_device_snmp_v1_trap_destination: SNMPv1 trap destinations role
+    role:oneview_appliance_device_snmp_v1_trap_destination_facts: SNMPv1 trap destinations facts role
+    role:oneview_appliance_device_snmp_v3_trap_destination: SNMPv3 trap destinations role
+    role:oneview_appliance_device_snmp_v3_trap_destination_facts: SNMPv3 trap destinations facts role
+    role:oneview_appliance_device_snmp_v3_users: SNMPv3 users role
+    role:oneview_appliance_device_snmp_v3_users_facts: SNMPv3 users facts role
+    role:oneview_certificates_server: Server certificates role
+    role:oneview_certificates_server_facts: Server certificates facts role
+    role:oneview_version_facts: API versions facts role
+- title: Manage users, scopes, labels and tasks
+  description: Create OneView users, group resources with scopes and labels, and query appliance tasks.
+  components:
+    user: Users
+    scope: Scopes
+    label: Labels
+    task: Tasks
+    role:oneview_user: Users role
+    role:oneview_user_facts: Users facts role
+    role:oneview_scope: Scopes role
+    role:oneview_scope_facts: Scopes facts role
+    role:oneview_label: Labels role
+    role:oneview_label_facts: Labels facts role
+    role:oneview_task: Tasks role
+    role:oneview_task_facts: Tasks facts role
+- title: Onboard and manage enclosures and server hardware
+  description: Add and manage enclosures, enclosure groups, logical enclosures, drive enclosures, rack
+    managers and server hardware.
+  components:
+    enclosure: Enclosures
+    enclosure_group: Enclosure groups
+    logical_enclosure: Logical enclosures
+    drive_enclosure: Drive enclosures
+    rack_manager: Rack managers
+    server_hardware: Server hardware
+    server_hardware_type: Server hardware types
+    role:oneview_enclosure: Enclosures role
+    role:oneview_enclosure_facts: Enclosures facts role
+    role:oneview_enclosure_group: Enclosure groups role
+    role:oneview_enclosure_group_facts: Enclosure groups facts role
+    role:oneview_logical_enclosure: Logical enclosures role
+    role:oneview_logical_enclosure_facts: Logical enclosures facts role
+    role:oneview_drive_enclosure: Drive enclosures role
+    role:oneview_drive_enclosure_facts: Drive enclosures facts role
+    role:oneview_rack_manager: Rack managers role
+    role:oneview_rack_manager_facts: Rack managers facts role
+    role:oneview_server_hardware: Server hardware role
+    role:oneview_server_hardware_facts: Server hardware facts role
+    role:oneview_server_hardware_type: Server hardware types role
+    role:oneview_server_hardware_type_facts: Server hardware types facts role
+- title: Define and apply server profiles
+  description: Create server profiles and templates, and manage hypervisor managers and hypervisor cluster
+    profiles.
+  components:
+    server_profile: Server profiles
+    server_profile_template: Server profile templates
+    hypervisor_manager: Hypervisor managers
+    hypervisor_cluster_profile: Hypervisor cluster profiles
+    role:oneview_server_profile: Server profiles role
+    role:oneview_server_profile_facts: Server profiles facts role
+    role:oneview_server_profile_template: Server profile templates role
+    role:oneview_server_profile_template_facts: Server profile templates facts role
+    role:oneview_hypervisor_manager: Hypervisor managers role
+    role:oneview_hypervisor_manager_facts: Hypervisor managers facts role
+    role:oneview_hypervisor_cluster_profile: Hypervisor cluster profiles role
+    role:oneview_hypervisor_cluster_profile_facts: Hypervisor cluster profiles facts role
+- title: Configure networks, interconnects and ID pools
+  description: Manage Ethernet, Fibre Channel and FCoE networks, network sets, uplink sets, interconnects,
+    logical interconnects and groups, connection templates, and ID pools with IPv4 subnets and ranges.
+  components:
+    ethernet_network: Ethernet networks
+    fc_network: Fibre Channel networks
+    fcoe_network: FCoE networks
+    network_set: Network sets
+    connection_template: Connection templates
+    uplink_set: Uplink sets
+    interconnect: Interconnects
+    interconnect_type: Interconnect types
+    logical_interconnect: Logical interconnects
+    logical_interconnect_group: Logical interconnect groups
+    id_pools: ID pools
+    id_pools_ipv4_range: ID pool IPv4 ranges
+    id_pools_ipv4_subnet: ID pool IPv4 subnets
+    role:oneview_ethernet_network: Ethernet networks role
+    role:oneview_ethernet_network_facts: Ethernet networks facts role
+    role:oneview_fc_network: Fibre Channel networks role
+    role:oneview_fc_network_facts: Fibre Channel networks facts role
+    role:oneview_fcoe_network: FCoE networks role
+    role:oneview_fcoe_network_facts: FCoE networks facts role
+    role:oneview_network_set: Network sets role
+    role:oneview_network_set_facts: Network sets facts role
+    role:oneview_connection_template: Connection templates role
+    role:oneview_connection_template_facts: Connection templates facts role
+    role:oneview_uplink_set: Uplink sets role
+    role:oneview_uplink_set_facts: Uplink sets facts role
+    role:oneview_interconnect: Interconnects role
+    role:oneview_interconnect_facts: Interconnects facts role
+    role:oneview_interconnect_type_facts: Interconnect types facts role
+    role:oneview_logical_interconnect: Logical interconnects role
+    role:oneview_logical_interconnect_facts: Logical interconnects facts role
+    role:oneview_logical_interconnect_group: Logical interconnect groups role
+    role:oneview_logical_interconnect_group_facts: Logical interconnect groups facts role
+    role:oneview_id_pools: ID pools role
+    role:oneview_id_pools_facts: ID pools facts role
+    role:oneview_id_pools_ipv4_range: ID pool IPv4 ranges role
+    role:oneview_id_pools_ipv4_range_facts: ID pool IPv4 ranges facts role
+    role:oneview_id_pools_ipv4_subnet: ID pool IPv4 subnets role
+    role:oneview_id_pools_ipv4_subnet_facts: ID pool IPv4 subnets facts role
+- title: Provision storage systems and volumes
+  description: Register storage systems and SAN managers, manage storage pools, volumes and volume templates,
+    and remove extra volume presentations from server profiles.
+  components:
+    storage_system: Storage systems
+    san_manager: SAN managers
+    storage_pool: Storage pools
+    storage_volume_template: Storage volume templates
+    volume: Volumes
+    storage_volume_attachment: Volume attachments
+    role:oneview_storage_system: Storage systems role
+    role:oneview_storage_system_facts: Storage systems facts role
+    role:oneview_san_manager: SAN managers role
+    role:oneview_san_manager_facts: SAN managers facts role
+    role:oneview_storage_pool: Storage pools role
+    role:oneview_storage_pool_facts: Storage pools facts role
+    role:oneview_storage_volume_template: Storage volume templates role
+    role:oneview_storage_volume_template_facts: Storage volume templates facts role
+    role:oneview_volume: Volumes role
+    role:oneview_volume_facts: Volumes facts role
+    role:oneview_storage_volume_attachment: Volume attachments role
+    role:oneview_storage_volume_attachment_facts: Volume attachments facts role
+- title: Manage SAS interconnects and logical JBODs
+  description: Manage SAS interconnects, logical interconnects and groups, and SAS logical JBODs and their
+    attachments.
+  components:
+    sas_interconnect: SAS interconnects
+    sas_interconnect_type: SAS interconnect types
+    sas_logical_interconnect: SAS logical interconnects
+    sas_logical_interconnect_group: SAS logical interconnect groups
+    sas_logical_jbod: SAS logical JBODs
+    sas_logical_jbod_attachment: SAS logical JBOD attachments
+    role:oneview_sas_interconnect: SAS interconnects role
+    role:oneview_sas_interconnect_facts: SAS interconnects facts role
+    role:oneview_sas_interconnect_type_facts: SAS interconnect types facts role
+    role:oneview_sas_logical_interconnect: SAS logical interconnects role
+    role:oneview_sas_logical_interconnect_facts: SAS logical interconnects facts role
+    role:oneview_sas_logical_interconnect_group: SAS logical interconnect groups role
+    role:oneview_sas_logical_interconnect_group_facts: SAS logical interconnect groups facts role
+    role:oneview_sas_logical_jbod: SAS logical JBODs role
+    role:oneview_sas_logical_jbod_facts: SAS logical JBODs facts role
+    role:oneview_sas_logical_jbod_attachment_facts: SAS logical JBOD attachments facts role
+- title: Manage firmware and repositories
+  description: Upload firmware bundles, remove firmware drivers and manage the repositories that hold
+    them.
+  components:
+    firmware_bundle: Firmware bundles
+    firmware_driver: Firmware drivers
+    repositories: Repositories
+    role:oneview_firmware_bundle: Firmware bundles role
+    role:oneview_firmware_driver: Firmware drivers role
+    role:oneview_firmware_driver_facts: Firmware drivers facts role
+    role:oneview_repositories: Repositories role
+    role:oneview_repositories_facts: Repositories facts role
+- title: Run OneView automation with helper roles and playbooks
+  description: Install role dependencies, drive several OneView resources from one dynamic role, and run
+    the collection's example automation playbook.
+  components:
+    role:dependencies_list: Role dependency installer
+    role:oneview_dynamic_role: Dynamic multi-resource role
+    playbook:automation: OneView automation playbook

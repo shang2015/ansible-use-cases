@@ -1,0 +1,51 @@
+fqcn: redhat.sap_install
+product: SAP on Red Hat Enterprise Linux
+use_cases:
+- title: Prepare hosts for SAP
+  description: Preconfigure RHEL for SAP general, HANA and NetWeaver workloads, set up storage and hosts
+    entries, and detect installation media.
+  components:
+    role:sap_general_preconfigure: General SAP preconfiguration
+    role:sap_hana_preconfigure: SAP HANA preconfiguration
+    role:sap_netweaver_preconfigure: SAP NetWeaver preconfiguration
+    role:sap_storage_setup: SAP storage setup
+    role:sap_maintain_etc_hosts: /etc/hosts entries
+    role:sap_install_media_detect: Installation media detection
+    role:sap_hostagent: SAP Host Agent
+    playbook:sample-sap-hana-preconfigure: HANA preconfiguration sample
+    playbook:sap_hana_preconfigure_exec: HANA preparation
+    playbook:sample-sap-storage-setup_sap_s4hana_distributed: Distributed S/4HANA infrastructure setup
+- title: Install SAP HANA and databases
+  description: Install SAP HANA and Oracle Database for SAP systems.
+  components:
+    role:sap_hana_install: SAP HANA
+    role:sap_anydb_install_oracle: Oracle Database
+    playbook:sample-sap-hana-install: HANA installation sample
+- title: Install SAP applications with SWPM
+  description: Install SAP systems with Software Provisioning Manager in default, advanced, template,
+    inifile and interactive modes.
+  components:
+    role:sap_swpm: SAP SWPM
+    playbook:sample-sap-swpm-default-mode: SWPM default mode
+    playbook:sample-sap-swpm-default-templates-mode: SWPM default templates mode
+    playbook:sample-sap-swpm-advanced-mode: SWPM advanced mode
+    playbook:sample-sap-swpm-advanced-templates-mode: SWPM advanced templates mode
+    playbook:sample-sap-swpm-inifile-reuse-mode: SWPM inifile reuse mode
+    playbook:sample-sap-swpm-all-modes-interactive: SWPM interactive modes
+- title: Configure SAP high availability
+  description: Set up Pacemaker clusters, HANA System Replication and Db2 HADR, and ASCS/ERS clusters.
+  components:
+    role:sap_ha_pacemaker_cluster: Pacemaker cluster
+    role:sap_ha_install_hana_hsr: HANA System Replication
+    role:sap_ha_install_anydb_ibmdb2: IBM Db2 HADR
+    playbook:sample-sap-ha-deployment-hana-2-node-cluster: HANA 2-node cluster
+    playbook:sample-sap-nwas-ascs-ers-2-node-cluster: NetWeaver ASCS/ERS cluster
+- title: Validate SAP identifiers
+  description: Check that SAP system IDs, instance numbers and hostnames are valid.
+  components:
+    filter:validate_sap_sid: SAP SID validation
+    filter:validate_sap_instance_nr: Instance number validation
+    filter:validate_sap_abap_platform_hostname: ABAP hostname validation
+    test:valid_sap_sid: Valid SAP SID
+    test:valid_sap_instance_nr: Valid instance number
+    test:valid_sap_abap_platform_hostname: Valid ABAP hostname

@@ -1,0 +1,27 @@
+fqcn: fortinet.fortiflexvm
+product: Fortinet FortiFlex
+use_cases:
+- title: Define FortiFlex configurations and estimate cost
+  description: Create, update and list configurations, and estimate the points a configuration consumes.
+  components:
+    configs_create: Create configurations
+    configs_update: Update configurations
+    configs_list: List configurations
+    tools_calc: Point estimates
+    programs_list: Programs
+- title: Create and manage entitlements
+  description: Create VM, cloud and hardware entitlements, update them, regenerate VM tokens and report
+    entitlement information and point usage.
+  components:
+    entitlements_vm_create: VM entitlements
+    entitlements_cloud_create: Cloud entitlements
+    entitlements_hardware_create: Hardware entitlements
+    entitlements_update: Entitlement updates
+    entitlements_vm_regenerate_token: VM token regeneration
+    entitlements_list: Entitlement list
+    entitlements_points: Point usage
+- title: Organize assets
+  description: List groups (asset folders) and find the next available token.
+  components:
+    groups_list: Groups
+    groups_nexttoken: Next available token

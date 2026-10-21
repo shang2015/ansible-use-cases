@@ -1,0 +1,31 @@
+fqcn: hashicorp.vault
+product: HashiCorp Vault
+use_cases:
+- title: Store and read secrets
+  description: Manage KV version 1 and 2 secrets and look them up in playbooks.
+  components:
+    kv1_secret: KV v1 secrets
+    kv2_secret: KV v2 secrets
+    lookup:kv1_secret_get: KV v1 secret lookup
+    lookup:kv2_secret_get: KV v2 secret lookup
+- title: Manage database credentials
+  description: Manage database connections, dynamic and static roles, generate credentials and rotate
+    them.
+  components:
+    database_connection: Database connections
+    database_role: Dynamic roles
+    database_dynamic_role_credentials: Dynamic role credentials
+    database_static_role: Static roles
+    database_static_role_credentials: Static role credentials
+    database_credential_rotation: Credential rotation
+- title: Issue certificates
+  description: Issue, sign and revoke PKI certificates.
+  components:
+    pki_certificate: PKI certificates
+- title: Control access to Vault
+  description: Authenticate, manage tokens, ACL policies and Enterprise namespaces.
+  components:
+    auth_login: Login
+    auth_token: Tokens
+    acl_policy: ACL policies
+    vault_namespace: Namespaces

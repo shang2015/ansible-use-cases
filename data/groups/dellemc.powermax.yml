@@ -1,0 +1,50 @@
+fqcn: dellemc.powermax
+product: Dell PowerMax / VMAX
+use_cases:
+- title: Provision storage groups, volumes and pools
+  description: Create storage groups, volumes and storage pools and place volumes where capacity allows.
+  components:
+    storagegroup: Storage groups
+    volume: Volumes
+    storagepool: Storage pools
+    process_storage_pool_dict: Storage pool processing
+    role:capacity_role: Capacity-optimized placement
+    playbook:capacity_role: Intelligent volume placement
+    playbook:storagegroup: Storage group playbook
+    playbook:volume: Volume playbook
+    playbook:storagepool: Storage pool playbook
+- title: Connect hosts through masking views
+  description: Manage hosts, host groups, initiators, ports, port groups and masking views.
+  components:
+    host: Hosts
+    hostgroup: Host groups
+    initiator: Initiators
+    port: Ports
+    portgroup: Port groups
+    maskingview: Masking views
+    playbook:host: Host playbook
+    playbook:hostgroup: Host group playbook
+    playbook:initiator: Initiator playbook
+    playbook:port: Port playbook
+    playbook:portgroup: Port group playbook
+    playbook:maskingview: Masking view playbook
+- title: Protect and replicate data
+  description: Manage snapshots, snapshot policies, SRDF pairs, RDF groups and Metro DR environments.
+  components:
+    snapshot: Snapshots
+    snapshotpolicy: Snapshot policies
+    srdf: SRDF pairs
+    rdfgroup: RDF groups
+    metrodr: Metro DR
+    playbook:snapshot: Snapshot playbook
+    playbook:snapshotpolicy: Snapshot policy playbook
+    playbook:srdf: SRDF playbook
+    playbook:rdfgroup: RDF group playbook
+    playbook:metrodr: Metro DR playbook
+- title: Gather array information and job status
+  description: Collect information about array entities and check job details.
+  components:
+    info: Array information
+    job: Jobs
+    playbook:info: Info playbook
+    playbook:job: Job playbook

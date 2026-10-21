@@ -1,0 +1,32 @@
+fqcn: ansible.mysql
+product: MySQL and MariaDB
+use_cases:
+- title: Manage databases, users and access
+  description: Add and remove databases, users and roles, set password policies, resource groups and TLS
+    settings.
+  components:
+    db: Databases
+    user: Users
+    role: Roles
+    password_policy: Password policies
+    resource_group: Resource groups
+    tls: TLS settings
+- title: Run queries and manage replication and cloning
+  description: Run queries, clone instances from a donor, configure replication and replication filters,
+    and manage table partitions and tablespaces.
+  components:
+    query: Queries
+    clone: Instance cloning
+    replication: Replication
+    replication_filter: Replication filters
+    partition: Table partitions
+    tablespace: InnoDB tablespaces
+- title: Tune and monitor servers
+  description: Manage global variables, Performance Schema setup, slow query log settings, and gather
+    server and binary log information.
+  components:
+    variables: Global variables
+    perf_schema: Performance Schema
+    slow_log: Slow query log
+    info: Server information
+    binlog: Binary logs

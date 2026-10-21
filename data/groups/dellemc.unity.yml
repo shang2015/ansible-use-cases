@@ -1,0 +1,55 @@
+fqcn: dellemc.unity
+product: Dell Unity
+use_cases:
+- title: Manage block storage and volumes
+  description: Create and modify storage pools, volumes and consistency groups, and manage hosts that
+    access them.
+  components:
+    storagepool: Storage pools
+    volume: Volumes
+    consistencygroup: Consistency groups
+    host: Hosts
+    interface: Network interfaces
+    playbook:modules.storagepool: Storage pool playbook
+    playbook:modules.volume: Volume playbook
+    playbook:modules.consistencygroup: Consistency group playbook
+    playbook:modules.host: Host playbook
+    playbook:modules.interface: Interface playbook
+- title: Manage NAS servers, file systems and shares
+  description: Create NAS servers, CIFS and NFS servers, file systems, SMB shares and NFS exports.
+  components:
+    nasserver: NAS servers
+    cifsserver: CIFS servers
+    nfsserver: NFS servers
+    filesystem: File systems
+    smbshare: SMB shares
+    nfs: NFS exports
+    playbook:modules.nasserver: NAS server playbook
+    playbook:modules.cifsserver: CIFS server playbook
+    playbook:modules.nfsserver: NFS server playbook
+    playbook:modules.filesystem: File system playbook
+    playbook:modules.smbshare: SMB share playbook
+    playbook:modules.nfs: NFS share playbook
+- title: Protect data with snapshots and replication
+  description: Manage snapshots, snapshot schedules and replication sessions.
+  components:
+    snapshot: Snapshots
+    filesystem_snapshot: File system snapshots
+    snapshotschedule: Snapshot schedules
+    replication_session: Replication sessions
+    playbook:modules.snapshot: Snapshot playbook
+    playbook:modules.filesystem_snapshot: File system snapshot playbook
+    playbook:modules.snapshotschedule: Snapshot schedule playbook
+    playbook:modules.replication_session: Replication session playbook
+- title: Control capacity with quotas
+  description: Manage quota trees and user quotas on file systems.
+  components:
+    tree_quota: Tree quotas
+    user_quota: User quotas
+    playbook:modules.tree_quota: Tree quota playbook
+    playbook:modules.user_quota: User quota playbook
+- title: Gather Unity information
+  description: Collect information about the Unity storage system.
+  components:
+    info: Unity information
+    playbook:modules.info: Info playbook

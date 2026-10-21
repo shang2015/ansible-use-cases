@@ -1,0 +1,18 @@
+fqcn: redhat.amq_broker
+product: Red Hat AMQ Broker (ActiveMQ Artemis)
+use_cases:
+- title: Install and run ActiveMQ brokers
+  description: Install, configure, cluster and uninstall ActiveMQ Artemis brokers and read their configuration
+    as facts.
+  components:
+    role:activemq: Broker installation
+    role:activemq_uninstall: Broker uninstallation
+    activemq: Broker configuration facts
+    playbook:activemq: ActiveMQ Artemis
+    playbook:activemq_cluster: Master/standby cluster
+- title: Prepare broker configuration data
+  description: Merge lists by attribute, generate PBKDF2 password hashes and create security matches.
+  components:
+    filter:create_security_matches: Security matches
+    filter:lists_mergeby: List merging
+    filter:pbkdf2_hmac: Password hashes

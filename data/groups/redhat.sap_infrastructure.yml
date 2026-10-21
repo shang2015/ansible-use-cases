@@ -1,0 +1,15 @@
+fqcn: redhat.sap_infrastructure
+product: SAP infrastructure on Red Hat
+use_cases:
+- title: Provision and prepare infrastructure for SAP
+  description: Preconfigure hypervisor nodes, provision VMs on OpenShift Virtualization or AWS EC2, prepare
+    and verify them and enable temporary virtual IPs for installation.
+  components:
+    role:sap_hypervisor_node_preconfigure: Hypervisor node preconfiguration
+    role:sap_vm_provision: VM provisioning
+    role:sap_vm_preconfigure: VM preconfiguration
+    role:sap_vm_verify: VM verification
+    role:sap_vm_temp_vip: Temporary virtual IP
+    playbook:sample-sap-hypervisor-redhat-ocp-virt-preconfigure: OpenShift Virtualization hypervisor preconfiguration
+    playbook:sample-sap-vm-provision-redhat-ocpv: VM provisioning on OpenShift Virtualization
+    playbook:sample-sap-vm-provision-aws-ec2-vs: VM provisioning on AWS EC2

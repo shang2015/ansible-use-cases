@@ -1,0 +1,8 @@
+fqcn: lantronix.lmos
+product: "Lantronix LMOS"
+use_cases:
+- title: "Gather facts and validate Lantronix LMOS devices"
+  description: "Collect facts from LMOS devices and run an IQOQ validation."
+  components:
+    "lmos": "Device facts"
+    "playbook:iqoq_validate": "IQOQ validation"

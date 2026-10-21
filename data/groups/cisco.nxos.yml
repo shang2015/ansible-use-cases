@@ -1,0 +1,119 @@
+fqcn: cisco.nxos
+product: Cisco NX-OS
+notes:
+- Resource modules support states such as merged, replaced, overridden, deleted, gathered, rendered and
+  parsed.
+use_cases:
+- title: Configure interfaces, VLANs and Layer 2
+  description: Configure physical and logical interfaces, VLANs, link aggregation (LACP), LLDP, UDLD and
+    VTP.
+  components:
+    interfaces: Interfaces
+    l2_interfaces: Layer 2 interfaces
+    l3_interfaces: Layer 3 interfaces
+    vlans: VLANs
+    lag_interfaces: Link aggregation (LAG) interfaces
+    lacp: LACP global settings
+    lacp_interfaces: LACP interfaces
+    lldp_global: LLDP global settings
+    lldp_interfaces: LLDP interfaces
+    udld: UDLD global settings
+    udld_interface: UDLD interfaces
+    vtp_domain: VTP domain
+    vtp_password: VTP password
+    vtp_version: VTP version
+- title: Configure routing protocols and route policy
+  description: Configure BGP, OSPFv2, OSPFv3 and static routes, with prefix lists and route maps to control
+    route exchange.
+  components:
+    bgp_global: BGP global settings
+    bgp_address_family: BGP address families
+    bgp_neighbor_address_family: BGP neighbor address families
+    bgp_templates: BGP templates
+    ospfv2: OSPFv2
+    ospfv3: OSPFv3
+    ospf_interfaces: OSPF interfaces
+    static_routes: Static routes
+    prefix_lists: Prefix lists
+    route_maps: Route maps
+- title: Configure VRFs and multicast
+  description: Define VRFs and their address families and interfaces, and configure PIM, IGMP and IGMP
+    snooping for multicast.
+  components:
+    vrf_global: VRFs
+    vrf_address_family: VRF address families
+    vrf_af: VRF address family settings
+    vrf_interfaces: VRF interfaces
+    pim: PIM
+    pim_interface: PIM interfaces
+    pim_rp_address: PIM static RP addresses
+    igmp: IGMP
+    igmp_interface: IGMP interfaces
+    igmp_snooping: IGMP snooping
+- title: Build VXLAN EVPN fabrics and vPC
+  description: Configure VXLAN VTEPs and VNIs, the EVPN control plane, anycast gateway MAC, and virtual
+    port channels.
+  components:
+    vxlan_vtep: VXLAN VTEP (NVE)
+    vxlan_vtep_vni: VXLAN VNI members
+    evpn_global: EVPN control plane
+    evpn_vni: EVPN VNIs
+    overlay_global: Anycast gateway MAC
+    vpc: vPC domain
+    vpc_interface: vPC interfaces
+- title: Provide first-hop redundancy and fast failure detection
+  description: Configure HSRP, VRRP and BFD for gateway redundancy and rapid failure detection.
+  components:
+    hsrp_interfaces: HSRP interfaces
+    vrrp: VRRP
+    bfd_global: BFD global settings
+    bfd_interfaces: BFD interfaces
+- title: Control access and device security
+  description: Manage ACLs and their interface bindings, AAA servers, local users and login banners.
+  components:
+    acls: ACLs
+    acl_interfaces: ACL interface bindings
+    aaa_server: AAA server global settings
+    aaa_server_host: AAA server hosts
+    user: Local users
+    banner: Banners
+- title: Configure device services and management
+  description: Set hostname and system attributes, enable features, and configure NTP, SNMP, logging,
+    NX-API and telemetry.
+  components:
+    hostname: Hostname
+    system: System attributes
+    feature: Features
+    ntp_global: NTP
+    snmp_server: SNMP server
+    logging_global: Logging
+    nxapi: NX-API
+    telemetry: Telemetry
+- title: Configure Fibre Channel on MDS switches
+  description: Configure Fibre Channel interfaces, VSANs, zones and zonesets, and device aliases on Cisco
+    MDS storage switches.
+  components:
+    fc_interfaces: Fibre Channel interfaces
+    vsan: VSANs
+    zone_zoneset: Zones and zonesets
+    devicealias: Device aliases
+- title: Upgrade, maintain and roll back devices
+  description: Install OS images and RPM patches, copy files, take snapshots and checkpoints, roll back,
+    reboot, and place switches in or out of maintenance mode with GIR.
+  components:
+    install_os: OS install and boot options
+    rpm: RPM patches
+    file_copy: File copy
+    snapshot: Snapshots
+    rollback: Checkpoints and rollback
+    reboot: Reboot
+    gir: Graceful insertion and removal
+    gir_profile_management: GIR profiles
+- title: Run commands, gather facts and test reachability
+  description: Run arbitrary commands, manage configuration sections, gather device facts and test reachability
+    with ping.
+  components:
+    command: Commands
+    config: Configuration sections
+    facts: Facts
+    ping: Ping

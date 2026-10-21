@@ -1,0 +1,107 @@
+fqcn: zscaler.zpacloud
+product: Zscaler Private Access
+use_cases:
+- title: Define applications and segments
+  description: Create application segments (standard, browser access, inspection and privileged remote
+    access), segment groups, servers and server groups, and query segments by type.
+  components:
+    application_segment: Application segments
+    application_segment_ba_v2: Browser access segments
+    application_segment_inspection: Inspection segments
+    application_segment_pra: Privileged remote access segments
+    application_segment_by_type: Segments by access type
+    application_segment_multimatch_bulk: Multimatch bulk settings
+    application_segment_weightedlb_config: Weighted load balancing
+    segment_group: Segment groups
+    application_server: Application servers
+    server_group: Server groups
+    ba_certificate: Browser access certificates
+- title: Manage App Connectors and Private Service Edges
+  description: Manage App Connector and Service Edge groups and controllers, provisioning keys, version
+    profiles and auto-delete schedules for disconnected connectors.
+  components:
+    app_connector_groups: App Connector groups
+    app_connector_group: App Connector group info
+    app_connector_controller: App Connector controllers
+    connector_assistant_schedule: Connector auto-delete schedule
+    service_edge_groups: Service Edge groups
+    service_edge_controller: Service Edge controllers
+    service_edge_assistant_schedule: Service Edge auto-delete schedule
+    provisioning_key: Provisioning keys
+    customer_version_profile: Version profiles
+    enrollement_certificate: Enrollment certificates
+    private_cloud_group: Private cloud groups
+    cloud_connector_group: Cloud Connector groups
+    branch_connector_group: Branch Connector groups
+    machine_group: Machine groups
+- title: Control access with policy rules
+  description: Create and reorder access, timeout, forwarding, isolation, redirection, capabilities and
+    credential policy rules, including the v2 rule types.
+  components:
+    policy_access_rule: Access policy rules
+    policy_access_rule_v2: Access policy rules (v2)
+    policy_access_rule_reorder: Rule reordering
+    policy_access_timeout_rule: Timeout rules
+    policy_access_timeout_rule_v2: Timeout rules (v2)
+    policy_access_forwarding_rule: Forwarding rules
+    policy_access_forwarding_rule_v2: Forwarding rules (v2)
+    policy_access_isolation_rule: Isolation rules
+    policy_access_isolation_rule_v2: Isolation rules (v2)
+    policy_access_redirection_rule_v2: Redirection rules (v2)
+    policy_capabilities_access_rule_v2: Capabilities rules (v2)
+    policy_credential_access_rule: Privileged credential rules
+    policy_access_app_protection_rule: App protection rules
+    policy_access_app_protection_rule_v2: App protection rules (v2)
+- title: Look up identity and device context for policy
+  description: Read identity provider, SAML and SCIM attributes, posture profiles, trusted networks, risk
+    scores and location data used when building policy conditions.
+  components:
+    idp_controller: Identity providers
+    saml_attribute: SAML attributes
+    scim_attribute_header: SCIM attribute headers
+    scim_group: SCIM groups
+    posture_profile: Posture profiles
+    trusted_networks: Trusted networks
+    risk_score_values: Risk score values
+    location_controller: Locations
+    location_controller_summary: Location summary
+    location_group_controller: Location groups
+    cloud_config: ZIA cloud configuration
+    c2c_ip_ranges: C2C IP ranges
+    extranet_resource_partner: Extranet resource partners
+- title: Provide privileged remote access
+  description: Configure privileged remote access consoles, portals, credentials, credential pools and
+    approvals.
+  components:
+    pra_approval: PRA approvals
+    pra_console_controller: PRA consoles
+    pra_credential_controller: PRA credentials
+    pra_credential_pool: PRA credential pools
+    pra_portal_controller: PRA portals
+- title: Isolate and protect browsing
+  description: Configure cloud browser isolation banners, certificates and profiles, managed browser and
+    browser protection profiles, and AppProtection controls and security profiles.
+  components:
+    cloud_browser_isolation_banner: Isolation banners
+    cloud_browser_isolation_certificate: Isolation certificates
+    cloud_browser_isolation_profile: Isolation profiles
+    isolation_profile: ZPA isolation profiles
+    managed_browser_profile: Managed browser profiles
+    browser_protection: Browser protection profiles
+    app_protection_custom_control: AppProtection custom controls
+    app_protection_predefined_control: AppProtection predefined controls
+    app_protection_security_profile: AppProtection security profiles
+- title: Configure user portals, tags and log streaming
+  description: Publish user portals with links and acceptable use policies, organise resources with tags,
+    and configure Log Streaming Service receivers.
+  components:
+    user_portal_controller: User portals
+    user_portal_link: Portal links
+    user_portal_aup: Acceptable use policies
+    tag_group: Tag groups
+    tag_key: Tag keys
+    tag_namespace: Tag namespaces
+    workload_tag_group: Workload tag groups
+    lss_config_controller: LSS configurations
+    lss_client_types: LSS client types
+    lss_config_log_types_formats: LSS log formats

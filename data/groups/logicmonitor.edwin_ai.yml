@@ -1,0 +1,11 @@
+fqcn: logicmonitor.edwin_ai
+product: "LogicMonitor Edwin AI"
+use_cases:
+- title: "Respond to Edwin AI alerts"
+  description: "Receive Edwin AI alerts through webhook, Kafka or alert sources in Event-Driven Ansible, query the Edwin API and debug events."
+  components:
+    "eda_event_source:alerts": "Alerts event source"
+    "eda_event_source:kafka": "Kafka event source"
+    "eda_event_source:webhook": "Webhook event source"
+    "query_api": "Edwin Query API"
+    "playbook:debug_event": "Debug event playbook"

@@ -1,0 +1,24 @@
+fqcn: ibm.ibm_eda_zos
+product: IBM z/OS Event-Driven Ansible
+use_cases:
+- title: Parse and diagnose zSecure alerts
+  description: Extract zSecure alert attributes from events and capture SMF flood diagnostics.
+  components:
+    eda_event_filter:security_alerts: zSecure alert attributes
+    playbook:security.1607_diagnostic: SMF flood diagnostics
+- title: Investigate and contain RACF security events
+  description: Gather RACF user and password policy details, quarantine or unquarantine TSO users, remove
+    UID access and issue SETROPTS commands.
+  components:
+    playbook:security.gather_listuser_information: RACF user details
+    playbook:security.gather_password_policy_information: Password threshold breach response
+    playbook:security.quarantine_user: Quarantine a TSO user
+    playbook:security.unquarantine_user: Unquarantine a TSO user
+    playbook:security.remove_uid_access: Remove UID access
+    playbook:security.setr_jes_batchallracf: SETROPTS JES command
+- title: Notify teams about alerts
+  description: Send alert emails, SMF flood emails and Slack messages.
+  components:
+    playbook:security.send_alert_email: Alert email
+    playbook:security.send_1607_alert_email: SMF flood alert email
+    playbook:security.send_slack_message: Slack notification

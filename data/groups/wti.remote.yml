@@ -1,0 +1,109 @@
+fqcn: wti.remote
+product: WTI OOB console servers and PDUs
+notes:
+- Module names have the cpm_ prefix omitted. Each setting usually has a read-only info module and a _config
+  module that changes it, with matching sample playbooks.
+use_cases:
+- title: Control power outlets and monitor the device
+  description: Switch and configure power plugs, and read power, current, temperature, alarm and general
+    status.
+  components:
+    plugcontrol: Plug control
+    plugconfig: Plug configuration
+    power: Power information
+    current: Current information
+    temp: Temperature
+    alarm: Alarms
+    status: Device status
+    playbook:cpm_plugcontrol.plug_control: Plug state control sample
+    playbook:cpm_plugcontrol.plug_control_info: Plug parameters sample
+    playbook:cpm_plugconfig.plug_config: Plug configuration sample
+    playbook:cpm_plugconfig.plug_info: Plug information sample
+    playbook:cpm_status.status_info: Status sample
+    playbook:cpm_status.power_info: Power information sample
+    playbook:cpm_status.current_info: Current information sample
+    playbook:cpm_status.temp_info: Temperature information sample
+    playbook:cpm_status.alarm_info: Alarm information sample
+- title: Manage serial console ports
+  description: Read and set serial port parameters and connect or disconnect serial sessions.
+  components:
+    serial_port: Serial port parameters
+    serial_port_config: Serial port configuration
+    serial_port_action: Serial connection status
+    serial_port_action_set: Serial connect and disconnect
+    playbook:cpm_serial_ports.serial_ports_info: Serial port parameters sample
+    playbook:cpm_serial_ports.serial_ports_config: Serial port configuration sample
+    playbook:cpm_serial_ports.serial_ports_action_info: Serial connection status sample
+    playbook:cpm_serial_ports.serial_ports_action_set: Serial connection control sample
+- title: Configure network interfaces, DNS and cellular
+  description: Read and set network interface, DNS services and cellular parameters.
+  components:
+    interface: Network interfaces
+    interface_config: Network interface configuration
+    dnsservices: DNS services
+    dnsservices_config: DNS services configuration
+    cellular: Cellular information
+    cellular_config: Cellular configuration
+    playbook:cpm_interface.interface_info: Network interface information sample
+    playbook:cpm_interface.interface_config: Network interface configuration sample
+    playbook:cpm_dnsservices.dnsservices_info: DNS services information sample
+    playbook:cpm_dnsservices.dnsservices_config: DNS services configuration sample
+    playbook:cpm_dnsservices.dnsservers_info: DNS servers information sample
+    playbook:cpm_dnsservices.dnsservers_config: DNS servers configuration sample
+    playbook:cpm_cellular.cellular_info: Cellular information sample
+    playbook:cpm_cellular.cellular_config: Cellular configuration sample
+- title: Secure management access
+  description: Read and set SSH, web, IP tables and SNMP parameters, and manage local users.
+  components:
+    ssh: SSH parameters
+    ssh_config: SSH configuration
+    web: Web parameters
+    web_config: Web configuration
+    iptables: IP tables
+    iptables_config: IP tables configuration
+    snmp: SNMP parameters
+    snmp_config: SNMP configuration
+    user: Users
+    playbook:cpm_ssh.ssh_info: SSH information sample
+    playbook:cpm_ssh.ssh_config: SSH configuration sample
+    playbook:cpm_web.web_info: Web information sample
+    playbook:cpm_web.web_config: Web configuration sample
+    playbook:cpm_iptables.iptables_info: IP tables information sample
+    playbook:cpm_iptables.iptables_config: IP tables configuration sample
+    playbook:cpm_snmp.snmp_info: SNMP information sample
+    playbook:cpm_snmp.snmp_config: SNMP configuration sample
+    playbook:cpm_user.user_add: User creation sample
+    playbook:cpm_user.user_edit: User edit sample
+    playbook:cpm_user.user_delete: User deletion sample
+    playbook:cpm_user.user_get: User information sample
+- title: Configure logging, time and device identity
+  description: Read and set syslog client and server, time and NTP, and hostname, site ID, location and
+    asset tag.
+  components:
+    syslog_client: Syslog client
+    syslog_client_config: Syslog client configuration
+    syslog_server: Syslog server
+    syslog_server_config: Syslog server configuration
+    time: Time and date
+    time_config: Time and date configuration
+    hostname: Hostname and asset tag
+    hostname_config: Hostname and asset tag configuration
+    playbook:cpm_syslog_client.syslog_client_info: Syslog client information sample
+    playbook:cpm_syslog_client.syslog_client_config: Syslog client configuration sample
+    playbook:cpm_syslog_server.syslog_server_info: Syslog server information sample
+    playbook:cpm_syslog_server.syslog_server_config: Syslog server configuration sample
+    playbook:cpm_time_date.time_info: Time information sample
+    playbook:cpm_time_date.time_config: Time configuration sample
+    playbook:cpm_hostname.hostname_info: Hostname information sample
+    playbook:cpm_hostname.hostname_config: Hostname configuration sample
+- title: Back up configuration and upgrade firmware
+  description: Save and restore device parameters and check or update firmware.
+  components:
+    config_backup: Configuration backup
+    config_restore: Configuration restore
+    firmware: Firmware information
+    firmware_update: Firmware update
+    playbook:cpm_config.cpm_config_backup: Configuration backup sample
+    playbook:cpm_config.cpm_config_restore: Configuration restore sample
+    playbook:cpm_firmwareupdate.firmware_upgrade: Firmware upgrade sample
+    playbook:cpm_status.firmware_info: Firmware information sample

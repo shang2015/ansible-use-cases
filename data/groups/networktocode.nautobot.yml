@@ -1,0 +1,135 @@
+fqcn: networktocode.nautobot
+product: Nautobot (Network to Code)
+use_cases:
+- title: Model sites, locations and tenants
+  description: Define location types and locations, tenants and groups, racks and rack groups, contacts,
+    teams and manufacturers.
+  components:
+    location_type: Location types
+    location: Locations
+    tenant_group: Tenant groups
+    tenant: Tenants
+    rack_group: Rack groups
+    rack: Racks
+    contact: Contacts
+    team: Teams
+    manufacturer: Manufacturers
+- title: Manage devices and hardware components
+  description: Create devices, types, families, platforms and software versions, with their interfaces,
+    ports, bays, modules and inventory items.
+  components:
+    device: Devices
+    device_type: Device types
+    device_family: Device families
+    platform: Platforms
+    software_version: Software versions
+    device_redundancy_group: Device redundancy groups
+    virtual_chassis: Virtual chassis
+    virtual_device_context: Virtual device contexts
+    inventory_item: Inventory items
+    device_interface: Device interfaces
+    device_interface_template: Interface templates
+    front_port: Front ports
+    front_port_template: Front port templates
+    rear_port: Rear ports
+    rear_port_template: Rear port templates
+    console_port: Console ports
+    console_port_template: Console port templates
+    console_server_port: Console server ports
+    console_server_port_template: Console server port templates
+    device_bay: Device bays
+    device_bay_template: Device bay templates
+    module: Modules
+    module_type: Module types
+    module_bay: Module bays
+    module_bay_template: Module bay templates
+    cable: Cables
+- title: Manage power infrastructure
+  description: Track power panels, feeds, ports and outlets and their templates.
+  components:
+    power_panel: Power panels
+    power_feed: Power feeds
+    power_port: Power ports
+    power_port_template: Power port templates
+    power_outlet: Power outlets
+    power_outlet_template: Power outlet templates
+- title: Manage IP addressing and VLANs
+  description: Maintain namespaces, prefixes, IP addresses, RIRs, VRFs, route targets, VLANs and VLAN
+    groups.
+  components:
+    namespace: Namespaces
+    prefix: Prefixes
+    ip_address: IP addresses
+    rir: RIRs
+    vrf: VRFs
+    route_target: Route targets
+    vlan: VLANs
+    vlan_group: VLAN groups
+    service: Services
+- title: Track circuits and providers
+  description: Record providers, circuit types, circuits and circuit terminations.
+  components:
+    provider: Providers
+    circuit_type: Circuit types
+    circuit: Circuits
+    circuit_termination: Circuit terminations
+- title: Model virtualisation and cloud resources
+  description: Track clusters, virtual machines and their interfaces, plus cloud accounts, networks, services
+    and resource types.
+  components:
+    cluster_type: Cluster types
+    cluster_group: Cluster groups
+    cluster: Clusters
+    virtual_machine: Virtual machines
+    vm_interface: VM interfaces
+    cloud_account: Cloud accounts
+    cloud_network: Cloud networks
+    cloud_service: Cloud services
+    cloud_resource_type: Cloud resource types
+- title: Manage wireless and controller-managed devices
+  description: Define controllers and managed device groups, wireless networks, radio profiles and supported
+    data rates.
+  components:
+    controller: Controllers
+    controller_managed_device_group: Controller managed device groups
+    wireless_network: Wireless networks
+    radio_profile: Radio profiles
+    supported_data_rate: Supported data rates
+- title: Customise the data model and enforce data quality
+  description: Add custom fields, statuses, roles, tags, relationships, metadata and dynamic groups, and
+    enforce validation rules.
+  components:
+    custom_field: Custom fields
+    status: Statuses
+    role: Roles
+    tag: Tags
+    relationship_association: Relationship associations
+    metadata_type: Metadata types
+    object_metadata: Object metadata
+    dynamic_group: Dynamic groups
+    job_button: Job buttons
+    plugin: Plugin objects
+    min_max_rule: Min/max rules
+    regex_rule: Regex rules
+    required_rule: Required rules
+    unique_rule: Unique rules
+- title: Administer Nautobot access and secrets
+  description: Manage users, groups, permissions, secrets and secrets groups, and the Nautobot server
+    application.
+  components:
+    admin_user: Users
+    admin_group: Groups
+    admin_permission: Object permissions
+    secret: Secrets
+    secrets_group: Secrets groups
+    nautobot_server: Nautobot server
+- title: Query Nautobot and use it as inventory
+  description: Query data through GraphQL or lookups, build dynamic inventory and react to change events.
+  components:
+    graphql: GraphQL query facts
+    filter:graphql: GraphQL string filter
+    inventory:inventory: Nautobot inventory
+    inventory:gql_inventory: GraphQL inventory
+    lookup:lookup: Nautobot lookup
+    lookup:lookup_graphql: GraphQL lookup
+    eda_event_source:nautobot_changelog: Change log events

@@ -1,0 +1,72 @@
+fqcn: vmware.vmware_rest
+product: VMware vSphere (REST API)
+use_cases:
+- title: Monitor vCenter appliance health and accounts
+  description: Check database and software update health, appliance monitoring statistics, update status,
+    and local accounts with their password policy.
+  components:
+    appliance_health_database: Database health
+    appliance_health_softwarepackages: Software package health
+    appliance_update: Update status
+    appliance_monitoring: Monitoring statistics
+    appliance_monitoring_query: Statistics queries
+    appliance_localaccounts: Local accounts
+    appliance_localaccounts_globalpolicy: Password policy
+- title: Operate the vCenter appliance
+  description: Manage appliance networking, services, storage partitions, power state and infrastructure
+    profile configurations.
+  components:
+    appliance_networking: Network configuration
+    appliance_networking_interfaces_ipv4: IPv4 interface settings
+    appliance_networking_interfaces_ipv6: IPv6 interface settings
+    appliance_services: Services
+    appliance_system_storage: Storage partitions
+    appliance_shutdown: Shutdown and reboot
+    appliance_infraprofile_configs: Infrastructure profile configurations
+- title: Manage content libraries
+  description: Inspect content libraries and subscriptions, configure the Content Library Service, and
+    manage OVF packages in libraries.
+  components:
+    content_configuration: Content Library Service configuration
+    content_library: Content libraries
+    content_locallibrary: Local libraries
+    content_subscribedlibrary: Subscribed libraries
+    content_library_subscriptions: Library subscriptions
+    vcenter_ovf_libraryitem: OVF library items
+- title: Manage datacenters, resource pools and storage policies
+  description: Manage datacenters and resource pools, look up datastores and networks, and read and assign
+    storage policies, including VM compliance checks.
+  components:
+    vcenter_datacenter: Datacenters
+    vcenter_resourcepool: Resource pools
+    vcenter_datastore: Datastores
+    vcenter_network: Networks
+    vcenter_storage_policies: Storage policies
+    vcenter_vm_storage_policy: VM storage policies
+    vcenter_vm_storage_policy_compliance: VM storage policy compliance
+- title: Configure virtual machine hardware
+  description: Manage VM hardware, boot configuration and device order, serial and parallel ports, and
+    inspect disks, adapters, CD-ROMs and Ethernet cards.
+  components:
+    vcenter_vm_hardware: Virtual hardware
+    vcenter_vm_hardware_boot: Boot configuration
+    vcenter_vm_hardware_boot_device: Boot device order
+    vcenter_vm_hardware_serial: Serial ports
+    vcenter_vm_hardware_parallel: Parallel ports
+    vcenter_vm_hardware_disk: Disks
+    vcenter_vm_hardware_cdrom: CD-ROM drives
+    vcenter_vm_hardware_ethernet: Ethernet adapters
+    vcenter_vm_hardware_adapter_sata: SATA adapters
+    vcenter_vm_hardware_adapter_scsi: SCSI adapters
+- title: Inspect the guest OS and VMware Tools
+  description: Read guest identity, file system, networking, routing, power and operation status, and
+    manage VMware Tools settings and installer media.
+  components:
+    vcenter_vm_guest_identity: Guest identity
+    vcenter_vm_guest_localfilesystem: Guest file systems
+    vcenter_vm_guest_networking: Guest networking
+    vcenter_vm_guest_networking_routes: Guest routes
+    vcenter_vm_guest_operations: Guest operations
+    vcenter_vm_guest_power: Guest power state
+    vcenter_vm_tools: VMware Tools
+    vcenter_vm_tools_installer: VMware Tools installer

@@ -1,0 +1,98 @@
+fqcn: everpure.flashblade
+product: Everpure FlashBlade
+use_cases:
+- title: Provision file systems, exports and snapshots
+  description: Create file systems and exports, take snapshots, set quotas, and apply policies.
+  components:
+    fs: File systems
+    export: File system exports
+    snap: File system snapshots
+    groupquota: Group quotas
+    userquota: User quotas
+    policy: Policies
+- title: Provision object storage
+  description: Manage S3 object store accounts, users, buckets, access and lifecycle rules, virtual hosts,
+    remote credentials and export policies.
+  components:
+    s3acc: Object store accounts
+    s3acc_export: Account exports
+    s3user: Object store users
+    bucket: Buckets
+    bucket_access: Bucket access policies
+    lifecycle: Lifecycle rules
+    userpolicy: User access policies
+    s3_export_policy: S3 export policies
+    virtualhost: Virtual hosts
+    remote_cred: Remote credentials
+- title: Replicate and back up data
+  description: Set up replication connections and file system or bucket replica links, remote targets,
+    realms and fleets.
+  components:
+    connect: Replication connections
+    fs_replica: File system replica links
+    bucket_replica: Bucket replica links
+    target: Remote S3 targets
+    realm: Realms
+    fleet: Fusion fleets
+- title: Configure networking
+  description: Configure network interfaces, subnets, link aggregation groups and DNS, and test connectivity.
+  components:
+    network: Network interfaces
+    subnet: Subnets
+    lag: Link aggregation groups
+    dns: DNS
+    pingtrace: Ping and trace
+- title: Integrate directory services and authentication
+  description: Configure Active Directory, directory services and roles, local directory users and groups,
+    Kerberos keytabs, SAML and management accounts.
+  components:
+    ad: Active Directory accounts
+    ds: Directory services
+    dsrole: Directory service roles
+    local_ds: Local directory services
+    local_group: Local groups
+    local_user: Local users
+    keytabs: Kerberos keytabs
+    saml: SAML identity providers
+    user: User accounts
+- title: Manage administrative access and security
+  description: Control management roles and access policies, authentication policies, password policy,
+    API clients, certificates, TLS and encryption key servers.
+  components:
+    admin: Global admin settings
+    mgmt_role: Management roles
+    mgmt_policy: Management access policies
+    mgmt_auth_policy: Management authentication policies
+    password_policy: Password policy
+    apiclient: API clients
+    resource_access: Resource access
+    certs: SSL certificates
+    certgrp: Certificate groups
+    tls_policy: TLS policies
+    kmip: KMIP servers
+    timeout: GUI idle timeout
+- title: Configure array identity and services
+  description: Set the array name, banner, time zone, NTP, SMTP, EULA and servers.
+  components:
+    bladename: Array name
+    banner: Banner
+    tz: Time zone
+    ntp: NTP
+    smtp: SMTP
+    eula: EULA
+    server: Servers
+- title: Monitor, alert and get support
+  description: Configure alert email, SNMP, syslog, phone home and remote assist, and collect array information,
+    hardware state and alert messages.
+  components:
+    alert: Alert email
+    messages: Alert messages
+    snmp_agent: SNMP agent
+    snmp_mgr: SNMP managers
+    syslog: Syslog
+    phonehome: Phone home
+    proxy: Phone home proxy
+    ra: Remote assist
+    info: Array information
+    inventory: Inventory
+    hardware: Hardware
