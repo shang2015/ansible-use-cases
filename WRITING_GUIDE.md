@@ -8,13 +8,12 @@ Readers are Red Hat sellers, solution architects and partners who get asked "wha
 
 ## The format (do not change it)
 
-Every use case file has YAML front matter and exactly these five `##` sections, in this order:
+Every use case file has YAML front matter and exactly these two `##` sections, in this order:
 
-1. `## Description`: one short paragraph, the customer's goal in plain words.
-2. `## Prerequisites`: numbered list of what must exist first (access, credentials, systems, inventory source).
-3. `## Steps`: numbered list of delivery tasks, in order, each starting with a verb. Mention the key module or role inline in backticks where it does the work.
-4. `## Success Criteria`: numbered list of observable outcomes everyone can agree on.
-5. `## Notes`: bullets for variations, pitfalls, related use cases (link sibling files with relative links), and when to pair with Event-Driven Ansible.
+1. `## Description`: one short paragraph, the customer's goal in plain words. Mention the key module or role inline in backticks where it helps.
+2. `## Notes`: bullets for variations, pitfalls, related use cases (link sibling files with relative links), and when to pair with Event-Driven Ansible.
+
+The site and the PDFs render each use case as one table with four rows: **Description**, **Collection** and **Key content** (both from the front matter), and **Notes**. Prerequisites, steps and success criteria are not part of the format.
 
 Front matter:
 
@@ -34,7 +33,7 @@ examples:                                  # optional, only real URLs you have v
 ---
 ```
 
-The site renders a **Collections & key content** table from `collections` and `key_content` automatically. Do not write that table yourself.
+The site renders the **Collection** and **Key content** rows from `collections` and `key_content` automatically. Do not write them yourself.
 
 ## Rules
 
@@ -46,7 +45,7 @@ The site renders a **Collections & key content** table from `collections` and `k
 - Prefer **Certified** and **Validated** content. Validated collections (roles and playbooks such as `network.backup`, `infra.leapp`, `cloud.aws_ops`) are the best fit for outcome-level use cases; certified modules are the building blocks.
 - Never invent module names, options, product features, version numbers or URLs. If unsure, leave it out.
 - Product names: Ansible Automation Platform (AAP) 2.5+; "automation controller", "Event-Driven Ansible controller", "platform gateway", "automation hub", "execution environment". Do not use "Ansible Tower" except when describing migration from it.
-- English, concise, no marketing language. No first person. Keep each section short: Steps usually 4-8 items.
+- English, concise, no marketing language. No first person. Description is 2-4 sentences; Notes usually 2-5 bullets.
 - File names: lowercase-hyphenated outcome, e.g. `patch-rhel-at-scale.md`.
 - Only link to sibling use cases that you are also creating, or that already exist.
 

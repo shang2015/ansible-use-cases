@@ -5,7 +5,10 @@ Reads   data/collections.yml   catalog collections (support level, provider, rep
         data/content.json      modules/roles/plugins per collection (extract_content.py)
         data/vendors.yml       security & observability vendor collections, any source
         data/domains.yml       domain taxonomy
-Writes  docs/collections/*.md, docs/vendors/**, docs/use-cases/<domain>/_collections.md,
+        data/groups/*.yml      product use cases (modules grouped per collection)
+Writes  docs/collections/*.md, docs/vendors/**,
+        docs/use-cases/<domain>/_collections.md, _summary.md, _products.md (snippets
+        included by each domain's index.md), docs/use-cases/_domain-grid.md,
         docs/assets/content-index.json, mkdocs.yml (base config + generated nav)
 """
 from __future__ import annotations
@@ -121,13 +124,53 @@ def write(path: Path, text: str):
     path.write_text(text)
 
 
-def collection_page(col, content, domain_title):
+def product_section(col, group, res, content=None) -> list[str]:
+    """Product use cases of one collection, each as a Description / Collection /
+    Key content / Notes table, as in the PDF downloads."""
+    fq = col["fqcn"]
+    kind = support(col.get("content_type"))
+    n = len(group["use_cases"])
+    lines = ["## Product use cases", "",
+             f"The {res['module_count']} modules of this collection grouped into **{n}** use case{'s' if n != 1 else ''}. "
+             "**Key content** lists the components each use case supports, with the modules that manage them "
+             "(create, update, delete) and query them (`_info`).", ""]
+    other = {f"{o['type']}:{o['name']}": o for o in res["other"]}
+    common = [html.escape(x) for x in group.get("notes") or []]
+    st = stamp(col, content)
+    col_cell = (f"<code>{html.escape(fq)}</code> {badge(col.get('content_type'))} {html.escape(col.get('provider') or '')}"
+                + (f' <span class="uc-stamp">{st}</span>' if st else ""))
+    for uc in group["use_cases"]:
+        comps = []
+        for key, label in (uc.get("components") or {}).items():
+            if key in res["resources"]:
+                e = res["resources"][key]
+                mods = ", ".join(f'<a href="#{anchor(m)}"><code>{html.escape(m)}</code></a>' for m in e["manage"] + e["info"])
+                comps.append(f"<li><strong>{html.escape(label)}</strong> {mods}</li>")
+            elif key in other:
+                o = other[key]
+                comps.append(f'<li><strong>{html.escape(label)}</strong> {o["type"].replace("_", " ")} '
+                             f'<a href="#{anchor(o["name"])}"><code>{html.escape(o["name"])}</code></a></li>')
+        notes = ([html.escape(uc["note"])] if uc.get("note") else []) + common
+        rows = [
+            ("Description", html.escape(uc.get("description") or "")),
+            ("Collection", col_cell),
+            ("Key content", f'<ul class="uc-comps{" uc-many" if len(comps) > 16 else ""}">{"".join(comps)}</ul>'),
+            ("Notes", "<ul>" + "".join(f"<li>{x}</li>" for x in notes) + "</ul>" if notes else ""),
+        ]
+        lines += [f"### Use Case: {uc['title']}", "",
+                  '<table class="uc-table"><tbody>' + "".join(f"<tr><th>{k}</th><td>{v}</td></tr>" for k, v in rows if v)
+                  + "</tbody></table>", ""]
+    return lines
+
+
+def collection_page(col, content, domain_title, group=None, res=None):
     fq = col["fqcn"]
     items = [i for i in content.get("items", []) if i["type"] in TYPE_ORDER]
     lines = [
         "---", f"title: {fq}", "hide: [navigation]", "---", "",
         f"# `{fq}`", "",
-        f"{badge(col.get('content_type'))} &nbsp; **{col.get('provider') or 'Unknown provider'}** &nbsp;·&nbsp; domain: {domain_title}", "",
+        f"{badge(col.get('content_type'))} &nbsp; **{col.get('provider') or 'Unknown provider'}** &nbsp;·&nbsp; domain: {domain_title}"
+        + (f" &nbsp;·&nbsp; :material-update: **{stamp(col, content)}**" if stamp(col, content) else ""), "",
         f"{col.get('description') or content.get('galaxy', {}).get('description') or ''}", "",
     ]
     meta_rows = [
@@ -163,6 +206,9 @@ def collection_page(col, content, domain_title):
         }.get(status, "No modules, roles or plugins were found in the source repository.")
         lines += ['!!! note "Module-level use cases not available"', f"    {reason}", ""]
         return "\n".join(lines) + "\n"
+
+    if group and res:
+        lines += product_section(col, group, res, content)
 
     counts = defaultdict(int)
     for i in items:
@@ -299,6 +345,69 @@ def vendor_page(vendor, dom, entries, cols_by_fqcn, content):
     return "\n".join(lines) + "\n"
 
 
+def stamp(col: dict, content: dict | None = None) -> str:
+    """'v1.2.3 · updated 2026-10-14': catalog version and last-updated date,
+    falling back to the last commit in the source repository."""
+    bits = []
+    if col.get("latest_version"):
+        bits.append(f"v{col['latest_version']}")
+    if col.get("last_updated"):
+        bits.append(f"updated {col['last_updated']}")
+    elif content and content.get("last_commit"):
+        bits.append(f"last commit {date_only(content['last_commit'])}")
+    return " · ".join(bits)
+
+
+def load_groups() -> dict:
+    """Product use cases: data/groups/<fqcn>.yml, keyed by FQCN."""
+    out = {}
+    for p in sorted((DATA / "groups").glob("*.yml")):
+        g = yaml.safe_load(p.read_text()) or {}
+        if g.get("fqcn"):
+            out[g["fqcn"]] = g
+    return out
+
+
+def pdf_names(domains: list[dict]) -> dict:
+    """Domain id -> PDF file name under docs/downloads/, e.g. 06-Security.pdf."""
+    out, n = {}, 0
+    for d in domains:
+        if d["id"] == "other":
+            continue
+        n += 1
+        out[d["id"]] = f"{n:02d}-" + re.sub(r"[^A-Za-z0-9]+", "-", d["title"]).strip("-") + ".pdf"
+    return out
+
+
+def domain_summary(d, n_sol, prods, n_cols, groups, pdf, depth) -> str:
+    n_prod = sum(len(groups[fq]["use_cases"]) for fq in prods)
+    n_comp = sum(len(uc.get("components") or {}) for fq in prods for uc in groups[fq]["use_cases"])
+    facts = [f"**{n_sol}** solution use cases"]
+    if n_prod:
+        facts.append(f"**{n_prod:,}** product use cases covering **{n_comp:,}** components")
+    facts.append(f"**{n_cols}** certified and validated collections")
+    lines = ['!!! abstract "At a glance"', "    " + " · ".join(facts)]
+    if pdf and (DOCS / "downloads" / pdf).exists():
+        lines += ["", f"    :material-file-pdf-box: [Download the {d['title']} PDF]({'../' * depth}downloads/{pdf}): "
+                      "every use case in this domain in the *Description · Collection · Key content · Notes* format."]
+    return "\n".join(lines) + "\n"
+
+
+def domain_products(prods, groups, depth, cols_by_fqcn=None, content=None) -> str:
+    if not prods:
+        return "_No product use cases yet: the collections in this domain have no public source repository to group modules from._\n"
+    prefix = "../" * depth
+    out = ["| Product | Collection | Version | Updated | Product use cases |", "|---|---|---|---|---|"]
+    for fq in prods:
+        g = groups[fq]
+        titles = " · ".join(cell(uc["title"]) for uc in g["use_cases"])
+        c = (cols_by_fqcn or {}).get(fq, {})
+        upd = c.get("last_updated") or date_only(((content or {}).get(fq) or {}).get("last_commit")) or "–"
+        upd = f'<span style="white-space:nowrap">{upd}</span>' if upd != "–" else upd
+        out.append(f"| {cell(g.get('product') or fq)} | [`{fq}`]({prefix}collections/{fq}.md#product-use-cases) | {cell(c.get('latest_version') or '–')} | {upd} | **{len(g['use_cases'])}**: {titles} |")
+    return "\n".join(out) + "\n"
+
+
 def use_case_pages(domain):
     """Return (title, relative path) for hand-written use cases in a domain folder."""
     folder = DOCS / "use-cases" / domain["path"]
@@ -323,13 +432,15 @@ def main():
     shutil.rmtree(DOCS / "collections", ignore_errors=True)
     shutil.rmtree(DOCS / "vendors", ignore_errors=True)
 
+    groups = load_groups()
+    resources = json.loads((DATA / "resources.json").read_text()) if (DATA / "resources.json").exists() else {}
     rows_by_domain = defaultdict(list)
     all_rows = []
     explorer = []
     for col in sorted(cols, key=lambda c: c["fqcn"]):
         dom = col.get("domain") or assign_domain(col, domains)
         c = content.get(col["fqcn"], {})
-        write(DOCS / "collections" / f"{col['fqcn']}.md", collection_page(col, c, dom_titles[dom]))
+        write(DOCS / "collections" / f"{col['fqcn']}.md", collection_page(col, c, dom_titles[dom], groups.get(col["fqcn"]), resources.get(col["fqcn"])))
         rows_by_domain[dom].append((col, c, dom))
         all_rows.append((col, c, dom))
         for i in c.get("items", []):
@@ -345,21 +456,32 @@ def main():
     idx = ["---", "title: All collections", "hide: [navigation]", "---", "",
            "# All collections", "",
            f"**{len(cols)}** Red Hat Certified and Validated collections, with **{total_items:,}** modules, roles, playbooks and plugins.", "",
-           "Use the [Module Explorer](../explorer.md) to search across all of them.", "",
+           "Use the [Module Explorer](../explorer.md) to search across all of them. "
+           "The domain pages and [PDF downloads](../downloads/index.md) group each collection's modules into product use cases.", "",
            collections_table(all_rows, 1, show_domain=True, dom_titles=dom_titles)]
     write(DOCS / "collections" / "index.md", "\n".join(idx))
 
+    pdfs = pdf_names(domains)
+    prods_by_domain = {d["id"]: [c["fqcn"] for c, _, _ in rows_by_domain.get(d["id"], []) if c["fqcn"] in groups]
+                       for d in domains}
     for d in domains:
         rows = rows_by_domain.get(d["id"], [])
         if d["id"] == "other" and not rows:
             continue
         depth = d["path"].count("/") + 2
+        folder = DOCS / "use-cases" / d["path"]
         text = (collections_table(rows, depth) if rows else "_No certified or validated collections are mapped to this domain yet._\n")
-        write(DOCS / "use-cases" / d["path"] / "_collections.md", text)
-        index = DOCS / "use-cases" / d["path"] / "index.md"
+        write(folder / "_collections.md", text)
+        prods = prods_by_domain[d["id"]]
+        write(folder / "_summary.md", domain_summary(d, len(use_case_pages(d)), prods, len(rows), groups, pdfs.get(d["id"]), depth))
+        write(folder / "_products.md", domain_products(prods, groups, depth, cols_by_fqcn, content))
+        index = folder / "index.md"
         if not index.exists():
             write(index, f"---\ntitle: {d['title']}\n---\n\n# {d['title']}\n\n{d['summary']}\n\n"
-                         f"## Use cases\n\n<!-- use-case-list -->\n\n## Collections in this domain\n\n--8<-- \"use-cases/{d['path']}/_collections.md\"\n")
+                         f"--8<-- \"use-cases/{d['path']}/_summary.md\"\n\n"
+                         f"## Solution use cases\n\n<!-- use-case-list -->\n\n"
+                         f"## Product use cases\n\n--8<-- \"use-cases/{d['path']}/_products.md\"\n\n"
+                         f"## Collections in this domain\n\n--8<-- \"use-cases/{d['path']}/_collections.md\"\n")
 
     # Domain grid on the use case overview page
     grid = ['<div class="uc-grid" markdown>']
@@ -367,9 +489,10 @@ def main():
         if d["id"] == "other" and not rows_by_domain.get("other"):
             continue
         n_uc = len(use_case_pages(d))
+        n_prod = sum(len(groups[fq]["use_cases"]) for fq in prods_by_domain[d["id"]])
         n_col = len(rows_by_domain.get(d["id"], []))
         grid.append(f'<a class="uc-card" href="{d["path"]}/"><strong>:{d["icon"].replace("/", "-")}: {d["title"]}</strong>'
-                    f'<span>{d["summary"]}<br>{n_uc} use cases · {n_col} collections</span></a>')
+                    f'<span>{d["summary"]}<br>{n_uc} solution · {n_prod:,} product use cases · {n_col} collections</span></a>')
     grid.append("</div>")
     write(DOCS / "use-cases" / "_domain-grid.md", "\n".join(grid) + "\n")
     cloud_index = DOCS / "use-cases" / "cloud" / "index.md"
@@ -377,7 +500,7 @@ def main():
         cards = ['<div class="uc-grid" markdown>'] + [
             f'<a class="uc-card" href="{d["path"].split("/", 1)[1]}/"><strong>{d["title"]}</strong><span>{d["summary"]}</span></a>'
             for d in domains if d["path"].startswith("cloud/")] + ["</div>"]
-        write(cloud_index, "---\ntitle: Cloud\n---\n\n# Cloud\n\nPublic, private and multi-cloud automation, one folder per provider.\n\n" + "\n".join(cards) + "\n")
+        write(cloud_index, "---\ntitle: Cloud\n---\n\n# Cloud\n\nPublic, private and multi-cloud automation, one folder per provider. Each provider page has its solution use cases, the product use cases of its collections, and a PDF of the whole provider in the [Downloads](../../downloads/index.md).\n\n" + "\n".join(cards) + "\n")
 
     write(DOCS / "assets" / "content-index.json", json.dumps(explorer, ensure_ascii=False, separators=(",", ":")))
 

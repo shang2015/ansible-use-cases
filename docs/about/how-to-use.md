@@ -7,8 +7,9 @@ title: How to use this site
 ## In a customer conversation
 
 1. Start from the customer's domain, for example **Network** or **Security**, and scan the use case list for the outcomes they care about.
-2. Open a use case. The **Description** and **Success Criteria** frame the conversation; the **Steps** become the delivery plan.
-3. The **Collections & key content** table shows what is already built and supported. A **Certified** or **Validated** badge means the content is on Automation Hub and covered by the subscription.
+2. Every use case is one table: **Description** frames the conversation, **Collection** and **Key content** show what is already built and supported, and **Notes** cover variations and related use cases. A **Certified** or **Validated** badge means the content is on Automation Hub and covered by the subscription.
+3. Under **Product use cases** on the same domain page, find the customer's product. Its collection page lists what the collection automates, grouped by outcome, with every supported component and the modules that manage it.
+4. To leave something behind, download the domain's PDF from [Downloads](../downloads/index.md). It has the same tables in the format of the original *Ansible Automation - Use Cases* document.
 
 ## When a customer names a product
 

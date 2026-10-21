@@ -1,0 +1,3 @@
+# Extra packages for building the PDF downloads (make pdfs)
+playwright>=1.40
+pypdf>=4.0

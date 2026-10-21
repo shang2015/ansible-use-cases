@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check use case pages: required sections, front matter, and that every
+"""Check use case pages: required sections (Description, Notes), front matter, and that every
 referenced collection / module / role exists in data/collections.yml and
 data/content.json.
 
@@ -17,7 +17,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-SECTIONS = ["Description", "Prerequisites", "Steps", "Success Criteria", "Notes"]
+SECTIONS = ["Description", "Notes"]
 
 
 def main(args):

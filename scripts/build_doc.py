@@ -63,7 +63,11 @@ def curated_block(fm: dict, body: str, cols: dict, items: dict) -> str:
     keys = fm.get("key_content") or []
     content_list = "".join(
         f"<li><code>{esc(k)}</code> — {esc(items.get(k, {}).get('short_description', ''))}</li>" for k in keys)
-    col_list = ", ".join(f"<code>{esc(c)}</code> ({support(cols.get(c, {}).get('content_type'))})" for c in fm.get("collections") or [])
+    col_list = ", ".join(
+        f"<code>{esc(c)}</code> ({support(cols.get(c, {}).get('content_type'))}"
+        + (f", v{esc(cols[c]['latest_version'])}" if cols.get(c, {}).get("latest_version") else "")
+        + (f", updated {esc(cols[c]['last_updated'])}" if cols.get(c, {}).get("last_updated") else "") + ")"
+        for c in fm.get("collections") or [])
     rows = [
         ("Description", md_inline(strip_md_links(s.get("Description", "")))),
         ("Collection", col_list),
@@ -107,7 +111,9 @@ def product_blocks(fq: str, col: dict, group: dict, res: dict) -> str:
         notes += notes_common
         rows = [
             ("Description", esc(uc.get("description"))),
-            ("Collection", f"<code>{esc(fq)}</code> ({kind}, {esc(col.get('provider'))})"),
+            ("Collection", f"<code>{esc(fq)}</code> ({kind}, {esc(col.get('provider'))}"
+                           + (f", v{esc(col['latest_version'])}" if col.get("latest_version") else "")
+                           + (f", updated {esc(col['last_updated'])}" if col.get("last_updated") else "") + ")"),
             ("Key content", f'<ul class="comps{" many" if len(comps) > 16 else ""}">{"".join(comps)}</ul>'),
             ("Notes", "<ul>" + "".join(f"<li>{n}</li>" for n in notes) + "</ul>" if notes else ""),
         ]

@@ -17,22 +17,21 @@ hide: [navigation, toc]
 
 ## How a use case is written
 
-Every use case uses the same five parts, so it can be read in a minute and copied into a plan or statement of work:
+Every use case, on this site and in the PDFs, is one table in the format of the original *Ansible Automation - Use Cases* document, so it can be read in a minute:
 
-| Section | What it answers |
+| Row | What it holds |
 |---|---|
 | **Description** | What the customer wants to achieve, in one paragraph. |
-| **Prerequisites** | What must be in place before automation can start. |
-| **Steps** | The delivery tasks, in order. |
-| **Success Criteria** | How everyone agrees the use case is done. |
-| **Notes** | Variations, pitfalls and related use cases. |
+| **Collection** | The collections that deliver it, with support level, provider, version and last update date. |
+| **Key content** | The key modules, roles and plugins, or the components a product use case supports. |
+| **Notes** | Variations, pitfalls, related use cases and examples. |
 
-Each use case then lists the **collections and key modules or roles** that implement it, plus example repositories and demos.
+## Two kinds of use case
 
-## Two levels of "use case"
+1. **Solution use cases** (165): outcome-level scenarios such as *Harden RHEL to CIS and DISA STIG baselines* or *Back up device configuration*, written by people and often combining several collections. Each domain page lists them.
+2. **Product use cases** (1,354): the modules of each certified or validated collection grouped by what a customer wants to achieve, such as *Manage virtual networks and connectivity* on Azure, with every supported component listed. They are on each collection's page and in the PDFs.
 
-1. **Curated use cases**: outcome-level scenarios such as *Patch RHEL at scale* or *Back up network configuration*, written by people.
-2. **Module-level use cases**: every module, role and plugin in a certified or validated collection is a small use case of its own (*"Manage BGP global configuration on Cisco IOS"*). These pages are generated from the collections' own documentation and refreshed automatically.
+Below both sits the module level: every module, role and plugin, with its author's description, on the collection pages and in the [Module Explorer](explorer.md).
 
 !!! note "Community reference"
     This is a community reference maintained by Red Hat field staff. It is not an official Red Hat publication. Always confirm support details on [Automation Hub](https://console.redhat.com/ansible/automation-hub) and the [Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/platform/red-hat-ansible).

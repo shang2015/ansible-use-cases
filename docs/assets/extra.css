@@ -28,16 +28,6 @@
 .uc-github { color: var(--uc-github); }
 .uc-deprecated { color: var(--uc-deprecated); }
 
-/* Use case section headings follow the original 5-part format */
-.md-typeset h2[id^="description"],
-.md-typeset h2[id^="prerequisites"],
-.md-typeset h2[id^="steps"],
-.md-typeset h2[id^="success-criteria"],
-.md-typeset h2[id^="notes"] {
-  border-left: .2rem solid var(--md-primary-fg-color);
-  padding-left: .5rem;
-}
-
 .md-typeset table.uc-items { display: table; width: 100%; font-size: .72rem; }
 .md-typeset table.uc-items td:first-child { white-space: nowrap; }
 .md-typeset table.uc-items tr:target { background: var(--md-accent-fg-color--transparent); }
@@ -79,3 +69,30 @@
 .md-typeset table.uc-meta { font-size: .72rem; }
 .md-typeset table.uc-meta th { font-weight: 600; white-space: nowrap; color: var(--md-default-fg-color--light); }
 .md-typeset table:not([class]) code { white-space: nowrap; }
+
+/* One use case = one table: Description / Collection / Key content / Notes,
+   as in the original "Ansible Automation - Use Cases" document */
+.md-typeset table.uc-table {
+  display: table; width: 100%; table-layout: fixed; border-collapse: collapse;
+  border: 1px solid var(--md-default-fg-color--lighter); margin: .6em 0 1.6em; font-size: .74rem;
+}
+.md-typeset table.uc-table th, .md-typeset table.uc-table td {
+  border: 1px solid var(--md-default-fg-color--lighter); padding: .6em .9em; vertical-align: top; text-align: left;
+}
+.md-typeset table.uc-table th {
+  width: 9.5rem; font-weight: 700; background: var(--md-default-fg-color--lightest);
+}
+.md-typeset table.uc-table td > :first-child { margin-top: 0; }
+.md-typeset table.uc-table td > :last-child { margin-bottom: 0; }
+.md-typeset table.uc-table ul { margin: 0 0 0 1.1em; }
+.md-typeset table.uc-table li { margin: .15em 0; }
+.md-typeset table.uc-table code { word-break: break-word; }
+.md-typeset ul.uc-comps.uc-many { columns: 2; column-gap: 2rem; }
+.md-typeset ul.uc-comps li { break-inside: avoid; }
+.uc-kind { font-size: .66rem; color: var(--md-default-fg-color--light); text-transform: uppercase; letter-spacing: .02em; margin-right: .2em; }
+.md-typeset p.uc-open { margin: -.4em 0 .2em; font-size: .72rem; }
+@media screen and (max-width: 44.9375em) {
+  .md-typeset table.uc-table th { width: 6rem; }
+  .md-typeset ul.uc-comps.uc-many { columns: 1; }
+}
+.uc-stamp { font-size: .68rem; color: var(--md-default-fg-color--light); white-space: nowrap; margin-left: .3em; }

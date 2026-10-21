@@ -4,7 +4,7 @@ title: Cloud
 
 # Cloud
 
-Public, private and multi-cloud automation, one folder per provider.
+Public, private and multi-cloud automation, one folder per provider. Each provider page has its solution use cases, the product use cases of its collections, and a PDF of the whole provider in the [Downloads](../../downloads/index.md).
 
 <div class="uc-grid" markdown>
 <a class="uc-card" href="aws/"><strong>AWS</strong><span>Provision and operate Amazon Web Services resources.</span></a>

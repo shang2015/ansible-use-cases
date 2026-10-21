@@ -9,3 +9,5 @@ docs/assets/content-index.json
 docs/use-cases/_domain-grid.md
 docs/use-cases/**/_collections.md
 build/
+docs/use-cases/**/_summary.md
+docs/use-cases/**/_products.md
