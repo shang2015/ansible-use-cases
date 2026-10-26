@@ -1512,7 +1512,7 @@
    "repository": "https://github.com/ansible-collections/amazon.aws",
    "documentation": "https://ansible-collections.github.io/amazon.aws/branch/main/collections/amazon/aws/index.html"
   },
-  "last_commit": "2026-10-20T13:58:34+00:00",
+  "last_commit": "2026-10-22T04:24:01-04:00",
   "source_path": ""
  },
  {
@@ -1699,7 +1699,7 @@
    "repository": "https://github.com/ansible-collections/aap-snapshot-collection",
    "documentation": "https://github.com/ansible-collections/aap-snapshot-collection"
   },
-  "last_commit": "2026-10-15T12:38:19+01:00",
+  "last_commit": "2026-10-20T21:34:47-04:00",
   "source_path": ""
  },
  {
@@ -2112,7 +2112,7 @@
    "repository": "https://github.com/ansible/awx",
    "documentation": "https://github.com/ansible/awx/blob/devel/awx_collection/README.md"
   },
-  "last_commit": "2026-10-15T15:24:47+00:00",
+  "last_commit": "2026-10-23T09:53:44-04:00",
   "source_path": "awx_collection",
   "upstream": "awx.awx"
  },
@@ -2847,7 +2847,7 @@
    "repository": "https://github.com/ansible-collections/ansible.mcp",
    "documentation": "https://github.com/ansible-collections/ansible.mcp"
   },
-  "last_commit": "2026-09-29T21:24:30+00:00",
+  "last_commit": "2026-09-29T21:24:30Z",
   "source_path": ""
  },
  {
@@ -3449,12 +3449,36 @@
     "source": "plugins/modules/oci_autonomous_database.py"
    },
    {
+    "name": "oci_autonomous_database_clone",
+    "fqcn": "ansible.oci.oci_autonomous_database_clone",
+    "type": "module",
+    "short_description": "Manage a clone of an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_clone.py"
+   },
+   {
+    "name": "oci_autonomous_database_clone_info",
+    "fqcn": "ansible.oci.oci_autonomous_database_clone_info",
+    "type": "module",
+    "short_description": "List the clones of an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_clone_info.py"
+   },
+   {
     "name": "oci_autonomous_database_info",
     "fqcn": "ansible.oci.oci_autonomous_database_info",
     "type": "module",
     "short_description": "Retrieve Autonomous Database information from Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_autonomous_database_info.py"
+   },
+   {
+    "name": "oci_autonomous_database_wallet",
+    "fqcn": "ansible.oci.oci_autonomous_database_wallet",
+    "type": "module",
+    "short_description": "Download the wallet for an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_wallet.py"
    },
    {
     "name": "oci_bastion",
@@ -3897,6 +3921,86 @@
     "source": "plugins/modules/oci_network_internet_gateway_info.py"
    },
    {
+    "name": "oci_network_loadbalancer",
+    "fqcn": "ansible.oci.oci_network_loadbalancer",
+    "type": "module",
+    "short_description": "Manage an OCI network load balancer",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer backend details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_set",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_set",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend set",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_set.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_set_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_set_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer backend set details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_set_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_health_checker",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_health_checker",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend set health checker",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_health_checker.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_health_checker_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_health_checker_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer health checker details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_health_checker_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_info",
+    "type": "module",
+    "short_description": "Retrieve OCI network load balancer information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_listener",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_listener",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer listener",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_listener.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_listener_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_listener_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer listener details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_listener_info.py"
+   },
+   {
     "name": "oci_network_local_peering_gateway",
     "fqcn": "ansible.oci.oci_network_local_peering_gateway",
     "type": "module",
@@ -4280,7 +4384,7 @@
    "repository": "https://github.com/ansible-collections/ansible.oci",
    "documentation": "https://github.com/ansible-collections/ansible.oci"
   },
-  "last_commit": "2026-10-20T14:04:58+03:00",
+  "last_commit": "2026-10-25T10:56:41+02:00",
   "source_path": ""
  },
  {
@@ -4564,7 +4668,7 @@
    "repository": "https://github.com/ansible",
    "documentation": null
   },
-  "last_commit": "2026-10-19T14:00:39+02:00",
+  "last_commit": "2026-10-23T14:01:16+02:00",
   "source_path": ""
  },
  {
@@ -4768,7 +4872,7 @@
    "repository": "https://github.com/ansible-collections/ansible.posix",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/ansible/posix/"
   },
-  "last_commit": "2026-10-19T17:05:46+09:00",
+  "last_commit": "2026-10-21T08:25:54+09:00",
   "source_path": ""
  },
  {
@@ -6170,7 +6274,7 @@
    }
   ],
   "galaxy": {
-   "version": "3.9.1",
+   "version": "3.9.2",
    "description": "Ansible collection for core Windows plugins.\n",
    "tags": [
     "windows"
@@ -6178,7 +6282,7 @@
    "repository": "https://github.com/ansible-collections/ansible.windows",
    "documentation": "https://docs.ansible.com/ansible/devel/collections/ansible/windows"
   },
-  "last_commit": "2026-10-20T15:30:08+03:00",
+  "last_commit": "2026-10-25T14:34:23+02:00",
   "source_path": ""
  },
  {
@@ -6576,7 +6680,7 @@
    "repository": "https://github.com/aristanetworks/avd",
    "documentation": "https://avd.arista.com"
   },
-  "last_commit": "2026-10-20T12:28:41+00:00",
+  "last_commit": "2026-10-26T07:42:10Z",
   "source_path": "ansible_collections/arista/avd"
  },
  {
@@ -12164,7 +12268,7 @@
    "repository": "https://github.com/CheckPointSW/CheckPointAnsibleGAIACollection",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/check_point/gaia/docs/"
   },
-  "last_commit": "2026-10-20T07:51:05+03:00",
+  "last_commit": "2026-10-21T09:49:58+03:00",
   "source_path": ""
  },
  {
@@ -18159,7 +18263,7 @@
    "repository": "https://github.com/CiscoDevNet/ansible-aci",
    "documentation": "https://docs.ansible.com/ansible/latest/scenario_guides/guide_aci.html"
   },
-  "last_commit": "2026-10-15T22:14:31+10:00",
+  "last_commit": "2026-10-22T20:31:54+10:00",
   "source_path": ""
  },
  {
@@ -32116,7 +32220,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.13.1",
+   "version": "2.14.0",
    "description": "Ansible Modules, Roles, and Cisco Validated Playbooks (CVP) for Cisco CATALYST Center automation",
    "tags": [
     "cisco",
@@ -32129,7 +32233,7 @@
    "repository": "https://github.com/cisco-en-programmability/catalystcenter-ansible",
    "documentation": "https://cisco-en-programmability.github.io/catalystcenter-ansible/"
   },
-  "last_commit": "2026-10-13T15:41:44-06:00",
+  "last_commit": "2026-10-21T14:28:19-06:00",
   "source_path": ""
  },
  {
@@ -44226,6 +44330,14 @@
     "source": "plugins/modules/ios_logging_global.py"
    },
    {
+    "name": "ios_monitor_sessions",
+    "fqcn": "cisco.ios.ios_monitor_sessions",
+    "type": "module",
+    "short_description": "Resource module to configure SPAN monitor sessions.",
+    "deprecated": false,
+    "source": "plugins/modules/ios_monitor_sessions.py"
+   },
+   {
     "name": "ios_ntp_global",
     "fqcn": "cisco.ios.ios_ntp_global",
     "type": "module",
@@ -44390,7 +44502,7 @@
    "repository": "https://github.com/ansible-collections/cisco.ios",
    "documentation": null
   },
-  "last_commit": "2026-10-16T12:27:34+05:30",
+  "last_commit": "2026-10-22T19:29:42+05:30",
   "source_path": ""
  },
  {
@@ -57353,7 +57465,7 @@
    "repository": "https://github.com/ansible-collections/cisco.nxos",
    "documentation": null
   },
-  "last_commit": "2026-10-15T14:31:28+05:30",
+  "last_commit": "2026-10-25T00:59:13+05:30",
   "source_path": ""
  },
  {
@@ -57389,7 +57501,7 @@
    "repository": "https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/ansible_collections/signalfx/splunk_otel_collector",
    "documentation": null
   },
-  "last_commit": "2026-10-20T11:39:53-07:00",
+  "last_commit": "2026-10-23T17:37:55-07:00",
   "source_path": "deployments/ansible_collections/signalfx/splunk_otel_collector",
   "upstream": "signalfx.splunk_otel_collector"
  },
@@ -58091,7 +58203,7 @@
    "repository": "https://github.com/ansible-collections/cloud.common",
    "documentation": null
   },
-  "last_commit": "2026-03-30T20:43:19+00:00",
+  "last_commit": "2026-03-30T20:43:19Z",
   "source_path": ""
  },
  {
@@ -59581,7 +59693,7 @@
    "repository": "https://github.com/confluentinc/cp-ansible",
    "documentation": "https://docs.confluent.io/ansible/current/overview.html"
   },
-  "last_commit": "2026-10-12T05:18:50+00:00",
+  "last_commit": "2026-10-12T05:18:50Z",
   "source_path": ""
  },
  {
@@ -60141,7 +60253,7 @@
    "repository": "https://github.com/ansible-collections/Datadog",
    "documentation": "https://github.com/ansible-collections/Datadog/blob/main/README.md"
   },
-  "last_commit": "2026-05-06T05:28:27+00:00",
+  "last_commit": "2026-05-06T05:28:27Z",
   "source_path": ""
  },
  {
@@ -68446,7 +68558,7 @@
    "repository": "https://github.com/Everpure-Ansible/FlashArray-Collection",
    "documentation": "https://github.com/Everpure-Ansible/FlashArray-Collection"
   },
-  "last_commit": "2026-10-20T13:43:04-04:00",
+  "last_commit": "2026-10-22T10:31:57-04:00",
   "source_path": ""
  },
  {
@@ -68996,7 +69108,7 @@
    "repository": "https://github.com/Everpure-Ansible/FlashBlade-Collection",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/everpure/flashblade/index.html#plugins-in-everpure-flashblade"
   },
-  "last_commit": "2026-10-20T13:47:55-04:00",
+  "last_commit": "2026-10-20T15:01:24-04:00",
   "source_path": ""
  },
  {
@@ -71105,7 +71217,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.45.0-devel",
+   "version": "1.46.0-devel",
    "description": "F5 BIG-IP Imperative Collection for Ansible",
    "tags": [
     "f5",
@@ -71116,7 +71228,7 @@
    "repository": "https://github.com/F5Networks/f5-ansible-f5modules",
    "documentation": "https://clouddocs.f5.com/products/orchestration/ansible/devel/modules/module_index.html"
   },
-  "last_commit": "2026-09-08T12:34:51-07:00",
+  "last_commit": "2026-10-20T22:47:43-07:00",
   "source_path": "ansible_collections/f5networks/f5_modules"
  },
  {
@@ -110862,7 +110974,7 @@
    }
   ],
   "galaxy": {
-   "version": "4.8.3",
+   "version": "4.9.0",
    "description": "Ansible modules to manage VSP block storage systems (VSP One Block, VSP 5000 series, VSP E series,  VSP F series, and VSP G series) and VSP One SDS Block and Cloud systems. These modules provide a simplified and automated way to configure and manage Hitachi storage systems, enabling seamless integration with Ansible playbooks and workflows.\n",
    "tags": [
     "hitachi",
@@ -110877,7 +110989,7 @@
    "repository": "https://github.com/hitachi-vantara/vspone-block-ansible",
    "documentation": "https://docs.ansible.com/ansible/devel/collections/hitachivantara/vspone_block/"
   },
-  "last_commit": "2026-09-18T22:27:17+05:30",
+  "last_commit": "2026-10-23T17:03:47+05:30",
   "source_path": ""
  },
  {
@@ -115450,7 +115562,7 @@
    "repository": "https://github.com/zhmcclient/zhmc-ansible-modules",
    "documentation": "https://zhmcclient.github.io/zhmc-ansible-modules/"
   },
-  "last_commit": "2026-10-19T19:28:41+02:00",
+  "last_commit": "2026-10-21T09:42:44+02:00",
   "source_path": ""
  },
  {
@@ -115593,7 +115705,7 @@
    "repository": "https://github.com/ansible-collections/ibm_zos_cics",
    "documentation": "https://ibm.github.io/z_ansible_collections_doc"
   },
-  "last_commit": "2025-12-24T10:59:53+00:00",
+  "last_commit": "2025-12-24T10:59:53Z",
   "source_path": ""
  },
  {
@@ -122192,7 +122304,7 @@
    "repository": "https://github.com/ansible-collections/ibm.storage_virtualize",
    "documentation": null
   },
-  "last_commit": "2026-10-15T14:42:57+05:30",
+  "last_commit": "2026-10-23T13:01:41+05:30",
   "source_path": ""
  },
  {
@@ -122649,7 +122761,7 @@
    "repository": "https://github.com/infinidat/ansible-infinidat-collection",
    "documentation": null
   },
-  "last_commit": "2026-08-14T20:32:19+00:00",
+  "last_commit": "2026-08-14T20:32:19Z",
   "source_path": ""
  },
  {
@@ -124802,7 +124914,7 @@
    "repository": "https://github.com/redhat-cop/aap_configuration/",
    "documentation": null
   },
-  "last_commit": "2026-10-20T08:38:51-05:00",
+  "last_commit": "2026-10-23T08:22:40-05:00",
   "source_path": ""
  },
  {
@@ -125007,7 +125119,7 @@
    "repository": "https://github.com/redhat-cop/aap_configuration_extended/",
    "documentation": null
   },
-  "last_commit": "2026-10-14T22:23:48-04:00",
+  "last_commit": "2026-10-22T16:45:29-05:00",
   "source_path": ""
  },
  {
@@ -126579,7 +126691,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.4.1",
+   "version": "2.1.1",
    "description": "Automation Development Office roles for AAP, OpenShift, RHEL, Satellite, IdM, RHBK, and platform bootstrap workflows.",
    "tags": [
     "aap",
@@ -126594,9 +126706,8 @@
    "repository": "https://github.com/redhat-cop/infra.automation-development-office",
    "documentation": "https://github.com/redhat-cop/infra.automation-development-office/blob/main/README.md"
   },
-  "last_commit": "2026-10-20T13:33:01-04:00",
-  "source_path": "",
-  "upstream": "infra.ado"
+  "last_commit": "2026-10-23T12:29:21-04:00",
+  "source_path": ""
  },
  {
   "fqcn": "infra.controller_configuration",
@@ -126984,7 +127095,7 @@
    "repository": "https://github.com/redhat-cop/infra.controller_configuration/",
    "documentation": null
   },
-  "last_commit": "2026-10-02T13:15:45-05:00",
+  "last_commit": "2026-10-23T13:04:27-05:00",
   "source_path": ""
  },
  {
@@ -127358,7 +127469,7 @@
    "repository": "https://github.com/redhat-cop/infra.leapp",
    "documentation": null
   },
-  "last_commit": "2026-10-19T11:02:04+02:00",
+  "last_commit": "2026-10-23T15:21:29+02:00",
   "source_path": ""
  },
  {
@@ -127497,7 +127608,7 @@
    "repository": "https://github.com/redhat-cop/infra.mecm_ops",
    "documentation": null
   },
-  "last_commit": "2026-01-22T14:32:38+00:00",
+  "last_commit": "2026-01-22T14:32:38Z",
   "source_path": ""
  },
  {
@@ -128661,7 +128772,7 @@
    "repository": "https://github.com/redhat-cop/infra.satellite_configuration.git",
    "documentation": "https://github.com/redhat-cop/infra.satellite_configuration.git"
   },
-  "last_commit": "2026-10-15T21:11:55+02:00",
+  "last_commit": "2026-10-26T09:28:26+01:00",
   "source_path": ""
  },
  {
@@ -128790,7 +128901,7 @@
    "repository": "https://github.com/redhat-cop/infra.support_assist",
    "documentation": "https://github.com/redhat-cop/infra.support_assist/blob/devel/README.md"
   },
-  "last_commit": "2026-10-18T19:59:39-04:00",
+  "last_commit": "2026-10-22T10:12:09-04:00",
   "source_path": ""
  },
  {
@@ -130565,7 +130676,7 @@
    "repository": "https://github.com/Juniper/apstra-ansible-collection",
    "documentation": null
   },
-  "last_commit": "2026-09-30T19:00:24+05:30",
+  "last_commit": "2026-10-21T19:22:52+05:30",
   "source_path": "ansible_collections/juniper/apstra"
  },
  {
@@ -134426,14 +134537,14 @@
     "name": "server",
     "fqcn": "microsoft.sql.server",
     "type": "role",
-    "short_description": "This role installs and configures Microsoft SQL Server",
+    "short_description": "This role installs, configures, and starts Microsoft SQL Server.",
     "deprecated": false,
     "source": "",
     "repository": "https://github.com/linux-system-roles/mssql"
    }
   ],
   "galaxy": {},
-  "last_commit": "2026-10-20T11:58:48-06:00"
+  "last_commit": "2026-10-23T23:33:07+02:00"
  },
  {
   "fqcn": "microsoft.wsl",
@@ -134569,7 +134680,7 @@
    "repository": "https://github.com/ansible-collections/netapp.aws",
    "documentation": null
   },
-  "last_commit": "2024-09-10T06:02:13+00:00",
+  "last_commit": "2024-09-10T06:02:13Z",
   "source_path": ""
  },
  {
@@ -134751,7 +134862,7 @@
    "repository": "https://github.com/ansible-collections/netapp.cloudmanager",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/netapp/"
   },
-  "last_commit": "2024-10-31T22:45:14+00:00",
+  "last_commit": "2024-10-31T22:45:14Z",
   "source_path": ""
  },
  {
@@ -136242,7 +136353,7 @@
    "repository": "https://github.com/ansible-collections/netapp.ontap",
    "documentation": null
   },
-  "last_commit": "2026-09-29T15:00:22+00:00",
+  "last_commit": "2026-09-29T15:00:22Z",
   "source_path": ""
  },
  {
@@ -136661,7 +136772,7 @@
    "repository": "https://github.com/ansible-collections/netapp.storagegrid",
    "documentation": null
   },
-  "last_commit": "2026-09-23T03:51:06+00:00",
+  "last_commit": "2026-09-23T03:51:06Z",
   "source_path": ""
  },
  {
@@ -136762,7 +136873,7 @@
    "repository": "https://github.com/ansible-collections/netapp.um_info",
    "documentation": null
   },
-  "last_commit": "2024-08-14T06:37:08+00:00",
+  "last_commit": "2024-08-14T06:37:08Z",
   "source_path": ""
  },
  {
@@ -145343,7 +145454,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.19.0",
+   "version": "3.0.0",
    "description": "Ansible Collection Modules for NetScaler ADC",
    "tags": [
     "netscaler",
@@ -145353,7 +145464,7 @@
    "repository": "https://github.com/netscaler/ansible-collection-netscaleradc",
    "documentation": "https://netscaler.github.io/ansible-collection-netscaleradc"
   },
-  "last_commit": "2026-09-29T21:30:26+05:30",
+  "last_commit": "2026-10-23T09:33:23-07:00",
   "source_path": ""
  },
  {
@@ -146263,7 +146374,7 @@
    "repository": "https://github.com/openshift/network.offline_migration_sdn_to_ovnk",
    "documentation": null
   },
-  "last_commit": "2025-07-10T14:48:20+00:00",
+  "last_commit": "2025-07-10T14:48:20Z",
   "source_path": ""
  },
  {
@@ -150082,7 +150193,7 @@
    "repository": "https://github.com/ansible-collections/openvswitch.openvswitch",
    "documentation": null
   },
-  "last_commit": "2026-09-24T23:44:32+02:00",
+  "last_commit": "2026-10-22T21:14:21+02:00",
   "source_path": ""
  },
  {
@@ -151077,7 +151188,7 @@
    "repository": "https://github.com/os-migrate/os-migrate",
    "documentation": null
   },
-  "last_commit": "2026-10-20T20:16:20+02:00",
+  "last_commit": "2026-10-22T08:05:03-04:00",
   "source_path": ""
  },
  {
@@ -152359,7 +152470,7 @@
    "repository": "https://github.com/PaloAltoNetworks/pan-os-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/paloaltonetworks/panos/docs"
   },
-  "last_commit": "2026-08-31T00:40:36+00:00",
+  "last_commit": "2026-08-31T00:40:36Z",
   "source_path": ""
  },
  {
@@ -153646,7 +153757,7 @@
    "repository": "https://github.com/ansible-middleware/wildfly",
    "documentation": "https://ansible-middleware.github.io/wildfly"
   },
-  "last_commit": "2026-09-26T00:17:05+05:30",
+  "last_commit": "2026-10-26T13:15:01+05:30",
   "source_path": "",
   "upstream": "middleware_automation.wildfly"
  },
@@ -154010,7 +154121,7 @@
    "repository": "https://github.com/redhat-cop/infra.leapp",
    "documentation": null
   },
-  "last_commit": "2026-10-19T11:02:04+02:00",
+  "last_commit": "2026-10-23T15:21:29+02:00",
   "source_path": "",
   "upstream": "infra.leapp"
  },
@@ -154146,7 +154257,7 @@
    "repository": "https://github.com/openshift/community.okd",
    "documentation": ""
   },
-  "last_commit": "2026-08-27T16:40:36+00:00",
+  "last_commit": "2026-08-27T16:40:36Z",
   "source_path": "",
   "upstream": "community.okd"
  },
@@ -154202,7 +154313,7 @@
    "repository": "https://github.com/kubevirt/kubevirt.core",
    "documentation": "https://kubevirt.github.io/kubevirt.core"
   },
-  "last_commit": "2026-10-02T10:04:24+00:00",
+  "last_commit": "2026-10-02T10:04:24Z",
   "source_path": "",
   "upstream": "kubevirt.core"
  },
@@ -158053,7 +158164,7 @@
    }
   ],
   "galaxy": {},
-  "last_commit": "2026-10-20T12:13:19-06:00"
+  "last_commit": "2026-10-23T10:03:02-06:00"
  },
  {
   "fqcn": "redhat.rhv",
@@ -162767,7 +162878,7 @@
    "repository": "https://github.com/ansible-collections/servicenow.itsm",
    "documentation": null
   },
-  "last_commit": "2026-10-20T14:13:27-04:00",
+  "last_commit": "2026-10-23T11:49:41-05:00",
   "source_path": ""
  },
  {
@@ -163748,7 +163859,7 @@
    "repository": "https://github.com/trilioData/trilio-ansible",
    "documentation": "https://docs.trilio.io/kubernetes"
   },
-  "last_commit": "2026-02-25T08:21:59+00:00",
+  "last_commit": "2026-02-25T08:21:59Z",
   "source_path": ""
  },
  {
@@ -168745,7 +168856,7 @@
    "repository": "https://github.com/zscaler/ziacloud-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/zscaler/ziacloud/docs/"
   },
-  "last_commit": "2026-06-02T22:12:44+00:00",
+  "last_commit": "2026-06-02T22:12:44Z",
   "source_path": ""
  },
  {
@@ -169606,7 +169717,7 @@
    "repository": "https://github.com/zscaler/zpacloud-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/zscaler/zpacloud/docs/"
   },
-  "last_commit": "2026-08-27T17:07:01+00:00",
+  "last_commit": "2026-08-27T17:07:01Z",
   "source_path": ""
  }
 ]
