@@ -1512,7 +1512,7 @@
    "repository": "https://github.com/ansible-collections/amazon.aws",
    "documentation": "https://ansible-collections.github.io/amazon.aws/branch/main/collections/amazon/aws/index.html"
   },
-  "last_commit": "2026-10-20T13:58:34+00:00",
+  "last_commit": "2026-10-22T04:24:01-04:00",
   "source_path": ""
  },
  {
@@ -1699,7 +1699,7 @@
    "repository": "https://github.com/ansible-collections/aap-snapshot-collection",
    "documentation": "https://github.com/ansible-collections/aap-snapshot-collection"
   },
-  "last_commit": "2026-10-15T12:38:19+01:00",
+  "last_commit": "2026-10-29T15:11:32Z",
   "source_path": ""
  },
  {
@@ -2112,7 +2112,7 @@
    "repository": "https://github.com/ansible/awx",
    "documentation": "https://github.com/ansible/awx/blob/devel/awx_collection/README.md"
   },
-  "last_commit": "2026-10-15T15:24:47+00:00",
+  "last_commit": "2026-10-28T22:27:06Z",
   "source_path": "awx_collection",
   "upstream": "awx.awx"
  },
@@ -2847,7 +2847,7 @@
    "repository": "https://github.com/ansible-collections/ansible.mcp",
    "documentation": "https://github.com/ansible-collections/ansible.mcp"
   },
-  "last_commit": "2026-09-29T21:24:30+00:00",
+  "last_commit": "2026-09-29T21:24:30Z",
   "source_path": ""
  },
  {
@@ -3411,7 +3411,7 @@
    "repository": "https://github.com/ansible-collections/ansible.netcommon",
    "documentation": null
   },
-  "last_commit": "2026-10-14T16:51:49+05:30",
+  "last_commit": "2026-10-27T16:44:13+05:30",
   "source_path": ""
  },
  {
@@ -3441,6 +3441,22 @@
   "status": "ok",
   "items": [
    {
+    "name": "oci_alarm",
+    "fqcn": "ansible.oci.oci_alarm",
+    "type": "module",
+    "short_description": "Manage an alarm in Oracle Cloud Infrastructure Monitoring",
+    "deprecated": false,
+    "source": "plugins/modules/oci_alarm.py"
+   },
+   {
+    "name": "oci_alarm_info",
+    "fqcn": "ansible.oci.oci_alarm_info",
+    "type": "module",
+    "short_description": "Retrieve alarm information from Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_alarm_info.py"
+   },
+   {
     "name": "oci_autonomous_database",
     "fqcn": "ansible.oci.oci_autonomous_database",
     "type": "module",
@@ -3449,12 +3465,36 @@
     "source": "plugins/modules/oci_autonomous_database.py"
    },
    {
+    "name": "oci_autonomous_database_clone",
+    "fqcn": "ansible.oci.oci_autonomous_database_clone",
+    "type": "module",
+    "short_description": "Manage a clone of an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_clone.py"
+   },
+   {
+    "name": "oci_autonomous_database_clone_info",
+    "fqcn": "ansible.oci.oci_autonomous_database_clone_info",
+    "type": "module",
+    "short_description": "List the clones of an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_clone_info.py"
+   },
+   {
     "name": "oci_autonomous_database_info",
     "fqcn": "ansible.oci.oci_autonomous_database_info",
     "type": "module",
     "short_description": "Retrieve Autonomous Database information from Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_autonomous_database_info.py"
+   },
+   {
+    "name": "oci_autonomous_database_wallet",
+    "fqcn": "ansible.oci.oci_autonomous_database_wallet",
+    "type": "module",
+    "short_description": "Download the wallet for an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_wallet.py"
    },
    {
     "name": "oci_bastion",
@@ -3833,6 +3873,22 @@
     "source": "plugins/modules/oci_loadbalancer_routing_policy_info.py"
    },
    {
+    "name": "oci_network_cpe",
+    "fqcn": "ansible.oci.oci_network_cpe",
+    "type": "module",
+    "short_description": "Manage an OCI customer-premises equipment object",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_cpe.py"
+   },
+   {
+    "name": "oci_network_cpe_info",
+    "fqcn": "ansible.oci.oci_network_cpe_info",
+    "type": "module",
+    "short_description": "Retrieve OCI customer-premises equipment information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_cpe_info.py"
+   },
+   {
     "name": "oci_network_dhcp_options",
     "fqcn": "ansible.oci.oci_network_dhcp_options",
     "type": "module",
@@ -3881,6 +3937,38 @@
     "source": "plugins/modules/oci_network_drg_info.py"
    },
    {
+    "name": "oci_network_firewall",
+    "fqcn": "ansible.oci.oci_network_firewall",
+    "type": "module",
+    "short_description": "Manage an OCI Network Firewall",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_firewall.py"
+   },
+   {
+    "name": "oci_network_firewall_info",
+    "fqcn": "ansible.oci.oci_network_firewall_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Network Firewall information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_firewall_info.py"
+   },
+   {
+    "name": "oci_network_firewall_policy",
+    "fqcn": "ansible.oci.oci_network_firewall_policy",
+    "type": "module",
+    "short_description": "Manage an OCI Network Firewall policy",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_firewall_policy.py"
+   },
+   {
+    "name": "oci_network_firewall_policy_info",
+    "fqcn": "ansible.oci.oci_network_firewall_policy_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Network Firewall policy information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_firewall_policy_info.py"
+   },
+   {
     "name": "oci_network_internet_gateway",
     "fqcn": "ansible.oci.oci_network_internet_gateway",
     "type": "module",
@@ -3895,6 +3983,102 @@
     "short_description": "Retrieve Internet Gateway information from Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_network_internet_gateway_info.py"
+   },
+   {
+    "name": "oci_network_ipsec_connection",
+    "fqcn": "ansible.oci.oci_network_ipsec_connection",
+    "type": "module",
+    "short_description": "Manage an OCI IPSec connection and its tunnels",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_ipsec_connection.py"
+   },
+   {
+    "name": "oci_network_ipsec_connection_info",
+    "fqcn": "ansible.oci.oci_network_ipsec_connection_info",
+    "type": "module",
+    "short_description": "Retrieve OCI IPSec connections and optional tunnel data",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_ipsec_connection_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer",
+    "fqcn": "ansible.oci.oci_network_loadbalancer",
+    "type": "module",
+    "short_description": "Manage an OCI network load balancer",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer backend details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_set",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_set",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend set",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_set.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_set_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_set_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer backend set details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_set_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_health_checker",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_health_checker",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend set health checker",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_health_checker.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_health_checker_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_health_checker_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer health checker details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_health_checker_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_info",
+    "type": "module",
+    "short_description": "Retrieve OCI network load balancer information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_listener",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_listener",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer listener",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_listener.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_listener_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_listener_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer listener details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_listener_info.py"
    },
    {
     "name": "oci_network_local_peering_gateway",
@@ -4047,6 +4231,38 @@
     "short_description": "Retrieve Virtual Cloud Network information from Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_network_vcn_info.py"
+   },
+   {
+    "name": "oci_network_vnic_info",
+    "fqcn": "ansible.oci.oci_network_vnic_info",
+    "type": "module",
+    "short_description": "Gather information about a VNIC",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_vnic_info.py"
+   },
+   {
+    "name": "oci_network_vnic_update",
+    "fqcn": "ansible.oci.oci_network_vnic_update",
+    "type": "module",
+    "short_description": "Update a VNIC in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_vnic_update.py"
+   },
+   {
+    "name": "oci_notification_topic",
+    "fqcn": "ansible.oci.oci_notification_topic",
+    "type": "module",
+    "short_description": "Manage an OCI Notifications topic",
+    "deprecated": false,
+    "source": "plugins/modules/oci_notification_topic.py"
+   },
+   {
+    "name": "oci_notification_topic_info",
+    "fqcn": "ansible.oci.oci_notification_topic_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Notifications topic information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_notification_topic_info.py"
    },
    {
     "name": "oci_object_lifecycle_policy",
@@ -4257,6 +4473,38 @@
     "source": "plugins/modules/oci_volume_group_info.py"
    },
    {
+    "name": "oci_waf_web_app_firewall",
+    "fqcn": "ansible.oci.oci_waf_web_app_firewall",
+    "type": "module",
+    "short_description": "Manage an OCI Web Application Firewall",
+    "deprecated": false,
+    "source": "plugins/modules/oci_waf_web_app_firewall.py"
+   },
+   {
+    "name": "oci_waf_web_app_firewall_info",
+    "fqcn": "ansible.oci.oci_waf_web_app_firewall_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Web Application Firewall information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_waf_web_app_firewall_info.py"
+   },
+   {
+    "name": "oci_waf_web_app_firewall_policy",
+    "fqcn": "ansible.oci.oci_waf_web_app_firewall_policy",
+    "type": "module",
+    "short_description": "Manage an OCI Web Application Firewall policy",
+    "deprecated": false,
+    "source": "plugins/modules/oci_waf_web_app_firewall_policy.py"
+   },
+   {
+    "name": "oci_waf_web_app_firewall_policy_info",
+    "fqcn": "ansible.oci.oci_waf_web_app_firewall_policy_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Web Application Firewall policies",
+    "deprecated": false,
+    "source": "plugins/modules/oci_waf_web_app_firewall_policy_info.py"
+   },
+   {
     "name": "oci_compute",
     "fqcn": "ansible.oci.oci_compute",
     "type": "inventory",
@@ -4280,13 +4528,37 @@
    "repository": "https://github.com/ansible-collections/ansible.oci",
    "documentation": "https://github.com/ansible-collections/ansible.oci"
   },
-  "last_commit": "2026-10-20T14:04:58+03:00",
+  "last_commit": "2026-11-01T16:05:23-05:00",
   "source_path": ""
  },
  {
   "fqcn": "ansible.platform",
   "status": "ok",
   "items": [
+   {
+    "name": "ad_hoc_command",
+    "fqcn": "ansible.platform.ad_hoc_command",
+    "type": "module",
+    "short_description": "Launch a Controller ad hoc command",
+    "deprecated": false,
+    "source": "plugins/modules/ad_hoc_command.py"
+   },
+   {
+    "name": "ad_hoc_command_cancel",
+    "fqcn": "ansible.platform.ad_hoc_command_cancel",
+    "type": "module",
+    "short_description": "Cancel a Controller ad hoc command.",
+    "deprecated": false,
+    "source": "plugins/modules/ad_hoc_command_cancel.py"
+   },
+   {
+    "name": "ad_hoc_command_wait",
+    "fqcn": "ansible.platform.ad_hoc_command_wait",
+    "type": "module",
+    "short_description": "Wait for a Controller ad hoc command to finish.",
+    "deprecated": false,
+    "source": "plugins/modules/ad_hoc_command_wait.py"
+   },
    {
     "name": "application",
     "fqcn": "ansible.platform.application",
@@ -4320,12 +4592,44 @@
     "source": "plugins/modules/authenticator_user.py"
    },
    {
+    "name": "bulk_host_create",
+    "fqcn": "ansible.platform.bulk_host_create",
+    "type": "module",
+    "short_description": "Bulk create hosts in Automation Controller",
+    "deprecated": false,
+    "source": "plugins/modules/bulk_host_create.py"
+   },
+   {
+    "name": "bulk_host_delete",
+    "fqcn": "ansible.platform.bulk_host_delete",
+    "type": "module",
+    "short_description": "Bulk delete hosts in Controller.",
+    "deprecated": false,
+    "source": "plugins/modules/bulk_host_delete.py"
+   },
+   {
+    "name": "bulk_job_launch",
+    "fqcn": "ansible.platform.bulk_job_launch",
+    "type": "module",
+    "short_description": "Bulk job launch in Controller.",
+    "deprecated": false,
+    "source": "plugins/modules/bulk_job_launch.py"
+   },
+   {
     "name": "ca_certificate",
     "fqcn": "ansible.platform.ca_certificate",
     "type": "module",
     "short_description": "Manage CA Certificates",
     "deprecated": false,
     "source": "plugins/modules/ca_certificate.py"
+   },
+   {
+    "name": "controller_credential",
+    "fqcn": "ansible.platform.controller_credential",
+    "type": "module",
+    "short_description": "Manage Controller credentials",
+    "deprecated": false,
+    "source": "plugins/modules/controller_credential.py"
    },
    {
     "name": "controller_credential_type",
@@ -4336,12 +4640,44 @@
     "source": "plugins/modules/controller_credential_type.py"
    },
    {
+    "name": "controller_meta",
+    "fqcn": "ansible.platform.controller_meta",
+    "type": "module",
+    "short_description": "Returns metadata about the collection this module lives in.",
+    "deprecated": false,
+    "source": "plugins/modules/controller_meta.py"
+   },
+   {
+    "name": "controller_project",
+    "fqcn": "ansible.platform.controller_project",
+    "type": "module",
+    "short_description": "Manage Controller projects",
+    "deprecated": false,
+    "source": "plugins/modules/controller_project.py"
+   },
+   {
     "name": "credential_input_source",
     "fqcn": "ansible.platform.credential_input_source",
     "type": "module",
     "short_description": "Manage Controller credential input sources",
     "deprecated": false,
     "source": "plugins/modules/credential_input_source.py"
+   },
+   {
+    "name": "eda_controller_token",
+    "fqcn": "ansible.platform.eda_controller_token",
+    "type": "module",
+    "short_description": "Manage AWX tokens in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/eda_controller_token.py"
+   },
+   {
+    "name": "execution_environment",
+    "fqcn": "ansible.platform.execution_environment",
+    "type": "module",
+    "short_description": "Manage Controller execution environments",
+    "deprecated": false,
+    "source": "plugins/modules/execution_environment.py"
    },
    {
     "name": "feature_flag",
@@ -4376,6 +4712,14 @@
     "source": "plugins/modules/http_port.py"
    },
    {
+    "name": "instance",
+    "fqcn": "ansible.platform.instance",
+    "type": "module",
+    "short_description": "Manage Controller instances",
+    "deprecated": false,
+    "source": "plugins/modules/instance.py"
+   },
+   {
     "name": "instance_group",
     "fqcn": "ansible.platform.instance_group",
     "type": "module",
@@ -4384,12 +4728,44 @@
     "source": "plugins/modules/instance_group.py"
    },
    {
+    "name": "inventory",
+    "fqcn": "ansible.platform.inventory",
+    "type": "module",
+    "short_description": "Manage Controller inventories",
+    "deprecated": false,
+    "source": "plugins/modules/inventory.py"
+   },
+   {
     "name": "inventory_source",
     "fqcn": "ansible.platform.inventory_source",
     "type": "module",
     "short_description": "Manage Controller inventory sources",
     "deprecated": false,
     "source": "plugins/modules/inventory_source.py"
+   },
+   {
+    "name": "inventory_source_update",
+    "fqcn": "ansible.platform.inventory_source_update",
+    "type": "module",
+    "short_description": "Trigger an inventory source sync",
+    "deprecated": false,
+    "source": "plugins/modules/inventory_source_update.py"
+   },
+   {
+    "name": "job_cancel",
+    "fqcn": "ansible.platform.job_cancel",
+    "type": "module",
+    "short_description": "Cancel an Automation Controller job.",
+    "deprecated": false,
+    "source": "plugins/modules/job_cancel.py"
+   },
+   {
+    "name": "job_launch",
+    "fqcn": "ansible.platform.job_launch",
+    "type": "module",
+    "short_description": "Launch a Controller job",
+    "deprecated": false,
+    "source": "plugins/modules/job_launch.py"
    },
    {
     "name": "job_list",
@@ -4408,6 +4784,14 @@
     "source": "plugins/modules/job_template.py"
    },
    {
+    "name": "job_wait",
+    "fqcn": "ansible.platform.job_wait",
+    "type": "module",
+    "short_description": "Wait for an Automation Platform Controller job to finish.",
+    "deprecated": false,
+    "source": "plugins/modules/job_wait.py"
+   },
+   {
     "name": "label",
     "fqcn": "ansible.platform.label",
     "type": "module",
@@ -4416,12 +4800,36 @@
     "source": "plugins/modules/label.py"
    },
    {
+    "name": "license",
+    "fqcn": "ansible.platform.license",
+    "type": "module",
+    "short_description": "Set or remove the Controller license",
+    "deprecated": false,
+    "source": "plugins/modules/license.py"
+   },
+   {
+    "name": "notification_template",
+    "fqcn": "ansible.platform.notification_template",
+    "type": "module",
+    "short_description": "Manage Controller notification templates",
+    "deprecated": false,
+    "source": "plugins/modules/notification_template.py"
+   },
+   {
     "name": "organization",
     "fqcn": "ansible.platform.organization",
     "type": "module",
     "short_description": "Configure a gateway organization",
     "deprecated": false,
     "source": "plugins/modules/organization.py"
+   },
+   {
+    "name": "project_update",
+    "fqcn": "ansible.platform.project_update",
+    "type": "module",
+    "short_description": "Trigger a Controller project sync",
+    "deprecated": false,
+    "source": "plugins/modules/project_update.py"
    },
    {
     "name": "role_definition",
@@ -4454,6 +4862,14 @@
     "short_description": "Configure a gateway custom (non-api) route.",
     "deprecated": false,
     "source": "plugins/modules/route.py"
+   },
+   {
+    "name": "schedule",
+    "fqcn": "ansible.platform.schedule",
+    "type": "module",
+    "short_description": "Manage Controller schedules",
+    "deprecated": false,
+    "source": "plugins/modules/schedule.py"
    },
    {
     "name": "service",
@@ -4504,6 +4920,14 @@
     "source": "plugins/modules/settings.py"
    },
    {
+    "name": "subscriptions",
+    "fqcn": "ansible.platform.subscriptions",
+    "type": "module",
+    "short_description": "Get available subscriptions from Automation Controller.",
+    "deprecated": false,
+    "source": "plugins/modules/subscriptions.py"
+   },
+   {
     "name": "team",
     "fqcn": "ansible.platform.team",
     "type": "module",
@@ -4536,6 +4960,46 @@
     "source": "plugins/modules/user.py"
    },
    {
+    "name": "workflow_approval",
+    "fqcn": "ansible.platform.workflow_approval",
+    "type": "module",
+    "short_description": "Approve or deny a workflow approval node",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_approval.py"
+   },
+   {
+    "name": "workflow_job_template",
+    "fqcn": "ansible.platform.workflow_job_template",
+    "type": "module",
+    "short_description": "Manage Controller workflow job templates",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_job_template.py"
+   },
+   {
+    "name": "workflow_job_template_node",
+    "fqcn": "ansible.platform.workflow_job_template_node",
+    "type": "module",
+    "short_description": "Manage Controller workflow job template nodes",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_job_template_node.py"
+   },
+   {
+    "name": "workflow_launch",
+    "fqcn": "ansible.platform.workflow_launch",
+    "type": "module",
+    "short_description": "Launch an Automation Controller workflow job template.",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_launch.py"
+   },
+   {
+    "name": "workflow_node_wait",
+    "fqcn": "ansible.platform.workflow_node_wait",
+    "type": "module",
+    "short_description": "Wait for a workflow node to finish.",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_node_wait.py"
+   },
+   {
     "name": "http",
     "fqcn": "ansible.platform.http",
     "type": "connection",
@@ -4564,7 +5028,7 @@
    "repository": "https://github.com/ansible",
    "documentation": null
   },
-  "last_commit": "2026-10-19T14:00:39+02:00",
+  "last_commit": "2026-11-02T11:42:49+01:00",
   "source_path": ""
  },
  {
@@ -4768,7 +5232,7 @@
    "repository": "https://github.com/ansible-collections/ansible.posix",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/ansible/posix/"
   },
-  "last_commit": "2026-10-19T17:05:46+09:00",
+  "last_commit": "2026-10-21T08:25:54+09:00",
   "source_path": ""
  },
  {
@@ -6170,7 +6634,7 @@
    }
   ],
   "galaxy": {
-   "version": "3.9.1",
+   "version": "3.9.2",
    "description": "Ansible collection for core Windows plugins.\n",
    "tags": [
     "windows"
@@ -6178,7 +6642,7 @@
    "repository": "https://github.com/ansible-collections/ansible.windows",
    "documentation": "https://docs.ansible.com/ansible/devel/collections/ansible/windows"
   },
-  "last_commit": "2026-10-20T15:30:08+03:00",
+  "last_commit": "2026-10-25T14:34:23+02:00",
   "source_path": ""
  },
  {
@@ -6576,7 +7040,7 @@
    "repository": "https://github.com/aristanetworks/avd",
    "documentation": "https://avd.arista.com"
   },
-  "last_commit": "2026-10-20T12:28:41+00:00",
+  "last_commit": "2026-11-02T08:22:56Z",
   "source_path": "ansible_collections/arista/avd"
  },
  {
@@ -8208,6 +8672,22 @@
     "short_description": "Get facts about Azure Container Apps",
     "deprecated": false,
     "source": "plugins/modules/azure_rm_containerapp_info.py"
+   },
+   {
+    "name": "azure_rm_containerappdaprcomponent",
+    "fqcn": "azure.azcollection.azure_rm_containerappdaprcomponent",
+    "type": "module",
+    "short_description": "Manage a Dapr component in an Azure Container Apps managed environment",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_containerappdaprcomponent.py"
+   },
+   {
+    "name": "azure_rm_containerappdaprcomponent_info",
+    "fqcn": "azure.azcollection.azure_rm_containerappdaprcomponent_info",
+    "type": "module",
+    "short_description": "Get Dapr components in an Azure Container Apps managed environment",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_containerappdaprcomponent_info.py"
    },
    {
     "name": "azure_rm_containerappenvironment",
@@ -10021,7 +10501,7 @@
     "name": "azure_rm_recoveryservicesvault",
     "fqcn": "azure.azcollection.azure_rm_recoveryservicesvault",
     "type": "module",
-    "short_description": "Create and Delete Azure Recovery Services vault",
+    "short_description": "Create, update and delete Azure Recovery Services vault",
     "deprecated": false,
     "source": "plugins/modules/azure_rm_recoveryservicesvault.py"
    },
@@ -10038,7 +10518,7 @@
     "fqcn": "azure.azcollection.azure_rm_recoveryservicesvaultconfig",
     "type": "module",
     "short_description": "Set Azure Backup Vault Config",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/azure_rm_recoveryservicesvaultconfig.py"
    },
    {
@@ -10046,7 +10526,7 @@
     "fqcn": "azure.azcollection.azure_rm_recoveryservicesvaultconfig_info",
     "type": "module",
     "short_description": "Get Info on Azure Backup Vault Configs",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/azure_rm_recoveryservicesvaultconfig_info.py"
    },
    {
@@ -10666,6 +11146,22 @@
     "source": "plugins/modules/azure_rm_subscription_info.py"
    },
    {
+    "name": "azure_rm_subscriptiondeployment",
+    "fqcn": "azure.azcollection.azure_rm_subscriptiondeployment",
+    "type": "module",
+    "short_description": "Manage Azure Resource Manager template deployments at subscription scope",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_subscriptiondeployment.py"
+   },
+   {
+    "name": "azure_rm_subscriptiondeployment_info",
+    "fqcn": "azure.azcollection.azure_rm_subscriptiondeployment_info",
+    "type": "module",
+    "short_description": "Get Azure Resource Manager template deployment facts at subscription scope",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_subscriptiondeployment_info.py"
+   },
+   {
     "name": "azure_rm_tags",
     "fqcn": "azure.azcollection.azure_rm_tags",
     "type": "module",
@@ -10966,7 +11462,7 @@
     "fqcn": "azure.azcollection.azure_rm_vmbackuppolicy",
     "type": "module",
     "short_description": "Create or Delete Azure VM Backup Policy",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/azure_rm_vmbackuppolicy.py"
    },
    {
@@ -10974,7 +11470,7 @@
     "fqcn": "azure.azcollection.azure_rm_vmbackuppolicy_info",
     "type": "module",
     "short_description": "Fetch Backup Policy Details",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/azure_rm_vmbackuppolicy_info.py"
    },
    {
@@ -11131,7 +11627,7 @@
    }
   ],
   "galaxy": {
-   "version": "4.1.0",
+   "version": "4.2.0",
    "description": "The Azure collection.",
    "tags": [
     "cloud",
@@ -11145,7 +11641,7 @@
    "repository": "https://github.com/ansible-collections/azure",
    "documentation": null
   },
-  "last_commit": "2026-10-19T17:32:32+11:00",
+  "last_commit": "2026-10-30T16:17:07+11:00",
   "source_path": ""
  },
  {
@@ -12164,7 +12660,7 @@
    "repository": "https://github.com/CheckPointSW/CheckPointAnsibleGAIACollection",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/check_point/gaia/docs/"
   },
-  "last_commit": "2026-10-20T07:51:05+03:00",
+  "last_commit": "2026-10-21T09:49:58+03:00",
   "source_path": ""
  },
  {
@@ -18159,7 +18655,7 @@
    "repository": "https://github.com/CiscoDevNet/ansible-aci",
    "documentation": "https://docs.ansible.com/ansible/latest/scenario_guides/guide_aci.html"
   },
-  "last_commit": "2026-10-15T22:14:31+10:00",
+  "last_commit": "2026-10-27T23:21:47+10:00",
   "source_path": ""
  },
  {
@@ -18267,7 +18763,7 @@
    "repository": "https://github.com/cisco-en-programmability/catalyst-center-ansible-iac",
    "documentation": null
   },
-  "last_commit": "2026-09-17T14:35:38-07:00",
+  "last_commit": "2026-10-26T14:11:35-07:00",
   "source_path": ""
  },
  {
@@ -32116,7 +32612,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.13.1",
+   "version": "2.14.0",
    "description": "Ansible Modules, Roles, and Cisco Validated Playbooks (CVP) for Cisco CATALYST Center automation",
    "tags": [
     "cisco",
@@ -32129,7 +32625,7 @@
    "repository": "https://github.com/cisco-en-programmability/catalystcenter-ansible",
    "documentation": "https://cisco-en-programmability.github.io/catalystcenter-ansible/"
   },
-  "last_commit": "2026-10-13T15:41:44-06:00",
+  "last_commit": "2026-10-21T14:28:19-06:00",
   "source_path": ""
  },
  {
@@ -32564,7 +33060,7 @@
    }
   ],
   "galaxy": {
-   "version": "3.13.0-dev",
+   "version": "3.13.1-dev",
    "description": "Ansible collection for the Cisco Nexus® Dashboard Fabric Controller (NDFC) - formerly DCNM",
    "tags": [
     "cisco",
@@ -32577,7 +33073,7 @@
    "repository": "https://github.com/CiscoDevNet/ansible-dcnm",
    "documentation": null
   },
-  "last_commit": "2026-10-19T11:20:51-04:00",
+  "last_commit": "2026-10-29T13:24:40-04:00",
   "source_path": ""
  },
  {
@@ -44226,6 +44722,14 @@
     "source": "plugins/modules/ios_logging_global.py"
    },
    {
+    "name": "ios_monitor_sessions",
+    "fqcn": "cisco.ios.ios_monitor_sessions",
+    "type": "module",
+    "short_description": "Resource module to configure SPAN monitor sessions.",
+    "deprecated": false,
+    "source": "plugins/modules/ios_monitor_sessions.py"
+   },
+   {
     "name": "ios_ntp_global",
     "fqcn": "cisco.ios.ios_ntp_global",
     "type": "module",
@@ -44390,7 +44894,7 @@
    "repository": "https://github.com/ansible-collections/cisco.ios",
    "documentation": null
   },
-  "last_commit": "2026-10-16T12:27:34+05:30",
+  "last_commit": "2026-10-22T19:29:42+05:30",
   "source_path": ""
  },
  {
@@ -55334,6 +55838,14 @@
     "source": "plugins/modules/mso_schema_template_anp_epg_useg_attribute.py"
    },
    {
+    "name": "mso_schema_template_anp_esg",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg",
+    "type": "module",
+    "short_description": "Manage Endpoint Security Groups (ESGs) in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg.py"
+   },
+   {
     "name": "mso_schema_template_bd",
     "fqcn": "cisco.mso.mso_schema_template_bd",
     "type": "module",
@@ -56071,7 +56583,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.13.0",
+   "version": "3.0.0",
    "description": "An Ansible collection for managing Cisco ACI Multi-Site",
    "tags": [
     "cisco",
@@ -56086,13 +56598,21 @@
    "repository": "https://github.com/CiscoDevNet/ansible-mso",
    "documentation": "https://docs.ansible.com/ansible/latest/scenario_guides/guide_aci.html"
   },
-  "last_commit": "2026-10-16T08:04:59+10:00",
+  "last_commit": "2026-10-30T19:32:55+10:00",
   "source_path": ""
  },
  {
   "fqcn": "cisco.nd",
   "status": "ok",
   "items": [
+   {
+    "name": "nd4x_module_test",
+    "fqcn": "cisco.nd.nd4x_module_test",
+    "type": "module",
+    "short_description": "Run standardized integration tests for ND 4.x modules",
+    "deprecated": false,
+    "source": "plugins/modules/nd4x_module_test.py"
+   },
    {
     "name": "nd_api_key",
     "fqcn": "cisco.nd.nd_api_key",
@@ -56254,6 +56774,14 @@
     "source": "plugins/modules/nd_interface_flow_rules.py"
    },
    {
+    "name": "nd_interface_group_validate",
+    "fqcn": "cisco.nd.nd_interface_group_validate",
+    "type": "module",
+    "short_description": "Validate live Interface Group state in ND integration tests",
+    "deprecated": false,
+    "source": "plugins/modules/tests/integration/nd_interface_group_validate.py"
+   },
+   {
     "name": "nd_interface_loopback",
     "fqcn": "cisco.nd.nd_interface_loopback",
     "type": "module",
@@ -56284,6 +56812,14 @@
     "short_description": "Manage port-channel (trunkPoHost, iosXeTrunkPoHost) interfaces on Cisco Nexus Dashboard",
     "deprecated": false,
     "source": "plugins/modules/nd_interface_port_channel_trunk_host.py"
+   },
+   {
+    "name": "nd_interface_preview_validate",
+    "fqcn": "cisco.nd.nd_interface_preview_validate",
+    "type": "module",
+    "short_description": "Validate Interface preview results in ND integration tests",
+    "deprecated": false,
+    "source": "plugins/modules/tests/integration/nd_interface_preview_validate.py"
    },
    {
     "name": "nd_interface_subinterface_managed",
@@ -56444,6 +56980,14 @@
     "short_description": "Manage iBGP VXLAN fabrics on Cisco Nexus Dashboard",
     "deprecated": false,
     "source": "plugins/modules/nd_manage_fabric_ibgp_vxlan.py"
+   },
+   {
+    "name": "nd_manage_interface_group",
+    "fqcn": "cisco.nd.nd_manage_interface_group",
+    "type": "module",
+    "short_description": "Manage Interface Groups on Cisco Nexus Dashboard fabrics",
+    "deprecated": false,
+    "source": "plugins/modules/nd_manage_interface_group.py"
    },
    {
     "name": "nd_manage_l3out",
@@ -56684,7 +57228,7 @@
    "repository": "https://github.com/CiscoDevNet/ansible-nd",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/cisco/nd/docs/"
   },
-  "last_commit": "2026-10-19T16:44:55-04:00",
+  "last_commit": "2026-10-30T16:18:15-04:00",
   "source_path": ""
  },
  {
@@ -56818,6 +57362,14 @@
     "short_description": "Manages Cisco EVPN VXLAN Network Identifier (VNI).",
     "deprecated": false,
     "source": "plugins/modules/nxos_evpn_vni.py"
+   },
+   {
+    "name": "nxos_evpn_vnis",
+    "fqcn": "cisco.nxos.nxos_evpn_vnis",
+    "type": "module",
+    "short_description": "EVPN VNIs resource module",
+    "deprecated": false,
+    "source": "plugins/modules/nxos_evpn_vnis.py"
    },
    {
     "name": "nxos_facts",
@@ -57002,6 +57554,14 @@
     "short_description": "NTP Global resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_ntp_global.py"
+   },
+   {
+    "name": "nxos_nve_interface",
+    "fqcn": "cisco.nxos.nxos_nve_interface",
+    "type": "module",
+    "short_description": "NVE interface resource module.",
+    "deprecated": false,
+    "source": "plugins/modules/nxos_nve_interface.py"
    },
    {
     "name": "nxos_nxapi",
@@ -57353,7 +57913,7 @@
    "repository": "https://github.com/ansible-collections/cisco.nxos",
    "documentation": null
   },
-  "last_commit": "2026-10-15T14:31:28+05:30",
+  "last_commit": "2026-10-29T19:42:06+05:30",
   "source_path": ""
  },
  {
@@ -57389,7 +57949,7 @@
    "repository": "https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/ansible_collections/signalfx/splunk_otel_collector",
    "documentation": null
   },
-  "last_commit": "2026-10-20T11:39:53-07:00",
+  "last_commit": "2026-10-30T17:39:38-07:00",
   "source_path": "deployments/ansible_collections/signalfx/splunk_otel_collector",
   "upstream": "signalfx.splunk_otel_collector"
  },
@@ -58091,7 +58651,7 @@
    "repository": "https://github.com/ansible-collections/cloud.common",
    "documentation": null
   },
-  "last_commit": "2026-03-30T20:43:19+00:00",
+  "last_commit": "2026-03-30T20:43:19Z",
   "source_path": ""
  },
  {
@@ -59571,7 +60131,7 @@
    }
   ],
   "galaxy": {
-   "version": "8.3.0",
+   "version": "8.4.0",
    "description": "Confluent Platform Ansible Collection (https://github.com/confluentinc/cp-ansible)",
    "tags": [
     "confluent",
@@ -59581,7 +60141,7 @@
    "repository": "https://github.com/confluentinc/cp-ansible",
    "documentation": "https://docs.confluent.io/ansible/current/overview.html"
   },
-  "last_commit": "2026-10-12T05:18:50+00:00",
+  "last_commit": "2026-11-02T09:31:37Z",
   "source_path": ""
  },
  {
@@ -60141,7 +60701,7 @@
    "repository": "https://github.com/ansible-collections/Datadog",
    "documentation": "https://github.com/ansible-collections/Datadog/blob/main/README.md"
   },
-  "last_commit": "2026-05-06T05:28:27+00:00",
+  "last_commit": "2026-05-06T05:28:27Z",
   "source_path": ""
  },
  {
@@ -67548,7 +68108,7 @@
    "repository": "https://github.com/Dynatrace/Dynatrace-OneAgent-Ansible",
    "documentation": "https://docs.dynatrace.com/docs/setup-and-configuration/dynatrace-oneagent/deployment-orchestration/ansible"
   },
-  "last_commit": "2026-10-06T10:11:20+02:00",
+  "last_commit": "2026-10-28T14:03:45+01:00",
   "source_path": ""
  },
  {
@@ -68201,6 +68761,14 @@
     "source": "plugins/modules/purefa_policy_management_access.py"
    },
    {
+    "name": "purefa_preset",
+    "fqcn": "everpure.flasharray.purefa_preset",
+    "type": "module",
+    "short_description": "Manage Fusion fleet block workload presets",
+    "deprecated": false,
+    "source": "plugins/modules/purefa_preset.py"
+   },
+   {
     "name": "purefa_proxy",
     "fqcn": "everpure.flasharray.purefa_proxy",
     "type": "module",
@@ -68434,7 +69002,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.45.1",
+   "version": "1.46.0",
    "description": "Collection of modules to manage Everpure FlashArrays (including Cloud Block Store)",
    "tags": [
     "everpure",
@@ -68446,7 +69014,7 @@
    "repository": "https://github.com/Everpure-Ansible/FlashArray-Collection",
    "documentation": "https://github.com/Everpure-Ansible/FlashArray-Collection"
   },
-  "last_commit": "2026-10-20T13:43:04-04:00",
+  "last_commit": "2026-11-01T09:49:56-05:00",
   "source_path": ""
  },
  {
@@ -68983,7 +69551,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.28.0",
+   "version": "1.29.0",
    "description": "Collection of modules to manage Everpure FlashBlade",
    "tags": [
     "everpure",
@@ -68996,7 +69564,7 @@
    "repository": "https://github.com/Everpure-Ansible/FlashBlade-Collection",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/everpure/flashblade/index.html#plugins-in-everpure-flashblade"
   },
-  "last_commit": "2026-10-20T13:47:55-04:00",
+  "last_commit": "2026-10-30T16:35:18-05:00",
   "source_path": ""
  },
  {
@@ -71105,7 +71673,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.45.0-devel",
+   "version": "1.46.0-devel",
    "description": "F5 BIG-IP Imperative Collection for Ansible",
    "tags": [
     "f5",
@@ -71116,7 +71684,7 @@
    "repository": "https://github.com/F5Networks/f5-ansible-f5modules",
    "documentation": "https://clouddocs.f5.com/products/orchestration/ansible/devel/modules/module_index.html"
   },
-  "last_commit": "2026-09-08T12:34:51-07:00",
+  "last_commit": "2026-10-20T22:47:43-07:00",
   "source_path": "ansible_collections/f5networks/f5_modules"
  },
  {
@@ -106097,7 +106665,7 @@
    "repository": "https://github.com/ansible-collections/google.cloud",
    "documentation": null
   },
-  "last_commit": "2026-10-01T14:37:36-07:00",
+  "last_commit": "2026-10-27T15:02:48-07:00",
   "source_path": ""
  },
  {
@@ -110862,7 +111430,7 @@
    }
   ],
   "galaxy": {
-   "version": "4.8.3",
+   "version": "4.9.0",
    "description": "Ansible modules to manage VSP block storage systems (VSP One Block, VSP 5000 series, VSP E series,  VSP F series, and VSP G series) and VSP One SDS Block and Cloud systems. These modules provide a simplified and automated way to configure and manage Hitachi storage systems, enabling seamless integration with Ansible playbooks and workflows.\n",
    "tags": [
     "hitachi",
@@ -110877,7 +111445,7 @@
    "repository": "https://github.com/hitachi-vantara/vspone-block-ansible",
    "documentation": "https://docs.ansible.com/ansible/devel/collections/hitachivantara/vspone_block/"
   },
-  "last_commit": "2026-09-18T22:27:17+05:30",
+  "last_commit": "2026-10-23T17:03:47+05:30",
   "source_path": ""
  },
  {
@@ -114999,7 +115567,7 @@
    }
   ],
   "galaxy": {
-   "version": "11.4.0",
+   "version": "11.5.0",
    "description": "Ansible Modules for HPE Oneview SDK",
    "tags": [
     "ansible",
@@ -115012,7 +115580,7 @@
    "repository": "https://github.com/HewlettPackard/oneview-ansible-collection",
    "documentation": "https://www.hpe.com/psnow/product-documentation?oid=5410258&cc=ae&lc=en"
   },
-  "last_commit": "2026-09-24T10:51:36+05:30",
+  "last_commit": "2026-10-29T12:51:37+05:30",
   "source_path": ""
  },
  {
@@ -115450,7 +116018,7 @@
    "repository": "https://github.com/zhmcclient/zhmc-ansible-modules",
    "documentation": "https://zhmcclient.github.io/zhmc-ansible-modules/"
   },
-  "last_commit": "2026-10-19T19:28:41+02:00",
+  "last_commit": "2026-10-29T15:37:39+01:00",
   "source_path": ""
  },
  {
@@ -115593,7 +116161,7 @@
    "repository": "https://github.com/ansible-collections/ibm_zos_cics",
    "documentation": "https://ibm.github.io/z_ansible_collections_doc"
   },
-  "last_commit": "2025-12-24T10:59:53+00:00",
+  "last_commit": "2025-12-24T10:59:53Z",
   "source_path": ""
  },
  {
@@ -115817,6 +116385,14 @@
     "source": "plugins/modules/zos_user_info.py"
    },
    {
+    "name": "zos_volume_free",
+    "fqcn": "ibm.ibm_zos_core.zos_volume_free",
+    "type": "module",
+    "short_description": "Query space and status information for z/OS DASD volumes",
+    "deprecated": false,
+    "source": "plugins/modules/zos_volume_free.py"
+   },
+   {
     "name": "zos_volume_init",
     "fqcn": "ibm.ibm_zos_core.zos_volume_init",
     "type": "module",
@@ -115901,7 +116477,7 @@
    "repository": "https://github.com/ansible-collections/ibm_zos_core",
    "documentation": "https://ibm.github.io/z_ansible_collections_doc/index.html"
   },
-  "last_commit": "2026-10-02T09:48:10-07:00",
+  "last_commit": "2026-10-29T10:06:18-07:00",
   "source_path": ""
  },
  {
@@ -122192,7 +122768,7 @@
    "repository": "https://github.com/ansible-collections/ibm.storage_virtualize",
    "documentation": null
   },
-  "last_commit": "2026-10-15T14:42:57+05:30",
+  "last_commit": "2026-10-23T13:01:41+05:30",
   "source_path": ""
  },
  {
@@ -122649,7 +123225,7 @@
    "repository": "https://github.com/infinidat/ansible-infinidat-collection",
    "documentation": null
   },
-  "last_commit": "2026-08-14T20:32:19+00:00",
+  "last_commit": "2026-08-14T20:32:19Z",
   "source_path": ""
  },
  {
@@ -124773,6 +125349,14 @@
     "source": "roles/hub_role"
    },
    {
+    "name": "hub_team_roles",
+    "fqcn": "infra.aap_configuration.hub_team_roles",
+    "type": "role",
+    "short_description": "An Ansible Role to assign roles to teams in Automation Hub.",
+    "deprecated": false,
+    "source": "roles/hub_team_roles"
+   },
+   {
     "name": "hub_user",
     "fqcn": "infra.aap_configuration.hub_user",
     "type": "role",
@@ -124802,7 +125386,7 @@
    "repository": "https://github.com/redhat-cop/aap_configuration/",
    "documentation": null
   },
-  "last_commit": "2026-10-20T08:38:51-05:00",
+  "last_commit": "2026-10-29T12:29:44-04:00",
   "source_path": ""
  },
  {
@@ -125007,7 +125591,7 @@
    "repository": "https://github.com/redhat-cop/aap_configuration_extended/",
    "documentation": null
   },
-  "last_commit": "2026-10-14T22:23:48-04:00",
+  "last_commit": "2026-10-29T16:21:46-05:00",
   "source_path": ""
  },
  {
@@ -126579,7 +127163,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.4.1",
+   "version": "2.1.1",
    "description": "Automation Development Office roles for AAP, OpenShift, RHEL, Satellite, IdM, RHBK, and platform bootstrap workflows.",
    "tags": [
     "aap",
@@ -126594,9 +127178,8 @@
    "repository": "https://github.com/redhat-cop/infra.automation-development-office",
    "documentation": "https://github.com/redhat-cop/infra.automation-development-office/blob/main/README.md"
   },
-  "last_commit": "2026-10-20T13:33:01-04:00",
-  "source_path": "",
-  "upstream": "infra.ado"
+  "last_commit": "2026-10-30T12:39:34-04:00",
+  "source_path": ""
  },
  {
   "fqcn": "infra.controller_configuration",
@@ -126984,7 +127567,7 @@
    "repository": "https://github.com/redhat-cop/infra.controller_configuration/",
    "documentation": null
   },
-  "last_commit": "2026-10-02T13:15:45-05:00",
+  "last_commit": "2026-10-23T13:04:27-05:00",
   "source_path": ""
  },
  {
@@ -127348,7 +127931,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.7.6",
+   "version": "1.7.7",
    "description": "Ansible collection for running the leapp tool",
    "tags": [
     "rhel",
@@ -127358,7 +127941,7 @@
    "repository": "https://github.com/redhat-cop/infra.leapp",
    "documentation": null
   },
-  "last_commit": "2026-10-19T11:02:04+02:00",
+  "last_commit": "2026-10-26T10:01:21+01:00",
   "source_path": ""
  },
  {
@@ -127425,7 +128008,7 @@
    "repository": "https://github.com/redhat-cop/infra.lvm_snapshots",
    "documentation": "https://github.com/redhat-cop/infra.lvm_snapshots"
   },
-  "last_commit": "2026-07-22T16:23:33-05:00",
+  "last_commit": "2026-10-29T08:41:16-05:00",
   "source_path": ""
  },
  {
@@ -127497,7 +128080,7 @@
    "repository": "https://github.com/redhat-cop/infra.mecm_ops",
    "documentation": null
   },
-  "last_commit": "2026-01-22T14:32:38+00:00",
+  "last_commit": "2026-01-22T14:32:38Z",
   "source_path": ""
  },
  {
@@ -128645,7 +129228,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.4.0",
+   "version": "1.4.1",
    "description": "Export and Import Satellite configuration using Configuration as Code",
    "tags": [
     "infrastructure",
@@ -128661,7 +129244,7 @@
    "repository": "https://github.com/redhat-cop/infra.satellite_configuration.git",
    "documentation": "https://github.com/redhat-cop/infra.satellite_configuration.git"
   },
-  "last_commit": "2026-10-15T21:11:55+02:00",
+  "last_commit": "2026-11-01T05:41:04Z",
   "source_path": ""
  },
  {
@@ -128790,7 +129373,7 @@
    "repository": "https://github.com/redhat-cop/infra.support_assist",
    "documentation": "https://github.com/redhat-cop/infra.support_assist/blob/devel/README.md"
   },
-  "last_commit": "2026-10-18T19:59:39-04:00",
+  "last_commit": "2026-10-22T10:12:09-04:00",
   "source_path": ""
  },
  {
@@ -130565,7 +131148,7 @@
    "repository": "https://github.com/Juniper/apstra-ansible-collection",
    "documentation": null
   },
-  "last_commit": "2026-09-30T19:00:24+05:30",
+  "last_commit": "2026-10-21T19:22:52+05:30",
   "source_path": "ansible_collections/juniper/apstra"
  },
  {
@@ -131892,6 +132475,14 @@
     "source": "plugins/modules/slc_users.py"
    },
    {
+    "name": "percepxion_events",
+    "fqcn": "lantronix.oob.percepxion_events",
+    "type": "eda_event_source",
+    "short_description": "Poll Percepxion for device status and console port changes",
+    "deprecated": false,
+    "source": "extensions/eda/plugins/event_source/percepxion_events.py"
+   },
+   {
     "name": "percepxion",
     "fqcn": "lantronix.oob.percepxion",
     "type": "httpapi",
@@ -131932,6 +132523,14 @@
     "source": "playbooks/combo/incident_response_oob.yml"
    },
    {
+    "name": "combo.netbox_sync",
+    "fqcn": "lantronix.oob.combo.netbox_sync",
+    "type": "playbook",
+    "short_description": "Prepare NetBox for Lantronix OOB devices",
+    "deprecated": false,
+    "source": "playbooks/combo/netbox_sync.yml"
+   },
+   {
     "name": "combo.new_device_fleet_onboarding",
     "fqcn": "lantronix.oob.combo.new_device_fleet_onboarding",
     "type": "playbook",
@@ -131946,6 +132545,22 @@
     "short_description": "OOB infrastructure security audit",
     "deprecated": false,
     "source": "playbooks/combo/security_audit.yml"
+   },
+   {
+    "name": "eda_device_offline",
+    "fqcn": "lantronix.oob.eda_device_offline",
+    "type": "playbook",
+    "short_description": "Report a device that went offline in Percepxion",
+    "deprecated": false,
+    "source": "playbooks/eda_device_offline.yml"
+   },
+   {
+    "name": "eda_port_attached",
+    "fqcn": "lantronix.oob.eda_port_attached",
+    "type": "playbook",
+    "short_description": "Report a console port attachment change",
+    "deprecated": false,
+    "source": "playbooks/eda_port_attached.yml"
    },
    {
     "name": "lockdown",
@@ -132132,6 +132747,14 @@
     "source": "roles/oob_baseline_config"
    },
    {
+    "name": "oob_coverage_gate",
+    "fqcn": "lantronix.oob.oob_coverage_gate",
+    "type": "role",
+    "short_description": "Check out-of-band console coverage before a change",
+    "deprecated": false,
+    "source": "roles/oob_coverage_gate"
+   },
+   {
     "name": "oob_firmware_audit",
     "fqcn": "lantronix.oob.oob_firmware_audit",
     "type": "role",
@@ -132157,7 +132780,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.2.0",
+   "version": "1.4.0",
    "description": "Ansible collection for Lantronix Out-of-Band infrastructure (SLC9000 + Percepxion)",
    "tags": [
     "networking",
@@ -132166,12 +132789,13 @@
     "percepxion",
     "console_server",
     "slc9000",
-    "serial_console"
+    "serial_console",
+    "eda"
    ],
    "repository": "https://github.com/Lantronix/ansible-collection-oob",
    "documentation": "https://github.com/Lantronix/ansible-collection-oob/tree/main/docs"
   },
-  "last_commit": "2026-09-02T03:10:02-04:00",
+  "last_commit": "2026-10-30T10:09:20-04:00",
   "source_path": ""
  },
  {
@@ -134426,14 +135050,14 @@
     "name": "server",
     "fqcn": "microsoft.sql.server",
     "type": "role",
-    "short_description": "This role installs and configures Microsoft SQL Server",
+    "short_description": "This role installs, configures, and starts Microsoft SQL Server.",
     "deprecated": false,
     "source": "",
     "repository": "https://github.com/linux-system-roles/mssql"
    }
   ],
   "galaxy": {},
-  "last_commit": "2026-10-20T11:58:48-06:00"
+  "last_commit": "2026-10-30T08:39:10-06:00"
  },
  {
   "fqcn": "microsoft.wsl",
@@ -134569,7 +135193,7 @@
    "repository": "https://github.com/ansible-collections/netapp.aws",
    "documentation": null
   },
-  "last_commit": "2024-09-10T06:02:13+00:00",
+  "last_commit": "2024-09-10T06:02:13Z",
   "source_path": ""
  },
  {
@@ -134751,7 +135375,7 @@
    "repository": "https://github.com/ansible-collections/netapp.cloudmanager",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/netapp/"
   },
-  "last_commit": "2024-10-31T22:45:14+00:00",
+  "last_commit": "2024-10-31T22:45:14Z",
   "source_path": ""
  },
  {
@@ -136232,7 +136856,7 @@
    }
   ],
   "galaxy": {
-   "version": "24.0.0",
+   "version": "24.1.0",
    "description": "NetApp ONTAP Collection",
    "tags": [
     "storage",
@@ -136242,7 +136866,7 @@
    "repository": "https://github.com/ansible-collections/netapp.ontap",
    "documentation": null
   },
-  "last_commit": "2026-09-29T15:00:22+00:00",
+  "last_commit": "2026-10-29T10:09:57Z",
   "source_path": ""
  },
  {
@@ -136661,7 +137285,7 @@
    "repository": "https://github.com/ansible-collections/netapp.storagegrid",
    "documentation": null
   },
-  "last_commit": "2026-09-23T03:51:06+00:00",
+  "last_commit": "2026-09-23T03:51:06Z",
   "source_path": ""
  },
  {
@@ -136762,7 +137386,7 @@
    "repository": "https://github.com/ansible-collections/netapp.um_info",
    "documentation": null
   },
-  "last_commit": "2024-08-14T06:37:08+00:00",
+  "last_commit": "2024-08-14T06:37:08Z",
   "source_path": ""
  },
  {
@@ -145343,7 +145967,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.19.0",
+   "version": "3.0.0",
    "description": "Ansible Collection Modules for NetScaler ADC",
    "tags": [
     "netscaler",
@@ -145353,7 +145977,7 @@
    "repository": "https://github.com/netscaler/ansible-collection-netscaleradc",
    "documentation": "https://netscaler.github.io/ansible-collection-netscaleradc"
   },
-  "last_commit": "2026-09-29T21:30:26+05:30",
+  "last_commit": "2026-10-28T14:12:53-07:00",
   "source_path": ""
  },
  {
@@ -146263,7 +146887,7 @@
    "repository": "https://github.com/openshift/network.offline_migration_sdn_to_ovnk",
    "documentation": null
   },
-  "last_commit": "2025-07-10T14:48:20+00:00",
+  "last_commit": "2025-07-10T14:48:20Z",
   "source_path": ""
  },
  {
@@ -147354,7 +147978,7 @@
    }
   ],
   "galaxy": {
-   "version": "6.3.0",
+   "version": "6.3.1",
    "description": "This is a collection of Nautobot Ansible modules",
    "tags": [
     "dcim",
@@ -147367,7 +147991,7 @@
    "repository": "https://github.com/nautobot/nautobot-ansible",
    "documentation": "https://nautobot-ansible.readthedocs.io/en/latest/"
   },
-  "last_commit": "2026-09-16T10:33:39-05:00",
+  "last_commit": "2026-10-29T15:15:41-07:00",
   "source_path": ""
  },
  {
@@ -150082,7 +150706,7 @@
    "repository": "https://github.com/ansible-collections/openvswitch.openvswitch",
    "documentation": null
   },
-  "last_commit": "2026-09-24T23:44:32+02:00",
+  "last_commit": "2026-10-22T21:14:21+02:00",
   "source_path": ""
  },
  {
@@ -151077,7 +151701,7 @@
    "repository": "https://github.com/os-migrate/os-migrate",
    "documentation": null
   },
-  "last_commit": "2026-10-20T20:16:20+02:00",
+  "last_commit": "2026-10-22T08:05:03-04:00",
   "source_path": ""
  },
  {
@@ -151378,7 +152002,7 @@
    "repository": "https://github.com/os-migrate/vmware-migration-kit",
    "documentation": null
   },
-  "last_commit": "2026-10-20T14:47:20+02:00",
+  "last_commit": "2026-10-30T09:58:14-04:00",
   "source_path": ""
  },
  {
@@ -152359,7 +152983,7 @@
    "repository": "https://github.com/PaloAltoNetworks/pan-os-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/paloaltonetworks/panos/docs"
   },
-  "last_commit": "2026-08-31T00:40:36+00:00",
+  "last_commit": "2026-08-31T00:40:36Z",
   "source_path": ""
  },
  {
@@ -153322,7 +153946,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.3.7",
+   "version": "2.4.1",
    "description": "Install and configure activemq / AMQ broker services.",
    "tags": [
     "broker",
@@ -153337,7 +153961,7 @@
    "repository": "https://github.com/ansible-middleware/amq",
    "documentation": "https://ansible-middleware.github.io/amq"
   },
-  "last_commit": "2026-09-15T19:40:52+05:30",
+  "last_commit": "2026-10-27T21:12:12+05:30",
   "source_path": "",
   "upstream": "middleware_automation.amq"
  },
@@ -153464,7 +154088,7 @@
    "repository": "https://github.com/securesign/artifact-signer-ansible/",
    "documentation": "https://docs.redhat.com/en/documentation/red_hat_trusted_artifact_signer"
   },
-  "last_commit": "2026-10-19T11:26:11+01:00",
+  "last_commit": "2026-10-28T11:29:41Z",
   "source_path": ""
  },
  {
@@ -153646,7 +154270,7 @@
    "repository": "https://github.com/ansible-middleware/wildfly",
    "documentation": "https://ansible-middleware.github.io/wildfly"
   },
-  "last_commit": "2026-09-26T00:17:05+05:30",
+  "last_commit": "2026-11-02T14:11:34+05:30",
   "source_path": "",
   "upstream": "middleware_automation.wildfly"
  },
@@ -154000,7 +154624,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.7.6",
+   "version": "1.7.7",
    "description": "Ansible collection for running the leapp tool",
    "tags": [
     "rhel",
@@ -154010,7 +154634,7 @@
    "repository": "https://github.com/redhat-cop/infra.leapp",
    "documentation": null
   },
-  "last_commit": "2026-10-19T11:02:04+02:00",
+  "last_commit": "2026-10-26T10:01:21+01:00",
   "source_path": "",
   "upstream": "infra.leapp"
  },
@@ -154146,7 +154770,7 @@
    "repository": "https://github.com/openshift/community.okd",
    "documentation": ""
   },
-  "last_commit": "2026-08-27T16:40:36+00:00",
+  "last_commit": "2026-08-27T16:40:36Z",
   "source_path": "",
   "upstream": "community.okd"
  },
@@ -154202,7 +154826,7 @@
    "repository": "https://github.com/kubevirt/kubevirt.core",
    "documentation": "https://kubevirt.github.io/kubevirt.core"
   },
-  "last_commit": "2026-10-02T10:04:24+00:00",
+  "last_commit": "2026-10-02T10:04:24Z",
   "source_path": "",
   "upstream": "kubevirt.core"
  },
@@ -154698,7 +155322,7 @@
    "repository": "https://github.com/ansible-middleware/keycloak",
    "documentation": "https://ansible-middleware.github.io/keycloak"
   },
-  "last_commit": "2026-10-16T18:51:07+05:30",
+  "last_commit": "2026-11-01T19:29:20+05:30",
   "source_path": "",
   "upstream": "middleware_automation.keycloak"
  },
@@ -158053,7 +158677,7 @@
    }
   ],
   "galaxy": {},
-  "last_commit": "2026-10-20T12:13:19-06:00"
+  "last_commit": "2026-11-01T08:03:57-07:00"
  },
  {
   "fqcn": "redhat.rhv",
@@ -160581,7 +161205,7 @@
    "repository": "https://github.com/ansible-middleware/keycloak",
    "documentation": "https://ansible-middleware.github.io/keycloak"
   },
-  "last_commit": "2026-10-16T18:51:07+05:30",
+  "last_commit": "2026-11-01T19:29:20+05:30",
   "source_path": "",
   "upstream": "middleware_automation.keycloak"
  },
@@ -162006,7 +162630,7 @@
    "repository": "https://github.com/ScaleComputing/HyperCoreAnsibleCollection",
    "documentation": "https://scalecomputing.github.io/HyperCoreAnsibleCollection"
   },
-  "last_commit": "2026-01-29T13:28:53+01:00",
+  "last_commit": "2026-10-29T08:36:05-04:00",
   "source_path": ""
  },
  {
@@ -162757,7 +163381,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.16.0",
+   "version": "2.17.0",
    "description": "Ansible Collection for interacting with ServiceNow ITSM",
    "tags": [
     "servicenow",
@@ -162767,7 +163391,7 @@
    "repository": "https://github.com/ansible-collections/servicenow.itsm",
    "documentation": null
   },
-  "last_commit": "2026-10-20T14:13:27-04:00",
+  "last_commit": "2026-10-30T09:25:39-04:00",
   "source_path": ""
  },
  {
@@ -163748,7 +164372,7 @@
    "repository": "https://github.com/trilioData/trilio-ansible",
    "documentation": "https://docs.trilio.io/kubernetes"
   },
-  "last_commit": "2026-02-25T08:21:59+00:00",
+  "last_commit": "2026-02-25T08:21:59Z",
   "source_path": ""
  },
  {
@@ -165562,6 +166186,22 @@
     "source": "plugins/modules/vm_custom_attributes.py"
    },
    {
+    "name": "vm_hardware_version",
+    "fqcn": "vmware.vmware.vm_hardware_version",
+    "type": "module",
+    "short_description": "Specify the virtual hardware version for a virtual machine.",
+    "deprecated": false,
+    "source": "plugins/modules/vm_hardware_version.py"
+   },
+   {
+    "name": "vm_hardware_version_info",
+    "fqcn": "vmware.vmware.vm_hardware_version_info",
+    "type": "module",
+    "short_description": "Gather information about a VM's hardware version and any scheduled upgrades.",
+    "deprecated": false,
+    "source": "plugins/modules/vm_hardware_version_info.py"
+   },
+   {
     "name": "vm_info",
     "fqcn": "vmware.vmware.vm_info",
     "type": "module",
@@ -165669,7 +166309,7 @@
    "repository": "https://github.com/ansible-collections/vmware.vmware",
    "documentation": "https://github.com/ansible-collections/vmware.vmware/blob/main/README.md"
   },
-  "last_commit": "2026-10-20T14:36:58-04:00",
+  "last_commit": "2026-10-31T15:01:32-04:00",
   "source_path": ""
  },
  {
@@ -166368,7 +167008,7 @@
    "repository": "https://github.com/ansible-collections/vmware.vmware_rest",
    "documentation": null
   },
-  "last_commit": "2026-10-19T17:01:34-04:00",
+  "last_commit": "2026-11-01T14:42:45-05:00",
   "source_path": ""
  },
  {
@@ -166657,7 +167297,7 @@
    }
   ],
   "galaxy": {
-   "version": "6.1.0",
+   "version": "6.2.0",
    "description": "Ansible Network Collection for VYOS devices.",
    "tags": [
     "vyos",
@@ -166666,7 +167306,7 @@
    "repository": "https://github.com/vyos/vyos.vyos",
    "documentation": null
   },
-  "last_commit": "2026-10-13T07:45:34+10:00",
+  "last_commit": "2026-10-27T13:49:57+02:00",
   "source_path": ""
  },
  {
@@ -168745,7 +169385,7 @@
    "repository": "https://github.com/zscaler/ziacloud-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/zscaler/ziacloud/docs/"
   },
-  "last_commit": "2026-06-02T22:12:44+00:00",
+  "last_commit": "2026-06-02T22:12:44Z",
   "source_path": ""
  },
  {
@@ -169606,7 +170246,7 @@
    "repository": "https://github.com/zscaler/zpacloud-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/zscaler/zpacloud/docs/"
   },
-  "last_commit": "2026-08-27T17:07:01+00:00",
+  "last_commit": "2026-08-27T17:07:01Z",
   "source_path": ""
  }
 ]
