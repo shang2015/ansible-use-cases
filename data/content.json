@@ -138,6 +138,22 @@
     "source": "plugins/modules/devopsguru_resource_collection_info.py"
    },
    {
+    "name": "sagemaker_app_image_config",
+    "fqcn": "amazon.ai.sagemaker_app_image_config",
+    "type": "module",
+    "short_description": "Manage Amazon SageMaker AppImageConfigs",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_app_image_config.py"
+   },
+   {
+    "name": "sagemaker_app_image_config_info",
+    "fqcn": "amazon.ai.sagemaker_app_image_config_info",
+    "type": "module",
+    "short_description": "Gather information about Amazon SageMaker AppImageConfigs",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_app_image_config_info.py"
+   },
+   {
     "name": "sagemaker_code_repository",
     "fqcn": "amazon.ai.sagemaker_code_repository",
     "type": "module",
@@ -152,6 +168,22 @@
     "short_description": "Gather information about SageMaker Code Repositories",
     "deprecated": false,
     "source": "plugins/modules/sagemaker_code_repository_info.py"
+   },
+   {
+    "name": "sagemaker_domain",
+    "fqcn": "amazon.ai.sagemaker_domain",
+    "type": "module",
+    "short_description": "Manage Amazon SageMaker AI Domains",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_domain.py"
+   },
+   {
+    "name": "sagemaker_domain_info",
+    "fqcn": "amazon.ai.sagemaker_domain_info",
+    "type": "module",
+    "short_description": "Gather information about SageMaker AI Domains",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_domain_info.py"
    },
    {
     "name": "sagemaker_endpoint",
@@ -234,6 +266,14 @@
     "source": "plugins/modules/sagemaker_model_info.py"
    },
    {
+    "name": "sagemaker_model_package",
+    "fqcn": "amazon.ai.sagemaker_model_package",
+    "type": "module",
+    "short_description": "Manage Amazon SageMaker model packages",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_model_package.py"
+   },
+   {
     "name": "sagemaker_model_package_group",
     "fqcn": "amazon.ai.sagemaker_model_package_group",
     "type": "module",
@@ -250,6 +290,46 @@
     "source": "plugins/modules/sagemaker_model_package_group_info.py"
    },
    {
+    "name": "sagemaker_model_package_info",
+    "fqcn": "amazon.ai.sagemaker_model_package_info",
+    "type": "module",
+    "short_description": "Gather information about Amazon SageMaker Model Packages",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_model_package_info.py"
+   },
+   {
+    "name": "sagemaker_notebook_instance",
+    "fqcn": "amazon.ai.sagemaker_notebook_instance",
+    "type": "module",
+    "short_description": "Manage Amazon SageMaker notebook instances",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_notebook_instance.py"
+   },
+   {
+    "name": "sagemaker_notebook_instance_info",
+    "fqcn": "amazon.ai.sagemaker_notebook_instance_info",
+    "type": "module",
+    "short_description": "Gather information about SageMaker notebook instances",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_notebook_instance_info.py"
+   },
+   {
+    "name": "sagemaker_notebook_instance_lifecycle_config",
+    "fqcn": "amazon.ai.sagemaker_notebook_instance_lifecycle_config",
+    "type": "module",
+    "short_description": "Manage Amazon SageMaker notebook instance lifecycle configurations",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_notebook_instance_lifecycle_config.py"
+   },
+   {
+    "name": "sagemaker_notebook_instance_lifecycle_config_info",
+    "fqcn": "amazon.ai.sagemaker_notebook_instance_lifecycle_config_info",
+    "type": "module",
+    "short_description": "Gather information about Amazon SageMaker notebook instance lifecycle configurations",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_notebook_instance_lifecycle_config_info.py"
+   },
+   {
     "name": "sagemaker_pipeline",
     "fqcn": "amazon.ai.sagemaker_pipeline",
     "type": "module",
@@ -264,10 +344,58 @@
     "short_description": "Gather information about Amazon SageMaker Pipelines",
     "deprecated": false,
     "source": "plugins/modules/sagemaker_pipeline_info.py"
+   },
+   {
+    "name": "sagemaker_space",
+    "fqcn": "amazon.ai.sagemaker_space",
+    "type": "module",
+    "short_description": "Manage Amazon SageMaker AI Spaces",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_space.py"
+   },
+   {
+    "name": "sagemaker_space_info",
+    "fqcn": "amazon.ai.sagemaker_space_info",
+    "type": "module",
+    "short_description": "Gather information about SageMaker AI Spaces",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_space_info.py"
+   },
+   {
+    "name": "sagemaker_training_job",
+    "fqcn": "amazon.ai.sagemaker_training_job",
+    "type": "module",
+    "short_description": "Manage Amazon SageMaker training jobs",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_training_job.py"
+   },
+   {
+    "name": "sagemaker_training_job_info",
+    "fqcn": "amazon.ai.sagemaker_training_job_info",
+    "type": "module",
+    "short_description": "Gather information about SageMaker training jobs",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_training_job_info.py"
+   },
+   {
+    "name": "sagemaker_user_profile",
+    "fqcn": "amazon.ai.sagemaker_user_profile",
+    "type": "module",
+    "short_description": "Manage Amazon SageMaker AI user profiles",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_user_profile.py"
+   },
+   {
+    "name": "sagemaker_user_profile_info",
+    "fqcn": "amazon.ai.sagemaker_user_profile_info",
+    "type": "module",
+    "short_description": "Gather information about Amazon SageMaker AI user profiles",
+    "deprecated": false,
+    "source": "plugins/modules/sagemaker_user_profile_info.py"
    }
   ],
   "galaxy": {
-   "version": "2.0.0-dev0",
+   "version": "3.0.0-dev0",
    "description": "Ansible Collection for Amazon AI and ML Resources",
    "tags": [
     "ai",
@@ -277,7 +405,7 @@
    "repository": "https://github.com/ansible-collections/amazon.ai",
    "documentation": null
   },
-  "last_commit": "2026-10-20T17:17:03+02:00",
+  "last_commit": "2026-11-13T14:28:11+01:00",
   "source_path": ""
  },
  {
@@ -1512,7 +1640,7 @@
    "repository": "https://github.com/ansible-collections/amazon.aws",
    "documentation": "https://ansible-collections.github.io/amazon.aws/branch/main/collections/amazon/aws/index.html"
   },
-  "last_commit": "2026-10-20T13:58:34+00:00",
+  "last_commit": "2026-11-16T10:37:57Z",
   "source_path": ""
  },
  {
@@ -1699,7 +1827,7 @@
    "repository": "https://github.com/ansible-collections/aap-snapshot-collection",
    "documentation": "https://github.com/ansible-collections/aap-snapshot-collection"
   },
-  "last_commit": "2026-10-15T12:38:19+01:00",
+  "last_commit": "2026-11-13T09:21:22+01:00",
   "source_path": ""
  },
  {
@@ -2112,7 +2240,7 @@
    "repository": "https://github.com/ansible/awx",
    "documentation": "https://github.com/ansible/awx/blob/devel/awx_collection/README.md"
   },
-  "last_commit": "2026-10-15T15:24:47+00:00",
+  "last_commit": "2026-11-13T12:33:50-05:00",
   "source_path": "awx_collection",
   "upstream": "awx.awx"
  },
@@ -2739,7 +2867,7 @@
    }
   ],
   "galaxy": {
-   "version": "6.0.2",
+   "version": "6.0.3",
    "description": "MariaDB collection for Ansible",
    "tags": [
     "database",
@@ -2748,7 +2876,7 @@
    "repository": "https://github.com/ansible-collections/ansible.mariadb",
    "documentation": "https://github.com/ansible-collections/ansible.mariadb"
   },
-  "last_commit": "2026-10-01T09:18:42+02:00",
+  "last_commit": "2026-11-14T20:10:32+02:00",
   "source_path": ""
  },
  {
@@ -2847,7 +2975,7 @@
    "repository": "https://github.com/ansible-collections/ansible.mcp",
    "documentation": "https://github.com/ansible-collections/ansible.mcp"
   },
-  "last_commit": "2026-09-29T21:24:30+00:00",
+  "last_commit": "2026-09-29T21:24:30Z",
   "source_path": ""
  },
  {
@@ -3091,7 +3219,7 @@
    }
   ],
   "galaxy": {
-   "version": "5.2.0",
+   "version": "5.2.1",
    "description": "MySQL collection for Ansible",
    "tags": [
     "database",
@@ -3100,7 +3228,7 @@
    "repository": "https://github.com/ansible-collections/ansible.mysql",
    "documentation": "https://github.com/ansible-collections/ansible.mysql"
   },
-  "last_commit": "2026-10-06T09:41:49+02:00",
+  "last_commit": "2026-11-13T13:13:52+01:00",
   "source_path": ""
  },
  {
@@ -3397,7 +3525,7 @@
    }
   ],
   "galaxy": {
-   "version": "8.7.1",
+   "version": "8.8.0",
    "description": "Ansible Collection with common content to help automate the management of network, security, and cloud devices.",
    "tags": [
     "networking",
@@ -3411,7 +3539,7 @@
    "repository": "https://github.com/ansible-collections/ansible.netcommon",
    "documentation": null
   },
-  "last_commit": "2026-10-14T16:51:49+05:30",
+  "last_commit": "2026-11-12T17:38:14+05:30",
   "source_path": ""
  },
  {
@@ -3441,6 +3569,22 @@
   "status": "ok",
   "items": [
    {
+    "name": "oci_alarm",
+    "fqcn": "ansible.oci.oci_alarm",
+    "type": "module",
+    "short_description": "Manage an alarm in Oracle Cloud Infrastructure Monitoring",
+    "deprecated": false,
+    "source": "plugins/modules/oci_alarm.py"
+   },
+   {
+    "name": "oci_alarm_info",
+    "fqcn": "ansible.oci.oci_alarm_info",
+    "type": "module",
+    "short_description": "Retrieve alarm information from Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_alarm_info.py"
+   },
+   {
     "name": "oci_autonomous_database",
     "fqcn": "ansible.oci.oci_autonomous_database",
     "type": "module",
@@ -3449,12 +3593,36 @@
     "source": "plugins/modules/oci_autonomous_database.py"
    },
    {
+    "name": "oci_autonomous_database_clone",
+    "fqcn": "ansible.oci.oci_autonomous_database_clone",
+    "type": "module",
+    "short_description": "Manage a clone of an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_clone.py"
+   },
+   {
+    "name": "oci_autonomous_database_clone_info",
+    "fqcn": "ansible.oci.oci_autonomous_database_clone_info",
+    "type": "module",
+    "short_description": "List the clones of an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_clone_info.py"
+   },
+   {
     "name": "oci_autonomous_database_info",
     "fqcn": "ansible.oci.oci_autonomous_database_info",
     "type": "module",
     "short_description": "Retrieve Autonomous Database information from Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_autonomous_database_info.py"
+   },
+   {
+    "name": "oci_autonomous_database_wallet",
+    "fqcn": "ansible.oci.oci_autonomous_database_wallet",
+    "type": "module",
+    "short_description": "Download the wallet for an Autonomous Database in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_autonomous_database_wallet.py"
    },
    {
     "name": "oci_bastion",
@@ -3519,6 +3687,102 @@
     "short_description": "Retrieve boot volume information from Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_boot_volume_info.py"
+   },
+   {
+    "name": "oci_dns_domain_records",
+    "fqcn": "ansible.oci.oci_dns_domain_records",
+    "type": "module",
+    "short_description": "Manage DNS records in an OCI domain",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_domain_records.py"
+   },
+   {
+    "name": "oci_dns_domain_records_info",
+    "fqcn": "ansible.oci.oci_dns_domain_records_info",
+    "type": "module",
+    "short_description": "Retrieve records from an OCI DNS domain",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_domain_records_info.py"
+   },
+   {
+    "name": "oci_dns_record_set",
+    "fqcn": "ansible.oci.oci_dns_record_set",
+    "type": "module",
+    "short_description": "Manage one OCI DNS record set",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_record_set.py"
+   },
+   {
+    "name": "oci_dns_record_set_info",
+    "fqcn": "ansible.oci.oci_dns_record_set_info",
+    "type": "module",
+    "short_description": "Retrieve one OCI DNS record set",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_record_set_info.py"
+   },
+   {
+    "name": "oci_dns_resolver",
+    "fqcn": "ansible.oci.oci_dns_resolver",
+    "type": "module",
+    "short_description": "Update a DNS resolver in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_resolver.py"
+   },
+   {
+    "name": "oci_dns_resolver_endpoint",
+    "fqcn": "ansible.oci.oci_dns_resolver_endpoint",
+    "type": "module",
+    "short_description": "Manage a DNS resolver endpoint in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_resolver_endpoint.py"
+   },
+   {
+    "name": "oci_dns_resolver_endpoint_info",
+    "fqcn": "ansible.oci.oci_dns_resolver_endpoint_info",
+    "type": "module",
+    "short_description": "Get information about DNS resolver endpoints",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_resolver_endpoint_info.py"
+   },
+   {
+    "name": "oci_dns_resolver_info",
+    "fqcn": "ansible.oci.oci_dns_resolver_info",
+    "type": "module",
+    "short_description": "Get DNS resolver information from Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_resolver_info.py"
+   },
+   {
+    "name": "oci_dns_zone_records",
+    "fqcn": "ansible.oci.oci_dns_zone_records",
+    "type": "module",
+    "short_description": "Manage DNS records in an OCI zone",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_zone_records.py"
+   },
+   {
+    "name": "oci_dns_zone_records_info",
+    "fqcn": "ansible.oci.oci_dns_zone_records_info",
+    "type": "module",
+    "short_description": "Retrieve records from an OCI DNS zone",
+    "deprecated": false,
+    "source": "plugins/modules/oci_dns_zone_records_info.py"
+   },
+   {
+    "name": "oci_health_check",
+    "fqcn": "ansible.oci.oci_health_check",
+    "type": "module",
+    "short_description": "Manage an OCI Health Checks monitor",
+    "deprecated": false,
+    "source": "plugins/modules/oci_health_check.py"
+   },
+   {
+    "name": "oci_health_check_info",
+    "fqcn": "ansible.oci.oci_health_check_info",
+    "type": "module",
+    "short_description": "Get OCI Health Checks monitor information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_health_check_info.py"
    },
    {
     "name": "oci_identity_api_key",
@@ -3713,6 +3977,38 @@
     "source": "plugins/modules/oci_instance.py"
    },
    {
+    "name": "oci_instance_capacity_reservation",
+    "fqcn": "ansible.oci.oci_instance_capacity_reservation",
+    "type": "module",
+    "short_description": "Manage an OCI compute capacity reservation",
+    "deprecated": false,
+    "source": "plugins/modules/oci_instance_capacity_reservation.py"
+   },
+   {
+    "name": "oci_instance_capacity_reservation_info",
+    "fqcn": "ansible.oci.oci_instance_capacity_reservation_info",
+    "type": "module",
+    "short_description": "Get OCI compute capacity reservation information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_instance_capacity_reservation_info.py"
+   },
+   {
+    "name": "oci_instance_configuration",
+    "fqcn": "ansible.oci.oci_instance_configuration",
+    "type": "module",
+    "short_description": "Manage an OCI Compute instance configuration",
+    "deprecated": false,
+    "source": "plugins/modules/oci_instance_configuration.py"
+   },
+   {
+    "name": "oci_instance_configuration_info",
+    "fqcn": "ansible.oci.oci_instance_configuration_info",
+    "type": "module",
+    "short_description": "Get OCI Compute instance configuration information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_instance_configuration_info.py"
+   },
+   {
     "name": "oci_instance_console_connection",
     "fqcn": "ansible.oci.oci_instance_console_connection",
     "type": "module",
@@ -3833,6 +4129,22 @@
     "source": "plugins/modules/oci_loadbalancer_routing_policy_info.py"
    },
    {
+    "name": "oci_network_cpe",
+    "fqcn": "ansible.oci.oci_network_cpe",
+    "type": "module",
+    "short_description": "Manage an OCI customer-premises equipment object",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_cpe.py"
+   },
+   {
+    "name": "oci_network_cpe_info",
+    "fqcn": "ansible.oci.oci_network_cpe_info",
+    "type": "module",
+    "short_description": "Retrieve OCI customer-premises equipment information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_cpe_info.py"
+   },
+   {
     "name": "oci_network_dhcp_options",
     "fqcn": "ansible.oci.oci_network_dhcp_options",
     "type": "module",
@@ -3881,6 +4193,38 @@
     "source": "plugins/modules/oci_network_drg_info.py"
    },
    {
+    "name": "oci_network_firewall",
+    "fqcn": "ansible.oci.oci_network_firewall",
+    "type": "module",
+    "short_description": "Manage an OCI Network Firewall",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_firewall.py"
+   },
+   {
+    "name": "oci_network_firewall_info",
+    "fqcn": "ansible.oci.oci_network_firewall_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Network Firewall information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_firewall_info.py"
+   },
+   {
+    "name": "oci_network_firewall_policy",
+    "fqcn": "ansible.oci.oci_network_firewall_policy",
+    "type": "module",
+    "short_description": "Manage an OCI Network Firewall policy",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_firewall_policy.py"
+   },
+   {
+    "name": "oci_network_firewall_policy_info",
+    "fqcn": "ansible.oci.oci_network_firewall_policy_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Network Firewall policy information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_firewall_policy_info.py"
+   },
+   {
     "name": "oci_network_internet_gateway",
     "fqcn": "ansible.oci.oci_network_internet_gateway",
     "type": "module",
@@ -3895,6 +4239,102 @@
     "short_description": "Retrieve Internet Gateway information from Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_network_internet_gateway_info.py"
+   },
+   {
+    "name": "oci_network_ipsec_connection",
+    "fqcn": "ansible.oci.oci_network_ipsec_connection",
+    "type": "module",
+    "short_description": "Manage an OCI IPSec connection and its tunnels",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_ipsec_connection.py"
+   },
+   {
+    "name": "oci_network_ipsec_connection_info",
+    "fqcn": "ansible.oci.oci_network_ipsec_connection_info",
+    "type": "module",
+    "short_description": "Retrieve OCI IPSec connections and optional tunnel data",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_ipsec_connection_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer",
+    "fqcn": "ansible.oci.oci_network_loadbalancer",
+    "type": "module",
+    "short_description": "Manage an OCI network load balancer",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer backend details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_set",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_set",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend set",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_set.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_backend_set_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_backend_set_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer backend set details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_backend_set_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_health_checker",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_health_checker",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer backend set health checker",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_health_checker.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_health_checker_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_health_checker_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer health checker details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_health_checker_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_info",
+    "type": "module",
+    "short_description": "Retrieve OCI network load balancer information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_info.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_listener",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_listener",
+    "type": "module",
+    "short_description": "Manage an OCI Network Load Balancer listener",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_listener.py"
+   },
+   {
+    "name": "oci_network_loadbalancer_listener_info",
+    "fqcn": "ansible.oci.oci_network_loadbalancer_listener_info",
+    "type": "module",
+    "short_description": "Get OCI Network Load Balancer listener details",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_loadbalancer_listener_info.py"
    },
    {
     "name": "oci_network_local_peering_gateway",
@@ -3943,6 +4383,30 @@
     "short_description": "Manage a Public IP resource in Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_network_public_ip.py"
+   },
+   {
+    "name": "oci_network_remote_peering_connection",
+    "fqcn": "ansible.oci.oci_network_remote_peering_connection",
+    "type": "module",
+    "short_description": "Manage an OCI remote peering connection",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_remote_peering_connection.py"
+   },
+   {
+    "name": "oci_network_remote_peering_connection_connect",
+    "fqcn": "ansible.oci.oci_network_remote_peering_connection_connect",
+    "type": "module",
+    "short_description": "Connect remote peering connections in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_remote_peering_connection_connect.py"
+   },
+   {
+    "name": "oci_network_remote_peering_connection_info",
+    "fqcn": "ansible.oci.oci_network_remote_peering_connection_info",
+    "type": "module",
+    "short_description": "Retrieve OCI remote peering connection information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_remote_peering_connection_info.py"
    },
    {
     "name": "oci_network_route_table",
@@ -4047,6 +4511,38 @@
     "short_description": "Retrieve Virtual Cloud Network information from Oracle Cloud Infrastructure",
     "deprecated": false,
     "source": "plugins/modules/oci_network_vcn_info.py"
+   },
+   {
+    "name": "oci_network_vnic_info",
+    "fqcn": "ansible.oci.oci_network_vnic_info",
+    "type": "module",
+    "short_description": "Gather information about a VNIC",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_vnic_info.py"
+   },
+   {
+    "name": "oci_network_vnic_update",
+    "fqcn": "ansible.oci.oci_network_vnic_update",
+    "type": "module",
+    "short_description": "Update a VNIC in Oracle Cloud Infrastructure",
+    "deprecated": false,
+    "source": "plugins/modules/oci_network_vnic_update.py"
+   },
+   {
+    "name": "oci_notification_topic",
+    "fqcn": "ansible.oci.oci_notification_topic",
+    "type": "module",
+    "short_description": "Manage an OCI Notifications topic",
+    "deprecated": false,
+    "source": "plugins/modules/oci_notification_topic.py"
+   },
+   {
+    "name": "oci_notification_topic_info",
+    "fqcn": "ansible.oci.oci_notification_topic_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Notifications topic information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_notification_topic_info.py"
    },
    {
     "name": "oci_object_lifecycle_policy",
@@ -4257,6 +4753,38 @@
     "source": "plugins/modules/oci_volume_group_info.py"
    },
    {
+    "name": "oci_waf_web_app_firewall",
+    "fqcn": "ansible.oci.oci_waf_web_app_firewall",
+    "type": "module",
+    "short_description": "Manage an OCI Web Application Firewall",
+    "deprecated": false,
+    "source": "plugins/modules/oci_waf_web_app_firewall.py"
+   },
+   {
+    "name": "oci_waf_web_app_firewall_info",
+    "fqcn": "ansible.oci.oci_waf_web_app_firewall_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Web Application Firewall information",
+    "deprecated": false,
+    "source": "plugins/modules/oci_waf_web_app_firewall_info.py"
+   },
+   {
+    "name": "oci_waf_web_app_firewall_policy",
+    "fqcn": "ansible.oci.oci_waf_web_app_firewall_policy",
+    "type": "module",
+    "short_description": "Manage an OCI Web Application Firewall policy",
+    "deprecated": false,
+    "source": "plugins/modules/oci_waf_web_app_firewall_policy.py"
+   },
+   {
+    "name": "oci_waf_web_app_firewall_policy_info",
+    "fqcn": "ansible.oci.oci_waf_web_app_firewall_policy_info",
+    "type": "module",
+    "short_description": "Retrieve OCI Web Application Firewall policies",
+    "deprecated": false,
+    "source": "plugins/modules/oci_waf_web_app_firewall_policy_info.py"
+   },
+   {
     "name": "oci_compute",
     "fqcn": "ansible.oci.oci_compute",
     "type": "inventory",
@@ -4266,7 +4794,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.1.0",
+   "version": "1.2.0",
    "description": "Oracle Cloud Infrastructure collection for Ansible",
    "tags": [
     "oracle",
@@ -4280,13 +4808,37 @@
    "repository": "https://github.com/ansible-collections/ansible.oci",
    "documentation": "https://github.com/ansible-collections/ansible.oci"
   },
-  "last_commit": "2026-10-20T14:04:58+03:00",
+  "last_commit": "2026-11-16T10:20:13+02:00",
   "source_path": ""
  },
  {
   "fqcn": "ansible.platform",
   "status": "ok",
   "items": [
+   {
+    "name": "ad_hoc_command",
+    "fqcn": "ansible.platform.ad_hoc_command",
+    "type": "module",
+    "short_description": "Launch a Controller ad hoc command",
+    "deprecated": false,
+    "source": "plugins/modules/ad_hoc_command.py"
+   },
+   {
+    "name": "ad_hoc_command_cancel",
+    "fqcn": "ansible.platform.ad_hoc_command_cancel",
+    "type": "module",
+    "short_description": "Cancel a Controller ad hoc command.",
+    "deprecated": false,
+    "source": "plugins/modules/ad_hoc_command_cancel.py"
+   },
+   {
+    "name": "ad_hoc_command_wait",
+    "fqcn": "ansible.platform.ad_hoc_command_wait",
+    "type": "module",
+    "short_description": "Wait for a Controller ad hoc command to finish.",
+    "deprecated": false,
+    "source": "plugins/modules/ad_hoc_command_wait.py"
+   },
    {
     "name": "application",
     "fqcn": "ansible.platform.application",
@@ -4320,12 +4872,44 @@
     "source": "plugins/modules/authenticator_user.py"
    },
    {
+    "name": "bulk_host_create",
+    "fqcn": "ansible.platform.bulk_host_create",
+    "type": "module",
+    "short_description": "Bulk create hosts in Automation Controller",
+    "deprecated": false,
+    "source": "plugins/modules/bulk_host_create.py"
+   },
+   {
+    "name": "bulk_host_delete",
+    "fqcn": "ansible.platform.bulk_host_delete",
+    "type": "module",
+    "short_description": "Bulk delete hosts in Controller.",
+    "deprecated": false,
+    "source": "plugins/modules/bulk_host_delete.py"
+   },
+   {
+    "name": "bulk_job_launch",
+    "fqcn": "ansible.platform.bulk_job_launch",
+    "type": "module",
+    "short_description": "Bulk job launch in Controller.",
+    "deprecated": false,
+    "source": "plugins/modules/bulk_job_launch.py"
+   },
+   {
     "name": "ca_certificate",
     "fqcn": "ansible.platform.ca_certificate",
     "type": "module",
     "short_description": "Manage CA Certificates",
     "deprecated": false,
     "source": "plugins/modules/ca_certificate.py"
+   },
+   {
+    "name": "controller_credential",
+    "fqcn": "ansible.platform.controller_credential",
+    "type": "module",
+    "short_description": "Manage Controller credentials",
+    "deprecated": false,
+    "source": "plugins/modules/controller_credential.py"
    },
    {
     "name": "controller_credential_type",
@@ -4336,12 +4920,108 @@
     "source": "plugins/modules/controller_credential_type.py"
    },
    {
+    "name": "controller_meta",
+    "fqcn": "ansible.platform.controller_meta",
+    "type": "module",
+    "short_description": "Returns metadata about the collection this module lives in.",
+    "deprecated": false,
+    "source": "plugins/modules/controller_meta.py"
+   },
+   {
+    "name": "controller_project",
+    "fqcn": "ansible.platform.controller_project",
+    "type": "module",
+    "short_description": "Manage Controller projects",
+    "deprecated": false,
+    "source": "plugins/modules/controller_project.py"
+   },
+   {
+    "name": "controller_settings",
+    "fqcn": "ansible.platform.controller_settings",
+    "type": "module",
+    "short_description": "Modify Automation Controller settings",
+    "deprecated": false,
+    "source": "plugins/modules/controller_settings.py"
+   },
+   {
     "name": "credential_input_source",
     "fqcn": "ansible.platform.credential_input_source",
     "type": "module",
     "short_description": "Manage Controller credential input sources",
     "deprecated": false,
     "source": "plugins/modules/credential_input_source.py"
+   },
+   {
+    "name": "decision_environment",
+    "fqcn": "ansible.platform.decision_environment",
+    "type": "module",
+    "short_description": "Manage decision environments in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/decision_environment.py"
+   },
+   {
+    "name": "eda_controller_token",
+    "fqcn": "ansible.platform.eda_controller_token",
+    "type": "module",
+    "short_description": "Manage AWX tokens in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/eda_controller_token.py"
+   },
+   {
+    "name": "eda_credential",
+    "fqcn": "ansible.platform.eda_credential",
+    "type": "module",
+    "short_description": "Manage credentials in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/eda_credential.py"
+   },
+   {
+    "name": "eda_credential_input_source",
+    "fqcn": "ansible.platform.eda_credential_input_source",
+    "type": "module",
+    "short_description": "Manage EDA credential input sources",
+    "deprecated": false,
+    "source": "plugins/modules/eda_credential_input_source.py"
+   },
+   {
+    "name": "eda_credential_type",
+    "fqcn": "ansible.platform.eda_credential_type",
+    "type": "module",
+    "short_description": "Manage credential types in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/eda_credential_type.py"
+   },
+   {
+    "name": "eda_project",
+    "fqcn": "ansible.platform.eda_project",
+    "type": "module",
+    "short_description": "Manage projects in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/eda_project.py"
+   },
+   {
+    "name": "event_stream",
+    "fqcn": "ansible.platform.event_stream",
+    "type": "module",
+    "short_description": "Manage event streams in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/event_stream.py"
+   },
+   {
+    "name": "execution_environment",
+    "fqcn": "ansible.platform.execution_environment",
+    "type": "module",
+    "short_description": "Manage Controller execution environments",
+    "deprecated": false,
+    "source": "plugins/modules/execution_environment.py"
+   },
+   {
+    "name": "export",
+    "fqcn": "ansible.platform.export",
+    "type": "module",
+    "short_description": "Export resources from Ansible Automation Platform.",
+    "deprecated": false,
+    "source": "plugins/modules/export.py"
    },
    {
     "name": "feature_flag",
@@ -4376,6 +5056,22 @@
     "source": "plugins/modules/http_port.py"
    },
    {
+    "name": "import",
+    "fqcn": "ansible.platform.import",
+    "type": "module",
+    "short_description": "Import resources into Ansible Automation Platform.",
+    "deprecated": false,
+    "source": "plugins/modules/import.py"
+   },
+   {
+    "name": "instance",
+    "fqcn": "ansible.platform.instance",
+    "type": "module",
+    "short_description": "Manage Controller instances",
+    "deprecated": false,
+    "source": "plugins/modules/instance.py"
+   },
+   {
     "name": "instance_group",
     "fqcn": "ansible.platform.instance_group",
     "type": "module",
@@ -4384,12 +5080,44 @@
     "source": "plugins/modules/instance_group.py"
    },
    {
+    "name": "inventory",
+    "fqcn": "ansible.platform.inventory",
+    "type": "module",
+    "short_description": "Manage Controller inventories",
+    "deprecated": false,
+    "source": "plugins/modules/inventory.py"
+   },
+   {
     "name": "inventory_source",
     "fqcn": "ansible.platform.inventory_source",
     "type": "module",
     "short_description": "Manage Controller inventory sources",
     "deprecated": false,
     "source": "plugins/modules/inventory_source.py"
+   },
+   {
+    "name": "inventory_source_update",
+    "fqcn": "ansible.platform.inventory_source_update",
+    "type": "module",
+    "short_description": "Trigger an inventory source sync",
+    "deprecated": false,
+    "source": "plugins/modules/inventory_source_update.py"
+   },
+   {
+    "name": "job_cancel",
+    "fqcn": "ansible.platform.job_cancel",
+    "type": "module",
+    "short_description": "Cancel an Automation Controller job.",
+    "deprecated": false,
+    "source": "plugins/modules/job_cancel.py"
+   },
+   {
+    "name": "job_launch",
+    "fqcn": "ansible.platform.job_launch",
+    "type": "module",
+    "short_description": "Launch a Controller job",
+    "deprecated": false,
+    "source": "plugins/modules/job_launch.py"
    },
    {
     "name": "job_list",
@@ -4408,6 +5136,14 @@
     "source": "plugins/modules/job_template.py"
    },
    {
+    "name": "job_wait",
+    "fqcn": "ansible.platform.job_wait",
+    "type": "module",
+    "short_description": "Wait for an Automation Platform Controller job to finish.",
+    "deprecated": false,
+    "source": "plugins/modules/job_wait.py"
+   },
+   {
     "name": "label",
     "fqcn": "ansible.platform.label",
     "type": "module",
@@ -4416,12 +5152,36 @@
     "source": "plugins/modules/label.py"
    },
    {
+    "name": "license",
+    "fqcn": "ansible.platform.license",
+    "type": "module",
+    "short_description": "Set or remove the Controller license",
+    "deprecated": false,
+    "source": "plugins/modules/license.py"
+   },
+   {
+    "name": "notification_template",
+    "fqcn": "ansible.platform.notification_template",
+    "type": "module",
+    "short_description": "Manage Controller notification templates",
+    "deprecated": false,
+    "source": "plugins/modules/notification_template.py"
+   },
+   {
     "name": "organization",
     "fqcn": "ansible.platform.organization",
     "type": "module",
     "short_description": "Configure a gateway organization",
     "deprecated": false,
     "source": "plugins/modules/organization.py"
+   },
+   {
+    "name": "project_update",
+    "fqcn": "ansible.platform.project_update",
+    "type": "module",
+    "short_description": "Trigger a Controller project sync",
+    "deprecated": false,
+    "source": "plugins/modules/project_update.py"
    },
    {
     "name": "role_definition",
@@ -4454,6 +5214,30 @@
     "short_description": "Configure a gateway custom (non-api) route.",
     "deprecated": false,
     "source": "plugins/modules/route.py"
+   },
+   {
+    "name": "rulebook_activation",
+    "fqcn": "ansible.platform.rulebook_activation",
+    "type": "module",
+    "short_description": "Manage rulebook activations in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/rulebook_activation.py"
+   },
+   {
+    "name": "rulebook_activation_copy",
+    "fqcn": "ansible.platform.rulebook_activation_copy",
+    "type": "module",
+    "short_description": "Copy rulebook activations in EDA controller",
+    "deprecated": false,
+    "source": "plugins/modules/rulebook_activation_copy.py"
+   },
+   {
+    "name": "schedule",
+    "fqcn": "ansible.platform.schedule",
+    "type": "module",
+    "short_description": "Manage Controller schedules",
+    "deprecated": false,
+    "source": "plugins/modules/schedule.py"
    },
    {
     "name": "service",
@@ -4504,6 +5288,14 @@
     "source": "plugins/modules/settings.py"
    },
    {
+    "name": "subscriptions",
+    "fqcn": "ansible.platform.subscriptions",
+    "type": "module",
+    "short_description": "Get available subscriptions from Automation Controller.",
+    "deprecated": false,
+    "source": "plugins/modules/subscriptions.py"
+   },
+   {
     "name": "team",
     "fqcn": "ansible.platform.team",
     "type": "module",
@@ -4536,6 +5328,46 @@
     "source": "plugins/modules/user.py"
    },
    {
+    "name": "workflow_approval",
+    "fqcn": "ansible.platform.workflow_approval",
+    "type": "module",
+    "short_description": "Approve or deny a workflow approval node",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_approval.py"
+   },
+   {
+    "name": "workflow_job_template",
+    "fqcn": "ansible.platform.workflow_job_template",
+    "type": "module",
+    "short_description": "Manage Controller workflow job templates",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_job_template.py"
+   },
+   {
+    "name": "workflow_job_template_node",
+    "fqcn": "ansible.platform.workflow_job_template_node",
+    "type": "module",
+    "short_description": "Manage Controller workflow job template nodes",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_job_template_node.py"
+   },
+   {
+    "name": "workflow_launch",
+    "fqcn": "ansible.platform.workflow_launch",
+    "type": "module",
+    "short_description": "Launch an Automation Controller workflow job template.",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_launch.py"
+   },
+   {
+    "name": "workflow_node_wait",
+    "fqcn": "ansible.platform.workflow_node_wait",
+    "type": "module",
+    "short_description": "Wait for a workflow node to finish.",
+    "deprecated": false,
+    "source": "plugins/modules/workflow_node_wait.py"
+   },
+   {
     "name": "http",
     "fqcn": "ansible.platform.http",
     "type": "connection",
@@ -4544,12 +5376,28 @@
     "source": "plugins/connection/http.py"
    },
    {
+    "name": "controller_export",
+    "fqcn": "ansible.platform.controller_export",
+    "type": "filter",
+    "short_description": "Filters for converting between Controller export formats.",
+    "deprecated": false,
+    "source": "plugins/filter/controller_export.py"
+   },
+   {
     "name": "gateway_api",
     "fqcn": "ansible.platform.gateway_api",
     "type": "lookup",
     "short_description": "Search the API for objects",
     "deprecated": false,
     "source": "plugins/lookup/gateway_api.py"
+   },
+   {
+    "name": "import",
+    "fqcn": "ansible.platform.import",
+    "type": "role",
+    "short_description": "Import Controller resources from a structured asset dict. Accepts native format (module-parameter dicts) or legacy awxkit export format (auto-converted via the from_awxkit_export filter).",
+    "deprecated": false,
+    "source": "roles/import"
    }
   ],
   "galaxy": {
@@ -4564,7 +5412,7 @@
    "repository": "https://github.com/ansible",
    "documentation": null
   },
-  "last_commit": "2026-10-19T14:00:39+02:00",
+  "last_commit": "2026-11-12T09:14:31Z",
   "source_path": ""
  },
  {
@@ -4768,7 +5616,7 @@
    "repository": "https://github.com/ansible-collections/ansible.posix",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/ansible/posix/"
   },
-  "last_commit": "2026-10-19T17:05:46+09:00",
+  "last_commit": "2026-11-16T16:16:54+09:00",
   "source_path": ""
  },
  {
@@ -5505,7 +6353,7 @@
    "repository": "https://github.com/ansible-collections/ansible.utils",
    "documentation": null
   },
-  "last_commit": "2026-09-17T12:52:19+05:30",
+  "last_commit": "2026-11-10T14:38:33+05:30",
   "source_path": ""
  },
  {
@@ -6170,7 +7018,7 @@
    }
   ],
   "galaxy": {
-   "version": "3.9.1",
+   "version": "3.9.2",
    "description": "Ansible collection for core Windows plugins.\n",
    "tags": [
     "windows"
@@ -6178,7 +7026,7 @@
    "repository": "https://github.com/ansible-collections/ansible.windows",
    "documentation": "https://docs.ansible.com/ansible/devel/collections/ansible/windows"
   },
-  "last_commit": "2026-10-20T15:30:08+03:00",
+  "last_commit": "2026-10-25T14:34:23+02:00",
   "source_path": ""
  },
  {
@@ -6562,7 +7410,7 @@
    }
   ],
   "galaxy": {
-   "version": "6.5.0-dev1",
+   "version": "6.6.0-dev0",
    "description": "Ansible Roles & Modules to support Arista AVD",
    "tags": [
     "arista",
@@ -6576,7 +7424,7 @@
    "repository": "https://github.com/aristanetworks/avd",
    "documentation": "https://avd.arista.com"
   },
-  "last_commit": "2026-10-20T12:28:41+00:00",
+  "last_commit": "2026-11-16T11:10:48Z",
   "source_path": "ansible_collections/arista/avd"
  },
  {
@@ -7031,7 +7879,7 @@
    "repository": "https://github.com/ansible-collections/arista.eos",
    "documentation": null
   },
-  "last_commit": "2026-10-15T13:25:41+05:30",
+  "last_commit": "2026-11-10T14:38:59+05:30",
   "source_path": ""
  },
  {
@@ -7754,6 +8602,22 @@
     "source": "plugins/modules/azure_rm_apimanagement_info.py"
    },
    {
+    "name": "azure_rm_apimanagementproduct",
+    "fqcn": "azure.azcollection.azure_rm_apimanagementproduct",
+    "type": "module",
+    "short_description": "Manage a product in an Azure API Management service",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_apimanagementproduct.py"
+   },
+   {
+    "name": "azure_rm_apimanagementproduct_info",
+    "fqcn": "azure.azcollection.azure_rm_apimanagementproduct_info",
+    "type": "module",
+    "short_description": "Get products in an Azure API Management service",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_apimanagementproduct_info.py"
+   },
+   {
     "name": "azure_rm_apimanagementservice",
     "fqcn": "azure.azcollection.azure_rm_apimanagementservice",
     "type": "module",
@@ -8210,6 +9074,22 @@
     "source": "plugins/modules/azure_rm_containerapp_info.py"
    },
    {
+    "name": "azure_rm_containerappdaprcomponent",
+    "fqcn": "azure.azcollection.azure_rm_containerappdaprcomponent",
+    "type": "module",
+    "short_description": "Manage a Dapr component in an Azure Container Apps managed environment",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_containerappdaprcomponent.py"
+   },
+   {
+    "name": "azure_rm_containerappdaprcomponent_info",
+    "fqcn": "azure.azcollection.azure_rm_containerappdaprcomponent_info",
+    "type": "module",
+    "short_description": "Get Dapr components in an Azure Container Apps managed environment",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_containerappdaprcomponent_info.py"
+   },
+   {
     "name": "azure_rm_containerappenvironment",
     "fqcn": "azure.azcollection.azure_rm_containerappenvironment",
     "type": "module",
@@ -8408,6 +9288,22 @@
     "short_description": "Get Azure Disk Backup instance facts",
     "deprecated": false,
     "source": "plugins/modules/azure_rm_dataprotectionbackupinstancedisk_info.py"
+   },
+   {
+    "name": "azure_rm_dataprotectionbackuppolicydisk",
+    "fqcn": "azure.azcollection.azure_rm_dataprotectionbackuppolicydisk",
+    "type": "module",
+    "short_description": "Manage Azure Disk Backup policy (Microsoft.DataProtection)",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_dataprotectionbackuppolicydisk.py"
+   },
+   {
+    "name": "azure_rm_dataprotectionbackuppolicydisk_info",
+    "fqcn": "azure.azcollection.azure_rm_dataprotectionbackuppolicydisk_info",
+    "type": "module",
+    "short_description": "Get Azure Disk Backup policy facts",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_dataprotectionbackuppolicydisk_info.py"
    },
    {
     "name": "azure_rm_dataprotectionbackupvault",
@@ -10021,7 +10917,7 @@
     "name": "azure_rm_recoveryservicesvault",
     "fqcn": "azure.azcollection.azure_rm_recoveryservicesvault",
     "type": "module",
-    "short_description": "Create and Delete Azure Recovery Services vault",
+    "short_description": "Create, update and delete Azure Recovery Services vault",
     "deprecated": false,
     "source": "plugins/modules/azure_rm_recoveryservicesvault.py"
    },
@@ -10038,7 +10934,7 @@
     "fqcn": "azure.azcollection.azure_rm_recoveryservicesvaultconfig",
     "type": "module",
     "short_description": "Set Azure Backup Vault Config",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/azure_rm_recoveryservicesvaultconfig.py"
    },
    {
@@ -10046,7 +10942,7 @@
     "fqcn": "azure.azcollection.azure_rm_recoveryservicesvaultconfig_info",
     "type": "module",
     "short_description": "Get Info on Azure Backup Vault Configs",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/azure_rm_recoveryservicesvaultconfig_info.py"
    },
    {
@@ -10666,6 +11562,22 @@
     "source": "plugins/modules/azure_rm_subscription_info.py"
    },
    {
+    "name": "azure_rm_subscriptiondeployment",
+    "fqcn": "azure.azcollection.azure_rm_subscriptiondeployment",
+    "type": "module",
+    "short_description": "Manage Azure Resource Manager template deployments at subscription scope",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_subscriptiondeployment.py"
+   },
+   {
+    "name": "azure_rm_subscriptiondeployment_info",
+    "fqcn": "azure.azcollection.azure_rm_subscriptiondeployment_info",
+    "type": "module",
+    "short_description": "Get Azure Resource Manager template deployment facts at subscription scope",
+    "deprecated": false,
+    "source": "plugins/modules/azure_rm_subscriptiondeployment_info.py"
+   },
+   {
     "name": "azure_rm_tags",
     "fqcn": "azure.azcollection.azure_rm_tags",
     "type": "module",
@@ -10966,7 +11878,7 @@
     "fqcn": "azure.azcollection.azure_rm_vmbackuppolicy",
     "type": "module",
     "short_description": "Create or Delete Azure VM Backup Policy",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/azure_rm_vmbackuppolicy.py"
    },
    {
@@ -10974,7 +11886,7 @@
     "fqcn": "azure.azcollection.azure_rm_vmbackuppolicy_info",
     "type": "module",
     "short_description": "Fetch Backup Policy Details",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/azure_rm_vmbackuppolicy_info.py"
    },
    {
@@ -11131,7 +12043,7 @@
    }
   ],
   "galaxy": {
-   "version": "4.1.0",
+   "version": "4.2.0",
    "description": "The Azure collection.",
    "tags": [
     "cloud",
@@ -11145,7 +12057,7 @@
    "repository": "https://github.com/ansible-collections/azure",
    "documentation": null
   },
-  "last_commit": "2026-10-19T17:32:32+11:00",
+  "last_commit": "2026-11-11T17:43:39+11:00",
   "source_path": ""
  },
  {
@@ -11625,6 +12537,22 @@
     "short_description": "Show NTP settings.",
     "deprecated": false,
     "source": "plugins/modules/cp_gaia_ntp_facts.py"
+   },
+   {
+    "name": "cp_gaia_param",
+    "fqcn": "check_point.gaia.cp_gaia_param",
+    "type": "module",
+    "short_description": "Set Config Point parameters.",
+    "deprecated": false,
+    "source": "plugins/modules/cp_gaia_param.py"
+   },
+   {
+    "name": "cp_gaia_param_facts",
+    "fqcn": "check_point.gaia.cp_gaia_param_facts",
+    "type": "module",
+    "short_description": "Show Config Point parameters.",
+    "deprecated": false,
+    "source": "plugins/modules/cp_gaia_param_facts.py"
    },
    {
     "name": "cp_gaia_password_policy",
@@ -12156,7 +13084,7 @@
    }
   ],
   "galaxy": {
-   "version": "7.0.0",
+   "version": "8.0.0",
    "description": "Check Point collection for managing a Check Point machine configurations.",
    "tags": [
     "security"
@@ -12164,7 +13092,7 @@
    "repository": "https://github.com/CheckPointSW/CheckPointAnsibleGAIACollection",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/check_point/gaia/docs/"
   },
-  "last_commit": "2026-10-20T07:51:05+03:00",
+  "last_commit": "2026-11-11T13:01:33+02:00",
   "source_path": ""
  },
  {
@@ -15809,7 +16737,7 @@
    "repository": "https://github.com/chocolatey-community/chocolatey-ansible",
    "documentation": "https://github.com/chocolatey-community/chocolatey-ansible"
   },
-  "last_commit": "2026-10-03T05:55:08-04:00",
+  "last_commit": "2026-11-03T14:24:03-06:00",
   "source_path": "chocolatey"
  },
  {
@@ -18146,7 +19074,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.13.0",
+   "version": "3.0.0",
    "description": "Ansible Modules for Cisco ACI",
    "tags": [
     "cisco",
@@ -18159,7 +19087,7 @@
    "repository": "https://github.com/CiscoDevNet/ansible-aci",
    "documentation": "https://docs.ansible.com/ansible/latest/scenario_guides/guide_aci.html"
   },
-  "last_commit": "2026-10-15T22:14:31+10:00",
+  "last_commit": "2026-11-03T22:04:51+10:00",
   "source_path": ""
  },
  {
@@ -18267,7 +19195,7 @@
    "repository": "https://github.com/cisco-en-programmability/catalyst-center-ansible-iac",
    "documentation": null
   },
-  "last_commit": "2026-09-17T14:35:38-07:00",
+  "last_commit": "2026-10-26T14:11:35-07:00",
   "source_path": ""
  },
  {
@@ -32116,7 +33044,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.13.1",
+   "version": "2.14.0",
    "description": "Ansible Modules, Roles, and Cisco Validated Playbooks (CVP) for Cisco CATALYST Center automation",
    "tags": [
     "cisco",
@@ -32129,7 +33057,7 @@
    "repository": "https://github.com/cisco-en-programmability/catalystcenter-ansible",
    "documentation": "https://cisco-en-programmability.github.io/catalystcenter-ansible/"
   },
-  "last_commit": "2026-10-13T15:41:44-06:00",
+  "last_commit": "2026-10-21T14:28:19-06:00",
   "source_path": ""
  },
  {
@@ -32564,7 +33492,7 @@
    }
   ],
   "galaxy": {
-   "version": "3.13.0-dev",
+   "version": "3.13.1-dev",
    "description": "Ansible collection for the Cisco Nexus® Dashboard Fabric Controller (NDFC) - formerly DCNM",
    "tags": [
     "cisco",
@@ -32577,7 +33505,7 @@
    "repository": "https://github.com/CiscoDevNet/ansible-dcnm",
    "documentation": null
   },
-  "last_commit": "2026-10-19T11:20:51-04:00",
+  "last_commit": "2026-11-10T10:16:31-05:00",
   "source_path": ""
  },
  {
@@ -44026,7 +44954,7 @@
    "repository": "https://github.com/CiscoDevNet/intersight-ansible",
    "documentation": "https://intersight.com/apidocs"
   },
-  "last_commit": "2026-10-12T11:26:28-05:00",
+  "last_commit": "2026-11-08T11:07:05+02:00",
   "source_path": ""
  },
  {
@@ -44138,6 +45066,22 @@
     "source": "plugins/modules/ios_facts.py"
    },
    {
+    "name": "ios_flow_monitor_global",
+    "fqcn": "cisco.ios.ios_flow_monitor_global",
+    "type": "module",
+    "short_description": "Resource module to configure Flexible NetFlow on Cisco IOS XE.",
+    "deprecated": false,
+    "source": "plugins/modules/ios_flow_monitor_global.py"
+   },
+   {
+    "name": "ios_flow_monitor_interfaces",
+    "fqcn": "cisco.ios.ios_flow_monitor_interfaces",
+    "type": "module",
+    "short_description": "Resource module to configure per-interface flow monitor assignments on Cisco IOS XE.",
+    "deprecated": false,
+    "source": "plugins/modules/ios_flow_monitor_interfaces.py"
+   },
+   {
     "name": "ios_hostname",
     "fqcn": "cisco.ios.ios_hostname",
     "type": "module",
@@ -44224,6 +45168,14 @@
     "short_description": "Resource module to configure logging.",
     "deprecated": false,
     "source": "plugins/modules/ios_logging_global.py"
+   },
+   {
+    "name": "ios_monitor_sessions",
+    "fqcn": "cisco.ios.ios_monitor_sessions",
+    "type": "module",
+    "short_description": "Resource module to configure SPAN monitor sessions.",
+    "deprecated": false,
+    "source": "plugins/modules/ios_monitor_sessions.py"
    },
    {
     "name": "ios_ntp_global",
@@ -44379,7 +45331,7 @@
    }
   ],
   "galaxy": {
-   "version": "11.6.0",
+   "version": "11.7.0",
    "description": "Ansible Network Collection for Cisco IOS devices.",
    "tags": [
     "cisco",
@@ -44390,7 +45342,7 @@
    "repository": "https://github.com/ansible-collections/cisco.ios",
    "documentation": null
   },
-  "last_commit": "2026-10-16T12:27:34+05:30",
+  "last_commit": "2026-11-16T16:27:50+05:30",
   "source_path": ""
  },
  {
@@ -44695,7 +45647,7 @@
    }
   ],
   "galaxy": {
-   "version": "13.0.0",
+   "version": "13.0.1",
    "description": "Ansible Network Collection for Cisco IOSXR devices.",
    "tags": [
     "cisco",
@@ -44706,7 +45658,7 @@
    "repository": "https://github.com/ansible-collections/cisco.iosxr",
    "documentation": null
   },
-  "last_commit": "2026-10-06T15:40:21+05:30",
+  "last_commit": "2026-11-12T18:39:46+05:30",
   "source_path": ""
  },
  {
@@ -48528,6 +49480,22 @@
     "source": "plugins/modules/devices.py"
    },
    {
+    "name": "devices_appliance_dhcp_subnets_info",
+    "fqcn": "cisco.meraki.devices_appliance_dhcp_subnets_info",
+    "type": "module",
+    "short_description": "Information module for devices _appliance _dhcp _subnets",
+    "deprecated": false,
+    "source": "plugins/modules/devices_appliance_dhcp_subnets_info.py"
+   },
+   {
+    "name": "devices_appliance_interfaces_ports",
+    "fqcn": "cisco.meraki.devices_appliance_interfaces_ports",
+    "type": "module",
+    "short_description": "Resource module for devices _appliance _interfaces _ports",
+    "deprecated": false,
+    "source": "plugins/modules/devices_appliance_interfaces_ports.py"
+   },
+   {
     "name": "devices_appliance_interfaces_ports_update",
     "fqcn": "cisco.meraki.devices_appliance_interfaces_ports_update",
     "type": "module",
@@ -48542,6 +49510,22 @@
     "short_description": "Information module for devices _appliance _performance",
     "deprecated": false,
     "source": "plugins/modules/devices_appliance_performance_info.py"
+   },
+   {
+    "name": "devices_appliance_prefixes_delegated_info",
+    "fqcn": "cisco.meraki.devices_appliance_prefixes_delegated_info",
+    "type": "module",
+    "short_description": "Information module for devices _appliance _prefixes _delegated",
+    "deprecated": false,
+    "source": "plugins/modules/devices_appliance_prefixes_delegated_info.py"
+   },
+   {
+    "name": "devices_appliance_prefixes_delegated_vlan_assignments_info",
+    "fqcn": "cisco.meraki.devices_appliance_prefixes_delegated_vlan_assignments_info",
+    "type": "module",
+    "short_description": "Information module for devices _appliance _prefixes _delegated _vlan _assignments",
+    "deprecated": false,
+    "source": "plugins/modules/devices_appliance_prefixes_delegated_vlan_assignments_info.py"
    },
    {
     "name": "devices_appliance_radio_settings",
@@ -48598,6 +49582,38 @@
     "short_description": "Information module for devices _camera _analytics _live",
     "deprecated": false,
     "source": "plugins/modules/devices_camera_analytics_live_info.py"
+   },
+   {
+    "name": "devices_camera_analytics_overview_info",
+    "fqcn": "cisco.meraki.devices_camera_analytics_overview_info",
+    "type": "module",
+    "short_description": "Information module for devices _camera _analytics _overview",
+    "deprecated": false,
+    "source": "plugins/modules/devices_camera_analytics_overview_info.py"
+   },
+   {
+    "name": "devices_camera_analytics_recent_info",
+    "fqcn": "cisco.meraki.devices_camera_analytics_recent_info",
+    "type": "module",
+    "short_description": "Information module for devices _camera _analytics _recent",
+    "deprecated": false,
+    "source": "plugins/modules/devices_camera_analytics_recent_info.py"
+   },
+   {
+    "name": "devices_camera_analytics_zones_history_info",
+    "fqcn": "cisco.meraki.devices_camera_analytics_zones_history_info",
+    "type": "module",
+    "short_description": "Information module for devices _camera _analytics _zones _history",
+    "deprecated": false,
+    "source": "plugins/modules/devices_camera_analytics_zones_history_info.py"
+   },
+   {
+    "name": "devices_camera_analytics_zones_info",
+    "fqcn": "cisco.meraki.devices_camera_analytics_zones_info",
+    "type": "module",
+    "short_description": "Information module for devices _camera _analytics _zones",
+    "deprecated": false,
+    "source": "plugins/modules/devices_camera_analytics_zones_info.py"
    },
    {
     "name": "devices_camera_clip_info",
@@ -48662,6 +49678,14 @@
     "short_description": "Information module for devices _camera _sense",
     "deprecated": false,
     "source": "plugins/modules/devices_camera_sense_info.py"
+   },
+   {
+    "name": "devices_camera_sense_object_detection_models_info",
+    "fqcn": "cisco.meraki.devices_camera_sense_object_detection_models_info",
+    "type": "module",
+    "short_description": "Information module for devices _camera _sense _object _detection _models",
+    "deprecated": false,
+    "source": "plugins/modules/devices_camera_sense_object_detection_models_info.py"
    },
    {
     "name": "devices_camera_video_link_info",
@@ -48766,6 +49790,22 @@
     "short_description": "Resource module for devices _cellular _uplinks _bands _masks _update",
     "deprecated": false,
     "source": "plugins/modules/devices_cellular_uplinks_bands_masks_update.py"
+   },
+   {
+    "name": "devices_certificates_revoke",
+    "fqcn": "cisco.meraki.devices_certificates_revoke",
+    "type": "module",
+    "short_description": "Resource module for devices _certificates _revoke",
+    "deprecated": false,
+    "source": "plugins/modules/devices_certificates_revoke.py"
+   },
+   {
+    "name": "devices_clients_info",
+    "fqcn": "cisco.meraki.devices_clients_info",
+    "type": "module",
+    "short_description": "Information module for devices _clients",
+    "deprecated": false,
+    "source": "plugins/modules/devices_clients_info.py"
    },
    {
     "name": "devices_info",
@@ -48936,6 +49976,22 @@
     "source": "plugins/modules/devices_live_tools_power_usage_info.py"
    },
    {
+    "name": "devices_live_tools_route_details",
+    "fqcn": "cisco.meraki.devices_live_tools_route_details",
+    "type": "module",
+    "short_description": "Resource module for devices _live _tools _route _details",
+    "deprecated": false,
+    "source": "plugins/modules/devices_live_tools_route_details.py"
+   },
+   {
+    "name": "devices_live_tools_route_details_info",
+    "fqcn": "cisco.meraki.devices_live_tools_route_details_info",
+    "type": "module",
+    "short_description": "Information module for devices _live _tools _route _details",
+    "deprecated": false,
+    "source": "plugins/modules/devices_live_tools_route_details_info.py"
+   },
+   {
     "name": "devices_live_tools_routing_table_lookups",
     "fqcn": "cisco.meraki.devices_live_tools_routing_table_lookups",
     "type": "module",
@@ -49006,6 +50062,14 @@
     "short_description": "Information module for devices _lldp _cdp",
     "deprecated": false,
     "source": "plugins/modules/devices_lldp_cdp_info.py"
+   },
+   {
+    "name": "devices_loss_and_latency_history_info",
+    "fqcn": "cisco.meraki.devices_loss_and_latency_history_info",
+    "type": "module",
+    "short_description": "Information module for devices _loss _and _latency _history",
+    "deprecated": false,
+    "source": "plugins/modules/devices_loss_and_latency_history_info.py"
    },
    {
     "name": "devices_management_interface",
@@ -49086,6 +50150,14 @@
     "short_description": "Information module for devices _switch _ports _statuses",
     "deprecated": false,
     "source": "plugins/modules/devices_switch_ports_statuses_info.py"
+   },
+   {
+    "name": "devices_switch_ports_statuses_packets_info",
+    "fqcn": "cisco.meraki.devices_switch_ports_statuses_packets_info",
+    "type": "module",
+    "short_description": "Information module for devices _switch _ports _statuses _packets",
+    "deprecated": false,
+    "source": "plugins/modules/devices_switch_ports_statuses_packets_info.py"
    },
    {
     "name": "devices_switch_routing_interfaces",
@@ -49206,6 +50278,22 @@
     "short_description": "Information module for devices _wireless _latency _stats",
     "deprecated": false,
     "source": "plugins/modules/devices_wireless_latency_stats_info.py"
+   },
+   {
+    "name": "devices_wireless_radio_overrides",
+    "fqcn": "cisco.meraki.devices_wireless_radio_overrides",
+    "type": "module",
+    "short_description": "Resource module for devices _wireless _radio _overrides",
+    "deprecated": false,
+    "source": "plugins/modules/devices_wireless_radio_overrides.py"
+   },
+   {
+    "name": "devices_wireless_radio_overrides_info",
+    "fqcn": "cisco.meraki.devices_wireless_radio_overrides_info",
+    "type": "module",
+    "short_description": "Information module for devices _wireless _radio _overrides",
+    "deprecated": false,
+    "source": "plugins/modules/devices_wireless_radio_overrides_info.py"
    },
    {
     "name": "devices_wireless_radio_settings",
@@ -49624,6 +50712,14 @@
     "source": "plugins/modules/networks_alerts_settings_info.py"
    },
    {
+    "name": "networks_appliance_clients_security_events_info",
+    "fqcn": "cisco.meraki.networks_appliance_clients_security_events_info",
+    "type": "module",
+    "short_description": "Information module for networks _appliance _clients _security _events",
+    "deprecated": false,
+    "source": "plugins/modules/networks_appliance_clients_security_events_info.py"
+   },
+   {
     "name": "networks_appliance_connectivity_monitoring_destinations",
     "fqcn": "cisco.meraki.networks_appliance_connectivity_monitoring_destinations",
     "type": "module",
@@ -49710,6 +50806,22 @@
     "short_description": "Information module for networks _appliance _firewall _firewalled _services",
     "deprecated": false,
     "source": "plugins/modules/networks_appliance_firewall_firewalled_services_info.py"
+   },
+   {
+    "name": "networks_appliance_firewall_inbound_cellular_firewall_rules",
+    "fqcn": "cisco.meraki.networks_appliance_firewall_inbound_cellular_firewall_rules",
+    "type": "module",
+    "short_description": "Resource module for networks _appliance _firewall _inbound _cellular _firewall _rules",
+    "deprecated": false,
+    "source": "plugins/modules/networks_appliance_firewall_inbound_cellular_firewall_rules.py"
+   },
+   {
+    "name": "networks_appliance_firewall_inbound_cellular_firewall_rules_info",
+    "fqcn": "cisco.meraki.networks_appliance_firewall_inbound_cellular_firewall_rules_info",
+    "type": "module",
+    "short_description": "Information module for networks _appliance _firewall _inbound _cellular _firewall _rules",
+    "deprecated": false,
+    "source": "plugins/modules/networks_appliance_firewall_inbound_cellular_firewall_rules_info.py"
    },
    {
     "name": "networks_appliance_firewall_inbound_firewall_rules",
@@ -49902,6 +51014,22 @@
     "short_description": "Resource module for networks _appliance _sdwan _internet _policies",
     "deprecated": false,
     "source": "plugins/modules/networks_appliance_sdwan_internet_policies.py"
+   },
+   {
+    "name": "networks_appliance_security_events_info",
+    "fqcn": "cisco.meraki.networks_appliance_security_events_info",
+    "type": "module",
+    "short_description": "Information module for networks _appliance _security _events",
+    "deprecated": false,
+    "source": "plugins/modules/networks_appliance_security_events_info.py"
+   },
+   {
+    "name": "networks_appliance_security_https_inspection",
+    "fqcn": "cisco.meraki.networks_appliance_security_https_inspection",
+    "type": "module",
+    "short_description": "Resource module for networks _appliance _security _https _inspection",
+    "deprecated": false,
+    "source": "plugins/modules/networks_appliance_security_https_inspection.py"
    },
    {
     "name": "networks_appliance_security_intrusion",
@@ -50144,6 +51272,14 @@
     "source": "plugins/modules/networks_appliance_uplinks_nat.py"
    },
    {
+    "name": "networks_appliance_uplinks_usage_history_info",
+    "fqcn": "cisco.meraki.networks_appliance_uplinks_usage_history_info",
+    "type": "module",
+    "short_description": "Information module for networks _appliance _uplinks _usage _history",
+    "deprecated": false,
+    "source": "plugins/modules/networks_appliance_uplinks_usage_history_info.py"
+   },
+   {
     "name": "networks_appliance_vlans",
     "fqcn": "cisco.meraki.networks_appliance_vlans",
     "type": "module",
@@ -50264,6 +51400,14 @@
     "source": "plugins/modules/networks_camera_quality_retention_profiles_info.py"
    },
    {
+    "name": "networks_camera_schedules_info",
+    "fqcn": "cisco.meraki.networks_camera_schedules_info",
+    "type": "module",
+    "short_description": "Information module for networks _camera _schedules",
+    "deprecated": false,
+    "source": "plugins/modules/networks_camera_schedules_info.py"
+   },
+   {
     "name": "networks_camera_wireless_profiles",
     "fqcn": "cisco.meraki.networks_camera_wireless_profiles",
     "type": "module",
@@ -50286,6 +51430,14 @@
     "short_description": "Resource module for networks _campus _gateway _clusters",
     "deprecated": false,
     "source": "plugins/modules/networks_campus_gateway_clusters.py"
+   },
+   {
+    "name": "networks_campus_gateway_ssids_mdns",
+    "fqcn": "cisco.meraki.networks_campus_gateway_ssids_mdns",
+    "type": "module",
+    "short_description": "Resource module for networks _campus _gateway _ssids _mdns",
+    "deprecated": false,
+    "source": "plugins/modules/networks_campus_gateway_ssids_mdns.py"
    },
    {
     "name": "networks_cellular_gateway_connectivity_monitoring_destinations",
@@ -50352,6 +51504,22 @@
     "source": "plugins/modules/networks_cellular_gateway_uplink_info.py"
    },
    {
+    "name": "networks_clients_application_usage_info",
+    "fqcn": "cisco.meraki.networks_clients_application_usage_info",
+    "type": "module",
+    "short_description": "Information module for networks _clients _application _usage",
+    "deprecated": false,
+    "source": "plugins/modules/networks_clients_application_usage_info.py"
+   },
+   {
+    "name": "networks_clients_bandwidth_usage_history_info",
+    "fqcn": "cisco.meraki.networks_clients_bandwidth_usage_history_info",
+    "type": "module",
+    "short_description": "Information module for networks _clients _bandwidth _usage _history",
+    "deprecated": false,
+    "source": "plugins/modules/networks_clients_bandwidth_usage_history_info.py"
+   },
+   {
     "name": "networks_clients_info",
     "fqcn": "cisco.meraki.networks_clients_info",
     "type": "module",
@@ -50406,6 +51574,30 @@
     "short_description": "Information module for networks _clients _splash _authorization _status",
     "deprecated": false,
     "source": "plugins/modules/networks_clients_splash_authorization_status_info.py"
+   },
+   {
+    "name": "networks_clients_traffic_history_info",
+    "fqcn": "cisco.meraki.networks_clients_traffic_history_info",
+    "type": "module",
+    "short_description": "Information module for networks _clients _traffic _history",
+    "deprecated": false,
+    "source": "plugins/modules/networks_clients_traffic_history_info.py"
+   },
+   {
+    "name": "networks_clients_usage_histories_info",
+    "fqcn": "cisco.meraki.networks_clients_usage_histories_info",
+    "type": "module",
+    "short_description": "Information module for networks _clients _usage _histories",
+    "deprecated": false,
+    "source": "plugins/modules/networks_clients_usage_histories_info.py"
+   },
+   {
+    "name": "networks_clients_usage_history_info",
+    "fqcn": "cisco.meraki.networks_clients_usage_history_info",
+    "type": "module",
+    "short_description": "Information module for networks _clients _usage _history",
+    "deprecated": false,
+    "source": "plugins/modules/networks_clients_usage_history_info.py"
    },
    {
     "name": "networks_devices_claim",
@@ -50680,6 +51872,14 @@
     "source": "plugins/modules/networks_netflow_info.py"
    },
    {
+    "name": "networks_network_health_channel_utilization_info",
+    "fqcn": "cisco.meraki.networks_network_health_channel_utilization_info",
+    "type": "module",
+    "short_description": "Information module for networks _network _health _channel _utilization",
+    "deprecated": false,
+    "source": "plugins/modules/networks_network_health_channel_utilization_info.py"
+   },
+   {
     "name": "networks_pii_pii_keys_info",
     "fqcn": "cisco.meraki.networks_pii_pii_keys_info",
     "type": "module",
@@ -50952,6 +52152,14 @@
     "source": "plugins/modules/networks_sm_devices_refresh_details.py"
    },
    {
+    "name": "networks_sm_devices_restrictions_info",
+    "fqcn": "cisco.meraki.networks_sm_devices_restrictions_info",
+    "type": "module",
+    "short_description": "Information module for networks _sm _devices _restrictions",
+    "deprecated": false,
+    "source": "plugins/modules/networks_sm_devices_restrictions_info.py"
+   },
+   {
     "name": "networks_sm_devices_security_centers_info",
     "fqcn": "cisco.meraki.networks_sm_devices_security_centers_info",
     "type": "module",
@@ -51086,6 +52294,14 @@
     "short_description": "Information module for networks _snmp",
     "deprecated": false,
     "source": "plugins/modules/networks_snmp_info.py"
+   },
+   {
+    "name": "networks_splash_login_attempts_info",
+    "fqcn": "cisco.meraki.networks_splash_login_attempts_info",
+    "type": "module",
+    "short_description": "Information module for networks _splash _login _attempts",
+    "deprecated": false,
+    "source": "plugins/modules/networks_splash_login_attempts_info.py"
    },
    {
     "name": "networks_split",
@@ -51488,6 +52704,14 @@
     "source": "plugins/modules/networks_traffic_analysis_info.py"
    },
    {
+    "name": "networks_traffic_info",
+    "fqcn": "cisco.meraki.networks_traffic_info",
+    "type": "module",
+    "short_description": "Information module for networks _traffic",
+    "deprecated": false,
+    "source": "plugins/modules/networks_traffic_info.py"
+   },
+   {
     "name": "networks_traffic_shaping_application_categories_info",
     "fqcn": "cisco.meraki.networks_traffic_shaping_application_categories_info",
     "type": "module",
@@ -51584,6 +52808,14 @@
     "source": "plugins/modules/networks_webhooks_webhook_tests_info.py"
    },
    {
+    "name": "networks_wireless_air_marshal_info",
+    "fqcn": "cisco.meraki.networks_wireless_air_marshal_info",
+    "type": "module",
+    "short_description": "Information module for networks _wireless _air _marshal",
+    "deprecated": false,
+    "source": "plugins/modules/networks_wireless_air_marshal_info.py"
+   },
+   {
     "name": "networks_wireless_air_marshal_rules",
     "fqcn": "cisco.meraki.networks_wireless_air_marshal_rules",
     "type": "module",
@@ -51672,6 +52904,22 @@
     "source": "plugins/modules/networks_wireless_clients_connection_stats_info.py"
    },
    {
+    "name": "networks_wireless_clients_connectivity_events_info",
+    "fqcn": "cisco.meraki.networks_wireless_clients_connectivity_events_info",
+    "type": "module",
+    "short_description": "Information module for networks _wireless _clients _connectivity _events",
+    "deprecated": false,
+    "source": "plugins/modules/networks_wireless_clients_connectivity_events_info.py"
+   },
+   {
+    "name": "networks_wireless_clients_latency_history_info",
+    "fqcn": "cisco.meraki.networks_wireless_clients_latency_history_info",
+    "type": "module",
+    "short_description": "Information module for networks _wireless _clients _latency _history",
+    "deprecated": false,
+    "source": "plugins/modules/networks_wireless_clients_latency_history_info.py"
+   },
+   {
     "name": "networks_wireless_clients_latency_stats_info",
     "fqcn": "cisco.meraki.networks_wireless_clients_latency_stats_info",
     "type": "module",
@@ -51702,6 +52950,14 @@
     "short_description": "Information module for networks _wireless _devices _connection _stats",
     "deprecated": false,
     "source": "plugins/modules/networks_wireless_devices_connection_stats_info.py"
+   },
+   {
+    "name": "networks_wireless_devices_latency_stats_info",
+    "fqcn": "cisco.meraki.networks_wireless_devices_latency_stats_info",
+    "type": "module",
+    "short_description": "Information module for networks _wireless _devices _latency _stats",
+    "deprecated": false,
+    "source": "plugins/modules/networks_wireless_devices_latency_stats_info.py"
    },
    {
     "name": "networks_wireless_electronic_shelf_label",
@@ -51984,6 +53240,30 @@
     "source": "plugins/modules/networks_wireless_ssids_open_roaming.py"
    },
    {
+    "name": "networks_wireless_ssids_overrides",
+    "fqcn": "cisco.meraki.networks_wireless_ssids_overrides",
+    "type": "module",
+    "short_description": "Resource module for networks _wireless _ssids _overrides",
+    "deprecated": false,
+    "source": "plugins/modules/networks_wireless_ssids_overrides.py"
+   },
+   {
+    "name": "networks_wireless_ssids_overrides_info",
+    "fqcn": "cisco.meraki.networks_wireless_ssids_overrides_info",
+    "type": "module",
+    "short_description": "Information module for networks _wireless _ssids _overrides",
+    "deprecated": false,
+    "source": "plugins/modules/networks_wireless_ssids_overrides_info.py"
+   },
+   {
+    "name": "networks_wireless_ssids_owe",
+    "fqcn": "cisco.meraki.networks_wireless_ssids_owe",
+    "type": "module",
+    "short_description": "Resource module for networks _wireless _ssids _owe",
+    "deprecated": false,
+    "source": "plugins/modules/networks_wireless_ssids_owe.py"
+   },
+   {
     "name": "networks_wireless_ssids_schedules",
     "fqcn": "cisco.meraki.networks_wireless_ssids_schedules",
     "type": "module",
@@ -52208,6 +53488,14 @@
     "source": "plugins/modules/organizations_api_requests_overview_response_codes_by_interval_info.py"
    },
    {
+    "name": "organizations_api_rest_provisioning_pipelines_info",
+    "fqcn": "cisco.meraki.organizations_api_rest_provisioning_pipelines_info",
+    "type": "module",
+    "short_description": "Information module for organizations _api _rest _provisioning _pipelines",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_api_rest_provisioning_pipelines_info.py"
+   },
+   {
     "name": "organizations_api_rest_provisioning_pipelines_jobs_info",
     "fqcn": "cisco.meraki.organizations_api_rest_provisioning_pipelines_jobs_info",
     "type": "module",
@@ -52238,6 +53526,14 @@
     "short_description": "Information module for organizations _appliance _devices _interfaces _ports _by _device",
     "deprecated": false,
     "source": "plugins/modules/organizations_appliance_devices_interfaces_ports_by_device_info.py"
+   },
+   {
+    "name": "organizations_appliance_devices_interfaces_ports_profiles_assignments_info",
+    "fqcn": "cisco.meraki.organizations_appliance_devices_interfaces_ports_profiles_assignments_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _devices _interfaces _ports _profiles _assignments",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_devices_interfaces_ports_profiles_assignments_info.py"
    },
    {
     "name": "organizations_appliance_devices_ports_transceivers_readings_history_by_device_info",
@@ -52384,6 +53680,38 @@
     "source": "plugins/modules/organizations_appliance_routing_vrfs_settings_info.py"
    },
    {
+    "name": "organizations_appliance_security_events_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_events_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _events",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_events_info.py"
+   },
+   {
+    "name": "organizations_appliance_security_https_inspection_by_network_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_https_inspection_by_network_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _https _inspection _by _network",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_https_inspection_by_network_info.py"
+   },
+   {
+    "name": "organizations_appliance_security_httpsi_certificates",
+    "fqcn": "cisco.meraki.organizations_appliance_security_httpsi_certificates",
+    "type": "module",
+    "short_description": "Resource module for organizations _appliance _security _httpsi _certificates",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_httpsi_certificates.py"
+   },
+   {
+    "name": "organizations_appliance_security_httpsi_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_httpsi_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _httpsi",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_httpsi_info.py"
+   },
+   {
     "name": "organizations_appliance_security_intrusion",
     "fqcn": "cisco.meraki.organizations_appliance_security_intrusion",
     "type": "module",
@@ -52400,12 +53728,132 @@
     "source": "plugins/modules/organizations_appliance_security_intrusion_info.py"
    },
    {
+    "name": "organizations_appliance_security_intrusion_policies",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_policies",
+    "type": "module",
+    "short_description": "Resource module for organizations _appliance _security _intrusion _policies",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_policies.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_policies_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_policies_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _intrusion _policies",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_policies_info.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_policies_overviews_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_policies_overviews_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _intrusion _policies _overviews",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_policies_overviews_info.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_policies_rule_groups_override",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_policies_rule_groups_override",
+    "type": "module",
+    "short_description": "Resource module for organizations _appliance _security _intrusion _policies _rule _groups _override",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_policies_rule_groups_override.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_policies_rule_groups_overrides_declare",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_policies_rule_groups_overrides_declare",
+    "type": "module",
+    "short_description": "Resource module for organizations _appliance _security _intrusion _policies _rule _groups _overrides _declare",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_policies_rule_groups_overrides_declare.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_policies_rules_override",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_policies_rules_override",
+    "type": "module",
+    "short_description": "Resource module for organizations _appliance _security _intrusion _policies _rules _override",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_policies_rules_override.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_policies_rules_overrides_declare",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_policies_rules_overrides_declare",
+    "type": "module",
+    "short_description": "Resource module for organizations _appliance _security _intrusion _policies _rules _overrides _declare",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_policies_rules_overrides_declare.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_rule_groups_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_rule_groups_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _intrusion _rule _groups",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_rule_groups_info.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_rule_groups_overrides",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_rule_groups_overrides",
+    "type": "module",
+    "short_description": "Resource module for organizations _appliance _security _intrusion _rule _groups _overrides",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_rule_groups_overrides.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_rule_groups_overrides_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_rule_groups_overrides_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _intrusion _rule _groups _overrides",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_rule_groups_overrides_info.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_rule_groups_overviews_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_rule_groups_overviews_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _intrusion _rule _groups _overviews",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_rule_groups_overviews_info.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_rules_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_rules_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _intrusion _rules",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_rules_info.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_rules_overrides",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_rules_overrides",
+    "type": "module",
+    "short_description": "Resource module for organizations _appliance _security _intrusion _rules _overrides",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_rules_overrides.py"
+   },
+   {
+    "name": "organizations_appliance_security_intrusion_rules_overrides_info",
+    "fqcn": "cisco.meraki.organizations_appliance_security_intrusion_rules_overrides_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _security _intrusion _rules _overrides",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_security_intrusion_rules_overrides_info.py"
+   },
+   {
     "name": "organizations_appliance_traffic_shaping_vpn_exclusions_by_network_info",
     "fqcn": "cisco.meraki.organizations_appliance_traffic_shaping_vpn_exclusions_by_network_info",
     "type": "module",
     "short_description": "Information module for organizations _appliance _traffic _shaping _vpn _exclusions _by _network",
     "deprecated": false,
     "source": "plugins/modules/organizations_appliance_traffic_shaping_vpn_exclusions_by_network_info.py"
+   },
+   {
+    "name": "organizations_appliance_uplink_statuses_info",
+    "fqcn": "cisco.meraki.organizations_appliance_uplink_statuses_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _uplink _statuses",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_uplink_statuses_info.py"
    },
    {
     "name": "organizations_appliance_uplinks_nat_by_network_info",
@@ -52446,6 +53894,22 @@
     "short_description": "Information module for organizations _appliance _vpn _site _to _site _ipsec _peers _slas",
     "deprecated": false,
     "source": "plugins/modules/organizations_appliance_vpn_site_to_site_ipsec_peers_slas_info.py"
+   },
+   {
+    "name": "organizations_appliance_vpn_stats_info",
+    "fqcn": "cisco.meraki.organizations_appliance_vpn_stats_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _vpn _stats",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_vpn_stats_info.py"
+   },
+   {
+    "name": "organizations_appliance_vpn_statuses_info",
+    "fqcn": "cisco.meraki.organizations_appliance_vpn_statuses_info",
+    "type": "module",
+    "short_description": "Information module for organizations _appliance _vpn _statuses",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_appliance_vpn_statuses_info.py"
    },
    {
     "name": "organizations_appliance_vpn_third_party_vpn_peers",
@@ -52528,6 +53992,22 @@
     "source": "plugins/modules/organizations_assurance_alerts_overview_info.py"
    },
    {
+    "name": "organizations_assurance_alerts_profiles",
+    "fqcn": "cisco.meraki.organizations_assurance_alerts_profiles",
+    "type": "module",
+    "short_description": "Resource module for organizations _assurance _alerts _profiles",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_assurance_alerts_profiles.py"
+   },
+   {
+    "name": "organizations_assurance_alerts_profiles_info",
+    "fqcn": "cisco.meraki.organizations_assurance_alerts_profiles_info",
+    "type": "module",
+    "short_description": "Information module for organizations _assurance _alerts _profiles",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_assurance_alerts_profiles_info.py"
+   },
+   {
     "name": "organizations_assurance_alerts_restore",
     "fqcn": "cisco.meraki.organizations_assurance_alerts_restore",
     "type": "module",
@@ -52550,6 +54030,22 @@
     "short_description": "Information module for organizations _assurance _alerts _taxonomy _types",
     "deprecated": false,
     "source": "plugins/modules/organizations_assurance_alerts_taxonomy_types_info.py"
+   },
+   {
+    "name": "organizations_assurance_impacted_device_wireless_by_network_info",
+    "fqcn": "cisco.meraki.organizations_assurance_impacted_device_wireless_by_network_info",
+    "type": "module",
+    "short_description": "Information module for organizations _assurance _impacted _device _wireless _by _network",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_assurance_impacted_device_wireless_by_network_info.py"
+   },
+   {
+    "name": "organizations_assurance_wireless_experience_successful_connections_by_network_info",
+    "fqcn": "cisco.meraki.organizations_assurance_wireless_experience_successful_connections_by_network_info",
+    "type": "module",
+    "short_description": "Information module for organizations _assurance _wireless _experience _successful _connections _by _network",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_assurance_wireless_experience_successful_connections_by_network_info.py"
    },
    {
     "name": "organizations_branding_policies",
@@ -52624,6 +54120,22 @@
     "source": "plugins/modules/organizations_camera_detections_history_by_boundary_by_interval_info.py"
    },
    {
+    "name": "organizations_camera_onboarding_statuses",
+    "fqcn": "cisco.meraki.organizations_camera_onboarding_statuses",
+    "type": "module",
+    "short_description": "Resource module for organizations _camera _onboarding _statuses",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_camera_onboarding_statuses.py"
+   },
+   {
+    "name": "organizations_camera_onboarding_statuses_info",
+    "fqcn": "cisco.meraki.organizations_camera_onboarding_statuses_info",
+    "type": "module",
+    "short_description": "Information module for organizations _camera _onboarding _statuses",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_camera_onboarding_statuses_info.py"
+   },
+   {
     "name": "organizations_camera_permissions_info",
     "fqcn": "cisco.meraki.organizations_camera_permissions_info",
     "type": "module",
@@ -52648,12 +54160,108 @@
     "source": "plugins/modules/organizations_camera_roles_info.py"
    },
    {
+    "name": "organizations_campus_gateway_clients_usage_by_network_by_cluster_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clients_usage_by_network_by_cluster_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _clients _usage _by _network _by _cluster",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clients_usage_by_network_by_cluster_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_clusters_failover_targets_by_cluster_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_failover_targets_by_cluster_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _clusters _failover _targets _by _cluster",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clusters_failover_targets_by_cluster_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_clusters_failover_targets_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_failover_targets_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _clusters _failover _targets",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clusters_failover_targets_info.py"
+   },
+   {
     "name": "organizations_campus_gateway_clusters_info",
     "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_info",
     "type": "module",
     "short_description": "Information module for organizations _campus _gateway _clusters",
     "deprecated": false,
     "source": "plugins/modules/organizations_campus_gateway_clusters_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_clusters_networks_overviews_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_networks_overviews_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _clusters _networks _overviews",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clusters_networks_overviews_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_clusters_provision",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_provision",
+    "type": "module",
+    "short_description": "Resource module for organizations _campus _gateway _clusters _provision",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clusters_provision.py"
+   },
+   {
+    "name": "organizations_campus_gateway_clusters_ssids_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_ssids_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _clusters _ssids",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clusters_ssids_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_clusters_tunnelable_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_tunnelable_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _clusters _tunnelable",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clusters_tunnelable_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_clusters_tunneling_batch_update",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_tunneling_batch_update",
+    "type": "module",
+    "short_description": "Resource module for organizations _campus _gateway _clusters _tunneling _batch _update",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clusters_tunneling_batch_update.py"
+   },
+   {
+    "name": "organizations_campus_gateway_clusters_tunneling_by_cluster_by_network_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_clusters_tunneling_by_cluster_by_network_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _clusters _tunneling _by _cluster _by _network",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_clusters_tunneling_by_cluster_by_network_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_connections_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_connections_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _connections",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_connections_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_connections_overview_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_connections_overview_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _connections _overview",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_connections_overview_info.py"
+   },
+   {
+    "name": "organizations_campus_gateway_devices_system_cpu_load_info",
+    "fqcn": "cisco.meraki.organizations_campus_gateway_devices_system_cpu_load_info",
+    "type": "module",
+    "short_description": "Information module for organizations _campus _gateway _devices _system _cpu _load",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_campus_gateway_devices_system_cpu_load_info.py"
    },
    {
     "name": "organizations_campus_gateway_devices_uplinks_local_overrides_by_device_info",
@@ -52736,6 +54344,46 @@
     "source": "plugins/modules/organizations_cellular_gateway_uplink_statuses_info.py"
    },
    {
+    "name": "organizations_certificates_authorities",
+    "fqcn": "cisco.meraki.organizations_certificates_authorities",
+    "type": "module",
+    "short_description": "Resource module for organizations _certificates _authorities",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_certificates_authorities.py"
+   },
+   {
+    "name": "organizations_certificates_authorities_info",
+    "fqcn": "cisco.meraki.organizations_certificates_authorities_info",
+    "type": "module",
+    "short_description": "Information module for organizations _certificates _authorities",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_certificates_authorities_info.py"
+   },
+   {
+    "name": "organizations_certificates_authorities_jobs_info",
+    "fqcn": "cisco.meraki.organizations_certificates_authorities_jobs_info",
+    "type": "module",
+    "short_description": "Information module for organizations _certificates _authorities _jobs",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_certificates_authorities_jobs_info.py"
+   },
+   {
+    "name": "organizations_certificates_authorities_revoke",
+    "fqcn": "cisco.meraki.organizations_certificates_authorities_revoke",
+    "type": "module",
+    "short_description": "Resource module for organizations _certificates _authorities _revoke",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_certificates_authorities_revoke.py"
+   },
+   {
+    "name": "organizations_certificates_revocation_lists_info",
+    "fqcn": "cisco.meraki.organizations_certificates_revocation_lists_info",
+    "type": "module",
+    "short_description": "Information module for organizations _certificates _revocation _lists",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_certificates_revocation_lists_info.py"
+   },
+   {
     "name": "organizations_claim",
     "fqcn": "cisco.meraki.organizations_claim",
     "type": "module",
@@ -52814,6 +54462,14 @@
     "short_description": "Information module for organizations _config _templates _switch _profiles _ports",
     "deprecated": false,
     "source": "plugins/modules/organizations_config_templates_switch_profiles_ports_info.py"
+   },
+   {
+    "name": "organizations_configuration_changes_info",
+    "fqcn": "cisco.meraki.organizations_configuration_changes_info",
+    "type": "module",
+    "short_description": "Information module for organizations _configuration _changes",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_configuration_changes_info.py"
    },
    {
     "name": "organizations_devices_availabilities_change_history_info",
@@ -52918,6 +54574,14 @@
     "short_description": "Information module for organizations _devices _cellular _uplinks _towers _by _device",
     "deprecated": false,
     "source": "plugins/modules/organizations_devices_cellular_uplinks_towers_by_device_info.py"
+   },
+   {
+    "name": "organizations_devices_certificates_info",
+    "fqcn": "cisco.meraki.organizations_devices_certificates_info",
+    "type": "module",
+    "short_description": "Information module for organizations _devices _certificates",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_devices_certificates_info.py"
    },
    {
     "name": "organizations_devices_controller_migrations",
@@ -53256,6 +54920,22 @@
     "source": "plugins/modules/organizations_inventory_devices_info.py"
    },
    {
+    "name": "organizations_inventory_devices_swaps_bulk",
+    "fqcn": "cisco.meraki.organizations_inventory_devices_swaps_bulk",
+    "type": "module",
+    "short_description": "Resource module for organizations _inventory _devices _swaps _bulk",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_inventory_devices_swaps_bulk.py"
+   },
+   {
+    "name": "organizations_inventory_devices_swaps_bulk_info",
+    "fqcn": "cisco.meraki.organizations_inventory_devices_swaps_bulk_info",
+    "type": "module",
+    "short_description": "Information module for organizations _inventory _devices _swaps _bulk",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_inventory_devices_swaps_bulk_info.py"
+   },
+   {
     "name": "organizations_inventory_onboarding_cloud_monitoring_export_events",
     "fqcn": "cisco.meraki.organizations_inventory_onboarding_cloud_monitoring_export_events",
     "type": "module",
@@ -53286,14 +54966,6 @@
     "short_description": "Information module for organizations _inventory _onboarding _cloud _monitoring _networks",
     "deprecated": false,
     "source": "plugins/modules/organizations_inventory_onboarding_cloud_monitoring_networks_info.py"
-   },
-   {
-    "name": "organizations_inventory_onboarding_cloud_monitoring_prepare",
-    "fqcn": "cisco.meraki.organizations_inventory_onboarding_cloud_monitoring_prepare",
-    "type": "module",
-    "short_description": "Resource module for organizations _inventory _onboarding _cloud _monitoring _prepare",
-    "deprecated": false,
-    "source": "plugins/modules/organizations_inventory_onboarding_cloud_monitoring_prepare.py"
    },
    {
     "name": "organizations_inventory_orders_claim",
@@ -53414,6 +55086,46 @@
     "short_description": "Resource module for organizations _networks _combine",
     "deprecated": false,
     "source": "plugins/modules/organizations_networks_combine.py"
+   },
+   {
+    "name": "organizations_networks_groups",
+    "fqcn": "cisco.meraki.organizations_networks_groups",
+    "type": "module",
+    "short_description": "Resource module for organizations _networks _groups",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_networks_groups.py"
+   },
+   {
+    "name": "organizations_networks_groups_bulk_assign",
+    "fqcn": "cisco.meraki.organizations_networks_groups_bulk_assign",
+    "type": "module",
+    "short_description": "Resource module for organizations _networks _groups _bulk _assign",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_networks_groups_bulk_assign.py"
+   },
+   {
+    "name": "organizations_networks_groups_bulk_unassign",
+    "fqcn": "cisco.meraki.organizations_networks_groups_bulk_unassign",
+    "type": "module",
+    "short_description": "Resource module for organizations _networks _groups _bulk _unassign",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_networks_groups_bulk_unassign.py"
+   },
+   {
+    "name": "organizations_networks_groups_info",
+    "fqcn": "cisco.meraki.organizations_networks_groups_info",
+    "type": "module",
+    "short_description": "Information module for organizations _networks _groups",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_networks_groups_info.py"
+   },
+   {
+    "name": "organizations_networks_groups_overview_by_group_info",
+    "fqcn": "cisco.meraki.organizations_networks_groups_overview_by_group_info",
+    "type": "module",
+    "short_description": "Information module for organizations _networks _groups _overview _by _group",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_networks_groups_overview_by_group_info.py"
    },
    {
     "name": "organizations_networks_moves",
@@ -53560,6 +55272,14 @@
     "source": "plugins/modules/organizations_policies_global_group_policies_firewall_rulesets_assignments.py"
    },
    {
+    "name": "organizations_policies_global_group_policies_firewall_rulesets_assignments_commit",
+    "fqcn": "cisco.meraki.organizations_policies_global_group_policies_firewall_rulesets_assignments_commit",
+    "type": "module",
+    "short_description": "Resource module for organizations _policies _global _group _policies _firewall _rulesets _assignments _commit",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_policies_global_group_policies_firewall_rulesets_assignments_commit.py"
+   },
+   {
     "name": "organizations_policies_global_group_policies_firewall_rulesets_assignments_info",
     "fqcn": "cisco.meraki.organizations_policies_global_group_policies_firewall_rulesets_assignments_info",
     "type": "module",
@@ -53574,6 +55294,38 @@
     "short_description": "Information module for organizations _policies _global _group _policies",
     "deprecated": false,
     "source": "plugins/modules/organizations_policies_global_group_policies_info.py"
+   },
+   {
+    "name": "organizations_policies_global_group_policies_networks_assignments_bulk_assign",
+    "fqcn": "cisco.meraki.organizations_policies_global_group_policies_networks_assignments_bulk_assign",
+    "type": "module",
+    "short_description": "Resource module for organizations _policies _global _group _policies _networks _assignments _bulk _assign",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_policies_global_group_policies_networks_assignments_bulk_assign.py"
+   },
+   {
+    "name": "organizations_policies_global_group_policies_networks_assignments_bulk_delete",
+    "fqcn": "cisco.meraki.organizations_policies_global_group_policies_networks_assignments_bulk_delete",
+    "type": "module",
+    "short_description": "Resource module for organizations _policies _global _group _policies _networks _assignments _bulk _delete",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_policies_global_group_policies_networks_assignments_bulk_delete.py"
+   },
+   {
+    "name": "organizations_policies_global_group_policies_networks_assignments_info",
+    "fqcn": "cisco.meraki.organizations_policies_global_group_policies_networks_assignments_info",
+    "type": "module",
+    "short_description": "Information module for organizations _policies _global _group _policies _networks _assignments",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_policies_global_group_policies_networks_assignments_info.py"
+   },
+   {
+    "name": "organizations_policies_global_group_policies_networks_info",
+    "fqcn": "cisco.meraki.organizations_policies_global_group_policies_networks_info",
+    "type": "module",
+    "short_description": "Information module for organizations _policies _global _group _policies _networks",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_policies_global_group_policies_networks_info.py"
    },
    {
     "name": "organizations_policy_objects",
@@ -53904,6 +55656,62 @@
     "source": "plugins/modules/organizations_splash_themes_info.py"
    },
    {
+    "name": "organizations_summary_sustainability_daily_consumer_metrics_networks_info",
+    "fqcn": "cisco.meraki.organizations_summary_sustainability_daily_consumer_metrics_networks_info",
+    "type": "module",
+    "short_description": "Information module for organizations _summary _sustainability _daily _consumer _metrics _networks",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_summary_sustainability_daily_consumer_metrics_networks_info.py"
+   },
+   {
+    "name": "organizations_summary_sustainability_summary_consumer_metrics_device_categories_aggregated_info",
+    "fqcn": "cisco.meraki.organizations_summary_sustainability_summary_consumer_metrics_device_categories_aggregated_info",
+    "type": "module",
+    "short_description": "Information module for organizations _summary _sustainability _summary _consumer _metrics _device _categories _aggregated",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_summary_sustainability_summary_consumer_metrics_device_categories_aggregated_info.py"
+   },
+   {
+    "name": "organizations_summary_sustainability_summary_consumer_metrics_device_categories_info",
+    "fqcn": "cisco.meraki.organizations_summary_sustainability_summary_consumer_metrics_device_categories_info",
+    "type": "module",
+    "short_description": "Information module for organizations _summary _sustainability _summary _consumer _metrics _device _categories",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_summary_sustainability_summary_consumer_metrics_device_categories_info.py"
+   },
+   {
+    "name": "organizations_summary_sustainability_summary_consumer_metrics_devices_info",
+    "fqcn": "cisco.meraki.organizations_summary_sustainability_summary_consumer_metrics_devices_info",
+    "type": "module",
+    "short_description": "Information module for organizations _summary _sustainability _summary _consumer _metrics _devices",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_summary_sustainability_summary_consumer_metrics_devices_info.py"
+   },
+   {
+    "name": "organizations_summary_sustainability_summary_consumer_metrics_networks_aggregated_info",
+    "fqcn": "cisco.meraki.organizations_summary_sustainability_summary_consumer_metrics_networks_aggregated_info",
+    "type": "module",
+    "short_description": "Information module for organizations _summary _sustainability _summary _consumer _metrics _networks _aggregated",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_summary_sustainability_summary_consumer_metrics_networks_aggregated_info.py"
+   },
+   {
+    "name": "organizations_summary_sustainability_summary_consumer_metrics_networks_info",
+    "fqcn": "cisco.meraki.organizations_summary_sustainability_summary_consumer_metrics_networks_info",
+    "type": "module",
+    "short_description": "Information module for organizations _summary _sustainability _summary _consumer _metrics _networks",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_summary_sustainability_summary_consumer_metrics_networks_info.py"
+   },
+   {
+    "name": "organizations_summary_switch_power_history_info",
+    "fqcn": "cisco.meraki.organizations_summary_switch_power_history_info",
+    "type": "module",
+    "short_description": "Information module for organizations _summary _switch _power _history",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_summary_switch_power_history_info.py"
+   },
+   {
     "name": "organizations_summary_top_appliances_by_utilization_info",
     "fqcn": "cisco.meraki.organizations_summary_top_appliances_by_utilization_info",
     "type": "module",
@@ -54048,6 +55856,14 @@
     "source": "plugins/modules/organizations_uplinks_statuses_info.py"
    },
    {
+    "name": "organizations_webhooks_alert_types_info",
+    "fqcn": "cisco.meraki.organizations_webhooks_alert_types_info",
+    "type": "module",
+    "short_description": "Information module for organizations _webhooks _alert _types",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_webhooks_alert_types_info.py"
+   },
+   {
     "name": "organizations_webhooks_callbacks_statuses_info",
     "fqcn": "cisco.meraki.organizations_webhooks_callbacks_statuses_info",
     "type": "module",
@@ -54080,12 +55896,44 @@
     "source": "plugins/modules/organizations_wireless_air_marshal_settings_by_network_info.py"
    },
    {
+    "name": "organizations_wireless_clients_connections_impacted_by_network_by_ssid_info",
+    "fqcn": "cisco.meraki.organizations_wireless_clients_connections_impacted_by_network_by_ssid_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _clients _connections _impacted _by _network _by _ssid",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_clients_connections_impacted_by_network_by_ssid_info.py"
+   },
+   {
     "name": "organizations_wireless_clients_overview_by_device_info",
     "fqcn": "cisco.meraki.organizations_wireless_clients_overview_by_device_info",
     "type": "module",
     "short_description": "Information module for organizations _wireless _clients _overview _by _device",
     "deprecated": false,
     "source": "plugins/modules/organizations_wireless_clients_overview_by_device_info.py"
+   },
+   {
+    "name": "organizations_wireless_clients_usage_by_network_by_ssid_info",
+    "fqcn": "cisco.meraki.organizations_wireless_clients_usage_by_network_by_ssid_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _clients _usage _by _network _by _ssid",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_clients_usage_by_network_by_ssid_info.py"
+   },
+   {
+    "name": "organizations_wireless_clients_usage_by_network_info",
+    "fqcn": "cisco.meraki.organizations_wireless_clients_usage_by_network_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _clients _usage _by _network",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_clients_usage_by_network_info.py"
+   },
+   {
+    "name": "organizations_wireless_clients_usage_by_ssid_info",
+    "fqcn": "cisco.meraki.organizations_wireless_clients_usage_by_ssid_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _clients _usage _by _ssid",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_clients_usage_by_ssid_info.py"
    },
    {
     "name": "organizations_wireless_controller_availabilities_change_history_info",
@@ -54392,6 +56240,14 @@
     "source": "plugins/modules/organizations_wireless_radio_auto_rf_channels_recalculate.py"
    },
    {
+    "name": "organizations_wireless_radio_overrides_by_device_info",
+    "fqcn": "cisco.meraki.organizations_wireless_radio_overrides_by_device_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _radio _overrides _by _device",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_radio_overrides_by_device_info.py"
+   },
+   {
     "name": "organizations_wireless_radio_rrm_by_network_info",
     "fqcn": "cisco.meraki.organizations_wireless_radio_rrm_by_network_info",
     "type": "module",
@@ -54430,6 +56286,62 @@
     "short_description": "Information module for organizations _wireless _ssids _open _roaming _by _network",
     "deprecated": false,
     "source": "plugins/modules/organizations_wireless_ssids_open_roaming_by_network_info.py"
+   },
+   {
+    "name": "organizations_wireless_ssids_owe_by_network_info",
+    "fqcn": "cisco.meraki.organizations_wireless_ssids_owe_by_network_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _ssids _owe _by _network",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_ssids_owe_by_network_info.py"
+   },
+   {
+    "name": "organizations_wireless_ssids_profiles",
+    "fqcn": "cisco.meraki.organizations_wireless_ssids_profiles",
+    "type": "module",
+    "short_description": "Resource module for organizations _wireless _ssids _profiles",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_ssids_profiles.py"
+   },
+   {
+    "name": "organizations_wireless_ssids_profiles_assignments",
+    "fqcn": "cisco.meraki.organizations_wireless_ssids_profiles_assignments",
+    "type": "module",
+    "short_description": "Resource module for organizations _wireless _ssids _profiles _assignments",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_ssids_profiles_assignments.py"
+   },
+   {
+    "name": "organizations_wireless_ssids_profiles_assignments_by_network_info",
+    "fqcn": "cisco.meraki.organizations_wireless_ssids_profiles_assignments_by_network_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _ssids _profiles _assignments _by _network",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_ssids_profiles_assignments_by_network_info.py"
+   },
+   {
+    "name": "organizations_wireless_ssids_profiles_assignments_info",
+    "fqcn": "cisco.meraki.organizations_wireless_ssids_profiles_assignments_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _ssids _profiles _assignments",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_ssids_profiles_assignments_info.py"
+   },
+   {
+    "name": "organizations_wireless_ssids_profiles_info",
+    "fqcn": "cisco.meraki.organizations_wireless_ssids_profiles_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _ssids _profiles",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_ssids_profiles_info.py"
+   },
+   {
+    "name": "organizations_wireless_ssids_profiles_overviews_info",
+    "fqcn": "cisco.meraki.organizations_wireless_ssids_profiles_overviews_info",
+    "type": "module",
+    "short_description": "Information module for organizations _wireless _ssids _profiles _overviews",
+    "deprecated": false,
+    "source": "plugins/modules/organizations_wireless_ssids_profiles_overviews_info.py"
    },
    {
     "name": "organizations_wireless_ssids_statuses_by_device_info",
@@ -54961,7 +56873,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.25.1",
+   "version": "2.26.0",
    "description": "Ansible Modules for Meraki",
    "tags": [
     "cisco",
@@ -54974,7 +56886,7 @@
    "repository": "https://github.com/meraki/dashboard-api-ansible",
    "documentation": "https://meraki.github.io/dashboard-api-ansible/"
   },
-  "last_commit": "2026-09-03T13:05:49-06:00",
+  "last_commit": "2026-11-10T13:34:31-06:00",
   "source_path": ""
  },
  {
@@ -55332,6 +57244,78 @@
     "short_description": "Manage EPG uSeg Attributes in schema templates",
     "deprecated": false,
     "source": "plugins/modules/mso_schema_template_anp_epg_useg_attribute.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg",
+    "type": "module",
+    "short_description": "Manage Endpoint Security Groups (ESGs) in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg_annotation",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg_annotation",
+    "type": "module",
+    "short_description": "Manage ESG annotations in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg_annotation.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg_contract",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg_contract",
+    "type": "module",
+    "short_description": "Manage ESG contracts in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg_contract.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg_epg_selector",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg_epg_selector",
+    "type": "module",
+    "short_description": "Manage ESG EPG selectors in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg_epg_selector.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg_external_epg_selector",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg_external_epg_selector",
+    "type": "module",
+    "short_description": "Manage ESG external EPG selectors in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg_external_epg_selector.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg_external_subnet_selector",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg_external_subnet_selector",
+    "type": "module",
+    "short_description": "Manage ESG external subnet selectors in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg_external_subnet_selector.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg_intra_esg_contract",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg_intra_esg_contract",
+    "type": "module",
+    "short_description": "Manage ESG intra-ESG contracts in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg_intra_esg_contract.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg_subnet_selector",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg_subnet_selector",
+    "type": "module",
+    "short_description": "Manage ESG subnet selectors in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg_subnet_selector.py"
+   },
+   {
+    "name": "mso_schema_template_anp_esg_tag_selector",
+    "fqcn": "cisco.mso.mso_schema_template_anp_esg_tag_selector",
+    "type": "module",
+    "short_description": "Manage ESG tag selectors in schema templates",
+    "deprecated": false,
+    "source": "plugins/modules/mso_schema_template_anp_esg_tag_selector.py"
    },
    {
     "name": "mso_schema_template_bd",
@@ -56071,7 +58055,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.13.0",
+   "version": "3.0.0",
    "description": "An Ansible collection for managing Cisco ACI Multi-Site",
    "tags": [
     "cisco",
@@ -56086,13 +58070,21 @@
    "repository": "https://github.com/CiscoDevNet/ansible-mso",
    "documentation": "https://docs.ansible.com/ansible/latest/scenario_guides/guide_aci.html"
   },
-  "last_commit": "2026-10-16T08:04:59+10:00",
+  "last_commit": "2026-11-13T00:13:17+10:00",
   "source_path": ""
  },
  {
   "fqcn": "cisco.nd",
   "status": "ok",
   "items": [
+   {
+    "name": "nd4x_module_test",
+    "fqcn": "cisco.nd.nd4x_module_test",
+    "type": "module",
+    "short_description": "Run standardized integration tests for ND 4.x modules",
+    "deprecated": false,
+    "source": "plugins/modules/nd4x_module_test.py"
+   },
    {
     "name": "nd_api_key",
     "fqcn": "cisco.nd.nd_api_key",
@@ -56230,6 +58222,14 @@
     "source": "plugins/modules/nd_interface_ethernet_access.py"
    },
    {
+    "name": "nd_interface_ethernet_dot1q_tunnel_host",
+    "fqcn": "cisco.nd.nd_interface_ethernet_dot1q_tunnel_host",
+    "type": "module",
+    "short_description": "Manage NX-OS Ethernet dot1q-tunnel host interfaces on Nexus Dashboard",
+    "deprecated": false,
+    "source": "plugins/modules/nd_interface_ethernet_dot1q_tunnel_host.py"
+   },
+   {
     "name": "nd_interface_ethernet_routed",
     "fqcn": "cisco.nd.nd_interface_ethernet_routed",
     "type": "module",
@@ -56252,6 +58252,14 @@
     "short_description": "Manage Interface Flow Rules",
     "deprecated": false,
     "source": "plugins/modules/nd_interface_flow_rules.py"
+   },
+   {
+    "name": "nd_interface_group_validate",
+    "fqcn": "cisco.nd.nd_interface_group_validate",
+    "type": "module",
+    "short_description": "Validate live Interface Group state in ND integration tests",
+    "deprecated": false,
+    "source": "plugins/modules/tests/integration/nd_interface_group_validate.py"
    },
    {
     "name": "nd_interface_loopback",
@@ -56284,6 +58292,14 @@
     "short_description": "Manage port-channel (trunkPoHost, iosXeTrunkPoHost) interfaces on Cisco Nexus Dashboard",
     "deprecated": false,
     "source": "plugins/modules/nd_interface_port_channel_trunk_host.py"
+   },
+   {
+    "name": "nd_interface_preview_validate",
+    "fqcn": "cisco.nd.nd_interface_preview_validate",
+    "type": "module",
+    "short_description": "Validate Interface preview results in ND integration tests",
+    "deprecated": false,
+    "source": "plugins/modules/tests/integration/nd_interface_preview_validate.py"
    },
    {
     "name": "nd_interface_subinterface_managed",
@@ -56446,6 +58462,14 @@
     "source": "plugins/modules/nd_manage_fabric_ibgp_vxlan.py"
    },
    {
+    "name": "nd_manage_interface_group",
+    "fqcn": "cisco.nd.nd_manage_interface_group",
+    "type": "module",
+    "short_description": "Manage Interface Groups on Cisco Nexus Dashboard fabrics",
+    "deprecated": false,
+    "source": "plugins/modules/nd_manage_interface_group.py"
+   },
+   {
     "name": "nd_manage_l3out",
     "fqcn": "cisco.nd.nd_manage_l3out",
     "type": "module",
@@ -56465,7 +58489,7 @@
     "name": "nd_manage_networks",
     "fqcn": "cisco.nd.nd_manage_networks",
     "type": "module",
-    "short_description": "Manage Network definitions on Cisco Nexus Dashboard",
+    "short_description": "Manages Network definitions on Cisco Nexus Dashboard.",
     "deprecated": false,
     "source": "plugins/modules/nd_manage_networks.py"
    },
@@ -56508,6 +58532,14 @@
     "short_description": "Manage route maps on Cisco Nexus Dashboard fabrics",
     "deprecated": false,
     "source": "plugins/modules/nd_manage_route_map.py"
+   },
+   {
+    "name": "nd_manage_smart_switches_onboarding",
+    "fqcn": "cisco.nd.nd_manage_smart_switches_onboarding",
+    "type": "module",
+    "short_description": "Manage Smart Switch onboarding on Cisco Nexus Dashboard",
+    "deprecated": false,
+    "source": "plugins/modules/nd_manage_smart_switches_onboarding.py"
    },
    {
     "name": "nd_manage_switches",
@@ -56684,7 +58716,7 @@
    "repository": "https://github.com/CiscoDevNet/ansible-nd",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/cisco/nd/docs/"
   },
-  "last_commit": "2026-10-19T16:44:55-04:00",
+  "last_commit": "2026-11-12T15:07:07-05:00",
   "source_path": ""
  },
  {
@@ -56711,7 +58743,7 @@
     "name": "nxos_acl_interfaces",
     "fqcn": "cisco.nxos.nxos_acl_interfaces",
     "type": "module",
-    "short_description": "ACL interfaces resource module",
+    "short_description": "ACL interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_acl_interfaces.py"
    },
@@ -56719,7 +58751,7 @@
     "name": "nxos_acls",
     "fqcn": "cisco.nxos.nxos_acls",
     "type": "module",
-    "short_description": "ACLs resource module",
+    "short_description": "ACLs resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_acls.py"
    },
@@ -56743,7 +58775,7 @@
     "name": "nxos_bfd_interfaces",
     "fqcn": "cisco.nxos.nxos_bfd_interfaces",
     "type": "module",
-    "short_description": "BFD interfaces resource module",
+    "short_description": "BFD interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_bfd_interfaces.py"
    },
@@ -56751,7 +58783,7 @@
     "name": "nxos_bgp_address_family",
     "fqcn": "cisco.nxos.nxos_bgp_address_family",
     "type": "module",
-    "short_description": "BGP Address Family resource module.",
+    "short_description": "BGP address family resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_bgp_address_family.py"
    },
@@ -56759,7 +58791,7 @@
     "name": "nxos_bgp_global",
     "fqcn": "cisco.nxos.nxos_bgp_global",
     "type": "module",
-    "short_description": "BGP Global resource module.",
+    "short_description": "BGP global resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_bgp_global.py"
    },
@@ -56767,7 +58799,7 @@
     "name": "nxos_bgp_neighbor_address_family",
     "fqcn": "cisco.nxos.nxos_bgp_neighbor_address_family",
     "type": "module",
-    "short_description": "BGP Neighbor Address Family resource module.",
+    "short_description": "BGP neighbor address family resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_bgp_neighbor_address_family.py"
    },
@@ -56775,7 +58807,7 @@
     "name": "nxos_bgp_templates",
     "fqcn": "cisco.nxos.nxos_bgp_templates",
     "type": "module",
-    "short_description": "BGP Templates resource module.",
+    "short_description": "BGP templates resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_bgp_templates.py"
    },
@@ -56820,6 +58852,14 @@
     "source": "plugins/modules/nxos_evpn_vni.py"
    },
    {
+    "name": "nxos_evpn_vnis",
+    "fqcn": "cisco.nxos.nxos_evpn_vnis",
+    "type": "module",
+    "short_description": "EVPN VNIs resource module.",
+    "deprecated": false,
+    "source": "plugins/modules/nxos_evpn_vnis.py"
+   },
+   {
     "name": "nxos_facts",
     "fqcn": "cisco.nxos.nxos_facts",
     "type": "module",
@@ -56831,7 +58871,7 @@
     "name": "nxos_fc_interfaces",
     "fqcn": "cisco.nxos.nxos_fc_interfaces",
     "type": "module",
-    "short_description": "Fc Interfaces resource module",
+    "short_description": "FC interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_fc_interfaces.py"
    },
@@ -56887,7 +58927,7 @@
     "name": "nxos_hsrp_interfaces",
     "fqcn": "cisco.nxos.nxos_hsrp_interfaces",
     "type": "module",
-    "short_description": "HSRP interfaces resource module",
+    "short_description": "HSRP interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_hsrp_interfaces.py"
    },
@@ -56911,7 +58951,7 @@
     "name": "nxos_igmp_snooping",
     "fqcn": "cisco.nxos.nxos_igmp_snooping",
     "type": "module",
-    "short_description": "Manages IGMP snooping global configuration.",
+    "short_description": "IGMP snooping resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_igmp_snooping.py"
    },
@@ -56927,7 +58967,7 @@
     "name": "nxos_interfaces",
     "fqcn": "cisco.nxos.nxos_interfaces",
     "type": "module",
-    "short_description": "Interfaces resource module",
+    "short_description": "Interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_interfaces.py"
    },
@@ -56935,7 +58975,7 @@
     "name": "nxos_l2_interfaces",
     "fqcn": "cisco.nxos.nxos_l2_interfaces",
     "type": "module",
-    "short_description": "L2 interfaces resource module",
+    "short_description": "L2 interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_l2_interfaces.py"
    },
@@ -56943,7 +58983,7 @@
     "name": "nxos_l3_interfaces",
     "fqcn": "cisco.nxos.nxos_l3_interfaces",
     "type": "module",
-    "short_description": "L3 interfaces resource module",
+    "short_description": "L3 interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_l3_interfaces.py"
    },
@@ -56951,7 +58991,7 @@
     "name": "nxos_lacp",
     "fqcn": "cisco.nxos.nxos_lacp",
     "type": "module",
-    "short_description": "LACP resource module",
+    "short_description": "LACP resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_lacp.py"
    },
@@ -56959,7 +58999,7 @@
     "name": "nxos_lacp_interfaces",
     "fqcn": "cisco.nxos.nxos_lacp_interfaces",
     "type": "module",
-    "short_description": "LACP interfaces resource module",
+    "short_description": "LACP interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_lacp_interfaces.py"
    },
@@ -56967,7 +59007,7 @@
     "name": "nxos_lag_interfaces",
     "fqcn": "cisco.nxos.nxos_lag_interfaces",
     "type": "module",
-    "short_description": "LAG interfaces resource module",
+    "short_description": "LAG interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_lag_interfaces.py"
    },
@@ -56975,7 +59015,7 @@
     "name": "nxos_lldp_global",
     "fqcn": "cisco.nxos.nxos_lldp_global",
     "type": "module",
-    "short_description": "LLDP resource module",
+    "short_description": "LLDP global resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_lldp_global.py"
    },
@@ -56983,7 +59023,7 @@
     "name": "nxos_lldp_interfaces",
     "fqcn": "cisco.nxos.nxos_lldp_interfaces",
     "type": "module",
-    "short_description": "LLDP interfaces resource module",
+    "short_description": "LLDP interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_lldp_interfaces.py"
    },
@@ -56991,7 +59031,7 @@
     "name": "nxos_logging_global",
     "fqcn": "cisco.nxos.nxos_logging_global",
     "type": "module",
-    "short_description": "Logging resource module.",
+    "short_description": "Logging global resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_logging_global.py"
    },
@@ -56999,9 +59039,17 @@
     "name": "nxos_ntp_global",
     "fqcn": "cisco.nxos.nxos_ntp_global",
     "type": "module",
-    "short_description": "NTP Global resource module.",
+    "short_description": "NTP global resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_ntp_global.py"
+   },
+   {
+    "name": "nxos_nve_interface",
+    "fqcn": "cisco.nxos.nxos_nve_interface",
+    "type": "module",
+    "short_description": "NVE interface resource module.",
+    "deprecated": false,
+    "source": "plugins/modules/nxos_nve_interface.py"
    },
    {
     "name": "nxos_nxapi",
@@ -57015,7 +59063,7 @@
     "name": "nxos_ospf_interfaces",
     "fqcn": "cisco.nxos.nxos_ospf_interfaces",
     "type": "module",
-    "short_description": "OSPF Interfaces Resource Module.",
+    "short_description": "OSPF interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_ospf_interfaces.py"
    },
@@ -57023,7 +59071,7 @@
     "name": "nxos_ospfv2",
     "fqcn": "cisco.nxos.nxos_ospfv2",
     "type": "module",
-    "short_description": "OSPFv2 resource module",
+    "short_description": "OSPFv2 resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_ospfv2.py"
    },
@@ -57031,7 +59079,7 @@
     "name": "nxos_ospfv3",
     "fqcn": "cisco.nxos.nxos_ospfv3",
     "type": "module",
-    "short_description": "OSPFv3 resource module",
+    "short_description": "OSPFv3 resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_ospfv3.py"
    },
@@ -57079,7 +59127,7 @@
     "name": "nxos_prefix_lists",
     "fqcn": "cisco.nxos.nxos_prefix_lists",
     "type": "module",
-    "short_description": "Prefix-Lists resource module.",
+    "short_description": "Prefix lists resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_prefix_lists.py"
    },
@@ -57103,7 +59151,7 @@
     "name": "nxos_route_maps",
     "fqcn": "cisco.nxos.nxos_route_maps",
     "type": "module",
-    "short_description": "Route Maps resource module.",
+    "short_description": "Route maps resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_route_maps.py"
    },
@@ -57127,7 +59175,7 @@
     "name": "nxos_snmp_server",
     "fqcn": "cisco.nxos.nxos_snmp_server",
     "type": "module",
-    "short_description": "SNMP Server resource module.",
+    "short_description": "SNMP server resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_snmp_server.py"
    },
@@ -57135,7 +59183,7 @@
     "name": "nxos_static_routes",
     "fqcn": "cisco.nxos.nxos_static_routes",
     "type": "module",
-    "short_description": "Static routes resource module",
+    "short_description": "Static routes resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_static_routes.py"
    },
@@ -57151,7 +59199,7 @@
     "name": "nxos_telemetry",
     "fqcn": "cisco.nxos.nxos_telemetry",
     "type": "module",
-    "short_description": "TELEMETRY resource module",
+    "short_description": "Telemetry resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_telemetry.py"
    },
@@ -57183,7 +59231,7 @@
     "name": "nxos_vlans",
     "fqcn": "cisco.nxos.nxos_vlans",
     "type": "module",
-    "short_description": "VLANs resource module",
+    "short_description": "VLANs resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_vlans.py"
    },
@@ -57191,7 +59239,7 @@
     "name": "nxos_vpc",
     "fqcn": "cisco.nxos.nxos_vpc",
     "type": "module",
-    "short_description": "VPC global domain resource module.",
+    "short_description": "VPC resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_vpc.py"
    },
@@ -57199,7 +59247,7 @@
     "name": "nxos_vpc_interface",
     "fqcn": "cisco.nxos.nxos_vpc_interface",
     "type": "module",
-    "short_description": "VPC interface resource module",
+    "short_description": "VPC interface resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_vpc_interface.py"
    },
@@ -57215,7 +59263,7 @@
     "name": "nxos_vrf_address_family",
     "fqcn": "cisco.nxos.nxos_vrf_address_family",
     "type": "module",
-    "short_description": "Resource module to configure VRF address family definitions.",
+    "short_description": "VRF address family resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_vrf_address_family.py"
    },
@@ -57231,7 +59279,7 @@
     "name": "nxos_vrf_global",
     "fqcn": "cisco.nxos.nxos_vrf_global",
     "type": "module",
-    "short_description": "Resource module to configure VRF definitions.",
+    "short_description": "VRF global resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_vrf_global.py"
    },
@@ -57247,7 +59295,7 @@
     "name": "nxos_vrf_interfaces",
     "fqcn": "cisco.nxos.nxos_vrf_interfaces",
     "type": "module",
-    "short_description": "Resource module to configure VRF interfaces.",
+    "short_description": "VRF interfaces resource module.",
     "deprecated": false,
     "source": "plugins/modules/nxos_vrf_interfaces.py"
    },
@@ -57341,7 +59389,7 @@
    }
   ],
   "galaxy": {
-   "version": "13.0.0",
+   "version": "14.0.0",
    "description": "Ansible Network Collection for Cisco NXOS devices.",
    "tags": [
     "cisco",
@@ -57353,7 +59401,7 @@
    "repository": "https://github.com/ansible-collections/cisco.nxos",
    "documentation": null
   },
-  "last_commit": "2026-10-15T14:31:28+05:30",
+  "last_commit": "2026-11-16T13:07:42+05:30",
   "source_path": ""
  },
  {
@@ -57389,7 +59437,7 @@
    "repository": "https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/ansible_collections/signalfx/splunk_otel_collector",
    "documentation": null
   },
-  "last_commit": "2026-10-20T11:39:53-07:00",
+  "last_commit": "2026-11-13T16:20:45-08:00",
   "source_path": "deployments/ansible_collections/signalfx/splunk_otel_collector",
   "upstream": "signalfx.splunk_otel_collector"
  },
@@ -58091,7 +60139,7 @@
    "repository": "https://github.com/ansible-collections/cloud.common",
    "documentation": null
   },
-  "last_commit": "2026-03-30T20:43:19+00:00",
+  "last_commit": "2026-03-30T20:43:19Z",
   "source_path": ""
  },
  {
@@ -59571,7 +61619,7 @@
    }
   ],
   "galaxy": {
-   "version": "8.3.0",
+   "version": "8.4.0",
    "description": "Confluent Platform Ansible Collection (https://github.com/confluentinc/cp-ansible)",
    "tags": [
     "confluent",
@@ -59581,7 +61629,7 @@
    "repository": "https://github.com/confluentinc/cp-ansible",
    "documentation": "https://docs.confluent.io/ansible/current/overview.html"
   },
-  "last_commit": "2026-10-12T05:18:50+00:00",
+  "last_commit": "2026-11-13T02:36:00+05:30",
   "source_path": ""
  },
  {
@@ -59765,6 +61813,22 @@
     "source": "plugins/modules/ngsiem_search.py"
    },
    {
+    "name": "prevention_policy",
+    "fqcn": "crowdstrike.falcon.prevention_policy",
+    "type": "module",
+    "short_description": "Manage Falcon prevention policies",
+    "deprecated": false,
+    "source": "plugins/modules/prevention_policy.py"
+   },
+   {
+    "name": "prevention_policy_info",
+    "fqcn": "crowdstrike.falcon.prevention_policy_info",
+    "type": "module",
+    "short_description": "Get information about Falcon prevention policies",
+    "deprecated": false,
+    "source": "plugins/modules/prevention_policy_info.py"
+   },
+   {
     "name": "sensor_download",
     "fqcn": "crowdstrike.falcon.sensor_download",
     "type": "module",
@@ -59903,7 +61967,7 @@
    "repository": "https://github.com/CrowdStrike/ansible_collection_crowdstrike",
    "documentation": "https://github.com/CrowdStrike/ansible_collection_crowdstrike"
   },
-  "last_commit": "2026-10-12T13:01:57-04:00",
+  "last_commit": "2026-11-15T20:34:53-05:00",
   "source_path": ""
  },
  {
@@ -59928,7 +61992,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.3.14",
+   "version": "1.3.15",
    "description": "This is a Collection of the CyberArk Secrets Manager toolkit.",
    "tags": [
     "cyberark",
@@ -59946,7 +62010,7 @@
    "repository": "https://github.com/cyberark/ansible-conjur-collection",
    "documentation": null
   },
-  "last_commit": "2026-08-05T12:00:04+02:00",
+  "last_commit": "2026-11-12T17:58:52+02:00",
   "source_path": ""
  },
  {
@@ -60141,7 +62205,7 @@
    "repository": "https://github.com/ansible-collections/Datadog",
    "documentation": "https://github.com/ansible-collections/Datadog/blob/main/README.md"
   },
-  "last_commit": "2026-05-06T05:28:27+00:00",
+  "last_commit": "2026-05-06T05:28:27Z",
   "source_path": ""
  },
  {
@@ -67548,7 +69612,7 @@
    "repository": "https://github.com/Dynatrace/Dynatrace-OneAgent-Ansible",
    "documentation": "https://docs.dynatrace.com/docs/setup-and-configuration/dynatrace-oneagent/deployment-orchestration/ansible"
   },
-  "last_commit": "2026-10-06T10:11:20+02:00",
+  "last_commit": "2026-10-28T14:03:45+01:00",
   "source_path": ""
  },
  {
@@ -68201,6 +70265,14 @@
     "source": "plugins/modules/purefa_policy_management_access.py"
    },
    {
+    "name": "purefa_preset",
+    "fqcn": "everpure.flasharray.purefa_preset",
+    "type": "module",
+    "short_description": "Manage Fusion fleet block workload presets",
+    "deprecated": false,
+    "source": "plugins/modules/purefa_preset.py"
+   },
+   {
     "name": "purefa_proxy",
     "fqcn": "everpure.flasharray.purefa_proxy",
     "type": "module",
@@ -68434,7 +70506,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.45.1",
+   "version": "1.46.0",
    "description": "Collection of modules to manage Everpure FlashArrays (including Cloud Block Store)",
    "tags": [
     "everpure",
@@ -68446,7 +70518,7 @@
    "repository": "https://github.com/Everpure-Ansible/FlashArray-Collection",
    "documentation": "https://github.com/Everpure-Ansible/FlashArray-Collection"
   },
-  "last_commit": "2026-10-20T13:43:04-04:00",
+  "last_commit": "2026-11-09T12:02:52-05:00",
   "source_path": ""
  },
  {
@@ -68983,7 +71055,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.28.0",
+   "version": "1.29.0",
    "description": "Collection of modules to manage Everpure FlashBlade",
    "tags": [
     "everpure",
@@ -68996,7 +71068,7 @@
    "repository": "https://github.com/Everpure-Ansible/FlashBlade-Collection",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/everpure/flashblade/index.html#plugins-in-everpure-flashblade"
   },
-  "last_commit": "2026-10-20T13:47:55-04:00",
+  "last_commit": "2026-11-03T10:01:19-05:00",
   "source_path": ""
  },
  {
@@ -71105,7 +73177,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.45.0-devel",
+   "version": "1.46.0-devel",
    "description": "F5 BIG-IP Imperative Collection for Ansible",
    "tags": [
     "f5",
@@ -71116,7 +73188,7 @@
    "repository": "https://github.com/F5Networks/f5-ansible-f5modules",
    "documentation": "https://clouddocs.f5.com/products/orchestration/ansible/devel/modules/module_index.html"
   },
-  "last_commit": "2026-09-08T12:34:51-07:00",
+  "last_commit": "2026-10-20T22:47:43-07:00",
   "source_path": "ansible_collections/f5networks/f5_modules"
  },
  {
@@ -83157,6 +85229,14 @@
   "status": "ok",
   "items": [
    {
+    "name": "faz_cli_exec_fgfm_autolinkdevice",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_exec_fgfm_autolinkdevice",
+    "type": "module",
+    "short_description": "Force start autolink process on link-pending device.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_exec_fgfm_autolinkdevice.py"
+   },
+   {
     "name": "faz_cli_exec_fgfm_reclaimdevtunnel",
     "fqcn": "fortinet.fortianalyzer.faz_cli_exec_fgfm_reclaimdevtunnel",
     "type": "module",
@@ -83216,7 +85296,7 @@
     "name": "faz_cli_fmupdate_fdssetting",
     "fqcn": "fortinet.fortianalyzer.faz_cli_fmupdate_fdssetting",
     "type": "module",
-    "short_description": "Configure FortiGuard settings.",
+    "short_description": "Configure FortiGuard fds settings.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_fmupdate_fdssetting.py"
    },
@@ -83272,7 +85352,7 @@
     "name": "faz_cli_fmupdate_fgdsetting",
     "fqcn": "fortinet.fortianalyzer.faz_cli_fmupdate_fgdsetting",
     "type": "module",
-    "short_description": "Cli fmupdate fgd setting",
+    "short_description": "Configure FortiGuard fgd parameters.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_fmupdate_fgdsetting.py"
    },
@@ -83709,6 +85789,14 @@
     "source": "plugins/modules/faz_cli_system_csf_trustedlist.py"
    },
    {
+    "name": "faz_cli_system_csf_trustedlist_adom",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_csf_trustedlist_adom",
+    "type": "module",
+    "short_description": "Admin domain.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_csf_trustedlist_adom.py"
+   },
+   {
     "name": "faz_cli_system_dns",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_dns",
     "type": "module",
@@ -83840,7 +85928,7 @@
     "name": "faz_cli_system_localinpolicy6_dport",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_localinpolicy6_dport",
     "type": "module",
-    "short_description": "Cli system local in policy6 dport",
+    "short_description": "List of Destination port number.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_localinpolicy6_dport.py"
    },
@@ -83848,7 +85936,7 @@
     "name": "faz_cli_system_localinpolicy6_dst",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_localinpolicy6_dst",
     "type": "module",
-    "short_description": "Cli system local in policy6 dst",
+    "short_description": "Destination IP and prefix.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_localinpolicy6_dst.py"
    },
@@ -83856,7 +85944,7 @@
     "name": "faz_cli_system_localinpolicy6_intf",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_localinpolicy6_intf",
     "type": "module",
-    "short_description": "Cli system local in policy6 intf",
+    "short_description": "List of Incoming interface name.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_localinpolicy6_intf.py"
    },
@@ -83864,7 +85952,7 @@
     "name": "faz_cli_system_localinpolicy6_src",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_localinpolicy6_src",
     "type": "module",
-    "short_description": "Cli system local in policy6 src",
+    "short_description": "List of Source IP and prefix.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_localinpolicy6_src.py"
    },
@@ -83872,7 +85960,7 @@
     "name": "faz_cli_system_localinpolicy_dport",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_localinpolicy_dport",
     "type": "module",
-    "short_description": "Cli system local in policy dport",
+    "short_description": "List of Destination port number.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_localinpolicy_dport.py"
    },
@@ -83880,7 +85968,7 @@
     "name": "faz_cli_system_localinpolicy_dst",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_localinpolicy_dst",
     "type": "module",
-    "short_description": "Cli system local in policy dst",
+    "short_description": "List of Destination IP and mask.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_localinpolicy_dst.py"
    },
@@ -83888,7 +85976,7 @@
     "name": "faz_cli_system_localinpolicy_intf",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_localinpolicy_intf",
     "type": "module",
-    "short_description": "Cli system local in policy intf",
+    "short_description": "List of Incoming interface name.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_localinpolicy_intf.py"
    },
@@ -83896,7 +85984,7 @@
     "name": "faz_cli_system_localinpolicy_src",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_localinpolicy_src",
     "type": "module",
-    "short_description": "Cli system local in policy src",
+    "short_description": "List of Source IP and mask.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_localinpolicy_src.py"
    },
@@ -84037,12 +86125,36 @@
     "source": "plugins/modules/faz_cli_system_locallog_syslogd_setting.py"
    },
    {
+    "name": "faz_cli_system_locallog_tacacs_accounting_filter",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_locallog_tacacs_accounting_filter",
+    "type": "module",
+    "short_description": "Settings for tacacs+ accounting events filter.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_locallog_tacacs_accounting_filter.py"
+   },
+   {
+    "name": "faz_cli_system_locallog_tacacs_accounting_setting",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_locallog_tacacs_accounting_setting",
+    "type": "module",
+    "short_description": "Settings for tacacs+ accounting.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_locallog_tacacs_accounting_setting.py"
+   },
+   {
     "name": "faz_cli_system_log_alert",
     "fqcn": "fortinet.fortianalyzer.faz_cli_system_log_alert",
     "type": "module",
     "short_description": "Log based alert settings.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_log_alert.py"
+   },
+   {
+    "name": "faz_cli_system_log_apiratelimit",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_log_apiratelimit",
+    "type": "module",
+    "short_description": "API rate limit.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_log_apiratelimit.py"
    },
    {
     "name": "faz_cli_system_log_devicedisable",
@@ -84131,6 +86243,22 @@
     "short_description": "Log settings.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_log_settings.py"
+   },
+   {
+    "name": "faz_cli_system_log_settings_clientcertauth",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_log_settings_clientcertauth",
+    "type": "module",
+    "short_description": "Configure client certificate authentication.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_log_settings_clientcertauth.py"
+   },
+   {
+    "name": "faz_cli_system_log_settings_clientcertauth_trustedclient",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_log_settings_clientcertauth_trustedclient",
+    "type": "module",
+    "short_description": "Trusted client certificate or CN/SAN domain for client authentication.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_log_settings_clientcertauth_trustedclient.py"
    },
    {
     "name": "faz_cli_system_log_settings_rollinganalyzer",
@@ -84267,6 +86395,22 @@
     "short_description": "Configure admins.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_metadata_admins.py"
+   },
+   {
+    "name": "faz_cli_system_mlflow",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_mlflow",
+    "type": "module",
+    "short_description": "Configure mlflow.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_mlflow.py"
+   },
+   {
+    "name": "faz_cli_system_mlflow_models",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_mlflow_models",
+    "type": "module",
+    "short_description": "Machine learning model configurations.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_mlflow_models.py"
    },
    {
     "name": "faz_cli_system_ntp",
@@ -84427,6 +86571,30 @@
     "short_description": "SNMP user configuration.",
     "deprecated": false,
     "source": "plugins/modules/faz_cli_system_snmp_user.py"
+   },
+   {
+    "name": "faz_cli_system_soc_collector",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_soc_collector",
+    "type": "module",
+    "short_description": "FAZ SOC collector settings.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_soc_collector.py"
+   },
+   {
+    "name": "faz_cli_system_soc_collector_loglevel",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_soc_collector_loglevel",
+    "type": "module",
+    "short_description": "Log queue settings.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_soc_collector_loglevel.py"
+   },
+   {
+    "name": "faz_cli_system_soc_collector_logqueue",
+    "fqcn": "fortinet.fortianalyzer.faz_cli_system_soc_collector_logqueue",
+    "type": "module",
+    "short_description": "Log queue settings.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_cli_system_soc_collector_logqueue.py"
    },
    {
     "name": "faz_cli_system_socfabric",
@@ -85069,6 +87237,14 @@
     "source": "plugins/modules/faz_um_image_upgrade_ext.py"
    },
    {
+    "name": "faz_um_query_productapi",
+    "fqcn": "fortinet.fortianalyzer.faz_um_query_productapi",
+    "type": "module",
+    "short_description": "Get detailed information about IPS packages and signatures using the um/query/productapi endpoint.",
+    "deprecated": false,
+    "source": "plugins/modules/faz_um_query_productapi.py"
+   },
+   {
     "name": "fortianalyzer",
     "fqcn": "fortinet.fortianalyzer.fortianalyzer",
     "type": "httpapi",
@@ -85078,7 +87254,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.10.0",
+   "version": "1.11.0",
    "description": "The FortiAnalyzer Ansible Collection.",
    "tags": [
     "fortinet",
@@ -85091,7 +87267,7 @@
    "repository": "https://github.com/fortinet-ansible-dev/ansible-galaxy-fortianalyzer-collection",
    "documentation": "https://ansible-galaxy-fortianalyzer-docs.readthedocs.io/en/latest"
   },
-  "last_commit": "2025-10-22T11:33:28-07:00",
+  "last_commit": "2026-11-05T10:51:24-08:00",
   "source_path": ""
  },
  {
@@ -106097,7 +108273,7 @@
    "repository": "https://github.com/ansible-collections/google.cloud",
    "documentation": null
   },
-  "last_commit": "2026-10-01T14:37:36-07:00",
+  "last_commit": "2026-10-27T15:02:48-07:00",
   "source_path": ""
  },
  {
@@ -107681,6 +109857,14 @@
     "source": "plugins/modules/vault_namespace_info.py"
    },
    {
+    "name": "vault_events",
+    "fqcn": "hashicorp.vault.vault_events",
+    "type": "eda_event_source",
+    "short_description": "Receive events from HashiCorp Vault via WebSocket",
+    "deprecated": false,
+    "source": "extensions/eda/plugins/event_source/vault_events.py"
+   },
+   {
     "name": "kv1_secret_get",
     "fqcn": "hashicorp.vault.kv1_secret_get",
     "type": "lookup",
@@ -107704,12 +109888,14 @@
     "hashicorp",
     "vault",
     "security",
-    "infrastructure"
+    "infrastructure",
+    "eda",
+    "events"
    ],
    "repository": "https://github.com/ansible-collections/hashicorp.vault",
    "documentation": null
   },
-  "last_commit": "2026-10-15T13:15:45-05:00",
+  "last_commit": "2026-11-06T16:13:43+01:00",
   "source_path": ""
  },
  {
@@ -109813,6 +111999,14 @@
     "source": "playbooks/sds_block_direct/spare_node_facts.yml"
    },
    {
+    "name": "sds_block_direct.ssl_connection_examples",
+    "fqcn": "hitachivantara.vspone_block.sds_block_direct.ssl_connection_examples",
+    "type": "playbook",
+    "short_description": "SDS Block - SSL / TLS Connection Option Examples",
+    "deprecated": false,
+    "source": "playbooks/sds_block_direct/ssl_connection_examples.yml"
+   },
+   {
     "name": "sds_block_direct.storage_node",
     "fqcn": "hitachivantara.vspone_block.sds_block_direct.storage_node",
     "type": "playbook",
@@ -110509,6 +112703,14 @@
     "source": "playbooks/vsp_direct/snmp_settings_facts.yml"
    },
    {
+    "name": "vsp_direct.ssl_connection_examples",
+    "fqcn": "hitachivantara.vspone_block.vsp_direct.ssl_connection_examples",
+    "type": "playbook",
+    "short_description": "SSL / TLS Connection Option Examples",
+    "deprecated": false,
+    "source": "playbooks/vsp_direct/ssl_connection_examples.yml"
+   },
+   {
     "name": "vsp_direct.storage_pool",
     "fqcn": "hitachivantara.vspone_block.vsp_direct.storage_pool",
     "type": "playbook",
@@ -110862,7 +113064,7 @@
    }
   ],
   "galaxy": {
-   "version": "4.8.3",
+   "version": "4.9.1",
    "description": "Ansible modules to manage VSP block storage systems (VSP One Block, VSP 5000 series, VSP E series,  VSP F series, and VSP G series) and VSP One SDS Block and Cloud systems. These modules provide a simplified and automated way to configure and manage Hitachi storage systems, enabling seamless integration with Ansible playbooks and workflows.\n",
    "tags": [
     "hitachi",
@@ -110877,7 +113079,7 @@
    "repository": "https://github.com/hitachi-vantara/vspone-block-ansible",
    "documentation": "https://docs.ansible.com/ansible/devel/collections/hitachivantara/vspone_block/"
   },
-  "last_commit": "2026-09-18T22:27:17+05:30",
+  "last_commit": "2026-11-12T16:41:52+05:30",
   "source_path": ""
  },
  {
@@ -114999,7 +117201,7 @@
    }
   ],
   "galaxy": {
-   "version": "11.4.0",
+   "version": "11.5.0",
    "description": "Ansible Modules for HPE Oneview SDK",
    "tags": [
     "ansible",
@@ -115012,7 +117214,7 @@
    "repository": "https://github.com/HewlettPackard/oneview-ansible-collection",
    "documentation": "https://www.hpe.com/psnow/product-documentation?oid=5410258&cc=ae&lc=en"
   },
-  "last_commit": "2026-09-24T10:51:36+05:30",
+  "last_commit": "2026-10-29T12:51:37+05:30",
   "source_path": ""
  },
  {
@@ -115438,7 +117640,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.12.0-a0",
+   "version": "1.13.0-a0",
    "description": "This collection supports automation tasks on the IBM Z HMC such as creating, updating or deleting partitions, accesssing operating system messages, configuring adapters, managing HMC users, upgrading the SE and HMC firmware, and many more. It supports CPCs in classic mode and in DPM mode.",
    "tags": [
     "ibm",
@@ -115450,7 +117652,7 @@
    "repository": "https://github.com/zhmcclient/zhmc-ansible-modules",
    "documentation": "https://zhmcclient.github.io/zhmc-ansible-modules/"
   },
-  "last_commit": "2026-10-19T19:28:41+02:00",
+  "last_commit": "2026-11-06T11:22:30+01:00",
   "source_path": ""
  },
  {
@@ -115593,7 +117795,7 @@
    "repository": "https://github.com/ansible-collections/ibm_zos_cics",
    "documentation": "https://ibm.github.io/z_ansible_collections_doc"
   },
-  "last_commit": "2025-12-24T10:59:53+00:00",
+  "last_commit": "2026-11-13T15:26:42Z",
   "source_path": ""
  },
  {
@@ -115817,6 +118019,14 @@
     "source": "plugins/modules/zos_user_info.py"
    },
    {
+    "name": "zos_volume_free",
+    "fqcn": "ibm.ibm_zos_core.zos_volume_free",
+    "type": "module",
+    "short_description": "Query space and status information for z/OS DASD volumes",
+    "deprecated": false,
+    "source": "plugins/modules/zos_volume_free.py"
+   },
+   {
     "name": "zos_volume_init",
     "fqcn": "ibm.ibm_zos_core.zos_volume_init",
     "type": "module",
@@ -115901,7 +118111,7 @@
    "repository": "https://github.com/ansible-collections/ibm_zos_core",
    "documentation": "https://ibm.github.io/z_ansible_collections_doc/index.html"
   },
-  "last_commit": "2026-10-02T09:48:10-07:00",
+  "last_commit": "2026-10-29T10:06:18-07:00",
   "source_path": ""
  },
  {
@@ -122192,69 +124402,14 @@
    "repository": "https://github.com/ansible-collections/ibm.storage_virtualize",
    "documentation": null
   },
-  "last_commit": "2026-10-15T14:42:57+05:30",
+  "last_commit": "2026-10-23T13:01:41+05:30",
   "source_path": ""
  },
  {
   "fqcn": "ibm.turbonomic_eda",
-  "status": "ok",
-  "items": [
-   {
-    "name": "eda_webhook",
-    "fqcn": "ibm.turbonomic_eda.eda_webhook",
-    "type": "module",
-    "short_description": "Module to allow users to create Turbonomic Webhooks to send actions to Event Drive Ansible",
-    "deprecated": false,
-    "source": "plugins/modules/eda_webhook.py"
-   },
-   {
-    "name": "resize_azure",
-    "fqcn": "ibm.turbonomic_eda.resize_azure",
-    "type": "playbook",
-    "short_description": "Resize Azure Virtual Machine from Turbonomic Recommendation via Event Driven Ansible",
-    "deprecated": false,
-    "source": "playbooks/resize_azure.yml"
-   },
-   {
-    "name": "resize_ec2",
-    "fqcn": "ibm.turbonomic_eda.resize_ec2",
-    "type": "playbook",
-    "short_description": "Resize EC2 Instance from Turbonomic Recommendation via Event Driven Ansible",
-    "deprecated": false,
-    "source": "playbooks/resize_ec2.yml"
-   },
-   {
-    "name": "resize_azure_instance",
-    "fqcn": "ibm.turbonomic_eda.resize_azure_instance",
-    "type": "role",
-    "short_description": "Role used with Turbonomic and Event Driven Ansible to resize Azure Virtual Machines",
-    "deprecated": false,
-    "source": "roles/resize_azure_instance"
-   },
-   {
-    "name": "resize_ec2_instance",
-    "fqcn": "ibm.turbonomic_eda.resize_ec2_instance",
-    "type": "role",
-    "short_description": "Role used with Turbonomic and Event Driven Ansible to resize AWS EC2 instance",
-    "deprecated": false,
-    "source": "roles/resize_ec2_instance"
-   }
-  ],
-  "galaxy": {
-   "version": "1.0.2",
-   "description": "This IBM Turbonomic Ansible Collection provides examples that can be used to automate Turbonomic cloud scaling decisions using Event Driven Ansible (EDA). Users are able to quickly realize the value of Turbonomic Hybrid Cloud optimization decisions by leveraging the flexible and powerful automation capabilities of Event Driven Ansible.\n",
-   "tags": [
-    "application",
-    "cloud",
-    "infrastructure",
-    "turbonomic",
-    "eda"
-   ],
-   "repository": "https://github.com/IBM/turbonomic_ansible_eda",
-   "documentation": "https://github.com/IBM/turbonomic_ansible_eda"
-  },
-  "last_commit": "2024-05-28T10:49:51-04:00",
-  "source_path": ""
+  "status": "clone-failed",
+  "items": [],
+  "galaxy": {}
  },
  {
   "fqcn": "infinidat.infinibox",
@@ -122649,7 +124804,7 @@
    "repository": "https://github.com/infinidat/ansible-infinidat-collection",
    "documentation": null
   },
-  "last_commit": "2026-08-14T20:32:19+00:00",
+  "last_commit": "2026-08-14T20:32:19Z",
   "source_path": ""
  },
  {
@@ -124773,6 +126928,14 @@
     "source": "roles/hub_role"
    },
    {
+    "name": "hub_team_roles",
+    "fqcn": "infra.aap_configuration.hub_team_roles",
+    "type": "role",
+    "short_description": "An Ansible Role to assign roles to teams in Automation Hub.",
+    "deprecated": false,
+    "source": "roles/hub_team_roles"
+   },
+   {
     "name": "hub_user",
     "fqcn": "infra.aap_configuration.hub_user",
     "type": "role",
@@ -124790,7 +126953,7 @@
    }
   ],
   "galaxy": {
-   "version": "4.10.0",
+   "version": "4.11.1",
    "description": "A collection of roles to manage Ansible Controller",
    "tags": [
     "controller",
@@ -124802,7 +126965,7 @@
    "repository": "https://github.com/redhat-cop/aap_configuration/",
    "documentation": null
   },
-  "last_commit": "2026-10-20T08:38:51-05:00",
+  "last_commit": "2026-11-12T09:49:29-06:00",
   "source_path": ""
  },
  {
@@ -124840,6 +127003,14 @@
     "short_description": "Emit a Jinja variable reference for an exported filetree field",
     "deprecated": false,
     "source": "plugins/filter/filetree_as_var.yml"
+   },
+   {
+    "name": "filetree_safe_path_component",
+    "fqcn": "infra.aap_configuration_extended.filetree_safe_path_component",
+    "type": "filter",
+    "short_description": "Sanitize a name for use as a single path component under output_path",
+    "deprecated": false,
+    "source": "plugins/filter/filetree_safe_path_component.yml"
    },
    {
     "name": "filetree_surveys_cleanup",
@@ -124995,7 +127166,7 @@
    }
   ],
   "galaxy": {
-   "version": "4.12.1",
+   "version": "4.13.0",
    "description": "A collection of roles to extend functionality of aap_configuration collection",
    "tags": [
     "controller",
@@ -125007,7 +127178,7 @@
    "repository": "https://github.com/redhat-cop/aap_configuration_extended/",
    "documentation": null
   },
-  "last_commit": "2026-10-14T22:23:48-04:00",
+  "last_commit": "2026-11-11T21:37:40Z",
   "source_path": ""
  },
  {
@@ -125138,7 +127309,7 @@
    "repository": "https://github.com/redhat-cop/aap_utilities/",
    "documentation": null
   },
-  "last_commit": "2026-10-02T10:04:34-07:00",
+  "last_commit": "2026-11-12T07:48:36-07:00",
   "source_path": ""
  },
  {
@@ -125712,6 +127883,14 @@
     "short_description": "Role to install Red Hat Satellite Capsule",
     "deprecated": false,
     "source": "roles/capsule_install"
+   },
+   {
+    "name": "cve_analyzer",
+    "fqcn": "infra.automation_development_office.cve_analyzer",
+    "type": "role",
+    "short_description": "RHACS CVE Analyzer — export, enrichment, Grafana posture/triage dashboards, Prometheus metrics, and optional CVE Intelligence (Phase 0 gated).",
+    "deprecated": false,
+    "source": "roles/cve_analyzer"
    },
    {
     "name": "elastic",
@@ -126579,7 +128758,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.4.1",
+   "version": "2.1.2",
    "description": "Automation Development Office roles for AAP, OpenShift, RHEL, Satellite, IdM, RHBK, and platform bootstrap workflows.",
    "tags": [
     "aap",
@@ -126594,9 +128773,8 @@
    "repository": "https://github.com/redhat-cop/infra.automation-development-office",
    "documentation": "https://github.com/redhat-cop/infra.automation-development-office/blob/main/README.md"
   },
-  "last_commit": "2026-10-20T13:33:01-04:00",
-  "source_path": "",
-  "upstream": "infra.ado"
+  "last_commit": "2026-11-13T08:28:28-05:00",
+  "source_path": ""
  },
  {
   "fqcn": "infra.controller_configuration",
@@ -126984,7 +129162,7 @@
    "repository": "https://github.com/redhat-cop/infra.controller_configuration/",
    "documentation": null
   },
-  "last_commit": "2026-10-02T13:15:45-05:00",
+  "last_commit": "2026-11-12T11:30:01-06:00",
   "source_path": ""
  },
  {
@@ -127251,7 +129429,7 @@
    "repository": "https://github.com/redhat-cop/ee_utilities",
    "documentation": null
   },
-  "last_commit": "2026-09-17T08:08:22-05:00",
+  "last_commit": "2026-11-12T14:10:00-06:00",
   "source_path": ""
  },
  {
@@ -127348,7 +129526,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.7.6",
+   "version": "1.7.7",
    "description": "Ansible collection for running the leapp tool",
    "tags": [
     "rhel",
@@ -127358,7 +129536,7 @@
    "repository": "https://github.com/redhat-cop/infra.leapp",
    "documentation": null
   },
-  "last_commit": "2026-10-19T11:02:04+02:00",
+  "last_commit": "2026-11-03T16:19:08+01:00",
   "source_path": ""
  },
  {
@@ -127425,7 +129603,7 @@
    "repository": "https://github.com/redhat-cop/infra.lvm_snapshots",
    "documentation": "https://github.com/redhat-cop/infra.lvm_snapshots"
   },
-  "last_commit": "2026-07-22T16:23:33-05:00",
+  "last_commit": "2026-11-13T09:58:38-06:00",
   "source_path": ""
  },
  {
@@ -127497,7 +129675,7 @@
    "repository": "https://github.com/redhat-cop/infra.mecm_ops",
    "documentation": null
   },
-  "last_commit": "2026-01-22T14:32:38+00:00",
+  "last_commit": "2026-01-22T14:32:38Z",
   "source_path": ""
  },
  {
@@ -127593,6 +129771,14 @@
   "fqcn": "infra.openshift_virtualization_migration",
   "status": "ok",
   "items": [
+   {
+    "name": "match_portgroup",
+    "fqcn": "infra.openshift_virtualization_migration.match_portgroup",
+    "type": "filter",
+    "short_description": "Filters NADs matching a network name in the source-portgroup annotation",
+    "deprecated": false,
+    "source": "plugins/filter/match_portgroup.py"
+   },
    {
     "name": "rfc1123",
     "fqcn": "infra.openshift_virtualization_migration.rfc1123",
@@ -128016,7 +130202,7 @@
    "repository": "https://github.com/redhat-cop/openshift_virtualization_migration",
    "documentation": null
   },
-  "last_commit": "2026-10-10T00:31:09-05:00",
+  "last_commit": "2026-11-08T16:19:15-06:00",
   "source_path": ""
  },
  {
@@ -128436,7 +130622,7 @@
    "repository": "https://github.com/redhat-cop/infra.rhacs_configuration",
    "documentation": "https://github.com/redhat-cop/infra.rhacs_configuration"
   },
-  "last_commit": "2026-10-20T17:50:17+02:00",
+  "last_commit": "2026-11-16T10:17:00+01:00",
   "source_path": ""
  },
  {
@@ -128645,7 +130831,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.4.0",
+   "version": "1.5.0",
    "description": "Export and Import Satellite configuration using Configuration as Code",
    "tags": [
     "infrastructure",
@@ -128661,7 +130847,7 @@
    "repository": "https://github.com/redhat-cop/infra.satellite_configuration.git",
    "documentation": "https://github.com/redhat-cop/infra.satellite_configuration.git"
   },
-  "last_commit": "2026-10-15T21:11:55+02:00",
+  "last_commit": "2026-11-15T05:59:55Z",
   "source_path": ""
  },
  {
@@ -128790,7 +130976,7 @@
    "repository": "https://github.com/redhat-cop/infra.support_assist",
    "documentation": "https://github.com/redhat-cop/infra.support_assist/blob/devel/README.md"
   },
-  "last_commit": "2026-10-18T19:59:39-04:00",
+  "last_commit": "2026-10-22T10:12:09-04:00",
   "source_path": ""
  },
  {
@@ -130565,7 +132751,7 @@
    "repository": "https://github.com/Juniper/apstra-ansible-collection",
    "documentation": null
   },
-  "last_commit": "2026-09-30T19:00:24+05:30",
+  "last_commit": "2026-10-21T19:22:52+05:30",
   "source_path": "ansible_collections/juniper/apstra"
  },
  {
@@ -131030,7 +133216,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.0.7",
+   "version": "2.0.8",
    "description": "set of Ansible modules that perform specific operational and configuration tasks on devices running Junos OS.",
    "tags": [
     "juniper",
@@ -131040,7 +133226,7 @@
    "repository": "https://github.com/Juniper/ansible-junos-stdlib",
    "documentation": "https://ansible-juniper-collection.readthedocs.io/"
   },
-  "last_commit": "2026-10-14T15:59:12+05:30",
+  "last_commit": "2026-11-13T11:20:42+05:30",
   "source_path": "ansible_collections/juniper/device"
  },
  {
@@ -131662,7 +133848,7 @@
    "repository": "https://github.com/ansible-collections/kubernetes.core",
    "documentation": ""
   },
-  "last_commit": "2026-10-20T16:16:03+02:00",
+  "last_commit": "2026-11-09T15:10:13+01:00",
   "source_path": ""
  },
  {
@@ -131804,6 +133990,14 @@
     "source": "plugins/modules/percepxion_projects.py"
    },
    {
+    "name": "percepxion_slc_groups",
+    "fqcn": "lantronix.oob.percepxion_slc_groups",
+    "type": "module",
+    "short_description": "Manage custom user groups on SLC and EMG console managers through Percepxion",
+    "deprecated": false,
+    "source": "plugins/modules/percepxion_slc_groups.py"
+   },
+   {
     "name": "percepxion_smart_groups",
     "fqcn": "lantronix.oob.percepxion_smart_groups",
     "type": "module",
@@ -131860,6 +134054,14 @@
     "source": "plugins/modules/slc_firmware.py"
    },
    {
+    "name": "slc_groups",
+    "fqcn": "lantronix.oob.slc_groups",
+    "type": "module",
+    "short_description": "Manage custom user groups on SLC and EMG console managers over SSH",
+    "deprecated": false,
+    "source": "plugins/modules/slc_groups.py"
+   },
+   {
     "name": "slc_managed_devices",
     "fqcn": "lantronix.oob.slc_managed_devices",
     "type": "module",
@@ -131892,6 +134094,22 @@
     "source": "plugins/modules/slc_users.py"
    },
    {
+    "name": "slc",
+    "fqcn": "lantronix.oob.slc",
+    "type": "cliconf",
+    "short_description": "CLI interface for Lantronix SLC and EMG console managers",
+    "deprecated": false,
+    "source": "plugins/cliconf/slc.py"
+   },
+   {
+    "name": "percepxion_events",
+    "fqcn": "lantronix.oob.percepxion_events",
+    "type": "eda_event_source",
+    "short_description": "Poll Percepxion for device status and console port changes",
+    "deprecated": false,
+    "source": "extensions/eda/plugins/event_source/percepxion_events.py"
+   },
+   {
     "name": "percepxion",
     "fqcn": "lantronix.oob.percepxion",
     "type": "httpapi",
@@ -131906,6 +134124,14 @@
     "short_description": "HttpApi plugin for Lantronix SLC9000 REST API v2",
     "deprecated": false,
     "source": "plugins/httpapi/slc9.py"
+   },
+   {
+    "name": "percepxion",
+    "fqcn": "lantronix.oob.percepxion",
+    "type": "inventory",
+    "short_description": "Build an inventory of Lantronix devices from Percepxion",
+    "deprecated": false,
+    "source": "plugins/inventory/percepxion.py"
    },
    {
     "name": "combo.day1_slc_onboarding",
@@ -131932,6 +134158,14 @@
     "source": "playbooks/combo/incident_response_oob.yml"
    },
    {
+    "name": "combo.netbox_sync",
+    "fqcn": "lantronix.oob.combo.netbox_sync",
+    "type": "playbook",
+    "short_description": "Prepare NetBox for Lantronix OOB devices",
+    "deprecated": false,
+    "source": "playbooks/combo/netbox_sync.yml"
+   },
+   {
     "name": "combo.new_device_fleet_onboarding",
     "fqcn": "lantronix.oob.combo.new_device_fleet_onboarding",
     "type": "playbook",
@@ -131946,6 +134180,22 @@
     "short_description": "OOB infrastructure security audit",
     "deprecated": false,
     "source": "playbooks/combo/security_audit.yml"
+   },
+   {
+    "name": "eda_device_offline",
+    "fqcn": "lantronix.oob.eda_device_offline",
+    "type": "playbook",
+    "short_description": "Report a device that went offline in Percepxion",
+    "deprecated": false,
+    "source": "playbooks/eda_device_offline.yml"
+   },
+   {
+    "name": "eda_port_attached",
+    "fqcn": "lantronix.oob.eda_port_attached",
+    "type": "playbook",
+    "short_description": "Report a console port attachment change",
+    "deprecated": false,
+    "source": "playbooks/eda_port_attached.yml"
    },
    {
     "name": "lockdown",
@@ -132132,6 +134382,14 @@
     "source": "roles/oob_baseline_config"
    },
    {
+    "name": "oob_coverage_gate",
+    "fqcn": "lantronix.oob.oob_coverage_gate",
+    "type": "role",
+    "short_description": "Check out-of-band console coverage before a change",
+    "deprecated": false,
+    "source": "roles/oob_coverage_gate"
+   },
+   {
     "name": "oob_firmware_audit",
     "fqcn": "lantronix.oob.oob_firmware_audit",
     "type": "role",
@@ -132148,6 +134406,14 @@
     "source": "roles/oob_fleet_inventory"
    },
    {
+    "name": "oob_slc_groups",
+    "fqcn": "lantronix.oob.oob_slc_groups",
+    "type": "role",
+    "short_description": "Keep custom user groups identical on SLC and EMG console managers",
+    "deprecated": false,
+    "source": "roles/oob_slc_groups"
+   },
+   {
     "name": "oob_user_management",
     "fqcn": "lantronix.oob.oob_user_management",
     "type": "role",
@@ -132157,7 +134423,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.2.0",
+   "version": "1.5.1",
    "description": "Ansible collection for Lantronix Out-of-Band infrastructure (SLC9000 + Percepxion)",
    "tags": [
     "networking",
@@ -132166,12 +134432,13 @@
     "percepxion",
     "console_server",
     "slc9000",
-    "serial_console"
+    "serial_console",
+    "eda"
    ],
    "repository": "https://github.com/Lantronix/ansible-collection-oob",
    "documentation": "https://github.com/Lantronix/ansible-collection-oob/tree/main/docs"
   },
-  "last_commit": "2026-09-02T03:10:02-04:00",
+  "last_commit": "2026-11-11T17:22:52-05:00",
   "source_path": ""
  },
  {
@@ -134426,14 +136693,14 @@
     "name": "server",
     "fqcn": "microsoft.sql.server",
     "type": "role",
-    "short_description": "This role installs and configures Microsoft SQL Server",
+    "short_description": "This role installs, configures, and starts Microsoft SQL Server.",
     "deprecated": false,
     "source": "",
     "repository": "https://github.com/linux-system-roles/mssql"
    }
   ],
   "galaxy": {},
-  "last_commit": "2026-10-20T11:58:48-06:00"
+  "last_commit": "2026-11-13T08:00:30-07:00"
  },
  {
   "fqcn": "microsoft.wsl",
@@ -134569,7 +136836,7 @@
    "repository": "https://github.com/ansible-collections/netapp.aws",
    "documentation": null
   },
-  "last_commit": "2024-09-10T06:02:13+00:00",
+  "last_commit": "2024-09-10T06:02:13Z",
   "source_path": ""
  },
  {
@@ -134751,7 +137018,7 @@
    "repository": "https://github.com/ansible-collections/netapp.cloudmanager",
    "documentation": "https://docs.ansible.com/ansible/latest/collections/netapp/"
   },
-  "last_commit": "2024-10-31T22:45:14+00:00",
+  "last_commit": "2024-10-31T22:45:14Z",
   "source_path": ""
  },
  {
@@ -136232,7 +138499,7 @@
    }
   ],
   "galaxy": {
-   "version": "24.0.0",
+   "version": "24.1.0",
    "description": "NetApp ONTAP Collection",
    "tags": [
     "storage",
@@ -136242,7 +138509,7 @@
    "repository": "https://github.com/ansible-collections/netapp.ontap",
    "documentation": null
   },
-  "last_commit": "2026-09-29T15:00:22+00:00",
+  "last_commit": "2026-11-13T01:41:13Z",
   "source_path": ""
  },
  {
@@ -136661,7 +138928,7 @@
    "repository": "https://github.com/ansible-collections/netapp.storagegrid",
    "documentation": null
   },
-  "last_commit": "2026-09-23T03:51:06+00:00",
+  "last_commit": "2026-09-23T03:51:06Z",
   "source_path": ""
  },
  {
@@ -136762,7 +139029,7 @@
    "repository": "https://github.com/ansible-collections/netapp.um_info",
    "documentation": null
   },
-  "last_commit": "2024-08-14T06:37:08+00:00",
+  "last_commit": "2024-08-14T06:37:08Z",
   "source_path": ""
  },
  {
@@ -137507,7 +139774,7 @@
    }
   ],
   "galaxy": {
-   "version": "3.23.1",
+   "version": "3.24.0",
    "description": "This is a collection of NetBox Ansible modules",
    "tags": [
     "dcim",
@@ -137518,7 +139785,7 @@
    "repository": "https://github.com/netbox-community/ansible_modules",
    "documentation": "https://netbox-ansible-collection.readthedocs.io/en/latest/"
   },
-  "last_commit": "2026-10-12T14:12:03-04:00",
+  "last_commit": "2026-11-10T11:11:30-05:00",
   "source_path": ""
  },
  {
@@ -145343,7 +147610,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.19.0",
+   "version": "3.0.0",
    "description": "Ansible Collection Modules for NetScaler ADC",
    "tags": [
     "netscaler",
@@ -145353,7 +147620,7 @@
    "repository": "https://github.com/netscaler/ansible-collection-netscaleradc",
    "documentation": "https://netscaler.github.io/ansible-collection-netscaleradc"
   },
-  "last_commit": "2026-09-29T21:30:26+05:30",
+  "last_commit": "2026-10-28T14:12:53-07:00",
   "source_path": ""
  },
  {
@@ -146263,7 +148530,7 @@
    "repository": "https://github.com/openshift/network.offline_migration_sdn_to_ovnk",
    "documentation": null
   },
-  "last_commit": "2025-07-10T14:48:20+00:00",
+  "last_commit": "2025-07-10T14:48:20Z",
   "source_path": ""
  },
  {
@@ -147354,7 +149621,7 @@
    }
   ],
   "galaxy": {
-   "version": "6.3.0",
+   "version": "6.3.1",
    "description": "This is a collection of Nautobot Ansible modules",
    "tags": [
     "dcim",
@@ -147367,7 +149634,7 @@
    "repository": "https://github.com/nautobot/nautobot-ansible",
    "documentation": "https://nautobot-ansible.readthedocs.io/en/latest/"
   },
-  "last_commit": "2026-09-16T10:33:39-05:00",
+  "last_commit": "2026-10-29T15:15:41-07:00",
   "source_path": ""
  },
  {
@@ -149927,7 +152194,7 @@
    "repository": "https://github.com/opensvc/ansible-collection-osvc",
    "documentation": "https://github.com/opensvc/ansible-collection-osvc/blob/master/ansible_collections/opensvc/cluster/README.md"
   },
-  "last_commit": "2026-10-12T17:41:34+02:00",
+  "last_commit": "2026-11-10T10:56:59+01:00",
   "source_path": "ansible_collections/opensvc/cluster"
  },
  {
@@ -149967,6 +152234,22 @@
     "source": "roles/install_drbd"
    },
    {
+    "name": "install_hb_disk",
+    "fqcn": "opensvc.cluster_v3.install_hb_disk",
+    "type": "role",
+    "short_description": "Add a disk heartbeat to an OpenSVC cluster",
+    "deprecated": false,
+    "source": "roles/install_hb_disk"
+   },
+   {
+    "name": "install_hb_multicast",
+    "fqcn": "opensvc.cluster_v3.install_hb_multicast",
+    "type": "role",
+    "short_description": "Add a multicast heartbeat to an OpenSVC cluster",
+    "deprecated": false,
+    "source": "roles/install_hb_multicast"
+   },
+   {
     "name": "install_hb_relay",
     "fqcn": "opensvc.cluster_v3.install_hb_relay",
     "type": "role",
@@ -149975,12 +152258,28 @@
     "source": "roles/install_hb_relay"
    },
    {
+    "name": "install_hb_unicast",
+    "fqcn": "opensvc.cluster_v3.install_hb_unicast",
+    "type": "role",
+    "short_description": "Add a unicast heartbeat to an OpenSVC cluster",
+    "deprecated": false,
+    "source": "roles/install_hb_unicast"
+   },
+   {
     "name": "install_pool",
     "fqcn": "opensvc.cluster_v3.install_pool",
     "type": "role",
     "short_description": "Install pool in OpenSVC cluster",
     "deprecated": false,
     "source": "roles/install_pool"
+   },
+   {
+    "name": "install_quorum",
+    "fqcn": "opensvc.cluster_v3.install_quorum",
+    "type": "role",
+    "short_description": "Configure the quorum and the arbitrators of an OpenSVC cluster",
+    "deprecated": false,
+    "source": "roles/install_quorum"
    },
    {
     "name": "provision_cluster",
@@ -150008,7 +152307,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.3.1",
+   "version": "1.5.0",
    "description": "Ansible facilities for OpenSVC v3 Cluster management, including high availability, orchestrator configuration, and container management support.\n",
    "tags": [
     "linux",
@@ -150030,7 +152329,7 @@
    "repository": "https://github.com/opensvc/ansible-collection-osvc",
    "documentation": "https://github.com/opensvc/ansible-collection-osvc/blob/master/ansible_collections/opensvc/cluster_v3/README.md"
   },
-  "last_commit": "2026-10-12T17:41:34+02:00",
+  "last_commit": "2026-11-10T10:56:59+01:00",
   "source_path": "ansible_collections/opensvc/cluster_v3"
  },
  {
@@ -150082,7 +152381,7 @@
    "repository": "https://github.com/ansible-collections/openvswitch.openvswitch",
    "documentation": null
   },
-  "last_commit": "2026-09-24T23:44:32+02:00",
+  "last_commit": "2026-11-11T09:27:08+01:00",
   "source_path": ""
  },
  {
@@ -151067,7 +153366,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.0.5",
+   "version": "1.1.2",
    "description": "OpenStack tenant migration tooling",
    "tags": [
     "openstack",
@@ -151077,7 +153376,7 @@
    "repository": "https://github.com/os-migrate/os-migrate",
    "documentation": null
   },
-  "last_commit": "2026-10-20T20:16:20+02:00",
+  "last_commit": "2026-11-13T15:27:17+01:00",
   "source_path": ""
  },
  {
@@ -151366,7 +153665,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.2.7",
+   "version": "2.3.0",
    "description": "VMWare to Openstack / Openshift migration kit",
    "tags": [
     "cloud",
@@ -151378,7 +153677,7 @@
    "repository": "https://github.com/os-migrate/vmware-migration-kit",
    "documentation": null
   },
-  "last_commit": "2026-10-20T14:47:20+02:00",
+  "last_commit": "2026-11-10T15:36:13+01:00",
   "source_path": ""
  },
  {
@@ -152359,7 +154658,7 @@
    "repository": "https://github.com/PaloAltoNetworks/pan-os-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/paloaltonetworks/panos/docs"
   },
-  "last_commit": "2026-08-31T00:40:36+00:00",
+  "last_commit": "2026-08-31T00:40:36Z",
   "source_path": ""
  },
  {
@@ -153322,7 +155621,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.3.7",
+   "version": "2.4.1",
    "description": "Install and configure activemq / AMQ broker services.",
    "tags": [
     "broker",
@@ -153337,7 +155636,7 @@
    "repository": "https://github.com/ansible-middleware/amq",
    "documentation": "https://ansible-middleware.github.io/amq"
   },
-  "last_commit": "2026-09-15T19:40:52+05:30",
+  "last_commit": "2026-10-27T21:12:12+05:30",
   "source_path": "",
   "upstream": "middleware_automation.amq"
  },
@@ -153365,7 +155664,7 @@
     "name": "amq_streams_broker",
     "fqcn": "redhat.amq_streams.amq_streams_broker",
     "type": "role",
-    "short_description": "Install AMQ Streams Zookeeper server",
+    "short_description": "Install AMQ Streams Kafka broker in ZooKeeper mode",
     "deprecated": false,
     "source": "roles/amq_streams_broker"
    },
@@ -153381,7 +155680,7 @@
     "name": "amq_streams_connect",
     "fqcn": "redhat.amq_streams.amq_streams_connect",
     "type": "role",
-    "short_description": "Install AMQ Streams Zookeeper server",
+    "short_description": "Install AMQ Streams Kafka Connect",
     "deprecated": false,
     "source": "roles/amq_streams_connect"
    },
@@ -153389,7 +155688,7 @@
     "name": "amq_streams_cruise_control",
     "fqcn": "redhat.amq_streams.amq_streams_cruise_control",
     "type": "role",
-    "short_description": "Install AMQ Streams Zookeeper server",
+    "short_description": "Install AMQ Streams Cruise Control",
     "deprecated": false,
     "source": "roles/amq_streams_cruise_control"
    },
@@ -153419,7 +155718,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.0.4",
+   "version": "1.0.5",
    "description": "Install and configure Red Hat AMQ Streams (kafka) deployments",
    "tags": [
     "java",
@@ -153434,7 +155733,7 @@
    "repository": "https://github.com/ansible-middleware/amq_streams",
    "documentation": "https://ansible-middleware.github.io/amq_streams"
   },
-  "last_commit": "2026-10-14T23:28:34+05:30",
+  "last_commit": "2026-11-10T01:36:53+05:30",
   "source_path": "",
   "upstream": "middleware_automation.amq_streams"
  },
@@ -153464,7 +155763,7 @@
    "repository": "https://github.com/securesign/artifact-signer-ansible/",
    "documentation": "https://docs.redhat.com/en/documentation/red_hat_trusted_artifact_signer"
   },
-  "last_commit": "2026-10-19T11:26:11+01:00",
+  "last_commit": "2026-11-09T10:04:25Z",
   "source_path": ""
  },
  {
@@ -153646,7 +155945,7 @@
    "repository": "https://github.com/ansible-middleware/wildfly",
    "documentation": "https://ansible-middleware.github.io/wildfly"
   },
-  "last_commit": "2026-09-26T00:17:05+05:30",
+  "last_commit": "2026-11-06T15:05:52+05:30",
   "source_path": "",
   "upstream": "middleware_automation.wildfly"
  },
@@ -153671,6 +155970,14 @@
     "source": "plugins/modules/flightctl_enrollment_config_info.py"
    },
    {
+    "name": "flightctl_enrollment_hook_override",
+    "fqcn": "redhat.edge_manager.flightctl_enrollment_hook_override",
+    "type": "module",
+    "short_description": "Override a failed device enrollment hook",
+    "deprecated": false,
+    "source": "plugins/modules/flightctl_enrollment_hook_override.py"
+   },
+   {
     "name": "flightctl_image_builder",
     "fqcn": "redhat.edge_manager.flightctl_image_builder",
     "type": "module",
@@ -153685,6 +155992,14 @@
     "short_description": "Get information about Flight Control Image Builder resources",
     "deprecated": false,
     "source": "plugins/modules/flightctl_image_builder_info.py"
+   },
+   {
+    "name": "flightctl_label_sync_provenance_info",
+    "fqcn": "redhat.edge_manager.flightctl_label_sync_provenance_info",
+    "type": "module",
+    "short_description": "Query LabelSyncMapping ownership for label keys",
+    "deprecated": false,
+    "source": "plugins/modules/flightctl_label_sync_provenance_info.py"
    },
    {
     "name": "flightctl_resource",
@@ -153730,7 +156045,7 @@
    "repository": "https://github.com/flightctl/flightctl-ansible",
    "documentation": "https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.5/html/managing_device_fleets_with_the_red_hat_edge_manager/index"
   },
-  "last_commit": "2026-10-09T12:37:00-04:00",
+  "last_commit": "2026-11-12T11:12:12-05:00",
   "source_path": "",
   "upstream": "flightctl.core"
  },
@@ -153826,7 +156141,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.1.7",
+   "version": "1.1.8",
    "description": "Install and configure a JBoss Core Services server.",
    "tags": [
     "httpd",
@@ -153842,7 +156157,7 @@
    "repository": "https://github.com/ansible-middleware/jbcs",
    "documentation": "https://ansible-middleware.github.io/jbcs"
   },
-  "last_commit": "2026-08-31T17:03:51+05:30",
+  "last_commit": "2026-11-10T00:30:56+05:30",
   "source_path": "",
   "upstream": "middleware_automation.jbcs"
  },
@@ -154000,7 +156315,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.7.6",
+   "version": "1.7.7",
    "description": "Ansible collection for running the leapp tool",
    "tags": [
     "rhel",
@@ -154010,7 +156325,7 @@
    "repository": "https://github.com/redhat-cop/infra.leapp",
    "documentation": null
   },
-  "last_commit": "2026-10-19T11:02:04+02:00",
+  "last_commit": "2026-11-03T16:19:08+01:00",
   "source_path": "",
   "upstream": "infra.leapp"
  },
@@ -154146,7 +156461,7 @@
    "repository": "https://github.com/openshift/community.okd",
    "documentation": ""
   },
-  "last_commit": "2026-08-27T16:40:36+00:00",
+  "last_commit": "2026-08-27T16:40:36Z",
   "source_path": "",
   "upstream": "community.okd"
  },
@@ -154202,7 +156517,7 @@
    "repository": "https://github.com/kubevirt/kubevirt.core",
    "documentation": "https://kubevirt.github.io/kubevirt.core"
   },
-  "last_commit": "2026-10-02T10:04:24+00:00",
+  "last_commit": "2026-11-13T15:15:55Z",
   "source_path": "",
   "upstream": "kubevirt.core"
  },
@@ -154698,7 +157013,7 @@
    "repository": "https://github.com/ansible-middleware/keycloak",
    "documentation": "https://ansible-middleware.github.io/keycloak"
   },
-  "last_commit": "2026-10-16T18:51:07+05:30",
+  "last_commit": "2026-11-13T18:51:01+05:30",
   "source_path": "",
   "upstream": "middleware_automation.keycloak"
  },
@@ -158053,7 +160368,7 @@
    }
   ],
   "galaxy": {},
-  "last_commit": "2026-10-20T12:13:19-06:00"
+  "last_commit": "2026-11-15T15:44:38-07:00"
  },
  {
   "fqcn": "redhat.rhv",
@@ -158745,7 +161060,7 @@
    "repository": "https://github.com/ovirt/ovirt-ansible-collection",
    "documentation": null
   },
-  "last_commit": "2026-09-22T16:07:00+02:00",
+  "last_commit": "2026-11-12T10:49:13+01:00",
   "source_path": "",
   "upstream": "ovirt.ovirt"
  },
@@ -158818,7 +161133,7 @@
    "repository": "https://github.com/ansible-middleware/common",
    "documentation": "https://ansible-middleware.github.io/common"
   },
-  "last_commit": "2026-09-10T12:12:10+05:30",
+  "last_commit": "2026-11-04T19:55:35+05:30",
   "source_path": "",
   "upstream": "middleware_automation.common"
  },
@@ -160581,7 +162896,7 @@
    "repository": "https://github.com/ansible-middleware/keycloak",
    "documentation": "https://ansible-middleware.github.io/keycloak"
   },
-  "last_commit": "2026-10-16T18:51:07+05:30",
+  "last_commit": "2026-11-13T18:51:01+05:30",
   "source_path": "",
   "upstream": "middleware_automation.keycloak"
  },
@@ -162006,7 +164321,7 @@
    "repository": "https://github.com/ScaleComputing/HyperCoreAnsibleCollection",
    "documentation": "https://scalecomputing.github.io/HyperCoreAnsibleCollection"
   },
-  "last_commit": "2026-01-29T13:28:53+01:00",
+  "last_commit": "2026-11-02T11:59:20-05:00",
   "source_path": ""
  },
  {
@@ -162757,7 +165072,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.16.0",
+   "version": "2.17.0",
    "description": "Ansible Collection for interacting with ServiceNow ITSM",
    "tags": [
     "servicenow",
@@ -162767,7 +165082,7 @@
    "repository": "https://github.com/ansible-collections/servicenow.itsm",
    "documentation": null
   },
-  "last_commit": "2026-10-20T14:13:27-04:00",
+  "last_commit": "2026-11-06T09:10:44-05:00",
   "source_path": ""
  },
  {
@@ -163748,7 +166063,7 @@
    "repository": "https://github.com/trilioData/trilio-ansible",
    "documentation": "https://docs.trilio.io/kubernetes"
   },
-  "last_commit": "2026-02-25T08:21:59+00:00",
+  "last_commit": "2026-02-25T08:21:59Z",
   "source_path": ""
  },
  {
@@ -163829,7 +166144,7 @@
    }
   ],
   "galaxy": {
-   "version": "1.4.0",
+   "version": "1.4.1",
    "description": "Machine Identity Management (certificates, policies, etc.) using CyberArk solutions.",
    "tags": [
     "certificates",
@@ -163842,7 +166157,7 @@
    "repository": "https://github.com/Venafi/ansible-collection-venafi",
    "documentation": "https://github.com/Venafi/ansible-collection-venafi"
   },
-  "last_commit": "2026-09-30T10:32:40+03:00",
+  "last_commit": "2026-11-12T11:34:50-08:00",
   "source_path": ""
  },
  {
@@ -165562,6 +167877,22 @@
     "source": "plugins/modules/vm_custom_attributes.py"
    },
    {
+    "name": "vm_hardware_version",
+    "fqcn": "vmware.vmware.vm_hardware_version",
+    "type": "module",
+    "short_description": "Specify the virtual hardware version for a virtual machine.",
+    "deprecated": false,
+    "source": "plugins/modules/vm_hardware_version.py"
+   },
+   {
+    "name": "vm_hardware_version_info",
+    "fqcn": "vmware.vmware.vm_hardware_version_info",
+    "type": "module",
+    "short_description": "Gather information about a VM's hardware version and any scheduled upgrades.",
+    "deprecated": false,
+    "source": "plugins/modules/vm_hardware_version_info.py"
+   },
+   {
     "name": "vm_info",
     "fqcn": "vmware.vmware.vm_info",
     "type": "module",
@@ -165659,7 +167990,7 @@
    }
   ],
   "galaxy": {
-   "version": "2.12.0",
+   "version": "2.13.0",
    "description": "Collection to manage VMware",
    "tags": [
     "cloud",
@@ -165669,7 +168000,7 @@
    "repository": "https://github.com/ansible-collections/vmware.vmware",
    "documentation": "https://github.com/ansible-collections/vmware.vmware/blob/main/README.md"
   },
-  "last_commit": "2026-10-20T14:36:58-04:00",
+  "last_commit": "2026-11-06T09:10:14-05:00",
   "source_path": ""
  },
  {
@@ -166137,7 +168468,7 @@
     "fqcn": "vmware.vmware_rest.vcenter_vm_hardware",
     "type": "module",
     "short_description": "Manage the virtual hardware settings of a virtual machine.",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/vcenter_vm_hardware.py"
    },
    {
@@ -166233,7 +168564,7 @@
     "fqcn": "vmware.vmware_rest.vcenter_vm_hardware_info",
     "type": "module",
     "short_description": "Gather information about the virtual hardware settings of a virtual machine.",
-    "deprecated": false,
+    "deprecated": true,
     "source": "plugins/modules/vcenter_vm_hardware_info.py"
    },
    {
@@ -166358,7 +168689,7 @@
    }
   ],
   "galaxy": {
-   "version": "5.0.0",
+   "version": "5.1.0",
    "description": "VMware collection for Ansible",
    "tags": [
     "cloud",
@@ -166368,7 +168699,7 @@
    "repository": "https://github.com/ansible-collections/vmware.vmware_rest",
    "documentation": null
   },
-  "last_commit": "2026-10-19T17:01:34-04:00",
+  "last_commit": "2026-11-06T11:44:11-05:00",
   "source_path": ""
  },
  {
@@ -166657,7 +168988,7 @@
    }
   ],
   "galaxy": {
-   "version": "6.1.0",
+   "version": "6.2.0",
    "description": "Ansible Network Collection for VYOS devices.",
    "tags": [
     "vyos",
@@ -166666,7 +168997,7 @@
    "repository": "https://github.com/vyos/vyos.vyos",
    "documentation": null
   },
-  "last_commit": "2026-10-13T07:45:34+10:00",
+  "last_commit": "2026-10-27T13:49:57+02:00",
   "source_path": ""
  },
  {
@@ -168745,7 +171076,7 @@
    "repository": "https://github.com/zscaler/ziacloud-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/zscaler/ziacloud/docs/"
   },
-  "last_commit": "2026-06-02T22:12:44+00:00",
+  "last_commit": "2026-06-02T22:12:44Z",
   "source_path": ""
  },
  {
@@ -169606,7 +171937,7 @@
    "repository": "https://github.com/zscaler/zpacloud-ansible",
    "documentation": "https://galaxy.ansible.com/ui/repo/published/zscaler/zpacloud/docs/"
   },
-  "last_commit": "2026-08-27T17:07:01+00:00",
+  "last_commit": "2026-08-27T17:07:01Z",
   "source_path": ""
  }
 ]
